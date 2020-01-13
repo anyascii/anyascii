@@ -9,7 +9,7 @@ public final class AnyAscii {
 
     private AnyAscii() {}
 
-    private static final byte[][][][] planes = new byte[3][][][];
+    private static final String[][][] planes = new String[3][][];
 
     public static String transliterate(String s) {
         if (isAscii(s)) return s;
@@ -68,16 +68,16 @@ public final class AnyAscii {
     }
 
     private static void transliteratePlane(int planeNum, int codePoint, StringBuilder dst) {
-        byte[][][] plane = planes[planeNum];
-        if (plane == null) plane = planes[planeNum] = new byte[256][][];
+        String[][] plane = planes[planeNum];
+        if (plane == null) plane = planes[planeNum] = new String[256][];
         int blockNum = (codePoint >>> 8) & 0xFF;
-        byte[][] block = plane[blockNum];
+        String[] block = plane[blockNum];
         if (block == null) block = loadBlock(planeNum, blockNum);
         int lo = codePoint & 0xFF;
         if (block.length <= lo) return;
-        for (byte c : block[lo]) {
-            dst.append((char) c);
-        }
+        String s = block[lo];
+        if (s == null) return;
+        dst.append(s);
     }
 
     private static void transliteratePlaneE(int codePoint, StringBuilder dst) {
@@ -87,15 +87,15 @@ public final class AnyAscii {
         }
     }
 
-    private static byte[][] loadBlock(int planeNum, int blockNum) {
+    private static String[] loadBlock(int planeNum, int blockNum) {
         InputStream input = AnyAscii.class.getResourceAsStream(String.format("%03x", (planeNum << 16) + blockNum));
-        byte[][] block;
+        String[] block;
         if (input == null) {
-            block = new byte[0][];
+            block = new String[0];
         } else {
             try {
                 try {
-                    block = split(new BufferedInputStream(input, 256));
+                    block = split(new BufferedInputStream(input, 1024));
                 } finally {
                     input.close();
                 }
@@ -106,8 +106,9 @@ public final class AnyAscii {
         return planes[planeNum][blockNum] = block;
     }
 
-    private static byte[][] split(InputStream input) throws IOException {
-        byte[][] block = new byte[256][];
+    @SuppressWarnings("deprecation")
+    private static String[] split(InputStream input) throws IOException {
+        String[] block = new String[256];
         int blockLen = 0;
         byte[] buf = new byte[4];
         int bufLen = 0;
@@ -115,7 +116,7 @@ public final class AnyAscii {
         while ((b = input.read()) != -1) {
             if (b == 0) {
                 if (bufLen != 0) {
-                    block[blockLen] = Arrays.copyOf(buf, bufLen);
+                    block[blockLen] = new String(buf, 0, 0, bufLen).intern();
                     bufLen = 0;
                 }
                 blockLen++;
