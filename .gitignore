@@ -2,3 +2,4 @@
 target/
 *.iml
 java/src/main/resources/
+python/anyascii/_x*

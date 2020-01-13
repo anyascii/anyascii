@@ -26,6 +26,7 @@ fun main() {
             .write("table.tsv")
 
     java(table)
+    python(table)
 }
 
 private fun icu(rules: String): Table {
