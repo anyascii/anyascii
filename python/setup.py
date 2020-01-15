@@ -10,4 +10,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     python_requires=">=3.3",
     zip_safe=True,
+    classifiers=[
+        'License :: OSI Approved :: ISC License (ISCL)'
+    ]
 )
