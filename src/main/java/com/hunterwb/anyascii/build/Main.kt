@@ -12,6 +12,7 @@ import java.nio.file.Path
 
 fun main() {
     val table = ascii()
+            .then(mathSymbols())
             .nfkc()
             .then(customAlphaNumeric())
             .then(icu("::Latin-ASCII; [:^ASCII:]>;"))
@@ -124,6 +125,12 @@ private fun customAlphaNumeric(): Table {
     return Table()
             .then((0xe0020..0xe007e).toTable { toString(it - 0xe0000) }) // tags
             .then((0x1f1e6..0x1f1ff).toTable { toString(it - 0x1f1e6 + 'A'.toInt()) }) // regional indicators
+}
+
+private fun mathSymbols(): Table {
+    return Table()
+            .then(Table("input/math-symbols-a.tsv"))
+            .then(Table("input/math-symbols-b.tsv"))
 }
 
 private fun customHan(): Table {

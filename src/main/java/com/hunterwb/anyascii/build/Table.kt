@@ -22,6 +22,7 @@ fun Table.write(path: String): Table {
 }
 
 fun Table(path: String): Table = Files.readAllLines(Path.of(path))
+        .filter { !it.startsWith('#') }
         .map { it.split('\t') }
         .associateTo(Table()) { it[0].codePointAt(0) to it[1] }
 
