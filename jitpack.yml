@@ -1,6 +1,4 @@
 jdk:
   - openjdk11
-before_install:
-   - mvn package --show-version --batch-mode --errors
 install:
-   - mvn install -f ./java/pom.xml --batch-mode --errors
+   - mvn install -f ./java/pom.xml --show-version --batch-mode --errors
