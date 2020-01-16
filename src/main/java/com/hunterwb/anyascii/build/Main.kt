@@ -136,3 +136,4 @@ private fun custom() = Table()
         .then((0x3021..0x3029).toTable { "${(it - 0x3021 + 1)}" }) // hangzhou numerals
         .then(0xa015, "w") // yi syllables
         .then((0xa000..0xa48c).toTable { name(it).substringAfterLast(' ').toLowerCase() }) // yi syllables
+        .then((0xa490..0xa4c6).toTable { name(it).substringAfterLast(' ') }) // yi radicals
