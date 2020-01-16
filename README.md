@@ -56,3 +56,9 @@ from anyascii import anyascii
 s = anyascii('άνθρωποι')
 #  anthropoi
 ```
+
+Install from GitHub
+
+```
+pip install https://github.com/hunterwb/any-ascii/archive/master.zip#subdirectory=python
+```
