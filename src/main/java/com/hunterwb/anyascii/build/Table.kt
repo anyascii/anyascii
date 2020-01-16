@@ -10,6 +10,8 @@ typealias Table = TreeMap<Int, String>
 
 fun Table.then(other: Table) = apply { putAllIfAbsent(other) }
 
+fun Table.then(codePoint: Int, s: String) = apply { putIfAbsent(codePoint, s) }
+
 fun Table.minus(other: Table) = apply { for (cp in other.keys) remove(cp) }
 
 fun Table.write(path: String): Table {

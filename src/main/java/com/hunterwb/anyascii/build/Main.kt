@@ -134,3 +134,5 @@ private fun custom() = Table()
         .then((0x3220..0x3229).toTable { "(${(it - 0x3220 + 1)})" }) // parenthesized numbers
         .then((0x3280..0x3289).toTable { "(${(it - 0x3280 + 1)})" }) // circled numbers
         .then((0x3021..0x3029).toTable { "${(it - 0x3021 + 1)}" }) // hangzhou numerals
+        .then(0xa015, "w") // yi syllables
+        .then((0xa000..0xa48c).toTable { name(it).substringAfterLast(' ').toLowerCase() }) // yi syllables
