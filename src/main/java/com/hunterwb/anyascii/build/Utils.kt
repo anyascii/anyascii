@@ -1,5 +1,6 @@
 package com.hunterwb.anyascii.build
 
+import com.ibm.icu.lang.UCharacter
 import com.ibm.icu.text.Normalizer2
 import java.util.regex.Pattern
 
@@ -18,3 +19,5 @@ private val CDM = Pattern.compile("\\p{InCombiningDiacriticalMarks}+")
 fun String.removeDiacritics(): String = CDM.matcher(Normalizer2.getNFDInstance().normalize(this)).replaceAll("")
 
 fun toString(codePoint: Int): String = Character.toString(codePoint)
+
+fun name(codePoint: Int): String = UCharacter.getName(codePoint)

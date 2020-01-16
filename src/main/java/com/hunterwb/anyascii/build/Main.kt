@@ -2,7 +2,6 @@ package com.hunterwb.anyascii.build
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import com.ibm.icu.lang.UCharacter
 import com.ibm.icu.text.Transliterator
 import com.vdurmont.emoji.EmojiManager
 import net.gcardone.junidecode.Junidecode
@@ -12,11 +11,9 @@ import java.nio.file.Path
 
 fun main() {
     val table = ascii()
-            .then(mathSymbols())
+            .then(custom())
             .nfkc()
-            .then(customAlphaNumeric())
             .then(icu("::Latin-ASCII; [:^ASCII:]>;"))
-            .then(customHan())
             .then(unihan())
             .then(icu("[:^Han:]>; ::Han-Latin; ::Latin-ASCII; [:^ASCII:]>; ::Any-Title;"))
             .nfkc()
@@ -121,28 +118,19 @@ private fun githubEmojis(): Table {
 
 private fun ascii(): Table = (0..127).toTable { toString(it) }
 
-private fun customAlphaNumeric(): Table {
-    return Table()
-            .then((0xe0020..0xe007e).toTable { toString(it - 0xe0000) }) // tags
-            .then((0x1f1e6..0x1f1ff).toTable { toString(it - 0x1f1e6 + 'A'.toInt()) }) // regional indicators
-}
-
-private fun mathSymbols(): Table {
-    return Table()
-            .then(Table("input/math-symbols-a.tsv"))
-            .then(Table("input/math-symbols-b.tsv"))
-}
-
-private fun customHan(): Table {
-    return Table()
-            .then(Table("input/han-misc.tsv"))
-            .then(Table("input/kangxi-radicals.tsv"))
-            .then(Table("input/cjk-radicals.tsv"))
-            .then((0x31c0..0x31e3).toTable { UCharacter.getName(it).substringAfterLast(' ') }) // cjk strokes
-            .then((0x33e0..0x33fe).toTable { "${(it - 0x33e0 + 1)}D" }) // telegraph days
-            .then((0x3358..0x3370).toTable { "${(it - 0x3358)}H" }) // telegraph hours
-            .then((0x32c0..0x32cb).toTable { "${(it - 0x32c0 + 1)}M" }) // telegraph months
-            .then((0x3220..0x3229).toTable { "(${(it - 0x3220 + 1)})" }) // parenthesized numbers
-            .then((0x3280..0x3289).toTable { "(${(it - 0x3280 + 1)})" }) // circled numbers
-            .then((0x3021..0x3029).toTable { "${(it - 0x3021 + 1)}" }) // hangzhou numerals
-}
+private fun custom() = Table()
+        .then(Table("input/nko.tsv"))
+        .then(Table("input/math-symbols-a.tsv"))
+        .then(Table("input/math-symbols-b.tsv"))
+        .then((0xe0020..0xe007e).toTable { toString(it - 0xe0000) }) // tags
+        .then((0x1f1e6..0x1f1ff).toTable { toString(it - 0x1f1e6 + 'A'.toInt()) }) // regional indicators
+        .then(Table("input/han-misc.tsv"))
+        .then(Table("input/kangxi-radicals.tsv"))
+        .then(Table("input/cjk-radicals.tsv"))
+        .then((0x31c0..0x31e3).toTable { name(it).substringAfterLast(' ') }) // cjk strokes
+        .then((0x33e0..0x33fe).toTable { "${(it - 0x33e0 + 1)}D" }) // telegraph days
+        .then((0x3358..0x3370).toTable { "${(it - 0x3358)}H" }) // telegraph hours
+        .then((0x32c0..0x32cb).toTable { "${(it - 0x32c0 + 1)}M" }) // telegraph months
+        .then((0x3220..0x3229).toTable { "(${(it - 0x3220 + 1)})" }) // parenthesized numbers
+        .then((0x3280..0x3289).toTable { "(${(it - 0x3280 + 1)})" }) // circled numbers
+        .then((0x3021..0x3029).toTable { "${(it - 0x3021 + 1)}" }) // hangzhou numerals
