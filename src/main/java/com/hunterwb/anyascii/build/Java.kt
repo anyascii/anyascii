@@ -14,14 +14,10 @@ fun java(table: Table) {
 }
 
 private fun writeBlock(block: List<String?>, path: Path) {
-    Files.newOutputStream(path).use { out ->
+    Files.newBufferedWriter(path).use { writer ->
         for (s in block) {
-            if (s != null) {
-                for (i in s.indices) {
-                    out.write(s[i].toInt())
-                }
-            }
-            out.write(0)
+            if (s != null) writer.write(s)
+            writer.write(0)
         }
     }
 }

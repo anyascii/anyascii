@@ -18,8 +18,7 @@ private fun writeBlock(block: List<String?>, path: Path) {
         writer.write("b=(")
         for (c in block.indices) {
             var s = block[c] ?: ""
-            s = s.replace("\\", "\\\\'")
-            s = s.replace("'", "\\'")
+            s = s.replace("\\", "\\\\").replace("'", "\\'")
             s = "'$s'"
             s += if (c == block.lastIndex) ')' else ','
             writer.write(s)
