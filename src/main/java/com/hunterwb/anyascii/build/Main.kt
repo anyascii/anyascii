@@ -137,3 +137,6 @@ private fun custom() = Table()
         .then(0xa015, "w") // yi syllables
         .then((0xa000..0xa48c).toTable { name(it).substringAfterLast(' ').toLowerCase() }) // yi syllables
         .then((0xa490..0xa4c6).toTable { name(it).substringAfterLast(' ') }) // yi radicals
+        .then(Table("input/vai.tsv"))
+        .then((0xa620..0xa629).toTable { "${it - 0xa620}" }) // vai digits
+        .then((0xa500..0xa62b).toTable { name(it).substringAfterLast(' ').toLowerCase() }) // vai syllables
