@@ -8,9 +8,31 @@
     <artifactId>any-ascii</artifactId>
     <version>0.1.0-SNAPSHOT</version>
 
+    <name>any-ascii</name>
+    <description>Unicode to ASCII transliteration</description>
+    <url>https://github.com/hunterwb/any-ascii</url>
+
+    <licenses>
+        <license>
+            <name>ISC License</name>
+            <url>https://opensource.org/licenses/ISC</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.jupiter>5.5.2</version.jupiter>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${version.jupiter}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <pluginManagement>
@@ -22,6 +44,18 @@
                     <configuration>
                         <release>6</release>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.0.0-M4</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.junit.jupiter</groupId>
+                            <artifactId>junit-jupiter-engine</artifactId>
+                            <version>${version.jupiter}</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>
