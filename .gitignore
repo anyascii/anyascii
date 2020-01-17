@@ -4,3 +4,4 @@ target/
 python/build/
 python/dist/
 python/anyascii.egg-info/
+.tox/
