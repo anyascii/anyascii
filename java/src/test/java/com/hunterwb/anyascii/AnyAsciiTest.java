@@ -27,6 +27,7 @@ public final class AnyAsciiTest {
         check("άνθρωποι", "anthropoi");
         check("北亰", "BeiJing");
         check("résumé", "resume");
+        check(new StringBuilder().appendCodePoint(0xE0033).appendCodePoint(0xE0033).toString(), "33");
     }
 
     private static void checkAscii(String s) {

@@ -14,3 +14,4 @@ def test():
     check('άνθρωποι', 'anthropoi')
     check('北亰', 'BeiJing')
     check('résumé', 'resume')
+    check('\U000E0033\U000E0033', '33')
