@@ -43,6 +43,7 @@
                     <version>3.8.1</version>
                     <configuration>
                         <release>6</release>
+                        <testRelease>8</testRelease>
                     </configuration>
                 </plugin>
                 <plugin>
