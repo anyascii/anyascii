@@ -13,6 +13,8 @@ String s = AnyAscii.transliterate("άνθρωποι");
 // anthropoi
 ```
 
+Java 6+ compatible
+
 Available through [**JitPack**](https://jitpack.io/#com.hunterwb/any-ascii)
 
 ##### Maven
@@ -56,6 +58,8 @@ from anyascii import anyascii
 s = anyascii('άνθρωποι')
 #  anthropoi
 ```
+
+Python 3.3+ compatible
 
 Install from GitHub
 
