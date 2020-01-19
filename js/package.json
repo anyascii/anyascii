@@ -4,5 +4,8 @@
   "description": "Unicode to ASCII transliteration",
   "license": "ISC",
   "repository": "hunterwb/any-ascii",
-  "main": "any-ascii.js"
+  "main": "any-ascii.js",
+  "scripts": {
+    "test": "node ./test.js"
+  }
 }
