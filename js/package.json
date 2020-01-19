@@ -1,0 +1,8 @@
+{
+  "name": "any-ascii",
+  "version": "0.1.0",
+  "description": "Unicode to ASCII transliteration",
+  "license": "ISC",
+  "repository": "hunterwb/any-ascii",
+  "main": "any-ascii.js"
+}

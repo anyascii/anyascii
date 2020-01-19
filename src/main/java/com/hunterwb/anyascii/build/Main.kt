@@ -25,6 +25,7 @@ fun main() {
 
     java(table)
     python(table)
+    js(table)
 }
 
 private fun icu(rules: String): Table {
