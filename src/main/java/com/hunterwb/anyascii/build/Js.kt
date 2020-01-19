@@ -5,6 +5,7 @@ import java.nio.file.Path
 
 fun js(table: Table) {
     val dirPath = Path.of("js/data")
+    dirPath.toFile().deleteRecursively()
     Files.createDirectories(dirPath)
     val bs = HashSet<Int>()
     for (b in 0..0xFFF) {

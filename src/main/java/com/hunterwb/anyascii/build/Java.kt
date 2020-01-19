@@ -5,6 +5,7 @@ import java.nio.file.Path
 
 fun java(table: Table) {
     val dirPath = Path.of("java/src/main/resources/com/hunterwb/anyascii")
+    dirPath.toFile().deleteRecursively()
     Files.createDirectories(dirPath)
     for (b in 0..0x2FF) {
         val block = List(256) { table[(b shl 8) or it] }.dropLastWhile { it == null }

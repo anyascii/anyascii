@@ -16,7 +16,7 @@ def anyascii(string):
             block = _blocks[blocknum]
         except KeyError:
             try:
-                block = importlib.import_module('anyascii._x%03x' % blocknum).b
+                block = importlib.import_module('anyascii._data._%03x' % blocknum).b
             except ImportError:
                 block = ()
             _blocks[blocknum] = block
