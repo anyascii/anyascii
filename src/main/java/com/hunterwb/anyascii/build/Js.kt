@@ -56,7 +56,7 @@ private fun writeSwitch(blocks: Set<Int>, path: Path) {
                 }
                 blocks[blockNum] = b;
                 return b;
-            }
+            };
         """.trimIndent())
     }
 }

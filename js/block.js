@@ -1250,4 +1250,4 @@ module.exports = function block(blockNum) {
     }
     blocks[blockNum] = b;
     return b;
-}
+};
