@@ -143,6 +143,7 @@ private fun custom() = Table()
         .then(vai())
         .then(ethiopic())
         .then(dominoes())
+        .then(Table("input/ocr.tsv"))
 
 private fun yi() = Table()
         .then(0xa015, "w")
