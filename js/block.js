@@ -44,6 +44,7 @@ module.exports = function block(blockNum) {
         case 0x029: return require('./data/029.js');
         case 0x02a: return require('./data/02a.js');
         case 0x02c: return require('./data/02c.js');
+        case 0x02d: return require('./data/02d.js');
         case 0x02e: return require('./data/02e.js');
         case 0x02f: return require('./data/02f.js');
         case 0x030: return require('./data/030.js');

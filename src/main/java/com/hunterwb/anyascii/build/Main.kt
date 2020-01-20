@@ -4,7 +4,6 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import com.ibm.icu.lang.UCharacter
 import com.ibm.icu.text.Transliterator
-import com.ibm.icu.text.UnicodeSet
 import com.vdurmont.emoji.EmojiManager
 import net.gcardone.junidecode.Junidecode
 import java.io.File
@@ -122,7 +121,7 @@ private fun githubEmojis(): Table {
 
 private fun ascii(): Table = (0..127).toTable { toString(it) }
 
-private fun decimalDigits() = UnicodeSet("[:Nd:]").codePoints().toTable { UCharacter.getNumericValue(it).toString() }
+private fun decimalDigits() = codePoints("Nd").toTable { UCharacter.getNumericValue(it).toString() }
 
 private fun custom() = Table()
         .then(Table("input/nko.tsv"))
@@ -142,6 +141,7 @@ private fun custom() = Table()
         .then((0x3021..0x3029).toTable { "${(it - 0x3021 + 1)}" }) // hangzhou numerals
         .then(yi())
         .then(vai())
+        .then(ethiopic())
         .then(dominoes())
 
 private fun yi() = Table()
@@ -152,6 +152,12 @@ private fun yi() = Table()
 private fun vai() = Table()
         .then(Table("input/vai.tsv"))
         .then((0xa500..0xa62b).toTable { name(it).substringAfterLast(' ').toLowerCase() })
+
+private fun ethiopic() = Table()
+        .then(codePoints("Ethi").filter { name(it).contains("SYLLABLE") }.toTable {
+            val name = name(it).removePrefix("ETHIOPIC SYLLABLE ").removePrefix("SEBATBEIT ").toLowerCase()
+            if (' ' in name) "'${name.substringAfterLast(' ')}" else name
+        })
 
 private fun dominoes() = (0x1f030..0x1f093).toTable {
     val name = name(it).removePrefix("DOMINO TILE ")

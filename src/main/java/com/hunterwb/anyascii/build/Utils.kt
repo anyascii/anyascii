@@ -26,3 +26,5 @@ fun name(codePoint: Int): String = UCharacter.getName(codePoint)
 fun String.toCodePoint(): Int = codePointAt(0).also { check(length == Character.charCount(it)) }
 
 fun UnicodeSet.codePoints(): List<Int> = map { it.toCodePoint() }
+
+fun codePoints(set: String): List<Int> = UnicodeSet("[:$set:]").codePoints()
