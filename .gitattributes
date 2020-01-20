@@ -1,3 +1,3 @@
-java/src/main/resources/ linguist-generated=true
-python/anyascii/_data/ linguist-generated=true
-js/data/ linguist-generated=true
+java/src/main/resources/* linguist-generated=true
+python/anyascii/_data/* linguist-generated=true
+js/data/* linguist-generated=true
