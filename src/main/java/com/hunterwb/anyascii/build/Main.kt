@@ -143,5 +143,20 @@ private fun custom() = Table()
         .then((0xa490..0xa4c6).toTable { name(it).substringAfterLast(' ') }) // yi radicals
         .then(Table("input/vai.tsv"))
         .then((0xa500..0xa62b).toTable { name(it).substringAfterLast(' ').toLowerCase() }) // vai syllables
+        .then(dominoes())
 
 private fun decimalDigits() = UnicodeSet("[:Nd:]").codePoints().toTable { UCharacter.getNumericValue(it).toString() }
+
+private fun dominoes() = (0x1f030..0x1f093).toTable {
+    val name = name(it).removePrefix("DOMINO TILE ")
+    var s = name.take(1)
+    if ("BACK" in name) {
+        s += "---"
+    } else {
+        val v = name.split('-')
+        s += v[1].takeLast(1)
+        s += '-'
+        s += v[2].takeLast(1)
+    }
+    s
+}
