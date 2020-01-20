@@ -122,6 +122,8 @@ private fun githubEmojis(): Table {
 
 private fun ascii(): Table = (0..127).toTable { toString(it) }
 
+private fun decimalDigits() = UnicodeSet("[:Nd:]").codePoints().toTable { UCharacter.getNumericValue(it).toString() }
+
 private fun custom() = Table()
         .then(Table("input/nko.tsv"))
         .then(Table("input/math-symbols-a.tsv"))
@@ -138,14 +140,18 @@ private fun custom() = Table()
         .then((0x3220..0x3229).toTable { "(${(it - 0x3220 + 1)})" }) // parenthesized numbers
         .then((0x3280..0x3289).toTable { "(${(it - 0x3280 + 1)})" }) // circled numbers
         .then((0x3021..0x3029).toTable { "${(it - 0x3021 + 1)}" }) // hangzhou numerals
-        .then(0xa015, "w") // yi syllables
-        .then((0xa000..0xa48c).toTable { name(it).substringAfterLast(' ').toLowerCase() }) // yi syllables
-        .then((0xa490..0xa4c6).toTable { name(it).substringAfterLast(' ') }) // yi radicals
-        .then(Table("input/vai.tsv"))
-        .then((0xa500..0xa62b).toTable { name(it).substringAfterLast(' ').toLowerCase() }) // vai syllables
+        .then(yi())
+        .then(vai())
         .then(dominoes())
 
-private fun decimalDigits() = UnicodeSet("[:Nd:]").codePoints().toTable { UCharacter.getNumericValue(it).toString() }
+private fun yi() = Table()
+        .then(0xa015, "w")
+        .then((0xa000..0xa48c).toTable { name(it).substringAfterLast(' ').toLowerCase() }) // syllables
+        .then((0xa490..0xa4c6).toTable { name(it).substringAfterLast(' ') }) // radicals
+
+private fun vai() = Table()
+        .then(Table("input/vai.tsv"))
+        .then((0xa500..0xa62b).toTable { name(it).substringAfterLast(' ').toLowerCase() })
 
 private fun dominoes() = (0x1f030..0x1f093).toTable {
     val name = name(it).removePrefix("DOMINO TILE ")
