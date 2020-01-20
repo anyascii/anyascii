@@ -2,7 +2,9 @@ package com.hunterwb.anyascii.build
 
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import com.ibm.icu.lang.UCharacter
 import com.ibm.icu.text.Transliterator
+import com.ibm.icu.text.UnicodeSet
 import com.vdurmont.emoji.EmojiManager
 import net.gcardone.junidecode.Junidecode
 import java.io.File
@@ -11,6 +13,7 @@ import java.nio.file.Path
 
 fun main() {
     val table = ascii()
+            .then(decimalDigits())
             .then(custom())
             .nfkc()
             .then(icu("::Latin-ASCII; [:^ASCII:]>;"))
@@ -139,5 +142,6 @@ private fun custom() = Table()
         .then((0xa000..0xa48c).toTable { name(it).substringAfterLast(' ').toLowerCase() }) // yi syllables
         .then((0xa490..0xa4c6).toTable { name(it).substringAfterLast(' ') }) // yi radicals
         .then(Table("input/vai.tsv"))
-        .then((0xa620..0xa629).toTable { "${it - 0xa620}" }) // vai digits
         .then((0xa500..0xa62b).toTable { name(it).substringAfterLast(' ').toLowerCase() }) // vai syllables
+
+private fun decimalDigits() = UnicodeSet("[:Nd:]").codePoints().toTable { UCharacter.getNumericValue(it).toString() }

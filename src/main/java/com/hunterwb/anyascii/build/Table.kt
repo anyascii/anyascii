@@ -26,7 +26,7 @@ fun Table.write(path: String): Table {
 fun Table(path: String): Table = Files.readAllLines(Path.of(path))
         .filter { !it.startsWith('#') }
         .map { it.split('\t') }
-        .associateTo(Table()) { it[0].codePointAt(0) to it[1] }
+        .associateTo(Table()) { it[0].toCodePoint() to it[1] }
 
 fun Table.nfkc(): Table {
     val nfkc = Normalizer2.getNFKCInstance()
@@ -52,12 +52,6 @@ private fun Table.transliterate(s: String): String? {
     return buf.toString()
 }
 
-inline fun IntRange.toTable(map: (Int) -> String): Table {
-    val table = Table()
-    for (cp in this) {
-        table[cp] = map(cp)
-    }
-    return table
-}
+inline fun Iterable<Int>.toTable(map: (Int) -> String): Table = associateWithTo(Table(), map)
 
 fun Table.lengthStatistics() = IntSummaryStatistics().apply { values.forEach { accept(it.length) } }
