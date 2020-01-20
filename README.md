@@ -5,6 +5,7 @@
 
 - [Java](#Java)
 - [Python](#Python)
+- [JavaScript](#JavaScript)
 
 ## Java
 
@@ -65,4 +66,13 @@ Install from GitHub
 
 ```
 pip install https://github.com/hunterwb/any-ascii/archive/master.zip#subdirectory=python
+```
+
+## JavaScript
+
+```javascript
+const anyAscii = require('any-ascii');
+
+const s = anyAscii('άνθρωποι');
+// anthropoi
 ```
