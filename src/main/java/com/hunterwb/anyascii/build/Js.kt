@@ -33,30 +33,15 @@ private fun writeBlock(block: List<String?>, path: Path) {
 
 private fun writeSwitch(blocks: Set<Int>, path: Path) {
     Files.newBufferedWriter(path).use { writer ->
-        writer.write("""
-            'use strict';
-
-            const blocks = {};
-
-            module.exports = function block(blockNum) {
-                let b = blocks[blockNum];
-                if (b !== undefined) return b;
-                switch (blockNum) {
-        """.trimIndent())
-        writer.write("\n")
+        writer.write("'use strict';\n\n")
+        writer.write("module.exports = function block(blockNum) {\n")
+        writer.write("    switch (blockNum) {\n")
         for (b in blocks) {
             val hex = "%03x".format(b)
-            writer.write("        case 0x$hex:\n")
-            writer.write("            b = require('./data/$hex.js');\n")
-            writer.write("            break;\n")
+            writer.write("        case 0x$hex: return require('./data/$hex.js');\n")
         }
-        writer.write("""
-                    default:
-                        b = [];
-                }
-                blocks[blockNum] = b;
-                return b;
-            };
-        """.trimIndent())
+        writer.write("        default: return [];\n")
+        writer.write("    }\n")
+        writer.write("};\n")
     }
 }
