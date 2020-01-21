@@ -5,7 +5,7 @@
 
 - [Java](#Java)
 - [Python](#Python)
-- [JavaScript](#JavaScript)
+- [Node.js](#Node.js)
 
 ## Java
 
@@ -68,7 +68,7 @@ Install from GitHub
 pip install https://github.com/hunterwb/any-ascii/archive/master.zip#subdirectory=python
 ```
 
-## JavaScript
+## Node.js
 
 ```javascript
 const anyAscii = require('any-ascii');
@@ -76,3 +76,5 @@ const anyAscii = require('any-ascii');
 const s = anyAscii('άνθρωποι');
 // anthropoi
 ```
+
+Node.js 4+ compatible
