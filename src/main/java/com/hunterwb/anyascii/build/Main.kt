@@ -144,6 +144,7 @@ private fun custom() = Table()
         .then(ethiopic())
         .then(dominoes())
         .then(Table("input/ocr.tsv"))
+        .then(olChiki())
 
 private fun yi() = Table()
         .then(0xa015, "w")
@@ -158,6 +159,12 @@ private fun ethiopic() = Table()
         .then(codePoints("Ethi").filter { name(it).contains("SYLLABLE") }.toTable {
             val name = name(it).removePrefix("ETHIOPIC SYLLABLE ").removePrefix("SEBATBEIT ").toLowerCase()
             if (' ' in name) "'${name.substringAfterLast(' ')}" else name
+        })
+
+private fun olChiki() = Table()
+        .then((0x1c5a..0x1c77).toTable {
+            val name = name(it).substringAfterLast(' ').toLowerCase()
+            if (name.startsWith('l')) name.substring(1) else name.replace("[aeiou]".toRegex(), "")
         })
 
 private fun dominoes() = (0x1f030..0x1f093).toTable {
