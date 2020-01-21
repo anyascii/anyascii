@@ -2,9 +2,14 @@
   "name": "any-ascii",
   "version": "0.1.0-dev",
   "description": "Unicode to ASCII transliteration",
+  "homepage": "https://github.com/hunterwb/any-ascii",
   "license": "ISC",
   "author": "Hunter WB (http://hunterwb.com)",
-  "repository": "hunterwb/any-ascii",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/hunterwb/any-ascii.git",
+    "directory": "js"
+  },
   "keywords": [
     "unicode",
     "ascii"
