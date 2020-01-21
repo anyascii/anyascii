@@ -3,9 +3,17 @@
   "version": "0.1.0-dev",
   "description": "Unicode to ASCII transliteration",
   "license": "ISC",
+  "author": "Hunter WB (http://hunterwb.com)",
   "repository": "hunterwb/any-ascii",
+  "keywords": [
+    "unicode",
+    "ascii"
+  ],
   "main": "any-ascii.js",
   "scripts": {
     "test": "node ./test.js"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
   }
 }
