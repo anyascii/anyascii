@@ -100,7 +100,9 @@ Node.js 4+ compatible
 
 ## See Also
 
+[BGN/PCGN: Romanization Systems](https://www.gov.uk/government/publications/romanization-systems)  
 [ICAO 9303: Machine Readable Passports](https://www.icao.int/publications/Documents/9303_p3_cons_en.pdf)  
+[ISO 9: Transliteration of Cyrillic](https://en.wikipedia.org/wiki/ISO_9)  
 [Library of Congress: ALA-LC Romanization](https://www.loc.gov/catdir/cpso/roman.html)  
 [United Nations UNGEGN: Romanization Systems](https://www.eki.ee/wgrs/)  
 [Unicode CLDR: Transliteration Guidelines](http://cldr.unicode.org/index/cldr-spec/transliteration-guidelines)  
