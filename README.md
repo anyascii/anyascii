@@ -13,8 +13,8 @@ Unicode to ASCII transliteration
 ## Glossary
 
 - [**Unicode**](https://en.wikipedia.org/wiki/Unicode):
-The universal character set.
-Consists of 100,000+ characters over 150 scripts.
+The universal character set, a global standard to support all the world's languages.
+Consists of 100,000+ characters used by 150 writing systems.
 Typically encoded into bytes using [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
 - [**ASCII**](https://en.wikipedia.org/wiki/ASCII):
 The most compatible character set.
@@ -22,7 +22,8 @@ A subset of Unicode/UTF-8 consisting of 128 characters using 7-bits in the range
 The [visible](https://en.wikipedia.org/wiki/ASCII#Printable_characters) characters are English letters, digits, and punctuation in the range `0x20` - `0x7E`,
 with the remaining being [control characters](https://en.wikipedia.org/wiki/ASCII#Control_characters).
 - [**Transliteration**](https://en.wikipedia.org/wiki/Transliteration):
-A mapping from one system of writing into another, typically done one character at a time using predictable rules.
+A mapping from one writing system into another, typically done one character at a time using predictable rules.
+Transliteration into the [Latin script](https://en.wikipedia.org/wiki/Latin_script) used by English is known as [romanization](https://en.wikipedia.org/wiki/Romanization).
 
 ## Java
 
