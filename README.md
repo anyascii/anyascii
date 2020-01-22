@@ -9,6 +9,7 @@ Unicode to ASCII transliteration
 - [Java](#java)
 - [Python](#python)
 - [Node.js](#nodejs)
+- [See Also](#see-also)
 
 ## Glossary
 
@@ -96,3 +97,13 @@ const s = anyAscii('άνθρωποι');
 ```
 
 Node.js 4+ compatible
+
+## See Also
+
+[ICAO 9303: Machine Readable Passports](https://www.icao.int/publications/Documents/9303_p3_cons_en.pdf)  
+[Library of Congress: ALA-LC Romanization](https://www.loc.gov/catdir/cpso/roman.html)  
+[United Nations UNGEGN: Romanization Systems](https://www.eki.ee/wgrs/)  
+[Unicode CLDR: Transliteration Guidelines](http://cldr.unicode.org/index/cldr-spec/transliteration-guidelines)  
+[Unicode Unihan Database](https://www.unicode.org/reports/tr38/tr38-27.html)  
+[Sean M. Burke: Unidecode](https://metacpan.org/pod/Text::Unidecode)  
+[Sean M. Burke: Unidecode, Perl Journal](http://interglacial.com/tpj/22/)
