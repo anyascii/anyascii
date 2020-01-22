@@ -1,12 +1,7 @@
 package com.hunterwb.anyascii.build
 
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import com.fasterxml.jackson.module.kotlin.readValue
 import com.ibm.icu.lang.UCharacter
 import com.ibm.icu.text.Transliterator
-import com.vdurmont.emoji.EmojiManager
-import net.gcardone.junidecode.Junidecode
-import java.io.File
 import java.nio.file.Files
 import java.nio.file.Path
 
@@ -44,17 +39,6 @@ private fun icu(rules: String): Table {
 }
 
 private fun unidecode() = Table("input/unidecode.tsv")
-
-private fun junidecode(): Table {
-    val table = Table()
-    for (cp in 128..0xFFFF) {
-        val output = Junidecode.unidecode(toString(cp))
-        if (output.isNotEmpty() && !output.startsWith("[?]")) {
-            table[cp] = output
-        }
-    }
-    return table
-}
 
 private fun unihan(): Table {
     return Table()
@@ -99,25 +83,6 @@ private fun unihan(key: String): Table {
             }
     reader.close()
     return table
-}
-
-private fun vdurmontEmojis(): Table {
-    val table = Table()
-    EmojiManager.getAll().forEach {
-        val cps = it.unicode.codePoints().toArray()
-        if (cps.size > 1) return@forEach
-        table[cps[0]] = ":${it.aliases.first()}:"
-    }
-    return table
-}
-
-private fun githubEmojis(): Table {
-    return jacksonObjectMapper()
-            .readValue<Map<String, String>>(File("input/emojis.json"))
-            .filterValues { it.contains("/unicode/") && !it.contains('-') }
-            .mapValues { it.value.substringBeforeLast('.').substringAfterLast("/").toInt(16) }
-            .toList()
-            .associateTo(Table()) { it.swap() }
 }
 
 private fun ascii(): Table = (0..127).toTable { toString(it) }
