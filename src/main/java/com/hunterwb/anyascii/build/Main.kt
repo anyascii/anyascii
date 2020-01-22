@@ -22,6 +22,7 @@ fun main() {
             .then(unidecode())
             .then(icu("::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))
             .nfkc()
+            .cased()
             .minus(ascii())
             .write("table.tsv")
 
