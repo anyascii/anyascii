@@ -1,5 +1,6 @@
 package com.hunterwb.anyascii.build
 
+import com.ibm.icu.lang.UCharacter
 import com.ibm.icu.text.Normalizer2
 import java.nio.file.Files
 import java.nio.file.Path
@@ -55,3 +56,25 @@ private fun Table.transliterate(s: String): String? {
 inline fun Iterable<Int>.toTable(map: (Int) -> String): Table = associateWithTo(Table(), map)
 
 fun Table.lengthStatistics() = IntSummaryStatistics().apply { values.forEach { accept(it.length) } }
+
+fun Table.cased(): Table {
+    for ((cp, s) in this.toMap()) {
+        putIfAbsent(lower(cp), lower(s))
+        putIfAbsent(upper(cp), upper(s))
+    }
+    for (cp in 0..Character.MAX_CODE_POINT) {
+        if (cp in this) continue
+        this[upper(cp)]?.let { putIfAbsent(cp, lower(it)) }
+        this[lower(cp)]?.let { putIfAbsent(cp, upper(it)) }
+    }
+    return this
+}
+
+fun Table.aliasing(codePoints: Iterable<Int>, nameTransform: (String) -> String): Table {
+    for (cp in codePoints) {
+        val cp2 = UCharacter.getCharFromName(nameTransform(name(cp)))
+        check(cp2 != -1) { cp.toString(16) }
+        this[cp] = getValue(cp2)
+    }
+    return this
+}

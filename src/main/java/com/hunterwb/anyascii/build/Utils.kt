@@ -28,3 +28,11 @@ fun String.toCodePoint(): Int = codePointAt(0).also { check(length == Character.
 fun UnicodeSet.codePoints(): List<Int> = map { it.toCodePoint() }
 
 fun codePoints(set: String): List<Int> = UnicodeSet("[:$set:]").codePoints()
+
+fun lower(s: String): String = UCharacter.toLowerCase(s)
+
+fun lower(codePoint: Int): Int = UCharacter.toLowerCase(codePoint)
+
+fun upper(s: String): String = UCharacter.toUpperCase(s)
+
+fun upper(codePoint: Int): Int = UCharacter.toUpperCase(codePoint)

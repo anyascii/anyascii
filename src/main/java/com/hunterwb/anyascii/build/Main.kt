@@ -145,6 +145,13 @@ private fun custom() = Table()
         .then(dominoes())
         .then(Table("input/ocr.tsv"))
         .then(olChiki())
+        .then(cyrillic())
+
+private fun cyrillic() = Table()
+        .then(Table("input/cyrillic.tsv"))
+        .cased()
+        .nfkc()
+        .aliasing((0xa674..0xa67b) + (0xa69e..0xa69f) + (0x2de0..0x2dff) - 0x2df5) { it.replace("COMBINING CYRILLIC", "CYRILLIC SMALL") }
 
 private fun yi() = Table()
         .then(0xa015, "w")
