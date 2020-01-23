@@ -1,4 +1,10 @@
+import os
 import setuptools
+
+
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname), encoding='utf-8').read()
+
 
 setuptools.setup(
     author="Hunter WB",
@@ -6,6 +12,7 @@ setuptools.setup(
     name='anyascii',
     version='0.1.0-dev',
     description='Unicode to ASCII transliteration',
+    long_description=read('../README.md'),
     license='ISC',
     url='https://github.com/hunterwb/any-ascii',
     packages=setuptools.find_packages(),
