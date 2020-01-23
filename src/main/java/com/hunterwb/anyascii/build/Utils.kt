@@ -11,13 +11,11 @@ fun <K, V> MutableMap<K, V>.putAllIfAbsent(other: Map<K, V>) {
 
 fun <A, B> Pair<A, B>.swap(): Pair<B, A> = second to first
 
-fun String.isAscii() = all { it.toInt().isAscii() }
-
-fun Int.isAscii() = this in 0..127
+fun String.isPrintableAscii() = all { it.toInt() in 0x20..0x7e }
 
 private val CDM = Pattern.compile("\\p{InCombiningDiacriticalMarks}+")
 
-fun String.removeDiacritics(): String = CDM.matcher(Normalizer2.getNFDInstance().normalize(this)).replaceAll("")
+fun String.removeDiacritics(): String = CDM.matcher(NFD.normalize(this)).replaceAll("")
 
 fun toString(codePoint: Int): String = Character.toString(codePoint)
 
@@ -36,3 +34,7 @@ fun lower(codePoint: Int): Int = UCharacter.toLowerCase(codePoint)
 fun upper(s: String): String = UCharacter.toUpperCase(s)
 
 fun upper(codePoint: Int): Int = UCharacter.toUpperCase(codePoint)
+
+val NFKC: Normalizer2 = Normalizer2.getNFKCInstance()
+
+val NFD: Normalizer2 = Normalizer2.getNFDInstance()

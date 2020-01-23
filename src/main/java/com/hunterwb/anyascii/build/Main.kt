@@ -9,14 +9,14 @@ fun main() {
     val table = ascii()
             .then(decimalDigits())
             .then(custom())
-            .nfkc()
+            .normalize(NFKC)
             .then(icu("::Latin-ASCII; [:^ASCII:]>;"))
             .then(unihan())
             .then(icu("[:^Han:]>; ::Han-Latin; ::Latin-ASCII; [:^ASCII:]>; ::Any-Title;"))
-            .nfkc()
+            .normalize(NFKC)
             .then(unidecode())
             .then(icu("::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))
-            .nfkc()
+            .normalize(NFKC)
             .cased()
             .minus(ascii())
             .write("table.tsv")
@@ -76,7 +76,6 @@ private fun unihan(key: String): Table {
                         if (output.last().isDigit()) output = output.dropLast(1)
                         output = output.toLowerCase().capitalize()
                         output = output.replace('Đ', 'D')
-                        check(output.isAscii())
                     }
                 }
                 table[cp] = output
@@ -116,7 +115,7 @@ private fun custom() = Table()
 private fun cyrillic() = Table()
         .then(Table("input/cyrillic.tsv"))
         .cased()
-        .nfkc()
+        .normalize(NFKC)
         .aliasing((0xa674..0xa67b) + (0xa69e..0xa69f) + (0x2de0..0x2dff) - 0x2df5) { it.replace("COMBINING CYRILLIC", "CYRILLIC SMALL") }
 
 private fun yi() = Table()
