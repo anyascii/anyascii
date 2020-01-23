@@ -100,12 +100,13 @@ Node.js 4+ compatible
 
 ## See Also
 
-[BGN/PCGN: Romanization Systems](https://www.gov.uk/government/publications/romanization-systems)  
+[ALA-LC Romanization](https://www.loc.gov/catdir/cpso/roman.html)  
+[BGN/PCGN Romanization](https://www.gov.uk/government/publications/romanization-systems)  
+[Compart: Unicode Charts](https://www.compart.com/en/unicode/)  
 [ICAO 9303: Machine Readable Passports](https://www.icao.int/publications/Documents/9303_p3_cons_en.pdf)  
-[ISO 9: Transliteration of Cyrillic](https://en.wikipedia.org/wiki/ISO_9)  
-[Library of Congress: ALA-LC Romanization](https://www.loc.gov/catdir/cpso/roman.html)  
-[United Nations UNGEGN: Romanization Systems](https://www.eki.ee/wgrs/)  
-[Unicode CLDR: Transliteration Guidelines](http://cldr.unicode.org/index/cldr-spec/transliteration-guidelines)  
-[Unicode Unihan Database](https://www.unicode.org/reports/tr38/tr38-27.html)  
+[ISO 9: Cyrillic Romanization](https://en.wikipedia.org/wiki/ISO_9)  
 [Sean M. Burke: Unidecode](https://metacpan.org/pod/Text::Unidecode)  
-[Sean M. Burke: Unidecode, Perl Journal](http://interglacial.com/tpj/22/)
+[Sean M. Burke: Unidecode, Perl Journal](http://interglacial.com/tpj/22/)  
+[UNGEGN Romanization](https://www.eki.ee/wgrs/)  
+[Unicode CLDR: Transliteration Guidelines](http://cldr.unicode.org/index/cldr-spec/transliteration-guidelines)  
+[Unicode Unihan Database](https://www.unicode.org/reports/tr38/tr38-27.html)
