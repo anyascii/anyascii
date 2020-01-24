@@ -13,6 +13,7 @@ setuptools.setup(
     version='0.1.0',
     description='Unicode to ASCII transliteration',
     long_description=read('../README.md'),
+    long_description_content_type='text/markdown',
     license='ISC',
     url='https://github.com/hunterwb/any-ascii',
     packages=setuptools.find_packages(),
