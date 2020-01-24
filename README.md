@@ -98,6 +98,8 @@ Node.js 4+ compatible
 
 Install latest release: `npm install any-ascii`
 
+Install from master: `npm install hunterwb/any-ascii`
+
 ## See Also
 
 [ALA-LC Romanization](https://www.loc.gov/catdir/cpso/roman.html)  
