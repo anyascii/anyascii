@@ -8,6 +8,7 @@ Unicode to ASCII transliteration
 #### Table of Contents
 
 - [Glossary](#glossary)
+- [Examples](#examples)
 - [Java](#java)
 - [Python](#python)
 - [Node.js](#nodejs)
@@ -27,6 +28,17 @@ with the remaining being [control characters](https://en.wikipedia.org/wiki/ASCI
 - [**Transliteration**](https://en.wikipedia.org/wiki/Transliteration):
 A mapping from one writing system into another, typically done one character at a time using predictable rules.
 Transliteration into the [Latin script](https://en.wikipedia.org/wiki/Latin_script) used by English is known as [romanization](https://en.wikipedia.org/wiki/Romanization).
+
+## Examples
+
+|Script|Input|Output|Actual|
+|---|---|---|---|
+|Mandarin Chinese|深圳|ShenZhen|Shenzhen|
+|Cantonese Chinese|深水埗|ShenShuiBu|Sham Shui Po|
+|Russian Cyrillic|Борис Николаевич Ельцин|Boris Nikolaevich El'tsin|Boris Nikolayevich Yeltsin|
+|Korean Hangul|반기문|bangimun|Ban Ki-Moon|
+|Japanese Hiragana|さいたま|saitama|Saitama|
+|Japanese Kanji|埼玉県|QiYuXian|Saitama-ken|
 
 ## Java
 

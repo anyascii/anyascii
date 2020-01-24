@@ -30,6 +30,16 @@ public final class AnyAsciiTest {
         check(new StringBuilder().appendCodePoint(0xE0033).appendCodePoint(0xE0033).toString(), "33");
     }
 
+    @Test
+    public void testReadme() {
+        check("深圳", "ShenZhen");
+        check("深水埗", "ShenShuiBu");
+        check("Борис Николаевич Ельцин", "Boris Nikolaevich El'tsin");
+        check("반기문", "bangimun");
+        check("さいたま", "saitama");
+        check("埼玉県", "QiYuXian");
+    }
+
     private static void checkAscii(String s) {
         Assertions.assertTrue(AnyAscii.isAscii(s));
         Assertions.assertEquals(s, AnyAscii.transliterate(s));
