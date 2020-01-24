@@ -5,10 +5,7 @@
   "homepage": "https://github.com/hunterwb/any-ascii",
   "license": "ISC",
   "author": "Hunter WB (http://hunterwb.com)",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hunterwb/any-ascii.git"
-  },
+  "repository": "hunterwb/any-ascii",
   "files": ["js"],
   "keywords": [
     "unicode",
