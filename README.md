@@ -1,5 +1,7 @@
 # Any Ascii
 [![JitPack](https://jitpack.io/v/com.hunterwb/any-ascii.svg)](https://jitpack.io/#com.hunterwb/any-ascii)
+[![pypi](https://img.shields.io/pypi/v/anyascii)](https://pypi.org/project/anyascii/)
+[![npm](https://img.shields.io/npm/v/any-ascii)](https://www.npmjs.com/package/any-ascii)
 
 Unicode to ASCII transliteration
 
