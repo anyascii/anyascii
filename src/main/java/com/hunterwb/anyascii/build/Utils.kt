@@ -38,3 +38,5 @@ fun upper(codePoint: Int): Int = UCharacter.toUpperCase(codePoint)
 val NFKC: Normalizer2 = Normalizer2.getNFKCInstance()
 
 val NFD: Normalizer2 = Normalizer2.getNFDInstance()
+
+fun numericValue(codePoint: Int): Int = UCharacter.getNumericValue(codePoint).also { check(it >= 0) }

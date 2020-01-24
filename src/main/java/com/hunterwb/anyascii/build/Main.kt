@@ -1,6 +1,5 @@
 package com.hunterwb.anyascii.build
 
-import com.ibm.icu.lang.UCharacter
 import com.ibm.icu.text.Transliterator
 import java.nio.file.Files
 import java.nio.file.Path
@@ -86,7 +85,7 @@ private fun unihan(key: String): Table {
 
 private fun ascii(): Table = (0..127).toTable { toString(it) }
 
-private fun decimalDigits() = codePoints("Nd").toTable { UCharacter.getNumericValue(it).toString() }
+private fun decimalDigits() = codePoints("Nd").toTable { numericValue(it).toString() }
 
 private fun custom() = Table()
         .then(Table("input/nko.tsv"))
@@ -111,6 +110,7 @@ private fun custom() = Table()
         .then(Table("input/ocr.tsv"))
         .then(olChiki())
         .then(cyrillic())
+        .then((0x24eb..0x24ff).toTable { numericValue(it).toString() }) // circled numbers
 
 private fun cyrillic() = Table()
         .then(Table("input/cyrillic.tsv"))
