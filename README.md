@@ -52,7 +52,7 @@ Available through [**JitPack**](https://jitpack.io/#com.hunterwb/any-ascii)
 <dependency>
     <groupId>com.hunterwb</groupId>
     <artifactId>any-ascii</artifactId>
-    <version>${version}</version>
+    <version>0.1.0</version>
 </dependency>
 ```
 
@@ -66,7 +66,7 @@ repositories {
 
 ```groovy
 dependencies {
-    implementation "com.hunterwb:any-ascii:${version}"
+    implementation 'com.hunterwb:any-ascii:0.1.0'
 }
 ```
 
@@ -81,11 +81,9 @@ s = anyascii('άνθρωποι')
 
 Python 3.3+ compatible
 
-Install from GitHub
+Install latest release: `pip install anyascii`
 
-```
-pip install https://github.com/hunterwb/any-ascii/archive/master.zip#subdirectory=python
-```
+Install from master: `pip install https://github.com/hunterwb/any-ascii/archive/master.zip#subdirectory=python`
 
 ## Node.js
 
@@ -97,6 +95,8 @@ const s = anyAscii('άνθρωποι');
 ```
 
 Node.js 4+ compatible
+
+Install latest release: `npm install any-ascii`
 
 ## See Also
 
