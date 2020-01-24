@@ -10,7 +10,7 @@ setuptools.setup(
     author="Hunter WB",
     author_email="hunter@hunterwb.com",
     name='anyascii',
-    version='0.1.0-dev',
+    version='0.1.0',
     description='Unicode to ASCII transliteration',
     long_description=read('../README.md'),
     license='ISC',
