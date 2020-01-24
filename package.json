@@ -7,16 +7,16 @@
   "author": "Hunter WB (http://hunterwb.com)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hunterwb/any-ascii.git",
-    "directory": "js"
+    "url": "https://github.com/hunterwb/any-ascii.git"
   },
+  "files": ["js"],
   "keywords": [
     "unicode",
     "ascii"
   ],
-  "main": "any-ascii.js",
+  "main": "js/any-ascii.js",
   "scripts": {
-    "test": "node ./test.js"
+    "test": "node ./js/test.js"
   },
   "engines": {
     "node": ">= 4.0.0"
