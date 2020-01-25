@@ -111,8 +111,6 @@ private fun custom() = Table()
         .then(olChiki())
         .then(cyrillic())
         .then((0x24eb..0x24ff).toTable { numericValue(it).toString() }) // circled numbers
-        .then(Table("input/greek-symbols.tsv"))
-        .then(greekMath())
         .then(greek())
 
 private fun cyrillic() = Table()
@@ -123,14 +121,16 @@ private fun cyrillic() = Table()
 
 private fun greek() = Table()
         // iota subscript?
+        .then(Table("input/greek-symbols.tsv"))
+        .then(greekMath())
         .then(Table("input/greek.tsv"))
         .cased()
         .minus(0x345)
         .apply {
             then(codePoints("Grek").filter { name(it).contains("WITH DASIA") }.toTable {
                 val n = name(it).substringBefore(" WITH")
-                val h = if ("CAPITAL" in n) "H" else "h"
-                "$h${getValue(codePoint(n))}"
+                val o = getValue(codePoint(n))
+                if ("CAPITAL" in n) "H${lower(o)}" else "h$o"
             })
         }
         .normalize(NFKD, "")
