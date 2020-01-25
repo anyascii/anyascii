@@ -39,6 +39,8 @@ Transliteration into the [Latin script](https://en.wikipedia.org/wiki/Latin_scri
 |Korean Hangul|반기문|bangimun|Ban Ki-Moon|
 |Japanese Hiragana|さいたま|saitama|Saitama|
 |Japanese Kanji|埼玉県|QiYuXian|Saitama-ken|
+|Ancient Greek|Φειδιππίδης|Feidippidis|Pheidippides|
+|Modern Greek|Δημήτρης Φωτόπουλος|Dimitris Fotopoylos|Dimitris Fotopoulos|
 
 ## Java
 

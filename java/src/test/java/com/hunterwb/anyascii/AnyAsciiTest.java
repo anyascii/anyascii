@@ -38,6 +38,8 @@ public final class AnyAsciiTest {
         check("반기문", "bangimun");
         check("さいたま", "saitama");
         check("埼玉県", "QiYuXian");
+        check("Φειδιππίδης", "Feidippidis");
+        check("Δημήτρης Φωτόπουλος", "Dimitris Fotopoylos");
     }
 
     private static void checkAscii(String s) {
