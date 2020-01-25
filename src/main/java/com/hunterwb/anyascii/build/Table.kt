@@ -13,6 +13,8 @@ fun Table.then(other: Table) = apply { putAllIfAbsent(other) }
 
 fun Table.then(codePoint: Int, s: String) = apply { putIfAbsent(codePoint, s) }
 
+fun Table.minus(codePoint: Int) = apply { remove(codePoint) }
+
 fun Table.minus(other: Table) = apply { for (cp in other.keys) remove(cp) }
 
 fun Table.write(path: String) = apply {
@@ -68,6 +70,8 @@ fun Table.aliasing(codePoints: Iterable<Int>, nameTransform: (String) -> String)
     for (cp in codePoints) {
         val cp2 = UCharacter.getCharFromName(nameTransform(name(cp)))
         check(cp2 != -1) { cp.toString(16) }
-        this[cp] = getValue(cp2)
+        putIfAbsent(cp, getValue(cp2))
     }
 }
+
+fun Table.retain(codePoints: Iterable<Int>) = apply { keys.retainAll(codePoints) }

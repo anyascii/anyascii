@@ -21,6 +21,8 @@ fun toString(codePoint: Int): String = Character.toString(codePoint)
 
 fun name(codePoint: Int): String = UCharacter.getName(codePoint)
 
+fun codePoint(name: String): Int = UCharacter.getCharFromName(name)
+
 fun String.toCodePoint(): Int = codePointAt(0).also { check(length == Character.charCount(it)) }
 
 fun UnicodeSet.codePoints(): List<Int> = map { it.toCodePoint() }
@@ -36,6 +38,8 @@ fun upper(s: String): String = UCharacter.toUpperCase(s)
 fun upper(codePoint: Int): Int = UCharacter.toUpperCase(codePoint)
 
 val NFKC: Normalizer2 = Normalizer2.getNFKCInstance()
+
+val NFKD: Normalizer2 = Normalizer2.getNFKDInstance()
 
 val NFD: Normalizer2 = Normalizer2.getNFDInstance()
 

@@ -111,12 +111,35 @@ private fun custom() = Table()
         .then(olChiki())
         .then(cyrillic())
         .then((0x24eb..0x24ff).toTable { numericValue(it).toString() }) // circled numbers
+        .then(Table("input/greek-symbols.tsv"))
+        .then(greekMath())
+        .then(greek())
 
 private fun cyrillic() = Table()
         .then(Table("input/cyrillic.tsv"))
         .cased()
         .normalize(NFKC)
         .aliasing((0xa674..0xa67b) + (0xa69e..0xa69f) + (0x2de0..0x2dff) - 0x2df5) { it.replace("COMBINING CYRILLIC", "CYRILLIC SMALL") }
+
+private fun greek() = Table()
+        // iota subscript?
+        .then(Table("input/greek.tsv"))
+        .cased()
+        .minus(0x345)
+        .apply {
+            then(codePoints("Grek").filter { name(it).contains("WITH DASIA") }.toTable {
+                val n = name(it).substringBefore(" WITH")
+                val h = if ("CAPITAL" in n) "H" else "h"
+                "$h${getValue(codePoint(n))}"
+            })
+        }
+        .normalize(NFKD, "")
+        .aliasing((0x1d26..0x1d2a)) { it.replace("LETTER SMALL CAPITAL", "CAPITAL LETTER") }
+
+private fun greekMath() = Table("input/greek-math.tsv")
+        .cased()
+        .normalize(NFKC)
+        .retain((0x1d6a8..0x1d7cb) + 0x2207 + 0x2202 + 0x3f4 + 0x3f5 + 0x3d1 + 0x3f0 + 0x3d5 + 0x3f1 + 0x3d6 + 0x3d0)
 
 private fun yi() = Table()
         .then(0xa015, "w")

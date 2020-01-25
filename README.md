@@ -125,4 +125,5 @@ Install from master: `npm install hunterwb/any-ascii`
 [Sean M. Burke: Unidecode, Perl Journal](http://interglacial.com/tpj/22/)  
 [UNGEGN Romanization](https://www.eki.ee/wgrs/)  
 [Unicode CLDR: Transliteration Guidelines](http://cldr.unicode.org/index/cldr-spec/transliteration-guidelines)  
-[Unicode Unihan Database](https://www.unicode.org/reports/tr38/tr38-27.html)
+[Unicode Unihan Database](https://www.unicode.org/reports/tr38/tr38-27.html)  
+[Wikipedia: Romanization of Greek](https://en.wikipedia.org/wiki/Romanization_of_Greek)
