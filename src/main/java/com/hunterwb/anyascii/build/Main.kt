@@ -88,6 +88,7 @@ private fun ascii(): Table = (0..127).toTable { toString(it) }
 private fun decimalDigits() = codePoints("Nd").toTable { numericValue(it).toString() }
 
 private fun custom() = Table()
+        .then(Table("input/general-punctuation.tsv"))
         .then(Table("input/nko.tsv"))
         .then(Table("input/math-symbols-a.tsv"))
         .then(Table("input/math-symbols-b.tsv"))
