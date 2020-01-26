@@ -3,7 +3,11 @@ import setuptools
 
 
 def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname), encoding='utf-8').read()
+    p = os.path.join(os.path.dirname(__file__), fname)
+    if os.path.exists(p):
+        return open(p, encoding='utf-8').read()
+    else:
+        return ""
 
 
 setuptools.setup(
@@ -21,7 +25,9 @@ setuptools.setup(
     zip_safe=True,
     classifiers=[
         'License :: OSI Approved :: ISC License (ISCL)',
+        'Topic :: Text Processing :: Linguistic',
         'Topic :: Text Processing',
+        'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.6',
