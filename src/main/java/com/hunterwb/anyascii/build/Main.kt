@@ -112,6 +112,7 @@ private fun custom() = Table()
         .then(cyrillic())
         .then((0x24eb..0x24ff).toTable { numericValue(it).toString() }) // circled numbers
         .then(greek())
+        .then(coptic())
 
 private fun cyrillic() = Table()
         .then(Table("input/cyrillic.tsv"))
@@ -140,10 +141,15 @@ private fun greek() = Table()
         .normalize(NFKD, "")
         .aliasing((0x1d26..0x1d2a)) { it.replace("LETTER SMALL CAPITAL", "CAPITAL LETTER") }
 
-private fun greekMath() = Table("input/greek-math.tsv")
+private fun greekMath() = Table()
+        .then(Table("input/greek-math.tsv"))
         .cased()
         .normalize(NFKC)
         .retain((0x1d6a8..0x1d7cb) + 0x2207 + 0x2202 + 0x3f4 + 0x3f5 + 0x3d1 + 0x3f0 + 0x3d5 + 0x3f1 + 0x3d6 + 0x3d0)
+
+private fun coptic() = Table()
+        .then(Table("input/coptic.tsv"))
+        .cased()
 
 private fun yi() = Table()
         .then(0xa015, "w")
