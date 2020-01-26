@@ -26,12 +26,14 @@ public final class AnyAsciiTest {
     public void testString() {
         check("άνθρωποι", "anthropoi");
         check("北亰", "BeiJing");
-        check("résumé", "resume");
         check(new StringBuilder().appendCodePoint(0xE0033).appendCodePoint(0xE0033).toString(), "33");
     }
 
     @Test
     public void testReadme() {
+        check("résumé", "resume");
+        check("© ㎧ Æ №", "(C) m/s AE No");
+
         check("深圳", "ShenZhen");
         check("深水埗", "ShenShuiBu");
         check("Борис Николаевич Ельцин", "Boris Nikolaevich El'tsin");
