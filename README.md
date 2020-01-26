@@ -31,13 +31,10 @@ Transliteration into the [Latin script](https://en.wikipedia.org/wiki/Latin_scri
 
 ## Examples
 
-|Input|Output|
-|---|---|
-|résumé|resume|
-|© ㎧ Æ №|(C) m/s AE No|
-
 |Script|Input|Output|Actual|
 |---|---|---|---|
+||résumé|resume||
+||© ㎧ Æ №|(C) m/s AE No||
 |Mandarin Chinese|深圳|ShenZhen|Shenzhen|
 |Cantonese Chinese|深水埗|ShenShuiBu|Sham Shui Po|
 |Russian Cyrillic|Борис Николаевич Ельцин|Boris Nikolaevich El'tsin|Boris Nikolayevich Yeltsin|
