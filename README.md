@@ -7,28 +7,15 @@ Unicode to ASCII transliteration
 
 #### Table of Contents
 
-- [Glossary](#glossary)
+
 - [Examples](#examples)
-- [Java](#java)
-- [Python](#python)
-- [Node.js](#nodejs)
+- [Implementations](#implementations)
+  - [Java](#java)
+  - [Python](#python)
+  - [Node.js](#nodejs)
+- [Glossary](#glossary)
 - [See Also](#see-also)
 
-## Glossary
-
-- [**Unicode**](https://en.wikipedia.org/wiki/Unicode):
-The universal character set, a global standard to support all the world's languages.
-Consists of 100,000+ characters used by 150 writing systems.
-Typically encoded into bytes using [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
-- [**ASCII**](https://en.wikipedia.org/wiki/ASCII):
-The most compatible character set.
-A subset of Unicode/UTF-8 consisting of 128 characters using 7-bits in the range `0x00` - `0x7F`.
-The [printable](https://en.wikipedia.org/wiki/ASCII#Printable_characters) characters are English letters, digits, and punctuation in the range `0x20` - `0x7E`,
-with the remaining being [control characters](https://en.wikipedia.org/wiki/ASCII#Control_characters).
-- [**Transliteration**](https://en.wikipedia.org/wiki/Transliteration):
-A mapping from one writing system into another, typically done one character at a time using predictable rules.
-Transliteration generally preserves the spelling of words, while translation preserves the meaning, and transcription preserves the sound.
-Transliteration into the [Latin script](https://en.wikipedia.org/wiki/Latin_script) used by English is known as [romanization](https://en.wikipedia.org/wiki/Romanization).
 
 ## Examples
 
@@ -45,7 +32,9 @@ Transliteration into the [Latin script](https://en.wikipedia.org/wiki/Latin_scri
 |Ancient Greek|Φειδιππίδης|Feidippidis|Pheidippides|
 |Modern Greek|Δημήτρης Φωτόπουλος|Dimitris Fotopoylos|Dimitris Fotopoulos|
 
-## Java
+## Implementations
+
+### Java
 
 ```java
 String s = AnyAscii.transliterate("άνθρωποι");
@@ -89,7 +78,7 @@ dependencies {
 }
 ```
 
-## Python
+### Python
 
 ```python
 from anyascii import anyascii
@@ -104,7 +93,7 @@ Install latest release: `pip install anyascii`
 
 Install from master: `pip install https://github.com/hunterwb/any-ascii/archive/master.zip#subdirectory=python`
 
-## Node.js
+### Node.js
 
 ```javascript
 const anyAscii = require('any-ascii');
@@ -118,6 +107,22 @@ Node.js 4+ compatible
 Install latest release: `npm install any-ascii`
 
 Install from master: `npm install hunterwb/any-ascii`
+
+## Glossary
+
+- [**Unicode**](https://en.wikipedia.org/wiki/Unicode):
+The universal character set, a global standard to support all the world's languages.
+Consists of 100,000+ characters used by 150 writing systems.
+Typically encoded into bytes using [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
+- [**ASCII**](https://en.wikipedia.org/wiki/ASCII):
+The most compatible character set.
+A subset of Unicode/UTF-8 consisting of 128 characters using 7-bits in the range `0x00` - `0x7F`.
+The [printable](https://en.wikipedia.org/wiki/ASCII#Printable_characters) characters are English letters, digits, and punctuation in the range `0x20` - `0x7E`,
+with the remaining being [control characters](https://en.wikipedia.org/wiki/ASCII#Control_characters).
+- [**Transliteration**](https://en.wikipedia.org/wiki/Transliteration):
+A mapping from one writing system into another, typically done one character at a time using predictable rules.
+Transliteration generally preserves the spelling of words, while translation preserves the meaning, and transcription preserves the sound.
+Transliteration into the [Latin script](https://en.wikipedia.org/wiki/Latin_script) used by English is known as [romanization](https://en.wikipedia.org/wiki/Romanization).
 
 ## See Also
 
