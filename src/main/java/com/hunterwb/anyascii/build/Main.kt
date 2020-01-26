@@ -130,7 +130,11 @@ private fun greek() = Table()
             then(codePoints("Grek").filter { name(it).contains("WITH DASIA") }.toTable {
                 val n = name(it).substringBefore(" WITH")
                 val o = getValue(codePoint(n))
-                if ("CAPITAL" in n) "H${lower(o)}" else "h$o"
+                if ("RHO" in n) {
+                    "${o}h"
+                } else {
+                    if ("CAPITAL" in n) "H${lower(o)}" else "h$o"
+                }
             })
         }
         .normalize(NFKD, "")
