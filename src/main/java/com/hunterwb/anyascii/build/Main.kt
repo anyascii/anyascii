@@ -1,8 +1,6 @@
 package com.hunterwb.anyascii.build
 
 import com.ibm.icu.text.Transliterator
-import java.nio.file.Files
-import java.nio.file.Path
 
 fun main() {
     val table = ascii()
@@ -13,7 +11,7 @@ fun main() {
             .then(unihan())
             .then(icu("[:^Han:]>; ::Han-Latin; ::Latin-ASCII; [:^ASCII:]>; ::Any-Title;"))
             .normalize(NFKC)
-            .then(unidecode())
+            .then(Table("input/unidecode.tsv"))
             .then(icu("::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))
             .normalize(NFKC)
             .cased()
@@ -34,52 +32,6 @@ private fun icu(rules: String): Table {
             table[cp] = output
         }
     }
-    return table
-}
-
-private fun unidecode() = Table("input/unidecode.tsv")
-
-private fun unihan(): Table {
-    return Table()
-            .then(unihan("kMandarin"))
-            .then(unihan("kCantonese"))
-            .then(unihan("kVietnamese"))
-            .then(unihan("kJapaneseOn"))
-            .then(unihan("kJapaneseKun"))
-            .then(unihan("kHanyuPinyin"))
-            .then(unihan("kHangul"))
-}
-
-private fun unihan(key: String): Table {
-    val table = Table()
-    val reader = Files.newBufferedReader(Path.of("input/Unihan_Readings.txt"))
-    reader.lineSequence()
-            .filter { !it.startsWith("#") && it.isNotEmpty() }
-            .map { it.split('\t', limit = 3) }
-            .filter { it[1] == key }
-            .forEach {
-                val cp = Integer.parseInt(it[0].drop(2), 16)
-                var output = it[2]
-                when (key) {
-                    "kHangul" -> {
-                        output = output.substringBefore(':')
-                        output = Transliterator.getInstance("Hangul-Latin").transliterate(output)
-                    }
-                    "kTang" -> {
-                        output = output.removePrefix("*").split(' ')[0]
-                    }
-                    else -> {
-                        output = output.substringAfter(':')
-                        output = output.split(' ', ',')[0]
-                        output = output.removeDiacritics()
-                        if (output.last().isDigit()) output = output.dropLast(1)
-                        output = output.toLowerCase().capitalize()
-                        output = output.replace('Đ', 'D')
-                    }
-                }
-                table[cp] = output
-            }
-    reader.close()
     return table
 }
 
