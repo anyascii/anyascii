@@ -9,7 +9,10 @@
   "files": ["js"],
   "keywords": [
     "unicode",
-    "ascii"
+    "utf8",
+    "ascii",
+    "unidecode",
+    "slug"
   ],
   "main": "js/any-ascii.js",
   "scripts": {
