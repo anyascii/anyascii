@@ -27,6 +27,7 @@ The [printable](https://en.wikipedia.org/wiki/ASCII#Printable_characters) charac
 with the remaining being [control characters](https://en.wikipedia.org/wiki/ASCII#Control_characters).
 - [**Transliteration**](https://en.wikipedia.org/wiki/Transliteration):
 A mapping from one writing system into another, typically done one character at a time using predictable rules.
+Transliteration generally preserves the spelling of words, while translation preserves the meaning, and transcription preserves the sound.
 Transliteration into the [Latin script](https://en.wikipedia.org/wiki/Latin_script) used by English is known as [romanization](https://en.wikipedia.org/wiki/Romanization).
 
 ## Examples
