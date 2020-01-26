@@ -44,6 +44,7 @@ private fun custom() = Table()
         .then(Table("input/nko.tsv"))
         .then(Table("input/math-symbols-a.tsv"))
         .then(Table("input/math-symbols-b.tsv"))
+        .then(Table("input/kanbun.tsv"))
         .then((0xe0020..0xe007e).toTable { toString(it - 0xe0000) }) // tags
         .then((0x1f1e6..0x1f1ff).toTable { toString(it - 0x1f1e6 + 'A'.toInt()) }) // regional indicators
         .then(Table("input/han-misc.tsv"))
