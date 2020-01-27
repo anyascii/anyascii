@@ -33,16 +33,16 @@ public final class AnyAsciiTest {
     public void testReadme() {
         check("résumé", "resume");
         check("© ㎧ Æ №", "(C) m/s AE No");
-
+        check("Großer Hörselberg", "Grosser Horselberg");
+        check("Φειδιππίδης", "Feidippidis");
+        check("Δημήτρης Φωτόπουλος", "Dimitris Fotopoylos");
+        check("Борис Николаевич Ельцин", "Boris Nikolaevich El'tsin");
         check("深圳", "ShenZhen");
         check("深水埗", "ShenShuiBu");
-        check("Борис Николаевич Ельцин", "Boris Nikolaevich El'tsin");
         check("화성시", "hwaseongsi");
         check("華城市", "HuaChengShi");
         check("さいたま", "saitama");
         check("埼玉県", "QiYuXian");
-        check("Φειδιππίδης", "Feidippidis");
-        check("Δημήτρης Φωτόπουλος", "Dimitris Fotopoylos");
     }
 
     private static void checkAscii(String s) {

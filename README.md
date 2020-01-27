@@ -19,19 +19,20 @@ Unicode to ASCII transliteration
 
 ## Examples
 
-|Script|Input|Output|Actual|
-|---|---|---|---|
-||résumé|resume||
-||© ㎧ Æ №|(C) m/s AE No||
-|Mandarin Chinese|深圳|ShenZhen|Shenzhen|
-|Cantonese Chinese|深水埗|ShenShuiBu|Sham Shui Po|
-|Russian Cyrillic|Борис Николаевич Ельцин|Boris Nikolaevich El'tsin|Boris Nikolayevich Yeltsin|
-|Korean Hangul|화성시|hwaseongsi|Hwaseong-si|
-|Korean Hanja|華城市|HuaChengShi|Hwaseong-si|
-|Japanese Hiragana|さいたま|saitama|Saitama|
-|Japanese Kanji|埼玉県|QiYuXian|Saitama-ken|
-|Ancient Greek|Φειδιππίδης|Feidippidis|Pheidippides|
-|Modern Greek|Δημήτρης Φωτόπουλος|Dimitris Fotopoylos|Dimitris Fotopoulos|
+|Language|Script|Input|Output|Actual|
+|---|---|---|---|---|
+|||résumé|resume||
+|||© ㎧ Æ №|(C) m/s AE No||
+|German|Latin|Großer Hörselberg|Grosser Horselberg|Grosser Hoerselberg|
+|Ancient Greek|Greek|Φειδιππίδης|Feidippidis|Pheidippides|
+|Modern Greek|Greek|Δημήτρης Φωτόπουλος|Dimitris Fotopoylos|Dimitris Fotopoulos|
+|Russian|Cyrillic|Борис Николаевич Ельцин|Boris Nikolaevich El'tsin|Boris Nikolayevich Yeltsin|
+|Mandarin Chinese|Han|深圳|ShenZhen|Shenzhen|
+|Cantonese Chinese|Han|深水埗|ShenShuiBu|Sham Shui Po|
+|Korean|Hangul|화성시|hwaseongsi|Hwaseong-si|
+|Korean|Han|華城市|HuaChengShi|Hwaseong-si|
+|Japanese|Hiragana|さいたま|saitama|Saitama|
+|Japanese|Han|埼玉県|QiYuXian|Saitama-ken|
 
 ## Implementations
 
@@ -92,7 +93,7 @@ Python 3.3+ compatible
 
 Install latest release: `pip install anyascii`
 
-Install from master: `pip install https://github.com/hunterwb/any-ascii/archive/master.zip#subdirectory=python`
+Install pre-release: `pip install https://github.com/hunterwb/any-ascii/archive/master.zip#subdirectory=python`
 
 ### Node.js
 
@@ -107,7 +108,7 @@ Node.js 4+ compatible
 
 Install latest release: `npm install any-ascii`
 
-Install from master: `npm install hunterwb/any-ascii`
+Install pre-release: `npm install hunterwb/any-ascii`
 
 ## Glossary
 
