@@ -24,6 +24,7 @@ public final class AnyAsciiTest {
 
     @Test
     public void testString() {
+        check("résumé", "resume");
         check("άνθρωποι", "anthropoi");
         check("北亰", "BeiJing");
         check(new StringBuilder().appendCodePoint(0xE0033).appendCodePoint(0xE0033).toString(), "33");
@@ -31,8 +32,8 @@ public final class AnyAsciiTest {
 
     @Test
     public void testReadme() {
-        check("résumé", "resume");
         check("© ㎧ Æ №", "(C) m/s AE No");
+        check("René François Lacôte", "Rene Francois Lacote");
         check("Großer Hörselberg", "Grosser Horselberg");
         check("Φειδιππίδης", "Feidippidis");
         check("Δημήτρης Φωτόπουλος", "Dimitris Fotopoylos");

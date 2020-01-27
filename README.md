@@ -21,8 +21,8 @@ Unicode to ASCII transliteration
 
 |Language|Script|Input|Output|Actual|
 |---|---|---|---|---|
-|||résumé|resume||
 |||© ㎧ Æ №|(C) m/s AE No||
+|French|Latin|René François Lacôte|Rene Francois Lacote|Rene Francois Lacote|
 |German|Latin|Großer Hörselberg|Grosser Horselberg|Grosser Hoerselberg|
 |Ancient Greek|Greek|Φειδιππίδης|Feidippidis|Pheidippides|
 |Modern Greek|Greek|Δημήτρης Φωτόπουλος|Dimitris Fotopoylos|Dimitris Fotopoulos|
