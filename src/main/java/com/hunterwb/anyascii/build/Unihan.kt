@@ -26,7 +26,7 @@ private fun unihan(key: String): Table {
                 when (key) {
                     "kHangul" -> {
                         output = output.substringBefore(':')
-                        output = Transliterator.getInstance("Hangul-Latin").transliterate(output)
+                        output = Transliterator.getInstance("Hangul-Latin").transliterate(output).capitalize()
                     }
                     "kTang" -> {
                         output = output.removePrefix("*").split(' ')[0]
