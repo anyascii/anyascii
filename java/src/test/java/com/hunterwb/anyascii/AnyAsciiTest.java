@@ -35,6 +35,7 @@ public final class AnyAsciiTest {
         check("© ㎧ Æ №", "(C) m/s AE No");
         check("René François Lacôte", "Rene Francois Lacote");
         check("Großer Hörselberg", "Grosser Horselberg");
+        check("Trần Hưng Đạo", "Tran Hung Dao");
         check("Φειδιππίδης", "Feidippidis");
         check("Δημήτρης Φωτόπουλος", "Dimitris Fotopoylos");
         check("Борис Николаевич Ельцин", "Boris Nikolaevich El'tsin");
