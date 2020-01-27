@@ -37,7 +37,8 @@ public final class AnyAsciiTest {
         check("深圳", "ShenZhen");
         check("深水埗", "ShenShuiBu");
         check("Борис Николаевич Ельцин", "Boris Nikolaevich El'tsin");
-        check("반기문", "bangimun");
+        check("화성시", "hwaseongsi");
+        check("華城市", "HuaChengShi");
         check("さいたま", "saitama");
         check("埼玉県", "QiYuXian");
         check("Φειδιππίδης", "Feidippidis");

@@ -26,7 +26,8 @@ Unicode to ASCII transliteration
 |Mandarin Chinese|深圳|ShenZhen|Shenzhen|
 |Cantonese Chinese|深水埗|ShenShuiBu|Sham Shui Po|
 |Russian Cyrillic|Борис Николаевич Ельцин|Boris Nikolaevich El'tsin|Boris Nikolayevich Yeltsin|
-|Korean Hangul|반기문|bangimun|Ban Ki-Moon|
+|Korean Hangul|화성시|hwaseongsi|Hwaseong-si|
+|Korean Hanja|華城市|HuaChengShi|Hwaseong-si|
 |Japanese Hiragana|さいたま|saitama|Saitama|
 |Japanese Kanji|埼玉県|QiYuXian|Saitama-ken|
 |Ancient Greek|Φειδιππίδης|Feidippidis|Pheidippides|
