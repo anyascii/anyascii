@@ -20,7 +20,8 @@ fun Table.minus(other: Table) = apply { for (cp in other.keys) remove(cp) }
 fun Table.write(path: String) = apply {
     Files.newBufferedWriter(Path.of(path)).use {
         for ((cp, r) in this) {
-            check(r.isNotEmpty() && r.isPrintableAscii())
+            if (r.isEmpty()) continue
+            check(r.isPrintableAscii())
             it.append(toString(cp)).append('\t').append(r).append('\n')
         }
     }

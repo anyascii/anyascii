@@ -71,6 +71,7 @@ private fun custom() = Table()
         .then(boxDrawing())
         .then((0x2580..0x259f).toTable { "#" }) // block elements
         .then(Table("input/control-pictures.tsv"))
+        .then(bopomofo())
 
 private fun cyrillic() = Table()
         .then(Table("input/cyrillic.tsv"))
@@ -151,3 +152,9 @@ private fun boxDrawing() = Table()
         .then(0x2571, "/")
         .then(0x2572, "\\")
         .then(0x2573, "X")
+
+private fun bopomofo() = codePoints("Bopo").toTable { cp ->
+    val name = name(cp)
+    if ("TONE" in name) return@toTable ""
+    name.substringAfter("LETTER ").substringBefore(' ').toLowerCase().capitalize()
+}
