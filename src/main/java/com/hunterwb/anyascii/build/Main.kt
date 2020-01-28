@@ -67,6 +67,7 @@ private fun custom() = Table()
         .then((0x24eb..0x24ff).toTable { numericValue(it).toString() }) // circled numbers
         .then(greek())
         .then(coptic())
+        .then(Table("input/hexagrams.tsv"))
 
 private fun cyrillic() = Table()
         .then(Table("input/cyrillic.tsv"))
