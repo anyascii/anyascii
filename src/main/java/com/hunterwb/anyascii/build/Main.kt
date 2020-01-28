@@ -68,6 +68,7 @@ private fun custom() = Table()
         .then(greek())
         .then(coptic())
         .then(Table("input/hexagrams.tsv"))
+        .then(boxDrawing())
 
 private fun cyrillic() = Table()
         .then(Table("input/cyrillic.tsv"))
@@ -140,3 +141,11 @@ private fun dominoes() = (0x1f030..0x1f093).toTable {
     }
     s
 }
+
+private fun boxDrawing() = Table()
+        .then(((0x2500..0x250b) + (0x254c..0x2551)).toTable { name(it).let { if ("VERTICAL" in it) "|" else "-" } })
+        .then(((0x250c..0x254b) + (0x2552..0x2570)).toTable { "+" })
+        .then((0x2574..0x257f).toTable { name(it).let { if ("LEFT" in it || "RIGHT" in it) "-" else "|" } })
+        .then(0x2571, "/")
+        .then(0x2572, "\\")
+        .then(0x2573, "X")
