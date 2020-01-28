@@ -70,6 +70,7 @@ private fun custom() = Table()
         .then(Table("input/hexagrams.tsv"))
         .then(boxDrawing())
         .then((0x2580..0x259f).toTable { "#" }) // block elements
+        .then(Table("input/control-pictures.tsv"))
 
 private fun cyrillic() = Table()
         .then(Table("input/cyrillic.tsv"))
