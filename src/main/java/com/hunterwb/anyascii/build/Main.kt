@@ -69,6 +69,7 @@ private fun custom() = Table()
         .then(coptic())
         .then(Table("input/hexagrams.tsv"))
         .then(boxDrawing())
+        .then((0x2580..0x259f).toTable { "#" }) // block elements
 
 private fun cyrillic() = Table()
         .then(Table("input/cyrillic.tsv"))
