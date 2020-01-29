@@ -25,6 +25,7 @@ Unicode to ASCII transliteration
 |French|Latin|René François Lacôte|Rene Francois Lacote|Rene Francois Lacote|
 |German|Latin|Großer Hörselberg|Grosser Horselberg|Grosser Hoerselberg|
 |Vietnamese|Latin|Trần Hưng Đạo|Tran Hung Dao|Tran Hung Dao|
+|Norwegian|Latin|Nærøy|Naeroy|Naroy|
 |Ancient Greek|Greek|Φειδιππίδης|Feidippidis|Pheidippides|
 |Modern Greek|Greek|Δημήτρης Φωτόπουλος|Dimitris Fotopoylos|Dimitris Fotopoulos|
 |Russian|Cyrillic|Борис Николаевич Ельцин|Boris Nikolaevich El'tsin|Boris Nikolayevich Yeltsin|

@@ -36,6 +36,7 @@ public final class AnyAsciiTest {
         check("René François Lacôte", "Rene Francois Lacote");
         check("Großer Hörselberg", "Grosser Horselberg");
         check("Trần Hưng Đạo", "Tran Hung Dao");
+        check("Nærøy", "Naeroy");
         check("Φειδιππίδης", "Feidippidis");
         check("Δημήτρης Φωτόπουλος", "Dimitris Fotopoylos");
         check("Борис Николаевич Ельцин", "Boris Nikolaevich El'tsin");
