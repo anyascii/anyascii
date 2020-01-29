@@ -34,6 +34,7 @@ Unicode to ASCII transliteration
 |Korean|Han|華城市|HuaChengShi|Hwaseong-si|
 |Japanese|Hiragana|さいたま|saitama|Saitama|
 |Japanese|Han|埼玉県|QiYuXian|Saitama-ken|
+|Japanese|Katakana|トヨタ|toyota|Toyota|
 
 ## Implementations
 

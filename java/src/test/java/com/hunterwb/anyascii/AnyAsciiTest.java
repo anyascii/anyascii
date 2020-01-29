@@ -45,6 +45,7 @@ public final class AnyAsciiTest {
         check("華城市", "HuaChengShi");
         check("さいたま", "saitama");
         check("埼玉県", "QiYuXian");
+        check("トヨタ", "toyota");
     }
 
     private static void checkAscii(String s) {
