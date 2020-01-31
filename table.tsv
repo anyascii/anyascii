@@ -8587,6 +8587,8 @@
 㛜	You
 㛝	Bei
 㛞	Long
+㛟	Wun
+㛠	Haan
 㛡	Wan
 㛢	Sau
 㛣	Yun
@@ -10001,6 +10003,7 @@
 㳞	Cung
 㳠	Ta
 㳡	Guo
+㳢	Kiu
 㳤	Suk
 㳥	Long
 㳦	Xie
@@ -10448,6 +10451,7 @@
 㻕	Jue
 㻖	Dai
 㻗	Bei
+㻘	Sam
 㻚	Pang
 㻛	Ji
 㻝	La
@@ -12230,6 +12234,7 @@
 䘛	Gei
 䘜	Gan
 䘝	Yi
+䘞	Mo
 䘟	Diao
 䘠	Fu
 䘡	Bi
@@ -13050,6 +13055,8 @@
 䥺	Ye
 䥽	Po
 䥾	Xie
+䥿	Lai
+䦀	Jyu
 䦁	Bong
 䦂	Shan
 䦃	Zhuo
@@ -35079,6 +35086,7 @@
 鿉	Wu
 鿊	Zi
 鿋	Hei
+鿌	Liang
 鿍	Gang
 鿎	Ta
 鿏	Mai
@@ -51410,6 +51418,7 @@
 𠆳	Trum
 𠆵	Ni
 𠆶	Dan
+𠆿	Wu
 𠇁	Jan
 𠇋	Dan
 𠇍	Voi
@@ -53505,6 +53514,7 @@
 𡋁	Nieu
 𡋂	Nen
 𡋃	Loi
+𡋗	Coi
 𡋙	Hui
 𡋚	Ji
 𡋟	Gao
@@ -55271,6 +55281,7 @@
 𢍭	Si
 𢍰	Yi
 𢍱	Qian
+𢍺	Yi
 𢍼	Li
 𢍿	Zang
 𢎀	Yi
@@ -55452,6 +55463,7 @@
 𢕅	Shuai
 𢕋	Yuan
 𢕎	Zhang
+𢕐	Hong
 𢕑	Shuai
 𢕓	Chu
 𢕔	Zhang
@@ -56070,6 +56082,7 @@
 𢫅	That
 𢫆	Vun
 𢫈	Go
+𢫊	Deoi
 𢫌	Tha
 𢫏	Kam
 𢫐	Jie
@@ -56451,6 +56464,7 @@
 𢶣	Die
 𢶤	Loe
 𢶥	Choang
+𢶫	Quay
 𢶯	Maan
 𢶳	Pin
 𢶴	Ci
@@ -56748,6 +56762,7 @@
 𣁔	Lon
 𣁖	Gan
 𣁗	Tan
+𣁚	Li
 𣁜	Man
 𣁟	Li
 𣁢	Bi
@@ -56814,6 +56829,7 @@
 𣄃	Kei
 𣄅	Fang
 𣄇	Vuong
+𣄈	Hui
 𣄉	Yan
 𣄊	Yu
 𣄍	Ti
@@ -56891,6 +56907,7 @@
 𣆴	Shan
 𣆵	Fu
 𣆽	Ze
+𣇀	Bu
 𣇇	Dan
 𣇈	Hiu
 𣇉	Gwan
@@ -57091,6 +57108,7 @@
 𣍟	Ken
 𣍦	Kuang
 𣍧	Fei
+𣍨	Ji
 𣍯	Yun
 𣍰	Qian
 𣍴	Quan
@@ -58407,6 +58425,7 @@
 𣽳	Ruan
 𣽴	Wei
 𣽷	Si
+𣽽	Shan
 𣽿	Cing
 𣾀	Wui
 𣾁	Kei
@@ -58984,6 +59003,7 @@
 𤕟	Shu
 𤕢	Xiao
 𤕦	Ning
+𤕪	Pan
 𤕭	Jiang
 𤕯	Jiang
 𤕷	Diao
@@ -61064,6 +61084,7 @@
 𥕿	Pan
 𥖁	Zyun
 𥖄	Sin
+𥖅	Taan
 𥖍	La
 𥖏	Gun
 𥖐	Doi
@@ -61779,6 +61800,7 @@
 𥱂	Nu
 𥱃	Yi
 𥱊	Zik
+𥱔	Zaan
 𥱥	Ceoi
 𥱧	Qin
 𥱨	Qing
@@ -62368,6 +62390,7 @@
 𦂡	Ye
 𦂤	Ping
 𦂥	Dam
+𦂳	Jin
 𦂺	Uom
 𦂻	Luot
 𦂼	Giam
@@ -64196,6 +64219,7 @@
 𧀴	Fu
 𧀵	Jian
 𧀶	Di
+𧀹	Zhe
 𧀺	Xie
 𧀻	Dan
 𧀿	Zhi
@@ -67440,6 +67464,7 @@
 𨬖	Chan
 𨬗	Xu
 𨬚	Zhi
+𨬟	Gu
 𨬡	Keoi
 𨬢	Sin
 𨬫	Hoi
@@ -67560,6 +67585,7 @@
 𨱃	Gu
 𨱄	Tu
 𨱅	Zhen
+𨱆	Mou
 𨱇	Qiu
 𨱈	Su
 𨱉	Liang
@@ -69370,6 +69396,7 @@
 𩨋	Dian
 𩨌	Ta
 𩨍	Zhan
+𩨎	Ji
 𩨏	Fan
 𩨐	Lie
 𩨑	Ting
@@ -70625,6 +70652,7 @@
 𪎉	Xian
 𪎊	Chao
 𪎋	Tie
+𪎍	Buk
 𪎒	Shuo
 𪎔	Mi
 𪎗	Mi
@@ -71108,6 +71136,7 @@
 𬤥	Zhuan
 𬯎	Tui
 𬸣	Xian
+𭀖	Li
 𮕩	Soe
 丽	Li
 丸	Wan

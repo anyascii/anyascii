@@ -7,21 +7,21 @@ import java.nio.file.Path
 fun unihan() = Table()
         .then(unihan("kMandarin"))
         .then(unihan("kCantonese"))
+        .then(unihan("kHanyuPinyin"))
+        .then(unihan("kHangul"))
         .then(unihan("kVietnamese"))
         .then(unihan("kJapaneseOn"))
         .then(unihan("kJapaneseKun"))
-        .then(unihan("kHanyuPinyin"))
-        .then(unihan("kHangul"))
+        .variants()
 
 private fun unihan(key: String): Table {
     val table = Table()
-    val reader = Files.newBufferedReader(Path.of("input/Unihan_Readings.txt"))
-    reader.lineSequence()
+    Files.lines(Path.of("input/Unihan_Readings.txt"))
             .filter { !it.startsWith("#") && it.isNotEmpty() }
             .map { it.split('\t', limit = 3) }
             .filter { it[1] == key }
             .forEach {
-                val cp = Integer.parseInt(it[0].drop(2), 16)
+                val cp = it[0].drop(2).toInt(16)
                 var output = it[2]
                 when (key) {
                     "kHangul" -> {
@@ -42,6 +42,20 @@ private fun unihan(key: String): Table {
                 }
                 table[cp] = output
             }
-    reader.close()
     return table
+}
+
+private fun Table.variants() = apply {
+    Files.lines(Path.of("input/Unihan_Variants.txt"))
+            .filter { !it.startsWith("#") && it.isNotEmpty() }
+            .map { it.split('\t') }
+            .filter { it.size == 3 }
+            .forEach {
+                val cp1 = it[0].drop(2).toInt(16)
+                for (s in it[2].split(' ')) {
+                    val cp2 = s.substringBefore('<').drop(2).toInt(16)
+                    if (cp1 in this) putIfAbsent(cp2, getValue(cp1))
+                    if (cp2 in this) putIfAbsent(cp1, getValue(cp2))
+                }
+            }
 }

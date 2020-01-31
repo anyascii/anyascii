@@ -9,7 +9,6 @@ fun main() {
             .normalize(NFKC)
             .then(icu("::Latin-ASCII; [:^ASCII:]>;"))
             .then(unihan())
-            .then(icu("[:^Han:]>; ::Han-Latin; ::Latin-ASCII; [:^ASCII:]>; ::Any-Title;"))
             .normalize(NFKC)
             .then(Table("input/unidecode.tsv"))
             .then(icu("::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))
