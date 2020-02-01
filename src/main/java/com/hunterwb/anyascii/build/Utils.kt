@@ -23,7 +23,7 @@ fun name(codePoint: Int): String = UCharacter.getName(codePoint)
 
 fun codePoint(name: String): Int = UCharacter.getCharFromName(name)
 
-fun String.toCodePoint(): Int = codePointAt(0).also { check(length == Character.charCount(it)) }
+fun String.toCodePoint(): Int = codePointAt(0).also { check(length == Character.charCount(it)) { this } }
 
 fun UnicodeSet.codePoints(): List<Int> = map { it.toCodePoint() }
 

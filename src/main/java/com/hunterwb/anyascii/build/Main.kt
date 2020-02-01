@@ -71,6 +71,7 @@ private fun custom() = Table()
         .then((0x2580..0x259f).toTable { "#" }) // block elements
         .then(Table("input/control-pictures.tsv"))
         .then(bopomofo())
+        .then(Table("input/hebrew.tsv").normalize(NFKD))
 
 private fun cyrillic() = Table()
         .then(Table("input/cyrillic.tsv"))
