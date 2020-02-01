@@ -72,6 +72,7 @@ private fun custom() = Table()
         .then(Table("input/control-pictures.tsv"))
         .then(bopomofo())
         .then(Table("input/hebrew.tsv").normalize(NFKD))
+        .then(cypriot())
 
 private fun cyrillic() = Table()
         .then(Table("input/cyrillic.tsv"))
@@ -158,3 +159,5 @@ private fun bopomofo() = codePoints("Bopo").toTable { cp ->
     if ("TONE" in name) return@toTable ""
     name.substringAfter("LETTER ").substringBefore(' ').toLowerCase().capitalize()
 }
+
+private fun cypriot() = codePoints("Cprt").toTable { name(it).substringAfterLast(' ').toLowerCase() }
