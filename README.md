@@ -66,7 +66,7 @@ Available through [**JitPack**](https://jitpack.io/#com.hunterwb/any-ascii)
 <dependency>
     <groupId>com.hunterwb</groupId>
     <artifactId>any-ascii</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 </dependency>
 ```
 
@@ -80,7 +80,7 @@ repositories {
 
 ```groovy
 dependencies {
-    implementation 'com.hunterwb:any-ascii:0.1.0'
+    implementation 'com.hunterwb:any-ascii:0.1.1'
 }
 ```
 
