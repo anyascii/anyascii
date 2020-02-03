@@ -1,7 +1,5 @@
 mod block;
 
-const STRINGS: &'static str = include_str!("strings.txt");
-
 pub fn any_ascii(s: &str) -> String {
     s.chars().map(any_ascii_char).collect()
 }
@@ -26,7 +24,7 @@ pub fn any_ascii_char(c: char) -> &'static str {
             } else {
                 let i = (((p[0] as u16) << 8) | (p[1] as u16)) as usize;
                 unsafe {
-                    STRINGS.get_unchecked(i..i + len)
+                    include_str!("strings.txt").get_unchecked(i..i + len)
                 }
             }
         }
