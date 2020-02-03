@@ -20,6 +20,7 @@ fun main() {
     java(table)
     python(table)
     js(table)
+    rust(table.then(ascii()))
 }
 
 private fun icu(rules: String): Table {

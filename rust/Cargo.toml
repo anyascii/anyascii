@@ -1,0 +1,16 @@
+[package]
+name = "any_ascii"
+version = "0.1.2-dev"
+authors = ["Hunter WB <hunter@hunterwb.com>"]
+edition = "2018"
+homepage = "https://github.com/hunterwb/any-ascii"
+repository = "https://github.com/hunterwb/any-ascii"
+description = "Unicode to ASCII transliteration"
+license = "ISC"
+categories = ["text-processing", "internationalization"]
+keywords = [
+  "unicode",
+  "ascii",
+  "transliteration"
+]
+readme = "../README.md"

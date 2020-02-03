@@ -2,3 +2,5 @@ java/src/main/resources/* linguist-generated=true
 python/anyascii/_data/* linguist-generated=true
 js/data/* linguist-generated=true
 js/block.js linguist-generated=true
+rust/src/data/* linguist-generated=true
+rust/src/block.rs linguist-generated=true
