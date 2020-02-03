@@ -3,7 +3,7 @@ mod block;
 const STRINGS: &'static str = include_str!("strings.txt");
 
 pub fn any_ascii(s: &str) -> String {
-    s.chars().map(|c| any_ascii_char(c)).collect()
+    s.chars().map(any_ascii_char).collect()
 }
 
 pub fn any_ascii_char(c: char) -> &'static str {
