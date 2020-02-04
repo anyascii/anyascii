@@ -21,22 +21,25 @@ pub fn any_ascii(s: &str) -> String {
 /// ```
 pub fn any_ascii_char(c: char) -> &'static str {
     let block_num = (c as u32) >> 8;
-    let b = block::block(block_num);
+    let block_bytes = block::block(block_num);
     let block: &'static [[u8; 3]] = unsafe {
-        std::slice::from_raw_parts(b.as_ptr() as *const [u8; 3], b.len() / 3)
+        std::slice::from_raw_parts(
+            block_bytes.as_ptr() as *const [u8; 3],
+            block_bytes.len() / 3
+        )
     };
     let lo = (c as u8) as usize;
-    if let Some(p) = block.get(lo) {
-        let mut len = p[2] as usize;
+    if let Some(ptr) = block.get(lo) {
+        let mut len = ptr[2] as usize;
         if len >= 32 {
             len = 3
         }
         if len <= 3 {
             unsafe {
-                std::str::from_utf8_unchecked(&p[..len])
+                std::str::from_utf8_unchecked(&ptr[..len])
             }
         } else {
-            let i = (((p[0] as u16) << 8) | (p[1] as u16)) as usize;
+            let i = (((ptr[0] as u16) << 8) | (ptr[1] as u16)) as usize;
             unsafe {
                 include_str!("strings.txt").get_unchecked(i..i + len)
             }
