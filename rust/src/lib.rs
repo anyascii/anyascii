@@ -1,9 +1,17 @@
 mod block;
 
+/// ```
+/// # use any_ascii::any_ascii;
+/// assert_eq!("anthropoi", any_ascii("άνθρωποι"));
+/// ```
 pub fn any_ascii(s: &str) -> String {
     s.chars().map(any_ascii_char).collect()
 }
 
+/// ```
+/// # use any_ascii::any_ascii_char;
+/// assert_eq!("ae", any_ascii_char('æ'));
+/// ```
 pub fn any_ascii_char(c: char) -> &'static str {
     let block_num = (c as u32) >> 8;
     let b = block::block(block_num);
