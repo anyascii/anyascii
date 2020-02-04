@@ -11,24 +11,23 @@ pub fn any_ascii_char(c: char) -> &'static str {
         std::slice::from_raw_parts(b.as_ptr() as *const [u8; 3], b.len() / 3)
     };
     let lo = (c as u8) as usize;
-    match block.get(lo) {
-        Some(p) => {
-            let mut len = p[2] as usize;
-            if len >= 32 {
-                len = 3
+    if let Some(p) = block.get(lo) {
+        let mut len = p[2] as usize;
+        if len >= 32 {
+            len = 3
+        }
+        if len <= 3 {
+            unsafe {
+                std::str::from_utf8_unchecked(&p[..len])
             }
-            if len <= 3 {
-                unsafe {
-                    std::str::from_utf8_unchecked(&p[..len])
-                }
-            } else {
-                let i = (((p[0] as u16) << 8) | (p[1] as u16)) as usize;
-                unsafe {
-                    include_str!("strings.txt").get_unchecked(i..i + len)
-                }
+        } else {
+            let i = (((p[0] as u16) << 8) | (p[1] as u16)) as usize;
+            unsafe {
+                include_str!("strings.txt").get_unchecked(i..i + len)
             }
         }
-        None => ""
+    } else {
+        ""
     }
 }
 
