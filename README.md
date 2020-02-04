@@ -13,6 +13,7 @@ Unicode to ASCII transliteration
   - [Java](#java)
   - [Python](#python)
   - [Node.js](#nodejs)
+  - [Rust](#rust)
 - [Glossary](#glossary)
 - [See Also](#see-also)
 
@@ -113,6 +114,21 @@ Node.js 4+ compatible
 Install latest release: `npm install any-ascii`
 
 Install pre-release: `npm install hunterwb/any-ascii`
+
+### Rust
+
+```rust
+use any_ascii::any_ascii;
+
+let s = any_ascii("άνθρωποι");
+// anthropoi
+```
+
+Use pre-release:
+```toml
+[dependencies]
+any_ascii = { git = "https://github.com/hunterwb/any-ascii" }
+```
 
 ## Glossary
 
