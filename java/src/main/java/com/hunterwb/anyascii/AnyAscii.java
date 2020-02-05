@@ -9,8 +9,6 @@ public final class AnyAscii {
 
     private AnyAscii() {}
 
-    private static final String[][][] planes = new String[3][][];
-
     public static String transliterate(String s) {
         if (isAscii(s)) return s;
         StringBuilder sb = new StringBuilder(s.length());
@@ -54,25 +52,11 @@ public final class AnyAscii {
             dst.append((char) codePoint);
             return;
         }
-        int planeNum = codePoint >>> 16;
-        switch (planeNum) {
-            case 0x0:
-            case 0x1:
-            case 0x2:
-                transliteratePlane(planeNum, codePoint, dst);
-                break;
-            case 0xE:
-                transliteratePlaneE(codePoint, dst);
-                break;
-        }
-    }
-
-    private static void transliteratePlane(int planeNum, int codePoint, StringBuilder dst) {
-        String[][] plane = planes[planeNum];
-        if (plane == null) plane = planes[planeNum] = new String[256][];
-        int blockNum = (codePoint >>> 8) & 0xFF;
-        String[] block = plane[blockNum];
-        if (block == null) block = loadBlock(planeNum, blockNum);
+        int blockNum = codePoint >>> 8;
+        int blockId = Block.block(blockNum);
+        if (blockId == -1) return;
+        String[] block = Block.blocks[blockId];
+        if (block == null) Block.blocks[blockId] = block = loadBlock(blockNum);
         int lo = codePoint & 0xFF;
         if (block.length <= lo) return;
         String s = block[lo];
@@ -80,15 +64,8 @@ public final class AnyAscii {
         dst.append(s);
     }
 
-    private static void transliteratePlaneE(int codePoint, StringBuilder dst) {
-        int c = codePoint & 0xFFFF;
-        if (c >= 0x20 && c <= 0x7E) {
-            dst.append((char) c);
-        }
-    }
-
-    private static String[] loadBlock(int planeNum, int blockNum) {
-        InputStream input = AnyAscii.class.getResourceAsStream(String.format("%03x", (planeNum << 16) + blockNum));
+    private static String[] loadBlock(int blockNum) {
+        InputStream input = AnyAscii.class.getResourceAsStream(String.format("%03x", blockNum));
         String[] block;
         if (input == null) {
             block = new String[0];
@@ -103,7 +80,7 @@ public final class AnyAscii {
                 throw new RuntimeException(e);
             }
         }
-        return planes[planeNum][blockNum] = block;
+        return block;
     }
 
     @SuppressWarnings("deprecation")
