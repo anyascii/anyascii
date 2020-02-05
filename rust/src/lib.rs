@@ -20,7 +20,7 @@ pub fn any_ascii(s: &str) -> String {
 /// assert_eq!("Shen", any_ascii_char('深'));
 /// ```
 pub fn any_ascii_char(c: char) -> &'static str {
-    let block_num = (c as u32) >> 8;
+    let block_num = ((c as u32) >> 8) as u16;
     let block_bytes = block::block(block_num);
     let block: &'static [[u8; 3]] = unsafe {
         std::slice::from_raw_parts(

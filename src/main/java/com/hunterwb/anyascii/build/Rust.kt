@@ -57,7 +57,7 @@ fun rust(table: Table) {
 
 private fun writeSwitch(blocks: Set<Int>, path: Path) {
     Files.newBufferedWriter(path).use { writer ->
-        writer.write("pub fn block(block_num: u32) -> &'static [u8] {\n")
+        writer.write("pub fn block(block_num: u16) -> &'static [u8] {\n")
         writer.write("\treturn match block_num {\n")
         for (block in blocks) {
             val s = "%03x".format(block)
