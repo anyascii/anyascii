@@ -10,11 +10,11 @@ Unicode to ASCII transliteration
 
 - [Examples](#examples)
 - [Implementations](#implementations)
-  - [Java](#java)
-  - [Python](#python)
-  - [Node.js](#nodejs)
-  - [Rust](#rust)
   - [Go](#go)
+  - [Java](#java)
+  - [Node.js](#nodejs)
+  - [Python](#python)
+  - [Rust](#rust)
 - [Glossary](#glossary)
 - [See Also](#see-also)
 
@@ -41,6 +41,21 @@ Unicode to ASCII transliteration
 |Japanese|Katakana|トヨタ|toyota|Toyota|
 
 ## Implementations
+
+### Go
+
+```go
+package main
+
+import (
+    "github.com/hunterwb/any-ascii
+)
+
+func main() {
+    s := anyascii.Transliterate("άνθρωποι")
+    // anthropoi
+}
+```
 
 ### Java
 
@@ -86,21 +101,6 @@ dependencies {
 }
 ```
 
-### Python
-
-```python
-from anyascii import anyascii
-
-s = anyascii('άνθρωποι')
-#  anthropoi
-```
-
-Python 3.3+ compatible
-
-Install latest release: `pip install anyascii`
-
-Install pre-release: `pip install https://github.com/hunterwb/any-ascii/archive/master.zip#subdirectory=python`
-
 ### Node.js
 
 ```javascript
@@ -116,6 +116,21 @@ Install latest release: `npm install any-ascii`
 
 Install pre-release: `npm install hunterwb/any-ascii`
 
+### Python
+
+```python
+from anyascii import anyascii
+
+s = anyascii('άνθρωποι')
+#  anthropoi
+```
+
+Python 3.3+ compatible
+
+Install latest release: `pip install anyascii`
+
+Install pre-release: `pip install https://github.com/hunterwb/any-ascii/archive/master.zip#subdirectory=python`
+
 ### Rust
 
 ```rust
@@ -129,21 +144,6 @@ Use pre-release:
 ```toml
 [dependencies]
 any_ascii = { git = "https://github.com/hunterwb/any-ascii" }
-```
-
-### Go
-
-```go
-package main
-
-import (
-    "github.com/hunterwb/any-ascii
-)
-
-func main() {
-    s := anyascii.Transliterate("άνθρωποι")
-    // anthropoi
-}
 ```
 
 ## Glossary
