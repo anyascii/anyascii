@@ -2,7 +2,7 @@ package anyascii
 
 import "github.com/hunterwb/any-ascii/go/data"
 
-func Block(blockNum uint16) string {
+func Block(blockNum uint32) string {
 	switch blockNum {
 	case 0x000: return data.X000
 	case 0x001: return data.X001

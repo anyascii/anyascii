@@ -59,7 +59,7 @@ private fun writeSwitch(blocks: Set<Int>, path: Path) {
     Files.newBufferedWriter(path).use { writer ->
         writer.write("package anyascii\n\n")
         writer.write("import \"github.com/hunterwb/any-ascii/go/data\"\n\n")
-        writer.write("func Block(blockNum uint16) string {\n")
+        writer.write("func Block(blockNum uint32) string {\n")
         writer.write("\tswitch blockNum {\n")
         for (block in blocks) {
             val s = "%03x".format(block)
