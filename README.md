@@ -14,6 +14,7 @@ Unicode to ASCII transliteration
   - [Python](#python)
   - [Node.js](#nodejs)
   - [Rust](#rust)
+  - [Go](#go)
 - [Glossary](#glossary)
 - [See Also](#see-also)
 
@@ -128,6 +129,21 @@ Use pre-release:
 ```toml
 [dependencies]
 any_ascii = { git = "https://github.com/hunterwb/any-ascii" }
+```
+
+### Go
+
+```go
+package main
+
+import (
+    "github.com/hunterwb/any-ascii
+)
+
+func main() {
+    s := anyascii.Transliterate("άνθρωποι")
+    // anthropoi
+}
 ```
 
 ## Glossary
