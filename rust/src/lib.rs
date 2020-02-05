@@ -54,9 +54,27 @@ fn test() {
     fn check(s: &str, expected: &str) {
         assert_eq!(any_ascii(s), expected)
     }
+
     check("", "");
     check("a", "a");
     check("123", "123");
     check("北亰", "BeiJing");
     check("résumé", "resume");
+
+    check("© ㎧ Æ №", "(C) m/s AE No");
+    check("René François Lacôte", "Rene Francois Lacote");
+    check("Großer Hörselberg", "Grosser Horselberg");
+    check("Trần Hưng Đạo", "Tran Hung Dao");
+    check("Nærøy", "Naeroy");
+    check("Φειδιππίδης", "Feidippidis");
+    check("Δημήτρης Φωτόπουλος", "Dimitris Fotopoylos");
+    check("Борис Николаевич Ельцин", "Boris Nikolaevich El'tsin");
+    check("אברהם הלוי פרנקל", "'vrhm hlvy frnkl");
+    check("深圳", "ShenZhen");
+    check("深水埗", "ShenShuiBu");
+    check("화성시", "hwaseongsi");
+    check("華城市", "HuaChengShi");
+    check("さいたま", "saitama");
+    check("埼玉県", "QiYuXian");
+    check("トヨタ", "toyota");
 }
