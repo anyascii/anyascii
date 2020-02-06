@@ -6,6 +6,7 @@ mod block;
 /// assert_eq!("sample", any_ascii("sample"));
 /// assert_eq!("ShenZhen", any_ascii("深圳"));
 /// assert_eq!("Boris", any_ascii("Борис"));
+/// assert_eq!("toyota", any_ascii("トヨタ"));
 /// ```
 pub fn any_ascii(s: &str) -> String {
     s.chars().map(any_ascii_char).collect()
@@ -18,6 +19,9 @@ pub fn any_ascii(s: &str) -> String {
 /// assert_eq!("k", any_ascii_char('k'));
 /// assert_eq!("ss", any_ascii_char('ß'));
 /// assert_eq!("Shen", any_ascii_char('深'));
+/// assert_eq!("c", any_ascii_char('ç'));
+/// assert_eq!("l", any_ascii_char('λ'));
+/// assert_eq!("zh", any_ascii_char('ж'));
 /// ```
 pub fn any_ascii_char(c: char) -> &'static str {
     let block_num = ((c as u32) >> 8) as u16;
