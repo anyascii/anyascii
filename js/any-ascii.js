@@ -5,11 +5,11 @@ const block = require('./block.js');
 const blocks = {};
 
 module.exports = function anyAscii(string) {
-    const result = [];
+    let result = '';
     for (const c of string) {
         const codePoint = c.codePointAt(0);
         if (codePoint <= 0x7F) {
-            result.push(c);
+            result += c;
             continue;
         }
         const blockNum = codePoint >>> 8;
@@ -19,8 +19,8 @@ module.exports = function anyAscii(string) {
             blocks[blockNum] = b = block(blockNum);
         }
         if (b.length > lo) {
-            result.push(b[lo]);
+            result += b[lo];
         }
     }
-    return result.join('');
+    return result;
 };
