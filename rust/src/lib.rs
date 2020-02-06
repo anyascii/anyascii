@@ -32,7 +32,7 @@ pub fn any_ascii_char(c: char) -> &'static str {
     if let Some(ptr) = block.get(lo) {
         let mut len = ptr[2] as usize;
         if len >= 32 {
-            len = 3
+            len = 3;
         }
         if len <= 3 {
             unsafe {
@@ -52,7 +52,7 @@ pub fn any_ascii_char(c: char) -> &'static str {
 #[test]
 fn test() {
     fn check(s: &str, expected: &str) {
-        assert_eq!(any_ascii(s), expected)
+        assert_eq!(any_ascii(s), expected);
     }
 
     check("", "");
