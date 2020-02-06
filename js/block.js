@@ -248,7 +248,6 @@ module.exports = function block(blockNum) {
         case 0x1f1: return require('./data/1f1.js');
         case 0x1f2: return require('./data/1f2.js');
         case 0x200: return require('./data/200.js');
-        case 0xe00: return require('./data/e00.js');
         case 0x201: return require('./data/201.js');
         case 0x202: return require('./data/202.js');
         case 0x203: return require('./data/203.js');
@@ -442,6 +441,7 @@ module.exports = function block(blockNum) {
         case 0x2f8: return require('./data/2f8.js');
         case 0x2f9: return require('./data/2f9.js');
         case 0x2fa: return require('./data/2fa.js');
+        case 0xe00: return require('./data/e00.js');
         default: return [];
     }
 };

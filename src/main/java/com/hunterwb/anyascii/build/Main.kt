@@ -1,5 +1,11 @@
 package com.hunterwb.anyascii.build
 
+import com.hunterwb.anyascii.build.gen.Generator
+import com.hunterwb.anyascii.build.gen.go
+import com.hunterwb.anyascii.build.gen.java
+import com.hunterwb.anyascii.build.gen.js
+import com.hunterwb.anyascii.build.gen.python
+import com.hunterwb.anyascii.build.gen.rust
 import com.ibm.icu.text.Transliterator
 
 fun main() {
@@ -17,12 +23,14 @@ fun main() {
             .minus(ascii())
             .write("table.tsv")
 
-    java(table)
-    python(table)
-    js(table)
     table.then(ascii())
-    rust(table)
-    go(table)
+
+    val g = Generator(table)
+    java(g)
+    python(g)
+    js(g)
+    rust(g)
+    go(g)
 }
 
 private fun icu(rules: String): Table {

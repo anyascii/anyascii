@@ -13,6 +13,8 @@ fun <A, B> Pair<A, B>.swap(): Pair<B, A> = second to first
 
 fun String.isPrintableAscii() = all { it.toInt() in 0x20..0x7e }
 
+fun Int.isAscii() = this in 0..127
+
 private val CDM = Pattern.compile("\\p{InCombiningDiacriticalMarks}+")
 
 fun String.removeDiacritics(): String = CDM.matcher(NFD.normalize(this)).replaceAll("")
