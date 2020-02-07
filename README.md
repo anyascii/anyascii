@@ -46,11 +46,11 @@ Unicode to ASCII transliteration
 ### CLI
 
 ```console
-$ any_ascii άνθρωποι
+$ anyascii άνθρωποι
 anthropoi
 ```
 
- Use `cd rust && cargo build --release` to build a native executable to `rust/target/release/any_ascii`
+ Use `cd rust && cargo build --release` to build a native executable to `rust/target/release/anyascii`
 
 ### Go
 

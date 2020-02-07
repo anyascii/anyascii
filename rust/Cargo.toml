@@ -14,3 +14,7 @@ keywords = [
   "transliteration"
 ]
 readme = "../README.md"
+
+[[bin]]
+name = "anyascii"
+path = "src/main.rs"
