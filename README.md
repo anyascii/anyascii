@@ -10,6 +10,7 @@ Unicode to ASCII transliteration
 
 - [Examples](#examples)
 - [Implementations](#implementations)
+  - [CLI](#cli)
   - [Go](#go)
   - [Java](#java)
   - [Node.js](#nodejs)
@@ -41,6 +42,15 @@ Unicode to ASCII transliteration
 |Japanese|Katakana|トヨタ|toyota|Toyota|
 
 ## Implementations
+
+### CLI
+
+```console
+$ any_ascii άνθρωποι
+anthropoi
+```
+
+ Use `cd rust && cargo build --release` to build a native executable to `rust/target/release/any_ascii`
 
 ### Go
 
