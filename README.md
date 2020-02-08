@@ -58,7 +58,7 @@ anthropoi
 package main
 
 import (
-    "github.com/hunterwb/any-ascii
+    "github.com/hunterwb/any-ascii"
 )
 
 func main() {
