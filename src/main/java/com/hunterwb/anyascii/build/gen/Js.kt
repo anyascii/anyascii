@@ -1,6 +1,5 @@
 package com.hunterwb.anyascii.build.gen
 
-import com.hunterwb.anyascii.build.isAscii
 import java.nio.file.Files
 import java.nio.file.Path
 
@@ -12,16 +11,10 @@ fun js(g: Generator) {
     for ((blockNum, block) in g.blocks) {
         Files.newBufferedWriter(dirPath.resolve("%03x.js".format(blockNum))).use { w ->
             w.write("module.exports=[")
-            for ((i, s) in block.withIndex()) {
-                val cp = (blockNum shl 8) or i
-                var a = s ?: ""
-                if (cp.isAscii()) a = ""
-                a = a.replace("\\", "\\\\").replace("'", "\\'")
-                a = "'$a'"
-                a += if (i == block.lastIndex) ']' else ','
-                w.write(a)
-            }
-            w.write(";")
+            block.map { it.replace("\\", "\\\\").replace("'", "\\'") }
+                    .map { "'$it'" }
+                    .joinTo(w, ",")
+            w.write("];")
         }
     }
 

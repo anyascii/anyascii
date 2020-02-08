@@ -1,6 +1,5 @@
 package com.hunterwb.anyascii.build.gen
 
-import com.hunterwb.anyascii.build.isAscii
 import java.nio.file.Files
 import java.nio.file.Path
 
@@ -11,9 +10,8 @@ fun java(g: Generator) {
 
     for ((blockNum, block) in g.blocks) {
         Files.newBufferedWriter(resources.resolve("%03x".format(blockNum))).use { w ->
-            for ((i, s) in block.withIndex()) {
-                val cp = (blockNum shl 8) or i
-                if (s != null && !cp.isAscii()) w.write(s)
+            for (s in block) {
+                w.write(s)
                 w.write(0)
             }
         }

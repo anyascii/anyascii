@@ -1,6 +1,5 @@
 package com.hunterwb.anyascii.build.gen
 
-import com.hunterwb.anyascii.build.isAscii
 import java.nio.file.Files
 import java.nio.file.Path
 
@@ -14,15 +13,10 @@ fun python(g: Generator) {
     for ((blockNum, block) in g.blocks) {
         Files.newBufferedWriter(dirPath.resolve("_%03x.py".format(blockNum))).use { w ->
             w.write("b=(")
-            for ((i, s) in block.withIndex()) {
-                val cp = (blockNum shl 8) or i
-                var a = s ?: ""
-                if (cp.isAscii()) a = ""
-                a = a.replace("\\", "\\\\").replace("'", "\\'")
-                a = "'$a'"
-                a += if (i == block.lastIndex) ')' else ','
-                w.write(a)
-            }
+            block.map { it.replace("\\", "\\\\").replace("'", "\\'") }
+                    .map { "'$it'" }
+                    .joinTo(w, ",")
+            w.write(")")
         }
     }
 }
