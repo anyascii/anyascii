@@ -5,6 +5,7 @@ import com.hunterwb.anyascii.build.gen.go
 import com.hunterwb.anyascii.build.gen.java
 import com.hunterwb.anyascii.build.gen.js
 import com.hunterwb.anyascii.build.gen.python
+import com.hunterwb.anyascii.build.gen.ruby
 import com.hunterwb.anyascii.build.gen.rust
 import com.ibm.icu.text.Transliterator
 
@@ -31,6 +32,7 @@ fun main() {
     js(g)
     rust(g)
     go(g)
+    ruby(g)
 }
 
 private fun icu(rules: String): Table {

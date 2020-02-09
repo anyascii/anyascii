@@ -6,3 +6,4 @@ python/dist/
 python/anyascii.egg-info/
 .tox/
 Cargo.lock
+*.gem
