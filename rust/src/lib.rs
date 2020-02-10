@@ -40,7 +40,7 @@ pub fn any_ascii_char(c: char) -> &'static str {
         }
         if len <= 3 {
             unsafe {
-                std::str::from_utf8_unchecked(&ptr[..len])
+                std::str::from_utf8_unchecked(ptr.get_unchecked(..len))
             }
         } else {
             let i = (((ptr[0] as u16) << 8) | (ptr[1] as u16)) as usize;
