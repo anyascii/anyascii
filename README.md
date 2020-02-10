@@ -153,6 +153,7 @@ s = AnyAscii.transliterate('άνθρωποι')
 
 Use pre-release:
 ```ruby
+# Gemfile
 gem 'any_ascii', git: 'https://github.com/hunterwb/any-ascii', glob: 'ruby/any_ascii.gemspec'
 ```
 
