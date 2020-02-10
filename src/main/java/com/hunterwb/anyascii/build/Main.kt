@@ -87,6 +87,7 @@ private fun custom() = Table()
         .then(Table("input/hebrew.tsv").normalize(NFKD))
         .then(cypriot())
         .then(braille())
+        .then(Table("input/gothic.tsv"))
 
 private fun cyrillic() = Table()
         .then(Table("input/cyrillic.tsv"))
