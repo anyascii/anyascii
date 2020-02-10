@@ -15,6 +15,7 @@ Unicode to ASCII transliteration
   - [Java](#java)
   - [Node.js](#nodejs)
   - [Python](#python)
+  - [Ruby](#ruby)
   - [Rust](#rust)
 - [Glossary](#glossary)
 - [See Also](#see-also)
@@ -140,6 +141,20 @@ Python 3.3+ compatible
 Install latest release: `pip install anyascii`
 
 Install pre-release: `pip install https://github.com/hunterwb/any-ascii/archive/master.zip#subdirectory=python`
+
+### Ruby
+
+```ruby
+require 'any_ascii'
+
+s = AnyAscii.transliterate('άνθρωποι')
+# anthropoi
+```
+
+Use pre-release:
+```ruby
+gem 'any_ascii', git: 'https://github.com/hunterwb/any-ascii', glob: 'ruby/any_ascii.gemspec'
+```
 
 ### Rust
 
