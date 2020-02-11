@@ -89,6 +89,7 @@ private fun custom() = Table()
         .then(braille())
         .then(Table("input/gothic.tsv"))
         .then(lydian())
+        .then(lycian())
 
 private fun cyrillic() = Table()
         .then(Table("input/cyrillic.tsv"))
@@ -186,3 +187,5 @@ private fun lydian() = codePoints("Lydi").toTable {
     val name = name(it).toLowerCase()
     if ("letter" in name) name.substringAfterLast(' ') else ""
 }
+
+private fun lycian() = codePoints("Lyci").toTable { name(it).toLowerCase().substringAfterLast(' ') }
