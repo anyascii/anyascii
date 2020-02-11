@@ -180,7 +180,7 @@ private fun bopomofo() = codePoints("Bopo").toTable { cp ->
 private fun cypriot() = codePoints("Cprt").toTable { name(it).substringAfterLast(' ').toLowerCase() }
 
 private fun braille() = Table()
-        .then((0x2800..0x283f).toTable { """ A1B'K2L@CIF/MSP"E3H9O6R^DJG>NTQ,*5<-U8V.%[$+X!&;:4\0Z7(_?W]#Y)="""[it - 0x2800].toString() })
+        .then(Table("input/braille.tsv"))
         .then(codePoints("Brai").toTable { "{${name(it).substringAfterLast('-')}}" })
 
 private fun lydian() = codePoints("Lydi").toTable {
