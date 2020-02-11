@@ -41,6 +41,7 @@ Unicode to ASCII transliteration
 |Japanese|Hiragana|さいたま|saitama|Saitama|
 |Japanese|Han|埼玉県|QiYuXian|Saitama-ken|
 |Japanese|Katakana|トヨタ|toyota|Toyota|
+|Unified English Braille|Braille|⠠⠎⠁⠽⠀⠭⠀⠁⠛|^say x ag|Say it again|
 
 ## Implementations
 

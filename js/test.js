@@ -31,3 +31,4 @@ check("華城市", "HuaChengShi");
 check("さいたま", "saitama");
 check("埼玉県", "QiYuXian");
 check("トヨタ", "toyota");
+check("⠠⠎⠁⠽⠀⠭⠀⠁⠛", "^say x ag");
