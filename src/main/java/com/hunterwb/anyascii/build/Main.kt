@@ -88,6 +88,7 @@ private fun custom() = Table()
         .then(cypriot())
         .then(braille())
         .then(Table("input/gothic.tsv"))
+        .then(lydian())
 
 private fun cyrillic() = Table()
         .then(Table("input/cyrillic.tsv"))
@@ -180,3 +181,8 @@ private fun cypriot() = codePoints("Cprt").toTable { name(it).substringAfterLast
 private fun braille() = Table()
         .then((0x2800..0x283f).toTable { """ A1B'K2L@CIF/MSP"E3H9O6R^DJG>NTQ,*5<-U8V.%[$+X!&;:4\0Z7(_?W]#Y)="""[it - 0x2800].toString() })
         .then(codePoints("Brai").toTable { "{${name(it).substringAfterLast('-')}}" })
+
+private fun lydian() = codePoints("Lydi").toTable {
+    val name = name(it).toLowerCase()
+    if ("letter" in name) name.substringAfterLast(' ') else ""
+}

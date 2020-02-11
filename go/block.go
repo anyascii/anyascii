@@ -227,6 +227,7 @@ func Block(blockNum uint32) string {
 	case 0x103: return data.X103
 	case 0x104: return data.X104
 	case 0x108: return data.X108
+	case 0x109: return data.X109
 	case 0x10d: return data.X10d
 	case 0x110: return data.X110
 	case 0x111: return data.X111
