@@ -1,4 +1,4 @@
-# Any Ascii
+# Any-Ascii
 [![jitpack](https://img.shields.io/jitpack/v/github/hunterwb/any-ascii)](https://jitpack.io/#com.hunterwb/any-ascii)
 [![pypi](https://img.shields.io/pypi/v/anyascii)](https://pypi.org/project/anyascii/)
 [![npm](https://img.shields.io/npm/v/any-ascii)](https://www.npmjs.com/package/any-ascii)
@@ -7,7 +7,7 @@ Unicode to ASCII transliteration
 
 #### Table of Contents
 
-
+- [Description](#description)
 - [Examples](#examples)
 - [Implementations](#implementations)
   - [CLI](#cli)
@@ -17,15 +17,44 @@ Unicode to ASCII transliteration
   - [Python](#python)
   - [Ruby](#ruby)
   - [Rust](#rust)
-- [Glossary](#glossary)
 - [See Also](#see-also)
 
+## Description
+
+Converts Unicode text to a reasonable representation using only ASCII.
+
+[Unicode](https://en.wikipedia.org/wiki/Unicode) is the universal character set, a global standard to support all the world's languages.
+It consists of 130,000+ characters used by 150 writing systems.
+Along with characters used in language, it also contains various technical symbols, emojis, and other symbolic characters.
+The `String` type in programming languages usually corresponds to Unicode text.
+Whenever text is used digitally on computers or the internet it is almost always represented using Unicode characters.
+Unicode characters are not stored directly but instead encoded into bytes using an encoding, typically [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
+
+[ASCII](https://en.wikipedia.org/wiki/ASCII) is the most compatible character set, established in 1967.
+It is a subset of Unicode and UTF-8 consisting of 128 characters using 7-bits in the range `0x00` - `0x7F`.
+The [printable](https://en.wikipedia.org/wiki/ASCII#Printable_characters) characters are English letters, digits, and punctuation in the range `0x20` - `0x7E`,
+with the remaining being [control characters](https://en.wikipedia.org/wiki/ASCII#Control_characters).
+All of the characters found on a standard US keyboard correspond to the printable ASCII characters.
+
+Conversion into the [Latin script](https://en.wikipedia.org/wiki/Latin_script) used by English and ASCII is called [romanization](https://en.wikipedia.org/wiki/Romanization).
+
+When converting between writing systems there are multiple properties that can be preserved:
+- Meaning: [Translation](https://en.wikipedia.org/wiki/Translation) replaces text with an equivalent in the target language with the same meaning.
+  This relies heavily on context and [automatic translation](https://en.wikipedia.org/wiki/Machine_translation) is extremely complicated.
+- Appearance: Preserving the visual appearance of a character when converting between languages is rarely possible and requires readers to have knowledge of the source language.
+- Sound: [Orthographic transcription](https://en.wikipedia.org/wiki/Orthographic_transcription) uses the spelling and pronunciation rules of the target language to produce text that a speaker of the target language will pronounce as accurately as possible to the original.
+- Spelling: [Transliteration](https://en.wikipedia.org/wiki/Transliteration) converts each letter individually using predictable rules.
+  An unambiguous transliteration allows for reconstruction of the original text by using unique mappings for each letter.
+  A phonetic transliteration instead uses the most phonetically accurate mappings which may result in duplicates or ambiguity.
+
+Any-Ascii is a transliteration, it converts text character-by-character without considering the context.
+Characters used in language are converting using the most popular already existing transliteration scheme for each language, with small modifications.
+Symbolic characters are instead converted based on their meaning or appearance.
 
 ## Examples
 
 |Language|Script|Input|Output|Actual|
 |---|---|---|---|---|
-|||© ㎧ Æ №|(C) m/s AE No||
 |French|Latin|René François Lacôte|Rene Francois Lacote|Rene Francois Lacote|
 |German|Latin|Großer Hörselberg|Grosser Horselberg|Grosser Hoerselberg|
 |Vietnamese|Latin|Trần Hưng Đạo|Tran Hung Dao|Tran Hung Dao|
@@ -173,22 +202,6 @@ Use pre-release:
 any_ascii = { git = "https://github.com/hunterwb/any-ascii" }
 ```
 
-## Glossary
-
-- [**Unicode**](https://en.wikipedia.org/wiki/Unicode):
-The universal character set, a global standard to support all the world's languages.
-Consists of 100,000+ characters used by 150 writing systems.
-Typically encoded into bytes using [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
-- [**ASCII**](https://en.wikipedia.org/wiki/ASCII):
-The most compatible character set.
-A subset of Unicode/UTF-8 consisting of 128 characters using 7-bits in the range `0x00` - `0x7F`.
-The [printable](https://en.wikipedia.org/wiki/ASCII#Printable_characters) characters are English letters, digits, and punctuation in the range `0x20` - `0x7E`,
-with the remaining being [control characters](https://en.wikipedia.org/wiki/ASCII#Control_characters).
-- [**Transliteration**](https://en.wikipedia.org/wiki/Transliteration):
-A mapping from one writing system into another, typically done one character at a time using predictable rules.
-Transliteration generally preserves the spelling of words, while translation preserves the meaning, and transcription preserves the sound.
-Transliteration into the [Latin script](https://en.wikipedia.org/wiki/Latin_script) used by English is known as [romanization](https://en.wikipedia.org/wiki/Romanization).
-
 ## See Also
 
 [ALA-LC Romanization](https://www.loc.gov/catdir/cpso/roman.html)  
@@ -201,4 +214,8 @@ Transliteration into the [Latin script](https://en.wikipedia.org/wiki/Latin_scri
 [UNGEGN Romanization](https://www.eki.ee/wgrs/)  
 [Unicode CLDR: Transliteration Guidelines](http://cldr.unicode.org/index/cldr-spec/transliteration-guidelines)  
 [Unicode Unihan Database](https://www.unicode.org/reports/tr38/tr38-27.html)  
-[Wikipedia: Romanization of Greek](https://en.wikipedia.org/wiki/Romanization_of_Greek)
+[Unified English Braille](http://www.iceb.org/ueb.html)  
+[Wikipedia: Romanization of Arabic](https://en.wikipedia.org/wiki/Romanization_of_Arabic)  
+[Wikipedia: Romanization of Greek](https://en.wikipedia.org/wiki/Romanization_of_Greek)  
+[Wikipedia: Romanization of Hebrew](https://en.wikipedia.org/wiki/Romanization_of_Hebrew)  
+[Wikipedia: Romanization of Russian](https://en.wikipedia.org/wiki/Romanization_of_Russian)

@@ -65,7 +65,6 @@ fn test() {
     check("北亰", "BeiJing");
     check("résumé", "resume");
 
-    check("© ㎧ Æ №", "(C) m/s AE No");
     check("René François Lacôte", "Rene Francois Lacote");
     check("Großer Hörselberg", "Grosser Horselberg");
     check("Trần Hưng Đạo", "Tran Hung Dao");
