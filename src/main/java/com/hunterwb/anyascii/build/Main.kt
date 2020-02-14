@@ -90,6 +90,7 @@ private fun custom() = Table()
         .then(Table("input/gothic.tsv"))
         .then(lydian())
         .then(lycian())
+        .then(georgian())
 
 private fun cyrillic() = Table()
         .then(Table("input/cyrillic.tsv"))
@@ -189,3 +190,13 @@ private fun lydian() = codePoints("Lydi").toTable {
 }
 
 private fun lycian() = codePoints("Lyci").toTable { name(it).toLowerCase().substringAfterLast(' ') }
+
+private fun georgian() = Table()
+        .then(Table("input/georgian.tsv"))
+        .apply {
+            then(codePoints("Geor").filter { "SMALL LETTER" in name(it) }.toTable {
+                getValue(codePoint(name(it).replace("SMALL LETTER", "LETTER")))
+            })
+        }
+        .normalize(NFKD)
+        .cased()

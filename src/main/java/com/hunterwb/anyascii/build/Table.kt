@@ -58,12 +58,12 @@ fun Table.lengthStatistics() = IntSummaryStatistics().apply { values.forEach { a
 fun Table.cased() = apply {
     for ((cp, s) in this.toMap()) {
         putIfAbsent(lower(cp), lower(s))
-        putIfAbsent(upper(cp), upper(s))
+        putIfAbsent(upper(cp), s.capitalize())
     }
     for (cp in 0..Character.MAX_CODE_POINT) {
         if (cp in this) continue
         this[upper(cp)]?.let { putIfAbsent(cp, lower(it)) }
-        this[lower(cp)]?.let { putIfAbsent(cp, upper(it)) }
+        this[lower(cp)]?.let { putIfAbsent(cp, it.capitalize()) }
     }
 }
 
