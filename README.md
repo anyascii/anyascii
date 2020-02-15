@@ -66,6 +66,7 @@ Symbolic characters are instead converted based on their meaning or appearance.
 |Russian|Cyrillic|Борис Николаевич Ельцин|Boris Nikolaevich El'tsin|Boris Nikolayevich Yeltsin|
 |Hebrew|Hebrew|אברהם הלוי פרנקל|'vrhm hlvy frnkl|Abraham Halevi Fraenkel|
 |Georgian|Georgian|სამტრედია|samt'redia|Samtredia|
+|Armenian|Armenian|Աբովյան|Abovyan|Abovyan|
 |Mandarin Chinese|Han|深圳|ShenZhen|Shenzhen|
 |Cantonese Chinese|Han|深水埗|ShenShuiBu|Sham Shui Po|
 |Korean|Hangul|화성시|hwaseongsi|Hwaseong-si|
