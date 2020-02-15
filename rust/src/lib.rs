@@ -60,11 +60,6 @@ fn test() {
     }
 
     check("", "");
-    check("a", "a");
-    check("123", "123");
-    check("北亰", "BeiJing");
-    check("résumé", "resume");
-
     check("René François Lacôte", "Rene Francois Lacote");
     check("Großer Hörselberg", "Grosser Horselberg");
     check("Trần Hưng Đạo", "Tran Hung Dao");
