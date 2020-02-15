@@ -27,7 +27,7 @@ fun Table.write(path: String) = apply {
     }
 }
 
-fun Table(path: String): Table = Files.readAllLines(Path.of(path))
+fun Table(file: String): Table = Files.readAllLines(Path.of("input/tables/$file.tsv"))
         .filter { !it.startsWith('#') }
         .map { it.split('\t') }
         .associateTo(Table()) { it[0].toCodePoint() to it[1] }

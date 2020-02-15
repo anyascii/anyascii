@@ -17,7 +17,7 @@ fun main() {
             .then(icu("::Latin-ASCII; [:^ASCII:]>;"))
             .then(unihan())
             .normalize(NFKC)
-            .then(Table("input/unidecode.tsv"))
+            .then(Table("unidecode"))
             .then(icu("::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))
             .normalize(NFKC)
             .cased()
@@ -52,16 +52,16 @@ private fun ascii(): Table = (0..127).toTable { toString(it) }
 private fun decimalDigits() = codePoints("Nd").toTable { numericValue(it).toString() }
 
 private fun custom() = Table()
-        .then(Table("input/general-punctuation.tsv"))
-        .then(Table("input/nko.tsv"))
-        .then(Table("input/math-symbols-a.tsv"))
-        .then(Table("input/math-symbols-b.tsv"))
-        .then(Table("input/kanbun.tsv"))
+        .then(Table("general-punctuation"))
+        .then(Table("nko"))
+        .then(Table("math-symbols-a"))
+        .then(Table("math-symbols-b"))
+        .then(Table("kanbun"))
         .then((0xe0020..0xe007e).toTable { toString(it - 0xe0000) }) // tags
         .then((0x1f1e6..0x1f1ff).toTable { toString(it - 0x1f1e6 + 'A'.toInt()) }) // regional indicators
-        .then(Table("input/han-misc.tsv"))
-        .then(Table("input/kangxi-radicals.tsv"))
-        .then(Table("input/cjk-radicals.tsv"))
+        .then(Table("han-misc"))
+        .then(Table("kangxi-radicals"))
+        .then(Table("cjk-radicals"))
         .then((0x31c0..0x31e3).toTable { name(it).substringAfterLast(' ') }) // cjk strokes
         .then((0x33e0..0x33fe).toTable { "${(it - 0x33e0 + 1)}D" }) // telegraph days
         .then((0x3358..0x3370).toTable { "${(it - 0x3358)}H" }) // telegraph hours
@@ -73,36 +73,36 @@ private fun custom() = Table()
         .then(vai())
         .then(ethiopic())
         .then(dominoes())
-        .then(Table("input/ocr.tsv"))
+        .then(Table("ocr"))
         .then(olChiki())
         .then(cyrillic())
         .then((0x24eb..0x24ff).toTable { numericValue(it).toString() }) // circled numbers
         .then(greek())
         .then(coptic())
-        .then(Table("input/hexagrams.tsv"))
+        .then(Table("hexagrams"))
         .then(boxDrawing())
         .then((0x2580..0x259f).toTable { "#" }) // block elements
-        .then(Table("input/control-pictures.tsv"))
+        .then(Table("control-pictures"))
         .then(bopomofo())
-        .then(Table("input/hebrew.tsv").normalize(NFKD))
+        .then(Table("hebrew").normalize(NFKD))
         .then(cypriot())
         .then(braille())
-        .then(Table("input/gothic.tsv"))
+        .then(Table("gothic"))
         .then(lydian())
         .then(lycian())
         .then(georgian())
 
 private fun cyrillic() = Table()
-        .then(Table("input/cyrillic.tsv"))
+        .then(Table("cyrillic"))
         .cased()
         .normalize(NFKC)
         .aliasing((0xa674..0xa67b) + (0xa69e..0xa69f) + (0x2de0..0x2dff) - 0x2df5) { it.replace("COMBINING CYRILLIC", "CYRILLIC SMALL") }
 
 private fun greek() = Table()
         // iota subscript?
-        .then(Table("input/greek-symbols.tsv"))
+        .then(Table("greek-symbols"))
         .then(greekMath())
-        .then(Table("input/greek.tsv"))
+        .then(Table("greek"))
         .cased()
         .minus(0x345)
         .apply {
@@ -120,13 +120,13 @@ private fun greek() = Table()
         .aliasing((0x1d26..0x1d2a)) { it.replace("LETTER SMALL CAPITAL", "CAPITAL LETTER") }
 
 private fun greekMath() = Table()
-        .then(Table("input/greek-math.tsv"))
+        .then(Table("greek-math"))
         .cased()
         .normalize(NFKC)
         .retain((0x1d6a8..0x1d7cb) + 0x2207 + 0x2202 + 0x3f4 + 0x3f5 + 0x3d1 + 0x3f0 + 0x3d5 + 0x3f1 + 0x3d6 + 0x3d0)
 
 private fun coptic() = Table()
-        .then(Table("input/coptic.tsv"))
+        .then(Table("coptic"))
         .cased()
 
 private fun yi() = Table()
@@ -135,7 +135,7 @@ private fun yi() = Table()
         .then((0xa490..0xa4c6).toTable { name(it).substringAfterLast(' ') }) // radicals
 
 private fun vai() = Table()
-        .then(Table("input/vai.tsv"))
+        .then(Table("vai"))
         .then((0xa500..0xa62b).toTable { name(it).substringAfterLast(' ').toLowerCase() })
 
 private fun ethiopic() = Table()
@@ -181,7 +181,7 @@ private fun bopomofo() = codePoints("Bopo").toTable { cp ->
 private fun cypriot() = codePoints("Cprt").toTable { name(it).substringAfterLast(' ').toLowerCase() }
 
 private fun braille() = Table()
-        .then(Table("input/braille.tsv"))
+        .then(Table("braille"))
         .then(codePoints("Brai").toTable { "{${name(it).substringAfterLast('-')}}" })
 
 private fun lydian() = codePoints("Lydi").toTable {
@@ -192,7 +192,7 @@ private fun lydian() = codePoints("Lydi").toTable {
 private fun lycian() = codePoints("Lyci").toTable { name(it).toLowerCase().substringAfterLast(' ') }
 
 private fun georgian() = Table()
-        .then(Table("input/georgian.tsv"))
+        .then(Table("georgian"))
         .apply {
             then(codePoints("Geor").filter { "SMALL LETTER" in name(it) }.toTable {
                 getValue(codePoint(name(it).replace("SMALL LETTER", "LETTER")))
