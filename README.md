@@ -1,7 +1,9 @@
 # Any-Ascii
 [![jitpack](https://img.shields.io/jitpack/v/github/hunterwb/any-ascii)](https://jitpack.io/#com.hunterwb/any-ascii)
-[![pypi](https://img.shields.io/pypi/v/anyascii)](https://pypi.org/project/anyascii/)
 [![npm](https://img.shields.io/npm/v/any-ascii)](https://www.npmjs.com/package/any-ascii)
+[![pypi](https://img.shields.io/pypi/v/anyascii)](https://pypi.org/project/anyascii/)
+[![gem](https://img.shields.io/gem/v/any_ascii)](https://rubygems.org/gems/any_ascii)
+[![crates.io](https://img.shields.io/crates/v/any_ascii)](https://crates.io/crates/any_ascii)
 
 Unicode to ASCII transliteration
 
@@ -124,7 +126,7 @@ Available through [**JitPack**](https://jitpack.io/#com.hunterwb/any-ascii)
 <dependency>
     <groupId>com.hunterwb</groupId>
     <artifactId>any-ascii</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
 </dependency>
 ```
 
@@ -138,7 +140,7 @@ repositories {
 
 ```groovy
 dependencies {
-    implementation 'com.hunterwb:any-ascii:0.1.1'
+    implementation 'com.hunterwb:any-ascii:0.1.2'
 }
 ```
 
@@ -181,6 +183,8 @@ s = AnyAscii.transliterate('άνθρωποι')
 # anthropoi
 ```
 
+Install latest release: `gem install any_ascii`
+
 Use pre-release:
 ```ruby
 # Gemfile
@@ -196,8 +200,16 @@ let s = any_ascii("άνθρωποι");
 // anthropoi
 ```
 
+Use latest release:
+```toml
+# Cargo.toml
+[dependencies]
+any_ascii = "0.1.2"
+```
+
 Use pre-release:
 ```toml
+# Cargo.toml
 [dependencies]
 any_ascii = { git = "https://github.com/hunterwb/any-ascii" }
 ```
