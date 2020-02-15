@@ -40,6 +40,7 @@ public final class AnyAsciiTest {
         check("Δημήτρης Φωτόπουλος", "Dimitris Fotopoylos");
         check("Борис Николаевич Ельцин", "Boris Nikolaevich El'tsin");
         check("אברהם הלוי פרנקל", "'vrhm hlvy frnkl");
+        check("სამტრედია", "samt'redia");
         check("深圳", "ShenZhen");
         check("深水埗", "ShenShuiBu");
         check("화성시", "hwaseongsi");
