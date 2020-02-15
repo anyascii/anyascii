@@ -48,7 +48,7 @@ When converting between writing systems there are multiple properties that can b
   A phonetic transliteration instead uses the most phonetically accurate mappings which may result in duplicates or ambiguity.
 
 Any-Ascii is a transliteration, it converts text character-by-character without considering the context.
-Characters used in language are converting using the most popular already existing transliteration scheme for each language, with small modifications.
+Characters used in language are converted using the most popular already existing transliteration scheme for each language, with small modifications.
 Symbolic characters are instead converted based on their meaning or appearance.
 
 ## Examples
