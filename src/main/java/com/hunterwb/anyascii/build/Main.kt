@@ -91,6 +91,7 @@ private fun custom() = Table()
         .then(lydian())
         .then(lycian())
         .then(georgian())
+        .then(armenian())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -198,5 +199,10 @@ private fun georgian() = Table()
                 getValue(codePoint(name(it).replace("SMALL LETTER", "LETTER")))
             })
         }
+        .normalize(NFKD)
+        .cased()
+
+private fun armenian() = Table()
+        .then(Table("armenian"))
         .normalize(NFKD)
         .cased()

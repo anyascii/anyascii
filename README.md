@@ -231,6 +231,7 @@ any_ascii = { git = "https://github.com/hunterwb/any-ascii" }
 [Unicode Unihan Database](https://www.unicode.org/reports/tr38/tr38-27.html)  
 [Unified English Braille](http://www.iceb.org/ueb.html)  
 [Wikipedia: Romanization of Arabic](https://en.wikipedia.org/wiki/Romanization_of_Arabic)  
+[Wikipedia: Romanization of Armenian](https://en.wikipedia.org/wiki/Romanization_of_Armenian)  
 [Wikipedia: Romanization of Georgian](https://en.wikipedia.org/wiki/Romanization_of_Georgian)  
 [Wikipedia: Romanization of Greek](https://en.wikipedia.org/wiki/Romanization_of_Greek)  
 [Wikipedia: Romanization of Hebrew](https://en.wikipedia.org/wiki/Romanization_of_Hebrew)  
