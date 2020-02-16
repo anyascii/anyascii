@@ -14,6 +14,7 @@ func TestTransliterate(t *testing.T) {
 	check(t, "אברהם הלוי פרנקל", "'vrhm hlvy frnkl")
 	check(t, "სამტრედია", "samt'redia")
 	check(t, "Աբովյան", "Abovyan")
+	check(t, "สงขลา", "sngkhla")
 	check(t, "深圳", "ShenZhen")
 	check(t, "深水埗", "ShenShuiBu")
 	check(t, "화성시", "hwaseongsi")
