@@ -8,4 +8,5 @@ Gem::Specification.new do |s|
   s.files       = Dir.glob 'lib/**/*.rb'
   s.homepage    = 'https://github.com/hunterwb/any-ascii'
   s.license     = 'ISC'
+  s.required_ruby_version = '>= 1.9.3'
 end
