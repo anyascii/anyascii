@@ -7,6 +7,16 @@ import java.io.ByteArrayOutputStream
 import java.io.DataOutputStream
 import java.util.TreeMap
 
+fun generate(table: Table) {
+    val g = Generator(table)
+    java(g)
+    python(g)
+    js(g)
+    rust(g)
+    go(g)
+    ruby(g)
+}
+
 class Generator(val table: Table) {
 
     val blocks = blocks()
