@@ -82,6 +82,7 @@ private fun custom() = Table()
         .then(armenian())
         .then(Table("thai"))
         .then(Table("latin").cased().normalize(NFKD))
+        .then(Table("squared-katakana-words"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
