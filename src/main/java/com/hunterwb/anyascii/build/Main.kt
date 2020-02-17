@@ -122,7 +122,7 @@ private fun greek() = Table()
             })
         }
         .normalize(NFKD, "")
-        .aliasing((0x1d26..0x1d2a)) { it.replace("LETTER SMALL CAPITAL", "CAPITAL LETTER") }
+        .aliasing((0x1d26..0x1d2a) + 0xab65) { it.replace("LETTER SMALL CAPITAL", "CAPITAL LETTER") }
 
 private fun greekMath() = Table()
         .then(Table("greek-math"))
