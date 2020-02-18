@@ -86,6 +86,7 @@ private fun custom() = Table()
         .then(Table("squared-katakana-words"))
         .then(katakana())
         .then(hiragana())
+        .then(Table("lao"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
