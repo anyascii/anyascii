@@ -17,6 +17,7 @@ check("אברהם הלוי פרנקל", "'vrhm hlvy frnkl");
 check("სამტრედია", "samt'redia");
 check("Աբովյան", "Abovyan");
 check("สงขลา", "sngkhla");
+check("ສະຫວັນນະເຂດ", "sahvannaekhd");
 check("深圳", "ShenZhen");
 check("深水埗", "ShenShuiBu");
 check("화성시", "hwaseongsi");

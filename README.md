@@ -68,6 +68,7 @@ Symbolic characters are instead converted based on their meaning or appearance.
 |Georgian|Georgian|სამტრედია|samt'redia|Samtredia|
 |Armenian|Armenian|Աբովյան|Abovyan|Abovyan|
 |Thai|Thai|สงขลา|sngkhla|Songkhla|
+|Lao|Lao|ສະຫວັນນະເຂດ|sahvannaekhd|Savannakhet|
 |Mandarin Chinese|Han|深圳|ShenZhen|Shenzhen|
 |Cantonese Chinese|Han|深水埗|ShenShuiBu|Sham Shui Po|
 |Korean|Hangul|화성시|hwaseongsi|Hwaseong-si|
