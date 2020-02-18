@@ -188,11 +188,7 @@ private fun lycian() = codePoints("Lyci").toTable { name(it).toLowerCase().subst
 
 private fun georgian() = Table()
         .then(Table("georgian"))
-        .apply {
-            then(codePoints("Geor").filter { "SMALL LETTER" in name(it) }.toTable {
-                getValue(codePoint(name(it).replace("SMALL LETTER", "LETTER")))
-            })
-        }
+        .aliasing(codePoints("Geor").filter { "SMALL LETTER" in name(it) }) { it.replace("SMALL ", "") }
         .normalize(NFKD)
         .cased()
 
