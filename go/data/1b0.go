@@ -1,3 +1,3 @@
 package data
 
-const X1b0 = "\x65\x00\x01"
+const X1b0 = "\x65\x00\x01\x79\x65\x02"

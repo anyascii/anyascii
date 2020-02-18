@@ -85,6 +85,7 @@ private fun custom() = Table()
         .then(Table("latin").cased().normalize(NFKD))
         .then(Table("squared-katakana-words"))
         .then(katakana())
+        .then(hiragana())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -203,4 +204,9 @@ private fun armenian() = Table()
 private fun katakana() = Table()
         .then(Table("katakana"))
         .aliasing(codePoints("Kana").filter { name(it).startsWith("KATAKANA LETTER SMALL") }) { it.replace("SMALL ", "") }
+        .normalize(NFKC)
+
+private fun hiragana() = Table()
+        .then(Table("hiragana"))
+        .aliasing(codePoints("Hira").filter { name(it).startsWith("HIRAGANA LETTER SMALL") }) { it.replace("SMALL ", "") }
         .normalize(NFKC)

@@ -1,3 +1,3 @@
 module X1b0
-	B=['e']
+	B=['e','ye']
 end
