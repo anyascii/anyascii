@@ -84,6 +84,7 @@ private fun custom() = Table()
         .then(Table("thai"))
         .then(Table("latin").cased().normalize(NFKD))
         .then(Table("squared-katakana-words"))
+        .then(katakana())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -198,3 +199,8 @@ private fun armenian() = Table()
         .then(Table("armenian"))
         .normalize(NFKD)
         .cased()
+
+private fun katakana() = Table()
+        .then(Table("katakana"))
+        .aliasing(codePoints("Kana").filter { name(it).startsWith("KATAKANA LETTER SMALL") }) { it.replace("SMALL ", "") }
+        .normalize(NFKC)

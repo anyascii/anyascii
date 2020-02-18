@@ -241,6 +241,8 @@ func Block(blockNum uint32) string {
 	case 0x11d: return data.X11d
 	case 0x16a: return data.X16a
 	case 0x16b: return data.X16b
+	case 0x1b0: return data.X1b0
+	case 0x1b1: return data.X1b1
 	case 0x1d4: return data.X1d4
 	case 0x1d5: return data.X1d5
 	case 0x1d6: return data.X1d6

@@ -241,4 +241,5 @@ any_ascii = { git = "https://github.com/hunterwb/any-ascii" }
 [Wikipedia: Romanization of Georgian](https://en.wikipedia.org/wiki/Romanization_of_Georgian)  
 [Wikipedia: Romanization of Greek](https://en.wikipedia.org/wiki/Romanization_of_Greek)  
 [Wikipedia: Romanization of Hebrew](https://en.wikipedia.org/wiki/Romanization_of_Hebrew)  
+[Wikipedia: Romanization of Japanese](https://en.wikipedia.org/wiki/Romanization_of_Japanese)  
 [Wikipedia: Romanization of Russian](https://en.wikipedia.org/wiki/Romanization_of_Russian)
