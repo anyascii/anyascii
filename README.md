@@ -26,10 +26,12 @@ Unicode to ASCII transliteration
 
 Converts Unicode text to a reasonable representation using only ASCII.
 
-For each character in unicode, Any-Ascii provides an ASCII-only replacement string.
+For each character in Unicode, Any-Ascii provides an ASCII-only replacement string.
 Text is converted character-by-character without considering the context.
-The most popular transliteration scheme is used for each language.
+The mappings for each language are based on popular existing romanization schemes.
 Symbolic characters are converted based on their meaning or appearance.
+All ASCII characters in the input are left unchanged,
+every other character is replaced with printable ASCII characters.
 
 ## Examples
 
