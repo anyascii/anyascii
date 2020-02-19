@@ -1,6 +1,7 @@
 package com.hunterwb.anyascii.build
 
 import com.hunterwb.anyascii.build.gen.generate
+import com.ibm.icu.lang.UCharacter
 import com.ibm.icu.text.Transliterator
 
 fun main() {
@@ -89,6 +90,7 @@ private fun custom() = Table()
         .then(hiragana())
         .then(Table("lao"))
         .then(Table("runic"))
+        .then(oldItalic())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -209,3 +211,11 @@ private fun hiragana() = Table()
         .then(Table("hiragana"))
         .aliasing(codePoints("Hira").filter { name(it).startsWith("HIRAGANA LETTER SMALL") }) { it.replace("SMALL ", "") }
         .normalize(NFKC)
+
+private fun oldItalic() = Table()
+        .then((0x10320..0x10323).toTable { numericValue(it).toString() })
+        .then((0x10300..0x1032f).filter { UCharacter.isDefined(it) }.toTable {
+            val n = name(it).substringAfterLast(' ').toLowerCase()
+            if (n.toSet().size == 1) return@toTable n
+            return@toTable n.replace("[aeu]".toRegex(), "")
+        })
