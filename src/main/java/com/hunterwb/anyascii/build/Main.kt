@@ -92,6 +92,7 @@ private fun custom() = Table()
         .then(Table("runic"))
         .then(oldItalic())
         .then(Table("osmanya"))
+        .then(Table("deseret").cased())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
