@@ -93,6 +93,7 @@ private fun custom() = Table()
         .then(oldItalic())
         .then(Table("osmanya"))
         .then(Table("deseret").cased())
+        .then(Table("arabic").normalize(NFKC))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
