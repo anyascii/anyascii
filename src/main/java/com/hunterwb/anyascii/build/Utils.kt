@@ -46,3 +46,5 @@ val NFKD: Normalizer2 = Normalizer2.getNFKDInstance()
 val NFD: Normalizer2 = Normalizer2.getNFDInstance()
 
 fun numericValue(codePoint: Int): Int = UCharacter.getNumericValue(codePoint).also { check(it >= 0) }
+
+val ROMAN_NUMERALS = mapOf(1 to "I", 5 to "V", 10 to "X", 50 to "L", 100 to "C")
