@@ -14,6 +14,7 @@ public final class AnyAsciiTest {
         check("Φειδιππίδης", "Feidippidis");
         check("Δημήτρης Φωτόπουλος", "Dimitris Fotopoylos");
         check("Борис Николаевич Ельцин", "Boris Nikolaevich El'tsin");
+        check("دمنهور", "dmnhwr");
         check("אברהם הלוי פרנקל", "'vrhm hlvy frnkl");
         check("სამტრედია", "samt'redia");
         check("Աբովյան", "Abovyan");

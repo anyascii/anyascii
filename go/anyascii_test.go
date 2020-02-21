@@ -11,6 +11,7 @@ func TestTransliterate(t *testing.T) {
 	check(t, "Φειδιππίδης", "Feidippidis")
 	check(t, "Δημήτρης Φωτόπουλος", "Dimitris Fotopoylos")
 	check(t, "Борис Николаевич Ельцин", "Boris Nikolaevich El'tsin")
+	check(t, "دمنهور", "dmnhwr")
 	check(t, "אברהם הלוי פרנקל", "'vrhm hlvy frnkl")
 	check(t, "სამტრედია", "samt'redia")
 	check(t, "Աբովյան", "Abovyan")

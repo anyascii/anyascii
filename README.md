@@ -44,6 +44,7 @@ every other character is replaced with printable ASCII characters.
 |Ancient Greek|Greek|Φειδιππίδης|Feidippidis|Pheidippides|
 |Modern Greek|Greek|Δημήτρης Φωτόπουλος|Dimitris Fotopoylos|Dimitris Fotopoulos|
 |Russian|Cyrillic|Борис Николаевич Ельцин|Boris Nikolaevich El'tsin|Boris Nikolayevich Yeltsin|
+|Arabic|Arabic|دمنهور|dmnhwr|Damanhur|
 |Hebrew|Hebrew|אברהם הלוי פרנקל|'vrhm hlvy frnkl|Abraham Halevi Fraenkel|
 |Georgian|Georgian|სამტრედია|samt'redia|Samtredia|
 |Armenian|Armenian|Աբովյան|Abovyan|Abovyan|
