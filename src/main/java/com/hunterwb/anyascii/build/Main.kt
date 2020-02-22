@@ -74,7 +74,7 @@ private fun custom() = Table()
         .then((0x2580..0x259f).toTable { "#" }) // block elements
         .then(Table("control-pictures"))
         .then(bopomofo())
-        .then(Table("hebrew").normalize(NFKD))
+        .then(Table("hebrew").normalize(NFKC))
         .then(cypriot())
         .then(braille())
         .then(Table("gothic"))
