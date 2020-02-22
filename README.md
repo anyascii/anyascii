@@ -36,7 +36,9 @@ Unknown characters are removed.
 
 ## Examples
 
-|Language|Script|Input|Output|Actual|
+Representative examples for different languages comparing the Any-Ascii output to the conventional romanization.
+
+|Language|Script|Input|Output|Conventional|
 |---|---|---|---|---|
 |French|Latin|René François Lacôte|Rene Francois Lacote|Rene Francois Lacote|
 |German|Latin|Großer Hörselberg|Grosser Horselberg|Grosser Hoerselberg|
