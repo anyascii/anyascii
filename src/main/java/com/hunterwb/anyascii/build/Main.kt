@@ -94,6 +94,7 @@ private fun custom() = Table()
         .then(Table("osmanya"))
         .then(Table("deseret").cased())
         .then(Table("arabic").normalize(NFKC))
+        .then(Table("oriya"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))

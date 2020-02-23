@@ -238,6 +238,7 @@ any_ascii = { git = "https://github.com/hunterwb/any-ascii" }
 [BGN/PCGN Romanization](https://www.gov.uk/government/publications/romanization-systems)  
 [Compart: Unicode Charts](https://www.compart.com/en/unicode/)  
 [ICAO 9303: Machine Readable Passports](https://www.icao.int/publications/Documents/9303_p3_cons_en.pdf)  
+[ISO 15919: Indic Romanization](https://en.wikipedia.org/wiki/ISO_15919)  
 [ISO 9: Cyrillic Romanization](https://en.wikipedia.org/wiki/ISO_9)  
 [KNAB Romanization Systems](https://www.eki.ee/knab/kblatyl2.htm)  
 [Sean M. Burke: Unidecode](https://metacpan.org/pod/Text::Unidecode)  
