@@ -1,0 +1,31 @@
+jobs:
+  include:
+    - language: python
+      python: 3.8
+      install:
+        - pip install -U pip
+        - pip install -U pytest
+      before_script: cd python
+      script: python -m pytest
+
+    - language: node_js
+      node_js: node
+      script: npm test
+
+    - language: java
+      jdk: openjdk11
+      before_script: cd java
+      script: mvnw test
+
+    - language: ruby
+      rvm: 2.7
+      script: ruby ruby/lib/any_ascii_test.rb
+
+    - language: go
+      go: stable
+      script: go test ./go
+
+    - language: rust
+      rust: stable
+      before_script: cd rust
+      script: cargo test
