@@ -17,3 +17,6 @@ readme = "../README.md"
 [[bin]]
 name = "anyascii"
 path = "src/main.rs"
+
+[badges]
+travis-ci = { repository = "hunterwb/any-ascii" }
