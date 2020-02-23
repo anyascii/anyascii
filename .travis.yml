@@ -30,14 +30,6 @@ jobs:
       before_script: cd python
       script: python -m pytest
 
-    - language: python
-      python: 3.3
-      install:
-        - pip install -U pip
-        - pip install -U pytest
-      before_script: cd python
-      script: python -m pytest
-
     - language: ruby
       rvm: 2.7
       script: ruby ruby/lib/any_ascii_test.rb
