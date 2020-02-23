@@ -28,6 +28,7 @@ public final class AnyAsciiTest {
         check("埼玉県", "QiYuXian");
         check("トヨタ", "toyota");
         check("⠠⠎⠁⠽⠀⠭⠀⠁⠛", "^say x ag");
+        check("ଗଜପତି", "gjpti");
     }
 
     private static void check(String s, String expected) {

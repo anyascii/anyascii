@@ -25,6 +25,7 @@ class AnyAsciiTest < Test::Unit::TestCase
 		check("埼玉県", "QiYuXian")
 		check("トヨタ", "toyota")
 		check("⠠⠎⠁⠽⠀⠭⠀⠁⠛", "^say x ag")
+		check("ଗଜପତି", "gjpti")
 	end
 
 	def check(s, expected)

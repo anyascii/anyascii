@@ -61,6 +61,7 @@ Representative examples for different languages comparing the Any-Ascii output t
 |Japanese|Han|埼玉県|QiYuXian|Saitama-ken|
 |Japanese|Katakana|トヨタ|toyota|Toyota|
 |Unified English Braille|Braille|⠠⠎⠁⠽⠀⠭⠀⠁⠛|^say x ag|Say it again|
+|Odia|Odia|ଗଜପତି|gjpti|Gajapati|
 
 ## Reasoning
 
