@@ -44,6 +44,6 @@ jobs:
       script: cargo test
 
     - language: rust
-      rust: "1.20"
+      rust: "1.20.0"
       before_script: cd rust
       script: cargo test
