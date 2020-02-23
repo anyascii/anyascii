@@ -1,5 +1,27 @@
 jobs:
   include:
+    - language: go
+      go: stable
+      script: go test ./go
+
+    - language: go
+      go: "1.10"
+      script: go test ./go
+
+    - language: java
+      jdk: openjdk11
+      install: skip
+      before_script: cd java
+      script: ./mvnw test
+
+    - language: node_js
+      node_js: node
+      script: npm test
+
+    - language: node_js
+      node_js: 4
+      script: npm test
+
     - language: python
       python: 3.8
       install:
@@ -8,25 +30,28 @@ jobs:
       before_script: cd python
       script: python -m pytest
 
-    - language: node_js
-      node_js: node
-      script: npm test
-
-    - language: java
-      jdk: openjdk11
-      install: skip
-      before_script: cd java
-      script: ./mvnw test
+    - language: python
+      python: 3.3
+      install:
+        - pip install -U pip
+        - pip install -U pytest
+      before_script: cd python
+      script: python -m pytest
 
     - language: ruby
       rvm: 2.7
       script: ruby ruby/lib/any_ascii_test.rb
 
-    - language: go
-      go: stable
-      script: go test ./go
+    - language: ruby
+      rvm: "1.9.3"
+      script: ruby ruby/lib/any_ascii_test.rb
 
     - language: rust
       rust: stable
+      before_script: cd rust
+      script: cargo test
+
+    - language: rust
+      rust: "1.20"
       before_script: cd rust
       script: cargo test
