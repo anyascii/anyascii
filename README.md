@@ -170,7 +170,7 @@ const s = anyAscii('άνθρωποι');
 // anthropoi
 ```
 
-Node.js 4+ compatible
+Node.js 4.0+ compatible
 
 Install latest release: `npm install any-ascii`
 
