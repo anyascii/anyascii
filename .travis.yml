@@ -15,7 +15,7 @@ jobs:
     - language: java
       jdk: openjdk11
       before_script: cd java
-      script: mvnw test
+      script: ./mvnw test
 
     - language: ruby
       rvm: 2.7
