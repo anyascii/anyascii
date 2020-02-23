@@ -1,3 +1,4 @@
+extern crate any_ascii;
 use any_ascii::any_ascii;
 
 fn main() {
