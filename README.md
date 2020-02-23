@@ -1,4 +1,4 @@
-# Any-Ascii
+# Any-Ascii [![build](https://travis-ci.org/hunterwb/any-ascii.svg?branch=master)](https://travis-ci.org/hunterwb/any-ascii)
 [![jitpack](https://img.shields.io/jitpack/v/github/hunterwb/any-ascii)](https://jitpack.io/#com.hunterwb/any-ascii)
 [![npm](https://img.shields.io/npm/v/any-ascii)](https://www.npmjs.com/package/any-ascii)
 [![pypi](https://img.shields.io/pypi/v/anyascii)](https://pypi.org/project/anyascii/)
