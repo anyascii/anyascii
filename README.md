@@ -198,7 +198,7 @@ s = AnyAscii.transliterate('άνθρωποι')
 # anthropoi
 ```
 
-Ruby 1.9.3+ compatible
+Ruby 2.0+ compatible
 
 Install latest release: `gem install any_ascii`
 
