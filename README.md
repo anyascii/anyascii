@@ -115,6 +115,8 @@ func main() {
 }
 ```
 
+Go 1.10+ Compatible
+
 ### Java
 
 ```java
