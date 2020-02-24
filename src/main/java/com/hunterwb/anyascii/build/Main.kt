@@ -96,6 +96,7 @@ private fun custom() = Table()
         .then(Table("arabic").normalize(NFKC))
         .then(Table("oriya"))
         .then(Table("bengali"))
+        .then(Table("devanagari"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
