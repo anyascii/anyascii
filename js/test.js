@@ -29,4 +29,5 @@ check("トヨタ", "toyota");
 check("⠠⠎⠁⠽⠀⠭⠀⠁⠛", "^say x ag");
 check("ময়মনসিংহ", "mymnsimh");
 check("महासमुंद", "mhasmumd");
+check("ਜਲੰਧਰ", "jlmdhr");
 check("ଗଜପତି", "gjpti");

@@ -34,5 +34,6 @@ func TestTransliterate(t *testing.T) {
 	check("⠠⠎⠁⠽⠀⠭⠀⠁⠛", "^say x ag")
 	check("ময়মনসিংহ", "mymnsimh")
 	check("महासमुंद", "mhasmumd")
+	check("ਜਲੰਧਰ", "jlmdhr")
 	check("ଗଜପତି", "gjpti")
 }

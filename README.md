@@ -63,6 +63,7 @@ Representative examples for different languages comparing the Any-Ascii output t
 |Unified English Braille|Braille|⠠⠎⠁⠽⠀⠭⠀⠁⠛|^say x ag|Say it again|
 |Bengali|Bengali|ময়মনসিংহ|mymnsimh|Mymensingh|
 |Hindi|Devanagari|महासमुंद|mhasmumd|Mahasamund|
+|Punjabi|Gurmukhi|ਜਲੰਧਰ|jlmdhr|Jalandhar|
 |Odia|Odia|ଗଜପତି|gjpti|Gajapati|
 
 ## Reasoning
