@@ -82,6 +82,7 @@ fn test() {
     check("トヨタ", "toyota");
     check("⠠⠎⠁⠽⠀⠭⠀⠁⠛", "^say x ag");
     check("ময়মনসিংহ", "mymnsimh");
+    check("પોરબંદર", "porbmdr");
     check("महासमुंद", "mhasmumd");
     check("ਜਲੰਧਰ", "jlmdhr");
     check("ଗଜପତି", "gjpti");
