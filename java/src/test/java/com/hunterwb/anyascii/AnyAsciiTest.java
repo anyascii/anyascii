@@ -33,6 +33,7 @@ public final class AnyAsciiTest {
         check("महासमुंद", "mhasmumd");
         check("ਜਲੰਧਰ", "jlmdhr");
         check("ଗଜପତି", "gjpti");
+        check("கன்னியாகுமரி", "knniyakumri");
     }
 
     private static void check(String s, String expected) {

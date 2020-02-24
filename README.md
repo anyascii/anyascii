@@ -66,6 +66,7 @@ Representative examples for different languages comparing the Any-Ascii output t
 |Hindi|Devanagari|महासमुंद|mhasmumd|Mahasamund|
 |Punjabi|Gurmukhi|ਜਲੰਧਰ|jlmdhr|Jalandhar|
 |Odia|Odia|ଗଜପତି|gjpti|Gajapati|
+|Tamil|Tamil|கன்னியாகுமரி|knniyakumri|Kanniyakumari|
 
 ## Reasoning
 

@@ -30,6 +30,7 @@ class AnyAsciiTest < Test::Unit::TestCase
 		check("महासमुंद", "mhasmumd")
 		check("ਜਲੰਧਰ", "jlmdhr")
 		check("ଗଜପତି", "gjpti")
+		check("கன்னியாகுமரி", "knniyakumri")
 	end
 
 	def check(s, expected)

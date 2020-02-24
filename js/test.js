@@ -32,3 +32,4 @@ check("પોરબંદર", "porbmdr");
 check("महासमुंद", "mhasmumd");
 check("ਜਲੰਧਰ", "jlmdhr");
 check("ଗଜପତି", "gjpti");
+check("கன்னியாகுமரி", "knniyakumri");
