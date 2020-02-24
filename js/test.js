@@ -28,4 +28,5 @@ check("埼玉県", "QiYuXian");
 check("トヨタ", "toyota");
 check("⠠⠎⠁⠽⠀⠭⠀⠁⠛", "^say x ag");
 check("ময়মনসিংহ", "mymnsimh");
+check("महासमुंद", "mhasmumd");
 check("ଗଜପତି", "gjpti");

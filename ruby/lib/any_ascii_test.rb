@@ -26,6 +26,7 @@ class AnyAsciiTest < Test::Unit::TestCase
 		check("トヨタ", "toyota")
 		check("⠠⠎⠁⠽⠀⠭⠀⠁⠛", "^say x ag")
 		check("ময়মনসিংহ", "mymnsimh")
+		check("महासमुंद", "mhasmumd")
 		check("ଗଜପତି", "gjpti")
 	end
 
