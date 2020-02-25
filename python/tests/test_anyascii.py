@@ -32,6 +32,7 @@ def test():
     check("પોરબંદર", "porbmdr")
     check("महासमुंद", "mhasmumd")
     check("ಬೆಂಗಳೂರು", "bemgluru")
+    check("കളമശ്ശേരി", "klmsseri")
     check("ਜਲੰਧਰ", "jlmdhr")
     check("ଗଜପତି", "gjpti")
     check("கன்னியாகுமரி", "knniyakumri")
