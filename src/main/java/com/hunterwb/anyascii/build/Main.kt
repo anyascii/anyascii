@@ -100,6 +100,7 @@ private fun custom() = Table()
         .then(Table("gurmukhi"))
         .then(Table("gujarati"))
         .then(Table("tamil"))
+        .then(Table("telugu"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
