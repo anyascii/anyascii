@@ -33,3 +33,4 @@ check("महासमुंद", "mhasmumd");
 check("ਜਲੰਧਰ", "jlmdhr");
 check("ଗଜପତି", "gjpti");
 check("கன்னியாகுமரி", "knniyakumri");
+check("శ్రీకాకుళం", "srikakulm");

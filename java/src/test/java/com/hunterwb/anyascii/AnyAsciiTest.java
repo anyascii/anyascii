@@ -34,6 +34,7 @@ public final class AnyAsciiTest {
         check("ਜਲੰਧਰ", "jlmdhr");
         check("ଗଜପତି", "gjpti");
         check("கன்னியாகுமரி", "knniyakumri");
+        check("శ్రీకాకుళం", "srikakulm");
     }
 
     private static void check(String s, String expected) {
