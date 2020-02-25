@@ -30,6 +30,7 @@ check("⠠⠎⠁⠽⠀⠭⠀⠁⠛", "^say x ag");
 check("ময়মনসিংহ", "mymnsimh");
 check("પોરબંદર", "porbmdr");
 check("महासमुंद", "mhasmumd");
+check("ಬೆಂಗಳೂರು", "bemgluru");
 check("ਜਲੰਧਰ", "jlmdhr");
 check("ଗଜପତି", "gjpti");
 check("கன்னியாகுமரி", "knniyakumri");
