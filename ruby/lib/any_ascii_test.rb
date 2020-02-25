@@ -32,6 +32,7 @@ class AnyAsciiTest < Test::Unit::TestCase
 		check("കളമശ്ശേരി", "klmsseri")
 		check("ਜਲੰਧਰ", "jlmdhr")
 		check("ଗଜପତି", "gjpti")
+		check("රත්නපුර", "rtnpur")
 		check("கன்னியாகுமரி", "knniyakumri")
 		check("శ్రీకాకుళం", "srikakulm")
 	end

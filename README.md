@@ -68,6 +68,7 @@ Representative examples for different languages comparing the Any-Ascii output t
 |Malayalam|Malayalam|കളമശ്ശേരി|klmsseri|Kalamassery
 |Punjabi|Gurmukhi|ਜਲੰਧਰ|jlmdhr|Jalandhar|
 |Odia|Odia|ଗଜପତି|gjpti|Gajapati|
+|Sinhala|Sinhala|රත්නපුර|rtnpur|Ratnapura|
 |Tamil|Tamil|கன்னியாகுமரி|knniyakumri|Kanniyakumari|
 |Telugu|Telugu|శ్రీకాకుళం|srikakulm|Srikakulam|
 
