@@ -103,6 +103,7 @@ private fun custom() = Table()
         .then(Table("telugu"))
         .then(Table("kannada"))
         .then(Table("malayalam"))
+        .then(sinhala())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -231,3 +232,7 @@ private fun oldItalic() = Table()
             if (n.toSet().size == 1) return@toTable n
             return@toTable n.replace("[aeu]".toRegex(), "")
         })
+
+private fun sinhala() = Table()
+        .then(Table("sinhala"))
+        .then((0x111e0..0x111ff).filter { UCharacter.isDefined(it) }.toTable { numericValue(it).toString() })
