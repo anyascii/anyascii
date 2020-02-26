@@ -1,5 +1,18 @@
+//! Unicode to ASCII transliteration.
+//!
+//! Converts Unicode text to a reasonable representation using only ASCII.
+//!
+//! For most characters in Unicode, Any-Ascii provides an ASCII-only replacement string.
+//! Text is converted character-by-character without considering the context.
+//! The mappings for each language are based on popular existing romanization schemes.
+//! Symbolic characters are converted based on their meaning or appearance.
+//! All ASCII characters in the input are left unchanged,
+//! every other character is replaced with printable ASCII characters.
+//! Unknown characters are removed.
 mod block;
 
+/// Transliterates a Unicode String into ASCII.
+///
 /// ```
 /// # use any_ascii::any_ascii;
 /// assert_eq!("anthropoi", any_ascii("άνθρωποι"));
@@ -12,6 +25,8 @@ pub fn any_ascii(s: &str) -> String {
     s.chars().map(any_ascii_char).collect()
 }
 
+/// Transliterates a Unicode char into ASCII.
+///
 /// ```
 /// # use any_ascii::any_ascii_char;
 /// assert_eq!("ae", any_ascii_char('æ'));
