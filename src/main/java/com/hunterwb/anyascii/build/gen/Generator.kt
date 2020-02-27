@@ -39,12 +39,25 @@ class Generator(val table: Table) {
 
     private fun stringsBank(): String {
         val sb = StringBuilder()
-        for (s in table.values.toSet().sortedByDescending { it.length }) {
-            if (s.length > 3 && s !in sb) {
-                sb.append(s)
+        val ss = table.values.filterTo(LinkedHashSet()) { it.length > 3 }
+        val ss2 = ss.filter { a -> ss.none { b -> a != b && a in b } }.sortedBy { it.length }.toCollection(LinkedHashSet())
+        while (ss2.isNotEmpty()) {
+            val m = ss2.maxBy { overlap(sb, it) }!!
+            ss2.remove(m)
+            check(m !in sb)
+            sb.append(m, overlap(sb, m), m.length)
+        }
+        check(ss.all { it in sb })
+        return sb.toString()
+    }
+
+    private fun overlap(a: CharSequence, b: String): Int {
+        for (i in (b.length - 1).downTo(1)) {
+            if (a.endsWith(b.substring(0, i))) {
+                return i
             }
         }
-        return sb.toString()
+        return 0
     }
 
     private fun blockPointers(): Map<Int, ByteArray> {
