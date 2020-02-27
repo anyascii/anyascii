@@ -40,10 +40,12 @@ module.exports = function block(blockNum) {
         case 0x023: return require('./data/023.js');
         case 0x024: return require('./data/024.js');
         case 0x025: return require('./data/025.js');
+        case 0x026: return require('./data/026.js');
         case 0x027: return require('./data/027.js');
         case 0x028: return require('./data/028.js');
         case 0x029: return require('./data/029.js');
         case 0x02a: return require('./data/02a.js');
+        case 0x02b: return require('./data/02b.js');
         case 0x02c: return require('./data/02c.js');
         case 0x02d: return require('./data/02d.js');
         case 0x02e: return require('./data/02e.js');
@@ -253,6 +255,11 @@ module.exports = function block(blockNum) {
         case 0x1f0: return require('./data/1f0.js');
         case 0x1f1: return require('./data/1f1.js');
         case 0x1f2: return require('./data/1f2.js');
+        case 0x1f3: return require('./data/1f3.js');
+        case 0x1f4: return require('./data/1f4.js');
+        case 0x1f5: return require('./data/1f5.js');
+        case 0x1f6: return require('./data/1f6.js');
+        case 0x1f9: return require('./data/1f9.js');
         case 0x200: return require('./data/200.js');
         case 0x201: return require('./data/201.js');
         case 0x202: return require('./data/202.js');

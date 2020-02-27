@@ -1,8 +1,11 @@
 package com.hunterwb.anyascii.build
 
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 import com.hunterwb.anyascii.build.gen.generate
 import com.ibm.icu.lang.UCharacter
 import com.ibm.icu.text.Transliterator
+import java.io.File
 
 fun main() {
     val table = ascii()
@@ -16,6 +19,7 @@ fun main() {
             .then(icu("::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))
             .normalize(NFKC)
             .cased()
+            .then(emojis())
             .minus(ascii())
             .write("table.tsv")
 
@@ -240,3 +244,12 @@ private fun sinhala() = Table()
 
 private fun hangul() = Table()
         .then(icu("[:^Hang:]>; ::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))
+
+private fun emojis(): Table = jacksonObjectMapper()
+        .readValue<LinkedHashMap<String, String>>(File("input/github.emojis.json"))
+        .filterValues { it.contains("/unicode/") && '-' !in it }
+        .mapKeys { ":${it.key}:" }
+        .filterKeys { it.length < 32 }
+        .mapValues { it.value.substringBeforeLast('.').substringAfterLast("/").toInt(16) }
+        .entries
+        .associateTo(Table()) { it.value to it.key }

@@ -9,8 +9,6 @@ fun <K, V> MutableMap<K, V>.putAllIfAbsent(other: Map<K, V>) {
     for ((k, v) in other) putIfAbsent(k, v)
 }
 
-fun <A, B> Pair<A, B>.swap(): Pair<B, A> = second to first
-
 fun String.isPrintableAscii() = all { it.toInt() in 0x20..0x7e }
 
 fun Int.isAscii() = this in 0..127
