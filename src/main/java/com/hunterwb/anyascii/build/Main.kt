@@ -117,7 +117,6 @@ private fun cyrillic() = Table()
         .aliasing((0xa674..0xa67b) + (0xa69e..0xa69f) + (0x2de0..0x2dff) - 0x2df5) { it.replace("COMBINING CYRILLIC", "CYRILLIC SMALL") }
 
 private fun greek() = Table()
-        // iota subscript?
         .then(Table("greek-symbols"))
         .then(greekMath())
         .then(Table("greek"))
