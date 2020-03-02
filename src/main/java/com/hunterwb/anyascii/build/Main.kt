@@ -44,6 +44,7 @@ private fun ascii(): Table = (0..127).toTable { toString(it) }
 private fun decimalDigits() = codePoints("Nd").toTable { numericValue(it).toString() }
 
 private fun custom() = Table()
+        .then(Table("currency-symbols"))
         .then(Table("letterlike-symbols"))
         .then(Table("general-punctuation"))
         .then(Table("nko"))
