@@ -51,10 +51,8 @@ pub fn any_ascii_char(c: char) -> &'static str {
     };
     let lo = (c as u8) as usize;
     if let Some(ptr) = block.get(lo) {
-        let mut len = ptr[2] as usize;
-        if len >= 32 {
-            len = 3;
-        }
+        let l = ptr[2];
+        let len = if (l & 0x80) == 0 { 3 } else { (l & 0x7f) as usize };
         if len <= 3 {
             unsafe {
                 std::str::from_utf8_unchecked(ptr.get_unchecked(..len))
@@ -110,5 +108,5 @@ fn test() {
     check("శ్రీకాకుళం", "srikakulm");
     check("😎 👑 🍎", ":sunglasses: :crown: :apple:");
     check("☆ ♯ ♰ ⚄ ⛌", "* # + 5 X");
-    check("№ ℳ ⅋ ⅍", "No M & A/S")
+    check("№ ℳ ⅋ ⅍", "No M & A/S");
 }

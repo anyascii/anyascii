@@ -18,9 +18,12 @@ func TransliterateRune(r rune) string {
 	if len(block) <= lo {
 		return ""
 	}
-	len := int(block[lo + 2])
-	if len >= 32 {
-		len = 3
+	l := block[lo + 2]
+	var len int
+	if (l & 0x80) == 0 {
+	    len = 3
+	} else {
+	    len = int(l & 0x7f)
 	}
 	if len <= 3 {
 		return block[lo:lo + len]

@@ -61,7 +61,7 @@ class Generator(val table: Table) {
     }
 
     private fun blockPointers(): Map<Int, ByteArray> {
-        check(table.lengthStatistics().max < 32)
+        check(table.lengthStatistics().max <= 0x7f)
         check((stringsBank.length shr 16) == 0)
         val m = TreeMap<Int, ByteArray>()
         for ((blockNum, blockStrings) in blocks) {
@@ -73,17 +73,17 @@ class Generator(val table: Table) {
                 when (s.length) {
                     0 -> {
                         d.writeShort(0)
-                        d.writeByte(0)
+                        d.writeByte(0x80)
                     }
                     1 -> {
                         d.writeByte(s[0].toInt())
                         d.writeByte(0)
-                        d.writeByte(1)
+                        d.writeByte(0x81)
                     }
                     2 -> {
                         d.writeByte(s[0].toInt())
                         d.writeByte(s[1].toInt())
-                        d.writeByte(2)
+                        d.writeByte(0x82)
                     }
                     3 -> {
                         d.writeByte(s[0].toInt())
@@ -92,7 +92,7 @@ class Generator(val table: Table) {
                     }
                     else -> {
                         d.writeShort(stringsBank.indexOf(s))
-                        d.writeByte(s.length)
+                        d.writeByte(0x80 or s.length)
                     }
                 }
             }

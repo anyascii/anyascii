@@ -249,7 +249,6 @@ private fun emojis(): Table = jacksonObjectMapper()
         .readValue<LinkedHashMap<String, String>>(File("input/github.emojis.json"))
         .filterValues { it.contains("/unicode/") && '-' !in it }
         .mapKeys { ":${it.key}:" }
-        .filterKeys { it.length < 32 }
         .mapValues { it.value.substringBeforeLast('.').substringAfterLast("/").toInt(16) }
         .entries
         .associateTo(Table()) { it.value to it.key }
