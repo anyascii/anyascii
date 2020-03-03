@@ -72,6 +72,12 @@ Representative examples for different languages comparing the Any-Ascii output t
 |Tamil|Tamil|கன்னியாகுமரி|knniyakumri|Kanniyakumari|
 |Telugu|Telugu|శ్రీకాకుళం|srikakulm|Srikakulam|
 
+|Input|Output|
+|---|---|
+|😎 👑 🍎|`:sunglasses: :crown: :apple:`|
+|☆ ♯ ♰ ⚄ ⛌|* # + 5 X|
+|№ ℳ ⅋ ⅍|No M & A/S|
+
 ## Reasoning
 
 [Unicode](https://en.wikipedia.org/wiki/Unicode) is the universal character set, a global standard to support all the world's languages.

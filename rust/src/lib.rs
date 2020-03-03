@@ -37,6 +37,8 @@ pub fn any_ascii(s: &str) -> String {
 /// assert_eq!("c", any_ascii_char('ç'));
 /// assert_eq!("l", any_ascii_char('λ'));
 /// assert_eq!("zh", any_ascii_char('ж'));
+/// assert_eq!(":crown:", any_ascii_char('👑'));
+/// assert_eq!("#", any_ascii_char('♯'));
 /// ```
 pub fn any_ascii_char(c: char) -> &'static str {
     let block_num = ((c as u32) >> 8) as u16;
@@ -106,4 +108,7 @@ fn test() {
     check("රත්නපුර", "rtnpur");
     check("கன்னியாகுமரி", "knniyakumri");
     check("శ్రీకాకుళం", "srikakulm");
+    check("😎 👑 🍎", ":sunglasses: :crown: :apple:");
+    check("☆ ♯ ♰ ⚄ ⛌", "* # + 5 X");
+    check("№ ℳ ⅋ ⅍", "No M & A/S")
 }

@@ -38,3 +38,6 @@ def test():
     check("රත්නපුර", "rtnpur")
     check("கன்னியாகுமரி", "knniyakumri")
     check("శ్రీకాకుళం", "srikakulm")
+    check("😎 👑 🍎", ":sunglasses: :crown: :apple:")
+    check("☆ ♯ ♰ ⚄ ⛌", "* # + 5 X")
+    check("№ ℳ ⅋ ⅍", "No M & A/S")
