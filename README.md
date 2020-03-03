@@ -72,11 +72,11 @@ Representative examples for different languages comparing the Any-Ascii output t
 |Tamil|Tamil|கன்னியாகுமரி|knniyakumri|Kanniyakumari|
 |Telugu|Telugu|శ్రీకాకుళం|srikakulm|Srikakulam|
 
-|Input|Output|
-|---|---|
-|😎 👑 🍎|`:sunglasses: :crown: :apple:`|
-|☆ ♯ ♰ ⚄ ⛌|* # + 5 X|
-|№ ℳ ⅋ ⅍|No M & A/S|
+|Symbols|Input|Output|
+|---|---|---|
+|Emojis|😎 👑 🍎|`:sunglasses: :crown: :apple:`|
+|Misc.|☆ ♯ ♰ ⚄ ⛌|* # + 5 X|
+|Letterlike|№ ℳ ⅋ ⅍|No M & A/S|
 
 ## Reasoning
 
