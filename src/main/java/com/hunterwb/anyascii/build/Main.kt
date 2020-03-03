@@ -3,7 +3,6 @@ package com.hunterwb.anyascii.build
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import com.hunterwb.anyascii.build.gen.generate
-import com.ibm.icu.lang.UCharacter
 import com.ibm.icu.text.Transliterator
 import java.io.File
 
@@ -233,7 +232,7 @@ private fun hiragana() = Table()
 
 private fun oldItalic() = Table()
         .then((0x10320..0x10323).toTable { ROMAN_NUMERALS.getValue(numericValue(it)) })
-        .then((0x10300..0x1032f).filter { UCharacter.isDefined(it) }.toTable {
+        .then((0x10300..0x1032f).filter { isDefined(it) }.toTable {
             val n = name(it).substringAfterLast(' ').toLowerCase()
             if (n.toSet().size == 1) return@toTable n
             return@toTable n.replace("[aeu]".toRegex(), "")
@@ -241,7 +240,7 @@ private fun oldItalic() = Table()
 
 private fun sinhala() = Table()
         .then(Table("sinhala"))
-        .then((0x111e0..0x111ff).filter { UCharacter.isDefined(it) }.toTable { numericValue(it).toString() })
+        .then((0x111e0..0x111ff).filter { isDefined(it) }.toTable { numericValue(it).toString() })
 
 private fun hangul() = Table()
         .then(icu("[:^Hang:]>; ::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))

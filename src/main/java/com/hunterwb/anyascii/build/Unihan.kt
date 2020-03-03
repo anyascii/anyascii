@@ -14,6 +14,8 @@ fun unihan() = Table()
         .then(unihan("kJapaneseKun"))
         .variants()
 
+private val HANGUL_TO_LATIN: Transliterator = Transliterator.getInstance("Hangul-Latin")
+
 private fun unihan(key: String): Table {
     val table = Table()
     Files.lines(Path.of("input/Unihan_Readings.txt"))
@@ -26,7 +28,7 @@ private fun unihan(key: String): Table {
                 when (key) {
                     "kHangul" -> {
                         output = output.substringBefore(':')
-                        output = Transliterator.getInstance("Hangul-Latin").transliterate(output).capitalize()
+                        output = HANGUL_TO_LATIN.transliterate(output).capitalize()
                     }
                     "kTang" -> {
                         output = output.removePrefix("*").split(' ')[0]
