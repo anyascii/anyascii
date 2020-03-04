@@ -5,8 +5,10 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import com.hunterwb.anyascii.build.gen.generate
 import com.ibm.icu.text.Transliterator
 import java.io.File
+import java.util.Locale
 
 fun main() {
+    Locale.setDefault(Locale.ROOT)
     val table = ascii()
             .then(decimalDigits())
             .then(custom())
