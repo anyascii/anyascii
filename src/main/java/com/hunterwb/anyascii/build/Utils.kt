@@ -1,6 +1,7 @@
 package com.hunterwb.anyascii.build
 
 import com.ibm.icu.lang.UCharacter
+import com.ibm.icu.lang.UScript
 import com.ibm.icu.text.Normalizer2
 import com.ibm.icu.text.UnicodeSet
 import java.nio.file.Files
@@ -59,3 +60,7 @@ inline fun forEachLine(file: Path, f: (String) -> Unit) {
         }
     }
 }
+
+fun script(codePoint: Int): Int = UScript.getScript(codePoint)
+
+fun String.codePointsArray(): IntArray = codePoints().toArray()

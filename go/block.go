@@ -433,6 +433,7 @@ func Block(blockNum uint32) string {
 	case 0x2a6: return data.X2a6
 	case 0x2a7: return data.X2a7
 	case 0x2a8: return data.X2a8
+	case 0x2a9: return data.X2a9
 	case 0x2aa: return data.X2aa
 	case 0x2ad: return data.X2ad
 	case 0x2ae: return data.X2ae
@@ -444,14 +445,27 @@ func Block(blockNum uint32) string {
 	case 0x2b4: return data.X2b4
 	case 0x2b5: return data.X2b5
 	case 0x2b6: return data.X2b6
+	case 0x2b7: return data.X2b7
 	case 0x2b8: return data.X2b8
+	case 0x2ba: return data.X2ba
+	case 0x2bb: return data.X2bb
+	case 0x2bd: return data.X2bd
+	case 0x2be: return data.X2be
 	case 0x2bf: return data.X2bf
+	case 0x2c0: return data.X2c0
 	case 0x2c1: return data.X2c1
+	case 0x2c2: return data.X2c2
+	case 0x2c3: return data.X2c3
 	case 0x2c4: return data.X2c4
+	case 0x2c5: return data.X2c5
 	case 0x2c6: return data.X2c6
 	case 0x2c7: return data.X2c7
+	case 0x2c8: return data.X2c8
 	case 0x2c9: return data.X2c9
+	case 0x2ca: return data.X2ca
 	case 0x2cb: return data.X2cb
+	case 0x2cc: return data.X2cc
+	case 0x2cd: return data.X2cd
 	case 0x2ce: return data.X2ce
 	case 0x2d0: return data.X2d0
 	case 0x2e5: return data.X2e5

@@ -2,7 +2,7 @@ package com.hunterwb.anyascii;
 
 final class Block {
 
-	static final String[][] blocks = new String[455][];
+	static final String[][] blocks = new String[469][];
 
 	static int block(int blockNum) {
 		switch (blockNum) {
@@ -435,32 +435,46 @@ final class Block {
 			case 0x2a6: return 426;
 			case 0x2a7: return 427;
 			case 0x2a8: return 428;
-			case 0x2aa: return 429;
-			case 0x2ad: return 430;
-			case 0x2ae: return 431;
-			case 0x2af: return 432;
-			case 0x2b0: return 433;
-			case 0x2b1: return 434;
-			case 0x2b2: return 435;
-			case 0x2b3: return 436;
-			case 0x2b4: return 437;
-			case 0x2b5: return 438;
-			case 0x2b6: return 439;
-			case 0x2b8: return 440;
-			case 0x2bf: return 441;
-			case 0x2c1: return 442;
-			case 0x2c4: return 443;
-			case 0x2c6: return 444;
-			case 0x2c7: return 445;
-			case 0x2c9: return 446;
-			case 0x2cb: return 447;
-			case 0x2ce: return 448;
-			case 0x2d0: return 449;
-			case 0x2e5: return 450;
-			case 0x2f8: return 451;
-			case 0x2f9: return 452;
-			case 0x2fa: return 453;
-			case 0xe00: return 454;
+			case 0x2a9: return 429;
+			case 0x2aa: return 430;
+			case 0x2ad: return 431;
+			case 0x2ae: return 432;
+			case 0x2af: return 433;
+			case 0x2b0: return 434;
+			case 0x2b1: return 435;
+			case 0x2b2: return 436;
+			case 0x2b3: return 437;
+			case 0x2b4: return 438;
+			case 0x2b5: return 439;
+			case 0x2b6: return 440;
+			case 0x2b7: return 441;
+			case 0x2b8: return 442;
+			case 0x2ba: return 443;
+			case 0x2bb: return 444;
+			case 0x2bd: return 445;
+			case 0x2be: return 446;
+			case 0x2bf: return 447;
+			case 0x2c0: return 448;
+			case 0x2c1: return 449;
+			case 0x2c2: return 450;
+			case 0x2c3: return 451;
+			case 0x2c4: return 452;
+			case 0x2c5: return 453;
+			case 0x2c6: return 454;
+			case 0x2c7: return 455;
+			case 0x2c8: return 456;
+			case 0x2c9: return 457;
+			case 0x2ca: return 458;
+			case 0x2cb: return 459;
+			case 0x2cc: return 460;
+			case 0x2cd: return 461;
+			case 0x2ce: return 462;
+			case 0x2d0: return 463;
+			case 0x2e5: return 464;
+			case 0x2f8: return 465;
+			case 0x2f9: return 466;
+			case 0x2fa: return 467;
+			case 0xe00: return 468;
 			default: return -1;
 		}
 	}

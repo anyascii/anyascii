@@ -15,6 +15,7 @@ fun main() {
             .normalize(NFKC)
             .then(icu("::Latin-ASCII; [:^ASCII:]>;"))
             .then(unihan())
+            .then(ccCedict())
             .normalize(NFKC)
             .then(Table("unidecode"))
             .then(icu("::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))
