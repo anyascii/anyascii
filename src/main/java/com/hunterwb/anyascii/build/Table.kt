@@ -27,10 +27,15 @@ fun Table.write(path: String) = apply {
     }
 }
 
-fun Table(file: String): Table = Files.readAllLines(Path.of("input/tables/$file.tsv"))
-        .filter { !it.startsWith('#') }
-        .map { it.split('\t') }
-        .associateTo(Table()) { it[0].toCodePoint() to it[1] }
+fun Table(file: String) = Table().apply {
+    forEachLine(Path.of("input/tables/$file.tsv")) { line ->
+        if (line.startsWith('#')) return@forEachLine
+        val cp = line.codePointAt(0)
+        val i = Character.charCount(cp)
+        check(line[i] == '\t')
+        put(cp, line.substring(i + 1))
+    }
+}
 
 fun Table.normalize(normalizer2: Normalizer2, replacement: String? = null) = apply {
     for (cp in 128..Character.MAX_CODE_POINT) {

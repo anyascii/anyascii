@@ -3,6 +3,8 @@ package com.hunterwb.anyascii.build
 import com.ibm.icu.lang.UCharacter
 import com.ibm.icu.text.Normalizer2
 import com.ibm.icu.text.UnicodeSet
+import java.nio.file.Files
+import java.nio.file.Path
 import java.util.regex.Pattern
 
 fun <K, V> MutableMap<K, V>.putAllIfAbsent(other: Map<K, V>) {
@@ -48,3 +50,12 @@ fun numericValue(codePoint: Int): Int = UCharacter.getNumericValue(codePoint).al
 val ROMAN_NUMERALS = mapOf(1 to "I", 5 to "V", 10 to "X", 50 to "L", 100 to "C")
 
 fun isDefined(codePoint: Int) = UCharacter.isDefined(codePoint)
+
+inline fun forEachLine(file: Path, f: (String) -> Unit) {
+    Files.newBufferedReader(file).use { reader ->
+        while (true) {
+            val line = reader.readLine() ?: break
+            f(line)
+        }
+    }
+}
