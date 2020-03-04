@@ -12,9 +12,12 @@ fun unihan() = Table()
         .then(unihan("kVietnamese"))
         .then(unihan("kJapaneseOn"))
         .then(unihan("kJapaneseKun"))
+        .then(unihan("kTang"))
         .variants()
 
 private val HANGUL_TO_LATIN: Transliterator = Transliterator.getInstance("Hangul-Latin")
+
+private val TANG_MAP: Map<Char, String> = mapOf('ɛ' to "e", 'ɑ' to "a", 'æ' to "ae", 'ə' to "e", '(' to "", ')' to "")
 
 private fun unihan(key: String): Table {
     val table = Table()
@@ -32,6 +35,8 @@ private fun unihan(key: String): Table {
                     }
                     "kTang" -> {
                         output = output.removePrefix("*").split(' ')[0]
+                        output = output.removeDiacritics().toLowerCase()
+                        output = output.map { TANG_MAP.getOrElse(it) { it.toString() } }.joinToString("").capitalize()
                     }
                     else -> {
                         output = output.substringAfter(':')
