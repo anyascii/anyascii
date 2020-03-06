@@ -114,6 +114,7 @@ private fun custom() = Table()
         .then(hangul())
         .then(Table("misc-symbols"))
         .then(Table("arrows"))
+        .then(Table("misc-technical"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
