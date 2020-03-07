@@ -15,7 +15,7 @@ fun Table.then(codePoint: Int, s: String) = apply { putIfAbsent(codePoint, s) }
 
 fun Table.minus(codePoint: Int) = apply { remove(codePoint) }
 
-fun Table.minus(other: Table) = apply { for (cp in other.keys) remove(cp) }
+fun Table.minus(codePoints: Iterable<Int>) = apply { for (cp in codePoints) remove(cp) }
 
 fun Table.write(path: String) = apply {
     Files.newBufferedWriter(Path.of(path)).use {

@@ -262,7 +262,6 @@ any_ascii = { git = "https://github.com/hunterwb/any-ascii" }
 [BGN/PCGN Romanization](https://www.gov.uk/government/publications/romanization-systems)  
 [CC-CEDICT: Free Mandarin Chinese Dictionary](https://cc-cedict.org/wiki/)  
 [Compart: Unicode Charts](https://www.compart.com/en/unicode/)  
-[GitHub Emojis](https://api.github.com/emojis)  
 [ICAO 9303: Machine Readable Passports](https://www.icao.int/publications/Documents/9303_p3_cons_en.pdf)  
 [ISO 15919: Indic Romanization](https://en.wikipedia.org/wiki/ISO_15919)  
 [ISO 9: Cyrillic Romanization](https://en.wikipedia.org/wiki/ISO_9)  
