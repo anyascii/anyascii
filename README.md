@@ -80,11 +80,15 @@ Representative examples for different languages comparing the Any-Ascii output t
 
 ## Reasoning
 
+> Unicode is the foundation for text in all modern software:
+> it’s how all mobile phones, desktops, and other computers represent the text of every language.
+> People are using Unicode every time they type a key on their phone or desktop computer, and every time they look at a web page or text in an application.
+> [*](https://unicode.org/reports/tr51/#Encoding)
+
 [Unicode](https://en.wikipedia.org/wiki/Unicode) is the universal character set, a global standard to support all the world's languages.
 It consists of 130,000+ characters used by 150 writing systems.
 Along with characters used in language, it also contains various technical symbols, emojis, and other symbolic characters.
 The `String` type in programming languages usually corresponds to Unicode text.
-Whenever text is used digitally on computers or the internet it is almost always represented using Unicode characters.
 Unicode characters are not stored directly but instead encoded into bytes using an encoding, typically [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
 
 [ASCII](https://en.wikipedia.org/wiki/ASCII) is the most compatible character set, established in 1967.
@@ -268,6 +272,7 @@ any_ascii = { git = "https://github.com/hunterwb/any-ascii" }
 [Thomas T. Pedersen: Transliteration of Non-Roman Scripts](http://transliteration.eki.ee/)  
 [UNGEGN Romanization](https://www.eki.ee/wgrs/)  
 [Unicode CLDR: Transliteration Guidelines](http://cldr.unicode.org/index/cldr-spec/transliteration-guidelines)  
+[Unicode Emoji](https://unicode.org/reports/tr51/)  
 [Unicode Unihan Database](https://www.unicode.org/reports/tr38/tr38-27.html)  
 [Unified English Braille](http://www.iceb.org/ueb.html)  
 [Wikipedia: Romanization of Arabic](https://en.wikipedia.org/wiki/Romanization_of_Arabic)  
