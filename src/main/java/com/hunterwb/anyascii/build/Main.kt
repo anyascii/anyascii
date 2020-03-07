@@ -11,6 +11,7 @@ fun main() {
     Locale.setDefault(Locale.ROOT)
     val table = ascii()
             .then(decimalDigits())
+            .then(emojis())
             .then(custom())
             .normalize(NFKC)
             .then(icu("::Latin-ASCII; [:^ASCII:]>;"))
@@ -21,7 +22,6 @@ fun main() {
             .then(icu("::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))
             .normalize(NFKC)
             .cased()
-            .then(emojis())
             .minus(ascii())
             .write("table.tsv")
 
@@ -242,10 +242,14 @@ private fun sinhala() = Table()
 private fun hangul() = Table()
         .then(icu("[:^Hang:]>; ::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))
 
+// ©®‼⁉™ℹⓂ㊗㊙🈁🈂🈚🈯🈲🈳🈴🈵🈶🈷🈸🈹🈺🉐🉑
+private val EMOJI_BLACKLIST = "©®‼⁉™ℹⓂ㊗㊙\uD83C\uDE01\uD83C\uDE02\uD83C\uDE1A\uD83C\uDE2F\uD83C\uDE32\uD83C\uDE33\uD83C\uDE34\uD83C\uDE35\uD83C\uDE36\uD83C\uDE37\uD83C\uDE38\uD83C\uDE39\uD83C\uDE3A\uD83C\uDE50\uD83C\uDE51".codePointsArray()
+
 private fun emojis(): Table = jacksonObjectMapper()
         .readValue<LinkedHashMap<String, String>>(File("input/github.emojis.json"))
         .filterValues { it.contains("/unicode/") && '-' !in it }
         .mapKeys { ":${it.key}:" }
         .mapValues { it.value.substringBeforeLast('.').substringAfterLast("/").toInt(16) }
+        .filterValues { it !in EMOJI_BLACKLIST }
         .entries
         .associateTo(Table()) { it.value to it.key }
