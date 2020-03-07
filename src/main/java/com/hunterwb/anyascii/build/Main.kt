@@ -115,6 +115,7 @@ private fun custom() = Table()
         .then(Table("misc-symbols"))
         .then(Table("arrows"))
         .then(Table("misc-technical"))
+        .then(dingbats())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -253,3 +254,7 @@ private fun emojis(): Table = jacksonObjectMapper()
         .filterValues { it !in EMOJI_BLACKLIST }
         .entries
         .associateTo(Table()) { it.value to it.key }
+
+private fun dingbats() = Table()
+        .then(Table("dingbats"))
+        .then((0x2776..0x2793).toTable { numericValue(it).toString() })
