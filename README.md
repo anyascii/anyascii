@@ -106,6 +106,8 @@ When converting between writing systems there are multiple properties that can b
 
 ## Implementations
 
+Any-Ascii is implemented in 6 different programming languages with equivalent behavior.
+
 ### CLI
 
 ```console
