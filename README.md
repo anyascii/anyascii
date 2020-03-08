@@ -11,7 +11,7 @@ Unicode to ASCII transliteration
 
 - [Description](#description)
 - [Examples](#examples)
-- [Reasoning](#reasoning)
+- [Background](#background)
 - [Implementations](#implementations)
   - [CLI](#cli)
   - [Go](#go)
@@ -78,7 +78,7 @@ Representative examples for different languages comparing the Any-Ascii output t
 |Misc.|☆ ♯ ♰ ⚄ ⛌|* # + 5 X|
 |Letterlike|№ ℳ ⅋ ⅍|No M & A/S|
 
-## Reasoning
+## Background
 
 > Unicode is the foundation for text in all modern software:
 > it’s how all mobile phones, desktops, and other computers represent the text of every language.
@@ -86,7 +86,7 @@ Representative examples for different languages comparing the Any-Ascii output t
 > [*](https://www.unicode.org/reports/tr51/#Encoding)
 
 [Unicode](https://en.wikipedia.org/wiki/Unicode) is the universal character set, a global standard to support all the world's languages.
-It consists of 130,000+ characters used by 150 writing systems.
+It consists of 130,000+ characters used by 150 scripts.
 Along with characters used in language, it also contains various technical symbols, emojis, and other symbolic characters.
 The `String` type in programming languages usually corresponds to Unicode text.
 Unicode characters are not stored directly but instead encoded into bytes using an encoding, typically [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
@@ -97,9 +97,13 @@ The [printable](https://en.wikipedia.org/wiki/ASCII#Printable_characters) charac
 with the remaining being [control characters](https://en.wikipedia.org/wiki/ASCII#Control_characters).
 All of the characters found on a standard US keyboard correspond to the printable ASCII characters.
 
+A language is represented in writing using characters from a specific [script](https://en.wikipedia.org/wiki/Writing_system).
+A script can be [alphabetic](https://en.wikipedia.org/wiki/Alphabet), [logographic](https://en.wikipedia.org/wiki/Logogram), [syllabic](https://en.wikipedia.org/wiki/Syllabary), or something else.
+Some languages use multiple scripts: Japanese uses Kanji, Hiragana, and Katakana.
+Some scripts are used by multiple languages: [Han characters](https://en.wikipedia.org/wiki/Chinese_characters) are used in Chinese, Japanese, and Korean.
 Conversion into the [Latin script](https://en.wikipedia.org/wiki/Latin_script) used by English and ASCII is called [romanization](https://en.wikipedia.org/wiki/Romanization).
 
-When converting between writing systems there are multiple properties that can be preserved:
+When converting between languages there are multiple properties that can be preserved:
 - Meaning: [Translation](https://en.wikipedia.org/wiki/Translation) replaces text with an equivalent in the target language with the same meaning.
   This relies heavily on context and [automatic translation](https://en.wikipedia.org/wiki/Machine_translation) is extremely complicated.
 - Appearance: Preserving the visual appearance of a character when converting between languages is rarely possible and requires readers to have knowledge of the source language.
@@ -107,6 +111,9 @@ When converting between writing systems there are multiple properties that can b
 - Spelling: [Transliteration](https://en.wikipedia.org/wiki/Transliteration) converts each letter individually using predictable rules.
   An unambiguous transliteration allows for reconstruction of the original text by using unique mappings for each letter.
   A phonetic transliteration instead uses the most phonetically accurate mappings which may result in duplicates or ambiguity.
+
+When text from one language is converted for readers of another language,
+the names of people and places are transliterated/transcribed and everything else is translated.
 
 ## Implementations
 
