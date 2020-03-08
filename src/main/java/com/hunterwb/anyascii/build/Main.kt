@@ -51,7 +51,6 @@ private fun custom() = Table()
         .then(Table("math-symbols-b"))
         .then(Table("kanbun"))
         .then((0xe0020..0xe007e).toTable { toString(it - 0xe0000) }) // tags
-        .then((0x1f1e6..0x1f1ff).toTable { toString(it - 0x1f1e6 + 'A'.toInt()) }) // regional indicators
         .then(Table("han-misc"))
         .then(Table("kangxi-radicals"))
         .then(Table("cjk-radicals"))

@@ -4,7 +4,7 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import java.io.File
 
-private val EMOJI_BLACKLIST = "©®‼⁉™ℹⓂ㊗㊙🈁🈂🈚🈯🈲🈳🈴🈵🈶🈷🈸🈹🈺🉐🉑".codePointsArray().asList()
+private val EMOJI_BLACKLIST = "©®‼⁉™Ⓜ㊗㊙🈁🈂🈚🈯🈲🈳🈴🈵🈶🈷🈸🈹🈺🉐🉑".codePointsArray().asList()
 
 fun emojis() = discordEmojis()
 
