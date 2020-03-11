@@ -437,6 +437,8 @@ func Block(blockNum uint32) string {
 	case 0x2a8: return data.X2a8
 	case 0x2a9: return data.X2a9
 	case 0x2aa: return data.X2aa
+	case 0x2ab: return data.X2ab
+	case 0x2ac: return data.X2ac
 	case 0x2ad: return data.X2ad
 	case 0x2ae: return data.X2ae
 	case 0x2af: return data.X2af
@@ -449,8 +451,10 @@ func Block(blockNum uint32) string {
 	case 0x2b6: return data.X2b6
 	case 0x2b7: return data.X2b7
 	case 0x2b8: return data.X2b8
+	case 0x2b9: return data.X2b9
 	case 0x2ba: return data.X2ba
 	case 0x2bb: return data.X2bb
+	case 0x2bc: return data.X2bc
 	case 0x2bd: return data.X2bd
 	case 0x2be: return data.X2be
 	case 0x2bf: return data.X2bf
@@ -470,10 +474,55 @@ func Block(blockNum uint32) string {
 	case 0x2cd: return data.X2cd
 	case 0x2ce: return data.X2ce
 	case 0x2d0: return data.X2d0
+	case 0x2d1: return data.X2d1
+	case 0x2d2: return data.X2d2
+	case 0x2d3: return data.X2d3
+	case 0x2d4: return data.X2d4
+	case 0x2d5: return data.X2d5
+	case 0x2d6: return data.X2d6
+	case 0x2d7: return data.X2d7
+	case 0x2d8: return data.X2d8
+	case 0x2d9: return data.X2d9
+	case 0x2da: return data.X2da
+	case 0x2db: return data.X2db
+	case 0x2dc: return data.X2dc
+	case 0x2dd: return data.X2dd
+	case 0x2de: return data.X2de
+	case 0x2e0: return data.X2e0
+	case 0x2e1: return data.X2e1
+	case 0x2e2: return data.X2e2
+	case 0x2e3: return data.X2e3
+	case 0x2e4: return data.X2e4
 	case 0x2e5: return data.X2e5
+	case 0x2e6: return data.X2e6
+	case 0x2e7: return data.X2e7
+	case 0x2e8: return data.X2e8
+	case 0x2e9: return data.X2e9
+	case 0x2ea: return data.X2ea
+	case 0x2eb: return data.X2eb
 	case 0x2f8: return data.X2f8
 	case 0x2f9: return data.X2f9
 	case 0x2fa: return data.X2fa
+	case 0x300: return data.X300
+	case 0x301: return data.X301
+	case 0x302: return data.X302
+	case 0x303: return data.X303
+	case 0x304: return data.X304
+	case 0x305: return data.X305
+	case 0x306: return data.X306
+	case 0x307: return data.X307
+	case 0x308: return data.X308
+	case 0x309: return data.X309
+	case 0x30a: return data.X30a
+	case 0x30b: return data.X30b
+	case 0x30c: return data.X30c
+	case 0x30d: return data.X30d
+	case 0x30e: return data.X30e
+	case 0x30f: return data.X30f
+	case 0x310: return data.X310
+	case 0x311: return data.X311
+	case 0x312: return data.X312
+	case 0x313: return data.X313
 	case 0xe00: return data.Xe00
 	default: return ""
 	}

@@ -279,7 +279,7 @@ any_ascii = { git = "https://github.com/hunterwb/any-ascii" }
 [UNGEGN Romanization](https://www.eki.ee/wgrs/)  
 [Unicode CLDR: Transliteration Guidelines](http://cldr.unicode.org/index/cldr-spec/transliteration-guidelines)  
 [Unicode: Emoji](https://www.unicode.org/reports/tr51/)  
-[Unicode: Unihan Database](https://www.unicode.org/reports/tr38/)  
+[Unicode: Unihan](https://www.unicode.org/reports/tr38/)  
 [Unified English Braille](http://www.iceb.org/ueb.html)  
 [Wikipedia: Romanization of Arabic](https://en.wikipedia.org/wiki/Romanization_of_Arabic)  
 [Wikipedia: Romanization of Armenian](https://en.wikipedia.org/wiki/Romanization_of_Armenian)  
