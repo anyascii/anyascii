@@ -240,6 +240,7 @@ func Block(blockNum uint32) string {
 	case 0x116: return data.X116
 	case 0x117: return data.X117
 	case 0x118: return data.X118
+	case 0x119: return data.X119
 	case 0x11c: return data.X11c
 	case 0x11d: return data.X11d
 	case 0x11f: return data.X11f
@@ -266,6 +267,7 @@ func Block(blockNum uint32) string {
 	case 0x1f7: return data.X1f7
 	case 0x1f9: return data.X1f9
 	case 0x1fa: return data.X1fa
+	case 0x1fb: return data.X1fb
 	case 0x200: return data.X200
 	case 0x201: return data.X201
 	case 0x202: return data.X202
