@@ -86,9 +86,8 @@ Representative examples for different languages comparing the Any-Ascii output t
 > [*](https://www.unicode.org/reports/tr51/#Encoding)
 
 [Unicode](https://en.wikipedia.org/wiki/Unicode) is the universal character set, a global standard to support all the world's languages.
-It consists of 130,000+ characters used by 150 scripts.
-Along with characters used in language, it also contains various technical symbols, emojis, and other symbolic characters.
-The `String` type in programming languages usually corresponds to Unicode text.
+It consists of 140,000+ characters used by 150+ scripts.
+It also contains various technical symbols, emojis, and other symbolic characters.
 Unicode characters are not stored directly but instead encoded into bytes using an encoding, typically [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
 
 [ASCII](https://en.wikipedia.org/wiki/ASCII) is the most compatible character set, established in 1967.
@@ -117,7 +116,7 @@ the names of people and places are transliterated/transcribed and everything els
 
 ## Implementations
 
-Any-Ascii is implemented in 6 different programming languages with equivalent behavior.
+Any-Ascii is implemented in 6 different programming languages.
 
 ### CLI
 
