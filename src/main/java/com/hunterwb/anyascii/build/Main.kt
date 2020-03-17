@@ -25,7 +25,7 @@ fun main() {
     generate(table)
 }
 
-private fun icu(rules: String): Table {
+fun icu(rules: String): Table {
     val table = Table()
     val transliterator = Transliterator.createFromRules(rules, rules, Transliterator.FORWARD)
     for (cp in 128..Character.MAX_CODE_POINT) {
@@ -234,9 +234,6 @@ private fun oldItalic() = Table()
 private fun sinhala() = Table()
         .then(Table("sinhala"))
         .then((0x111e0..0x111ff).filter { isDefined(it) }.toTable { numericValue(it).toString() })
-
-private fun hangul() = Table()
-        .then(icu("[:^Hang:]>; ::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))
 
 private fun dingbats() = Table()
         .then(Table("dingbats"))
