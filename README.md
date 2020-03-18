@@ -88,13 +88,16 @@ Representative examples for different languages comparing the Any-Ascii output t
 [Unicode](https://en.wikipedia.org/wiki/Unicode) is the universal character set, a global standard to support all the world's languages.
 It consists of 140,000+ characters used by 150+ scripts.
 It also contains various technical symbols, emojis, and other symbolic characters.
-Unicode characters are not stored directly but instead encoded into bytes using an encoding, typically [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
+Unicode characters are encoded into bytes using an encoding, typically [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
 
 [ASCII](https://en.wikipedia.org/wiki/ASCII) is the most compatible character set, established in 1967.
 It is a subset of Unicode and UTF-8 consisting of 128 characters using 7-bits in the range `0x00` - `0x7F`.
 The [printable](https://en.wikipedia.org/wiki/ASCII#Printable_characters) characters are English letters, digits, and punctuation in the range `0x20` - `0x7E`,
 with the remaining being [control characters](https://en.wikipedia.org/wiki/ASCII#Control_characters).
 All of the characters found on a standard US keyboard correspond to the printable ASCII characters.
+
+> ... expressed only in the original non-control ASCII range so as to be as widely compatible with as many existing tools, languages, and serialization formats as possible and avoid display issues in text editors and source control.
+> [*](https://spec.graphql.org/June2018/)
 
 A language is represented in writing using characters from a specific [script](https://en.wikipedia.org/wiki/Writing_system).
 A script can be [alphabetic](https://en.wikipedia.org/wiki/Alphabet), [logographic](https://en.wikipedia.org/wiki/Logogram), [syllabic](https://en.wikipedia.org/wiki/Syllabary), or something else.
