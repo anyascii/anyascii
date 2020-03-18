@@ -76,13 +76,13 @@ private fun ccCedict() = Table().apply {
                 for (i in cps.indices) {
                     val cp = cps[i]
                     val syllable = syllables[i]
-                    if (script(cp) == UScript.HAN && syllable != "Xx") {
+                    if (cp.script == UScript.HAN && syllable != "Xx") {
                         putIfAbsent(cp, syllable)
                     }
                 }
             } else if (cps.size == 1) {
                 val cp = cps.single()
-                if (script(cp) == UScript.HAN) {
+                if (cp.script == UScript.HAN) {
                     putIfAbsent(cp, syllables.joinToString(""))
                 }
             }

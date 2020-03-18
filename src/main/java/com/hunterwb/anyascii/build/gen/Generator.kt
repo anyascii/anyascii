@@ -1,6 +1,7 @@
 package com.hunterwb.anyascii.build.gen
 
 import com.hunterwb.anyascii.build.Table
+import com.hunterwb.anyascii.build.asString
 import com.hunterwb.anyascii.build.isAscii
 import com.hunterwb.anyascii.build.lengthStatistics
 import java.io.ByteArrayOutputStream
@@ -69,7 +70,7 @@ class Generator(val table: Table) {
             val d = DataOutputStream(out)
             for ((lo, s0) in blockStrings.withIndex()) {
                 val cp = (blockNum shl 8) or lo
-                val s = if (cp.isAscii()) Character.toString(cp) else s0
+                val s = if (cp.isAscii()) cp.asString() else s0
                 when (s.length) {
                     0 -> {
                         d.writeShort(0)

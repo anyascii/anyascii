@@ -9,7 +9,7 @@ fun hangul() = Table()
 private fun Table.combinations() = apply {
     codePoints("Hang").forEach { cp ->
         if (cp in this) return@forEach
-        val split = name(cp).split(' ')
+        val split = cp.name.split(' ')
         when (val position = split[1]) {
             "CHOSEONG", "JUNGSEONG", "JONGSEONG" -> {
                 val letterNames = split[2].split('-')
@@ -20,5 +20,5 @@ private fun Table.combinations() = apply {
 }
 
 private fun Table.letter(position: String, name: String): String {
-    return get(codePoint("HANGUL $position $name")) ?: getValue(codePoint("HANGUL LETTER $name"))
+    return get(CodePoint("HANGUL $position $name")) ?: getValue(CodePoint("HANGUL LETTER $name"))
 }

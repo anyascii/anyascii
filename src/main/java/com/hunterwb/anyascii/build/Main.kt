@@ -29,7 +29,7 @@ fun icu(rules: String): Table {
     val table = Table()
     val transliterator = Transliterator.createFromRules(rules, rules, Transliterator.FORWARD)
     for (cp in 128..Character.MAX_CODE_POINT) {
-        val output = transliterator.transliterate(toString(cp))
+        val output = transliterator.transliterate(cp.asString())
         if (output.isNotEmpty()) {
             table[cp] = output
         }
@@ -37,9 +37,9 @@ fun icu(rules: String): Table {
     return table
 }
 
-private fun ascii(): Table = (0..127).toTable { toString(it) }
+private fun ascii(): Table = (0..127).toTable { it.asString() }
 
-private fun decimalDigits() = codePoints("Nd").toTable { numericValue(it).toString() }
+private fun decimalDigits() = codePoints("Nd").toTable { it.numericValue.toString() }
 
 private fun custom() = Table()
         .then(Table("currency-symbols"))
@@ -49,18 +49,18 @@ private fun custom() = Table()
         .then(Table("math-symbols-a"))
         .then(Table("math-symbols-b"))
         .then(Table("kanbun"))
-        .then((0xe0020..0xe007e).toTable { toString(it - 0xe0000) }) // tags
+        .then((0xe0020..0xe007e).toTable { (it - 0xe0000).asString() }) // tags
         .then(Table("han-misc"))
         .then(Table("kangxi-radicals"))
         .then(Table("cjk-radicals"))
-        .then((0x31c0..0x31e3).toTable { name(it).substringAfterLast(' ') }) // cjk strokes
+        .then((0x31c0..0x31e3).toTable { it.name.substringAfterLast(' ') }) // cjk strokes
         .then((0x33e0..0x33fe).toTable { "${(it - 0x33e0 + 1)}D" }) // telegraph days
         .then((0x3358..0x3370).toTable { "${(it - 0x3358)}H" }) // telegraph hours
         .then((0x32c0..0x32cb).toTable { "${(it - 0x32c0 + 1)}M" }) // telegraph months
         .then((0x3220..0x3229).toTable { "(${(it - 0x3220 + 1)})" }) // parenthesized numbers
         .then((0x3280..0x3289).toTable { "(${(it - 0x3280 + 1)})" }) // circled numbers
         .then((0x3021..0x3029).toTable { "${(it - 0x3021 + 1)}" }) // hangzhou numerals
-        .then((0x3248..0x324f).toTable { numericValue(it).toString() }) // circled number on black square
+        .then((0x3248..0x324f).toTable { it.numericValue.toString() }) // circled number on black square
         .then(yi())
         .then(vai())
         .then(ethiopic())
@@ -68,7 +68,7 @@ private fun custom() = Table()
         .then(Table("ocr"))
         .then(olChiki())
         .then(cyrillic())
-        .then((0x24eb..0x24ff).toTable { numericValue(it).toString() }) // circled numbers
+        .then((0x24eb..0x24ff).toTable { it.numericValue.toString() }) // circled numbers
         .then(greek())
         .then(coptic())
         .then(Table("hexagrams"))
@@ -125,13 +125,13 @@ private fun greek() = Table()
         .cased()
         .minus(0x345)
         .apply {
-            then(codePoints("Grek").filter { name(it).contains("WITH DASIA") }.toTable {
-                val n = name(it).substringBefore(" WITH")
-                val o = getValue(codePoint(n))
+            then(codePoints("Grek").filterName { it.contains("WITH DASIA") }.toTable {
+                val n = it.name.substringBefore(" WITH")
+                val o = getValue(CodePoint(n))
                 if ("RHO" in n) {
                     "${o}h"
                 } else {
-                    if ("CAPITAL" in n) "H${lower(o)}" else "h$o"
+                    if ("CAPITAL" in n) "H${o.lower()}" else "h$o"
                 }
             })
         }
@@ -150,27 +150,27 @@ private fun coptic() = Table()
 
 private fun yi() = Table()
         .then(0xa015, "w")
-        .then((0xa000..0xa48c).toTable { name(it).substringAfterLast(' ').toLowerCase() }) // syllables
-        .then((0xa490..0xa4c6).toTable { name(it).substringAfterLast(' ') }) // radicals
+        .then((0xa000..0xa48c).toTable { it.name.substringAfterLast(' ').lower() }) // syllables
+        .then((0xa490..0xa4c6).toTable { it.name.substringAfterLast(' ') }) // radicals
 
 private fun vai() = Table()
         .then(Table("vai"))
-        .then((0xa500..0xa62b).toTable { name(it).substringAfterLast(' ').toLowerCase() })
+        .then((0xa500..0xa62b).toTable { it.name.substringAfterLast(' ').lower() })
 
 private fun ethiopic() = Table()
-        .then(codePoints("Ethi").filter { name(it).contains("SYLLABLE") }.toTable {
-            val name = name(it).removePrefix("ETHIOPIC SYLLABLE ").removePrefix("SEBATBEIT ").toLowerCase()
+        .then(codePoints("Ethi").filterName { it.contains("SYLLABLE") }.toTable {
+            val name = it.name.removePrefix("ETHIOPIC SYLLABLE ").removePrefix("SEBATBEIT ").lower()
             if (' ' in name) "'${name.substringAfterLast(' ')}" else name
         })
 
 private fun olChiki() = Table()
         .then((0x1c5a..0x1c77).toTable {
-            val name = name(it).substringAfterLast(' ').toLowerCase()
+            val name = it.name.substringAfterLast(' ').lower()
             if (name.startsWith('l')) name.substring(1) else name.replace("[aeiou]".toRegex(), "")
         })
 
 private fun dominoes() = (0x1f030..0x1f093).toTable {
-    val name = name(it).removePrefix("DOMINO TILE ")
+    val name = it.name.removePrefix("DOMINO TILE ")
     var s = name.take(1)
     if ("BACK" in name) {
         s += "---"
@@ -184,27 +184,27 @@ private fun dominoes() = (0x1f030..0x1f093).toTable {
 }
 
 private fun bopomofo() = codePoints("Bopo").toTable { cp ->
-    val name = name(cp)
+    val name = cp.name
     if ("TONE" in name) return@toTable ""
-    name.substringAfter("LETTER ").substringBefore(' ').toLowerCase().capitalize()
+    name.substringAfter("LETTER ").substringBefore(' ').lower().capitalize()
 }
 
-private fun cypriot() = codePoints("Cprt").toTable { name(it).substringAfterLast(' ').toLowerCase() }
+private fun cypriot() = codePoints("Cprt").toTable { it.name.substringAfterLast(' ').lower() }
 
 private fun braille() = Table()
         .then(Table("braille"))
-        .then(codePoints("Brai").toTable { "{${name(it).substringAfterLast('-')}}" })
+        .then(codePoints("Brai").toTable { "{${it.name.substringAfterLast('-')}}" })
 
 private fun lydian() = codePoints("Lydi").toTable {
-    val name = name(it).toLowerCase()
+    val name = it.name.lower()
     if ("letter" in name) name.substringAfterLast(' ') else ""
 }
 
-private fun lycian() = codePoints("Lyci").toTable { name(it).toLowerCase().substringAfterLast(' ') }
+private fun lycian() = codePoints("Lyci").toTable { it.name.lower().substringAfterLast(' ') }
 
 private fun georgian() = Table()
         .then(Table("georgian"))
-        .aliasing(codePoints("Geor").filter { "SMALL LETTER" in name(it) }) { it.replace("SMALL ", "") }
+        .aliasing(codePoints("Geor").filterName { "SMALL LETTER" in it }) { it.replace("SMALL ", "") }
         .normalize(NFKD)
         .cased()
 
@@ -215,26 +215,26 @@ private fun armenian() = Table()
 
 private fun katakana() = Table()
         .then(Table("katakana"))
-        .aliasing(codePoints("Kana").filter { name(it).startsWith("KATAKANA LETTER SMALL") }) { it.replace("SMALL ", "") }
+        .aliasing(codePoints("Kana").filterName { it.startsWith("KATAKANA LETTER SMALL") }) { it.replace("SMALL ", "") }
         .normalize(NFKC)
 
 private fun hiragana() = Table()
         .then(Table("hiragana"))
-        .aliasing(codePoints("Hira").filter { name(it).startsWith("HIRAGANA LETTER SMALL") }) { it.replace("SMALL ", "") }
+        .aliasing(codePoints("Hira").filterName { it.startsWith("HIRAGANA LETTER SMALL") }) { it.replace("SMALL ", "") }
         .normalize(NFKC)
 
 private fun oldItalic() = Table()
-        .then((0x10320..0x10323).toTable { ROMAN_NUMERALS.getValue(numericValue(it)) })
-        .then((0x10300..0x1032f).filter { isDefined(it) }.toTable {
-            val n = name(it).substringAfterLast(' ').toLowerCase()
+        .then((0x10320..0x10323).toTable { ROMAN_NUMERALS.getValue(it.numericValue) })
+        .then((0x10300..0x1032f).filterDefined().toTable {
+            val n = it.name.substringAfterLast(' ').lower()
             if (n.toSet().size == 1) return@toTable n
             return@toTable n.replace("[aeu]".toRegex(), "")
         })
 
 private fun sinhala() = Table()
         .then(Table("sinhala"))
-        .then((0x111e0..0x111ff).filter { isDefined(it) }.toTable { numericValue(it).toString() })
+        .then((0x111e0..0x111ff).filterDefined().toTable { it.numericValue.toString() })
 
 private fun dingbats() = Table()
         .then(Table("dingbats"))
-        .then((0x2776..0x2793).toTable { numericValue(it).toString() })
+        .then((0x2776..0x2793).toTable { it.numericValue.toString() })
