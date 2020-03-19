@@ -105,6 +105,15 @@ Some languages use multiple scripts: Japanese uses Kanji, Hiragana, and Katakana
 Some scripts are used by multiple languages: [Han characters](https://en.wikipedia.org/wiki/Chinese_characters) are used in Chinese, Japanese, and Korean.
 Conversion into the [Latin script](https://en.wikipedia.org/wiki/Latin_script) used by English and ASCII is called [romanization](https://en.wikipedia.org/wiki/Romanization).
 
+> Clear to anyone, Romanization is for foreigners.
+> Geographical names are Romanized to help foreigners find the place they intend to go to and help them remember cities, villages and mountains they visited and climbed.
+> But it is Koreans who make up the Roman transcription of their proper names to print on their business cards and draw up maps for international tourists.
+> Sometimes, they write the lyrics of a Korean song in Roman letters to help foreigners join in a singing session or write part of a public address (in Korean) in Roman letters for a visiting foreign VIP.
+> In this sense, it is for both foreigners and the local public.
+> The Romanization system must not be a code only for the native English-speaking community here but an important tool for international communication between Korean society, foreign residents in the country and the entire external world.
+> If any method causes much confusion because it is unable to properly reflect the original sound to the extent that different words are transcribed into the same Roman characters too frequently, it definitely is not a good system.
+> [*](https://web.archive.org/web/20070927204130/http://www.korea.net/korea/kor_loca.asp?code=A020303)
+
 When converting between languages there are multiple properties that can be preserved:
 - Meaning: [Translation](https://en.wikipedia.org/wiki/Translation) replaces text with an equivalent in the target language with the same meaning.
   This relies heavily on context and [automatic translation](https://en.wikipedia.org/wiki/Machine_translation) is extremely complicated.
@@ -113,9 +122,6 @@ When converting between languages there are multiple properties that can be pres
 - Spelling: [Transliteration](https://en.wikipedia.org/wiki/Transliteration) converts each letter individually using predictable rules.
   An unambiguous transliteration allows for reconstruction of the original text by using unique mappings for each letter.
   A phonetic transliteration instead uses the most phonetically accurate mappings which may result in duplicates or ambiguity.
-
-When text from one language is converted for readers of another language,
-the names of people and places are transliterated/transcribed and everything else is translated.
 
 ## Implementations
 
