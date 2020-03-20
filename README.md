@@ -38,39 +38,39 @@ Unknown characters are removed.
 
 Representative examples for different languages comparing the Any-Ascii output to the conventional romanization.
 
-|Language|Script|Input|Output|Conventional|
-|---|---|---|---|---|
-|French|Latin|René François Lacôte|Rene Francois Lacote|Rene Francois Lacote|
-|German|Latin|Großer Hörselberg|Grosser Horselberg|Grosser Hoerselberg|
-|Vietnamese|Latin|Trần Hưng Đạo|Tran Hung Dao|Tran Hung Dao|
-|Norwegian|Latin|Nærøy|Naeroy|Naroy|
-|Ancient Greek|Greek|Φειδιππίδης|Feidippidis|Pheidippides|
-|Modern Greek|Greek|Δημήτρης Φωτόπουλος|Dimitris Fotopoylos|Dimitris Fotopoulos|
-|Russian|Cyrillic|Борис Николаевич Ельцин|Boris Nikolaevich El'tsin|Boris Nikolayevich Yeltsin|
-|Arabic|Arabic|دمنهور|dmnhwr|Damanhur|
-|Hebrew|Hebrew|אברהם הלוי פרנקל|'vrhm hlvy frnkl|Abraham Halevi Fraenkel|
-|Georgian|Georgian|სამტრედია|samt'redia|Samtredia|
-|Armenian|Armenian|Աբովյան|Abovyan|Abovyan|
-|Thai|Thai|สงขลา|sngkhla|Songkhla|
-|Lao|Lao|ສະຫວັນນະເຂດ|sahvannaekhd|Savannakhet|
-|Mandarin Chinese|Han|深圳|ShenZhen|Shenzhen|
-|Cantonese Chinese|Han|深水埗|ShenShuiBu|Sham Shui Po|
-|Korean|Hangul|화성시|hwaseongsi|Hwaseong-si|
-|Korean|Han|華城市|HuaChengShi|Hwaseong-si|
-|Japanese|Hiragana|さいたま|saitama|Saitama|
-|Japanese|Han|埼玉県|QiYuXian|Saitama-ken|
-|Japanese|Katakana|トヨタ|toyota|Toyota|
-|Unified English Braille|Braille|⠠⠎⠁⠽⠀⠭⠀⠁⠛|^say x ag|Say it again|
-|Bengali|Bengali|ময়মনসিংহ|mymnsimh|Mymensingh|
-|Gujarati|Gujarati|પોરબંદર|porbmdr|Porbandar|
-|Hindi|Devanagari|महासमुंद|mhasmumd|Mahasamund|
-|Kannada|Kannada|ಬೆಂಗಳೂರು|bemgluru|Bengaluru|
-|Malayalam|Malayalam|കളമശ്ശേരി|klmsseri|Kalamassery
-|Punjabi|Gurmukhi|ਜਲੰਧਰ|jlmdhr|Jalandhar|
-|Odia|Odia|ଗଜପତି|gjpti|Gajapati|
-|Sinhala|Sinhala|රත්නපුර|rtnpur|Ratnapura|
-|Tamil|Tamil|கன்னியாகுமரி|knniyakumri|Kanniyakumari|
-|Telugu|Telugu|శ్రీకాకుళం|srikakulm|Srikakulam|
+|Language (Script)|Input|Output|Conventional|
+|---|---|---|---|
+|French (Latin)|René François Lacôte|Rene Francois Lacote|Rene Francois Lacote|
+|German (Latin)|Großer Hörselberg|Grosser Horselberg|Grosser Hoerselberg|
+|Vietnamese (Latin)|Trần Hưng Đạo|Tran Hung Dao|Tran Hung Dao|
+|Norwegian (Latin)|Nærøy|Naeroy|Naroy|
+|Ancient Greek (Greek)|Φειδιππίδης|Feidippidis|Pheidippides|
+|Modern Greek (Greek)|Δημήτρης Φωτόπουλος|Dimitris Fotopoylos|Dimitris Fotopoulos|
+|Russian (Cyrillic)|Борис Николаевич Ельцин|Boris Nikolaevich El'tsin|Boris Nikolayevich Yeltsin|
+|Arabic|دمنهور|dmnhwr|Damanhur|
+|Hebrew|אברהם הלוי פרנקל|'vrhm hlvy frnkl|Abraham Halevi Fraenkel|
+|Georgian|სამტრედია|samt'redia|Samtredia|
+|Armenian|Աբովյան|Abovyan|Abovyan|
+|Thai|สงขลา|sngkhla|Songkhla|
+|Lao|ສະຫວັນນະເຂດ|sahvannaekhd|Savannakhet|
+|Mandarin Chinese (Han)|深圳|ShenZhen|Shenzhen|
+|Cantonese Chinese (Han)|深水埗|ShenShuiBu|Sham Shui Po|
+|Korean (Hangul)|화성시|hwaseongsi|Hwaseong-si|
+|Korean (Han)|華城市|HuaChengShi|Hwaseong-si|
+|Japanese (Hiragana)|さいたま|saitama|Saitama|
+|Japanese (Han)|埼玉県|QiYuXian|Saitama-ken|
+|Japanese (Katakana)|トヨタ|toyota|Toyota|
+|Unified English Braille (Braille)|⠠⠎⠁⠽⠀⠭⠀⠁⠛|^say x ag|Say it again|
+|Bengali|ময়মনসিংহ|mymnsimh|Mymensingh|
+|Gujarati|પોરબંદર|porbmdr|Porbandar|
+|Hindi (Devanagari)|महासमुंद|mhasmumd|Mahasamund|
+|Kannada|ಬೆಂಗಳೂರು|bemgluru|Bengaluru|
+|Malayalam|കളമശ്ശേരി|klmsseri|Kalamassery
+|Punjabi (Gurmukhi)|ਜਲੰਧਰ|jlmdhr|Jalandhar|
+|Odia|ଗଜପତି|gjpti|Gajapati|
+|Sinhala|රත්නපුර|rtnpur|Ratnapura|
+|Tamil|கன்னியாகுமரி|knniyakumri|Kanniyakumari|
+|Telugu|శ్రీకాకుళం|srikakulm|Srikakulam|
 
 |Symbols|Input|Output|
 |---|---|---|
