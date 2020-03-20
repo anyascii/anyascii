@@ -10,7 +10,8 @@ categories = ["text-processing", "internationalization"]
 keywords = [
   "unicode",
   "ascii",
-  "transliteration"
+  "transliteration",
+  "emoji"
 ]
 readme = "../README.md"
 
