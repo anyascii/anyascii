@@ -11,7 +11,8 @@ keywords = [
   "unicode",
   "ascii",
   "transliteration",
-  "emoji"
+  "emoji",
+  "unidecode"
 ]
 readme = "../README.md"
 
