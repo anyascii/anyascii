@@ -281,6 +281,7 @@ any_ascii = { git = "https://github.com/hunterwb/any-ascii" }
 [ISO 15919: Indic Romanization](https://en.wikipedia.org/wiki/ISO_15919)  
 [ISO 9: Cyrillic Romanization](https://en.wikipedia.org/wiki/ISO_9)  
 [KNAB Romanization Systems](https://www.eki.ee/knab/kblatyl2.htm)  
+[South Korea: Revised Romanization](https://web.archive.org/web/20070927204130/http://www.korea.net/korea/kor_loca.asp?code=A020303)  
 [Sean M. Burke: Unidecode](https://metacpan.org/pod/Text::Unidecode)  
 [Sean M. Burke: Unidecode, Perl Journal](http://interglacial.com/tpj/22/)  
 [Thomas T. Pedersen: Transliteration of Non-Roman Scripts](http://transliteration.eki.ee/)  
