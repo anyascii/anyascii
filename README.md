@@ -178,7 +178,7 @@ Available through [**JitPack**](https://jitpack.io/#com.hunterwb/any-ascii)
 <dependency>
     <groupId>com.hunterwb</groupId>
     <artifactId>any-ascii</artifactId>
-    <version>0.1.3</version>
+    <version>0.1.4</version>
 </dependency>
 ```
 
@@ -192,7 +192,7 @@ repositories {
 
 ```groovy
 dependencies {
-    implementation 'com.hunterwb:any-ascii:0.1.3'
+    implementation 'com.hunterwb:any-ascii:0.1.4'
 }
 ```
 
@@ -260,7 +260,7 @@ Use latest release:
 ```toml
 # Cargo.toml
 [dependencies]
-any_ascii = "0.1.3"
+any_ascii = "0.1.4"
 ```
 
 Use pre-release:
