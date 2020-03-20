@@ -1,5 +1,63 @@
-# https://www.unicode.org/charts/PDF/U3300.pdf
-# https://en.wiktionary.org/wiki/Talk:%E3%8C%AC
+# cjk symbols and punctuation
+# enclosed cjk letters and months
+# cjk compatibility
+　	 
+、	,
+。	.
+〃	"
+〄	(JIS)
+々	-
+〆	/
+〇	0
+〈	<
+〉	>
+《	<<
+》	>>
+「	[
+」	]
+『	[
+』	]
+【	[(
+】	)]
+〒	@
+〓	=
+〔	[
+〕	]
+〖	[(
+〗	)]
+〘	[
+〙	]
+〚	[
+〛	]
+〜	~
+〝	"
+〞	"
+〟	"
+〠	@
+〪	
+〫	
+〬	
+〭	
+〮	
+〯	
+#〰	_
+〱	<
+〲	<"
+〳	/
+〴	/"
+〵	\
+〷	XX
+〸	10
+〹	20
+〺	30
+〻	-
+〼	Masu
+#〽	_
+〾	
+〿	
+㉿	(K)
+㋿	Reiwa
+#
 ㌀	apartment
 ㌁	alpha
 ㌂	ampere
@@ -88,3 +146,21 @@
 ㍕	rem
 ㍖	roentgen
 ㍗	watt
+#
+㍻	Heisei
+㍼	Showa
+㍽	Taisho
+㍾	Meiji
+#
+㍿	Inc.
+#
+㎂	uA
+㎌	uF
+㎍	ug
+㎕	ul
+㎛	um
+㎲	us
+㎶	uV
+㎼	uW
+㏀	kOhm
+㏁	MOhm

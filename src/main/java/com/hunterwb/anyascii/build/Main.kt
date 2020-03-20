@@ -50,17 +50,10 @@ private fun custom() = Table()
         .then(Table("math-symbols-b"))
         .then(Table("kanbun"))
         .then((0xe0020..0xe007e).toTable { (it - 0xe0000).asString() }) // tags
-        .then(Table("han-misc"))
+        .then(cjkMisc())
         .then(Table("kangxi-radicals"))
         .then(Table("cjk-radicals"))
         .then((0x31c0..0x31e3).toTable { it.name.substringAfterLast(' ') }) // cjk strokes
-        .then((0x33e0..0x33fe).toTable { "${(it - 0x33e0 + 1)}D" }) // telegraph days
-        .then((0x3358..0x3370).toTable { "${(it - 0x3358)}H" }) // telegraph hours
-        .then((0x32c0..0x32cb).toTable { "${(it - 0x32c0 + 1)}M" }) // telegraph months
-        .then((0x3220..0x3229).toTable { "(${(it - 0x3220 + 1)})" }) // parenthesized numbers
-        .then((0x3280..0x3289).toTable { "(${(it - 0x3280 + 1)})" }) // circled numbers
-        .then((0x3021..0x3029).toTable { "${(it - 0x3021 + 1)}" }) // hangzhou numerals
-        .then((0x3248..0x324f).toTable { it.numericValue.toString() }) // circled number on black square
         .then(yi())
         .then(vai())
         .then(ethiopic())
@@ -87,7 +80,6 @@ private fun custom() = Table()
         .then(Table("thai"))
         .then(Table("number-forms"))
         .then(Table("latin").cased().normalize(NFKD))
-        .then(Table("squared-katakana-words"))
         .then(katakana())
         .then(hiragana())
         .then(Table("lao"))
@@ -238,3 +230,13 @@ private fun sinhala() = Table()
 private fun dingbats() = Table()
         .then(Table("dingbats"))
         .then((0x2776..0x2793).toTable { it.numericValue.toString() })
+
+private fun cjkMisc() = Table()
+        .then(Table("cjk-misc"))
+        .then((0x3021..0x3029).toTable { "${(it - 0x3021 + 1)}" }) // hangzhou numerals
+        .then((0x3220..0x3229).toTable { "(${(it - 0x3220 + 1)})" }) // parenthesized numbers
+        .then((0x3248..0x324f).toTable { it.numericValue.toString() }) // circled number on black square
+        .then((0x3280..0x3289).toTable { "(${(it - 0x3280 + 1)})" }) // circled numbers
+        .then((0x32c0..0x32cb).toTable { "${(it - 0x32c0 + 1)}M" }) // telegraph months
+        .then((0x3358..0x3370).toTable { "${(it - 0x3358)}H" }) // telegraph hours
+        .then((0x33e0..0x33fe).toTable { "${(it - 0x33e0 + 1)}D" }) // telegraph days
