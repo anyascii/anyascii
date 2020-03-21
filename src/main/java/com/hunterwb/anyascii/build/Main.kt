@@ -105,6 +105,7 @@ private fun custom() = Table()
         .then(dingbats())
         .then(Table("tifinagh"))
         .then(Table("glagolitic").cased())
+        .then(buhid())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -242,3 +243,5 @@ private fun cjkMisc() = Table()
         .then((0x32c0..0x32cb).toTable { "${(it - 0x32c0 + 1)}M" }) // telegraph months
         .then((0x3358..0x3370).toTable { "${(it - 0x3358)}H" }) // telegraph hours
         .then((0x33e0..0x33fe).toTable { "${(it - 0x33e0 + 1)}D" }) // telegraph days
+
+private fun buhid() = codePoints("Buhd").toTable { it.name.split(' ').last().lower().let { if (it.length == 1) it else it.dropLast(1) } }
