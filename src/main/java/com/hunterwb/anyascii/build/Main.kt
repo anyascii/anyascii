@@ -104,6 +104,7 @@ private fun custom() = Table()
         .then(Table("misc-technical"))
         .then(dingbats())
         .then(Table("tifinagh"))
+        .then(Table("glagolitic").cased())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
