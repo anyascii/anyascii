@@ -103,6 +103,7 @@ private fun custom() = Table()
         .then(Table("arrows"))
         .then(Table("misc-technical"))
         .then(dingbats())
+        .then(Table("tifinagh"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
