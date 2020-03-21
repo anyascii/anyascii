@@ -14,7 +14,7 @@ setuptools.setup(
     author="Hunter WB",
     author_email="hunter@hunterwb.com",
     name='anyascii',
-    version='0.1.4',
+    version='0.1.5-dev',
     description='Unicode to ASCII transliteration',
     long_description=read('../README.md'),
     long_description_content_type='text/markdown',

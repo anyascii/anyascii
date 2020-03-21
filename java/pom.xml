@@ -6,7 +6,7 @@
 
     <groupId>com.hunterwb</groupId>
     <artifactId>any-ascii</artifactId>
-    <version>0.1.4</version>
+    <version>0.1.5-SNAPSHOT</version>
 
     <name>any-ascii</name>
     <description>Unicode to ASCII transliteration</description>
