@@ -13,7 +13,6 @@ Unicode to ASCII transliteration
 - [Examples](#examples)
 - [Background](#background)
 - [Implementations](#implementations)
-  - [CLI](#cli)
   - [Go](#go)
   - [Java](#java)
   - [Node.js](#nodejs)
@@ -125,15 +124,6 @@ When converting text between languages there are multiple properties that can be
 ## Implementations
 
 Any-Ascii is implemented in 6 different programming languages.
-
-### CLI
-
-```console
-$ anyascii άνθρωποι
-anthropoi
-```
-
- Use `cd rust && cargo build --release` to build a native executable to `rust/target/release/anyascii`
 
 ### Go
 
@@ -269,6 +259,15 @@ Use pre-release:
 [dependencies]
 any_ascii = { git = "https://github.com/hunterwb/any-ascii" }
 ```
+
+##### CLI
+
+```console
+$ anyascii άνθρωποι
+anthropoi
+```
+
+ Use `cd rust && cargo build --release` to build a native executable to `rust/target/release/anyascii`
 
 ## See Also
 
