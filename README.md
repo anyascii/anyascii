@@ -15,7 +15,7 @@ Unicode to ASCII transliteration
 - [Implementations](#implementations)
   - [Go](#go)
   - [Java](#java)
-  - [Node.js](#nodejs)
+  - [JavaScript](#javascript)
   - [Python](#python)
   - [Ruby](#ruby)
   - [Rust](#rust)
@@ -186,7 +186,9 @@ dependencies {
 }
 ```
 
-### Node.js
+### JavaScript
+
+##### Node.js
 
 ```javascript
 const anyAscii = require('any-ascii');
