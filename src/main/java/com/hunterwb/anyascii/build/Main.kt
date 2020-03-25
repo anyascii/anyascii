@@ -105,7 +105,7 @@ private fun custom() = Table()
         .then(dingbats())
         .then(Table("tifinagh"))
         .then(Table("glagolitic").cased())
-        .then(buhid())
+        .then(baybayin())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -244,4 +244,15 @@ private fun cjkMisc() = Table()
         .then((0x3358..0x3370).toTable { "${(it - 0x3358)}H" }) // telegraph hours
         .then((0x33e0..0x33fe).toTable { "${(it - 0x33e0 + 1)}D" }) // telegraph days
 
-private fun buhid() = codePoints("Buhd").toTable { it.name.split(' ').last().lower().let { if (it.length == 1) it else it.dropLast(1) } }
+private fun baybayin() = (0x1700..0x177f).filterDefined().toTable { cp ->
+    // tagalog, hanunoo, buhid, tagbanwa
+    val name = cp.name.lower()
+    val last = name.substringAfterLast(' ')
+    when {
+        "virama" in name || "pamudpod" in name -> ""
+        "single punctuation" in name -> "|"
+        "double punctuation" in name -> "||"
+        last.length == 1 -> last
+        else -> last.dropLast(1)
+    }
+}
