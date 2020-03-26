@@ -1,1 +1,1 @@
-module.exports=['e','ye'];
+module.exports='e	ye'.split('	')

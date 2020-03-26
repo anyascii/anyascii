@@ -1,1 +1,1 @@
-module.exports=['','','','','','','','','','','Wu'];
+module.exports='										Wu'.split('	')

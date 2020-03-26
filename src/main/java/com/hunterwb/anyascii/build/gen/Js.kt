@@ -10,11 +10,13 @@ fun js(g: Generator) {
 
     for ((blockNum, block) in g.blocks) {
         Files.newBufferedWriter(dirPath.resolve("%03x.js".format(blockNum))).use { w ->
-            w.write("module.exports=[")
-            block.map { it.replace("\\", "\\\\").replace("'", "\\'") }
-                    .map { "'$it'" }
-                    .joinTo(w, ",")
-            w.write("];")
+            var s = block.joinToString("\t").replace("\\", "\\\\")
+            s = if (s.count { it == '\'' } > s.count { it == '"' }) {
+                '"' + s.replace("\"", "\\\"") + '"'
+            } else {
+                '\'' + s.replace("'", "\\'") + '\''
+            }
+            w.write("module.exports=$s.split('\t')")
         }
     }
 
