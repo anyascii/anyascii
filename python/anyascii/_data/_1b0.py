@@ -1,1 +1,1 @@
-b=('e','ye')
+b=tuple('e	ye'.split('	'))

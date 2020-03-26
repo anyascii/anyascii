@@ -12,11 +12,13 @@ fun python(g: Generator) {
 
     for ((blockNum, block) in g.blocks) {
         Files.newBufferedWriter(dirPath.resolve("_%03x.py".format(blockNum))).use { w ->
-            w.write("b=(")
-            block.map { it.replace("\\", "\\\\").replace("'", "\\'") }
-                    .map { "'$it'" }
-                    .joinTo(w, ",")
-            w.write(")")
+            var s = block.joinToString("\t").replace("\\", "\\\\")
+            s = if (s.count { it == '\'' } > s.count { it == '"' }) {
+                '"' + s.replace("\"", "\\\"") + '"'
+            } else {
+                '\'' + s.replace("'", "\\'") + '\''
+            }
+            w.write("b=tuple($s.split('\t'))")
         }
     }
 }
