@@ -1,3 +1,1 @@
-module X109
-	B=['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','a','b','g','d','e','v','i','y','k','l','m','n','o','r','ss','t','u','f','q','s','tt','an','en','ly','nn','c']
-end
+module X109 B='																																a	b	g	d	e	v	i	y	k	l	m	n	o	r	ss	t	u	f	q	s	tt	an	en	ly	nn	c'.split '	' end

@@ -1,3 +1,1 @@
-module X1b0
-	B=['e','ye']
-end
+module X1b0 B='e	ye'.split '	' end

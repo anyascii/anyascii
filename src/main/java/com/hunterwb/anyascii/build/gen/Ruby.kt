@@ -9,15 +9,10 @@ fun ruby(g: Generator) {
     Files.createDirectories(dirPath)
 
     for ((blockNum, block) in g.blocks) {
-        val s = "%03x".format(blockNum)
-        Files.newBufferedWriter(dirPath.resolve("$s.rb".format(blockNum))).use { w ->
-            w.write("module X$s\n")
-            w.write("\tB=[")
-            block.map { it.replace("\\", "\\\\").replace("'", "\\'") }
-                    .map { "'$it'" }
-                    .joinTo(w, ",")
-            w.write("]\n")
-            w.write("end\n")
+        val b = "%03x".format(blockNum)
+        Files.newBufferedWriter(dirPath.resolve("$b.rb".format(blockNum))).use { w ->
+            val s = block.joinToString("\t").replace("\\", "\\\\").replace("'", "\\'")
+            w.write("module X$b B='$s'.split '\t' end")
         }
     }
 }

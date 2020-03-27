@@ -1,3 +1,1 @@
-module X2dd
-	B=['','','','','','','','','','','Wu']
-end
+module X2dd B='										Wu'.split '	' end
