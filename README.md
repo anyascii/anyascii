@@ -52,6 +52,7 @@ Representative examples for different languages comparing the Any-Ascii output t
 |Armenian|Աբովյան|Abovyan|Abovyan|
 |Thai|สงขลา|sngkhla|Songkhla|
 |Lao|ສະຫວັນນະເຂດ|sahvannaekhd|Savannakhet|
+|Khmer|សៀមរាប|siemrab|Siem Reap|
 |Mandarin Chinese (Han)|深圳|ShenZhen|Shenzhen|
 |Cantonese Chinese (Han)|深水埗|ShenShuiBu|Sham Shui Po|
 |Korean (Hangul)|화성시|hwaseongsi|Hwaseong-si|
