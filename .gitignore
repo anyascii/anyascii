@@ -7,3 +7,4 @@ python/anyascii.egg-info/
 .tox/
 Cargo.lock
 *.gem
+__pycache__/
