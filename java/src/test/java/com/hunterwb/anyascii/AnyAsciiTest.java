@@ -21,6 +21,7 @@ public final class AnyAsciiTest {
         check("สงขลา", "sngkhla");
         check("ສະຫວັນນະເຂດ", "sahvannaekhd");
         check("សៀមរាប", "siemrab");
+        check("ထန်တလန်", "htntln");
         check("深圳", "ShenZhen");
         check("深水埗", "ShenShuiBu");
         check("화성시", "hwaseongsi");
