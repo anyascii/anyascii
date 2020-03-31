@@ -1,0 +1,163 @@
+# https://en.wikipedia.org/wiki/MLC_Transcription_System
+# https://en.wiktionary.org/wiki/Wiktionary:Burmese_transliteration
+# consonants
+က	k
+ခ	hk
+ဂ	g
+ဃ	gh
+င	ng
+စ	c
+ဆ	hc
+ဇ	j
+ဈ	jh
+ဉ	ny
+ည	ny
+ဋ	t
+ဌ	ht
+ဍ	d
+ဎ	dh
+ဏ	n
+တ	t
+ထ	ht
+ဒ	d
+ဓ	dh
+န	n
+ပ	p
+ဖ	hp
+ဗ	b
+ဘ	bh
+မ	m
+ယ	y
+ရ	r
+လ	l
+ဝ	w
+သ	s
+ဟ	h
+ဠ	l
+# independent vowels
+အ	
+ဣ	i
+ဤ	i
+ဥ	u
+ဦ	u
+ဧ	e
+ဩ	au
+ဪ	au
+# dependent vowels
+ါ	a
+ာ	a
+ိ	i
+ီ	i
+ု	u
+ူ	u
+ေ	e
+ဲ	ai
+ဵ	e
+# anusvara
+ံ	m
+# tones
+့	
+း	
+# virama
+္	
+်	
+# dependent consonants
+ျ	y
+ြ	r
+ွ	w
+ှ	h
+# consonant
+ဿ	ss
+# punctuation, ala-lc 2011
+၊	,
+။	.
+# abbreviations, ala-lc 2011
+၌	n
+၍	r
+၎	l
+၏	e
+# pali, sanskrit, iso 15919
+ၐ	s
+ၑ	s
+ၒ	r
+ၓ	r
+ၔ	l
+ၕ	l
+ၖ	r
+ၗ	r
+ၘ	l
+ၙ	l
+# mon, https://en.wikipedia.org/wiki/Mon_language
+ဨ	e
+ဳ	i
+ဴ	ai
+ၚ	ng
+ၛ	jh
+ၜ	b
+ၝ	mb
+ၞ	n
+ၟ	m
+ၠ	l
+# s'gaw karen, https://en.wikipedia.org/wiki/S%27gaw_Karen_language
+ၡ	sh
+ၢ	uh
+ၣ	
+ၤ	
+# western pwo karen
+ၥ	th
+ၦ	pw
+ၧ	eu
+ၨ	ue
+ၩ	
+ၪ	
+ၫ	
+ၬ	
+ၭ	
+# eastern pwo karen, https://en.wikipedia.org/wiki/Eastern_Pwo_language
+ၮ	n
+ၯ	hh
+ၰ	ghw
+# geba karen
+ၱ	i
+# kayah
+ၲ	oe
+ၳ	u
+ၴ	ee
+# shan, ala-lc 2012
+ဢ	'
+ၵ	k
+ၶ	kh
+ၷ	g
+ၸ	gh
+ၹ	z
+ၺ	ny
+ၻ	d
+ၼ	n
+ၽ	ph
+ၾ	f
+ၿ	b
+ႀ	x
+ႁ	h
+ႂ	v
+ႃ	a
+ႄ	e
+ႅ	e
+ႆ	ai
+ႇ	
+ႈ	
+ႉ	
+ႊ	
+ႋ	
+ႌ	
+ႍ	
+#႞	_
+႟	!
+# rumai palaung, http://pacling.anu.edu.au/materials/SEAMLES/Mak2012GoldenPalaung.pdf
+ႎ	v
+ႏ	
+# khamti shan
+ႚ	
+ႛ	
+# aiton, phake
+ႜ	a
+ႝ	ai
