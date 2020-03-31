@@ -8,7 +8,7 @@ fn main() {
         .join(" ");
 
     match arg.as_str() {
-        "-v" | "--version" => print!("{}", env!("CARGO_PKG_VERSION")),
-        _ => print!("{}", any_ascii(&arg)),
+        "-v" | "--version" => println!("{}", env!("CARGO_PKG_VERSION")),
+        _ => println!("{}", any_ascii(&arg)),
     }
 }
