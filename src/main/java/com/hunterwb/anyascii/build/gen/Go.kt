@@ -11,11 +11,11 @@ fun go(g: Generator) {
     for ((blockNum, bytes) in g.blockPointers) {
         val s = "%03x".format(blockNum)
         Files.newBufferedWriter(dataDir.resolve("$s.go")).use { writer ->
-            writer.write("package data;const X$s=\"")
+            writer.write("package data\n\nconst X$s = \"")
             for (b in bytes) {
                 writer.write(BYTE_STRINGS[b.toInt() and 0xFF])
             }
-            writer.write('"'.toInt())
+            writer.write("\"\n")
         }
     }
 
@@ -24,7 +24,7 @@ fun go(g: Generator) {
         w.write("const Strings = ")
         w.write('"'.toInt())
         w.write(g.stringsBank.replace("\\", "\\\\").replace("\"", "\\\""))
-        w.write('"'.toInt())
+        w.write("\"\n")
     }
 
     Files.newBufferedWriter(Path.of("go/block.go")).use { writer ->
@@ -34,9 +34,9 @@ fun go(g: Generator) {
         writer.write("\tswitch blockNum {\n")
         for (block in g.blocks.keys) {
             val s = "%03x".format(block)
-            writer.write("\tcase 0x$s: return data.X$s\n")
+            writer.write("\tcase 0x$s:\n\t\treturn data.X$s\n")
         }
-        writer.write("\tdefault: return \"\"\n")
+        writer.write("\tdefault:\n\t\treturn \"\"\n")
         writer.write("\t}\n")
         writer.write("}\n")
     }
