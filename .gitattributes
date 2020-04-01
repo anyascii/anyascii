@@ -6,7 +6,6 @@ js/block.js linguist-generated=true
 rust/src/data/* linguist-generated=true
 rust/src/block.rs linguist-generated=true
 rust/src/strings.txt linguist-generated=true
-go/data/* linguist-generated=true
 go/block.go linguist-generated=true
 go/strings.go linguist-generated=true
 ruby/lib/data/* linguist-generated=true

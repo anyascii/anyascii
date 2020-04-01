@@ -4,60 +4,43 @@ import java.nio.file.Files
 import java.nio.file.Path
 
 fun go(g: Generator) {
-    val dataDir = Path.of("go/data")
-    dataDir.toFile().deleteRecursively()
-    Files.createDirectories(dataDir)
-
-    for ((blockNum, bytes) in g.blockPointers) {
-        val s = "%03x".format(blockNum)
-        Files.newBufferedWriter(dataDir.resolve("$s.go")).use { writer ->
-            writer.write("package data\n\nconst X$s = \"")
-            for (b in bytes) {
-                writer.write(BYTE_STRINGS[b.toInt() and 0xFF])
-            }
-            writer.write("\"\n")
-        }
-    }
-
     Files.newBufferedWriter(Path.of("go/strings.go")).use { w ->
         w.write("package anyascii\n\n")
-        w.write("const Strings = ")
-        w.write('"'.toInt())
+        w.write("const Strings = \"")
         w.write(g.stringsBank.replace("\\", "\\\\").replace("\"", "\\\""))
         w.write("\"\n")
     }
 
-    Files.newBufferedWriter(Path.of("go/block.go")).use { writer ->
-        writer.write("package anyascii\n\n")
-        writer.write("import \"github.com/hunterwb/any-ascii/go/data\"\n\n")
-        writer.write("func Block(blockNum uint32) string {\n")
-        writer.write("\tswitch blockNum {\n")
+    Files.newBufferedWriter(Path.of("go/block.go")).use { w ->
+        w.write("package anyascii\n\n")
+        w.write("func Block(blockNum uint32) string {\n")
+        w.write("\tswitch blockNum {\n")
+        val bs = g.blockPointers.values.iterator()
         for (block in g.blocks.keys) {
             val s = "%03x".format(block)
-            writer.write("\tcase 0x$s:\n\t\treturn data.X$s\n")
+            w.write("\tcase 0x$s:\n\t\treturn ${asString(bs.next())}\n")
         }
-        writer.write("\tdefault:\n\t\treturn \"\"\n")
-        writer.write("\t}\n")
-        writer.write("}\n")
+        w.write("\tdefault:\n\t\treturn \"\"\n")
+        w.write("\t}\n")
+        w.write("}\n")
     }
 }
 
-private val BYTE_STRINGS = Array(256) { byteAsString(it.toByte()) }
+private fun asString(bs: ByteArray) = '"' + bs.joinToString("") { BYTE_STRINGS[it.toInt() and 0xFF] } + '"'
 
-private fun byteAsString(b: Byte): String {
-    val n = b.toInt() and 0xFF
-    val c = n.toChar()
-    return when  {
+private val BYTE_STRINGS = Array(256) {
+    val c = it.toChar()
+    when  {
         c == '\\' -> "\\\\"
         c == '"' -> "\\\""
-        n in 0x20..0x7e -> c.toString()
+        it in 0x20..0x7e -> c.toString()
         c == '\t' -> "\t"
         c == '\n' -> "\\n"
         c == '\r' -> "\\r"
         c == '\b' -> "\\b"
-        n == 0x07 -> "\\a"
-        n == 0x0b -> "\\v"
-        n == 0x0c -> "\\f"
-        else -> "\\x%02x".format(n)
+        it == 0x07 -> "\\a"
+        it == 0x0b -> "\\v"
+        it == 0x0c -> "\\f"
+        else -> "\\x%02x".format(it)
     }
 }
