@@ -8,3 +8,6 @@ python/anyascii.egg-info/
 Cargo.lock
 *.gem
 __pycache__/
+bin/
+obj/
+.vs/

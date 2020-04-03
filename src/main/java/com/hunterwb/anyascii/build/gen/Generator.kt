@@ -16,6 +16,7 @@ fun generate(table: Table) {
     rust(g)
     go(g)
     ruby(g)
+    cSharp(g)
 }
 
 class Generator(val table: Table) {
