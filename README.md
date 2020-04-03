@@ -19,6 +19,7 @@ Unicode to ASCII transliteration
   - [Python](#python)
   - [Ruby](#ruby)
   - [Rust](#rust)
+  - [.NET](#net)
 - [See Also](#see-also)
 
 ## Description
@@ -125,7 +126,7 @@ When converting text between languages there are multiple properties that can be
 
 ## Implementations
 
-Any-Ascii is implemented in 6 different programming languages.
+Any-Ascii is implemented in 7 different programming languages.
 
 ### Go
 
@@ -272,6 +273,17 @@ anthropoi
 ```
 
  Use `cd rust && cargo build --release` to build a native executable to `rust/target/release/anyascii`
+
+## .NET
+
+##### C#
+
+```cs
+using AnyAscii;
+
+string s = "άνθρωποι".Transliterate();
+// anthropoi
+```
 
 ## See Also
 
