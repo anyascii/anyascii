@@ -1,7 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.0</TargetFramework>
+    <Description>Unicode to ASCII transliteration</Description>
+    <TargetFrameworks>netstandard1.0;netstandard2.0</TargetFrameworks>
+    <Version>0.1.5-dev</Version>
+    <Authors>Hunter WB</Authors>
+	<PackageLicenseExpression>ISC</PackageLicenseExpression>
+    <PackageTags>unicode;ascii;transliteration;emoji;slug;utf8;unidecode</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/hunterwb/AnyAscii</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
