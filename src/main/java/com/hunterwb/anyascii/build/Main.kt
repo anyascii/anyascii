@@ -111,6 +111,7 @@ private fun custom() = Table()
         .then(Table("thaana"))
         .then(Table("myanmar"))
         .then(Table("phags-pa"))
+        .then(ideographicDescription())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -261,3 +262,5 @@ private fun baybayin() = (0x1700..0x177f).filterDefined().toTable { cp ->
         else -> last.dropLast(1)
     }
 }
+
+private fun ideographicDescription() = (0x2ff0..0x2fff).filterDefined().toTable { it.toString(16).takeLast(1) }
