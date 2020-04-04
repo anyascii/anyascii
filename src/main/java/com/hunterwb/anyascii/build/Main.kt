@@ -115,6 +115,7 @@ private fun custom() = Table()
         .then((0xa700..0xa71f).toTable { "" }) // modifier tone letters
         .then(Table("indic-number-forms"))
         .then(Table("ancient-symbols"))
+        .then(carian())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -267,3 +268,6 @@ private fun baybayin() = (0x1700..0x177f).filterDefined().toTable { cp ->
 }
 
 private fun ideographicDescription() = (0x2ff0..0x2fff).filterDefined().toTable { it.toString(16).takeLast(1) }
+
+// https://www.unicode.org/wg2/docs/n3020.pdf
+private fun carian() = (0x102a0..0x102df).filterDefined().toTable { it.name.substringAfterLast(' ') }
