@@ -114,6 +114,7 @@ private fun custom() = Table()
         .then(ideographicDescription())
         .then((0xa700..0xa71f).toTable { "" }) // modifier tone letters
         .then(Table("indic-number-forms"))
+        .then(Table("ancient-symbols"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
