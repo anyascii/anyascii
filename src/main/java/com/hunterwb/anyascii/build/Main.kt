@@ -113,6 +113,7 @@ private fun custom() = Table()
         .then(Table("phags-pa"))
         .then(ideographicDescription())
         .then((0xa700..0xa71f).toTable { "" }) // modifier tone letters
+        .then(Table("indic-number-forms"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
