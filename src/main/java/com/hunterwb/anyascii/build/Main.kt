@@ -118,6 +118,7 @@ private fun custom() = Table()
         .then(carian())
         .then(Table("tai-xuan-jing"))
         .then(Table("misc-symbols-and-arrows"))
+        .then(Table("old-south-arabian"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
