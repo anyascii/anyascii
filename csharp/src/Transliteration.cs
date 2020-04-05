@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System;
 
 namespace AnyAscii
 {
@@ -51,9 +52,9 @@ namespace AnyAscii
             else
             {
                 int blockNum = (int)((uint)utf32 >> 8);
-                string[] block;
-                if (blocks.TryGetValue(blockNum, out block))
+                if (blocks.TryGetValue(blockNum, out Lazy<string[]> blockLazy))
                 {
+                    string[] block = blockLazy.Value;
                     int lo = utf32 & 0xff;
                     if (block.Length <= lo) return;
                     dst.Append(block[lo]);
