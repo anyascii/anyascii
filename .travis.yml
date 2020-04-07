@@ -33,7 +33,7 @@ jobs:
 
     - language: csharp
       mono: none
-      dotnet: 1.0.16
+      dotnet: 2.1.502
       solution: csharp/AnyAscii.sln
       install: skip
       before_script: cd csharp/test
