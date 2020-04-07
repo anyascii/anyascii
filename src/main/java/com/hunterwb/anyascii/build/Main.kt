@@ -119,6 +119,7 @@ private fun custom() = Table()
         .then(Table("misc-symbols-and-arrows"))
         .then(Table("old-south-arabian"))
         .then(Table("supplemental-punctuation"))
+        .then(tibetan())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -274,3 +275,8 @@ private fun ideographicDescription() = (0x2ff0..0x2fff).filterDefined().toTable 
 
 // https://www.unicode.org/wg2/docs/n3020.pdf
 private fun carian() = (0x102a0..0x102df).filterDefined().toTable { it.name.substringAfterLast(' ') }
+
+private fun tibetan() = Table()
+        .then(Table("tibetan"))
+        .aliasing(codePoints("Tibt").filterName { "SUBJOINED LETTER FIXED-FORM" in it }) { it.replace("SUBJOINED LETTER FIXED-FORM", "LETTER") }
+        .aliasing(codePoints("Tibt").filterName { "SUBJOINED LETTER" in it && "FIXED-FORM" !in it }) { it.replace("SUBJOINED LETTER", "LETTER") }

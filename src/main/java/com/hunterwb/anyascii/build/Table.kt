@@ -72,10 +72,12 @@ fun Table.cased() = apply {
 }
 
 fun Table.aliasing(codePoints: Iterable<CodePoint>, nameTransform: (String) -> String) = apply {
-    for (cp in codePoints) {
-        val cp2 = UCharacter.getCharFromName(nameTransform(cp.name))
-        check(cp2 != -1) { cp.toString(16) }
-        putIfAbsent(cp, getValue(cp2))
+    for (cp1 in codePoints) {
+        val name1 = cp1.name
+        val name2 = nameTransform(name1)
+        val cp2 = UCharacter.getCharFromName(name2)
+        check(cp2 != -1) { "$name1 - $name2" }
+        putIfAbsent(cp1, getValue(cp2))
     }
 }
 
