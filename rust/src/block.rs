@@ -1,5 +1,5 @@
 pub fn block(block_num: u16) -> &'static [u8] {
-	return match block_num {
+	match block_num {
 		0x000 => include_bytes!("data/000.bin"),
 		0x001 => include_bytes!("data/001.bin"),
 		0x002 => include_bytes!("data/002.bin"),
