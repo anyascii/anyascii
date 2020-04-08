@@ -7,6 +7,7 @@ def check(s, expected):
 
 def test():
     check("", "")
+    check("sample", "sample")
     check("René François Lacôte", "Rene Francois Lacote")
     check("Großer Hörselberg", "Grosser Horselberg")
     check("Trần Hưng Đạo", "Tran Hung Dao")
