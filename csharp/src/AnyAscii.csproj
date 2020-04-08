@@ -6,7 +6,7 @@
     <Version>0.1.5-dev</Version>
     <Authors>Hunter WB</Authors>
     <PackageLicenseExpression>ISC</PackageLicenseExpression>
-    <PackageTags>unicode;ascii;transliteration;emoji;slug;utf8;unidecode</PackageTags>
+    <PackageTags>unicode;ascii;transliteration;utf8;romanization;slug;emoji;unidecode</PackageTags>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/hunterwb/AnyAscii</RepositoryUrl>
   </PropertyGroup>

@@ -11,9 +11,10 @@
     "unicode",
     "ascii",
     "transliteration",
-    "emoji",
-    "slug",
     "utf8",
+    "romanization",
+    "slug",
+    "emoji",
     "unidecode"
   ],
   "main": "js/any-ascii.js",
