@@ -121,6 +121,7 @@ private fun custom() = Table()
         .then(Table("supplemental-punctuation"))
         .then(tibetan())
         .then(Table("geometric-shapes"))
+        .then(Table("math-operators"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
