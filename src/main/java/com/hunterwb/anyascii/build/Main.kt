@@ -123,6 +123,7 @@ private fun custom() = Table()
         .then(Table("geometric-shapes"))
         .then(Table("math-operators"))
         .then(canadianSyllabics())
+        .then(Table("meetei-mayek"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
