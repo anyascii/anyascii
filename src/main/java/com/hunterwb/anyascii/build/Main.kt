@@ -122,6 +122,7 @@ private fun custom() = Table()
         .then(tibetan())
         .then(Table("geometric-shapes"))
         .then(Table("math-operators"))
+        .then(canadianSyllabics())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -282,3 +283,7 @@ private fun tibetan() = Table()
         .then(Table("tibetan"))
         .aliasing(codePoints("Tibt").filterName { "SUBJOINED LETTER FIXED-FORM" in it }) { it.replace("SUBJOINED LETTER FIXED-FORM", "LETTER") }
         .aliasing(codePoints("Tibt").filterName { "SUBJOINED LETTER" in it && "FIXED-FORM" !in it }) { it.replace("SUBJOINED LETTER", "LETTER") }
+
+private fun canadianSyllabics() = Table()
+        .then(Table("canadian-syllabics"))
+        .then(codePoints("Cans").toTable { it.name.substringAfterLast(' ').lower() })
