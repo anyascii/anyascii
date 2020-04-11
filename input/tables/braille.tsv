@@ -56,9 +56,12 @@
 ⠦	?
 ⠄	'
 ⠤	-
+# prime, tally, closing quotation mark
+⠶	`
+⠸	|
+⠴	"
 # lower groupsigns
 ⠢	en
-⠶	gg
 ⠔	in
 # other
 ⠈	@
@@ -67,6 +70,4 @@
 ⠠	^
 ⠨	_
 ⠰	1
-⠴	"
-⠸	|
 ⠼	#
