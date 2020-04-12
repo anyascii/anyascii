@@ -30,7 +30,7 @@ namespace AnyAsciiTests
             check("ထန်တလန်", "htntln");
             check("深圳", "ShenZhen");
             check("深水埗", "ShenShuiBu");
-            check("화성시", "hwaseongsi");
+            check("화성시", "HwaSeongSi");
             check("華城市", "HuaChengShi");
             check("さいたま", "saitama");
             check("埼玉県", "QiYuXian");

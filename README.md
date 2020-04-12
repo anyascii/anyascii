@@ -57,7 +57,7 @@ Representative examples for different languages comparing the Any-Ascii output t
 |Burmese (Myanmar)|ထန်တလန်|htntln|Thantlang|
 |Mandarin Chinese (Han)|深圳|ShenZhen|Shenzhen|
 |Cantonese Chinese (Han)|深水埗|ShenShuiBu|Sham Shui Po|
-|Korean (Hangul)|화성시|hwaseongsi|Hwaseong-si|
+|Korean (Hangul)|화성시|HwaSeongSi|Hwaseong-si|
 |Korean (Han)|華城市|HuaChengShi|Hwaseong-si|
 |Japanese (Hiragana)|さいたま|saitama|Saitama|
 |Japanese (Han)|埼玉県|QiYuXian|Saitama-ken|

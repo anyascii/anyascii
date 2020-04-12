@@ -18,6 +18,7 @@ fun main() {
             .then(icu("::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))
             .normalize(NFKC)
             .cased()
+            .transliterate()
             .minus(ascii().keys)
             .write("table.tsv")
 

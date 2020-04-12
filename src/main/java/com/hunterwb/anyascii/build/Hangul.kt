@@ -1,17 +1,17 @@
 package com.hunterwb.anyascii.build
 
 fun hangul() = Table()
-        .then(icu("[:^Hang:]>; ::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))
         .then(Table("hangul"))
-        .normalize(NFKD)
         .combinations()
+        .syllables()
+        .normalize(NFKC)
 
 private fun Table.combinations() = apply {
     codePoints("Hang").forEach { cp ->
         if (cp in this) return@forEach
         val split = cp.name.split(' ')
         when (val position = split[1]) {
-            "CHOSEONG", "JUNGSEONG", "JONGSEONG" -> {
+            "CHOSEONG", "JUNGSEONG", "JONGSEONG", "LETTER" -> {
                 val letterNames = split[2].split('-')
                 this[cp] = letterNames.joinToString("") { letter(position, it) }
             }
@@ -20,5 +20,13 @@ private fun Table.combinations() = apply {
 }
 
 private fun Table.letter(position: String, name: String): String {
-    return get(CodePoint("HANGUL $position $name")) ?: getValue(CodePoint("HANGUL LETTER $name"))
+    get(CodePoint("HANGUL $position $name"))?.let { return it }
+    get(CodePoint("HANGUL LETTER $name"))?.let { return it }
+    if (name.startsWith("KAPYEOUN")) return letter(position, name.removePrefix("KAPYEOUN")) + 'h'
+    if (name.startsWith("SSANG")) return letter(position, name.removePrefix("SSANG")).repeat(2)
+    error("$position $name")
 }
+
+private fun Table.syllables() = then((0xac00..0xd7a3).toTable {
+    transliterate(NFD.normalize(it.asString())).capitalize()
+})

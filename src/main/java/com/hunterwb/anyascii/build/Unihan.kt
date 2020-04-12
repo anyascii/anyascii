@@ -1,7 +1,6 @@
 package com.hunterwb.anyascii.build
 
 import com.ibm.icu.lang.UScript
-import com.ibm.icu.text.Transliterator
 import java.nio.file.Path
 
 fun unihan() = Table()
@@ -16,10 +15,6 @@ fun unihan() = Table()
         .then(unihan("kTang"))
         .variants()
 
-private val HANGUL_TO_LATIN: Transliterator = Transliterator.getInstance("Hangul-Latin")
-
-private val TANG_MAP: Map<Char, String> = mapOf('ɛ' to "e", 'ɑ' to "a", 'æ' to "ae", 'ə' to "e", '(' to "", ')' to "")
-
 private fun unihan(key: String) = Table().apply {
     forEachLine(Path.of("input/Unihan_Readings.txt")) { line ->
         if (line.isEmpty() || line.startsWith('#')) return@forEachLine
@@ -30,12 +25,10 @@ private fun unihan(key: String) = Table().apply {
         when (key) {
             "kHangul" -> {
                 output = output.substringBefore(':')
-                output = HANGUL_TO_LATIN.transliterate(output).capitalize()
             }
             "kTang" -> {
                 output = output.removePrefix("*").split(' ')[0]
-                output = output.removeDiacritics().toLowerCase()
-                output = output.map { TANG_MAP.getOrElse(it) { it.toString() } }.joinToString("").capitalize()
+                output = output.removeDiacritics().toLowerCase().filter { it.isLetter() }.capitalize()
             }
             else -> {
                 output = output.substringAfter(':')

@@ -1,14 +1,65 @@
-ᅠ	
+# revised romanization rule 8 consonants
+ㄱ	g
+ㄲ	kk
+ㄴ	n
+ㄷ	d
+ㄸ	tt
+ㄹ	l
+ㅁ	m
+ㅂ	b
+ㅃ	pp
+ㅅ	s
+ㅆ	ss
+ㅇ	
+ㅈ	j
+ㅉ	jj
+ㅊ	ch
+ㅋ	k
+ㅌ	t
+ㅍ	p
+ㅎ	h
+# revised romanization consonant exceptions
+ᆼ	ng
+# revised romanization vowels
+ㅏ	a
+ㅐ	ae
+ㅑ	ya
+ㅒ	yae
+ㅓ	eo
+ㅔ	e
+ㅕ	yeo
+ㅖ	ye
+ㅗ	o
+ㅘ	wa
+ㅙ	wae
+ㅚ	oe
+ㅛ	yo
+ㅜ	u
+ㅝ	wo
+ㅞ	we
+ㅟ	wi
+ㅠ	yu
+ㅡ	eu
+ㅢ	ui
+ㅣ	i
+# https://ko.wikipedia.org/wiki/들온말_적는_법
+ㆄ	f
+ㅸ	v
+ㅿ	z
+# https://ko.wikipedia.org/wiki/예일_로마자_표기법
+ㆍ	o
+ㆎ	oy
+ᆡ	oy
+ㆆ	q
+# filler
 ᅟ	
-ᄋ	
+ᅠ	
+ㅤ	
+ﾠ	
+ﾷ	
 ㉧	
-ᆞ	eu
-ᆢ	ui
-ᅀ	z
-ᅙ	'
-ᅌ	ye
+# https://en.wikipedia.org/wiki/Hangul#Obsolete_letters 
 ㆁ	ng
-#
 ᄼ	th
 ᄽ	sh
 ᄾ	x
@@ -19,20 +70,3 @@
 ᅑ	dzh
 ᅔ	c
 ᅕ	q
-# ssang
-ᄙ	ll
-ᇐ	ll
-ᄔ	nn
-ᅇ	hngw
-ᇮ	hng
-ᅘ	hh
-ꥹ	tt
-ꥼ	h'
-ퟠ	mm
-# kapyeoun
-ᅗ	fh
-ퟝ	lh
-ᄛ	lh
-ᄫ	v
-ᄝ	hm
-ᄬ	bh
