@@ -68,7 +68,7 @@ private fun custom() = Table()
         .then(Table("box-drawing"))
         .then((0x2580..0x259f).toTable { "#" }) // block elements
         .then(Table("control-pictures"))
-        .then(bopomofo())
+        .then(Table("bopomofo"))
         .then(Table("hebrew").normalize(NFKC))
         .then(cypriot())
         .then(braille())
@@ -195,12 +195,6 @@ private fun dominoes() = (0x1f030..0x1f093).toTable {
         s += v[2].takeLast(1)
     }
     s
-}
-
-private fun bopomofo() = codePoints("Bopo").toTable { cp ->
-    val name = cp.name
-    if ("TONE" in name) return@toTable ""
-    name.substringAfter("LETTER ").substringBefore(' ').lower().capitalize()
 }
 
 private fun cypriot() = codePoints("Cprt").toTable { it.name.substringAfterLast(' ').lower() }
