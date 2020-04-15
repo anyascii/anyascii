@@ -15,6 +15,7 @@ def test():
     check("Φειδιππίδης", "Feidippidis")
     check("Δημήτρης Φωτόπουλος", "Dimitris Fotopoylos")
     check("Борис Николаевич Ельцин", "Boris Nikolaevich El'tsin")
+    check("Володимир Горбулін", "Volodimir Gorbulin")
     check("دمنهور", "dmnhwr")
     check("אברהם הלוי פרנקל", "'vrhm hlvy frnkl")
     check("სამტრედია", "samt'redia")

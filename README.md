@@ -47,6 +47,7 @@ Representative examples for different languages comparing the Any-Ascii output t
 |Ancient Greek (Greek)|Φειδιππίδης|Feidippidis|Pheidippides|
 |Modern Greek (Greek)|Δημήτρης Φωτόπουλος|Dimitris Fotopoylos|Dimitris Fotopoulos|
 |Russian (Cyrillic)|Борис Николаевич Ельцин|Boris Nikolaevich El'tsin|Boris Nikolayevich Yeltsin|
+|Ukrainian (Cyrillic)|Володимир Горбулін|Volodimir Gorbulin|Volodymyr Horbulin|
 |Arabic|دمنهور|dmnhwr|Damanhur|
 |Hebrew|אברהם הלוי פרנקל|'vrhm hlvy frnkl|Abraham Halevi Fraenkel|
 |Georgian|სამტრედია|samt'redia|Samtredia|
