@@ -1,1 +1,1 @@
-b=tuple('																																																																																																																																0	1	2	3	4	5	6	7	8	9							0	1	2	3	4	5	6	7	8	9'.split('	'))
+b=tuple('k	g	ng	ngk	p	b	m	mp	t	d	n	nr	c	j	ny	nc	y	r	l	w	s		h	i	u	e	o	e			\\	*																																																																																																	0	1	2	3	4	5	6	7	8	9							0	1	2	3	4	5	6	7	8	9'.split('	'))

@@ -125,6 +125,7 @@ private fun custom() = Table()
         .then(Table("math-operators"))
         .then(canadianSyllabics())
         .then(Table("meetei-mayek"))
+        .then(Table("buginese"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
