@@ -48,14 +48,6 @@ Representative examples for different languages comparing the Any-Ascii output t
 |Modern Greek (Greek)|Δημήτρης Φωτόπουλος|Dimitris Fotopoylos|Dimitris Fotopoulos|
 |Russian (Cyrillic)|Борис Николаевич Ельцин|Boris Nikolaevich El'tsin|Boris Nikolayevich Yeltsin|
 |Ukrainian (Cyrillic)|Володимир Горбулін|Volodimir Gorbulin|Volodymyr Horbulin|
-|Arabic|دمنهور|dmnhwr|Damanhur|
-|Hebrew|אברהם הלוי פרנקל|'vrhm hlvy frnkl|Abraham Halevi Fraenkel|
-|Georgian|სამტრედია|samt'redia|Samtredia|
-|Armenian|Աբովյան|Abovyan|Abovyan|
-|Thai|สงขลา|sngkhla|Songkhla|
-|Lao|ສະຫວັນນະເຂດ|sahvannaekhd|Savannakhet|
-|Khmer|សៀមរាប|siemrab|Siem Reap|
-|Burmese (Myanmar)|ထန်တလန်|htntln|Thantlang|
 |Mandarin Chinese (Han)|深圳|ShenZhen|Shenzhen|
 |Cantonese Chinese (Han)|深水埗|ShenShuiBu|Sham Shui Po|
 |Korean (Hangul)|화성시|HwaSeongSi|Hwaseong-si|
@@ -63,17 +55,25 @@ Representative examples for different languages comparing the Any-Ascii output t
 |Japanese (Hiragana)|さいたま|saitama|Saitama|
 |Japanese (Han)|埼玉県|QiYuXian|Saitama-ken|
 |Japanese (Katakana)|トヨタ|toyota|Toyota|
+|Arabic|دمنهور|dmnhwr|Damanhur|
+|Armenian|Աբովյան|Abovyan|Abovyan|
+|Georgian|სამტრედია|samt'redia|Samtredia|
+|Hebrew|אברהם הלוי פרנקל|'vrhm hlvy frnkl|Abraham Halevi Fraenkel|
 |Unified English Braille (Braille)|⠠⠎⠁⠽⠀⠭⠀⠁⠛|^say x ag|Say it again|
 |Bengali|ময়মনসিংহ|mymnsimh|Mymensingh|
+|Burmese (Myanmar)|ထန်တလန်|htntln|Thantlang|
 |Gujarati|પોરબંદર|porbmdr|Porbandar|
 |Hindi (Devanagari)|महासमुंद|mhasmumd|Mahasamund|
 |Kannada|ಬೆಂಗಳೂರು|bemgluru|Bengaluru|
+|Khmer|សៀមរាប|siemrab|Siem Reap|
+|Lao|ສະຫວັນນະເຂດ|sahvannaekhd|Savannakhet|
 |Malayalam|കളമശ്ശേരി|klmsseri|Kalamassery
-|Punjabi (Gurmukhi)|ਜਲੰਧਰ|jlmdhr|Jalandhar|
 |Odia|ଗଜପତି|gjpti|Gajapati|
+|Punjabi (Gurmukhi)|ਜਲੰਧਰ|jlmdhr|Jalandhar|
 |Sinhala|රත්නපුර|rtnpur|Ratnapura|
 |Tamil|கன்னியாகுமரி|knniyakumri|Kanniyakumari|
 |Telugu|శ్రీకాకుళం|srikakulm|Srikakulam|
+|Thai|สงขลา|sngkhla|Songkhla|
 
 |Symbols|Input|Output|
 |---|---|---|
