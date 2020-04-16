@@ -48,6 +48,7 @@ Representative examples for different languages comparing the Any-Ascii output t
 |Modern Greek (Greek)|Δημήτρης Φωτόπουλος|Dimitris Fotopoylos|Dimitris Fotopoulos|
 |Russian (Cyrillic)|Борис Николаевич Ельцин|Boris Nikolaevich El'tsin|Boris Nikolayevich Yeltsin|
 |Ukrainian (Cyrillic)|Володимир Горбулін|Volodimir Gorbulin|Volodymyr Horbulin|
+|Bulgarian (Cyrillic)|Търговище|T'rgovishche|Targovishte|
 |Mandarin Chinese (Han)|深圳|ShenZhen|Shenzhen|
 |Cantonese Chinese (Han)|深水埗|ShenShuiBu|Sham Shui Po|
 |Korean (Hangul)|화성시|HwaSeongSi|Hwaseong-si|
