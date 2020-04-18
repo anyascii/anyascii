@@ -55,9 +55,6 @@
 ဵ	e
 # anusvara
 ံ	m
-# tones
-့	
-း	
 # virama
 ္	
 ်	
@@ -72,10 +69,10 @@
 ၊	,
 ။	.
 # abbreviations, ala-lc 2011
-၌	n
-၍	r
-၎	l
-၏	e
+၌	n*
+၍	r*
+၎	l*
+၏	e*
 # pali, sanskrit, iso 15919
 ၐ	s
 ၑ	s
@@ -87,42 +84,6 @@
 ၗ	r
 ၘ	l
 ၙ	l
-# mon, https://en.wikipedia.org/wiki/Mon_language
-ဨ	e
-ဳ	i
-ဴ	ai
-ၚ	ng
-ၛ	jh
-ၜ	b
-ၝ	mb
-ၞ	n
-ၟ	m
-ၠ	l
-# s'gaw karen, https://en.wikipedia.org/wiki/S%27gaw_Karen_language
-ၡ	sh
-ၢ	uh
-ၣ	
-ၤ	
-# western pwo karen
-ၥ	th
-ၦ	pw
-ၧ	eu
-ၨ	ue
-ၩ	
-ၪ	
-ၫ	
-ၬ	
-ၭ	
-# eastern pwo karen, https://en.wikipedia.org/wiki/Eastern_Pwo_language
-ၮ	n
-ၯ	hh
-ၰ	ghw
-# geba karen
-ၱ	i
-# kayah
-ၲ	oe
-ၳ	u
-ၴ	ee
 # shan, ala-lc 2012
 ဢ	'
 ၵ	k
@@ -143,6 +104,39 @@
 ႄ	e
 ႅ	e
 ႆ	ai
+႞	n*
+႟	!
+# karen, knab 2012
+ၡ	sh
+ၮ	n
+ၥ	th
+ၦ	pw
+ၯ	yw
+ၰ	khw
+ၢ	oe
+ၧ	oe
+ၨ	u
+# mon, https://en.wikipedia.org/wiki/Mon_language
+ဨ	e
+ဳ	i
+ဴ	ai
+ၚ	ng
+ၛ	jh
+ၜ	b
+ၝ	mb
+ၞ	n
+ၟ	m
+ၠ	l
+# tones
+့	
+း	
+ၣ	
+ၤ	
+ၩ	
+ၪ	
+ၫ	
+ၬ	
+ၭ	
 ႇ	
 ႈ	
 ႉ	
@@ -150,14 +144,21 @@
 ႋ	
 ႌ	
 ႍ	
-#႞	_
-႟	!
-# rumai palaung, http://pacling.anu.edu.au/materials/SEAMLES/Mak2012GoldenPalaung.pdf
-ႎ	v
 ႏ	
-# khamti shan
 ႚ	
 ႛ	
+ꩼ	
+ꩽ	
+ꩻ	
+# geba karen
+ၱ	i
+# kayah
+ၲ	oe
+ၳ	u
+ၴ	ee
+# rumai palaung, http://pacling.anu.edu.au/materials/SEAMLES/Mak2012GoldenPalaung.pdf
+ႎ	v
+# khamti shan
 ꩠ	g
 ꩡ	c
 ꩢ	ch
@@ -212,10 +213,6 @@
 ꧼ	dh
 ꧽ	b
 ꧾ	bh
-ꩼ	
-ꩽ	
-# pa'o karen
-ꩻ	
 # shwe palaung
 ꩾ	ch
 ꩿ	sh
