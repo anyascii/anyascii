@@ -4,7 +4,6 @@ fun hangul() = Table()
         .then(Table("hangul"))
         .combinations()
         .syllables()
-        .normalize(NFKC)
 
 private fun Table.combinations() = apply {
     codePoints("Hang").forEach { cp ->
@@ -28,5 +27,5 @@ private fun Table.letter(position: String, name: String): String {
 }
 
 private fun Table.syllables() = then((0xac00..0xd7a3).toTable {
-    transliterate(NFD.normalize(it.asString())).capitalize()
+    checkNotNull(transliterate(NFD.normalize(it.asString()))).capitalize()
 })

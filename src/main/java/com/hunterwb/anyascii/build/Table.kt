@@ -36,23 +36,22 @@ fun Table(file: String) = Table().apply {
     }
 }
 
-fun Table.normalize(normalizer2: Normalizer2, replacement: String? = null) = apply {
+fun Iterable<CodePoint>.normalize(normalizer2: Normalizer2) = Table().apply {
+    for (cp in this@normalize) {
+        val a = cp.asString()
+        val b = normalizer2.normalize(a)
+        if (a != b) put(cp, b)
+    }
+}
+
+fun Table.normalize(normalizer2: Normalizer2) = apply {
     for (cp in 128..Character.MAX_CODE_POINT) {
         if (cp in this) continue
-        val output = transliterate(normalizer2.normalize(cp.asString()), replacement)
+        val output = transliterate(normalizer2.normalize(cp.asString()))
         if (output != null && output.isNotEmpty()) {
             this[cp] = output
         }
     }
-}
-
-private fun Table.transliterate(s: String, default: String?): String? {
-    val buf = StringBuilder()
-    for (cp in s.codePoints()) {
-        val d = this[cp] ?: default ?: return null
-        buf.append(d)
-    }
-    return buf.toString()
 }
 
 inline fun Iterable<CodePoint>.toTable(map: (CodePoint) -> String): Table = associateWithTo(Table(), map)
@@ -60,7 +59,7 @@ inline fun Iterable<CodePoint>.toTable(map: (CodePoint) -> String): Table = asso
 fun Table.lengthStatistics() = IntSummaryStatistics().apply { values.forEach { accept(it.length) } }
 
 fun Table.cased() = apply {
-    for ((cp, s) in this.toMap()) {
+    for ((cp, s) in toMap()) {
         putIfAbsent(cp.lower(), s.lower())
         putIfAbsent(cp.upper(), s.capitalize())
     }
@@ -84,11 +83,18 @@ fun Table.aliasing(codePoints: Iterable<CodePoint>, nameTransform: (String) -> S
 fun Table.retain(codePoints: Iterable<CodePoint>) = apply { keys.retainAll(codePoints) }
 
 fun Table.transliterate() = apply {
-    for ((cp, r) in entries) {
+    for ((cp, r) in toMap()) {
         if (!r.isPrintableAscii()) {
-            this[cp] = r.codePointsArray().joinToString("") { getValue(it) }
+            this[cp] = checkNotNull(transliterate(r))
         }
     }
 }
 
-fun Table.transliterate(s: String) = s.codePointsArray().joinToString("") { getValue(it) }
+fun Table.transliterate(s: String): String? {
+    val sb = StringBuilder()
+    for (cp in s.codePoints()) {
+        val r = get(cp) ?: return null
+        sb.append(r)
+    }
+    return sb.toString()
+}

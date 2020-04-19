@@ -11,6 +11,7 @@ fun main() {
             .then(emojis())
             .then(custom())
             .normalize(NFKC)
+            .normalize(NFKD)
             .then(unihan())
             .normalize(NFKC)
             .then(Table("unidecode"))
@@ -25,7 +26,7 @@ fun main() {
     generate(table)
 }
 
-fun icu(rules: String): Table {
+private fun icu(rules: String): Table {
     val table = Table()
     val transliterator = Transliterator.createFromRules(rules, rules, Transliterator.FORWARD)
     for (cp in 128..Character.MAX_CODE_POINT) {
@@ -70,7 +71,7 @@ private fun custom() = Table()
         .then((0x2580..0x259f).toTable { "#" }) // block elements
         .then(Table("control-pictures"))
         .then(Table("bopomofo"))
-        .then(Table("hebrew").normalize(NFKC))
+        .then(Table("hebrew"))
         .then(cypriot())
         .then(braille())
         .then(Table("gothic"))
@@ -90,7 +91,7 @@ private fun custom() = Table()
         .then(oldItalic())
         .then(Table("osmanya"))
         .then(Table("deseret").cased())
-        .then(Table("arabic").normalize(NFKC))
+        .then(Table("arabic"))
         .then(Table("oriya"))
         .then(Table("bengali"))
         .then(Table("devanagari"))
@@ -134,7 +135,6 @@ private fun custom() = Table()
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
         .cased()
-        .normalize(NFKC)
         .aliasing((0xa674..0xa67b) + (0xa69e..0xa69f) + (0x2de0..0x2dff) - 0x2df5) { it.replace("COMBINING CYRILLIC", "CYRILLIC SMALL") }
 
 private fun greek() = Table()
@@ -142,25 +142,25 @@ private fun greek() = Table()
         .then(Table("greek"))
         .cased()
         .minus(0x345)
-        .apply {
-            then(codePoints("Grek").filterName { it.contains("WITH DASIA") }.toTable {
-                val n = it.name.substringBefore(" WITH")
-                val o = getValue(CodePoint(n))
-                if ("RHO" in n) {
-                    "${o}h"
-                } else {
-                    if ("CAPITAL" in n) "H${o.lower()}" else "h$o"
-                }
-            })
-        }
-        .normalize(NFKD, "")
+        .then(codePoints("Grek").filterName { it.contains("WITH DASIA") }.toTable {
+            val baseName = it.name.substringBefore(" WITH")
+            val base = CodePoint(baseName).asString()
+            if ("RHO" in baseName) {
+                "${base}h"
+            } else {
+                if ("CAPITAL" in baseName) "H${base.lower()}" else "h$base"
+            }
+        })
         .aliasing((0x1d26..0x1d2a) + 0xab65) { it.replace("LETTER SMALL CAPITAL", "CAPITAL LETTER") }
+
+private val GREEK_MATH = ((0x1d6a8..0x1d7cb) + 0x2207 + 0x2202 + 0x3f4 + 0x3f5 + 0x3d1 + 0x3f0 + 0x3d5 + 0x3f1 + 0x3d6 + 0x3d0).toList()
 
 private fun greekMath() = Table()
         .then(Table("greek-math"))
         .cased()
-        .normalize(NFKC)
-        .retain((0x1d6a8..0x1d7cb) + 0x2207 + 0x2202 + 0x3f4 + 0x3f5 + 0x3d1 + 0x3f0 + 0x3d5 + 0x3f1 + 0x3d6 + 0x3d0)
+        .then(GREEK_MATH.normalize(NFKC))
+        .transliterate()
+        .retain(GREEK_MATH)
 
 private fun coptic() = Table()
         .then(Table("coptic"))
@@ -217,23 +217,19 @@ private fun lycian() = codePoints("Lyci").toTable { it.name.lower().substringAft
 private fun georgian() = Table()
         .then(Table("georgian"))
         .aliasing(codePoints("Geor").filterName { "SMALL LETTER" in it }) { it.replace("SMALL ", "") }
-        .normalize(NFKD)
         .cased()
 
 private fun armenian() = Table()
         .then(Table("armenian"))
-        .normalize(NFKD)
         .cased()
 
 private fun katakana() = Table()
         .then(Table("katakana"))
         .aliasing(codePoints("Kana").filterName { it.startsWith("KATAKANA LETTER SMALL") }) { it.replace("SMALL ", "") }
-        .normalize(NFKC)
 
 private fun hiragana() = Table()
         .then(Table("hiragana"))
         .aliasing(codePoints("Hira").filterName { it.startsWith("HIRAGANA LETTER SMALL") }) { it.replace("SMALL ", "") }
-        .normalize(NFKC)
 
 private fun oldItalic() = Table()
         .then((0x10320..0x10323).toTable { ROMAN_NUMERALS.getValue(it.numericValue) })
