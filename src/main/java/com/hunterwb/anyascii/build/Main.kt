@@ -43,6 +43,7 @@ private fun ascii(): Table = (0..127).toTable { it.asString() }
 private fun decimalDigits() = codePoints("Nd").toTable { it.numericValue.toString() }
 
 private fun custom() = Table()
+        .then(halfwidthFullwidth())
         .then(Table("currency-symbols"))
         .then(Table("letterlike-symbols"))
         .then(Table("general-punctuation"))
@@ -285,3 +286,10 @@ private fun tibetan() = Table()
 private fun canadianSyllabics() = Table()
         .then(Table("canadian-syllabics"))
         .then(codePoints("Cans").toTable { it.name.substringAfterLast(' ').lower() })
+
+private fun halfwidthFullwidth() = (0xff00..0xffef).filterDefined().toTable { cp ->
+    var name = cp.name.substringAfter(' ')
+    if ("VOICED SOUND MARK" in name) name = name.replace("KATAKANA", "KATAKANA-HIRAGANA")
+    else if (name.startsWith("FORMS ")) name = name.replace("FORMS", "BOX DRAWINGS")
+    CodePoint(name).asString()
+}
