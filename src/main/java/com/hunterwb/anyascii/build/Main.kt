@@ -11,7 +11,6 @@ fun main() {
             .then(emojis())
             .then(custom())
             .normalize(NFKC)
-            .then(icu("::Latin-ASCII; [:^ASCII:]>;"))
             .then(unihan())
             .normalize(NFKC)
             .then(Table("unidecode"))
@@ -44,6 +43,7 @@ private fun decimalDigits() = codePoints("Nd").toTable { it.numericValue.toStrin
 
 private fun custom() = Table()
         .then(halfwidthFullwidth())
+        .then(Table("spacing-modifier-letters"))
         .then(Table("currency-symbols"))
         .then(Table("letterlike-symbols"))
         .then(Table("general-punctuation"))
