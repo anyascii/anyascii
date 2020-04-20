@@ -1,6 +1,7 @@
 # cjk symbols and punctuation
 # enclosed cjk letters and months
 # cjk compatibility
+# cjk compatibility forms
 　	 
 、	,
 。	.
@@ -164,3 +165,11 @@
 ㎼	uW
 ㏀	kOhm
 ㏁	MOhm
+#
+﹅	'
+﹆	'
+#
+﹉	-
+﹊	-
+﹋	-
+﹌	-
