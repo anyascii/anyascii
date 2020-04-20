@@ -42,6 +42,7 @@ private fun ascii(): Table = (0..127).toTable { it.asString() }
 private fun decimalDigits() = codePoints("Nd").toTable { it.numericValue.toString() }
 
 private fun custom() = Table()
+        .then(combiningDiacriticalMarks())
         .then(halfwidthFullwidth())
         .then(Table("spacing-modifier-letters"))
         .then(Table("currency-symbols"))
@@ -293,3 +294,7 @@ private fun halfwidthFullwidth() = (0xff00..0xffef).filterDefined().toTable { cp
     else if (name.startsWith("FORMS ")) name = name.replace("FORMS", "BOX DRAWINGS")
     CodePoint(name).asString()
 }
+
+private fun combiningDiacriticalMarks() = Table()
+        .then((0x363..0x36f).toTable { it.name.substringAfterLast(' ').lower() })
+        .then((0x300..0x362).toTable { "" })
