@@ -137,31 +137,6 @@ private fun cyrillic() = Table()
         .cased()
         .aliasing((0xa674..0xa67b) + (0xa69e..0xa69f) + (0x2de0..0x2dff) - 0x2df5) { it.replace("COMBINING CYRILLIC", "CYRILLIC SMALL") }
 
-private fun greek() = Table()
-        .then(greekMath())
-        .then(Table("greek"))
-        .cased()
-        .minus(0x345)
-        .then(codePoints("Grek").filterName { it.contains("WITH DASIA") }.toTable {
-            val baseName = it.name.substringBefore(" WITH")
-            val base = CodePoint(baseName).asString()
-            if ("RHO" in baseName) {
-                "${base}h"
-            } else {
-                if ("CAPITAL" in baseName) "H${base.lower()}" else "h$base"
-            }
-        })
-        .aliasing((0x1d26..0x1d2a) + 0xab65) { it.replace("LETTER SMALL CAPITAL", "CAPITAL LETTER") }
-
-private val GREEK_MATH = ((0x1d6a8..0x1d7cb) + 0x2207 + 0x2202 + 0x3f4 + 0x3f5 + 0x3d1 + 0x3f0 + 0x3d5 + 0x3f1 + 0x3d6 + 0x3d0).toList()
-
-private fun greekMath() = Table()
-        .then(Table("greek-math"))
-        .cased()
-        .then(GREEK_MATH.normalize(NFKC))
-        .transliterate()
-        .retain(GREEK_MATH)
-
 private fun coptic() = Table()
         .then(Table("coptic"))
         .cased()

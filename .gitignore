@@ -1,7 +1,7 @@
 .idea/
 target/
 *.iml
-build/
+python/build/
 dist/
 *.egg-info/
 .tox/
