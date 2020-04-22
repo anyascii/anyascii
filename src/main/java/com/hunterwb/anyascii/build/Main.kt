@@ -122,7 +122,7 @@ private fun custom() = Table()
         .then(Table("myanmar"))
         .then(Table("phags-pa"))
         .then(ideographicDescription())
-        .then((0xa700..0xa71f).toTable { "" }) // modifier tone letters
+        .then(Table("modifier-tone-letters"))
         .then(Table("indic-number-forms"))
         .then(Table("ancient-symbols"))
         .then(carian())
