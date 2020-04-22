@@ -2,10 +2,14 @@ package com.hunterwb.anyascii.build
 
 import com.hunterwb.anyascii.build.gen.generate
 import com.ibm.icu.text.Transliterator
+import java.time.Duration
+import java.time.Instant
 import java.util.Locale
 
 fun main() {
+    val start = Instant.now()
     Locale.setDefault(Locale.ROOT)
+
     val table = ascii()
             .then(decimalDigits())
             .then(emojis())
@@ -17,13 +21,15 @@ fun main() {
             .then(Table("unidecode"))
             .then(icu("::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))
             .normalize(NFKC)
-            .cased()
+            .cased(codePoints())
             .transliterate()
             .minus(ascii().keys)
             .write("table.tsv")
 
     table.then(ascii())
     generate(table)
+
+    println(Duration.between(start, Instant.now()))
 }
 
 private fun icu(rules: String): Table {
@@ -82,7 +88,7 @@ private fun custom() = Table()
         .then(Table("thai"))
         .then(Table("number-forms"))
         .then(Table("latin-common"))
-        .then(Table("latin").cased())
+        .then(latin())
         .then(greek())
         .then(katakana())
         .then(hiragana())
@@ -90,7 +96,7 @@ private fun custom() = Table()
         .then(Table("runic"))
         .then(oldItalic())
         .then(Table("osmanya"))
-        .then(Table("deseret").cased())
+        .then(deseret())
         .then(Table("arabic"))
         .then(Table("oriya"))
         .then(Table("bengali"))
@@ -108,7 +114,7 @@ private fun custom() = Table()
         .then(Table("misc-technical"))
         .then(dingbats())
         .then(Table("tifinagh"))
-        .then(Table("glagolitic").cased())
+        .then(glagolitic())
         .then(baybayin())
         .then(Table("khmer"))
         .then(Table("ogham"))
@@ -134,12 +140,12 @@ private fun custom() = Table()
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
-        .cased()
+        .cased(codePoints("Cyrl"))
         .aliasing((0xa674..0xa67b) + (0xa69e..0xa69f) + (0x2de0..0x2dff) - 0x2df5) { it.replace("COMBINING CYRILLIC", "CYRILLIC SMALL") }
 
 private fun coptic() = Table()
         .then(Table("coptic"))
-        .cased()
+        .cased(codePoints("Copt"))
 
 private fun yi() = Table()
         .then(0xa015, "w")
@@ -192,11 +198,15 @@ private fun lycian() = codePoints("Lyci").toTable { it.name.lower().substringAft
 private fun georgian() = Table()
         .then(Table("georgian"))
         .aliasing(codePoints("Geor").filterName { "SMALL LETTER" in it }) { it.replace("SMALL ", "") }
-        .cased()
+        .cased(codePoints("Geor"))
 
 private fun armenian() = Table()
         .then(Table("armenian"))
-        .cased()
+        .cased(codePoints("Armn"))
+
+private fun latin() = Table()
+        .then(Table("latin"))
+        .cased(codePoints("Latn"))
 
 private fun katakana() = Table()
         .then(Table("katakana"))
@@ -205,6 +215,10 @@ private fun katakana() = Table()
 private fun hiragana() = Table()
         .then(Table("hiragana"))
         .aliasing(codePoints("Hira").filterName { it.startsWith("HIRAGANA LETTER SMALL") }) { it.replace("SMALL ", "") }
+
+private fun deseret() = Table()
+        .then(Table("deseret"))
+        .cased(codePoints("Dsrt"))
 
 private fun oldItalic() = Table()
         .then((0x10320..0x10323).toTable { ROMAN_NUMERALS.getValue(it.numericValue) })
@@ -231,6 +245,10 @@ private fun cjkMisc() = Table()
         .then((0x32c0..0x32cb).toTable { "${(it - 0x32c0 + 1)}M" }) // telegraph months
         .then((0x3358..0x3370).toTable { "${(it - 0x3358)}H" }) // telegraph hours
         .then((0x33e0..0x33fe).toTable { "${(it - 0x33e0 + 1)}D" }) // telegraph days
+
+private fun glagolitic() = Table()
+        .then(Table("glagolitic"))
+        .cased(codePoints("Glag"))
 
 private fun baybayin() = (0x1700..0x177f).filterDefined().toTable { cp ->
     // tagalog, hanunoo, buhid, tagbanwa

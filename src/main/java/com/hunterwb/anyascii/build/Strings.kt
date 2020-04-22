@@ -41,6 +41,8 @@ fun String.removeDiacritics(): String = CDM.matcher(NFD.normalize(this)).replace
 
 fun UnicodeSet.codePoints(): List<CodePoint> = map { it.toCodePoint() }
 
+fun codePoints(): List<CodePoint> = UnicodeSet.ALL_CODE_POINTS.codePoints()
+
 fun codePoints(set: String): List<CodePoint> = UnicodeSet("[:$set:]").codePoints()
 
 fun Iterable<CodePoint>.filterDefined() = filter { it.isDefined }

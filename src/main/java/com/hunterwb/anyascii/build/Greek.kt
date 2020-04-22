@@ -3,8 +3,7 @@ package com.hunterwb.anyascii.build
 fun greek() = Table()
         .then(greekMath())
         .then(Table("greek"))
-        .cased()
-        .minus(0x345)
+        .cased(codePoints("Grek"))
         .then(codePoints("Grek").filterName { it.contains("WITH DASIA") }.toTable {
             val baseName = it.name.substringBefore(" WITH")
             val base = CodePoint(baseName).asString()
@@ -20,7 +19,7 @@ private val GREEK_MATH = ((0x1d6a8..0x1d7cb) + 0x2207 + 0x2202 + 0x3f4 + 0x3f5 +
 
 private fun greekMath() = Table()
         .then(Table("greek-math"))
-        .cased()
+        .cased(codePoints("Grek"))
         .then(GREEK_MATH.normalize(NFKC))
         .transliterate()
         .retain(GREEK_MATH)

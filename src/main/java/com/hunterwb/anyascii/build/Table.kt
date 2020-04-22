@@ -58,15 +58,18 @@ inline fun Iterable<CodePoint>.toTable(map: (CodePoint) -> String): Table = asso
 
 fun Table.lengthStatistics() = IntSummaryStatistics().apply { values.forEach { accept(it.length) } }
 
-fun Table.cased() = apply {
-    for ((cp, s) in toMap()) {
-        putIfAbsent(cp.lower(), s.lower())
-        putIfAbsent(cp.upper(), s.capitalize())
-    }
-    for (cp in 0..Character.MAX_CODE_POINT) {
+fun Table.cased(codePoints: Iterable<CodePoint>) = apply {
+    for (cp in codePoints) {
         if (cp in this) continue
-        this[cp.upper()]?.let { putIfAbsent(cp, it.lower()) }
-        this[cp.lower()]?.let { putIfAbsent(cp, it.capitalize()) }
+        val u = cp.upper()
+        if (u != cp) {
+            this[u]?.let { this[cp] = it.lower() }
+            continue
+        }
+        val l = cp.lower()
+        if (l != cp) {
+            this[l]?.let { this[cp] = it.capitalize() }
+        }
     }
 }
 
