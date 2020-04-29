@@ -1,1 +1,1 @@
-module X109 B='																																a	b	g	d	e	v	i	y	k	l	m	n	o	r	ss	t	u	f	q	s	tt	an	en	ly	nn	c'.split '	' end
+module X109 B='\'	b	g	d	h	w	z	x	tt	y	k	l	m	n	s	`	p	ts	q	r	sh	t	1	10	20	100	2	3				.	a	b	g	d	e	v	i	y	k	l	m	n	o	r	ss	t	u	f	q	s	tt	an	en	ly	nn	c'.split '	' end

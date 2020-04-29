@@ -137,6 +137,7 @@ private fun custom() = Table()
         .then(Table("meetei-mayek"))
         .then(Table("buginese"))
         .then(Table("alchemical"))
+        .then(phoenician())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -287,3 +288,7 @@ private fun halfwidthFullwidth() = (0xff00..0xffef).filterDefined().toTable { cp
 private fun combiningDiacriticalMarks() = Table()
         .then((0x363..0x36f).toTable { it.name.substringAfterLast(' ').lower() })
         .then((0x300..0x362).toTable { "" })
+
+private fun phoenician() = Table()
+        .then(Table("phoenician"))
+        .then((0x10916..0x1091b).toTable { it.numericValue.toString() })
