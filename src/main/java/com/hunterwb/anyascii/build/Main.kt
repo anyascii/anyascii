@@ -138,6 +138,7 @@ private fun custom() = Table()
         .then(Table("buginese"))
         .then(Table("alchemical"))
         .then(phoenician())
+        .then(linearAb())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -292,3 +293,12 @@ private fun combiningDiacriticalMarks() = Table()
 private fun phoenician() = Table()
         .then(Table("phoenician"))
         .then((0x10916..0x1091b).toTable { it.numericValue.toString() })
+
+private val LINEAR_AB_ID = "(\\S*?)(\\d{3})(\\S*)".toRegex()
+
+// http://www.people.ku.edu/~jyounger/LinearA/LinAIdeograms/
+private fun linearAb() = codePoints("Lina").plus(codePoints("Linb")).toTable { cp ->
+    val (pre, id, post) = checkNotNull(LINEAR_AB_ID.find(cp.name)).destructured
+    val post2 = post.lower().replace("-102", "/102").removeSuffix("-vas")
+    "$pre$id$post2"
+}
