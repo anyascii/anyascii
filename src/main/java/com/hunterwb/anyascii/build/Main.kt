@@ -139,6 +139,7 @@ private fun custom() = Table()
         .then(Table("alchemical"))
         .then(phoenician())
         .then(linearAb())
+        .then(imperialAramaic())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -302,3 +303,7 @@ private fun linearAb() = codePoints("Lina").plus(codePoints("Linb")).toTable { c
     val post2 = post.lower().replace("-102", "/102").removeSuffix("-vas")
     "$pre$id$post2"
 }
+
+private fun imperialAramaic() = Table()
+        .then(Table("imperial-aramaic"))
+        .then((0x10858..0x1085f).toTable { it.numericValue.toString() })

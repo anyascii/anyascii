@@ -1,1 +1,1 @@
-module.exports="'	b	g	d	h	w	z	x	tt	y	k	l	m	n	s	`	p	ts	q	r	sh	t	1	10	20	100	2	3				.	a	b	g	d	e	v	i	y	k	l	m	n	o	r	ss	t	u	f	q	s	tt	an	en	ly	nn	c".split('	')
+module.exports="'	b	g	d	h	w	z	hh	tt	y	k	l	m	n	s	`	p	ts	q	r	sh	t	1	10	20	100	2	3				.	a	b	g	d	e	v	i	y	k	l	m	n	o	r	ss	t	u	f	q	s	tt	an	en	ly	nn	c".split('	')
