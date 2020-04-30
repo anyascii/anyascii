@@ -218,6 +218,7 @@ private fun katakana() = Table()
 private fun hiragana() = Table()
         .then(Table("hiragana"))
         .aliasing(codePoints("Hira").filterName { it.startsWith("HIRAGANA LETTER SMALL") }) { it.replace("SMALL ", "") }
+        .then(codePoints("Hira").filterName { it.startsWith("HENTAIGANA") }.toTable { it.name.substringAfterLast(' ').substringBefore('-').lower() })
 
 private fun deseret() = Table()
         .then(Table("deseret"))

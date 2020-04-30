@@ -13,7 +13,7 @@ fun CodePoint.isAscii() = this in 0..127
 
 fun CodePoint.asString(): String = Character.toString(this)
 
-val CodePoint.name: String get() = UCharacter.getName(this)
+val CodePoint.name: String get() = UCharacter.getNameAlias(this) ?: UCharacter.getName(this)
 
 fun CodePoint(name: String): CodePoint = UCharacter.getCharFromName(name)
 
