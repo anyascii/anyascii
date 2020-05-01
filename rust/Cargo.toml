@@ -11,9 +11,6 @@ keywords = [
   "unicode",
   "ascii",
   "transliteration",
-  "utf8",
-  "romanization",
-  "slug",
   "emoji",
   "unidecode"
 ]
