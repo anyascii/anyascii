@@ -1,6 +1,6 @@
 {
   "name": "any-ascii",
-  "version": "0.1.5",
+  "version": "0.1.6-dev",
   "description": "Unicode to ASCII transliteration",
   "homepage": "https://github.com/hunterwb/any-ascii",
   "license": "ISC",

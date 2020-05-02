@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'any_ascii'
-  s.version     = '0.1.5'
+  s.version     = '0.1.6-dev'
   s.summary     = 'Unicode to ASCII transliteration'
   s.description =
     'Unicode to ASCII transliteration.' +

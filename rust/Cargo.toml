@@ -1,6 +1,6 @@
 [package]
 name = "any_ascii"
-version = "0.1.5"
+version = "0.1.6-dev"
 authors = ["Hunter WB <hunter@hunterwb.com>"]
 homepage = "https://github.com/hunterwb/any-ascii"
 repository = "https://github.com/hunterwb/any-ascii"
