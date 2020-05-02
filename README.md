@@ -4,6 +4,7 @@
 [![pypi](https://img.shields.io/pypi/v/anyascii)](https://pypi.org/project/anyascii/)
 [![gem](https://img.shields.io/gem/v/any_ascii)](https://rubygems.org/gems/any_ascii)
 [![crates.io](https://img.shields.io/crates/v/any_ascii)](https://crates.io/crates/any_ascii)
+[![nuget](https://img.shields.io/nuget/v/AnyAscii)](https://www.nuget.org/packages/AnyAscii)
 
 Unicode to ASCII transliteration
 
