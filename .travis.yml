@@ -38,3 +38,6 @@ jobs:
       install: skip
       before_script: cd csharp/test
       script: dotnet test
+
+    - language: sh
+      script: ./sh/test.sh

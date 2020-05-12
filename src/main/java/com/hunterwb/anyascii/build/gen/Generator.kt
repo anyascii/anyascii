@@ -17,6 +17,7 @@ fun generate(table: Table) {
     go(g)
     ruby(g)
     cSharp(g)
+    shell(g)
 }
 
 class Generator(val table: Table) {

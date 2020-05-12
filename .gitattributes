@@ -10,3 +10,4 @@ go/block.go linguist-generated=true
 go/strings.go linguist-generated=true
 ruby/lib/data/* linguist-generated=true
 csharp/src/Transliteration.blocks.cs linguist-generated=true
+sh/anyascii linguist-generated=true

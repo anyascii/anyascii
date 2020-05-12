@@ -20,6 +20,7 @@ Unicode to ASCII transliteration
   - [Python](#python)
   - [Ruby](#ruby)
   - [Rust](#rust)
+  - [Shell](#shell)
   - [.NET](#net)
 - [See Also](#see-also)
 
@@ -131,7 +132,7 @@ Romanization is most commonly used when representing the names of people and pla
 
 ## Implementations
 
-Any-Ascii is implemented in 7 different programming languages.
+Any-Ascii is implemented in 8 different programming languages.
 
 ### Go
 
@@ -244,9 +245,20 @@ $ anyascii άνθρωποι
 anthropoi
 ```
 
- Use `cd rust && cargo build --release` to build a native executable to `rust/target/release/anyascii`
+Use `cd rust && cargo build --release` to build a native executable to `rust/target/release/anyascii`
 
-## .NET
+### Shell
+
+```console
+$ anyascii άνθρωποι
+anthropoi
+```
+
+POSIX-compliant
+
+[**Download**](https://github.com/hunterwb/any-ascii/blob/master/sh/anyascii)
+
+### .NET
 
 Install from [**NuGet**](https://www.nuget.org/packages/AnyAscii)
 
