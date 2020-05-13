@@ -1,5 +1,5 @@
 output=
-for cp in $(printf %s "$@" | iconv -f utf8 -t utf32le | od -A n -t u)
+for cp in $(printf %s "$*" | iconv -f utf8 -t utf32le | od -A n -t u)
 do
 	if test "$cp" -lt 128
 	then
@@ -11,4 +11,4 @@ do
 	fi
 	output=$output$s
 done
-printf "%s\n" "$output"
+printf '%s\n' "$output"

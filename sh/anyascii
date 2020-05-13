@@ -531,7 +531,7 @@ _313='Yang	Qu		Wa	Zhi	Mi	Meng	Bie	Ma	Bi	Chang					Hun							Nong	Ji	Zi	Zi							
 _e00='																																 	!	"	#	$	%	&	'\''	(	)	*	+	,	-	.	/	0	1	2	3	4	5	6	7	8	9	:	;	<	=	>	?	@	A	B	C	D	E	F	G	H	I	J	K	L	M	N	O	P	Q	R	S	T	U	V	W	X	Y	Z	[	\	]	^	_	`	a	b	c	d	e	f	g	h	i	j	k	l	m	n	o	p	q	r	s	t	u	v	w	x	y	z	{	|	}	~'
 
 output=
-for cp in $(printf %s "$@" | iconv -f utf8 -t utf32le | od -A n -t u)
+for cp in $(printf %s "$*" | iconv -f utf8 -t utf32le | od -A n -t u)
 do
 	if test "$cp" -lt 128
 	then
@@ -543,4 +543,4 @@ do
 	fi
 	output=$output$s
 done
-printf "%s\n" "$output"
+printf '%s\n' "$output"
