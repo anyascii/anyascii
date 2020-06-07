@@ -141,6 +141,7 @@ private fun custom() = Table()
         .then(linearAb())
         .then(imperialAramaic())
         .then(Table("chess-symbols"))
+        .then(Table("ornamental-dingbats"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
