@@ -147,6 +147,7 @@ private fun custom() = Table()
         .then(shorthandFormatControls())
         .then(Table("miao"))
         .then(Table("makasar"))
+        .then(Table("pau-cin-hau"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
