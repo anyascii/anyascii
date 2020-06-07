@@ -145,6 +145,7 @@ private fun custom() = Table()
         .then(countingRodNumerals())
         .then(mayanNumerals())
         .then(shorthandFormatControls())
+        .then(Table("miao"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))

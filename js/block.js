@@ -249,6 +249,7 @@ module.exports = function block(blockNum) {
         case 0x11f: return require('./data/11f.js');
         case 0x16a: return require('./data/16a.js');
         case 0x16b: return require('./data/16b.js');
+        case 0x16f: return require('./data/16f.js');
         case 0x1b0: return require('./data/1b0.js');
         case 0x1b1: return require('./data/1b1.js');
         case 0x1bc: return require('./data/1bc.js');
