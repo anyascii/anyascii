@@ -142,6 +142,8 @@ private fun custom() = Table()
         .then(imperialAramaic())
         .then(Table("chess-symbols"))
         .then(Table("ornamental-dingbats"))
+        .then(countingRodNumerals())
+        .then(mayanNumerals())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -310,3 +312,7 @@ private fun linearAb() = codePoints("Lina").plus(codePoints("Linb")).toTable { c
 private fun imperialAramaic() = Table()
         .then(Table("imperial-aramaic"))
         .then((0x10858..0x1085f).toTable { it.numericValue.toString() })
+
+private fun countingRodNumerals() = (0x1d360..0x1d378).toTable { NUMBER_SPELLOUT.parse(it.name.substringAfterLast(' ').lower()).toString() }
+
+private fun mayanNumerals() = (0x1d2e0..0x1d2f3).toTable { it.numericValue.toString() }
