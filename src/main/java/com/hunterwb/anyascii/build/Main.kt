@@ -144,6 +144,7 @@ private fun custom() = Table()
         .then(Table("ornamental-dingbats"))
         .then(countingRodNumerals())
         .then(mayanNumerals())
+        .then(shorthandFormatControls())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -316,3 +317,5 @@ private fun imperialAramaic() = Table()
 private fun countingRodNumerals() = (0x1d360..0x1d378).toTable { NUMBER_SPELLOUT.parse(it.name.substringAfterLast(' ').lower()).toString() }
 
 private fun mayanNumerals() = (0x1d2e0..0x1d2f3).toTable { it.numericValue.toString() }
+
+private fun shorthandFormatControls() = (0x1bca0..0x1bcaf).filterDefined().toTable { it.toString(16).takeLast(1) }
