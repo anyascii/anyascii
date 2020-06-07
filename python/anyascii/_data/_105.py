@@ -1,0 +1,1 @@
+b=tuple('a	b	c	ch	d	nd	dh	ei	e	f	g	gj	h	i	j	k	l	ll	m	n	n	nj	o	p	q	r	rr	s	sh	t	th	u	v	x	y	z	zh	gh	gh	kh'.split('	'))
