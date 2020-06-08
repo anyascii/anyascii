@@ -150,6 +150,7 @@ private fun custom() = Table()
         .then(Table("pau-cin-hau"))
         .then(Table("elbasan"))
         .then(Table("caucasian-albanian"))
+        .then(palmyrene())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -324,3 +325,7 @@ private fun countingRodNumerals() = (0x1d360..0x1d378).toTable { NUMBER_SPELLOUT
 private fun mayanNumerals() = (0x1d2e0..0x1d2f3).toTable { it.numericValue.toString() }
 
 private fun shorthandFormatControls() = (0x1bca0..0x1bcaf).filterDefined().toTable { it.toString(16).takeLast(1) }
+
+private fun palmyrene() = Table()
+        .then(Table("palmyrene"))
+        .then((0x10879..0x1087f).toTable { it.numericValue.toString() })
