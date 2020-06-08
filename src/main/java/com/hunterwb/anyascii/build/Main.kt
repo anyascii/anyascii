@@ -149,6 +149,7 @@ private fun custom() = Table()
         .then(Table("makasar"))
         .then(Table("pau-cin-hau"))
         .then(Table("elbasan"))
+        .then(Table("caucasian-albanian"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
