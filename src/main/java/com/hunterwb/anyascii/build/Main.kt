@@ -151,6 +151,7 @@ private fun custom() = Table()
         .then(Table("elbasan"))
         .then(Table("caucasian-albanian"))
         .then(palmyrene())
+        .then(hatran())
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
@@ -329,3 +330,7 @@ private fun shorthandFormatControls() = (0x1bca0..0x1bcaf).filterDefined().toTab
 private fun palmyrene() = Table()
         .then(Table("palmyrene"))
         .then((0x10879..0x1087f).toTable { it.numericValue.toString() })
+
+private fun hatran() = Table()
+        .then(Table("hatran"))
+        .then((0x108fb..0x108ff).toTable { it.numericValue.toString() })
