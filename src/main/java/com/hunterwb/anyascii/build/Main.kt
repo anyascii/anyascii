@@ -156,6 +156,7 @@ private fun custom() = Table()
         .then(Table("tai-le"))
         .then(Table("mongolian"))
         .then(bamum())
+        .then(Table("syloti-nagri"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))

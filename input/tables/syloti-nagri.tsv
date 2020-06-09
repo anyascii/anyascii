@@ -1,0 +1,52 @@
+# https://www.unicode.org/charts/PDF/UA800.pdf
+# https://www.unicode.org/L2/L2002/02388-syloti-proposal.pdf
+# independent vowels
+ꠀ	a
+ꠁ	i
+ꠂ	i
+ꠃ	u
+ꠄ	e
+ꠅ	o
+# consonants
+ꠇ	k
+ꠈ	kh
+ꠉ	g
+ꠊ	gh
+ꠋ	ng
+ꠌ	c
+ꠍ	ch
+ꠎ	j
+ꠏ	jh
+ꠐ	t
+ꠑ	th
+ꠒ	d
+ꠓ	dh
+ꠔ	t
+ꠕ	th
+ꠖ	d
+ꠗ	dh
+ꠘ	n
+ꠙ	p
+ꠚ	ph
+ꠛ	b
+ꠜ	bh
+ꠝ	m
+ꠞ	r
+ꠟ	l
+ꠠ	r
+ꠡ	s
+ꠢ	h
+# dependent vowels
+ꠣ	a
+ꠤ	i
+ꠥ	u
+ꠦ	e
+ꠧ	oo
+#
+꠨	1
+꠩	2
+꠪	3
+꠫	4
+# hasanta
+꠆	
+꠬	
