@@ -155,6 +155,7 @@ private fun custom() = Table()
         .then(nabataean())
         .then(Table("tai-le"))
         .then(Table("mongolian"))
+        .then(bamum())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -320,3 +321,7 @@ private fun hatran() = Table("hatran")
 
 private fun nabataean() = Table("nabataean")
         .then((0x108a7..0x108af).toTable { it.numericValue.toString() })
+
+private fun bamum() = Table("bamum")
+        .then((0xa6e6..0xa6ef).toTable { it.numericValue.toString() })
+        .then((0xa6a0..0xa6e5).toTable { it.name.substringAfterLast(' ').lower().capitalize() })
