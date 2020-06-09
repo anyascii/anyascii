@@ -1,1 +1,1 @@
-module.exports='																																																																						0	1	2	3	4	5	6	7	8	9																																																																																																																																	0	1	2	3	4	5	6	7	8	9'.split('	')
+module.exports='																																																																						0	1	2	3	4	5	6	7	8	9	k	x	ng	ts	s	y	t	th	l	p	ph	m	f	v	h	q	kh	tsh	n	a	i	ee	eh	u	oo	o	ue	e	aue	ai																																																																																																			0	1	2	3	4	5	6	7	8	9'.split('	')

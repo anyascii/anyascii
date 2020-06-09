@@ -153,6 +153,7 @@ private fun custom() = Table()
         .then(palmyrene())
         .then(hatran())
         .then(nabataean())
+        .then(Table("tai-le"))
 
 private fun cyrillic() = Table()
         .then(Table("cyrillic"))
