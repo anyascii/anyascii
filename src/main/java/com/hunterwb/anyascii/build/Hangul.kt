@@ -1,7 +1,6 @@
 package com.hunterwb.anyascii.build
 
-fun hangul() = Table()
-        .then(Table("hangul"))
+fun hangul() = Table("hangul")
         .combinations()
         .syllables()
 

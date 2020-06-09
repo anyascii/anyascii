@@ -155,13 +155,11 @@ private fun custom() = Table()
         .then(nabataean())
         .then(Table("tai-le"))
 
-private fun cyrillic() = Table()
-        .then(Table("cyrillic"))
+private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
         .aliasing((0xa674..0xa67b) + (0xa69e..0xa69f) + (0x2de0..0x2dff) - 0x2df5) { it.replace("COMBINING CYRILLIC", "CYRILLIC SMALL") }
 
-private fun coptic() = Table()
-        .then(Table("coptic"))
+private fun coptic() = Table("coptic")
         .cased(codePoints("Copt"))
 
 private fun yi() = Table()
@@ -169,8 +167,7 @@ private fun yi() = Table()
         .then((0xa000..0xa48c).toTable { it.name.substringAfterLast(' ').lower() }) // syllables
         .then((0xa490..0xa4c6).toTable { it.name.substringAfterLast(' ') }) // radicals
 
-private fun vai() = Table()
-        .then(Table("vai"))
+private fun vai() = Table("vai")
         .then((0xa500..0xa62b).toTable { it.name.substringAfterLast(' ').lower() })
 
 private fun ethiopic() = Table()
@@ -201,8 +198,7 @@ private fun dominoes() = (0x1f030..0x1f093).toTable {
 
 private fun cypriot() = codePoints("Cprt").toTable { it.name.substringAfterLast(' ').lower() }
 
-private fun braille() = Table()
-        .then(Table("braille"))
+private fun braille() = Table("braille")
         .then(codePoints("Brai").toTable { "{${it.name.substringAfterLast('-')}}" })
 
 private fun lydian() = codePoints("Lydi").toTable {
@@ -212,30 +208,24 @@ private fun lydian() = codePoints("Lydi").toTable {
 
 private fun lycian() = codePoints("Lyci").toTable { it.name.lower().substringAfterLast(' ') }
 
-private fun georgian() = Table()
-        .then(Table("georgian"))
+private fun georgian() = Table("georgian")
         .aliasing(codePoints("Geor").filterName { "SMALL LETTER" in it }) { it.replace("SMALL ", "") }
         .cased(codePoints("Geor"))
 
-private fun armenian() = Table()
-        .then(Table("armenian"))
+private fun armenian() = Table("armenian")
         .cased(codePoints("Armn"))
 
-private fun latin() = Table()
-        .then(Table("latin"))
+private fun latin() = Table("latin")
         .cased(codePoints("Latn"))
 
-private fun katakana() = Table()
-        .then(Table("katakana"))
+private fun katakana() = Table("katakana")
         .aliasing(codePoints("Kana").filterName { it.startsWith("KATAKANA LETTER SMALL") }) { it.replace("SMALL ", "") }
 
-private fun hiragana() = Table()
-        .then(Table("hiragana"))
+private fun hiragana() = Table("hiragana")
         .aliasing(codePoints("Hira").filterName { it.startsWith("HIRAGANA LETTER SMALL") }) { it.replace("SMALL ", "") }
         .then(codePoints("Hira").filterName { it.startsWith("HENTAIGANA") }.toTable { it.name.substringAfterLast(' ').substringBefore('-').lower() })
 
-private fun deseret() = Table()
-        .then(Table("deseret"))
+private fun deseret() = Table("deseret")
         .cased(codePoints("Dsrt"))
 
 private fun oldItalic() = Table()
@@ -246,16 +236,13 @@ private fun oldItalic() = Table()
             return@toTable n.replace("[aeu]".toRegex(), "")
         })
 
-private fun sinhala() = Table()
-        .then(Table("sinhala"))
+private fun sinhala() = Table("sinhala")
         .then((0x111e0..0x111ff).filterDefined().toTable { it.numericValue.toString() })
 
-private fun dingbats() = Table()
-        .then(Table("dingbats"))
+private fun dingbats() = Table("dingbats")
         .then((0x2776..0x2793).toTable { it.numericValue.toString() })
 
-private fun cjkMisc() = Table()
-        .then(Table("cjk-misc"))
+private fun cjkMisc() = Table("cjk-misc")
         .then((0x3021..0x3029).toTable { "${(it - 0x3021 + 1)}" }) // hangzhou numerals
         .then((0x3220..0x3229).toTable { "(${(it - 0x3220 + 1)})" }) // parenthesized numbers
         .then((0x3248..0x324f).toTable { it.numericValue.toString() }) // circled number on black square
@@ -264,8 +251,7 @@ private fun cjkMisc() = Table()
         .then((0x3358..0x3370).toTable { "${(it - 0x3358)}H" }) // telegraph hours
         .then((0x33e0..0x33fe).toTable { "${(it - 0x33e0 + 1)}D" }) // telegraph days
 
-private fun glagolitic() = Table()
-        .then(Table("glagolitic"))
+private fun glagolitic() = Table("glagolitic")
         .cased(codePoints("Glag"))
 
 private fun baybayin() = (0x1700..0x177f).filterDefined().toTable { cp ->
@@ -286,13 +272,11 @@ private fun ideographicDescription() = (0x2ff0..0x2fff).filterDefined().toTable 
 // https://www.unicode.org/wg2/docs/n3020.pdf
 private fun carian() = (0x102a0..0x102df).filterDefined().toTable { it.name.substringAfterLast(' ') }
 
-private fun tibetan() = Table()
-        .then(Table("tibetan"))
+private fun tibetan() = Table("tibetan")
         .aliasing(codePoints("Tibt").filterName { "SUBJOINED LETTER FIXED-FORM" in it }) { it.replace("SUBJOINED LETTER FIXED-FORM", "LETTER") }
         .aliasing(codePoints("Tibt").filterName { "SUBJOINED LETTER" in it && "FIXED-FORM" !in it }) { it.replace("SUBJOINED LETTER", "LETTER") }
 
-private fun canadianSyllabics() = Table()
-        .then(Table("canadian-syllabics"))
+private fun canadianSyllabics() = Table("canadian-syllabics")
         .then(codePoints("Cans").toTable { it.name.substringAfterLast(' ').lower() })
 
 private fun halfwidthFullwidth() = (0xff00..0xffef).filterDefined().toTable { cp ->
@@ -306,8 +290,7 @@ private fun combiningDiacriticalMarks() = Table()
         .then((0x363..0x36f).toTable { it.name.substringAfterLast(' ').lower() })
         .then((0x300..0x362).toTable { "" })
 
-private fun phoenician() = Table()
-        .then(Table("phoenician"))
+private fun phoenician() = Table("phoenician")
         .then((0x10916..0x1091b).toTable { it.numericValue.toString() })
 
 private val LINEAR_AB_ID = "(\\S*?)(\\d{3})(\\S*)".toRegex()
@@ -319,8 +302,7 @@ private fun linearAb() = codePoints("Lina").plus(codePoints("Linb")).toTable { c
     "$pre$id$post2"
 }
 
-private fun imperialAramaic() = Table()
-        .then(Table("imperial-aramaic"))
+private fun imperialAramaic() = Table("imperial-aramaic")
         .then((0x10858..0x1085f).toTable { it.numericValue.toString() })
 
 private fun countingRodNumerals() = (0x1d360..0x1d378).toTable { NUMBER_SPELLOUT.parse(it.name.substringAfterLast(' ').lower()).toString() }
@@ -329,14 +311,11 @@ private fun mayanNumerals() = (0x1d2e0..0x1d2f3).toTable { it.numericValue.toStr
 
 private fun shorthandFormatControls() = (0x1bca0..0x1bcaf).filterDefined().toTable { it.toString(16).takeLast(1) }
 
-private fun palmyrene() = Table()
-        .then(Table("palmyrene"))
+private fun palmyrene() =Table("palmyrene")
         .then((0x10879..0x1087f).toTable { it.numericValue.toString() })
 
-private fun hatran() = Table()
-        .then(Table("hatran"))
+private fun hatran() = Table("hatran")
         .then((0x108fb..0x108ff).toTable { it.numericValue.toString() })
 
-private fun nabataean() = Table()
-        .then(Table("nabataean"))
+private fun nabataean() = Table("nabataean")
         .then((0x108a7..0x108af).toTable { it.numericValue.toString() })
