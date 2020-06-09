@@ -4,7 +4,7 @@ set -eux
 
 cd -- "$(dirname -- "${BASH_SOURCE:-$0}")"
 
-shells='sh bash dash zsh yash posh mksh rbash ksh93'
+shells='sh bash dash zsh yash posh mksh rbash rzsh ksh93'
 for shell in $shells
 do
 	if command -v "$shell"
