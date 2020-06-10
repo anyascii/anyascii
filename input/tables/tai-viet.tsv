@@ -1,0 +1,82 @@
+# https://www.unicode.org/charts/PDF/UAA80.pdf
+# https://www.unicode.org/wg2/docs/n3220.pdf
+# https://www.unicode.org/L2/L2008/08217-tai-don.pdf
+# knab 2013
+# consonants
+ꪀ	k
+ꪁ	k
+ꪂ	kh
+ꪃ	kh
+ꪄ	x
+ꪅ	x
+ꪆ	g
+ꪇ	g
+ꪈ	ng
+ꪉ	ng
+ꪊ	c
+ꪋ	c
+ꪌ	ch
+ꪍ	ch
+ꪎ	s
+ꪏ	s
+ꪐ	ny
+ꪑ	ny
+ꪒ	d
+ꪓ	d
+ꪔ	t
+ꪕ	t
+ꪖ	th
+ꪗ	th
+ꪘ	n
+ꪙ	n
+ꪚ	b
+ꪛ	b
+ꪜ	p
+ꪝ	p
+ꪞ	ph
+ꪟ	ph
+ꪠ	f
+ꪡ	f
+ꪢ	m
+ꪣ	m
+ꪤ	y
+ꪥ	y
+ꪦ	r
+ꪧ	r
+ꪨ	l
+ꪩ	l
+ꪪ	v
+ꪫ	v
+ꪬ	h
+ꪭ	h
+ꪮ	'
+ꪯ	'
+# vowels and finals
+ꪰ	a
+ꪱ	aa
+ꪲ	i
+ꪳ	ue
+ꪴ	u
+ꪵ	e
+ꪶ	o
+ꪷ	oa
+ꪸ	ia
+ꪹ	uea
+ꪺ	ua
+ꪻ	aue
+ꪼ	ay
+ꪽ	an
+ꪾ	am
+# tones
+꪿	
+ꫀ	
+꫁	
+ꫂ	
+# word ligature symbols
+ꫛ	kon
+ꫜ	nueng
+# repetition mark
+ꫝ	-
+# punctuation
+꫞	<
+꫟	>
