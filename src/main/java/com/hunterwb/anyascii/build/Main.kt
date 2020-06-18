@@ -162,6 +162,7 @@ private fun custom() = Table()
         .then(Table("cham"))
         .then(Table("tai-viet"))
         .then(Table("javanese"))
+        .then(Table("batak"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))

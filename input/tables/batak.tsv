@@ -1,0 +1,66 @@
+# https://www.unicode.org/charts/PDF/U1BC0.pdf
+# https://www.unicode.org/wg2/docs/n3320.pdf
+# https://en.wikipedia.org/wiki/Batak_script
+# ala-lc 2012
+# letters
+ᯀ	
+ᯁ	
+ᯂ	h
+ᯃ	h
+ᯄ	h
+ᯅ	b
+ᯆ	b
+ᯇ	p
+ᯈ	p
+ᯉ	n
+ᯊ	n
+ᯋ	w
+ᯌ	w
+ᯍ	w
+ᯎ	g
+ᯏ	g
+ᯐ	j
+ᯑ	d
+ᯒ	r
+ᯓ	r
+ᯔ	m
+ᯕ	m
+ᯖ	t
+ᯗ	t
+ᯘ	s
+ᯙ	s
+ᯚ	s
+ᯛ	y
+ᯜ	y
+ᯝ	ng
+ᯞ	l
+ᯟ	l
+ᯠ	ny
+ᯡ	c
+ᯢ	nd
+ᯣ	mb
+ᯤ	i
+ᯥ	u
+# sign
+᯦	'
+# dependent vowel signs
+ᯧ	e
+ᯨ	e
+ᯩ	e
+ᯪ	i
+ᯫ	i
+ᯬ	o
+ᯭ	o
+ᯮ	u
+ᯯ	u
+# dependent consonant signs
+ᯰ	ng
+ᯱ	h
+# signs
+᯲	
+᯳	
+# punctuation
+᯼	*
+᯽	+
+᯾	|
+᯿	)
