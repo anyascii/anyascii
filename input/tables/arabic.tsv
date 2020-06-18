@@ -17,7 +17,7 @@
 ض	d
 ط	t
 ظ	dh
-ع	'
+ع	`
 غ	gh
 ف	f
 ق	q
@@ -50,9 +50,9 @@
 ٍ	in
 ﷹ	Salla
 ﷲ	Allah
-ﷷ	'Alayhi
+ﷷ	`Alayhi
 ﷸ	Wa-Sallam
-ﷺ	Salla Allah 'Alayhi Wa-Sallam
+ﷺ	Salla Allah `Alayhi Wa-Sallam
 # arabic bgn/pcgn 1956
 ڨ	g
 ٱ	'
@@ -76,9 +76,26 @@
 ے	e
 ٰ	a
 # kurdish bgn/pcgn 2007
+ڕ	r
+ڔ	r
+ڒ	r
 ڵ	l
+ڶ	l
 ۊ	u
 # sindhi ala-lc 2013
+ٻ	b
+ڀ	bh
+ٿ	th
+ٽ	t
+ٺ	th
+ڄ	j
+ڃ	ny
+ڇ	ch
+ڌ	dh
+ڏ	d
+ڊ	d
+ڍ	dh
+ڙ	r
 ڦ	ph
 ڪ	k
 ک	kh
@@ -98,10 +115,22 @@
 ڟ	th
 ڠ	ng
 ڽ	ny
-# arwi
+# pushto ala-lc 2013
+ګ	g
+# https://en.wikipedia.org/wiki/Arwi
+ڣ	p
 ࢳ	ng
 ࢴ	g
 ࣣ	e
+ڹ	n
+ݧ	ny
+# https://en.wikipedia.org/wiki/Wolofal_alphabet
+ݖ	c
+ݝ	ng
+ݤ	ng
+ݒ	p
+# https://en.wikipedia.org/wiki/Lezgin_alphabets
+ڗ	ts
 # burushaski
 ݳ	a
 ݴ	aa
@@ -115,6 +144,9 @@
 ݽ	s
 ݶ	ii
 ݷ	y
+# https://en.wikipedia.org/wiki/Rasm
+ٮ	b
+ٯ	q
 # other
 ؉	%0
 ؊	%00
@@ -127,6 +159,11 @@
 ؛	;
 ۽	&
 ۩	^
+# rumi numeral symbols
+𐹻	1/2
+𐹼	1/4
+𐹽	1/3
+𐹾	2/3
 # words
 ﷰ	Salla
 ﷱ	Qala
