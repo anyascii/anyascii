@@ -1,6 +1,7 @@
 package com.hunterwb.anyascii.build
 
 import com.hunterwb.anyascii.build.gen.generate
+import com.ibm.icu.lang.UCharacter
 import com.ibm.icu.text.Transliterator
 import java.time.Duration
 import java.time.Instant
@@ -164,6 +165,7 @@ private fun custom() = Table()
         .then(Table("javanese"))
         .then(Table("batak"))
         .then(Table("sundanese"))
+        .then(cherokee())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -336,3 +338,6 @@ private fun bamum() = Table("bamum")
 
 private fun arabic() = Table("arabic")
         .then((0x10e60..0x10e7a).toTable { it.numericValue.toString() })
+
+private fun cherokee() = codePoints("Cher").filter { UCharacter.isULowercase(it) }.toTable { it.name.substringAfterLast(' ').lower() }
+        .cased(codePoints("Cher"))
