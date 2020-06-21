@@ -140,7 +140,6 @@ private fun custom() = Table()
         .then(Table("alchemical"))
         .then(phoenician())
         .then(linearAb())
-        .then(imperialAramaic())
         .then(Table("chess-symbols"))
         .then(Table("ornamental-dingbats"))
         .then(countingRodNumerals())
@@ -151,9 +150,6 @@ private fun custom() = Table()
         .then(Table("pau-cin-hau"))
         .then(Table("elbasan"))
         .then(Table("caucasian-albanian"))
-        .then(palmyrene())
-        .then(hatran())
-        .then(nabataean())
         .then(Table("tai-le"))
         .then(Table("mongolian"))
         .then(bamum())
@@ -305,6 +301,13 @@ private fun combiningDiacriticalMarks() = Table()
 
 private fun phoenician() = Table("phoenician")
         .then((0x10916..0x1091b).toTable { it.numericValue.toString() })
+        .then((0x10858..0x1085f).toTable { it.numericValue.toString() })
+        .then((0x10879..0x1087f).toTable { it.numericValue.toString() })
+        .then((0x108fb..0x108ff).toTable { it.numericValue.toString() })
+        .then((0x108a7..0x108af).toTable { it.numericValue.toString() })
+        .then((0x10b58..0x10b5f).toTable { it.numericValue.toString() })
+        .then((0x10b78..0x10b7f).toTable { it.numericValue.toString() })
+        .then((0x10ba9..0x10baf).toTable { it.numericValue.toString() })
 
 private val LINEAR_AB_ID = "(\\S*?)(\\d{3})(\\S*)".toRegex()
 
@@ -315,23 +318,11 @@ private fun linearAb() = codePoints("Lina").plus(codePoints("Linb")).toTable { c
     "$pre$id$post2"
 }
 
-private fun imperialAramaic() = Table("imperial-aramaic")
-        .then((0x10858..0x1085f).toTable { it.numericValue.toString() })
-
 private fun countingRodNumerals() = (0x1d360..0x1d378).toTable { NUMBER_SPELLOUT.parse(it.name.substringAfterLast(' ').lower()).toString() }
 
 private fun mayanNumerals() = (0x1d2e0..0x1d2f3).toTable { it.numericValue.toString() }
 
 private fun shorthandFormatControls() = (0x1bca0..0x1bcaf).filterDefined().toTable { it.toString(16).takeLast(1) }
-
-private fun palmyrene() =Table("palmyrene")
-        .then((0x10879..0x1087f).toTable { it.numericValue.toString() })
-
-private fun hatran() = Table("hatran")
-        .then((0x108fb..0x108ff).toTable { it.numericValue.toString() })
-
-private fun nabataean() = Table("nabataean")
-        .then((0x108a7..0x108af).toTable { it.numericValue.toString() })
 
 private fun bamum() = Table("bamum")
         .then((0xa6e6..0xa6ef).toTable { it.numericValue.toString() })

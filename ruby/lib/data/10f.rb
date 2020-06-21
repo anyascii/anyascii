@@ -1,0 +1,1 @@
+module X10f B='																																																																																																																																																																																																																																\'	b	g	d	h	w	z	h.	t.	y	k	l	m	n	s	`	p	s.	q	r	sh	t	zy'.split '	' end
