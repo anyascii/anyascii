@@ -121,6 +121,7 @@ When converting text between languages there are multiple properties that can be
 [Romanization](https://en.wikipedia.org/wiki/Romanization) is the conversion into the Latin script using transliteration or transcription or a mix of both.
 Romanization is most commonly used when representing the names of people and places.
 
+> _South Korea's Ministry of Culture & Tourism_:
 > Clear to anyone, Romanization is for foreigners.
 > Geographical names are Romanized to help foreigners find the place they intend to go to and help them remember cities, villages and mountains they visited and climbed.
 > But it is Koreans who make up the Roman transcription of their proper names to print on their business cards and draw up maps for international tourists.
