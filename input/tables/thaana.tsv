@@ -1,5 +1,8 @@
+# https://www.unicode.org/charts/PDF/U0780.pdf
 # https://en.wikipedia.org/wiki/Thaana
-# arabic ungegn 2017
+# bgn/pcgn 2009
+# knab 2009
+# consonants
 ހ	h
 ށ	sh
 ނ	n
@@ -24,20 +27,22 @@
 ޕ	p
 ޖ	j
 ޗ	ch
-ޘ	th
-ޙ	h
+# extensions for arabic
+ޘ	th'
+ޙ	h'
 ޚ	kh
-ޛ	dh
-ޜ	zh
-ޝ	sh
-ޞ	s
-ޟ	d
-ޠ	t
-ޡ	dh
+ޛ	dh'
+ޜ	x
+ޝ	sh'
+ޞ	s'
+ޟ	l'
+ޠ	t'
+ޡ	z'
 ޢ	'
 ޣ	gh
 ޤ	q
 ޥ	w
+# vowels
 ަ	a
 ާ	aa
 ި	i
@@ -49,4 +54,5 @@
 ޮ	o
 ޯ	oa
 ް	
+# addu
 ޱ	n
