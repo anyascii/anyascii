@@ -164,6 +164,7 @@ private fun custom() = Table()
         .then(cherokee())
         .then(Table("new-tai-lue"))
         .then(Table("saurashtra"))
+        .then(syriac())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -220,6 +221,7 @@ private fun lycian() = codePoints("Lyci").toTable { it.name.lower().substringAft
 
 private fun georgian() = Table("georgian")
         .aliasing(codePoints("Geor").filterName { "SMALL LETTER" in it }) { it.replace("SMALL ", "") }
+        .transliterate()
         .cased(codePoints("Geor"))
 
 private fun armenian() = Table("armenian")
@@ -334,3 +336,6 @@ private fun arabic() = Table("arabic")
 
 private fun cherokee() = codePoints("Cher").filter { UCharacter.isULowercase(it) }.toTable { it.name.substringAfterLast(' ').lower() }
         .cased(codePoints("Cher"))
+
+private fun syriac() = Table("syriac")
+        .aliasing((0x0860..0x086a)) { it.replace("SYRIAC LETTER MALAYALAM", "MALAYALAM LETTER") }

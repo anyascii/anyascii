@@ -1,1 +1,1 @@
-module.exports='																																																																																																																																																																																			ng	g																																															e'.split('	')
+module.exports='																																																																																																n	j	n	t	n	n	bh	r	l	l	s																																																																									ng	g																																															e'.split('	')

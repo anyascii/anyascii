@@ -79,7 +79,7 @@ fun Table.aliasing(codePoints: Iterable<CodePoint>, nameTransform: (String) -> S
         val name2 = nameTransform(name1)
         val cp2 = UCharacter.getCharFromName(name2)
         check(cp2 != -1) { "$name1 - $name2" }
-        putIfAbsent(cp1, getValue(cp2))
+        putIfAbsent(cp1, cp2.asString())
     }
 }
 
