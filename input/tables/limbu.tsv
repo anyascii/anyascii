@@ -1,0 +1,68 @@
+# https://www.unicode.org/charts/PDF/U1900.pdf
+# https://en.wikipedia.org/wiki/Limbu_script
+# https://www.unicode.org/wg2/docs/n2410.pdf
+# https://www.unicode.org/wg2/docs/n3975.pdf
+# ala-lc 2011
+# consonants
+ᤀ	
+ᤁ	k
+ᤂ	kh
+ᤃ	g
+ᤄ	gh
+ᤅ	n
+ᤆ	c
+ᤇ	ch
+ᤈ	j
+ᤉ	jh
+ᤊ	n
+ᤋ	t
+ᤌ	th
+ᤍ	d
+ᤎ	dh
+ᤏ	n
+ᤐ	p
+ᤑ	ph
+ᤒ	b
+ᤓ	bh
+ᤔ	m
+ᤕ	y
+ᤖ	r
+ᤗ	l
+ᤘ	v
+ᤙ	s
+ᤚ	s
+ᤛ	s
+ᤜ	h
+ᤝ	jn
+ᤞ	tr
+# dependent vowel signs
+ᤠ	a
+ᤡ	i
+ᤢ	u
+ᤣ	e
+ᤤ	ai
+ᤥ	o
+ᤦ	au
+ᤧ	e
+ᤨ	o
+# subjoined consonants
+ᤩ	y
+ᤪ	r
+ᤫ	v
+# final consonants
+ᤰ	k
+ᤱ	n
+ᤲ	n
+ᤳ	t
+ᤴ	n
+ᤵ	p
+ᤶ	m
+ᤷ	r
+ᤸ	l
+# various signs
+᤹	h
+᤺	'
+᤻	
+᥀	lo
+᥄	!
+᥅	?
