@@ -69,7 +69,7 @@ private fun custom() = Table()
         .then(ethiopic())
         .then(dominoes())
         .then(Table("ocr"))
-        .then(olChiki())
+        .then(Table("ol-chiki"))
         .then(cyrillic())
         .then((0x24eb..0x24ff).toTable { it.numericValue.toString() }) // circled numbers
         .then(coptic())
@@ -189,12 +189,6 @@ private fun ethiopic() = Table()
         .then(codePoints("Ethi").filterName { it.contains("SYLLABLE") }.toTable {
             val name = it.name.removePrefix("ETHIOPIC SYLLABLE ").removePrefix("SEBATBEIT ").lower()
             if (' ' in name) "'${name.substringAfterLast(' ')}" else name
-        })
-
-private fun olChiki() = Table()
-        .then((0x1c5a..0x1c77).toTable {
-            val name = it.name.substringAfterLast(' ').lower()
-            if (name.startsWith('l')) name.substring(1) else name.replace("[aeiou]".toRegex(), "")
         })
 
 private fun dominoes() = (0x1f030..0x1f093).toTable {
