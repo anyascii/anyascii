@@ -1,1 +1,1 @@
-module.exports='																																																																																																n	j	n	t	n	n	bh	r	l	l	s																																																																									ng	g																																															e'.split('	')
+module.exports="																																																																a	b	g	d	h	u	z	h.	t.	i	k	l	m	n	s.	`	p	s	q	r	sh	t	d.	kd.	`	'					,		n	j	n	t	n	n	bh	r	l	l	s																																																																									ng	g																																															e".split('	')
