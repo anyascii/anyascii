@@ -168,6 +168,7 @@ private fun custom() = Table()
         .then(Table("limbu"))
         .then(Table("symbols-for-legacy-computing"))
         .then(Table("mandaic"))
+        .then(Table("specials"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
