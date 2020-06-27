@@ -1,3 +1,8 @@
+# https://www.unicode.org/versions/Unicode13.0.0/ch09.pdf
+# https://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=arabicletterusagenotes&filename=ArabicLetterUsageNotes.pdf
+# https://r12a.github.io/scripts/arabic/block
+# https://r12a.github.io/scripts/arabic/
+#
 # arabic ungegn 2017
 ء	'
 ا	
@@ -45,18 +50,22 @@
 ڢ	f
 ڧ	q
 ة	h
-ٌ	un
-ً	an
-ٍ	in
+ٌ	
+ً	
+ٍ	
+ﹲ	un
+ﹰ	an
+ﹴ	in
 ﷹ	Salla
 ﷲ	Allah
 ﷷ	`Alayhi
 ﷸ	Wa-Sallam
 ﷺ	Salla Allah `Alayhi Wa-Sallam
 # arabic bgn/pcgn 1956
-ڨ	g
 ٱ	'
-# afghan bgn/pcgn 2007
+ڨ	g
+ڭ	g
+# afghanistan bgn/pcgn 2007
 ټ	t
 ځ	dz
 څ	ts
@@ -64,24 +73,23 @@
 ړ	r
 ږ	zh
 ښ	sh
+ک	k
+ګ	g
 ڼ	n
+ہ	h
 ى	y
 ٙ	e
+ی	i
 ې	e
+ۍ	ey
 # urdu bgn/pcgn 2007
+ٹ	t
 ڈ	d
 ڑ	r
-ہ	h
+ں	n
 ھ	h
 ے	e
 ٰ	a
-# kurdish bgn/pcgn 2007
-ڕ	r
-ڔ	r
-ڒ	r
-ڵ	l
-ڶ	l
-ۊ	u
 # sindhi ala-lc 2013
 ٻ	b
 ڀ	bh
@@ -89,7 +97,7 @@
 ٽ	t
 ٺ	th
 ڄ	j
-ڃ	ny
+ڃ	n
 ڇ	ch
 ڌ	dh
 ڏ	d
@@ -98,59 +106,206 @@
 ڙ	r
 ڦ	ph
 ڪ	k
-ک	kh
 ڳ	g
 ڱ	n
 ڻ	n
-# kazakh ala-lc 2012
-ۇ	u
-ٷ	u
-# uighur ala-lc 2015
-ڭ	ng
-ۆ	o
-ۈ	u
+# kurdish bgn/pcgn 2007
+ڕ	r
+ڔ	r
+ڒ	r
+ڵ	l
+ڶ	l
+ە	e
 ئ	i
+ێ	e
+ۆ	o
+ۊ	u
+# uighur ala-lc 2015
+ۇ	u
+ۈ	u
+# kashmiri ala-lc 2012
+ۄ	o
+ٲ	a
+ٳ	u
+# kazakh ala-lc 2012
+ٵ	a
+ٶ	o
+ٷ	u
 # jawi-pegon ala-lc 2012
 ڎ	dh
 ڟ	th
 ڠ	ng
+ݢ	g
 ڽ	ny
-# pushto ala-lc 2013
-ګ	g
+ۏ	v
+# https://en.wikipedia.org/wiki/Urdu_alphabet
+ڐ	d
+# https://en.wikipedia.org/wiki/Pashto_alphabet
+ڛ	s
+ۀ	e
+# https://en.wikipedia.org/wiki/Saraiki_alphabet
+ݙ	dd
+ڋ	dd
+ڰ	gg
+ݨ	n
+# https://en.wikipedia.org/wiki/Burushaski
+ݳ	a
+ݴ	aa
+ݘ	c
+ݼ	ch
+ݽ	s
+ڞ	ch
+ݣ	n
+ݸ	o
+ݹ	oo
+ݶ	ii
+ݷ	y
+ݺ	e
+ݻ	ee
 # https://en.wikipedia.org/wiki/Arwi
-ڣ	p
-ࢳ	ng
-ࢴ	g
-ࣣ	e
-ڹ	n
-ݧ	ny
+ٗ	ஒ
+ࣣ	எ
+ڣ	ப்
+ࢳ	ங்
+ࢴ	க்
+ڹ	ண்
+ݧ	ஞ்
+# https://en.wikipedia.org/wiki/Arabi_Malayalam
+٘	എ
+ڿ	ഞ
+ۺ	ഷ
+ۻ	ള
+ۼ	ങ
+۾	മ
+ڗ	ഡ
 # https://en.wikipedia.org/wiki/Wolofal_alphabet
 ݖ	c
 ݝ	ng
 ݤ	ng
 ݒ	p
-# https://en.wikipedia.org/wiki/Lezgin_alphabets
-ڗ	ts
-# burushaski
-ݳ	a
-ݴ	aa
-ٹ	t
-ݘ	c
-ݼ	ch
-ݸ	o
-ݹ	oo
-ݺ	e
-ݻ	ee
-ݽ	s
-ݶ	ii
-ݷ	y
 # https://en.wikipedia.org/wiki/Rasm
 ٮ	b
+ڡ	f
 ٯ	q
+# https://en.wikipedia.org/wiki/Kyrgyz_alphabets
+# bgn/pcgn 1979
+ۅ	o
+ۉ	u
+# http://kevindonnelly.org.uk/swahili/manual_draft.pdf
+ػ	ch
+# https://www.unicode.org/wg2/docs/n3180.pdf
+ؖ	i
+ؾ	i
+ؿ	i
+ݾ	s
+ݿ	g
+ؼ	g
+ؽ	y
+# https://www.unicode.org/wg2/docs/n2723.pdf
+ݫ	r
+ݬ	zh
+ݭ	sh
+ٝ	o
+ٞ	a
+# https://www.unicode.org/wg2/docs/n2598.pdf
+ٚ	e
+ٛ	o
+ٜ	e
+ݜ	sh
+ݩ	n
+# https://www.unicode.org/L2/L2010/10288r-arabic-proposal.pdf
+## chad
+ࢧ	mv
+ࢦ	zl
+ࢥ	gb
+ࢤ	vb
+## senegal
+ࢠ	b
+ࢢ	c
+ࢣ	t
+ࣴ	e
+ࣵ	a
+ࣶ	i
+ࣷ	o
+ࣹ	e
+ࣺ	e
+## cameroon
+ࢡ	b
+ࢨ	y
+ࢩ	ny
+## guinea
+ࣸ	u
+ࣻ	un
+ࣽ	o
+ࣼ	on
+## philippines
+ࣾ	o
+## rohingya
+ࢪ	r
+ࢫ	w
+ࢬ	y
+ࣤ	o
+ࣦ	e
+ࣥ	ou
+ࣧ	on
+ࣩ	en
+ࣨ	oun
+࣪	
+࣫	
+࣬	
+࣭	
+࣮	
+࣯	
+# https://en.wikipedia.org/wiki/Tifinagh
+ڲ	g
+# https://fr.wikipedia.org/wiki/
+ݪ	l
+ݮ	j
+ݯ	c
+ݰ	s
+ݱ	s
+ݲ	j
+ݵ	i
+ڷ	l
+ڮ	kp
+ڝ	ts
+ڂ	dz
+ݔ	ny
+ݗ	ng
+ݠ	p
+ݡ	v
+ݥ	b
+ݦ	mb
+ݚ	d
+ݛ	r
+ݞ	gw
+ݟ	g
+ݕ	b
+ݐ	y
+ݑ	p
+ݓ	c
+ڸ	l
+ۮ	d
+ۯ	l
+ۿ	h
+ڬ	g
+ڜ	ch
+# https://www.unicode.org/L2/L2003/03159-arabic-3dot.pdf
+؞	.
 # other
+ـ	
+ّ	
+؀	#
+؂	^
+؃	#
+؍	/
 ؉	%0
 ؊	%00
 ٪	%
+﴾	(
+﴿	)
+؆	∛
+؇	∜
 ٫	.
 ٬	,
 ٭	*
@@ -159,6 +314,7 @@
 ؛	;
 ۽	&
 ۩	^
+۞	#
 # rumi numeral symbols
 𐹻	1/2
 𐹼	1/4
