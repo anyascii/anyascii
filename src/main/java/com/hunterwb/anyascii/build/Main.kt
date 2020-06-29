@@ -2,7 +2,6 @@ package com.hunterwb.anyascii.build
 
 import com.hunterwb.anyascii.build.gen.generate
 import com.ibm.icu.lang.UCharacter
-import com.ibm.icu.text.Transliterator
 import java.time.Duration
 import java.time.Instant
 import java.util.Locale
@@ -11,7 +10,7 @@ fun main() {
     val start = Instant.now()
     Locale.setDefault(Locale.ROOT)
 
-    val table = ascii()
+    val table = Table(ASCII)
             .then(decimalDigits())
             .then(emojis())
             .then(custom())
@@ -20,32 +19,16 @@ fun main() {
             .then(unihan())
             .normalize(NFKC)
             .then(Table("unidecode"))
-            .then(icu("::Any-Latin; ::Latin-ASCII; [:^ASCII:]>;"))
             .normalize(NFKC)
             .cased(codePoints())
             .transliterate()
-            .minus(ascii().keys)
-            .write("table.tsv")
 
-    table.then(ascii())
+    table.minus(ASCII.keys).write("table.tsv")
+
     generate(table)
 
     println(Duration.between(start, Instant.now()))
 }
-
-private fun icu(rules: String): Table {
-    val table = Table()
-    val transliterator = Transliterator.createFromRules(rules, rules, Transliterator.FORWARD)
-    for (cp in 128..Character.MAX_CODE_POINT) {
-        val output = transliterator.transliterate(cp.asString())
-        if (output.isNotEmpty()) {
-            table[cp] = output
-        }
-    }
-    return table
-}
-
-private fun ascii(): Table = (0..127).toTable { it.asString() }
 
 private fun decimalDigits() = codePoints("Nd").toTable { it.numericValue.toString() }
 
@@ -328,9 +311,6 @@ private fun shorthandFormatControls() = (0x1bca0..0x1bcaf).filterDefined().toTab
 private fun bamum() = Table("bamum")
         .then((0xa6e6..0xa6ef).toTable { it.numericValue.toString() })
         .then((0xa6a0..0xa6e5).toTable { it.name.substringAfterLast(' ').lower().capitalize() })
-
-private fun arabic() = Table("arabic")
-        .then((0x10e60..0x10e7a).toTable { it.numericValue.toString() })
 
 private fun cherokee() = codePoints("Cher").filter { UCharacter.isULowercase(it) }.toTable { it.name.substringAfterLast(' ').lower() }
         .cased(codePoints("Cher"))

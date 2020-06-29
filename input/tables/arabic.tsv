@@ -38,6 +38,9 @@
 ِ	i
 ُ	u
 ْ	
+ً	
+ٍ	
+ٌ	
 # arabic ala-lc 2012
 گ	g
 ڴ	n
@@ -50,12 +53,8 @@
 ڢ	f
 ڧ	q
 ة	h
-ٌ	
-ً	
-ٍ	
-ﹲ	un
-ﹰ	an
-ﹴ	in
+أ	'
+إ	'
 ﷹ	Salla
 ﷲ	Allah
 ﷷ	`Alayhi
@@ -115,7 +114,6 @@
 ڒ	r
 ڵ	l
 ڶ	l
-ە	e
 ئ	i
 ێ	e
 ۆ	o
@@ -131,6 +129,7 @@
 ٵ	a
 ٶ	o
 ٷ	u
+ٸ	i
 # jawi-pegon ala-lc 2012
 ڎ	dh
 ڟ	th
@@ -138,11 +137,44 @@
 ݢ	g
 ڽ	ny
 ۏ	v
+# https://fr.wikipedia.org/wiki/Alphabet_national_tchadien
+ٖ	i
+٘	e
+ٚ	o
+ٛ	e
+ٜ	e
+ۂ	h
+ݝ	ng
+ݧ	n
+ݪ	sl
+ڮ	kp
+ࢧ	mv
+ݦ	mb
+ࢦ	zl
+ࢥ	gb
+ࢤ	vb
+# https://fr.wikipedia.org/wiki/Caractères_coraniques_harmonisés
+ࣵ	a
+ࣶ	i
+ࣷ	o
+ٝ	o
+ࣹ	e
+ࣺ	e
+ࣴ	e
+ݖ	c
+ݒ	p
+ࢠ	b
+ࢢ	c
+ࢣ	t
+ݕ	p
 # https://en.wikipedia.org/wiki/Urdu_alphabet
 ڐ	d
+ۃ	t
 # https://en.wikipedia.org/wiki/Pashto_alphabet
 ڛ	s
 ۀ	e
+# https://en.wikipedia.org/wiki/Kurdish_alphabets
+ە	e
 # https://en.wikipedia.org/wiki/Saraiki_alphabet
 ݙ	dd
 ڋ	dd
@@ -169,9 +201,7 @@
 ࢳ	ங்
 ࢴ	க்
 ڹ	ண்
-ݧ	ஞ்
 # https://en.wikipedia.org/wiki/Arabi_Malayalam
-٘	എ
 ڿ	ഞ
 ۺ	ഷ
 ۻ	ള
@@ -179,16 +209,12 @@
 ۾	മ
 ڗ	ഡ
 # https://en.wikipedia.org/wiki/Wolofal_alphabet
-ݖ	c
-ݝ	ng
 ݤ	ng
-ݒ	p
 # https://en.wikipedia.org/wiki/Rasm
 ٮ	b
 ڡ	f
 ٯ	q
 # https://en.wikipedia.org/wiki/Kyrgyz_alphabets
-# bgn/pcgn 1979
 ۅ	o
 ۉ	u
 # http://kevindonnelly.org.uk/swahili/manual_draft.pdf
@@ -205,30 +231,11 @@
 ݫ	r
 ݬ	zh
 ݭ	sh
-ٝ	o
 ٞ	a
 # https://www.unicode.org/wg2/docs/n2598.pdf
-ٚ	e
-ٛ	o
-ٜ	e
 ݜ	sh
 ݩ	n
 # https://www.unicode.org/L2/L2010/10288r-arabic-proposal.pdf
-## chad
-ࢧ	mv
-ࢦ	zl
-ࢥ	gb
-ࢤ	vb
-## senegal
-ࢠ	b
-ࢢ	c
-ࢣ	t
-ࣴ	e
-ࣵ	a
-ࣶ	i
-ࣷ	o
-ࣹ	e
-ࣺ	e
 ## cameroon
 ࢡ	b
 ࢨ	y
@@ -256,10 +263,31 @@
 ࣭	
 ࣮	
 ࣯	
+# https://www.unicode.org/L2/L2014/14207r-warsh-model.pdf
+ࢻ	f
+ࢼ	q
+ࢽ	n
+# https://www.unicode.org/L2/L2001/01427-parkari_additions.pdf
+ۮ	d
+ۯ	l
+ۿ	h
+# https://www.unicode.org/L2/L2013/13178-bravanese.pdf
+ࢶ	mb
+ࢷ	mp
+ࢸ	t
+ࢹ	nr
+ࢺ	ny
+# https://www.unicode.org/L2/L2011/11209-n4072-arabic.pdf
+ࢭ	
+ࢮ	dz
+ࢯ	ts
+ࢰ	k
+ࢱ	u
 # https://en.wikipedia.org/wiki/Tifinagh
 ڲ	g
 # https://fr.wikipedia.org/wiki/
-ݪ	l
+ۑ	n
+ࢲ	z
 ݮ	j
 ݯ	c
 ݰ	s
@@ -267,7 +295,6 @@
 ݲ	j
 ݵ	i
 ڷ	l
-ڮ	kp
 ڝ	ts
 ڂ	dz
 ݔ	ny
@@ -275,37 +302,88 @@
 ݠ	p
 ݡ	v
 ݥ	b
-ݦ	mb
 ݚ	d
 ݛ	r
 ݞ	gw
 ݟ	g
-ݕ	b
 ݐ	y
 ݑ	p
 ݓ	c
 ڸ	l
-ۮ	d
-ۯ	l
-ۿ	h
 ڬ	g
 ڜ	ch
 # https://www.unicode.org/L2/L2003/03159-arabic-3dot.pdf
 ؞	.
+# https://unicode.org/L2/L2009/09144-arabic-samvat.pdf
+؄	sm.
+# rumi numeral symbols
+𐹻	1/2
+𐹼	1/4
+𐹽	1/3
+𐹾	2/3
+# presentation forms
+﮲	.
+﮳	.
+﮴	.
+﮵	.
+﮶	.
+﮷	.
+﮸	.
+﮹	.
+﮺	.
+﮻	.
+﮼	.
+﮽	.
+﮾	.
+﮿	.
+﯀	.
+﯁	.
+﴾	(
+﴿	)
+ﷰ	Salla
+ﷱ	Qala
+ﷳ	Akbar
+ﷴ	Muhammad
+ﷵ	Salam
+ﷶ	Rasul
+ﷻ	Jalla Jalalahu
+﷽	Bismillah Ar-Rahman Ar-Rahim
+ﹳ	_
+﻿	
+# mathematical alphabetic symbols
+𞸀	a
+𞺀	a
+𞻰	mh
+𞻱	hd
 # other
+ؠ	y
+ؤ	w'
+ۓ	e'
+ٴ	'
+ٓ	a
+ٔ	'
+ٕ	'
+ٟ	'
 ـ	
 ّ	
+# symbols
+؈	r
+؁	sn.
+؅	#
+۝	#
+࣢	#
 ؀	#
 ؂	^
 ؃	#
+؎	^
+؏	*
 ؍	/
 ؉	%0
 ؊	%00
 ٪	%
-﴾	(
-﴿	)
 ؆	∛
 ؇	∜
+۔	.
 ٫	.
 ٬	,
 ٭	*
@@ -315,17 +393,3 @@
 ۽	&
 ۩	^
 ۞	#
-# rumi numeral symbols
-𐹻	1/2
-𐹼	1/4
-𐹽	1/3
-𐹾	2/3
-# words
-ﷰ	Salla
-ﷱ	Qala
-ﷳ	Akbar
-ﷴ	Muhammad
-ﷵ	Salam
-ﷶ	Rasul
-ﷻ	Jalla Jalalahu
-﷽	Bismillah Ar-Rahman Ar-Rahim

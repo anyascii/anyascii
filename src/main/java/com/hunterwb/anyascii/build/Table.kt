@@ -9,6 +9,8 @@ import java.util.TreeMap
 
 typealias Table = TreeMap<CodePoint, String>
 
+val ASCII: Table = (0..127).toTable { it.asString() }
+
 fun Table.then(other: Table) = apply { putAllIfAbsent(other) }
 
 fun Table.then(codePoint: CodePoint, s: String) = apply { putIfAbsent(codePoint, s) }
@@ -97,6 +99,15 @@ fun Table.transliterate(s: String): String? {
     val sb = StringBuilder()
     for (cp in s.codePoints()) {
         val r = get(cp) ?: return null
+        sb.append(r)
+    }
+    return sb.toString()
+}
+
+fun Table.transliterateAny(s: String): String {
+    val sb = StringBuilder()
+    for (cp in s.codePoints()) {
+        val r = get(cp) ?: cp.asString()
         sb.append(r)
     }
     return sb.toString()
