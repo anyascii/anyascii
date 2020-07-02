@@ -18,8 +18,6 @@ fun main() {
             .normalize(NFKD)
             .then(unihan())
             .normalize(NFKC)
-            .then(Table("unidecode"))
-            .normalize(NFKC)
             .cased(codePoints())
             .transliterate()
 
@@ -168,11 +166,8 @@ private fun yi() = Table()
 private fun vai() = Table("vai")
         .then((0xa500..0xa62b).toTable { it.name.substringAfterLast(' ').lower() })
 
-private fun ethiopic() = Table()
-        .then(codePoints("Ethi").filterName { it.contains("SYLLABLE") }.toTable {
-            val name = it.name.removePrefix("ETHIOPIC SYLLABLE ").removePrefix("SEBATBEIT ").lower()
-            if (' ' in name) "'${name.substringAfterLast(' ')}" else name
-        })
+private fun ethiopic() = Table("ethiopic")
+        .then((0x1372..0x137c).toTable { it.numericValue.toString() })
 
 private fun dominoes() = (0x1f030..0x1f093).toTable {
     val name = it.name.removePrefix("DOMINO TILE ")
