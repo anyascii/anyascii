@@ -58,6 +58,8 @@ Representative examples for different languages comparing the Any-Ascii output t
 |Japanese (Hiragana)|さいたま|saitama|Saitama|
 |Japanese (Han)|埼玉県|QiYuXian|Saitama-ken|
 |Japanese (Katakana)|トヨタ|toyota|Toyota|
+|Amharic (Ethiopic)|ደብረ ዘይት|debre zeyt|Dobre Zeyit|
+|Tigrinya (Ethiopic)|ደቀምሓረ|dek'emhare|Dekemhare|
 |Arabic|دمنهور|dmnhwr|Damanhur|
 |Armenian|Աբովյան|Abovyan|Abovyan|
 |Georgian|სამტრედია|samt'redia|Samtredia|

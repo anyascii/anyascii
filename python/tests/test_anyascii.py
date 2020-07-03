@@ -32,6 +32,8 @@ def test():
     check("さいたま", "saitama")
     check("埼玉県", "QiYuXian")
     check("トヨタ", "toyota")
+    check("ደብረ ዘይት", "debre zeyt")
+    check("ደቀምሓረ", "dek'emhare")
     check("⠠⠎⠁⠽⠀⠭⠀⠁⠛", "^say x ag")
     check("ময়মনসিংহ", "mymnsimh")
     check("પોરબંદર", "porbmdr")
