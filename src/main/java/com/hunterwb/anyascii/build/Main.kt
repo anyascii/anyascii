@@ -151,6 +151,7 @@ private fun custom() = Table()
         .then(Table("mandaic"))
         .then(Table("specials"))
         .then(Table("lisu"))
+        .then(Table("mahjong-tiles"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
