@@ -1,1 +1,1 @@
-module.exports='																																																																																																																																																																																																																													$	$	$	$'.split('	')
+module.exports='																																																																																																																																																																																yh																																													$	$	$	$'.split('	')
