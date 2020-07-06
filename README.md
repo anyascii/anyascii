@@ -94,20 +94,19 @@ Representative examples for different languages comparing the Any-Ascii output t
 > [*](https://www.unicode.org/reports/tr51/#Encoding)
 
 [Unicode](https://en.wikipedia.org/wiki/Unicode) is the universal character set, a global standard to support all the world's languages.
-It consists of 140,000+ characters used by 150+ scripts.
-It also contains various technical symbols, emojis, and other symbolic characters.
-Unicode characters are encoded into bytes using an encoding, typically [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
+It contains 140,000+ characters used by 150+ scripts along with emojis and various symbols.
+Typically encoded into bytes using [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
 
 [ASCII](https://en.wikipedia.org/wiki/ASCII) is the most compatible character set, established in 1967.
 It is a subset of Unicode and UTF-8 consisting of 128 characters using 7-bits.
 The [printable](https://en.wikipedia.org/wiki/ASCII#Printable_characters) characters are English letters, digits, and punctuation,
 with the remaining being [control characters](https://en.wikipedia.org/wiki/ASCII#Control_characters).
-All of the characters found on a standard US keyboard correspond to the printable ASCII characters.
+The characters found on a standard US keyboard correspond to the printable ASCII characters.
 
 > ... expressed only in the original non-control ASCII range so as to be as widely compatible with as many existing tools, languages, and serialization formats as possible and avoid display issues in text editors and source control.
 > [*](https://spec.graphql.org/June2018/#sec-Source-Text)
 
-A language is represented in writing using characters from a specific [script](https://en.wikipedia.org/wiki/Writing_system).
+A language is written using characters from a specific [script](https://en.wikipedia.org/wiki/Writing_system).
 A script can be [alphabetic](https://en.wikipedia.org/wiki/Alphabet), [logographic](https://en.wikipedia.org/wiki/Logogram), [syllabic](https://en.wikipedia.org/wiki/Syllabary), or something else.
 Some languages use multiple scripts: Japanese uses Kanji, Hiragana, and Katakana.
 Some scripts are used by multiple languages: [Han characters](https://en.wikipedia.org/wiki/Chinese_characters) are used in Chinese, Japanese, and Korean.
@@ -116,7 +115,7 @@ The script used by English and ASCII is known as the [Latin script](https://en.w
 When converting text between languages there are multiple properties that can be preserved:
 - Meaning: [Translation](https://en.wikipedia.org/wiki/Translation) replaces text with an equivalent in the target language with the same meaning.
 - Appearance: Preserving the visual appearance of a character when converting between languages is rarely possible and requires readers to have knowledge of the source language.
-- Sound: [Orthographic transcription](https://en.wikipedia.org/wiki/Orthographic_transcription) uses the spelling and pronunciation rules of the target language to produce text that a speaker of the target language will pronounce as accurately as possible to the original.
+- Sound: [Transcription](https://en.wikipedia.org/wiki/Orthographic_transcription) uses the spelling and pronunciation rules of the target language to produce text that a speaker of the target language will pronounce as accurately as possible to the original.
 - Spelling: [Transliteration](https://en.wikipedia.org/wiki/Transliteration) converts each letter individually using predictable rules.
   A reversible transliteration allows for reconstruction of the original text by using unique mappings for each letter.
 
