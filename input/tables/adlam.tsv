@@ -1,0 +1,54 @@
+# https://www.unicode.org/charts/PDF/U1E900.pdf
+# https://en.wikipedia.org/wiki/Adlam_script
+# https://www.unicode.org/L2/L2014/14219r-n4628-adlam.pdf
+# https://www.unicode.org/wg2/docs/n5022-18282r-adlam.pdf
+#
+# small letters
+𞤢	a
+𞤣	d
+𞤤	l
+𞤥	m
+𞤦	b
+𞤧	s
+𞤨	p
+𞤩	bh
+𞤪	r
+𞤫	e
+𞤬	f
+𞤭	i
+𞤮	o
+𞤯	dh
+𞤰	yh
+𞤱	w
+𞤲	n
+𞤳	k
+𞤴	y
+𞤵	u
+𞤶	j
+𞤷	c
+𞤸	h
+𞤹	q
+𞤺	g
+𞤻	ny
+𞤼	t
+𞤽	nh
+# supplementary small letters
+𞤾	v
+𞤿	x
+𞥀	gb
+𞥁	z
+𞥂	kp
+𞥃	sh
+# diacritical marks
+𞥄	
+𞥅	
+𞥆	
+𞥇	'
+𞥈	
+𞥉	
+𞥊	
+# modifier letter
+𞥋	n
+# punctuation
+𞥞	!
+𞥟	?

@@ -157,6 +157,7 @@ private fun custom() = Table()
         .then(Table("samaritan"))
         .then(Table("tai-tham"))
         .then(nushu())
+        .then(adlam())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -326,3 +327,6 @@ private fun nushu() = Table().apply {
         this[cp] = split[2].capitalize()
     }
 }
+
+private fun adlam() = Table("adlam")
+        .cased(codePoints("Adlm"))
