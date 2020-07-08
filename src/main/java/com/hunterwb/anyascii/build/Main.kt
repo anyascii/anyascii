@@ -292,6 +292,7 @@ private fun phoenician() = Table("phoenician")
         .then((0x10b58..0x10b5f).toTable { it.numericValue.toString() })
         .then((0x10b78..0x10b7f).toTable { it.numericValue.toString() })
         .then((0x10ba9..0x10baf).toTable { it.numericValue.toString() })
+        .then((0x10f1d..0x10f25).toTable { it.numericValue.toString() })
 
 private val LINEAR_AB_ID = "(\\S*?)(\\d{3})(\\S*)".toRegex()
 
