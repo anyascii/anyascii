@@ -2,6 +2,7 @@ package com.hunterwb.anyascii.build
 
 import com.hunterwb.anyascii.build.gen.generate
 import com.ibm.icu.lang.UCharacter
+import java.nio.file.Path
 import java.time.Duration
 import java.time.Instant
 import java.util.Locale
@@ -155,6 +156,7 @@ private fun custom() = Table()
         .then(Table("playing-cards"))
         .then(Table("samaritan"))
         .then(Table("tai-tham"))
+        .then(nushu())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -314,3 +316,13 @@ private fun cherokee() = codePoints("Cher").filter { UCharacter.isULowercase(it)
 
 private fun syriac() = Table("syriac")
         .aliasing((0x0860..0x086a)) { it.replace("SYRIAC LETTER MALAYALAM", "MALAYALAM LETTER") }
+
+private fun nushu() = Table().apply {
+    forEachLine(Path.of("input/NushuSources.txt")) { line ->
+        if (line.isEmpty() || line.startsWith('#')) return@forEachLine
+        val split = line.split('\t', limit = 3)
+        if (split[1] != "kReading") return@forEachLine
+        val cp = split[0].drop(2).toInt(16)
+        this[cp] = split[2].capitalize()
+    }
+}
