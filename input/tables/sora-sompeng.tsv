@@ -1,0 +1,32 @@
+# https://www.unicode.org/charts/PDF/U110D0.pdf
+# https://www.unicode.org/wg2/docs/n3647.pdf
+# http://sealang.net/sala/archives/pdf8/zide1999three.pdf
+#
+# consonants
+𑃐	s
+𑃑	t
+𑃒	b
+𑃓	c
+𑃔	d
+𑃕	g
+𑃖	m
+𑃗	ng
+𑃘	l
+𑃙	n
+𑃚	w
+𑃛	p
+𑃜	y
+𑃝	r
+𑃞	h
+𑃟	k
+𑃠	j
+𑃡	ny
+# vowels
+𑃢	a
+𑃣	e
+𑃤	i
+𑃥	u
+𑃦	o
+𑃧	ai
+# other letter
+𑃨	'
