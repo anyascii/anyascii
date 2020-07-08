@@ -324,7 +324,7 @@ private fun nushu() = Table().apply {
         val split = line.split('\t', limit = 3)
         if (split[1] != "kReading") return@forEachLine
         val cp = split[0].drop(2).toInt(16)
-        this[cp] = split[2].capitalize()
+        this[cp] = split[2]
     }
 }
 
