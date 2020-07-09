@@ -33,6 +33,7 @@ private fun decimalDigits() = codePoints("Nd").toTable { it.numericValue.toStrin
 
 private fun custom() = Table()
         .then(combiningDiacriticalMarks())
+        .then(variationSelectors())
         .then(halfwidthFullwidth())
         .then(Table("spacing-modifier-letters"))
         .then(Table("currency-symbols"))
@@ -330,3 +331,7 @@ private fun combiningDiacriticalMarks() = Table()
         .then((0x1dc0..0x1dff).filterDefined().toTable { "" }) // Combining Diacritical Marks Supplement
         .then((0x20d0..0x20ff).filterDefined().toTable { "" }) // Combining Diacritical Marks for Symbols
         .then((0xfe20..0xfe2f).toTable { "" }) // Combining Half Marks
+
+private fun variationSelectors() = Table()
+        .then((0xfe00..0xfe0f).toTable { "" }) // Variation Selectors
+        .then((0xe0100..0xe01ef).toTable { "" }) // Variation Selectors Supplement
