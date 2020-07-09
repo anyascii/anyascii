@@ -42,7 +42,7 @@ private fun custom() = Table()
         .then(Table("nko"))
         .then(Table("math-symbols"))
         .then(Table("kanbun"))
-        .then((0xe0020..0xe007e).toTable { (it - 0xe0000).asString() }) // tags
+        .then(tags())
         .then(cjkMisc())
         .then(Table("kangxi-radicals"))
         .then(Table("cjk-radicals"))
@@ -335,3 +335,7 @@ private fun combiningDiacriticalMarks() = Table()
 private fun variationSelectors() = Table()
         .then((0xfe00..0xfe0f).toTable { "" }) // Variation Selectors
         .then((0xe0100..0xe01ef).toTable { "" }) // Variation Selectors Supplement
+
+private fun tags() = Table()
+        .then((0xe0020..0xe007e).toTable { (it - 0xe0000).asString() })
+        .then((0xe0000..0xe007f).filterDefined().toTable { "" })
