@@ -272,10 +272,6 @@ private fun halfwidthFullwidth() = (0xff00..0xffef).filterDefined().toTable { cp
     CodePoint(name).asString()
 }
 
-private fun combiningDiacriticalMarks() = Table()
-        .then((0x363..0x36f).toTable { it.name.substringAfterLast(' ').lower() })
-        .then((0x300..0x362).toTable { "" })
-
 private fun phoenician() = Table("phoenician")
         .then((0x10916..0x1091b).toTable { it.numericValue.toString() })
         .then((0x10858..0x1085f).toTable { it.numericValue.toString() })
@@ -326,3 +322,11 @@ private fun nushu() = Table().apply {
 
 private fun adlam() = Table("adlam")
         .cased(codePoints("Adlm"))
+
+private fun combiningDiacriticalMarks() = Table()
+        .then((0x300..0x362).toTable { "" }) // Combining Diacritical Marks
+        .then((0x363..0x36f).toTable { it.name.substringAfterLast(' ').lower() })
+        .then((0x1ab0..0x1aff).filterDefined().toTable { "" }) // Combining Diacritical Marks Extended
+        .then((0x1dc0..0x1dff).filterDefined().toTable { "" }) // Combining Diacritical Marks Supplement
+        .then((0x20d0..0x20ff).filterDefined().toTable { "" }) // Combining Diacritical Marks for Symbols
+        .then((0xfe20..0xfe2f).toTable { "" }) // Combining Half Marks
