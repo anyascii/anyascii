@@ -160,6 +160,7 @@ private fun custom() = Table()
         .then(nushu())
         .then(adlam())
         .then(Table("sora-sompeng"))
+        .then(osage())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -339,3 +340,5 @@ private fun variationSelectors() = Table()
 private fun tags() = Table()
         .then((0xe0020..0xe007e).toTable { (it - 0xe0000).asString() })
         .then((0xe0000..0xe007f).filterDefined().toTable { "" })
+
+private fun osage() = Table("osage").cased(codePoints("Osge"))
