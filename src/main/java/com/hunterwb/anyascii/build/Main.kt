@@ -177,16 +177,8 @@ private fun vai() = Table("vai")
 
 private fun dominoes() = (0x1f030..0x1f093).toTable {
     val name = it.name.removePrefix("DOMINO TILE ")
-    var s = name.take(1)
-    if ("BACK" in name) {
-        s += "---"
-    } else {
-        val v = name.split('-')
-        s += v[1].takeLast(1)
-        s += '-'
-        s += v[2].takeLast(1)
-    }
-    s
+    if ("BACK" in name) return@toTable "-"
+    return@toTable name.split('-').let { it[1].takeLast(1) + it[2].takeLast(1) }
 }
 
 private fun cypriot() = codePoints("Cprt").toTable { it.name.substringAfterLast(' ').lower() }
