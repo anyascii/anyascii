@@ -66,7 +66,7 @@ private fun custom() = Table()
         .then(braille())
         .then(Table("gothic"))
         .then(lydian())
-        .then(lycian())
+        .then(Table("lycian"))
         .then(georgian())
         .then(armenian())
         .then(Table("thai"))
@@ -192,8 +192,6 @@ private fun lydian() = codePoints("Lydi").toTable {
     val name = it.name.lower()
     if ("letter" in name) name.substringAfterLast(' ') else ""
 }
-
-private fun lycian() = codePoints("Lyci").toTable { it.name.lower().substringAfterLast(' ') }
 
 private fun georgian() = Table("georgian")
         .aliasing(codePoints("Geor").filterName { "SMALL LETTER" in it }) { it.replace("SMALL ", "") }
