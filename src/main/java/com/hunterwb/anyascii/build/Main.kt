@@ -161,6 +161,7 @@ private fun custom() = Table()
         .then(adlam())
         .then(Table("sora-sompeng"))
         .then(osage())
+        .then(medefaidrin())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -335,3 +336,7 @@ private fun tags() = Table()
         .then((0xe0000..0xe007f).filterDefined().toTable { "" })
 
 private fun osage() = Table("osage").cased(codePoints("Osge"))
+
+private fun medefaidrin() = Table("medefaidrin")
+        .cased(codePoints("Medf"))
+        .then((0x16e80..0x16e96).toTable { it.numericValue.toString() })
