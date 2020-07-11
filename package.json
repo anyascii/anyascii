@@ -2,7 +2,7 @@
   "name": "any-ascii",
   "version": "0.1.6-dev",
   "description": "Unicode to ASCII transliteration",
-  "homepage": "https://github.com/hunterwb/any-ascii",
+  "homepage": "https://anyascii.com",
   "license": "ISC",
   "author": "Hunter WB (http://hunterwb.com)",
   "repository": "hunterwb/any-ascii",

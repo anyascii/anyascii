@@ -2,7 +2,7 @@
 name = "any_ascii"
 version = "0.1.6-dev"
 authors = ["Hunter WB <hunter@hunterwb.com>"]
-homepage = "https://github.com/hunterwb/any-ascii"
+homepage = "https://anyascii.com"
 repository = "https://github.com/hunterwb/any-ascii"
 description = "Unicode to ASCII transliteration"
 license = "ISC"

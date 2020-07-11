@@ -9,7 +9,7 @@
     <PackageTags>unicode;ascii;transliteration;utf8;romanization;slug;emoji;unidecode</PackageTags>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/hunterwb/any-ascii</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/hunterwb/any-ascii</PackageProjectUrl>
+    <PackageProjectUrl>https://anyascii.com</PackageProjectUrl>
   </PropertyGroup>
 
 </Project>

@@ -8,6 +8,8 @@
 
 Unicode to ASCII transliteration
 
+[**Interactive Demo**](https://anyascii.com)
+
 #### Table of Contents
 
 - [Description](#description)
