@@ -1,4 +1,8 @@
-# bgn/pcgn 2002 initials
+# https://www.unicode.org/charts/PDF/U0E00.pdf
+# https://www.unicode.org/versions/Unicode13.0.0/ch16.pdf
+# https://r12a.github.io/scripts/thai/block
+#
+# ungegn 2002 consonant characters (initial)
 ก	k
 ข	kh
 ฃ	kh
@@ -15,6 +19,7 @@
 ฎ	d
 ฏ	t
 ฐ	th
+ฑ	th
 ฒ	th
 ณ	n
 ด	d
@@ -33,9 +38,7 @@
 ม	m
 ย	y
 ร	r
-ฤ	rue
 ล	l
-ฦ	lue
 ว	w
 ศ	s
 ษ	s
@@ -44,6 +47,7 @@
 ฬ	l
 อ	o
 ฮ	h
+# ungegn 2002 vocalic nuclei and special characters
 ะ	a
 ั	a
 า	a
@@ -59,21 +63,22 @@
 โ	o
 ใ	ai
 ไ	ai
-ๅ	a
+ฤ	rue
+ฦ	lue
+ๅ	
+# ungegn 2002 notes
 ็	
 ่	
 ้	
 ๊	
 ๋	
 ์	
-# final
-ฑ	t
 # other
 ฯ	.
 ฺ	
-ๆ	+
+ๆ	'
 ํ	m
 ๎	
 ๏	*
-๚	||
-๛	>>
+๚	#
+๛	@
