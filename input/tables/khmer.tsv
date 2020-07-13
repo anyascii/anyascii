@@ -1,4 +1,7 @@
-# ungegn 2013 consonants
+# https://www.unicode.org/charts/PDF/U1780.pdf
+# https://www.unicode.org/versions/Unicode13.0.0/ch16.pdf
+#
+# ungegn 2013 consonant characters
 ក	k
 ខ	kh
 គ	k
@@ -32,7 +35,7 @@
 ហ	h
 ឡ	l
 អ	'
-# ungegn 2013 provisional 1997 independent vowels
+# provisional 1997 independent vowels
 ឥ	e
 ឦ	ei
 ឧ	o
@@ -47,7 +50,7 @@
 ឱ	ao
 ឲ	ao
 ឳ	ov
-# ungegn 2013 provisional 1997 dependent vowels a-series
+# provisional 1997 dependent vowels (a-series)
 ា	a
 ិ	e
 ី	ei
@@ -64,23 +67,24 @@
 ៃ	ai
 ោ	ao
 ៅ	au
-# ungegn 2013 other
-ឨ	o
+ៈ	ak
+# ungegn 2013 shortened syllables and vocalic nuclei with anuswara or visarga
+់	a
 ំ	am
 ះ	ah
-ៈ	ak
-់	a
+# ungegn 2013 notes
+ឨ	o
 ័	a
 ៌	r
 ៏	
 ៍	
 # other
-ឝ	sh
-ឞ	ss
+ឝ	s
+ឞ	s
 ឣ	'
 ឤ	'a
-឴	'
-឵	a
+឴	
+឵	
 ៉	
 ៊	
 ៎	!
@@ -88,22 +92,11 @@
 ្	
 #៓	_
 ។	.
-៕	|
+៕	#
 ៖	:
 ៗ	-
 ៘	etc.
 ៙	*
-៚	~
-#៛	_
+៚	@
 ៜ	'
 ៝	
-៰	0
-៱	1
-៲	2
-៳	3
-៴	4
-៵	5
-៶	6
-៷	7
-៸	8
-៹	9
