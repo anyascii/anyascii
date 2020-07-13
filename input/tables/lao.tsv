@@ -1,10 +1,15 @@
+# https://www.unicode.org/charts/PDF/U0E80.pdf
+# https://r12a.github.io/scripts/lao/block
+#
+# ungegn 2013 consonant characters (initial)
 ກ	k
 ຂ	kh
 ຄ	kh
 ງ	ng
 ຈ	ch
+ສ	s
 ຊ	x
-ຍ	ny
+ຍ	gn
 ດ	d
 ຕ	t
 ຖ	th
@@ -20,56 +25,57 @@
 ຢ	y
 ຣ	r
 ລ	l
+ຼ	l
 ວ	v
-ສ	s
 ຫ	h
-ອ	o
+ອ	
 ຮ	h
-ຯ	...
+# ungegn 2013 vocalic nuclei
 ະ	a
 ັ	a
 າ	a
-ຳ	am
 ິ	i
 ີ	i
 ຶ	u
 ື	u
 ຸ	ou
 ູ	ou
-ົ	o
-ຼ	l
-ຽ	y
 ເ	e
 ແ	e
+ົ	o
 ໂ	o
-ໃ	ai
+ໍ	o
 ໄ	ai
-ໆ	+
+ໃ	ai
+ຳ	am
+# ungegn 2013 notes
 ່	
 ້	
 ໊	
 ໋	
-໌	
-ໍ	m
 ໜ	n
 ໝ	m
-# pali
+# other
+ຯ	...
+ຽ	i
+ໆ	'
+໌	
+# https://www.unicode.org/wg2/docs/n4861-17106r-lao-for-pali.pdf
 ຆ	gh
 ຉ	ch
 ຌ	jh
-ຎ	ny
-ຏ	tt
-ຐ	tth
-ຑ	dd
-ຒ	ddh
-ຓ	nn
+ຎ	n
+ຏ	t
+ຐ	th
+ຑ	d
+ຒ	dh
+ຓ	n
 ຘ	dh
 ຠ	bh
-ຬ	ll
+ຨ	s
+ຩ	s
+ຬ	l
 ຺	
-# sanskrit
-ຨ	sh
-ຩ	ss
-# khmu
+# https://www.unicode.org/wg2/docs/n3893.pdf
 ໞ	g
-ໟ	ny
+ໟ	n
