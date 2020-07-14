@@ -162,6 +162,7 @@ private fun custom() = Table()
         .then(Table("sora-sompeng"))
         .then(osage())
         .then(medefaidrin())
+        .then(egyptianHieroglyphs())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))

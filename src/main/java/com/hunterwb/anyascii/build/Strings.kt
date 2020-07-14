@@ -1,6 +1,7 @@
 package com.hunterwb.anyascii.build
 
 import com.ibm.icu.lang.UCharacter
+import com.ibm.icu.lang.UProperty
 import com.ibm.icu.lang.UScript
 import com.ibm.icu.text.UnicodeSet
 import java.util.regex.Pattern
@@ -32,6 +33,8 @@ val CodePoint.numericValue: Int get() = UCharacter.getNumericValue(this).also { 
 val CodePoint.isDefined get() = UCharacter.isDefined(this)
 
 val CodePoint.script: Int get() = UScript.getScript(this)
+
+val CodePoint.category: Byte get() = UCharacter.getIntPropertyValue(this, UProperty.GENERAL_CATEGORY).toByte()
 
 fun String.codePointsArray(): IntArray = codePoints().toArray()
 
