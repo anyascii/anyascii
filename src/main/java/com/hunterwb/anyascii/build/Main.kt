@@ -163,6 +163,7 @@ private fun custom() = Table()
         .then(osage())
         .then(medefaidrin())
         .then(egyptianHieroglyphs())
+        .then(marchen())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -335,3 +336,6 @@ private fun medefaidrin() = Table("medefaidrin")
 
 private fun khmer() = Table("khmer")
         .then((0x17f0..0x17f9).toTable { it.numericValue.toString() })
+
+private fun marchen() = Table("marchen")
+        .then(codePoints("Marc").toTable { CodePoint(it.name.replace("MARCHEN", "TIBETAN")).let { if (it == -1) "" else it.asString() } })
