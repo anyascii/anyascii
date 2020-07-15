@@ -27,3 +27,5 @@ inline fun forEachLine(file: Path, f: (String) -> Unit) {
         }
     }
 }
+
+fun Regex.findOnly(input: CharSequence): MatchResult = findAll(input).single()

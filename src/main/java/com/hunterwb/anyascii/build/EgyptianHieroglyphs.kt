@@ -25,9 +25,8 @@ private fun catalogueIds() = codePoints("Egyp")
         .toTable { catalogueId(it) }
 
 private fun catalogueId(cp: CodePoint): String {
-    val s = cp.name.substringAfter(' ')
-    val (prefix, num, suffix) = checkNotNull(CATALOGUE_ID.find(s)).destructured
-    return prefix + num.dropWhile { it == '0' } + suffix.lower()
+    val (prefix, num, suffix) = CATALOGUE_ID.findOnly(cp.name).destructured
+    return prefix + num.stripLeading('0') + suffix.lower()
 }
 
 private fun formatControls() = Table(mapOf(

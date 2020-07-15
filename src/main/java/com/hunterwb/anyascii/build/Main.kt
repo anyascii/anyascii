@@ -122,7 +122,7 @@ private fun custom() = Table()
         .then(Table("buginese"))
         .then(Table("alchemical"))
         .then(phoenician())
-        .then(linearAb())
+        .then(linearAB())
         .then(Table("chess-symbols"))
         .then(Table("ornamental-dingbats"))
         .then(countingRodNumerals())
@@ -281,15 +281,6 @@ private fun phoenician() = Table("phoenician")
         .then((0x10f1d..0x10f25).toTable { it.numericValue.toString() })
         .then((0x10fc5..0x10fcb).toTable { it.numericValue.toString() })
         .then((0x10f51..0x10f54).toTable { it.numericValue.toString() })
-
-private val LINEAR_AB_ID = "(\\S*?)(\\d{3})(\\S*)".toRegex()
-
-// http://www.people.ku.edu/~jyounger/LinearA/LinAIdeograms/
-private fun linearAb() = codePoints("Lina").plus(codePoints("Linb")).toTable { cp ->
-    val (pre, id, post) = checkNotNull(LINEAR_AB_ID.find(cp.name)).destructured
-    val post2 = post.lower().replace("-102", "/102").removeSuffix("-vas")
-    "$pre$id$post2"
-}
 
 private fun countingRodNumerals() = (0x1d360..0x1d378).toTable { NUMBER_SPELLOUT.parse(it.name.substringAfterLast(' ').lower()).toString() }
 

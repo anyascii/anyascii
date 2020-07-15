@@ -51,3 +51,5 @@ fun codePoints(set: String): List<CodePoint> = UnicodeSet("[:$set:]").codePoints
 fun Iterable<CodePoint>.filterDefined() = filter { it.isDefined }
 
 inline fun Iterable<CodePoint>.filterName(predicate: (String) -> Boolean) = filter { predicate(it.name) }
+
+fun String.stripLeading(c: Char) = dropWhile { it == c }
