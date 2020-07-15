@@ -63,11 +63,15 @@
 # lower groupsigns
 ⠢	en
 ⠔	in
-# other
+# https://www.iana.org/assignments/charset-reg/BRF
+# @ prefix, circumflex prefix, numeric indicator
 ⠈	@
-⠐	*
-⠘	~
-⠠	^
-⠨	_
-⠰	1
+⠘	^
 ⠼	#
+# symbol prefixes
+⠐	*
+⠨	_
+# special prefixes
+# capitalisation indicator, grade 1 symbol indicator
+⠠	+
+⠰	1

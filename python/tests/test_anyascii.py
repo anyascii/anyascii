@@ -34,7 +34,7 @@ def test():
     check("トヨタ", "toyota")
     check("ደብረ ዘይት", "debre zeyt")
     check("ደቀምሓረ", "dek'emhare")
-    check("⠠⠎⠁⠽⠀⠭⠀⠁⠛", "^say x ag")
+    check("⠠⠎⠁⠽⠀⠭⠀⠁⠛", "+say x ag")
     check("ময়মনসিংহ", "mymnsimh")
     check("પોરબંદર", "porbmdr")
     check("महासमुंद", "mhasmumd")

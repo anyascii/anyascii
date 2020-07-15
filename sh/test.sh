@@ -38,7 +38,7 @@ do
 		test "$($anyascii "トヨタ")" = "toyota"
 		test "$($anyascii "ደብረ ዘይት")" = "debre zeyt"
 		test "$($anyascii "ደቀምሓረ")" = "dek'emhare"
-		test "$($anyascii "⠠⠎⠁⠽⠀⠭⠀⠁⠛")" = "^say x ag"
+		test "$($anyascii "⠠⠎⠁⠽⠀⠭⠀⠁⠛")" = "+say x ag"
 		test "$($anyascii "ময়মনসিংহ")" = "mymnsimh"
 		test "$($anyascii "પોરબંદર")" = "porbmdr"
 		test "$($anyascii "महासमुंद")" = "mhasmumd"
