@@ -109,7 +109,7 @@ private fun custom() = Table()
         .then(Table("modifier-tone-letters"))
         .then(Table("indic-number-forms"))
         .then(Table("ancient-symbols"))
-        .then(carian())
+        .then(Table("carian"))
         .then(Table("tai-xuan-jing"))
         .then(Table("misc-symbols-and-arrows"))
         .then(Table("old-south-arabian"))
@@ -252,9 +252,6 @@ private fun baybayin() = (0x1700..0x177f).filterDefined().toTable { cp ->
 }
 
 private fun ideographicDescription() = (0x2ff0..0x2fff).filterDefined().toTable { it.toString(16).takeLast(1) }
-
-// https://www.unicode.org/wg2/docs/n3020.pdf
-private fun carian() = (0x102a0..0x102df).filterDefined().toTable { it.name.substringAfterLast(' ') }
 
 private fun tibetan() = Table("tibetan")
         .aliasing(codePoints("Tibt").filterName { "SUBJOINED LETTER FIXED-FORM" in it }) { it.replace("SUBJOINED LETTER FIXED-FORM", "LETTER") }
