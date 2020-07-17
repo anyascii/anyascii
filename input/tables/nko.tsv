@@ -1,4 +1,9 @@
-# knab 2012, ala-lc 2015
+# ala-lc 2015
+# knab 2012
+# https://www.unicode.org/charts/PDF/U07C0.pdf
+# https://www.unicode.org/wg2/docs/n4706-nko-additions.pdf
+#
+# letters
 ߊ	a
 ߋ	e
 ߌ	i
@@ -6,8 +11,8 @@
 ߎ	u
 ߏ	o
 ߐ	o
-ߑ	'
-ߒ	n'
+ߑ	
+ߒ	n
 ߓ	b
 ߔ	p
 ߕ	t
@@ -29,23 +34,31 @@
 ߥ	w
 ߦ	y
 ߧ	ny
+# archaic letters
 ߨ	j
 ߩ	c
 ߪ	r
-#߫	_
-#߬	_
-#߭	_
-#߮	_
-#߯	_
-#߰	_
-#߱	_
+# tone marks
+߫	
+߬	
+߭	
+߮	
+߯	
+߰	
+߱	
+# other diacritics
 ߲	n
-#߳	_
+߳	
+# tonal apostrophe
 ߴ	'
-ߵ	'
+ߵ	`
+# symbol
 ߶	o
+# punctuation
 ߷	*
 ߸	,
 ߹	!
+# letter extender
 ߺ	-
+# abbreviation sign
 ߽	.
