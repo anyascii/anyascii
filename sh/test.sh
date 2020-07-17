@@ -23,6 +23,7 @@ do
 		test "$($anyascii "Търговище")" = "T'rgovishche"
 		test "$($anyascii "دمنهور")" = "dmnhwr"
 		test "$($anyascii "אברהם הלוי פרנקל")" = "'vrhm hlvy frnkl"
+		test "$($anyascii "ߞߐߣߊߞߙߌ߫")" = "konakri"
 		test "$($anyascii "სამტრედია")" = "samt'redia"
 		test "$($anyascii "Աբովյան")" = "Abovyan"
 		test "$($anyascii "สงขลา")" = "sngkhla"

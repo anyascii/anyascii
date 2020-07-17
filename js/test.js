@@ -18,6 +18,7 @@ check("Володимир Горбулін", "Volodimir Gorbulin");
 check("Търговище", "T'rgovishche");
 check("دمنهور", "dmnhwr");
 check("אברהם הלוי פרנקל", "'vrhm hlvy frnkl");
+check("ߞߐߣߊߞߙߌ߫", "konakri");
 check("სამტრედია", "samt'redia");
 check("Աբովյան", "Abovyan");
 check("สงขลา", "sngkhla");
