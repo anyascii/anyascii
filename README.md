@@ -32,7 +32,7 @@ Converts Unicode text to a reasonable representation using only ASCII.
 
 For most characters in Unicode, Any-Ascii provides an ASCII-only replacement string.
 Text is converted character-by-character without considering the context.
-The mappings for each language are based on popular existing romanization schemes.
+The mappings for each script are based on popular existing romanization schemes.
 Symbolic characters are converted based on their meaning or appearance.
 All ASCII characters in the input are left unchanged,
 every other character is replaced with printable ASCII characters.
@@ -116,11 +116,11 @@ Some scripts are used by multiple languages: [Han characters](https://en.wikiped
 The script used by English and ASCII is known as the [Latin script](https://en.wikipedia.org/wiki/Latin_script).
 
 When converting text between languages there are multiple properties that can be preserved:
-- Meaning: [Translation](https://en.wikipedia.org/wiki/Translation) replaces text with an equivalent in the target language with the same meaning.
-- Appearance: Preserving the visual appearance of a character when converting between languages is rarely possible and requires readers to have knowledge of the source language.
-- Sound: [Transcription](https://en.wikipedia.org/wiki/Orthographic_transcription) uses the spelling and pronunciation rules of the target language to produce text that a speaker of the target language will pronounce as accurately as possible to the original.
-- Spelling: [Transliteration](https://en.wikipedia.org/wiki/Transliteration) converts each letter individually using predictable rules.
-  A reversible transliteration allows for reconstruction of the original text by using unique mappings for each letter.
+- Meaning: [Translation](https://en.wikipedia.org/wiki/Translation)
+- Appearance: Preserving the visual appearance of characters when converting between scripts is rarely possible and requires readers to have knowledge of the source language.
+- Sound: [Transcription](https://en.wikipedia.org/wiki/Orthographic_transcription) uses the spelling and pronunciation rules of the target language to produce text that will be pronounced as accurately as possible to the original.
+- Spelling: [Transliteration](https://en.wikipedia.org/wiki/Transliteration) converts each character individually using predictable rules.
+  A reversible transliteration allows for reconstruction of the original text by using unique mappings for each character.
 
 [Romanization](https://en.wikipedia.org/wiki/Romanization) is the conversion into the Latin script using transliteration or transcription or a mix of both.
 Romanization is most commonly used when representing the names of people and places.

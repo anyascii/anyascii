@@ -12,7 +12,7 @@ import java.util.Arrays;
  *
  * For most characters in Unicode, Any-Ascii provides an ASCII-only replacement string.
  * Text is converted character-by-character without considering the context.
- * The mappings for each language are based on popular existing romanization schemes.
+ * The mappings for each script are based on popular existing romanization schemes.
  * Symbolic characters are converted based on their meaning or appearance.
  * All ASCII characters in the input are left unchanged,
  * every other character is replaced with printable ASCII characters.
