@@ -24,6 +24,7 @@ Unicode to ASCII transliteration
   - [Rust](#rust)
   - [Shell](#shell)
   - [.NET](#net)
+- [Unidecode](#unidecode)
 - [See Also](#see-also)
 
 ## Description
@@ -276,6 +277,16 @@ string s = "άνθρωποι".Transliterate();
 // anthropoi
 ```
 
+## Unidecode
+
+Any-Ascii is an alternative to (and inspired by) [Unidecode](https://metacpan.org/pod/Text::Unidecode) and its many [ports](https://github.com/search?q=unidecode).
+Any-Ascii is more up-to-date and supports more than twice as many characters.
+Unidecode was originally written in 2001 with minor updates through 2016.
+It does not support any characters outside of the [BMP](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane).
+
+Compare `table.tsv` and `unidecode/table.tsv` for a complete comparison between Any-Ascii and Unidecode.
+Note that the Unidecode output has been [modified slightly](Unidecode.pl) and that unknown characters are replaced by `"[?] "` while they are removed by Any-Ascii.
+
 ## See Also
 
 [ALA-LC: Romanization Tables](https://www.loc.gov/catdir/cpso/roman.html)  
@@ -284,7 +295,6 @@ string s = "άνθρωποι".Transliterate();
 [Discord: Emojis](https://github.com/hunterwb/discord-emojis)  
 [ISO: Transliteration Standards](https://www.iso.org/ics/01.140.10/x/p/1/u/1/w/1/d/1)  
 [KNAB: Romanization Systems](https://www.eki.ee/knab/kblatyl2.htm)  
-[Sean M. Burke: Unidecode](https://metacpan.org/pod/Text::Unidecode)  
 [South Korea: Revised Romanization](https://web.archive.org/web/20070927204130/http://www.korea.net/korea/kor_loca.asp?code=A020303)  
 [Thomas T. Pedersen: Transliteration of Non-Roman Scripts](http://transliteration.eki.ee/)  
 [UNGEGN: Working Group on Romanization Systems](https://www.eki.ee/wgrs/)  
