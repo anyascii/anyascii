@@ -285,7 +285,7 @@ Unidecode was originally written in 2001 with minor updates through 2016.
 It does not support any characters outside of the [BMP](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane).
 
 Compare `table.tsv` and `unidecode/table.tsv` for a complete comparison between Any-Ascii and Unidecode.
-Note that the Unidecode output has been [modified slightly](Unidecode.pl) and that unknown characters are replaced by `"[?] "` while they are removed by Any-Ascii.
+Note that the Unidecode output has been [modified slightly](unidecode/Unidecode.pl) and that unknown characters are replaced by `"[?] "` while they are removed by Any-Ascii.
 
 ## See Also
 
