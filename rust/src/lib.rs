@@ -54,14 +54,12 @@ pub fn any_ascii_char(c: char) -> &'static str {
         let l = ptr[2];
         let len = if (l & 0x80) == 0 { 3 } else { (l & 0x7f) as usize };
         if len <= 3 {
-            unsafe {
-                std::str::from_utf8_unchecked(ptr.get_unchecked(..len))
-            }
+            let ascii_bytes = &ptr[..len];
+            unsafe { std::str::from_utf8_unchecked(ascii_bytes) }
         } else {
             let i = ((u16::from(ptr[0]) << 8) | u16::from(ptr[1])) as usize;
-            unsafe {
-                include_str!("strings.txt").get_unchecked(i..i + len)
-            }
+            let strings = include_str!("strings.txt");
+            unsafe { strings.get_unchecked(i..i + len) }
         }
     } else {
         ""
