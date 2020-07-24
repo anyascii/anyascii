@@ -8,13 +8,14 @@
 
 Unicode to ASCII transliteration
 
-[**Interactive Demo**](https://anyascii.com)
+[**Web Demo**](https://anyascii.com)
 
 #### Table of Contents
 
 - [Description](#description)
 - [Examples](#examples)
 - [Background](#background)
+- [Details](#details)
 - [Implementations](#implementations)
   - [Go](#go)
   - [Java](#java)
@@ -135,6 +136,17 @@ Romanization is most commonly used when representing the names of people and pla
 > The Romanization system must not be a code only for the native English-speaking community here but an important tool for international communication between Korean society, foreign residents in the country and the entire external world.
 > If any method causes much confusion because it is unable to properly reflect the original sound to the extent that different words are transcribed into the same Roman characters too frequently, it definitely is not a good system.
 > [*](https://web.archive.org/web/20070927204130/http://www.korea.net/korea/kor_loca.asp?code=A020303)
+
+## Details
+
+*Comprehensive*:
+Supports as many Unicode characters as possible.
+
+*Simple*:
+Easy to use, understand, and update.
+
+*Useful*:
+Provides reasonable approximations as to the spelling or pronunciation.
 
 ## Implementations
 
@@ -291,14 +303,11 @@ Note that the Unidecode output has been [modified slightly](unidecode/Unidecode.
 
 [ALA-LC: Romanization Tables](https://www.loc.gov/catdir/cpso/roman.html)  
 [BGN/PCGN: Guidance on Romanization Systems](https://www.gov.uk/government/publications/romanization-systems)  
-[CC-CEDICT: Free Mandarin Chinese Dictionary](https://cc-cedict.org/wiki/)  
 [Discord: Emojis](https://github.com/hunterwb/discord-emojis)  
 [ISO: Transliteration Standards](https://www.iso.org/ics/01.140.10/x/p/1/u/1/w/1/d/1)  
 [KNAB: Romanization Systems](https://www.eki.ee/knab/kblatyl2.htm)  
-[South Korea: Revised Romanization](https://web.archive.org/web/20070927204130/http://www.korea.net/korea/kor_loca.asp?code=A020303)  
 [Thomas T. Pedersen: Transliteration of Non-Roman Scripts](http://transliteration.eki.ee/)  
 [UNGEGN: Working Group on Romanization Systems](https://www.eki.ee/wgrs/)  
 [Unicode Technical Site](https://unicode.org/main.html)  
-[Unified English Braille](http://www.iceb.org/ueb.html)  
 [Wikipedia: Romanization](https://www.google.com/search?q=site:en.wikipedia.org+romanization+OR+transliteration)  
 [Wiktionary: Romanization](https://www.google.com/search?q=site:en.wiktionary.org+romanization+OR+transliteration)  
