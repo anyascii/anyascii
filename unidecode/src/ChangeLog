@@ -1,0 +1,189 @@
+ -*-coding:utf-8;fill-column:79-*- ············································
+ Last Modified Time-stamp: "2016-11-26 04:40:48 MST"
+#==============================================================================
+(This is the ChangeLog for Text::Unidecode, about me continuing to
+fix bugs, adding features as they cross my mind, spiffing up the docs,
+and doing exciting stuff from TODO.txt...)
+
+Revision history for Perl module Text::Unidecode:
+
+2016-11-26   Sean M. Burke  sburke@cpan.org
+	* Release 1.30
+	* Many many (forty?) tables were missing the final character! Fixed.
+	* Minor stuff:
+ 	 . Added just a few Arabesque things to U+FD__
+   	 . Renamed t/00400_just_load_module.t
+	        to t/00400_just_load_main_module.t
+	 . This is the first time non-7bit data appears in any Unidecode/x__.pm
+	   files, although it is just in comments.  (In x02.pm, x03.pm, xfd.pm)
+	   But this is just THE SHAPE OF THINGS TO COME.
+	* Oh look, I blinked and a year went by.  I've been spending about the
+	  past *two* years trying to think of how Unidecode v2-and-later's data
+	  tables should work.
+	* TODO: Kill the surrogatey "xD8", "xD9", "xDA", "xDB" blocks,
+  	  and actually handle surrogates (when properly encoded).
+	* TODO: Inaugurate the (private) Text::Unidecode::Blackbox namespace.
+
+2015-10-21   Sean M. Burke  sburke@cpan.org
+	* RELEASE 1.27.  (Stable.)
+	The release, 1.25_01, didn't blow up, so this is just
+	a re-release of it as a normal ("stable") version.
+	* Minor changes to the documentation.  Nothing substantial.
+	* Release 1.26 had a confusing mistake in the ChangeLog.
+	Ignore v1.26.
+
+2015-10-21   Sean M. Burke  sburke@cpan.org
+	* RELEASE 1.26.  Mistake.  See above for change notes
+	between v1.25_01 and v1.27.
+
+2015-10-16   Sean M. Burke  sburke@cpan.org
+	* RELEASE 1.25_01.
+	* !DEVELOPER RELEASE!, OH GOD HELP US ALL!
+
+	* Here's a new thing that makes me nervous and hesitant, and that I've
+	been talking myself into for weeks:
+
+	  **************************************************************
+	  *  I've switched to accepting values in the range 0x80-0x9F  *
+	  *  as if they are the Windows-1252 ("ANSI") characters.      *
+	  **************************************************************
+
+	Previously they had all mapped to emptystring.
+
+	Technically, Unicode specifies those codepoints as control characters
+	that I've never heard of, "C1 Controls"...
+	  ...
+	  U+0087 ESA - End of Selected Area
+	  U+0088 HTS - Character (Horizontal) Tabulation Set
+	  U+0089 HTJ - Character (Horizontal) Tabulation with Justification
+	  ...
+	( See "C1" in https://en.wikipedia.org/wiki/C0_and_C1_control_codes )
+
+	And Unidecode mapped all of those to emptystring.  Now they are treated
+	as if you fed the Windows-1252 characters, as that is an extremely
+	common thing to have happen.
+
+	So if you feed character value 0x80 to it, it is taken to mean "€"
+	(which Unidecode then decodes as "EUR", at the moment at least).
+	(This doesn't interfere with the fact that U+20AC is the proper
+	Unicode	place for the "€" to be found.)
+
+	And the smartquotes at 0x91 to 0x94, ‘ ’ “ ” turn into ' ' " " so yaaaay!
+
+	Note that in theory, according to C1 Controls, 0x85 is "NEL: Next
+	Line", "Equivalent to CR+LF. Used to mark end-of-line on some IBM
+	mainframes."
+	I could map this to \n or \r\n or whatever, but I've never seen 0x85 in
+	use in the wild, and I never heard anyone complain about my not having
+	mapped it to "\n" in all the Unidecode versions since the first, in 2001.
+	So instead, Unidecode takes 0x85 as its Windows-1252 value, the
+	ellipsis "…" which of course it Unidecodes as "..."
+
+	I'm not thrilled with the idea of going off spec but I think this
+	should be okay, and it has massive DWIM value.
+	Let's hope I'm not dividing Unicode times infinity by zero and then the
+	whole universe will disa
+
+	That's why I'm making this a developer release.  Unless anything
+	besplodes by November 1st, I'll re-issue this as a stable release.
+
+2015-08-28   Sean M. Burke  sburke@cpan.org
+	* RELEASE 1.24.  Fixing a little (BIG) bug that David Cusimano is a
+	  superstar for having noticed.  Ah, what a difference a ";" vs a ","
+	  makes!
+	   [https://rt.cpan.org/Public/Bug/Display.html?id=105420]
+
+	* I'M BACK.  After nine months of semi-catastrophic system failures,
+	and after Voyager-style flybys of a dozen project deadlines... and now
+	I can somehow try to get back in the swing of things.
+
+	* ANOTHER superstar is Mistah Brendan Byrd who said that there are
+	[ https://rt.cpan.org/Public/Bug/Display.html?id=102357 ] many ports of
+	Unidecode to other languages and that I should brag about that fact,
+	and he is very extremely correct, so now the Pod in Unidecode.pm indeed
+	does just that.
+
+	* (I got my distro-building back up and running.  WOLVERIIIINES!)
+
+	* I'm thinking of having future Unidecode/*.pm data files contain the
+	canonical Unicode character name for every character as a comment.
+	Obviously, this would make the dist pretty big.  But the
+	lib/Unidecode/*.pm files is somewhere around a meg.  What's a few megs
+	more?... with the benefit of added clarity?  Everyone's a winner!
+	
+2014-12-07   Sean M. Burke  sburke@cpan.org
+	* RELEASE 1.23.  Just a bugfix version.
+	* The bug in question: https://rt.cpan.org/Ticket/Display.html?id=97456
+	* Thank you very much to superstar Dagfinn Ilmari Mannsaker for noting
+	  it first *and* for providing a patch for a problem that would baffle
+	  me completely:
+	   "On perls 5.8.8 through 5.12.x, regex matches against UTF-16
+  	   surrogate characters emits a fatal "Malformed UTF-8 character"
+	   warning if warnings are enabled. ExtUtils::MakeMaker prior to 6.78
+	   runs the test suite with -w, causing the installation to fail.
+	   The attached patch [which I applied -SMB] disables utf8
+	   warnings while doing the regex substitution and converting the
+	   character number to a character in the test."
+ 	  And thank you very much to Ricardo Signes and Tim Bunce for reminding
+	  me to actually release this thang!  I was stupid and forgot... for
+	  several MONTHS.
+	* Doc: Adding mention of Tom Christiansen's "Perl Unicode Cookbook":
+	     http://www.perl.com/pub/2012/04/perlunicook-standard-preamble.html
+	* Doc: Adding a suggestion of "use utf8;" in German example.
+	
+2014-08-15   Sean M. Burke  sburke@cpan.org
+	* RELEASE 1.22.  (The dev release works, so this is a version bump.)
+	* See notes for 2014-07-25, because this is the first public release
+	with significant changes since 2001!
+	
+2014-07-25   Sean M. Burke  sburke@cpan.org
+	* !DEVELOPER RELEASE!
+	* !Release 1.20_01!
+	* Many bugfixes.  Thanks especially to Tomaž Šolc!
+	* Yet more *.t files added for improved sanity checking.
+	* Shuffling around the internals of Unidecode.pm
+	* Putting in some vacuous 0x__.pm files where
+	previously there would just be a load failure
+	
+2014-06-30   Sean M. Burke  sburke@cpan.org
+	* Release 1.01 -- first official Unidecode release since 2001!!!
+	* There are no real changes since the 2014-06-23 developer
+	release.  I'm just making this all official now.
+	
+	
+2014-06-23   Sean M. Burke  sburke@cpan.org
+	* !DEVELOPER RELEASE!
+	* Release 1.00_03
+	* Now asserting that we need at least Perl 5.8.0
+	An automated test system that tried running the t/*.t
+        under a 5.6.2 spewed all kinds of crazy error messages.
+	Hence the bump-up.
+	So, I added assertions for the version.
+	* I added some tests for more basic sanity assertions.
+	
+2014-06-17   Sean M. Burke  sburke@cpan.org
+	v1.00_02 - Not released.  Just internal rearranging.
+	
+	
+2014-06-13   Sean M. Burke  sburke@cpan.org
+	* !DEVELOPER RELEASE!
+	* Release 1.00(_01!)- so many years later, finally we bump up to 1.*!
+
+	* My documentation is now BRILLIANT.
+	* Minor bugfixes.
+	* Some code comments for clarity.
+	* A modern test suite.
+
+	* A proper release will follow in a few days.
+	
+	
+2001-07-14  Sean M. Burke  sburke@cpan.org
+	
+	* Release 0.04 -- forgot to put TODO.txt in 0.03.  Now including
+	it.  That's the only change.
+	
+2001-07-14  Sean M. Burke  sburke@cpan.org
+	
+	* Release 0.03 -- first public release.
+
+[END OF CHANGELOG]

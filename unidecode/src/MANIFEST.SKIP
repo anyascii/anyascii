@@ -1,0 +1,23 @@
+#
+# Last Modified Time-stamp: "2016-08-07 19:14:34 MDT"
+#
+make_unidecode_dist.*
+make_manifest
+diff_unidecode_dists
+purge_unidecode_temp_dirs.*
+\.bak$
+\.old$
+Makefile$
+~$
+.tar.gz$
+~
+#
+CACHEDIR.TAG
+_*00_ABOUT_THIS_DIR.txt
+MYMETA.*
+SMB_.*
+/[0-9]{1,3}$
+.*Constants.pm.*
+.*Suavecito.pm.*
+.*_to_unidecode_table_v2.*
+.*Utils.pm.*

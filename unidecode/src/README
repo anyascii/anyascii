@@ -1,0 +1,100 @@
+		# -*- coding:utf-8; mode:Text; fill-column:79 -*-
+		# Time-stamp: "2016-07-24 03:12:31 MDT"
+# (This page is in UTF-8!) |··················································|
+
+Module:  Text::Unidecode-- make ASCII transliterations of Unicode text
+
+Unidecode makes ASCII transliterations of Unicode text.  Sometimes it's dumb,
+but it's better than looking at "???" or "\15BA\15A0\1610...".
+If you have smarter text-handling subroutines, Unidecode might be useful
+as a fallthrough for them.
+
+Example:
+   print unidecode(  "北亰\n" );
+           prints:  Bei Jing
+
+See more examples below.
+
+For full documentation, run:
+    perldoc Unidecode
+Or read:see:
+    http://search.cpan.org/perldoc?Text::Unidecode 
+An article about how Unidecode runs:
+    http://interglacial.com/tpj/22/
+
+REQUIREMENTS
+This module requires Perl 5.8.0 at the very least.  That's probably not a
+problem for you, since that's from a decade ago!
+
+INSTALLATION
+* For using the "CPAN Plus" system, read:   perldoc cpanp
+* For old-style "make" interface, read:     perldoc perlmodinstall
+
+~~~ EXAMPLE UNIDECODE INPUT AND OUTPUT ~~~
+(Just two or three lines, from a few languages.)
+
+La décennie voit le début des biotechnologies avec le premier clonage,
+les organismes génétiquement modifiés, le début du séquençage du
+génome humain
+=>  La decennie voit le debut des biotechnologies avec le premier clonage,
+    les organismes genetiquement modifies, le debut du sequencage du
+    genome humain
+
+Wśród nocnej ciszy głos się rozchodzi:
+Wstańcie, pasterze, Bóg się nam rodzi!
+=>  Wsrod nocnej ciszy glos sie rozchodzi: 
+    Wstancie, pasterze, Bog sie nam rodzi! 
+
+Καθαίρονται δ᾽ ἄλλως αἵματι μιαινόμενοι οἷον εἴ τις εἰς πηλὸν ἐμβὰς
+πηλῷ ἀπονίζοντο. μαίνεσθαι δ᾽ ἂν δοκοίη, εἴ τίς μιν ἀνθρώπων
+=>  Kathairontai d' allos aimati miainomenoi oion ei tis eis pelon embas
+    pelo aponizonto. mainesthai d' an dokoie, ei tis min anthropon
+
+На другой день к завтраку подавали очень вкусные пирожки, раков и
+бараньи котлеты; и пока ели, приходил наверх повар Никанор справиться,
+=>  Na drughoi dien' k zavtraku podavali ochien' vkusnyie pirozhki, rakov i
+    baran'i kotliety; i poka ieli, prikhodil navierkh povar Nikanor spravit'sia,
+
+Nước trà (hay nước chè) là đồ uống phổ biến thứ hai trên thế giới (sau
+nước uống). Nó làm bằng cách ngâm lá, chồi, hay cành của cây chè
+=>  Nuoc tra (hay nuoc che) la do uong pho bien thu hai tren the gioi (sau
+    nuoc uong). No lam bang cach ngam la, choi, hay canh cua cay che
+
+#### And Then Things Get A Bit Suboptimal
+# But remember the Unidecode motto: "It's better than nothing!"
+
+유자차(柚子茶)는 유자청을 찬물이나 더운 물에 희석하여 마시는 한국의
+전통 차이다. 유자청은 얇게 자른 유자를 꿀이나 설탕과 섞은 뒤 3~4개월
+=>  yujaca(You Zi Cha )neun yujaceongeul canmulina deoun mule hyiseoghayeo masineun hangugyi
+    jeontong caida. yujaceongeun yalbge jareun yujareul ggulina seoltanggwa seoggeun dwi 3~4gaeweol
+
+* The Gayatri Mantra- Sanskrit
+ॐ भूर्भुवः॒ स्वः ।  तत्स॑वितुर्वरे॑णियं ।
+भ॒र्गो॑ दे॒वस्य॑ धीमहि। ।  धियो॒ यो नः॑ प्रचो॒दया॑त्॥ । 
+=>  AUM bhuurbhuvH' svH  /   tts'viturvre'nniyN  / 
+    bh'rgo' de'vsy' dhiimhi /   /   dhiyo' yo nH' prco'dyaa't //   /  
+
+道可道，非常道。名可名，非常名。無名天地之始；有名萬物之母。故常無欲，
+以觀其妙；常有欲，以觀其徼。此兩者，同出而異名，同謂之玄。玄之又玄，衆
+=>  Dao Ke Dao ,Fei Chang Dao . Ming Ke Ming ,Fei Chang Ming . Wu Ming Tian Di Zhi Shi ;You Ming Wan Wu Zhi Mu . Gu Chang Wu Yu ,
+    Yi Guan Qi Miao ;Chang You Yu ,Yi Guan Qi Jiao . Ci Liang Zhe ,Tong Chu Er Yi Ming ,Tong Wei Zhi Xuan . Xuan Zhi You Xuan ,Zhong 
+
+#Yiddish. Directionality and ligature might come out wrong in your browser/editor:]
+‏טיי איז א געטראנק וואס מען טרינקט איבער דער גארער וועלט. טיי ווערט
+געמאכט דורך ווייקן די געטרוקנטע בלעטער אדער בלומען פון דעם פלאנץ‎
+=>  tyy yz  g`trnq vvs m`n trynqt yb`r d`r gr`r vv`lt. tyy vv`rt
+    g`mkt dvrk vvyyqn dy g`trvqnt` bl`t`r d`r blvm`n pvn d`m plnts
+
+
+#Urdu. Directionality and ligature might come out wrong in your browser/editor:]
+‏چائے دنیا کی پسندیدہ مشروب ہے۔ یہ چاۓ کے پودے کی پتیوں کو چند منٹ گرم
+پانی میں ابالنے سے تیار ہوتی ہے۔‎
+=>  chy'y dny khy psndydh mshrwb hy. yh chy' khy pwdy khy ptywN khw chnd mntt grm
+    pny myN blny sy tyr hwty hy.
+
+======================================================================
+END OF README
+======================================================================
+{{{
+Generated at Sat Nov 26 05:10:31 2016 (1480162231)
+}}}

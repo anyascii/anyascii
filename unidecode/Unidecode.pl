@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use lib 'lib';
+use lib 'src/lib';
 use Text::Unidecode;
 
 open(my $f, '>:raw', 'table.tsv') or die;
