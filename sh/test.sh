@@ -11,6 +11,7 @@ do
 	then
 		anyascii="$shell anyascii"
 		test "$($anyascii "")" = ""
+		test "$($anyascii "	 ~")" = "	 ~"
 		test "$($anyascii "sample")" = "sample"
 		test "$($anyascii "René François Lacôte")" = "Rene Francois Lacote"
 		test "$($anyascii "Großer Hörselberg")" = "Grosser Horselberg"

@@ -7,6 +7,7 @@ public final class AnyAsciiTest {
 
     @Test public void test() {
         check("", "");
+        check("\u0000\u0001\t\n\u001f ~\u007f", "\u0000\u0001\t\n\u001f ~\u007f");
         check("sample", "sample");
         check("René François Lacôte", "Rene Francois Lacote");
         check("Großer Hörselberg", "Grosser Horselberg");
