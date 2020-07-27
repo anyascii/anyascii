@@ -141,12 +141,16 @@ Romanization is most commonly used when representing the names of people and pla
 
 *Comprehensive*:
 Supports as many Unicode characters as possible.
+The benefits of providing full support even for rare or historic characters outweighs the small overhead of including them.
 
 *Simple*:
 Easy to use, understand, and update.
+Able to be implemented with consistent behavior across multiple different programming languages.
+Has benefits for performance and data size.
 
 *Useful*:
-Provides reasonable approximations as to the spelling or pronunciation.
+Provides reasonable approximations of the spelling or pronunciation.
+Based on popular romanization systems in general use.
 
 ## Implementations
 
