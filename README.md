@@ -250,7 +250,7 @@ Use latest release:
 ```toml
 # Cargo.toml
 [dependencies]
-any_ascii = "0.1.5"
+any_ascii = "0.1.6"
 ```
 
 Use pre-release:
