@@ -165,6 +165,7 @@ private fun custom() = Table()
         .then(egyptianHieroglyphs())
         .then(marchen())
         .then(Table("ugaritic"))
+        .then(Table("shavian"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
