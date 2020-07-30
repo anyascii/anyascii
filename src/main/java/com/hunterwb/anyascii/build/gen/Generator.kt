@@ -18,6 +18,7 @@ fun generate(table: Table) {
     ruby(g)
     cSharp(g)
     shell(g)
+    php(g)
 }
 
 class Generator(val table: Table) {

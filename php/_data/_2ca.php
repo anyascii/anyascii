@@ -1,0 +1,1 @@
+<?php return explode('	','	Mao	Qi		Yang	Nian	Gong	Kai	Wan	Tian		Zang	Pi	Ge	You	Xu	Hui	Sang	Guang	Chao	Bei																																																										Huo																																															Xun	Lai															Mao																										Yu	Zhan	Nong																	Guang');

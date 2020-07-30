@@ -1,0 +1,1 @@
+<?php return explode('	','																																																																																																																																																=	-	S	S	S	))	X	V	IIS	II	|	>	*				TR.');
