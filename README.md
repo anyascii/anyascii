@@ -162,7 +162,7 @@ Any-Ascii is implemented in 8 different programming languages.
 package main
 
 import (
-    "github.com/hunterwb/any-ascii"
+    "github.com/anyascii/go"
 )
 
 func main() {
