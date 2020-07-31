@@ -156,7 +156,7 @@ Based on popular romanization systems in general use.
 
 ## Implementations
 
-Any-Ascii is implemented in 8 different programming languages.
+Any-Ascii is implemented in 9 different programming languages.
 
 ### Go
 
