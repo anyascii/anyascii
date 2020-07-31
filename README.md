@@ -1,6 +1,7 @@
 # Any-Ascii [![build](https://travis-ci.org/hunterwb/any-ascii.svg?branch=master)](https://travis-ci.org/hunterwb/any-ascii)
 [![jitpack](https://img.shields.io/jitpack/v/github/hunterwb/any-ascii)](https://jitpack.io/#com.hunterwb/any-ascii)
 [![npm](https://img.shields.io/npm/v/any-ascii)](https://www.npmjs.com/package/any-ascii)
+[![packagist](https://img.shields.io/packagist/v/anyascii/anyascii)](https://packagist.org/packages/anyascii/anyascii)
 [![pypi](https://img.shields.io/pypi/v/anyascii)](https://pypi.org/project/anyascii/)
 [![gem](https://img.shields.io/gem/v/any_ascii)](https://rubygems.org/gems/any_ascii)
 [![crates.io](https://img.shields.io/crates/v/any_ascii)](https://crates.io/crates/any_ascii)
@@ -20,6 +21,7 @@ Unicode to ASCII transliteration
   - [Go](#go)
   - [Java](#java)
   - [JavaScript](#javascript)
+  - [PHP](#php)
   - [Python](#python)
   - [Ruby](#ruby)
   - [Rust](#rust)
@@ -197,9 +199,18 @@ const s = anyAscii('άνθρωποι');
 
 Node.js 4.0+ compatible
 
-Install latest release: `npm install any-ascii`
+Install: `npm install any-ascii`
 
-Install pre-release: `npm install hunterwb/any-ascii`
+### PHP
+
+```php
+$s = AnyAscii::transliterate('άνθρωποι');
+// anthropoi
+```
+
+PHP 5.3+ compatible
+
+Install: `composer require anyascii/anyascii`
 
 ### Python
 
@@ -212,9 +223,7 @@ s = anyascii('άνθρωποι')
 
 Python 3.3+ compatible
 
-Install latest release: `pip install anyascii`
-
-Install pre-release: `pip install https://github.com/hunterwb/any-ascii/archive/master.zip#subdirectory=python`
+Install: `pip install anyascii`
 
 ### Ruby
 
@@ -227,13 +236,7 @@ s = AnyAscii.transliterate('άνθρωποι')
 
 Ruby 2.0+ compatible
 
-Install latest release: `gem install any_ascii`
-
-Use pre-release:
-```ruby
-# Gemfile
-gem 'any_ascii', git: 'https://github.com/hunterwb/any-ascii', glob: 'ruby/any_ascii.gemspec'
-```
+Install: `gem install any_ascii`
 
 ### Rust
 
@@ -246,18 +249,11 @@ let s = any_ascii("άνθρωποι");
 
 Rust 1.20+ compatible
 
-Use latest release:
+Install:
 ```toml
 # Cargo.toml
 [dependencies]
 any_ascii = "0.1.6"
-```
-
-Use pre-release:
-```toml
-# Cargo.toml
-[dependencies]
-any_ascii = { git = "https://github.com/hunterwb/any-ascii" }
 ```
 
 ##### CLI
