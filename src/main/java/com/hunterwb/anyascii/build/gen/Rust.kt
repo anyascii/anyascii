@@ -8,7 +8,7 @@ fun rust(g: Generator) {
     dataDir.toFile().deleteRecursively()
     Files.createDirectories(dataDir)
 
-    Files.writeString(Path.of("rust/src/strings.txt"), g.stringsBank)
+    Files.writeString(Path.of("rust/src/bank.txt"), g.stringsBank)
 
     for ((blockNum, bytes) in g.blockPointers) {
         val f = dataDir.resolve("%03x.bin".format(blockNum))

@@ -13,7 +13,7 @@ func Transliterate(s string) string {
 
 func TransliterateRune(r rune) string {
 	blockNum := uint32(r) >> 8
-	block := Block(blockNum)
+	block := block(blockNum)
 	lo := 3 * (int(r) & 0xFF)
 	if len(block) <= lo {
 		return ""
@@ -29,6 +29,6 @@ func TransliterateRune(r rune) string {
 		return block[lo : lo+len]
 	} else {
 		i := (int(block[lo]) << 8) | int(block[lo+1])
-		return Strings[i : i+len]
+		return bank[i : i+len]
 	}
 }
