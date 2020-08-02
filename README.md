@@ -1,5 +1,5 @@
-# Any-Ascii [![build](https://travis-ci.org/hunterwb/any-ascii.svg?branch=master)](https://travis-ci.org/hunterwb/any-ascii)
-[![jitpack](https://img.shields.io/jitpack/v/github/hunterwb/any-ascii)](https://jitpack.io/#com.hunterwb/any-ascii)
+# AnyAscii [![build](https://travis-ci.org/anyascii/anyascii.svg?branch=master)](https://travis-ci.org/anyascii/anyascii)
+[![jitpack](https://img.shields.io/jitpack/v/github/anyascii/anyascii)](https://jitpack.io/#com.anyascii/anyascii)
 [![npm](https://img.shields.io/npm/v/any-ascii)](https://www.npmjs.com/package/any-ascii)
 [![packagist](https://img.shields.io/packagist/v/anyascii/anyascii)](https://packagist.org/packages/anyascii/anyascii)
 [![pypi](https://img.shields.io/pypi/v/anyascii)](https://pypi.org/project/anyascii/)
@@ -34,7 +34,7 @@ Unicode to ASCII transliteration
 
 Converts Unicode text to a reasonable representation using only ASCII.
 
-For most characters in Unicode, Any-Ascii provides an ASCII-only replacement string.
+For most characters in Unicode, AnyAscii provides an ASCII-only replacement string.
 Text is converted character-by-character without considering the context.
 The mappings for each script are based on popular existing romanization schemes.
 Symbolic characters are converted based on their meaning or appearance.
@@ -44,7 +44,7 @@ Unknown characters are removed.
 
 ## Examples
 
-Representative examples for different languages comparing the Any-Ascii output to the conventional romanization.
+Representative examples for different languages comparing the AnyAscii output to the conventional romanization.
 
 |Language (Script)|Input|Output|Conventional|
 |---|---|---|---|
@@ -156,7 +156,7 @@ Based on popular romanization systems in general use.
 
 ## Implementations
 
-Any-Ascii is implemented in 9 different programming languages.
+AnyAscii is implemented in 9 different programming languages.
 
 ### Go
 
@@ -184,7 +184,7 @@ String s = AnyAscii.transliterate("άνθρωποι");
 
 Java 6+ compatible
 
-Available from [**JitPack**](https://jitpack.io/#com.hunterwb/any-ascii)
+Available from [**JitPack**](https://jitpack.io/#com.anyascii/anyascii)
 
 ### JavaScript
 
@@ -274,7 +274,7 @@ anthropoi
 
 POSIX-compliant
 
-[**Download**](https://github.com/hunterwb/any-ascii/blob/master/sh/anyascii)
+[**Download**](https://github.com/anyascii/anyascii/blob/master/sh/anyascii)
 
 ### .NET
 
@@ -291,19 +291,19 @@ string s = "άνθρωποι".Transliterate();
 
 ## Unidecode
 
-Any-Ascii is an alternative to (and inspired by) [Unidecode](https://metacpan.org/pod/Text::Unidecode) and its many [ports](https://github.com/search?q=unidecode).
-Any-Ascii is more up-to-date and supports more than twice as many characters.
+AnyAscii is an alternative to (and inspired by) [Unidecode](https://metacpan.org/pod/Text::Unidecode) and its many [ports](https://github.com/search?q=unidecode).
+AnyAscii is more up-to-date and supports more than twice as many characters.
 Unidecode was originally written in 2001 with minor updates through 2016.
 It does not support any characters outside of the [BMP](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane).
 
-Compare `table.tsv` and `unidecode/table.tsv` for a complete comparison between Any-Ascii and Unidecode.
-Note that the Unidecode output has been [modified slightly](unidecode/Unidecode.pl) and that unknown characters are replaced by `"[?] "` while they are removed by Any-Ascii.
+Compare `table.tsv` and `unidecode/table.tsv` for a complete comparison between AnyAscii and Unidecode.
+Note that the Unidecode output has been [modified slightly](unidecode/Unidecode.pl) and that unknown characters are replaced by `"[?] "` while they are removed by AnyAscii.
 
 ## See Also
 
 [ALA-LC: Romanization Tables](https://www.loc.gov/catdir/cpso/roman.html)  
 [BGN/PCGN: Guidance on Romanization Systems](https://www.gov.uk/government/publications/romanization-systems)  
-[Discord: Emojis](https://github.com/hunterwb/discord-emojis)  
+[Discord: Emojis](https://github.com/anyascii/discord-emojis)  
 [ISO: Transliteration Standards](https://www.iso.org/ics/01.140.10/x/p/1/u/1/w/1/d/1)  
 [KNAB: Romanization Systems](https://www.eki.ee/knab/kblatyl2.htm)  
 [Thomas T. Pedersen: Transliteration of Non-Roman Scripts](http://transliteration.eki.ee/)  

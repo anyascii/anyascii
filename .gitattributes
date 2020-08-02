@@ -1,5 +1,5 @@
 java/src/main/resources/* linguist-generated=true
-java/src/main/java/com/hunterwb/anyascii/Block.java linguist-generated=true
+java/src/main/java/com/anyascii/Block.java linguist-generated=true
 python/anyascii/_data/* linguist-generated=true
 js/data/* linguist-generated=true
 js/block.js linguist-generated=true

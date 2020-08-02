@@ -2,7 +2,7 @@
 	"name": "anyascii/anyascii",
 	"description": "Unicode to ASCII transliteration",
 	"keywords": ["unicode", "ascii", "transliteration", "utf8", "romanization", "slug", "emoji", "unidecode"],
-	"homepage": "https://github.com/hunterwb/any-ascii",
+	"homepage": "https://anyascii.com",
 	"license": "ISC",
 	"authors": [{
 		"name": "Hunter WB",

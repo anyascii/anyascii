@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.description =
     'Unicode to ASCII transliteration.' +
     ' Converts Unicode text to a reasonable representation using only ASCII.' +
-    ' For most characters in Unicode, Any-Ascii provides an ASCII-only replacement string.' +
+    ' For most characters in Unicode, AnyAscii provides an ASCII-only replacement string.' +
     ' Text is converted character-by-character without considering the context.' +
     ' The mappings for each script are based on popular existing romanization schemes.' +
     ' Symbolic characters are converted based on their meaning or appearance.' +
@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.authors     = ['Hunter WB']
   s.email       = 'hunter@hunterwb.com'
   s.files       = Dir.glob 'lib/**/*.rb'
-  s.homepage    = 'https://github.com/hunterwb/any-ascii'
+  s.homepage    = 'https://github.com/anyascii/anyascii'
   s.license     = 'ISC'
   s.required_ruby_version = '>= 2.0.0'
 end

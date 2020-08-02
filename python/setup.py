@@ -19,7 +19,7 @@ setuptools.setup(
     long_description=read('../README.md'),
     long_description_content_type='text/markdown',
     license='ISC',
-    url='https://github.com/hunterwb/any-ascii',
+    url='https://github.com/anyascii/anyascii',
     packages=setuptools.find_packages(),
     python_requires=">=3.3",
     zip_safe=True,

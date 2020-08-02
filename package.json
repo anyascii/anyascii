@@ -5,7 +5,7 @@
   "homepage": "https://anyascii.com",
   "license": "ISC",
   "author": "Hunter WB (http://hunterwb.com)",
-  "repository": "hunterwb/any-ascii",
+  "repository": "anyascii/anyascii",
   "files": ["js"],
   "keywords": [
     "unicode",

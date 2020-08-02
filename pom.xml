@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.hunterwb</groupId>
-    <artifactId>any-ascii-build</artifactId>
+    <groupId>com.anyascii</groupId>
+    <artifactId>anyascii-build</artifactId>
     <version>0.1.7-SNAPSHOT</version>
 
     <properties>
@@ -64,7 +64,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>com.hunterwb.anyascii.build.MainKt</mainClass>
+                    <mainClass>com.anyascii.build.MainKt</mainClass>
                 </configuration>
             </plugin>
         </plugins>

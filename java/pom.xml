@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.hunterwb</groupId>
-    <artifactId>any-ascii</artifactId>
+    <groupId>com.anyascii</groupId>
+    <artifactId>anyascii</artifactId>
     <version>0.1.7-SNAPSHOT</version>
 
-    <name>any-ascii</name>
+    <name>anyascii</name>
     <description>Unicode to ASCII transliteration</description>
-    <url>https://github.com/hunterwb/any-ascii</url>
+    <url>https://github.com/anyascii/anyascii</url>
 
     <licenses>
         <license>
