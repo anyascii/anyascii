@@ -1,1 +1,1 @@
-b=tuple('																																																																														Nong																																																																	Lan																																																																					Aa																Ling'.split('	'))
+b='																																																																														Nong																																																																	Lan																																																																					Aa																Ling'

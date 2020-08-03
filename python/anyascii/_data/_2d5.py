@@ -1,1 +1,1 @@
-b=tuple('																																																																						Suo																																																																																																																																																											Ke'.split('	'))
+b='																																																																						Suo																																																																																																																																																											Ke'

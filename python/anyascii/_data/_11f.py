@@ -1,1 +1,1 @@
-b=tuple('																																																																																																																																																																																yh																																													$	$	$	$'.split('	'))
+b='																																																																																																																																																																																yh																																													$	$	$	$'

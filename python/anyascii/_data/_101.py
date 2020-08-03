@@ -1,1 +1,1 @@
-b=tuple('																																																																																																																																																=	-	S	S	S	))	X	V	IIS	II	|	>	*				TR.'.split('	'))
+b='																																																																																																																																																=	-	S	S	S	))	X	V	IIS	II	|	>	*				TR.'

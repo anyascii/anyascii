@@ -1,1 +1,1 @@
-b=tuple('																																																																																																Qiu	Lu	Zhi	Zuo	Gua	Riet		Liang	Gua		Zou	Rui	Cui		Sui	Cai'.split('	'))
+b='																																																																																																Qiu	Lu	Zhi	Zuo	Gua	Riet		Liang	Gua		Zou	Rui	Cui		Sui	Cai'

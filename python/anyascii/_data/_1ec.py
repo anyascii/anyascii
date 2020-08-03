@@ -1,1 +1,1 @@
-b=tuple('																																																																																																																																																																																Rs'.split('	'))
+b='																																																																																																																																																																																Rs'

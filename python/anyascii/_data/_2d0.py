@@ -1,1 +1,1 @@
-b=tuple('																						Li'.split('	'))
+b='																						Li'

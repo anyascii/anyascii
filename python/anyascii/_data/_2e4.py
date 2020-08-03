@@ -1,1 +1,1 @@
-b=tuple('																										Fan														Ying'.split('	'))
+b='																										Fan														Ying'

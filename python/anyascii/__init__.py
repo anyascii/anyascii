@@ -16,7 +16,9 @@ def anyascii(string):
             block = _blocks[blocknum]
         except KeyError:
             try:
-                block = importlib.import_module('anyascii._data._%03x' % blocknum).b
+                m = importlib.import_module('anyascii._data._%03x' % blocknum)
+                block = tuple(m.b.split('\t'))
+                del m.b
             except ImportError:
                 block = ()
             _blocks[blocknum] = block

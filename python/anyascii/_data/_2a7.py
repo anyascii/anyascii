@@ -1,1 +1,1 @@
-b=tuple('														Qiao																																																																																																																																															Duo																																																	Jian															Ji'.split('	'))
+b='														Qiao																																																																																																																																															Duo																																																	Jian															Ji'

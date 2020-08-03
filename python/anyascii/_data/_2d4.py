@@ -1,1 +1,1 @@
-b=tuple('																																																																																																																								Lung'.split('	'))
+b='																																																																																																																								Lung'

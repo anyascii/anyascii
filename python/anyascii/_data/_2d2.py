@@ -1,1 +1,1 @@
-b=tuple('								Mu	Ying																			Bei			Thin															Huan																																																										Zui																				Nan																																																												La'.split('	'))
+b='								Mu	Ying																			Bei			Thin															Huan																																																										Zui																				Nan																																																												La'

@@ -1,1 +1,1 @@
-b=tuple('														Li																																		Yu																																																																																																																																																											Tang'.split('	'))
+b='														Li																																		Yu																																																																																																																																																											Tang'

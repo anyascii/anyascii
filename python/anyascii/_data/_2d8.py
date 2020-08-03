@@ -1,1 +1,1 @@
-b=tuple('																									Pu																																																																			Shen																																																																	Rap																																										Dian																																Yi'.split('	'))
+b='																									Pu																																																																			Shen																																																																	Rap																																										Dian																																Yi'

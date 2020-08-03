@@ -1,1 +1,1 @@
-b=tuple('																																																																																												Luo																																																																																																																								Lai'.split('	'))
+b='																																																																																												Luo																																																																																																																								Lai'

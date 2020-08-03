@@ -1,1 +1,1 @@
-b=tuple('																																																						Fei																																															Fen																		Bei																							Ji						Li							Ji																			Fei																															She'.split('	'))
+b='																																																						Fei																																															Fen																		Bei																							Ji						Li							Ji																			Fei																															She'

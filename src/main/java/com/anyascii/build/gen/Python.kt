@@ -18,7 +18,7 @@ fun python(g: Generator) {
             } else {
                 '\'' + s.replace("'", "\\'") + '\''
             }
-            w.write("b=tuple($s.split('\t'))")
+            w.write("b=$s")
         }
     }
 }

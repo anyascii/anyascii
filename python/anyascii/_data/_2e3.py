@@ -1,1 +1,1 @@
-b=tuple('																																																																																																																																																																																																																																																										Du'.split('	'))
+b='																																																																																																																																																																																																																																																										Du'

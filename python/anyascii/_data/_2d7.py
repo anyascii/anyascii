@@ -1,1 +1,1 @@
-b=tuple('																																																																											Ling																																Khan																									Ai'.split('	'))
+b='																																																																											Ling																																Khan																									Ai'

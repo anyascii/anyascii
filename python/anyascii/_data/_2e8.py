@@ -1,1 +1,1 @@
-b=tuple('																														Qiang																					Chen																					Ke																																																																																																																																																																										Gang	Hong	Chan	Zhui	Lu'.split('	'))
+b='																														Qiang																					Chen																					Ke																																																																																																																																																																										Gang	Hong	Chan	Zhui	Lu'
