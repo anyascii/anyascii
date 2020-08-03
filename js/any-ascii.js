@@ -4,6 +4,12 @@ const block = require('./block.js');
 
 const blocks = {};
 
+/**
+ * Transliterates a Unicode string into ASCII.
+ * 
+ * @param {string} string
+ * @return {string}
+ */
 module.exports = function anyAscii(string) {
     let result = '';
     for (const c of string) {
