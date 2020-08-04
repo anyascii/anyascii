@@ -55,7 +55,7 @@ private fun custom() = Table()
         .then(cyrillic())
         .then((0x24eb..0x24ff).toTable { it.numericValue.toString() }) // circled numbers
         .then(coptic())
-        .then(Table("hexagrams"))
+        .then(Table("yijing-hexagrams"))
         .then(Table("box-drawing"))
         .then((0x2580..0x259f).toTable { "#" }) // block elements
         .then(Table("control-pictures"))
