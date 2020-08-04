@@ -1,6 +1,7 @@
 # https://www.unicode.org/charts/PDF/U10280.pdf
-# https://en.wikipedia.org/wiki/Lycian_alphabet
 # https://www.unicode.org/wg2/docs/n3019.pdf
+# melchert 2004
+# https://en.wikipedia.org/wiki/Lycian_alphabet
 𐊀	a
 𐊁	e
 𐊂	b
@@ -17,8 +18,8 @@
 𐊍	l
 𐊎	m
 𐊏	n
-𐊐	mm
-𐊑	nn
+𐊐	M
+𐊑	N
 𐊒	u
 𐊓	p
 𐊔	K
@@ -26,7 +27,7 @@
 𐊖	s
 𐊗	t
 𐊘	T
-𐊙	an
-𐊚	en
+𐊙	A
+𐊚	E
 𐊛	h
 𐊜	x
