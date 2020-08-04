@@ -213,13 +213,8 @@ private fun hiragana() = Table("hiragana")
 private fun deseret() = Table("deseret")
         .cased(codePoints("Dsrt"))
 
-private fun oldItalic() = Table()
+private fun oldItalic() = Table("old-italic")
         .then((0x10320..0x10323).toTable { ROMAN_NUMERALS.getValue(it.numericValue) })
-        .then((0x10300..0x1032f).filterDefined().toTable {
-            val n = it.name.substringAfterLast(' ').lower()
-            if (n.toSet().size == 1) return@toTable n
-            return@toTable n.replace("[aeu]".toRegex(), "")
-        })
 
 private fun sinhala() = Table("sinhala")
         .then((0x111e0..0x111ff).filterDefined().toTable { it.numericValue.toString() })
