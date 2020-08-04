@@ -45,7 +45,6 @@ private fun custom() = Table()
         .then(tags())
         .then(cjkMisc())
         .then(Table("kangxi-radicals"))
-        .then(Table("cjk-radicals"))
         .then((0x31c0..0x31e3).toTable { it.name.substringAfterLast(' ') }) // cjk strokes
         .then(yi())
         .then(vai())
