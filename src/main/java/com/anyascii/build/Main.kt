@@ -165,6 +165,7 @@ private fun custom() = Table()
         .then(marchen())
         .then(Table("ugaritic"))
         .then(Table("shavian"))
+        .then(warangCiti())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -332,3 +333,7 @@ private fun khmer() = Table("khmer")
 
 private fun marchen() = Table("marchen")
         .then(codePoints("Marc").toTable { CodePoint(it.name.replace("MARCHEN", "TIBETAN")).let { if (it == -1) "" else it.asString() } })
+
+private fun warangCiti() = Table("warang-citi")
+        .cased(codePoints("Wara"))
+        .then((0x118ea..0x118f2).toTable { it.numericValue.toString() })
