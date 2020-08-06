@@ -13,22 +13,22 @@ Unicode to ASCII transliteration
 
 #### Table of Contents
 
-- [Description](#description)
-- [Examples](#examples)
-- [Background](#background)
-- [Details](#details)
-- [Implementations](#implementations)
-  - [Go](#go)
-  - [Java](#java)
-  - [JavaScript](#javascript)
-  - [PHP](#php)
-  - [Python](#python)
-  - [Ruby](#ruby)
-  - [Rust](#rust)
-  - [Shell](#shell)
-  - [.NET](#net)
-- [Unidecode](#unidecode)
-- [See Also](#see-also)
+* [Description](#description)
+[Examples](#examples)
+[Background](#background)
+[Details](#details)
+* [Implementations](#implementations):
+[Go](#go)
+[Java](#java)
+[JavaScript](#javascript)
+[PHP](#php)
+[Python](#python)
+[Ruby](#ruby)
+[Rust](#rust)
+[Shell](#shell)
+[.NET](#net)
+* [Unidecode](#unidecode)
+[See Also](#see-also)
 
 ## Description
 
