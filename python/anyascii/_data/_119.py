@@ -1,1 +1,1 @@
-b='																																																																																0	1	2	3	4	5	6	7	8	9'
+b="a	aa	i	ii	u	uu	e			o			k	kh	g	gh	n	c	ch	j		n	t		d	dh	n	t	th	d	dh	n	p	ph	b	bh	m	'	y	r	l	v	s	s	s	h	l	z	aa	i	ii	u	uu	e		ai	o			m	m			n	y	r	r		.	-	*										0	1	2	3	4	5	6	7	8	9"
