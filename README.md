@@ -161,16 +161,10 @@ AnyAscii is implemented in 9 different programming languages.
 ### Go
 
 ```go
-package main
+import "github.com/anyascii/go"
 
-import (
-    "github.com/anyascii/go"
-)
-
-func main() {
-    s := anyascii.Transliterate("άνθρωποι")
-    // anthropoi
-}
+s := anyascii.Transliterate("άνθρωποι")
+// anthropoi
 ```
 
 Go 1.10+ Compatible
