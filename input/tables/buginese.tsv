@@ -1,4 +1,7 @@
+# https://www.unicode.org/charts/PDF/U1A00.pdf
 # knab 2012
+#
+# consonants
 ᨀ	k
 ᨁ	g
 ᨂ	ng
@@ -22,12 +25,12 @@
 ᨔ	s
 ᨕ	
 ᨖ	h
-#
+# vowels
 ᨗ	i
 ᨘ	u
 ᨙ	e
 ᨚ	o
 ᨛ	e
-#
+# various signs
 ᨞	\
 ᨟	*

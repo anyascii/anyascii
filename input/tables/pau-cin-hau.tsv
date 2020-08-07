@@ -1,4 +1,7 @@
 # https://www.unicode.org/charts/PDF/U11AC0.pdf
+# https://www.unicode.org/L2/L2011/11104r-paucinhau-alphabet.pdf
+#
+# consonants
 𑫀	p
 𑫁	k
 𑫂	l
@@ -20,7 +23,7 @@
 𑫒	r
 𑫓	f
 𑫔	ch
-#
+# vowels
 𑫕	a
 𑫖	e
 𑫗	i
@@ -28,7 +31,7 @@
 𑫙	u
 𑫚	ua
 𑫛	ia
-#
+# final consonants
 𑫜	p
 𑫝	k
 𑫞	t
@@ -38,7 +41,7 @@
 𑫢	w
 𑫣	ng
 𑫤	y
-#
+# tone marks
 𑫥	
 𑫦	
 𑫧	'

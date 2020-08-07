@@ -1,7 +1,7 @@
 package com.anyascii.build
 
 fun arabic() = Table("arabic")
-        .then((0x10e60..0x10e7a).toTable { it.numericValue.toString() })
+        .then((0x10e60..0x10e7a).toTable { it.num })
         .forms(((0xfb50..0xfdff) + (0xfe70..0xfeff) - 0xfdfc).filterDefined())
 
 private val PRESENTATION_FORMS = Table(mapOf(

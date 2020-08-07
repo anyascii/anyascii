@@ -1,4 +1,9 @@
+# https://www.unicode.org/charts/PDF/U1680.pdf
+# https://en.wikipedia.org/wiki/Ogham
+#
+# space
  	 
+# traditional letters
 ᚁ	b
 ᚂ	l
 ᚃ	f
@@ -19,11 +24,13 @@
 ᚒ	u
 ᚓ	e
 ᚔ	i
+# forfeda supplementary letters
 ᚕ	ea
 ᚖ	oi
 ᚗ	ui
 ᚘ	ia
 ᚙ	ae
 ᚚ	p
+# punctuation
 ᚛	>
 ᚜	<

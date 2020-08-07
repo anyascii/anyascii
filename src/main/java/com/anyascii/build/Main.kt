@@ -21,15 +21,16 @@ fun main() {
             .normalize(NFKC)
             .cased(codePoints())
             .transliterate()
+            .minus(ASCII.keys)
 
-    table.minus(ASCII.keys).write("table.tsv")
+    table.write("table.tsv")
 
     generate(table)
 
     println(Duration.between(start, Instant.now()))
 }
 
-private fun decimalDigits() = codePoints("Nd").toTable { it.numericValue.toString() }
+private fun decimalDigits() = codePoints("Nd").toTable { it.num }
 
 private fun custom() = Table()
         .then(combiningDiacriticalMarks())
@@ -53,7 +54,7 @@ private fun custom() = Table()
         .then(Table("ocr"))
         .then(Table("ol-chiki"))
         .then(cyrillic())
-        .then((0x24eb..0x24ff).toTable { it.numericValue.toString() }) // circled numbers
+        .then((0x24eb..0x24ff).toTable { it.num }) // circled numbers
         .then(coptic())
         .then(Table("yijing-hexagrams"))
         .then(Table("box-drawing"))
@@ -219,15 +220,15 @@ private fun oldItalic() = Table("old-italic")
         .then((0x10320..0x10323).toTable { ROMAN_NUMERALS.getValue(it.numericValue) })
 
 private fun sinhala() = Table("sinhala")
-        .then((0x111e0..0x111ff).filterDefined().toTable { it.numericValue.toString() })
+        .then((0x111e0..0x111ff).filterDefined().toTable { it.num })
 
 private fun dingbats() = Table("dingbats")
-        .then((0x2776..0x2793).toTable { it.numericValue.toString() })
+        .then((0x2776..0x2793).toTable { it.num })
 
 private fun cjkMisc() = Table("cjk-misc")
         .then((0x3021..0x3029).toTable { "${(it - 0x3021 + 1)}" }) // hangzhou numerals
         .then((0x3220..0x3229).toTable { "(${(it - 0x3220 + 1)})" }) // parenthesized numbers
-        .then((0x3248..0x324f).toTable { it.numericValue.toString() }) // circled number on black square
+        .then((0x3248..0x324f).toTable { it.num }) // circled number on black square
         .then((0x3280..0x3289).toTable { "(${(it - 0x3280 + 1)})" }) // circled numbers
         .then((0x32c0..0x32cb).toTable { "${(it - 0x32c0 + 1)}M" }) // telegraph months
         .then((0x3358..0x3370).toTable { "${(it - 0x3358)}H" }) // telegraph hours
@@ -266,26 +267,26 @@ private fun halfwidthFullwidth() = (0xff00..0xffef).filterDefined().toTable { cp
 }
 
 private fun phoenician() = Table("phoenician")
-        .then((0x10916..0x1091b).toTable { it.numericValue.toString() })
-        .then((0x10858..0x1085f).toTable { it.numericValue.toString() })
-        .then((0x10879..0x1087f).toTable { it.numericValue.toString() })
-        .then((0x108fb..0x108ff).toTable { it.numericValue.toString() })
-        .then((0x108a7..0x108af).toTable { it.numericValue.toString() })
-        .then((0x10b58..0x10b5f).toTable { it.numericValue.toString() })
-        .then((0x10b78..0x10b7f).toTable { it.numericValue.toString() })
-        .then((0x10ba9..0x10baf).toTable { it.numericValue.toString() })
-        .then((0x10f1d..0x10f25).toTable { it.numericValue.toString() })
-        .then((0x10fc5..0x10fcb).toTable { it.numericValue.toString() })
-        .then((0x10f51..0x10f54).toTable { it.numericValue.toString() })
+        .then((0x10916..0x1091b).toTable { it.num })
+        .then((0x10858..0x1085f).toTable { it.num })
+        .then((0x10879..0x1087f).toTable { it.num })
+        .then((0x108fb..0x108ff).toTable { it.num })
+        .then((0x108a7..0x108af).toTable { it.num })
+        .then((0x10b58..0x10b5f).toTable { it.num })
+        .then((0x10b78..0x10b7f).toTable { it.num })
+        .then((0x10ba9..0x10baf).toTable { it.num })
+        .then((0x10f1d..0x10f25).toTable { it.num })
+        .then((0x10fc5..0x10fcb).toTable { it.num })
+        .then((0x10f51..0x10f54).toTable { it.num })
 
 private fun countingRodNumerals() = (0x1d360..0x1d378).toTable { NUMBER_SPELLOUT.parse(it.name.substringAfterLast(' ').lower()).toString() }
 
-private fun mayanNumerals() = (0x1d2e0..0x1d2f3).toTable { it.numericValue.toString() }
+private fun mayanNumerals() = (0x1d2e0..0x1d2f3).toTable { it.num }
 
 private fun shorthandFormatControls() = (0x1bca0..0x1bcaf).filterDefined().toTable { it.toString(16).takeLast(1) }
 
 private fun bamum() = Table("bamum")
-        .then((0xa6e6..0xa6ef).toTable { it.numericValue.toString() })
+        .then((0xa6e6..0xa6ef).toTable { it.num })
         .then((0xa6a0..0xa6e5).toTable { it.name.substringAfterLast(' ').lower().capitalize() })
 
 private fun cherokee() = codePoints("Cher").filter { UCharacter.isULowercase(it) }.toTable { it.name.substringAfterLast(' ').lower() }
@@ -323,18 +324,19 @@ private fun tags() = Table()
         .then((0xe0020..0xe007e).toTable { (it - 0xe0000).asString() })
         .then((0xe0000..0xe007f).filterDefined().toTable { "" })
 
-private fun osage() = Table("osage").cased(codePoints("Osge"))
+private fun osage() = Table("osage")
+        .cased(codePoints("Osge"))
 
 private fun medefaidrin() = Table("medefaidrin")
         .cased(codePoints("Medf"))
-        .then((0x16e80..0x16e96).toTable { it.numericValue.toString() })
+        .then((0x16e80..0x16e96).toTable { it.num })
 
 private fun khmer() = Table("khmer")
-        .then((0x17f0..0x17f9).toTable { it.numericValue.toString() })
+        .then((0x17f0..0x17f9).toTable { it.num })
 
 private fun marchen() = Table("marchen")
         .then(codePoints("Marc").toTable { CodePoint(it.name.replace("MARCHEN", "TIBETAN")).let { if (it == -1) "" else it.asString() } })
 
 private fun warangCiti() = Table("warang-citi")
         .cased(codePoints("Wara"))
-        .then((0x118ea..0x118f2).toTable { it.numericValue.toString() })
+        .then((0x118ea..0x118f2).toTable { it.num })

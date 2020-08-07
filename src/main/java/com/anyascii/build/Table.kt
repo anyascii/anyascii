@@ -22,7 +22,7 @@ fun Table.minus(codePoints: Iterable<CodePoint>) = apply { for (cp in codePoints
 fun Table.write(path: String) = apply {
     Files.newBufferedWriter(Path.of(path)).use {
         for ((cp, r) in this) {
-            check(r.isEmpty() || r.isPrintableAscii())
+            check(r.isPrintableAscii())
             it.append(cp.asString()).append('\t').append(r).append('\n')
         }
     }

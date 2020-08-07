@@ -2,7 +2,7 @@ package com.anyascii.build
 
 fun ethiopic() = Table("ethiopic")
         .then(codePoints("Ethi").filterName { "SYLLABLE" in it }.toTable { syllableName(it) })
-        .then((0x1369..0x137c).toTable { it.numericValue.toString() })
+        .then((0x1369..0x137c).toTable { it.num })
 
 private fun syllableName(cp: CodePoint): String {
     var name = cp.name.lower()
