@@ -239,7 +239,7 @@ let s = any_ascii("άνθρωποι");
 // anthropoi
 ```
 
-Rust 1.20+ compatible
+Rust 1.36+ compatible
 
 Install:
 ```toml

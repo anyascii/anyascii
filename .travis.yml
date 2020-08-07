@@ -27,7 +27,7 @@ jobs:
       script: ruby ruby/lib/any_ascii_test.rb
 
     - language: rust
-      rust: "1.20.0"
+      rust: "1.36.0"
       before_script: cd rust
       script: cargo test
 
