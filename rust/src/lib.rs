@@ -9,6 +9,14 @@
 //! All ASCII characters in the input are left unchanged,
 //! every other character is replaced with printable ASCII characters.
 //! Unknown characters are removed.
+//!
+//! This crate supports `no_std` + `alloc`.
+
+#![no_std]
+
+extern crate alloc;
+use alloc::string::String;
+
 mod block;
 
 /// Transliterates a Unicode String into ASCII.
@@ -44,7 +52,7 @@ pub fn any_ascii_char(c: char) -> &'static str {
     let block_num = ((c as u32) >> 8) as u16;
     let block_bytes = block::block(block_num);
     let block: &'static [[u8; 3]] = unsafe {
-        std::slice::from_raw_parts(
+        core::slice::from_raw_parts(
             block_bytes.as_ptr() as *const [u8; 3],
             block_bytes.len() / 3
         )
@@ -55,7 +63,7 @@ pub fn any_ascii_char(c: char) -> &'static str {
         let len = if (l & 0x80) == 0 { 3 } else { (l & 0x7f) as usize };
         if len <= 3 {
             let ascii_bytes = &ptr[..len];
-            unsafe { std::str::from_utf8_unchecked(ascii_bytes) }
+            unsafe { core::str::from_utf8_unchecked(ascii_bytes) }
         } else {
             let i = ((u16::from(ptr[0]) << 8) | u16::from(ptr[1])) as usize;
             let bank = include_str!("bank.txt");
