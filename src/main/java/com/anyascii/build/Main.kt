@@ -170,6 +170,7 @@ private fun custom() = Table()
         .then(Table("dives-akuru"))
         .then(copticEpact())
         .then(Table("old-permic"))
+        .then(Table("avestan"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
