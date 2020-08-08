@@ -169,6 +169,7 @@ private fun custom() = Table()
         .then(warangCiti())
         .then(Table("dives-akuru"))
         .then(copticEpact())
+        .then(Table("old-permic"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
