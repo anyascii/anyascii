@@ -10,7 +10,7 @@ fun shell(g: Generator) {
         val license = Files.readAllLines(Path.of("LICENSE")).joinToString("") { "# $it\n" }
         w.write("\n$license\n")
         for ((blockNum, block) in g.blocks) {
-            w.write("_%03x='".format(blockNum))
+            w.write("_$blockNum='")
             w.write(block.joinToString("\t").replace("'", "'\\''"))
             w.write("'\n")
         }

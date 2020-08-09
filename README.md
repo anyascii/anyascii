@@ -264,11 +264,18 @@ Use `cd rust && cargo build --release` to build a native executable to `rust/tar
 ```console
 $ anyascii άνθρωποι
 anthropoi
+
+$ echo άνθρωποι | anyascii
+anthropoi
+
+$ anyascii
+> άνθρωποι
+anthropoi
 ```
 
 POSIX-compliant
 
-[**Download**](https://github.com/anyascii/anyascii/blob/master/sh/anyascii)
+[**Download**](https://raw.githubusercontent.com/anyascii/anyascii/master/sh/anyascii)
 
 ### .NET
 
