@@ -1,48 +1,47 @@
-# https://en.wikipedia.org/wiki/MLC_Transcription_System
-# https://en.wiktionary.org/wiki/Wiktionary:Burmese_transliteration
+# burmese ala-lc 2011
 # consonants
 က	k
-ခ	hk
+ခ	kh
 ဂ	g
 ဃ	gh
-င	ng
+င	n
 စ	c
-ဆ	hc
+ဆ	ch
 ဇ	j
 ဈ	jh
-ဉ	ny
-ည	ny
+ည	nn
+ဉ	n
 ဋ	t
-ဌ	ht
+ဌ	th
 ဍ	d
 ဎ	dh
 ဏ	n
 တ	t
-ထ	ht
+ထ	th
 ဒ	d
 ဓ	dh
 န	n
 ပ	p
-ဖ	hp
+ဖ	ph
 ဗ	b
 ဘ	bh
 မ	m
 ယ	y
 ရ	r
 လ	l
-ဝ	w
+ဝ	v
 သ	s
 ဟ	h
 ဠ	l
+အ	'
 # independent vowels
-အ	
 ဣ	i
 ဤ	i
 ဥ	u
 ဦ	u
 ဧ	e
-ဩ	au
-ဪ	au
+ဩ	o
+ဪ	o
 # dependent vowels
 ါ	a
 ာ	a
@@ -52,28 +51,85 @@
 ူ	u
 ေ	e
 ဲ	ai
-ဵ	e
-# anusvara
-ံ	m
-# virama
-္	
-်	
-# dependent consonants
+# medials
 ျ	y
+ွ	v
 ြ	r
-ွ	w
 ှ	h
-# consonant
+# conjunct consonants
 ဿ	ss
-# punctuation, ala-lc 2011
+# final symbols
+ံ	m
+# punctuation
 ၊	,
 ။	.
-# abbreviations, ala-lc 2011
+# abbreviations
+၏	e*
 ၌	n*
 ၍	r*
 ၎	l*
-၏	e*
-# pali, sanskrit, iso 15919
+#
+# shan ala-lc 2012
+# consonants
+ၵ	k
+ၶ	kh
+ၷ	g
+ၸ	c
+ၹ	z
+ၺ	n
+ၻ	d
+ၼ	n
+ၽ	ph
+ၿ	b
+ႁ	h
+ဢ	'
+ႀ	x
+ၾ	f
+# vowels
+ႃ	a
+ဵ	e
+ႄ	e
+ႅ	e
+ႆ	ai
+# medials
+ႂ	v
+# abbreviations
+႟	u*
+႞	n*
+#
+# karen knab 2012
+# consonants
+ၡ	sh
+ၮ	n
+ၥ	th
+ၦ	pw
+ၯ	yw
+ၰ	khw
+# vowels
+ၢ	oe
+ၧ	oe
+ၨ	u
+#
+# mon knab 2004
+# consonants
+ၚ	n
+ၛ	jh
+ၜ	b
+ၝ	b
+# irregular subscript consonants
+ၞ	n
+ၟ	m
+ၠ	l
+# independent vowels
+ဨ	e
+# abbreviated vowels
+ဳ	i
+ဴ	ao
+#
+# virama
+္	
+်	
+# pali, sanskrit
 ၐ	s
 ၑ	s
 ၒ	r
@@ -84,49 +140,6 @@
 ၗ	r
 ၘ	l
 ၙ	l
-# shan, ala-lc 2012
-ဢ	'
-ၵ	k
-ၶ	kh
-ၷ	g
-ၸ	gh
-ၹ	z
-ၺ	ny
-ၻ	d
-ၼ	n
-ၽ	ph
-ၾ	f
-ၿ	b
-ႀ	x
-ႁ	h
-ႂ	v
-ႃ	a
-ႄ	e
-ႅ	e
-ႆ	ai
-႞	n*
-႟	!
-# karen, knab 2012
-ၡ	sh
-ၮ	n
-ၥ	th
-ၦ	pw
-ၯ	yw
-ၰ	khw
-ၢ	oe
-ၧ	oe
-ၨ	u
-# mon, https://en.wikipedia.org/wiki/Mon_language
-ဨ	e
-ဳ	i
-ဴ	ai
-ၚ	ng
-ၛ	jh
-ၜ	b
-ၝ	mb
-ၞ	n
-ၟ	m
-ၠ	l
 # tones
 ့	
 း	
@@ -156,24 +169,24 @@
 ၲ	oe
 ၳ	u
 ၴ	ee
-# rumai palaung, http://pacling.anu.edu.au/materials/SEAMLES/Mak2012GoldenPalaung.pdf
-ႎ	v
+# rumai palaung
+ႎ	f
 # khamti shan
 ꩠ	g
 ꩡ	c
 ꩢ	ch
 ꩣ	j
 ꩤ	jh
-ꩥ	ny
-ꩦ	tt
-ꩧ	tth
-ꩨ	dd
-ꩩ	ddh
+ꩥ	n
+ꩦ	t
+ꩧ	th
+ꩨ	d
+ꩩ	dh
 ꩪ	dh
 ꩫ	n
 ꩬ	s
 ꩭ	h
-ꩮ	hh
+ꩮ	h
 ꩯ	f
 ꩰ	"
 ꩱ	x
@@ -187,28 +200,29 @@
 ႝ	ai
 # aiton
 ꩷	!
-#꩸	_
-#꩹	_
+꩸	1
+꩹	2
 ꩺ	r
 # shan pali
+# http://unicode.org/wg2/docs/n3906.pdf
 ꧠ	gh
 ꧡ	ch
 ꧢ	jh
-ꧣ	nn
+ꧣ	n
 ꧤ	bh
-#ꧥ	_
+ꧥ	
 ꧦ	"
 # tai laing
-ꧧ	ny
+ꧧ	n
 ꧨ	f
 ꧩ	g
 ꧪ	gh
 ꧫ	j
 ꧬ	jh
-ꧭ	dd
-ꧮ	ddh
-ꧯ	nn
-ꧺ	ll
+ꧭ	d
+ꧮ	dh
+ꧯ	n
+ꧺ	l
 ꧻ	d
 ꧼ	dh
 ꧽ	b

@@ -73,7 +73,7 @@ Representative examples for different languages comparing the AnyAscii output to
 |Manding (N'Ko)|ߞߐߣߊߞߙߌ߫|konakri|konakiri|
 |Unified English Braille (Braille)|⠠⠎⠁⠽⠀⠭⠀⠁⠛|+say x ag|Say it again|
 |Bengali|ময়মনসিংহ|mymnsimh|Mymensingh|
-|Burmese (Myanmar)|ထန်တလန်|htntln|Thantlang|
+|Burmese (Myanmar)|ထန်တလန်|thntln|Thantlang|
 |Gujarati|પોરબંદર|porbmdr|Porbandar|
 |Hindi (Devanagari)|महासमुंद|mhasmumd|Mahasamund|
 |Kannada|ಬೆಂಗಳೂರು|bemgluru|Bengaluru|
