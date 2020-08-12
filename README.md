@@ -293,9 +293,8 @@ string s = "άνθρωποι".Transliterate();
 ## Unidecode
 
 AnyAscii is an alternative to (and inspired by) [Unidecode](https://metacpan.org/pod/Text::Unidecode) and its many [ports](https://github.com/search?q=unidecode).
-AnyAscii is more up-to-date and supports more than twice as many characters.
-Unidecode was originally written in 2001 with minor updates through 2016.
-It does not support any characters outside of the [BMP](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane).
+Unidecode was created in 2001 and only supports characters in the [BMP](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane).
+AnyAscii gives better results and supports more than twice as many characters.
 
 Compare `table.tsv` and `unidecode/table.tsv` for a complete comparison between AnyAscii and Unidecode.
 Note that the Unidecode output has been [modified slightly](unidecode/Unidecode.pl) and that unknown characters are replaced by `"[?] "` while they are removed by AnyAscii.
@@ -307,7 +306,7 @@ Note that the Unidecode output has been [modified slightly](unidecode/Unidecode.
 [Discord: Emojis](https://github.com/anyascii/discord-emojis)  
 [ISO: Transliteration Standards](https://www.iso.org/ics/01.140.10/x/p/1/u/1/w/1/d/1)  
 [KNAB: Romanization Systems](https://www.eki.ee/knab/kblatyl2.htm)  
-[Thomas T. Pedersen: Transliteration of Non-Roman Scripts](http://transliteration.eki.ee/)  
+[Thomas T. Pedersen: Transliteration of Non-Roman Scripts](https://transliteration.eki.ee/)  
 [UNGEGN: Working Group on Romanization Systems](https://www.eki.ee/wgrs/)  
 [Unicode Technical Site](https://unicode.org/main.html)  
 [Wikipedia: Romanization](https://www.google.com/search?q=site:en.wikipedia.org+romanization+OR+transliteration)  
