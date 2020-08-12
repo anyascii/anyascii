@@ -1,0 +1,72 @@
+# https://www.unicode.org/charts/PDF/U10A00.pdf
+# https://www.unicode.org/wg2/docs/n2732.pdf
+# https://www.unicode.org/wg2/docs/n4812-kharosthi-add.pdf
+#
+# vowels
+𐨀	a
+𐨁	i
+𐨂	u
+𐨃	r
+𐨅	e
+𐨆	o
+# length mark
+𐨌	
+# various signs
+𐨍	
+𐨎	m
+𐨏	h
+# consonants
+𐨐	k
+𐨑	kh
+𐨒	g
+𐨓	gh
+𐨕	c
+𐨖	ch
+𐨗	j
+𐨙	n
+𐨚	t
+𐨛	th
+𐨜	d
+𐨝	dh
+𐨞	n
+𐨟	t
+𐨠	th
+𐨡	d
+𐨢	dh
+𐨣	n
+𐨤	p
+𐨥	ph
+𐨦	b
+𐨧	bh
+𐨨	m
+𐨩	y
+𐨪	r
+𐨫	l
+𐨬	v
+𐨭	s
+𐨮	s
+𐨯	s
+𐨰	z
+𐨱	h
+𐨲	k
+𐨳	th
+𐨴	t
+𐨵	vh
+# various signs
+𐨸	
+𐨹	
+𐨺	
+# virama
+𐨿	
+# fractions
+𐩈	.5
+# punctuation
+𐩐	,
+𐩑	.
+𐩒	*
+𐩓	#
+𐩔	+
+𐩕	@
+𐩖	|
+𐩗	||
+𐩘	~
