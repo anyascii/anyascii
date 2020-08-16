@@ -49,7 +49,7 @@ Representative examples for different languages comparing the AnyAscii output to
 |Language (Script)|Input|Output|Conventional|
 |---|---|---|---|
 |French (Latin)|René François Lacôte|Rene Francois Lacote|Rene Francois Lacote|
-|German (Latin)|Großer Hörselberg|Grosser Horselberg|Grosser Hoerselberg|
+|German (Latin)|Blöße|Blosse|Bloesse|
 |Vietnamese (Latin)|Trần Hưng Đạo|Tran Hung Dao|Tran Hung Dao|
 |Norwegian (Latin)|Nærøy|Naeroy|Naroy|
 |Ancient Greek (Greek)|Φειδιππίδης|Feidippidis|Pheidippides|
@@ -63,14 +63,12 @@ Representative examples for different languages comparing the AnyAscii output to
 |Korean (Han)|華城市|HuaChengShi|Hwaseong-si|
 |Japanese (Hiragana)|さいたま|saitama|Saitama|
 |Japanese (Han)|埼玉県|QiYuXian|Saitama-ken|
-|Japanese (Katakana)|トヨタ|toyota|Toyota|
 |Amharic (Ethiopic)|ደብረ ዘይት|debre zeyt|Dobre Zeyit|
 |Tigrinya (Ethiopic)|ደቀምሓረ|dek'emhare|Dekemhare|
 |Arabic|دمنهور|dmnhwr|Damanhur|
 |Armenian|Աբովյան|Abovyan|Abovyan|
 |Georgian|სამტრედია|samt'redia|Samtredia|
 |Hebrew|אברהם הלוי פרנקל|'vrhm hlvy frnkl|Abraham Halevi Fraenkel|
-|Manding (N'Ko)|ߞߐߣߊߞߙߌ߫|konakri|konakiri|
 |Unified English Braille (Braille)|⠠⠎⠁⠽⠀⠭⠀⠁⠛|+say x ag|Say it again|
 |Bengali|ময়মনসিংহ|mymnsimh|Mymensingh|
 |Burmese (Myanmar)|ထန်တလန်|thntln|Thantlang|
