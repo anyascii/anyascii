@@ -1,8 +1,7 @@
-# knab 2009
+# https://archive.org/details/PEUST1999EgyptianPhonologyAnIntroductionToThePhonologyOfADeadLanguageOCR/page/n56
+# https://edoc.unibas.ch/25678/
 # https://en.wikipedia.org/wiki/Coptic_alphabet
-# https://www.unicode.org/wg2/docs/n2744.pdf
-# https://www.unicode.org/wg2/docs/n3222.pdf
-# https://www.unicode.org/wg2/docs/n3873.pdf
+# https://www.unicode.org/wg2/docs/n2636.pdf
 Ⲁ	A
 Ⲃ	B
 Ⲅ	G
@@ -29,16 +28,17 @@
 Ⲱ	O
 Ϣ	Sh
 Ϥ	F
-Ϩ	H
 Ϧ	X
 Ⳉ	X
+Ϩ	H
 Ϫ	J
-Ϭ	Q
+Ϭ	C
 Ϯ	Ti
-#
+# https://www.unicode.org/wg2/docs/n2636.pdf
 Ⲋ	6
+# https://www.unicode.org/wg2/docs/n2744.pdf
 Ⲳ	'
-Ⲵ	'
+Ⲵ	`
 Ⲷ	E
 Ⲹ	K
 Ⲻ	N
@@ -56,8 +56,8 @@
 Ⳕ	H
 Ⳗ	J
 Ⳙ	Dj
-Ⳛ	Q
-Ⳝ	Q
+Ⳛ	C
+Ⳝ	C
 Ⳟ	Ng
 Ⳡ	Ny
 Ⳣ	W
@@ -67,17 +67,19 @@
 ⳧	STRS.
 ⳨	TR.
 ⳩	KhR.
-⳪	QS.
-Ⳬ	Sh
-Ⳮ	J
-⳯	n
-#⳰	_
-#⳱	_
-Ⳳ	X
+⳪	CS.
 ⳹	\\
 ⳺	/.
 ⳻	.\
-⳼	\\
-⳽	1/2
+⳼	//
+⳽	.5
 ⳾	.
 ⳿	'
+# https://www.unicode.org/wg2/docs/n3222.pdf
+Ⳬ	Sh
+Ⳮ	J
+⳯	n
+⳰	
+⳱	
+# https://www.unicode.org/wg2/docs/n3873.pdf
+Ⳳ	X
