@@ -4,9 +4,13 @@ import "strings"
 
 func Transliterate(s string) string {
 	var sb strings.Builder
-	sb.Grow(len(s))
+	sb.Grow(len(s) / 2)
 	for _, r := range s {
-		sb.WriteString(TransliterateRune(r))
+		if uint32(r) <= 0x7f {
+			sb.WriteByte(byte(r))
+		} else {
+			sb.WriteString(TransliterateRune(r))
+		}
 	}
 	return sb.String()
 }
