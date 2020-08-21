@@ -44,14 +44,6 @@ public final class AnyAscii {
         return (codePoint >>> 7) == 0;
     }
 
-    public static void transliterate(String s, StringBuilder dst) {
-        for (int i = 0; i < s.length();) {
-            int cp = s.codePointAt(i);
-            transliterate(cp, dst);
-            i += Character.charCount(cp);
-        }
-    }
-
     public static void transliterate(CharSequence s, StringBuilder dst) {
         for (int i = 0; i < s.length();) {
             int cp = Character.codePointAt(s, i);
@@ -63,18 +55,20 @@ public final class AnyAscii {
     public static void transliterate(int codePoint, StringBuilder dst) {
         if (isAscii(codePoint)) {
             dst.append((char) codePoint);
-            return;
+        } else {
+            dst.append(transliterate(codePoint));
         }
+    }
+
+    public static String transliterate(int codePoint) {
         int blockNum = codePoint >>> 8;
         int blockId = Block.block(blockNum);
-        if (blockId == -1) return;
+        if (blockId == -1) return "";
         String[] block = Block.blocks[blockId];
         if (block == null) Block.blocks[blockId] = block = loadBlock(blockNum);
         int lo = codePoint & 0xFF;
-        if (block.length <= lo) return;
-        String s = block[lo];
-        if (s == null) return;
-        dst.append(s);
+        if (block.length <= lo) return "";
+        return block[lo];
     }
 
     private static String[] loadBlock(int blockNum) {
@@ -100,16 +94,13 @@ public final class AnyAscii {
     private static String[] split(InputStream input) throws IOException {
         String[] block = new String[256];
         int blockLen = 0;
-        byte[] buf = new byte[4];
+        byte[] buf = new byte[8];
         int bufLen = 0;
         int b;
         while ((b = input.read()) != -1) {
-            if (b == 0) {
-                if (bufLen != 0) {
-                    block[blockLen] = new String(buf, 0, 0, bufLen).intern();
-                    bufLen = 0;
-                }
-                blockLen++;
+            if (b == 0xFF) {
+                block[blockLen++] = bufLen == 0 ? "" : new String(buf, 0, 0, bufLen).intern();
+                bufLen = 0;
             } else {
                 if (bufLen == buf.length) {
                     buf = Arrays.copyOf(buf, buf.length * 2);

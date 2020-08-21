@@ -11,7 +11,7 @@ fun ruby(g: Generator) {
     for ((blockNum, block) in g.blocks) {
         val b = "%03x".format(blockNum)
         Files.newBufferedWriter(dirPath.resolve("$b.rb")).use { w ->
-            val s = block.joinToString("\t").replace("\\", "\\\\").replace("'", "\\'")
+            val s = block.noAscii().joinToString("\t").replace("\\", "\\\\").replace("'", "\\'")
             w.write("module X$b B='$s'.split '\t' end")
         }
     }

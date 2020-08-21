@@ -1,5 +1,6 @@
 package com.anyascii.build.gen
 
+import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Path
 
@@ -9,10 +10,10 @@ fun java(g: Generator) {
     Files.createDirectories(resources)
 
     for ((blockNum, block) in g.blocks) {
-        Files.newBufferedWriter(resources.resolve("%03x".format(blockNum))).use { w ->
-            for (s in block) {
-                w.write(s)
-                w.write(0)
+        Files.newOutputStream(resources.resolve("%03x".format(blockNum))).use { o ->
+            for (s in block.values) {
+                o.write(s.toByteArray(StandardCharsets.US_ASCII))
+                o.write(0xFF)
             }
         }
     }

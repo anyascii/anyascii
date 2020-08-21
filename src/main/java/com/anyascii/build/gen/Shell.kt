@@ -11,7 +11,7 @@ fun shell(g: Generator) {
         w.write("\n$license\n")
         for ((blockNum, block) in g.blocks) {
             w.write("_$blockNum='")
-            w.write(block.joinToString("\t").replace("'", "'\\''"))
+            w.write(block.noAscii().joinToString("\t").replace("'", "'\\''"))
             w.write("'\n")
         }
         w.write("\n")

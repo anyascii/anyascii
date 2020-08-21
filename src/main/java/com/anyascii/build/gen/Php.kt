@@ -10,7 +10,7 @@ fun php(g: Generator) {
 
     for ((blockNum, block) in g.blocks) {
         Files.newBufferedWriter(dirPath.resolve("_%03x.php".format(blockNum))).use { w ->
-            val s = block.joinToString("\t").replace("\\", "\\\\").replace("'", "\\'")
+            val s = block.noAscii().joinToString("\t").replace("\\", "\\\\").replace("'", "\\'")
             w.write("<?php return explode('\t','$s');")
         }
     }

@@ -1,7 +1,6 @@
 package com.anyascii.build.gen
 
 import com.anyascii.build.Table
-import com.anyascii.build.asString
 import com.anyascii.build.isAscii
 import com.anyascii.build.lengthStatistics
 import java.io.ByteArrayOutputStream
@@ -29,14 +28,20 @@ class Generator(val table: Table) {
 
     val blockPointers = blockPointers()
 
-    private fun blocks(): Map<Int, List<String>> {
-        val m = TreeMap<Int, List<String>>()
-        for (b in 0..0xFFF) {
-            val block = List(256) { table[(b shl 8) or it] ?: "" }
-                    .dropLastWhile { it.isEmpty() }
-                    .mapIndexed { i, s -> if (b == 0 && i.isAscii()) "" else s }
-            if (block.isEmpty()) continue
-            m[b] = block
+    private fun blocks(): Map<Int, Table> {
+        val m = TreeMap<Int, Table>()
+        for (blockNum in 0..0xFFF) {
+            val block = Table()
+            for (lo in 0..0xFF) {
+                val cp = (blockNum shl 8) or lo
+                block[cp] = table[cp] ?: ""
+            }
+            while (block.isNotEmpty() && block.lastEntry().value.isEmpty()) {
+                block.remove(block.lastKey())
+            }
+            if (block.isNotEmpty()) {
+                m[blockNum] = block
+            }
         }
         return m
     }
@@ -68,12 +73,10 @@ class Generator(val table: Table) {
         check(table.lengthStatistics().max <= 0x7f)
         check((stringsBank.length shr 16) == 0)
         val m = TreeMap<Int, ByteArray>()
-        for ((blockNum, blockStrings) in blocks) {
+        for ((blockNum, block) in blocks) {
             val out = ByteArrayOutputStream()
             val d = DataOutputStream(out)
-            for ((lo, s0) in blockStrings.withIndex()) {
-                val cp = (blockNum shl 8) or lo
-                val s = if (cp.isAscii()) cp.asString() else s0
+            for (s in block.values) {
                 when (s.length) {
                     0 -> {
                         d.writeShort(0)
@@ -104,4 +107,12 @@ class Generator(val table: Table) {
         }
         return m
     }
+}
+
+fun Table.noAscii(): List<String> {
+    val l = ArrayList<String>(size)
+    for ((cp, s) in this) {
+        l.add(if (cp.isAscii()) "" else s)
+    }
+    return l
 }

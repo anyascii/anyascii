@@ -21,11 +21,10 @@ fun main() {
             .normalize(NFKC)
             .cased(codePoints())
             .transliterate()
-            .minus(ASCII.keys)
-
-    table.write("table.tsv")
 
     generate(table)
+
+    table.minus(ASCII.keys).write("table.tsv")
 
     println(Duration.between(start, Instant.now()))
 }

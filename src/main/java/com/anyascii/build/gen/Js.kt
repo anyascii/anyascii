@@ -10,7 +10,7 @@ fun js(g: Generator) {
 
     for ((blockNum, block) in g.blocks) {
         Files.newBufferedWriter(dirPath.resolve("%03x.js".format(blockNum))).use { w ->
-            var s = block.joinToString("\t").replace("\\", "\\\\")
+            var s = block.noAscii().joinToString("\t").replace("\\", "\\\\")
             s = if (s.count { it == '\'' } > s.count { it == '"' }) {
                 '"' + s.replace("\"", "\\\"") + '"'
             } else {
