@@ -51,7 +51,7 @@ class Generator(val table: Table) {
         val ss = table.values.filter { it.length > 3 }
         val ss2 = ss.filter { a -> ss.none { b -> a != b && a in b } }.sortedBy { it.length }.toCollection(LinkedHashSet())
         while (ss2.isNotEmpty()) {
-            val m = ss2.maxBy { overlap(sb, it) }!!
+            val m = ss2.maxByOrNull { overlap(sb, it) }!!
             ss2.remove(m)
             check(m !in sb)
             sb.append(m, overlap(sb, m), m.length)
