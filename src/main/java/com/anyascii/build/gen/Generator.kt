@@ -30,9 +30,9 @@ class Generator(val table: Table) {
 
     private fun blocks(): Map<Int, Table> {
         val m = TreeMap<Int, Table>()
-        for (blockNum in 0..0xFFF) {
+        for (blockNum in 0..0xfff) {
             val block = Table()
-            for (lo in 0..0xFF) {
+            for (lo in 0..0xff) {
                 val cp = (blockNum shl 8) or lo
                 block[cp] = table[cp] ?: ""
             }

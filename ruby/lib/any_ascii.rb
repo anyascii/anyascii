@@ -24,7 +24,7 @@ module AnyAscii
 				result << cp
 			else
 				block_num = cp >> 8
-				lo = cp & 0xFF
+				lo = cp & 0xff
 				block = BLOCKS[block_num]
 				if block.length > lo
 					result << block[lo]

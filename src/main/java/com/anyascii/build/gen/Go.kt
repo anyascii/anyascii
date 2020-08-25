@@ -26,7 +26,7 @@ fun go(g: Generator) {
     }
 }
 
-private fun asString(bs: ByteArray) = '"' + bs.joinToString("") { BYTE_STRINGS[it.toInt() and 0xFF] } + '"'
+private fun asString(bs: ByteArray) = '"' + bs.joinToString("") { BYTE_STRINGS[it.toInt() and 0xff] } + '"'
 
 private val BYTE_STRINGS = Array(256) {
     val c = it.toChar()

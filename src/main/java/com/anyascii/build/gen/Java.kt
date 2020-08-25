@@ -13,7 +13,7 @@ fun java(g: Generator) {
         Files.newOutputStream(resources.resolve("%03x".format(blockNum))).use { o ->
             for (s in block.values) {
                 o.write(s.toByteArray(StandardCharsets.US_ASCII))
-                o.write(0xFF)
+                o.write(0xff)
             }
         }
     }

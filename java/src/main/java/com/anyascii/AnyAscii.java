@@ -66,7 +66,7 @@ public final class AnyAscii {
         if (blockId == -1) return "";
         String[] block = Block.blocks[blockId];
         if (block == null) Block.blocks[blockId] = block = loadBlock(blockNum);
-        int lo = codePoint & 0xFF;
+        int lo = codePoint & 0xff;
         if (block.length <= lo) return "";
         return block[lo];
     }
@@ -98,7 +98,7 @@ public final class AnyAscii {
         int bufLen = 0;
         int b;
         while ((b = input.read()) != -1) {
-            if (b == 0xFF) {
+            if (b == 0xff) {
                 block[blockLen++] = bufLen == 0 ? "" : new String(buf, 0, 0, bufLen).intern();
                 bufLen = 0;
             } else {

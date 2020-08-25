@@ -22,7 +22,7 @@ class AnyAscii {
 			} else {
 				$block = self::$blocks[$blockNum];
 			}
-			$lo = ($cp & 0xFF);
+			$lo = ($cp & 0xff);
 			if (isset($block[$lo])) {
 				$result .= $block[$lo];
 			}
@@ -34,10 +34,10 @@ class AnyAscii {
 		$b1 = ord($s[$i++]);
 		if ($b1 < 0x80) return $b1;
 		$b2 = ord($s[$i++]);
-		if ($b1 < 0xE0) return (($b1 & 0x1F) << 6) | ($b2 & 0x3F);
+		if ($b1 < 0xe0) return (($b1 & 0x1f) << 6) | ($b2 & 0x3f);
 		$b3 = ord($s[$i++]);
-		if ($b1 < 0xF0) return (($b1 & 0xF) << 12) | (($b2 & 0x3F) << 6) | ($b3 & 0x3F);
+		if ($b1 < 0xf0) return (($b1 & 0xf) << 12) | (($b2 & 0x3f) << 6) | ($b3 & 0x3f);
 		$b4 = ord($s[$i++]);
-		return (($b1 & 0x7) << 18) | (($b2 & 0x3F) << 12) | (($b3 & 0x3F) << 6) | ($b4 & 0x3F);
+		return (($b1 & 0x7) << 18) | (($b2 & 0x3f) << 12) | (($b3 & 0x3f) << 6) | ($b4 & 0x3f);
 	}
 }
