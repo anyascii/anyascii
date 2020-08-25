@@ -242,6 +242,7 @@ private fun cjkMisc() = Table("cjk-misc")
 
 private fun glagolitic() = Table("glagolitic")
         .cased(codePoints("Glag"))
+        .aliasing(codePoints("Glag").filterName { it.startsWith("COMBINING") }) { it.replace("COMBINING GLAGOLITIC LETTER", "GLAGOLITIC SMALL LETTER") }
 
 private fun baybayin() = (0x1700..0x177f).filterDefined().toTable { cp ->
     // tagalog, hanunoo, buhid, tagbanwa
