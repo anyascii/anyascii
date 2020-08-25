@@ -1,0 +1,74 @@
+# https://www.unicode.org/charts/PDF/U1C00.pdf
+# https://www.unicode.org/wg2/docs/n2947.pdf
+#
+# consonants
+ᰀ	k
+ᰁ	kl
+ᰂ	kh
+ᰃ	g
+ᰄ	gl
+ᰅ	ng
+ᰆ	c
+ᰇ	ch
+ᰈ	j
+ᰉ	ny
+ᰊ	t
+ᰋ	th
+ᰌ	d
+ᰍ	n
+ᰎ	p
+ᰏ	pl
+ᰐ	ph
+ᰑ	f
+ᰒ	fl
+ᰓ	b
+ᰔ	bl
+ᰕ	m
+ᰖ	ml
+ᰗ	ts
+ᰘ	tsh
+ᰙ	z
+ᰚ	y
+ᰛ	r
+ᰜ	l
+ᰝ	h
+ᰞ	hl
+ᰟ	v
+ᰠ	s
+ᰡ	sh
+ᰢ	w
+ᰣ	
+# subjoined consonants
+ᰤ	y
+ᰥ	r
+# dependent vowels
+ᰦ	a
+ᰧ	i
+ᰨ	o
+ᰩ	o
+ᰪ	u
+ᰫ	u
+ᰬ	e
+# consonant signs
+ᰭ	k
+ᰮ	m
+ᰯ	l
+ᰰ	n
+ᰱ	p
+ᰲ	r
+ᰳ	t
+ᰴ	ng
+ᰵ	ng
+# various signs
+ᰶ	
+᰷	'
+# punctuation
+᰻	,
+᰼	.
+᰽	.
+᰾	.
+᰿	.
+# additional letters
+ᱍ	t
+ᱎ	th
+ᱏ	d
