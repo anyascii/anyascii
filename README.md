@@ -253,6 +253,9 @@ any_ascii = "0.1.6"
 ```console
 $ anyascii άνθρωποι
 anthropoi
+
+$ echo άνθρωποι | anyascii
+anthropoi
 ```
 
 Use `cd rust && cargo build --release` to build a native executable to `rust/target/release/anyascii`
@@ -264,10 +267,6 @@ $ anyascii άνθρωποι
 anthropoi
 
 $ echo άνθρωποι | anyascii
-anthropoi
-
-$ anyascii
-> άνθρωποι
 anthropoi
 ```
 
