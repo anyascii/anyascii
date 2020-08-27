@@ -30,7 +30,15 @@ mod block;
 /// assert_eq!("toyota", any_ascii("トヨタ"));
 /// ```
 pub fn any_ascii(s: &str) -> String {
-    s.chars().map(any_ascii_char).collect()
+    let mut r = String::with_capacity(s.len() / 2);
+    for c in s.chars() {
+        if c.is_ascii() {
+            r.push(c);
+        } else {
+            r.push_str(any_ascii_char(c));
+        }
+    }
+    r
 }
 
 /// Transliterates a Unicode char into ASCII.
