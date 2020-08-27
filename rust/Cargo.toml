@@ -2,6 +2,7 @@
 name = "any_ascii"
 version = "0.1.7-dev"
 authors = ["Hunter WB <hunter@hunterwb.com>"]
+edition = "2018"
 homepage = "https://anyascii.com"
 repository = "https://github.com/anyascii/anyascii"
 description = "Unicode to ASCII transliteration"
