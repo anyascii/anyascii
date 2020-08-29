@@ -60,7 +60,7 @@ private fun custom() = Table()
         .then((0x2580..0x259f).toTable { "#" }) // block elements
         .then(Table("control-pictures"))
         .then(Table("bopomofo"))
-        .then(Table("hebrew"))
+        .then(hebrew())
         .then(cypriot())
         .then(braille())
         .then(Table("gothic"))
@@ -356,3 +356,6 @@ private fun copticEpact() = Table()
 
 private fun kharoshthi() = Table("kharoshthi")
         .then((0x10a40..0x10a47).toTable { it.num })
+
+private fun hebrew() = Table("hebrew")
+        .then((0x591..0x5af).toTable { "" })
