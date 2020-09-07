@@ -36,14 +36,17 @@ fn transliterate_io() {
 fn transliterate_args(args: Vec<String>) {
     println!("{}", any_ascii(&args.join(" ")));
 
-    match args[0].as_str() {
-        "-v" | "--version" | "-h" | "--help" => eprint!(
-            "anyascii {}\n{}\n{}\n{}\n",
-            env!("CARGO_PKG_VERSION"),
-            env!("CARGO_PKG_AUTHORS"),
-            env!("CARGO_PKG_DESCRIPTION"),
-            env!("CARGO_PKG_HOMEPAGE"),
-        ),
-        _ => {},
+    if args.len() == 1 {
+        match args[0].as_str() {
+            "--help" | "--version" => eprint!("{}", HELP_MESSAGE),
+            _ => (),
+        }
     }
 }
+
+const HELP_MESSAGE: &str = concat!(
+    "anyascii ", env!("CARGO_PKG_VERSION"), '\n',
+    env!("CARGO_PKG_AUTHORS"), '\n',
+    env!("CARGO_PKG_DESCRIPTION"), '\n',
+    env!("CARGO_PKG_HOMEPAGE"), '\n',
+);
