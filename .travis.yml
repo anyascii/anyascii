@@ -2,6 +2,7 @@ jobs:
   include:
     - language: go
       go: "1.10"
+      install: skip
       script: go test ./go
 
     - language: java
@@ -12,22 +13,23 @@ jobs:
 
     - language: node_js
       node_js: 4.0
+      install: skip
       script: npm test
 
     - language: python
       python: 3.4
-      install:
-        - pip install -U pip
-        - pip install -U pytest
+      install: skip
       before_script: cd python
       script: python -m pytest
 
     - language: ruby
       rvm: 2.0
+      install: skip
       script: ruby ruby/lib/any_ascii_test.rb
 
     - language: rust
       rust: "1.36.0"
+      install: skip
       before_script: cd rust
       script: cargo test
 
