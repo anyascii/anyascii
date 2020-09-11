@@ -1,11 +1,4 @@
 # AnyAscii [![build](https://travis-ci.org/anyascii/anyascii.svg?branch=master)](https://travis-ci.org/anyascii/anyascii)
-[![jitpack](https://img.shields.io/jitpack/v/github/anyascii/anyascii)](https://jitpack.io/#com.anyascii/anyascii)
-[![npm](https://img.shields.io/npm/v/any-ascii)](https://www.npmjs.com/package/any-ascii)
-[![packagist](https://img.shields.io/packagist/v/anyascii/anyascii)](https://packagist.org/packages/anyascii/anyascii)
-[![pypi](https://img.shields.io/pypi/v/anyascii)](https://pypi.org/project/anyascii/)
-[![gem](https://img.shields.io/gem/v/any_ascii)](https://rubygems.org/gems/any_ascii)
-[![crates.io](https://img.shields.io/crates/v/any_ascii)](https://crates.io/crates/any_ascii)
-[![nuget](https://img.shields.io/nuget/v/AnyAscii)](https://www.nuget.org/packages/AnyAscii)
 
 Unicode to ASCII transliteration
 
@@ -158,6 +151,8 @@ AnyAscii is implemented in 9 different programming languages.
 
 ### Go
 
+https://pkg.go.dev/github.com/anyascii/go
+
 ```go
 import "github.com/anyascii/go"
 
@@ -165,9 +160,11 @@ s := anyascii.Transliterate("άνθρωποι")
 // anthropoi
 ```
 
-Go 1.10+ Compatible
+Go 1.10+ compatible
 
-### Java
+### <a name="java"></a> Java [![jitpack](https://img.shields.io/jitpack/v/github/anyascii/anyascii)](https://jitpack.io/#com.anyascii/anyascii)
+
+https://jitpack.io/#com.anyascii/anyascii
 
 ```java
 String s = AnyAscii.transliterate("άνθρωποι");
@@ -176,13 +173,12 @@ String s = AnyAscii.transliterate("άνθρωποι");
 
 Java 6+ compatible
 
-Available from [**JitPack**](https://jitpack.io/#com.anyascii/anyascii)
+### <a name="javascript"></a> JavaScript [![npm](https://img.shields.io/npm/v/any-ascii)](https://npmjs.com/package/any-ascii)
 
-### JavaScript
-
-##### Node.js
+https://npmjs.com/package/any-ascii
 
 ```javascript
+// Node.js
 const anyAscii = require('any-ascii');
 
 const s = anyAscii('άνθρωποι');
@@ -193,7 +189,9 @@ Node.js 4.0+ compatible
 
 Install: `npm install any-ascii`
 
-### PHP
+### PHP <a name="php"></a> [![packagist](https://img.shields.io/packagist/v/anyascii/anyascii)](https://packagist.org/packages/anyascii/anyascii)
+
+https://packagist.org/packages/anyascii/anyascii
 
 ```php
 $s = AnyAscii::transliterate('άνθρωποι');
@@ -204,7 +202,9 @@ PHP 5.3+ compatible
 
 Install: `composer require anyascii/anyascii`
 
-### Python
+### <a name="python"></a> Python [![pypi](https://img.shields.io/pypi/v/anyascii)](https://pypi.org/project/anyascii)
+
+https://pypi.org/project/anyascii
 
 ```python
 from anyascii import anyascii
@@ -217,7 +217,9 @@ Python 3.3+ compatible
 
 Install: `pip install anyascii`
 
-### Ruby
+### <a name="ruby"></a> Ruby [![gem](https://img.shields.io/gem/v/any_ascii)](https://rubygems.org/gems/any_ascii)
+
+https://rubygems.org/gems/any_ascii
 
 ```ruby
 require 'any_ascii'
@@ -230,7 +232,9 @@ Ruby 2.0+ compatible
 
 Install: `gem install any_ascii`
 
-### Rust
+### <a name="rust"></a> Rust [![crates.io](https://img.shields.io/crates/v/any_ascii)](https://crates.io/crates/any_ascii)
+
+https://crates.io/crates/any_ascii
 
 ```rust
 use any_ascii::any_ascii;
@@ -245,7 +249,7 @@ Install:
 ```toml
 # Cargo.toml
 [dependencies]
-any_ascii = "0.1.6"
+any_ascii = "*"
 ```
 
 ##### CLI
@@ -260,7 +264,9 @@ anthropoi
 
 Use `cd rust && cargo build --release` to build a native executable to `rust/target/release/anyascii`
 
-### Shell
+### <a name="shell"></a> Shell
+
+https://raw.githubusercontent.com/anyascii/anyascii/master/sh/anyascii
 
 ```console
 $ anyascii άνθρωποι
@@ -272,15 +278,12 @@ anthropoi
 
 POSIX-compliant
 
-[**Download**](https://raw.githubusercontent.com/anyascii/anyascii/master/sh/anyascii)
+### <a name="net"></a> .NET [![nuget](https://img.shields.io/nuget/v/AnyAscii)](https://nuget.org/packages/AnyAscii)
 
-### .NET
-
-Install from [**NuGet**](https://www.nuget.org/packages/AnyAscii)
-
-##### C#
+https://nuget.org/packages/AnyAscii
 
 ```cs
+// C#
 using AnyAscii;
 
 string s = "άνθρωποι".Transliterate();
