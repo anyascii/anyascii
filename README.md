@@ -252,7 +252,7 @@ Install:
 any_ascii = "*"
 ```
 
-##### CLI
+Install executable: `cargo install any_ascii`
 
 ```console
 $ anyascii άνθρωποι
@@ -261,8 +261,6 @@ anthropoi
 $ echo άνθρωποι | anyascii
 anthropoi
 ```
-
-Use `cd rust && cargo build --release` to build a native executable to `rust/target/release/anyascii`
 
 ### <a name="shell"></a> Shell
 
