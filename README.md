@@ -292,7 +292,7 @@ string s = "άνθρωποι".Transliterate();
 
 AnyAscii is an alternative to (and inspired by) [Unidecode](https://metacpan.org/pod/Text::Unidecode) and its many [ports](https://github.com/search?q=unidecode).
 Unidecode was created in 2001 and only supports characters in the [BMP](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane).
-AnyAscii gives better results and supports more than twice as many characters.
+AnyAscii gives better results, supports more than twice as many characters, and often has a smaller file size.
 
 Compare `table.tsv` and `unidecode/table.tsv` for a complete comparison between AnyAscii and Unidecode.
 Note that the Unidecode output has been [modified slightly](unidecode/Unidecode.pl) and that unknown characters are replaced by `"[?] "` while they are removed by AnyAscii.
