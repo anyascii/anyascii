@@ -1,7 +1,10 @@
 package com.anyascii.build.gen
 
+import java.io.ByteArrayOutputStream
 import java.nio.file.Files
 import java.nio.file.Path
+import java.util.zip.Deflater
+import java.util.zip.DeflaterOutputStream
 
 fun python(g: Generator) {
     val dirPath = Path.of("python/anyascii/_data")
@@ -11,14 +14,18 @@ fun python(g: Generator) {
     Files.createFile(dirPath.resolve("__init__.py"))
 
     for ((blockNum, block) in g.blocks) {
-        Files.newBufferedWriter(dirPath.resolve("_%03x.py".format(blockNum))).use { w ->
-            var s = block.noAscii().joinToString("\t").replace("\\", "\\\\")
-            s = if (s.count { it == '\'' } > s.count { it == '"' }) {
-                '"' + s.replace("\"", "\\\"") + '"'
-            } else {
-                '\'' + s.replace("'", "\\'") + '\''
-            }
-            w.write("b=$s")
+        Files.newOutputStream(dirPath.resolve("%03x".format(blockNum))).use { o ->
+            o.write(compress(block.noAscii().joinToString("\t").encodeToByteArray()))
         }
     }
+}
+
+private fun compress(b: ByteArray): ByteArray {
+    val o = ByteArrayOutputStream()
+    val d = Deflater(Deflater.BEST_COMPRESSION)
+    DeflaterOutputStream(o, d).use { s ->
+        b.inputStream().transferTo(s)
+    }
+    d.end()
+    return o.toByteArray()
 }

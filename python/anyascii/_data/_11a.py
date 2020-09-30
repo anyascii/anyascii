@@ -1,1 +1,0 @@
-b="																																																																																																																																																																																																p	k	l	m	d	z	v	ng	h	g	kh	s	b	c	t	th	n	ph	r	f	ch	a	e	i	o	u	ua	ia	p	k	t	m	n	l	w	ng	y			'			'						'					'			'"

@@ -21,6 +21,7 @@ setuptools.setup(
     license='ISC',
     url='https://github.com/anyascii/anyascii',
     packages=setuptools.find_packages(),
+    package_data={'anyascii._data': ['*']},
     python_requires=">=3.3",
     zip_safe=True,
     classifiers=[

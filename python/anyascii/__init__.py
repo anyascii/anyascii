@@ -1,4 +1,11 @@
-import importlib
+from sys import intern
+from zlib import decompress
+
+try:
+    from importlib.resources import read_binary
+except ImportError:
+    from pkgutil import get_data as read_binary
+
 
 _blocks = {}
 
@@ -16,10 +23,10 @@ def anyascii(string):
             block = _blocks[blocknum]
         except KeyError:
             try:
-                m = importlib.import_module('anyascii._data._%03x' % blocknum)
-                block = tuple(m.b.split('\t'))
-                del m.b
-            except ImportError:
+                b = read_binary('anyascii._data', '%03x' % blocknum)
+                s = decompress(b).decode('ascii')
+                block = tuple(map(intern, s.split('\t')))
+            except FileNotFoundError:
                 block = ()
             _blocks[blocknum] = block
         if len(block) > lo:
