@@ -8,6 +8,10 @@ const check = (s, expected) => assert.equal(anyAscii(s), expected);
 check("", "");
 check("\u0000\u0001\t\n\u001f ~\u007f", "\u0000\u0001\t\n\u001f ~\u007f");
 check("sample", "sample");
+check("\ue000", "");
+check("\ufdff", "");
+check("\u0080", "");
+check("\u00ff", "y");
 
 check("René François Lacôte", "Rene Francois Lacote");
 check("Blöße", "Blosse");

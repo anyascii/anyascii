@@ -4,7 +4,7 @@ require_relative './any_ascii.rb'
 class AnyAsciiTest < Test::Unit::TestCase
 	def test_transliterate
 		check("", "")
-		check("\t\n ~", "\t\n ~")
+		check("\x00\x01\t\n\x1f ~\x7f", "\x00\x01\t\n\x1f ~\x7f")
 		check("sample", "sample")
 
 		check("René François Lacôte", "Rene Francois Lacote")

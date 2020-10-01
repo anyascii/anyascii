@@ -91,6 +91,10 @@ fn test() {
     check("", "");
     check("\x00\x01\t\n\x1f ~\x7f", "\x00\x01\t\n\x1f ~\x7f");
     check("sample", "sample");
+    check("\u{e000}", "");
+    check("\u{fdff}", "");
+    check("\u{0080}", "");
+    check("\u{00ff}", "y");
 
     check("René François Lacôte", "Rene Francois Lacote");
     check("Blöße", "Blosse");

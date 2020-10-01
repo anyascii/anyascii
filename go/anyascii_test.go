@@ -13,6 +13,10 @@ func TestTransliterate(t *testing.T) {
 	check("", "")
 	check("\x00\x01\t\n\x1f ~\x7f", "\x00\x01\t\n\x1f ~\x7f")
 	check("sample", "sample")
+	check("\ue000", "")
+	check("\ufdff", "")
+	check("\u0080", "")
+	check("\u00ff", "y")
 
 	check("René François Lacôte", "Rene Francois Lacote")
 	check("Blöße", "Blosse")
