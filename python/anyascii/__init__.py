@@ -1,3 +1,5 @@
+"""Unicode to ASCII transliteration"""
+
 from sys import intern
 from zlib import decompress
 
@@ -6,6 +8,7 @@ try:
 except ImportError:
     from pkgutil import get_data as read_binary
 
+__version__ = '0.1.7-dev'
 
 _blocks = {}
 

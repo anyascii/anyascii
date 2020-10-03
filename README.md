@@ -210,7 +210,7 @@ https://pypi.org/project/anyascii
 from anyascii import anyascii
 
 s = anyascii('άνθρωποι')
-#  anthropoi
+assert s == 'anthropoi'
 ```
 
 Python 3.3+ compatible
