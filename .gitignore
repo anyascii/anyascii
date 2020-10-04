@@ -1,5 +1,4 @@
 .idea/
-.mvn/
 .pytest_cache/
 .tox/
 .vs/

@@ -13,3 +13,5 @@
 /sh/anyascii linguist-generated=true
 /php/_data/* linguist-generated=true
 /unidecode/src/** linguist-vendored=true
+/java/.mvnw/** linguist-vendored=true
+/java/mvnw* linguist-vendored=true

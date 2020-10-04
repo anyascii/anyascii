@@ -14,7 +14,7 @@
 
     <licenses>
         <license>
-            <name>ISC License</name>
+            <name>ISC</name>
             <url>https://opensource.org/licenses/ISC</url>
             <distribution>repo</distribution>
         </license>
