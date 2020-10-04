@@ -1,5 +1,6 @@
 package com.anyascii.build.gen
 
+import com.anyascii.build.deflate
 import java.nio.file.Files
 import java.nio.file.Path
 
@@ -9,10 +10,8 @@ fun ruby(g: Generator) {
     Files.createDirectories(dirPath)
 
     for ((blockNum, block) in g.blocks) {
-        val b = "%03x".format(blockNum)
-        Files.newBufferedWriter(dirPath.resolve("$b.rb")).use { w ->
-            val s = block.noAscii().joinToString("\t").replace("\\", "\\\\").replace("'", "\\'")
-            w.write("module X$b B='$s'.split '\t' end")
+        Files.newOutputStream(dirPath.resolve("%03x".format(blockNum))).use { o ->
+            o.write(deflate(block.noAscii().joinToString("\t").encodeToByteArray()))
         }
     }
 }

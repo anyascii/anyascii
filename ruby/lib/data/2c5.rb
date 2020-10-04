@@ -1,1 +1,0 @@
-module X2c5 B='		Wai																																													Ou																			Long		Si						Jian																	Ku											Ou						Ling																							Zuan														Xian					Chou		Shi								Lou														Xian'.split '	' end

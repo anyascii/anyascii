@@ -1,1 +1,0 @@
-module X2d6 B='																			Hu																																																																																																																																																			Guo'.split '	' end

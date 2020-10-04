@@ -1,1 +1,0 @@
-module X2c1 B='																					Jib									Chua											Yin																																																									Xia			Gua						Pen																																																											Ji								Kou																Mao					Jian	Bin			Die														Wan			Tuan	Bei																							Men									Guo'.split '	' end

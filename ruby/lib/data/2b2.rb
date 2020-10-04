@@ -1,1 +1,0 @@
-module X2b2 B='									Jian					Qing																	Chen																	Qia					Jue												Ai			Shu																																																																																																						Chang				Lu			Jian							Jiao			Xun												Xiao					Te				Gong																																		Ou					Ze		Rao		Gui'.split '	' end

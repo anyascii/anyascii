@@ -1,1 +1,0 @@
-module X1ec B='																																																																																																																																																																																Rs'.split '	' end

@@ -1,1 +1,0 @@
-module X2e2 B='																																																																																																Qiu	Lu	Zhi	Zuo	Gua	Riet		Liang	Gua		Zou	Rui	Cui		Sui	Cai'.split '	' end
