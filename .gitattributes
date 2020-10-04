@@ -13,5 +13,5 @@
 /sh/anyascii linguist-generated
 /php/_data/* linguist-generated
 /unidecode/src/** linguist-vendored
-/java/.mvnw/** linguist-vendored
+/java/.mvn/** linguist-vendored
 /java/mvnw* linguist-vendored
