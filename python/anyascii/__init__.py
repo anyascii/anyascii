@@ -1,7 +1,7 @@
 """Unicode to ASCII transliteration"""
 
 from sys import intern
-from zlib import decompress
+from zlib import decompress, MAX_WBITS
 
 try:
     from importlib.resources import read_binary
@@ -27,7 +27,7 @@ def anyascii(string):
         except KeyError:
             try:
                 b = read_binary('anyascii._data', '%03x' % blocknum)
-                s = decompress(b).decode('ascii')
+                s = decompress(b, -MAX_WBITS).decode('ascii')
                 block = tuple(map(intern, s.split('\t')))
             except FileNotFoundError:
                 block = ()

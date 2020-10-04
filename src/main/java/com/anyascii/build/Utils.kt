@@ -5,6 +5,8 @@ import com.ibm.icu.text.RuleBasedNumberFormat
 import java.nio.file.Files
 import java.nio.file.Path
 import java.util.Locale
+import java.util.zip.Deflater
+
 
 fun <K, V> MutableMap<K, V>.putAllIfAbsent(other: Map<K, V>) {
     for ((k, v) in other) putIfAbsent(k, v)
@@ -29,3 +31,14 @@ inline fun forEachLine(file: Path, f: (String) -> Unit) {
 }
 
 fun Regex.findOnly(input: CharSequence): MatchResult = findAll(input).single()
+
+fun deflate(buf: ByteArray): ByteArray {
+    val deflater = Deflater(Deflater.BEST_COMPRESSION, true)
+    deflater.setInput(buf)
+    deflater.finish()
+    val dst = ByteArray(buf.size)
+    val size = deflater.deflate(dst)
+    deflater.end()
+    check(deflater.finished())
+    return dst.copyOf(size)
+}
