@@ -1,4 +1,4 @@
-call npm test || pause && exit
+cd js && call npm test && cd .. || pause && exit
 go test ./go || pause && exit
 ruby ruby/lib/any_ascii_test.rb || pause && exit
 cd rust && cargo test && cd .. || pause && exit

@@ -2,7 +2,7 @@
 
 set -eux
 
-npm test
+cd js && npm test && cd -
 go test ./go
 ruby ruby/lib/any_ascii_test.rb
 cd rust && cargo test && cd -

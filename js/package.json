@@ -1,0 +1,17 @@
+{
+	"name": "any-ascii",
+	"version": "0.1.7-dev",
+	"description": "Unicode to ASCII transliteration",
+	"homepage": "https://anyascii.com",
+	"license": "ISC",
+	"author": "Hunter WB (http://hunterwb.com)",
+	"repository": "anyascii/anyascii",
+	"keywords": ["unicode", "ascii", "transliteration", "utf8", "romanization", "slug", "emoji", "unidecode"],
+	"main": "any-ascii.js",
+	"scripts": {
+		"test": "node ./test.js"
+	},
+	"engines": {
+		"node": ">= 4.0.0"
+	}
+}
