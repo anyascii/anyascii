@@ -185,9 +185,7 @@ const s = anyAscii('άνθρωποι');
 // anthropoi
 ```
 
-Node.js 4.0+ compatible
-
-Install: `npm install any-ascii`
+`npm install any-ascii`
 
 ### PHP <a name="php"></a> [![packagist](https://img.shields.io/packagist/v/anyascii/anyascii)](https://packagist.org/packages/anyascii/anyascii)
 
@@ -200,7 +198,7 @@ $s = AnyAscii::transliterate('άνθρωποι');
 
 PHP 5.3+ compatible
 
-Install: `composer require anyascii/anyascii`
+`composer require anyascii/anyascii`
 
 ### <a name="python"></a> Python [![pypi](https://img.shields.io/pypi/v/anyascii)](https://pypi.org/project/anyascii)
 
@@ -215,7 +213,7 @@ assert s == 'anthropoi'
 
 Python 3.3+ compatible
 
-Install: `pip install anyascii`
+`pip install anyascii`
 
 ### <a name="ruby"></a> Ruby [![gem](https://img.shields.io/gem/v/any_ascii)](https://rubygems.org/gems/any_ascii)
 
@@ -230,7 +228,7 @@ s = AnyAscii.transliterate('άνθρωποι')
 
 Ruby 2.0+ compatible
 
-Install: `gem install any_ascii`
+`gem install any_ascii`
 
 ### <a name="rust"></a> Rust [![crates.io](https://img.shields.io/crates/v/any_ascii)](https://crates.io/crates/any_ascii)
 
