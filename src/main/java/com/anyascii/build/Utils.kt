@@ -2,10 +2,12 @@ package com.anyascii.build
 
 import com.ibm.icu.text.Normalizer2
 import com.ibm.icu.text.RuleBasedNumberFormat
+import java.io.ByteArrayOutputStream
 import java.nio.file.Files
 import java.nio.file.Path
 import java.util.Locale
 import java.util.zip.Deflater
+import java.util.zip.DeflaterOutputStream
 
 
 fun <K, V> MutableMap<K, V>.putAllIfAbsent(other: Map<K, V>) {
@@ -34,11 +36,8 @@ fun Regex.findOnly(input: CharSequence): MatchResult = findAll(input).single()
 
 fun deflate(buf: ByteArray): ByteArray {
     val deflater = Deflater(Deflater.BEST_COMPRESSION, true)
-    deflater.setInput(buf)
-    deflater.finish()
-    val dst = ByteArray(buf.size)
-    val size = deflater.deflate(dst)
+    val out = ByteArrayOutputStream(buf.size)
+    DeflaterOutputStream(out, deflater).use { buf.inputStream().transferTo(it) }
     deflater.end()
-    check(deflater.finished())
-    return dst.copyOf(size)
+    return out.toByteArray()
 }
