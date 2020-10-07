@@ -1352,17 +1352,23 @@
 ؍	/
 ؎	^
 ؏	*
+ؕ	
 ؖ	i
+ؗ	
+ؘ	
+ؙ	
+ؚ	
 ؛	;
+؜	
 ؞	.
 ؟	?
 ؠ	y
 ء	'
 آ	a
 أ	'
-ؤ	w'
+ؤ	u'
 إ	'
-ئ	i
+ئ	i'
 ا	
 ب	b
 ة	h
@@ -1383,7 +1389,7 @@
 ظ	dh
 ع	`
 غ	gh
-ػ	ch
+ػ	g
 ؼ	g
 ؽ	y
 ؾ	i
@@ -1533,7 +1539,7 @@
 ێ	e
 ۏ	v
 ې	e
-ۑ	n
+ۑ	ny
 ے	e
 ۓ	e'
 ۔	.
@@ -1650,7 +1656,7 @@
 ݛ	r
 ݜ	sh
 ݝ	ng
-ݞ	gw
+ݞ	ng
 ݟ	g
 ݠ	p
 ݡ	v
@@ -1669,7 +1675,7 @@
 ݮ	j
 ݯ	c
 ݰ	s
-ݱ	s
+ݱ	z
 ݲ	j
 ݳ	a
 ݴ	aa
@@ -1913,7 +1919,7 @@
 ࢭ	
 ࢮ	dz
 ࢯ	ts
-ࢰ	k
+ࢰ	j
 ࢱ	u
 ࢲ	z
 ࢳ	n
@@ -1926,6 +1932,16 @@
 ࢻ	f
 ࢼ	q
 ࢽ	n
+ࢾ	p
+ࢿ	t
+ࣀ	t
+ࣁ	ch
+ࣂ	k
+ࣃ	gy
+ࣄ	ky
+ࣅ	n
+ࣆ	n
+ࣇ	l
 ࣢	#
 ࣣ	e
 ࣤ	o
@@ -1940,6 +1956,10 @@
 ࣭	
 ࣮	
 ࣯	
+ࣰ	a
+ࣱ	u
+ࣲ	i
+ࣳ	u
 ࣴ	e
 ࣵ	a
 ࣶ	i
@@ -1951,6 +1971,7 @@
 ࣼ	on
 ࣽ	o
 ࣾ	o
+ࣿ	
 ऀ	m
 ँ	m
 ं	m
@@ -53374,33 +53395,33 @@
 ﯧ	e
 ﯨ	y
 ﯩ	y
-ﯪ	ia
-ﯫ	ia
-ﯬ	ie
-ﯭ	ie
-ﯮ	iw
-ﯯ	iw
-ﯰ	iu
-ﯱ	iu
-ﯲ	io
-ﯳ	io
-ﯴ	iu
-ﯵ	iu
-ﯶ	ie
-ﯷ	ie
-ﯸ	ie
-ﯹ	iy
-ﯺ	iy
-ﯻ	iy
+ﯪ	i'a
+ﯫ	i'a
+ﯬ	i'e
+ﯭ	i'e
+ﯮ	i'w
+ﯯ	i'w
+ﯰ	i'u
+ﯱ	i'u
+ﯲ	i'o
+ﯳ	i'o
+ﯴ	i'u
+ﯵ	i'u
+ﯶ	i'e
+ﯷ	i'e
+ﯸ	i'e
+ﯹ	i'y
+ﯺ	i'y
+ﯻ	i'y
 ﯼ	i
 ﯽ	i
 ﯾ	i
 ﯿ	i
-ﰀ	ij
-ﰁ	ih
-ﰂ	im
-ﰃ	iy
-ﰄ	iy
+ﰀ	i'j
+ﰁ	i'h
+ﰂ	i'm
+ﰃ	i'y
+ﰄ	i'y
 ﰅ	bj
 ﰆ	bh
 ﰇ	bkh
@@ -53496,12 +53517,12 @@
 ﱡ	u-
 ﱢ	i-
 ﱣ	-a
-ﱤ	ir
-ﱥ	iz
-ﱦ	im
-ﱧ	in
-ﱨ	iy
-ﱩ	iy
+ﱤ	i'r
+ﱥ	i'z
+ﱦ	i'm
+ﱧ	i'n
+ﱨ	i'y
+ﱩ	i'y
 ﱪ	br
 ﱫ	bz
 ﱬ	bm
@@ -53547,11 +53568,11 @@
 ﲔ	yn
 ﲕ	yy
 ﲖ	yy
-ﲗ	ij
-ﲘ	ih
-ﲙ	ikh
-ﲚ	im
-ﲛ	ih
+ﲗ	i'j
+ﲘ	i'h
+ﲙ	i'kh
+ﲚ	i'm
+ﲛ	i'h
 ﲜ	bj
 ﲝ	bh
 ﲞ	bkh
@@ -53619,8 +53640,8 @@
 ﳜ	ykh
 ﳝ	ym
 ﳞ	yh
-ﳟ	im
-ﳠ	ih
+ﳟ	i'm
+ﳠ	i'h
 ﳡ	bm
 ﳢ	bh
 ﳣ	tm
@@ -53968,14 +53989,14 @@
 ﺂ	a
 ﺃ	'
 ﺄ	'
-ﺅ	w'
-ﺆ	w'
+ﺅ	u'
+ﺆ	u'
 ﺇ	'
 ﺈ	'
-ﺉ	i
-ﺊ	i
-ﺋ	i
-ﺌ	i
+ﺉ	i'
+ﺊ	i'
+ﺋ	i'
+ﺌ	i'
 ﺍ	a
 ﺎ	a
 ﺏ	b
