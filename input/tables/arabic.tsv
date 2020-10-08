@@ -86,6 +86,7 @@
 ھ	h
 ے	e
 ٰ	a
+ۓ	e'
 # sindhi ala-lc 2013
 ٻ	b
 ڀ	bh
@@ -128,6 +129,7 @@
 ٶ	o
 ٷ	u
 ٸ	i
+ە	e
 # jawi-pegon ala-lc 2012
 # https://www.unicode.org/L2/L2003/03176-gafs.pdf
 ڎ	dh
@@ -315,8 +317,6 @@
 # https://en.wikipedia.org/wiki/Pashto_alphabet
 ڛ	s
 ۀ	e
-# https://en.wikipedia.org/wiki/Kurdish_alphabets
-ە	e
 # https://en.wikipedia.org/wiki/Saraiki_alphabet
 ݙ	dd
 ڋ	dd
@@ -343,12 +343,16 @@
 ۉ	u
 # https://en.wikipedia.org/wiki/Tifinagh
 ڲ	g
+# https://fr.wikipedia.org/wiki/Brahoui
+# https://sites.google.com/site/brahuilb/
+# http://unicode.org/L2/L2011/11090-kurdish.pdf
+ڷ	l
 # http://archives.miloush.net/michkap/archive/2011/12/14/10247653.html
 ڂ	dz
-# https://fr.wikipedia.org/wiki/
-ڷ	l
+# https://www.academia.edu/43833773/Caucasian_languages_in_Arabic_script
 ڝ	ts
 ڸ	l
+# https://fr.wikipedia.org/wiki/
 ڜ	ch
 # https://unicode.org/L2/L2009/09144-arabic-samvat.pdf
 ؄	sm.
@@ -399,7 +403,6 @@
 𞻰	mh
 𞻱	hd
 # other
-ۓ	e'
 ٴ	'
 ٓ	a
 ٔ	'
