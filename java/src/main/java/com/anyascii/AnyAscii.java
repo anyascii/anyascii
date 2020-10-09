@@ -20,6 +20,8 @@ import java.util.Arrays;
  */
 public final class AnyAscii {
 
+    private static volatile ShortMap<String[]> blocks = new ShortMap<String[]>();
+
     private AnyAscii() {}
 
     public static String transliterate(String s) {
@@ -61,11 +63,16 @@ public final class AnyAscii {
     }
 
     public static String transliterate(int codePoint) {
-        int blockNum = codePoint >>> 8;
-        int blockId = Block.block(blockNum);
-        if (blockId == -1) return "";
-        String[] block = Block.blocks[blockId];
-        if (block == null) Block.blocks[blockId] = block = loadBlock(blockNum);
+        short blockNum = (short) (codePoint >>> 8);
+        ShortMap<String[]> blocks = AnyAscii.blocks;
+        int blockIndex = blocks.index(blockNum);
+        String[] block;
+        if (blockIndex >= 0) {
+            block = blocks.get(blockIndex);
+        } else {
+            block = loadBlock(blockNum);
+            AnyAscii.blocks = blocks.put(blockIndex, blockNum, block);
+        }
         int lo = codePoint & 0xff;
         if (block.length <= lo) return "";
         return block[lo];
