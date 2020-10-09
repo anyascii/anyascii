@@ -1,6 +1,7 @@
 package com.anyascii;
 
 import java.io.BufferedInputStream;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
@@ -86,7 +87,7 @@ public final class AnyAscii {
         } else {
             try {
                 try {
-                    block = split(new BufferedInputStream(input, 1024));
+                    block = split(buffer(input));
                 } finally {
                     input.close();
                 }
@@ -117,5 +118,13 @@ public final class AnyAscii {
         }
         if (blockLen < 256) block = Arrays.copyOf(block, blockLen);
         return block;
+    }
+
+    private static InputStream buffer(InputStream input) throws IOException {
+        if (input instanceof BufferedInputStream || input instanceof ByteArrayInputStream) {
+            return input;
+        }
+        int avail = input.available();
+        return new BufferedInputStream(input, avail <= 1 ? 2048 : avail);
     }
 }
