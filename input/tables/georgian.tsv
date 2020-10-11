@@ -1,4 +1,4 @@
-# bgn/pcgn 2009
+# national 2002/2011
 ა	a
 ბ	b
 გ	g
@@ -32,19 +32,22 @@
 ხ	kh
 ჯ	j
 ჰ	h
-# other
-ჱ	ey
+# ala-lc 2011
+ჱ	e
 ჲ	y
+ჴ	x
+ჵ	o
 ჳ	w
-ჴ	q
-ჵ	ow
 ჶ	f
 ჷ	e
-ჸ	'
-ჹ	g
-ჺ	'
-ჽ	e
-ჾ	"
+ჸ	`
+# ossetic knab 1998
+ჽ	ae
+# abkhaz knab 1997
+ჾ	`
 ჿ	w
+# https://unicode.org/wg2/docs/n2608r2.pdf
+ჹ	g
+ჺ	`
 # punctuation
 ჻	:.
