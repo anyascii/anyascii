@@ -1,21 +1,27 @@
+# https://unicode.org/wg2/docs/n2739.pdf
+# https://unicode.org/L2/L2004/04195-pnm-17.1.100.pdf
+# https://unicode.org/wg2/docs/n3482.pdf
+# https://unicode.org/wg2/docs/n3870.pdf
 # tamazight ala-lc 2012
+# tamashek ala-lc 2013
+# tamazight knab 2012
+# tamasheq knab 2012
+# https://en.wikipedia.org/wiki/Tifinagh
+# https://en.wikipedia.org/wiki/Berber_Latin_alphabet
+# https://en.wikipedia.org/wiki/Tuareg_languages
+#
+# ircam
 ⴰ	a
 ⴱ	b
-ⴲ	b
 ⴳ	g
-ⴴ	g
-ⴵ	g
 ⴷ	d
-ⴸ	d
 ⴹ	d
-ⴺ	d
 ⴻ	e
 ⴼ	f
 ⴽ	k
-ⴿ	k
 ⵀ	h
 ⵃ	h
-ⵄ	e
+ⵄ	'
 ⵅ	x
 ⵇ	q
 ⵉ	i
@@ -31,34 +37,43 @@
 ⵚ	s
 ⵛ	c
 ⵜ	t
-ⵝ	t
-ⵞ	c
 ⵟ	t
-ⵠ	v
 ⵡ	w
 ⵢ	y
 ⵣ	z
 ⵥ	z
 ⵯ	w
-# tamashek ala-lc 2013
-ⵦ	e
-ⴶ	g
-ⵐ	ng
-ⵂ	h
-ⵌ	j
-ⴾ	k
-ⵧ	o
+# ircam extended spirants
+ⴲ	ⴱ
+ⴴ	ⴳ
+ⴸ	ⴷ
+ⴺ	ⴹ
+ⴿ	ⴽ
+ⵝ	ⵜ
+# ircam extended letters
+ⵠ	v
 ⵒ	p
-ⵗ	q
-ⵆ	x
-ⵘ	gh
-ⵋ	j
-ⵤ	z
-# https://www.unicode.org/L2/L2004/04195-pnm-17.1.100.pdf
+# affricates
+ⴶ	dj
+ⵞ	tc
+# berber academy
+ⴵ	dj
 ⵁ	h
+# tuareg
+ⴾ	k
+ⵂ	h
+ⵆ	x
 ⵈ	q
+ⵋ	j
+ⵌ	j
+ⵐ	gn
 ⵑ	ng
-# https://www.unicode.org/L2/L2008/08198-tifinagh.pdf
+ⵗ	gh
+ⵘ	gh
+ⵤ	z
+# apt
+ⵦ	e
+ⵧ	o
+# signs
 ⵰	 
-#
 ⵿	
