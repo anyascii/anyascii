@@ -176,6 +176,7 @@ private fun custom() = Table()
         .then(Table("sharada"))
         .then(Table("balinese"))
         .then(Table("lepcha"))
+        .then(oldPersian())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -359,3 +360,6 @@ private fun kharoshthi() = Table("kharoshthi")
 
 private fun hebrew() = Table("hebrew")
         .then((0x591..0x5af).toTable { "" })
+
+private fun oldPersian() = Table("old-persian")
+        .then((0x103d1..0x103d5).toTable { it.num })
