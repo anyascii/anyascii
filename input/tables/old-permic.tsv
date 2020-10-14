@@ -1,6 +1,8 @@
 # https://www.unicode.org/charts/PDF/U10350.pdf
-#
-# letters
+# https://www.unicode.org/wg2/docs/n4263.pdf
+# lytkin 1952
+# https://ru.wikipedia.org/wiki/Древнепермское_письмо
+# komi knab 1994
 𐍐	a
 𐍑	b
 𐍒	g
@@ -30,14 +32,14 @@
 𐍪	oo
 𐍫	f
 𐍬	h
-𐍭	ts
+𐍭	c
 𐍮	v
-𐍯	y
-𐍰	ye
+𐍯	"
+𐍰	'
 𐍱	e
 𐍲	ie
-𐍳	yu
-𐍴	ya
+𐍳	ju
+𐍴	ja
 𐍵	ia
 # combining letters
 𐍶	A
