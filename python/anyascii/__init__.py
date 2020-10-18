@@ -8,7 +8,7 @@ try:
 except ImportError:
     from pkgutil import get_data as read_binary
 
-__version__ = '0.1.7-dev'
+__version__ = '0.1.7'
 
 _blocks = {}
 
