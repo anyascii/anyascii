@@ -10,7 +10,7 @@ package_data = \
 {'': ['*']}
 
 setup(name='anyascii',
-      version='0.1.7',
+      version='0.1.8.dev0',
       description='Unicode to ASCII transliteration',
       author='Hunter WB',
       author_email='hunter@hunterwb.com',
