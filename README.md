@@ -269,7 +269,7 @@ Unidecode was created in 2001 and only supports the [basic mulitlingual plane](h
 AnyAscii gives better results, supports more than twice as many characters, and often has a smaller file size.
 For a complete comparison between AnyAscii and Unidecode see `table.tsv` and `unidecode/table.tsv`.
 
-# Sources
+## Sources
 
 [ALA-LC](https://www.loc.gov/catdir/cpso/roman.html),
 [BGN/PCGN](https://www.gov.uk/government/publications/romanization-systems),
