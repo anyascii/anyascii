@@ -8,8 +8,6 @@ Unicode to ASCII transliteration
 
 * [Description](#description)
 [Examples](#examples)
-[Background](#background)
-[Details](#details)
 * [Implementations](#implementations):
 [Go](#go)
 [Java](#java)
@@ -20,8 +18,9 @@ Unicode to ASCII transliteration
 [Rust](#rust)
 [Shell](#shell)
 [.NET](#net)
-* [Unidecode](#unidecode)
-[See Also](#see-also)
+* [Background](#background)
+[Unidecode](#unidecode)
+[Sources](#sources)
 
 ## Description
 
@@ -84,70 +83,7 @@ Representative examples for different languages comparing the AnyAscii output to
 |Misc.|☆ ♯ ♰ ⚄ ⛌|* # + 5 X|
 |Letterlike|№ ℳ ⅋ ⅍|No M & A/S|
 
-## Background
-
-> Unicode is the foundation for text in all modern software:
-> it’s how all mobile phones, desktops, and other computers represent the text of every language.
-> People are using Unicode every time they type a key on their phone or desktop computer, and every time they look at a web page or text in an application.
-> [*](https://www.unicode.org/reports/tr51/#Encoding)
-
-[Unicode](https://en.wikipedia.org/wiki/Unicode) is the universal character set, a global standard to support all the world's languages.
-It contains 140,000+ characters used by 150+ scripts along with emojis and various symbols.
-Typically encoded into bytes using [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
-
-[ASCII](https://en.wikipedia.org/wiki/ASCII) is the most compatible character set, established in 1967.
-It is a subset of Unicode and UTF-8 consisting of 128 characters using 7-bits.
-The [printable](https://en.wikipedia.org/wiki/ASCII#Printable_characters) characters are English letters, digits, and punctuation,
-with the remaining being [control characters](https://en.wikipedia.org/wiki/ASCII#Control_characters).
-The characters found on a standard US keyboard correspond to the printable ASCII characters.
-
-> ... expressed only in the original non-control ASCII range so as to be as widely compatible with as many existing tools, languages, and serialization formats as possible and avoid display issues in text editors and source control.
-> [*](https://spec.graphql.org/June2018/#sec-Source-Text)
-
-A language is written using characters from a specific [script](https://en.wikipedia.org/wiki/Writing_system).
-A script can be [alphabetic](https://en.wikipedia.org/wiki/Alphabet), [logographic](https://en.wikipedia.org/wiki/Logogram), [syllabic](https://en.wikipedia.org/wiki/Syllabary), or something else.
-Some languages use multiple scripts: Japanese uses Kanji, Hiragana, and Katakana.
-Some scripts are used by multiple languages: [Han characters](https://en.wikipedia.org/wiki/Chinese_characters) are used in Chinese, Japanese, and Korean.
-The script used by English and ASCII is known as the [Latin script](https://en.wikipedia.org/wiki/Latin_script).
-
-When converting text between languages there are multiple properties that can be preserved:
-- Meaning: [Translation](https://en.wikipedia.org/wiki/Translation)
-- Appearance: Preserving the visual appearance of characters when converting between scripts is rarely possible and requires readers to have knowledge of the source language.
-- Sound: [Transcription](https://en.wikipedia.org/wiki/Orthographic_transcription) uses the spelling and pronunciation rules of the target language to produce text that will be pronounced as accurately as possible to the original.
-- Spelling: [Transliteration](https://en.wikipedia.org/wiki/Transliteration) converts each character individually using predictable rules.
-  A reversible transliteration allows for reconstruction of the original text by using unique mappings for each character.
-
-[Romanization](https://en.wikipedia.org/wiki/Romanization) is the conversion into the Latin script using transliteration or transcription or a mix of both.
-Romanization is most commonly used when representing the names of people and places.
-
-> _South Korea's Ministry of Culture & Tourism_:
-> Clear to anyone, Romanization is for foreigners.
-> Geographical names are Romanized to help foreigners find the place they intend to go to and help them remember cities, villages and mountains they visited and climbed.
-> But it is Koreans who make up the Roman transcription of their proper names to print on their business cards and draw up maps for international tourists.
-> Sometimes, they write the lyrics of a Korean song in Roman letters to help foreigners join in a singing session or write part of a public address (in Korean) in Roman letters for a visiting foreign VIP.
-> In this sense, it is for both foreigners and the local public.
-> The Romanization system must not be a code only for the native English-speaking community here but an important tool for international communication between Korean society, foreign residents in the country and the entire external world.
-> If any method causes much confusion because it is unable to properly reflect the original sound to the extent that different words are transcribed into the same Roman characters too frequently, it definitely is not a good system.
-> [*](https://web.archive.org/web/20070927204130/http://www.korea.net/korea/kor_loca.asp?code=A020303)
-
-## Details
-
-*Comprehensive*:
-Supports as many Unicode characters as possible.
-The benefits of providing full support even for rare or historic characters outweighs the small overhead of including them.
-
-*Simple*:
-Easy to use, understand, and update.
-Able to be implemented with consistent behavior across multiple different programming languages.
-Has benefits for performance and data size.
-
-*Useful*:
-Provides reasonable approximations of the spelling or pronunciation.
-Based on popular romanization systems in general use.
-
 ## Implementations
-
-AnyAscii is implemented in 9 different programming languages.
 
 ### Go
 
@@ -286,24 +222,63 @@ string s = "άνθρωποι".Transliterate();
 // anthropoi
 ```
 
+## Background
+
+> Unicode is the foundation for text in all modern software:
+> it’s how all mobile phones, desktops, and other computers represent the text of every language.
+> People are using Unicode every time they type a key on their phone or desktop computer, and every time they look at a web page or text in an application.
+> [*](https://www.unicode.org/reports/tr51/#Encoding)
+
+[Unicode](https://en.wikipedia.org/wiki/Unicode) is the universal character set, a global standard to support all the world's languages.
+It contains 140,000+ characters used by 150+ scripts along with various symbols.
+Typically encoded into bytes using [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
+
+[ASCII](https://en.wikipedia.org/wiki/ASCII) is the most compatible character set, established in 1967.
+It is a subset of Unicode and UTF-8 consisting of 128 characters.
+The [printable](https://en.wikipedia.org/wiki/ASCII#Printable_characters) characters are English letters, digits, and punctuation,
+with the remaining being [control characters](https://en.wikipedia.org/wiki/ASCII#Control_characters).
+The characters found on a standard US keyboard correspond to the printable ASCII characters.
+
+> ... expressed only in the original non-control ASCII range so as to be as widely compatible with as many existing tools, languages, and serialization formats as possible and avoid display issues in text editors and source control.
+> [*](https://spec.graphql.org/June2018/#sec-Source-Text)
+
+A language is written using characters from a [script](https://en.wikipedia.org/wiki/Writing_system).
+A script can be [alphabetic](https://en.wikipedia.org/wiki/Alphabet), [logographic](https://en.wikipedia.org/wiki/Logogram), or [syllabic](https://en.wikipedia.org/wiki/Syllabary).
+Some languages use multiple scripts and some scripts are used by multiple languages.
+The [Latin script](https://en.wikipedia.org/wiki/Latin_script) is used in English and many other languages.
+
+When converting text between languages there are multiple properties that can be preserved:
+- Meaning: [Translation](https://en.wikipedia.org/wiki/Translation)
+- Sound: [Transcription](https://en.wikipedia.org/wiki/Orthographic_transcription)
+- Spelling: [Transliteration](https://en.wikipedia.org/wiki/Transliteration)
+
+[Romanization](https://en.wikipedia.org/wiki/Romanization) is the conversion into the Latin script using transliteration and transcription.
+Romanization is most commonly used when representing the names of people and places.
+
+> Geographical names are Romanized to help foreigners find the place they intend to go to and help them remember cities, villages and mountains they visited and climbed.
+> But it is Koreans who make up the Roman transcription of their proper names to print on their business cards and draw up maps for international tourists.
+> Sometimes, they write the lyrics of a Korean song in Roman letters to help foreigners join in a singing session or write part of a public address (in Korean) in Roman letters for a visiting foreign VIP.
+> In this sense, it is for both foreigners and the local public.
+> The Romanization system must not be a code only for the native English-speaking community here but an important tool for international communication between Korean society, foreign residents in the country and the entire external world.
+> [*](https://web.archive.org/web/20070927204130/http://www.korea.net/korea/kor_loca.asp?code=A020303)
+
 ## Unidecode
 
 AnyAscii is an alternative to (and inspired by) [Unidecode](https://metacpan.org/pod/Text::Unidecode) and its many [ports](https://github.com/search?q=unidecode).
-Unidecode was created in 2001 and only supports characters in the [BMP](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane).
+Unidecode was created in 2001 and only supports the [basic mulitlingual plane](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane).
 AnyAscii gives better results, supports more than twice as many characters, and often has a smaller file size.
+For a complete comparison between AnyAscii and Unidecode see `table.tsv` and `unidecode/table.tsv`.
 
-Compare `table.tsv` and `unidecode/table.tsv` for a complete comparison between AnyAscii and Unidecode.
-Note that the Unidecode output has been [modified slightly](unidecode/Unidecode.pl) and that unknown characters are replaced by `"[?] "` while they are removed by AnyAscii.
+# Sources
 
-## See Also
+[ALA-LC](https://www.loc.gov/catdir/cpso/roman.html),
+[BGN/PCGN](https://www.gov.uk/government/publications/romanization-systems),
+[Discord](https://github.com/anyascii/discord-emojis),
+[ISO](https://www.iso.org/ics/01.140.10/x/p/1/u/1/w/1/d/1),
+[KNAB](https://www.eki.ee/knab/kblatyl2.htm),
+[UNGEGN](https://www.eki.ee/wgrs/),
+[Unihan](https://unicode.org/reports/tr38/),
+national standards,
+and more.
 
-[ALA-LC: Romanization Tables](https://www.loc.gov/catdir/cpso/roman.html)  
-[BGN/PCGN: Guidance on Romanization Systems](https://www.gov.uk/government/publications/romanization-systems)  
-[Discord: Emojis](https://github.com/anyascii/discord-emojis)  
-[ISO: Transliteration Standards](https://www.iso.org/ics/01.140.10/x/p/1/u/1/w/1/d/1)  
-[KNAB: Romanization Systems](https://www.eki.ee/knab/kblatyl2.htm)  
-[Thomas T. Pedersen: Transliteration of Non-Roman Scripts](https://transliteration.eki.ee/)  
-[UNGEGN: Working Group on Romanization Systems](https://www.eki.ee/wgrs/)  
-[Unicode Technical Site](https://unicode.org/main.html)  
-[Wikipedia: Romanization](https://www.google.com/search?q=site:en.wikipedia.org+romanization+OR+transliteration)  
-[Wiktionary: Romanization](https://www.google.com/search?q=site:en.wiktionary.org+romanization+OR+transliteration)  
+> Romanization systems approved for application to geographic names may prove similarly applicable to personal names and to text and have frequently been used for such purposes. [*](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/921738/INTRODUCTION.pdf)
