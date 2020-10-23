@@ -1,6 +1,5 @@
-# https://www.unicode.org/charts/PDF/U0840.pdf
-# https://www.unicode.org/wg2/docs/n3485.pdf
-# https://en.wikipedia.org/wiki/Mandaic_script
+# https://unicode.org/charts/PDF/U0840.pdf
+# https://unicode.org/wg2/docs/n3485.pdf
 # letters
 ࡀ	a
 ࡁ	b
@@ -9,14 +8,14 @@
 ࡄ	h
 ࡅ	u
 ࡆ	z
-ࡇ	h.
-ࡈ	t.
+ࡇ	h
+ࡈ	t
 ࡉ	i
 ࡊ	k
 ࡋ	l
 ࡌ	m
 ࡍ	n
-ࡎ	s.
+ࡎ	s
 ࡏ	`
 ࡐ	p
 ࡑ	s
@@ -24,8 +23,8 @@
 ࡓ	r
 ࡔ	sh
 ࡕ	t
-ࡖ	d.
-ࡗ	kd.
+ࡖ	d
+ࡗ	kd
 ࡘ	`
 # diacritics
 ࡙	'
