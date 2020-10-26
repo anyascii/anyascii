@@ -6,6 +6,7 @@ import java.nio.file.Path
 import java.time.Duration
 import java.time.Instant
 import java.util.Locale
+import kotlin.math.roundToInt
 
 fun main() {
     val start = Instant.now()
@@ -177,6 +178,7 @@ private fun custom() = Table()
         .then(Table("balinese"))
         .then(Table("lepcha"))
         .then(oldPersian())
+        .then(meroitic())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -363,3 +365,7 @@ private fun hebrew() = Table("hebrew")
 
 private fun oldPersian() = Table("old-persian")
         .then((0x103d1..0x103d5).toTable { it.num })
+
+private fun meroitic() = Table("meroitic")
+        .then((0x109c0..0x109f5).filterDefined().toTable { it.num })
+        .then((0x109f6..0x109ff).plus(0x109bc).toTable { it.float.times(12).roundToInt().toString() })

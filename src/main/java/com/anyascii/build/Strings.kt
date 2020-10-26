@@ -32,6 +32,8 @@ val CodePoint.numericValue: Int get() = UCharacter.getNumericValue(this).also { 
 
 val CodePoint.num: String get() = numericValue.toString()
 
+val CodePoint.float: Double get() = UCharacter.getUnicodeNumericValue(this).also { check(it != UCharacter.NO_NUMERIC_VALUE) }
+
 val CodePoint.isDefined get() = UCharacter.isDefined(this)
 
 val CodePoint.script: Int get() = UScript.getScript(this)
