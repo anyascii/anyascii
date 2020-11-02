@@ -10,3 +10,4 @@ target/
 *.iml
 *.gem
 Cargo.lock
+Manifest.toml

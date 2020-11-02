@@ -18,6 +18,7 @@ fun generate(table: Table) {
     cSharp(g)
     shell(g)
     php(g)
+    julia(g)
 }
 
 class Generator(val table: Table) {
