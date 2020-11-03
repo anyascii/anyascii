@@ -14,3 +14,4 @@
 /unidecode/src/** linguist-vendored
 /java/.mvn/** linguist-vendored
 /java/mvnw* linguist-vendored
+/julia/src/data/* linguist-generated
