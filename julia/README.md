@@ -14,12 +14,14 @@ All ASCII characters in the input are left unchanged,
 every other character is replaced with printable ASCII characters.
 Unknown characters are removed.
 
-```console
+```julia
 julia> using AnyAscii
 julia> anyascii("άνθρωποι")
 "anthropoi"
 ```
 
 Julia 1.0+ compatible
+
+`pkg> add "https://github.com/anyascii/AnyAscii.jl"`
 
 [**FULL README**](https://github.com/anyascii/anyascii)

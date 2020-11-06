@@ -12,6 +12,7 @@ Unicode to ASCII transliteration
 [Go](#go)
 [Java](#java)
 [JavaScript](#javascript)
+[Julia](#julia)
 [PHP](#php)
 [Python](#python)
 [Ruby](#ruby)
@@ -122,6 +123,20 @@ const s = anyAscii('άνθρωποι');
 ```
 
 `npm install any-ascii`
+
+### Julia
+
+https://github.com/anyascii/AnyAscii.jl
+
+```julia
+julia> using AnyAscii
+julia> anyascii("άνθρωποι")
+"anthropoi"
+```
+
+Julia 1.0+ compatible
+
+`pkg> add "https://github.com/anyascii/AnyAscii.jl"`
 
 ### PHP <a name="php"></a> [![packagist](https://img.shields.io/packagist/v/anyascii/anyascii)](https://packagist.org/packages/anyascii/anyascii)
 
