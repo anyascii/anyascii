@@ -136,7 +136,7 @@ julia> anyascii("άνθρωποι")
 
 Julia 1.0+ compatible
 
-`pkg> add "https://github.com/anyascii/AnyAscii.jl"`
+`pkg> add AnyAscii`
 
 ### PHP <a name="php"></a> [![packagist](https://img.shields.io/packagist/v/anyascii/anyascii)](https://packagist.org/packages/anyascii/anyascii)
 

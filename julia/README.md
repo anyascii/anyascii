@@ -22,6 +22,6 @@ julia> anyascii("άνθρωποι")
 
 Julia 1.0+ compatible
 
-`pkg> add "https://github.com/anyascii/AnyAscii.jl"`
+`pkg> add AnyAscii`
 
 [**FULL README**](https://github.com/anyascii/anyascii)
