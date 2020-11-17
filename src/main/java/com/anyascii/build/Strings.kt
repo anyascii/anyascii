@@ -18,6 +18,8 @@ val CodePoint.name: String get() = UCharacter.getNameAlias(this) ?: UCharacter.g
 
 fun CodePoint(name: String): CodePoint = UCharacter.getCharFromName(name)
 
+fun codePoint(name: String): CodePoint? = UCharacter.getCharFromName(name).takeUnless { it == -1 }
+
 fun String.toCodePoint(): CodePoint = codePointAt(0).also { check(length == Character.charCount(it)) { this } }
 
 fun String.lower(): String = UCharacter.toLowerCase(this)
@@ -57,3 +59,5 @@ fun Iterable<CodePoint>.filterDefined() = filter { it.isDefined }
 inline fun Iterable<CodePoint>.filterName(predicate: (String) -> Boolean) = filter { predicate(it.name) }
 
 fun String.stripLeading(c: Char) = dropWhile { it == c }
+
+fun String.remove(s: String) = replace(s, "")

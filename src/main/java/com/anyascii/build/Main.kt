@@ -179,6 +179,11 @@ private fun custom() = Table()
         .then(Table("lepcha"))
         .then(oldPersian())
         .then(meroitic())
+        .then(tirhuta())
+        .then(modi())
+        .then(takri())
+        .then(dogra())
+        .then(khudawadi())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -207,7 +212,7 @@ private fun braille() = Table("braille")
         .then(codePoints("Brai").toTable { "{${it.name.substringAfterLast('-')}}" })
 
 private fun georgian() = Table("georgian")
-        .aliasing(codePoints("Geor").filterName { "SMALL LETTER" in it }) { it.replace("SMALL ", "") }
+        .aliasing(codePoints("Geor").filterName { "SMALL LETTER" in it }) { it.remove("SMALL ") }
         .transliterate()
         .cased(codePoints("Geor"))
 
@@ -218,10 +223,10 @@ private fun latin() = Table("latin")
         .cased(codePoints("Latn"))
 
 private fun katakana() = Table("katakana")
-        .aliasing(codePoints("Kana").filterName { it.startsWith("KATAKANA LETTER SMALL") }) { it.replace("SMALL ", "") }
+        .aliasing(codePoints("Kana").filterName { it.startsWith("KATAKANA LETTER SMALL") }) { it.remove("SMALL ") }
 
 private fun hiragana() = Table("hiragana")
-        .aliasing(codePoints("Hira").filterName { it.startsWith("HIRAGANA LETTER SMALL") }) { it.replace("SMALL ", "") }
+        .aliasing(codePoints("Hira").filterName { it.startsWith("HIRAGANA LETTER SMALL") }) { it.remove("SMALL ") }
         .then(codePoints("Hira").filterName { it.startsWith("HENTAIGANA") }.toTable { it.name.substringAfterLast(' ').substringBefore('-').lower() })
 
 private fun deseret() = Table("deseret")
@@ -369,3 +374,21 @@ private fun oldPersian() = Table("old-persian")
 private fun meroitic() = Table("meroitic")
         .then((0x109c0..0x109f5).filterDefined().toTable { it.num })
         .then((0x109f6..0x109ff).plus(0x109bc).toTable { it.float.times(12).roundToInt().toString() })
+
+private fun tirhuta() = codePoints("Tirh").toTable {
+    val name = it.name.replace("GVANG", "SIGN ANUSVARA")
+    val cp = codePoint(name.replace("TIRHUTA", "DEVANAGARI")) ?: codePoint(name.replace("TIRHUTA", "BENGALI"))
+    checkNotNull(cp).asString()
+}
+
+private fun modi() = Table("modi")
+        .then(codePoints("Modi").toTable { (codePoint(it.name.replace("MODI", "DEVANAGARI")) ?: it).asString() })
+
+private fun takri() = codePoints("Takr").toTable {
+    val name = it.name.remove("ARCHAIC ").replace("TAKRI", "DEVANAGARI")
+    checkNotNull(codePoint(name)).asString()
+}
+
+private fun dogra() = codePoints("Dogr").toTable { checkNotNull(codePoint(it.name.replace("DOGRA", "DEVANAGARI"))).asString() }
+
+private fun khudawadi() = codePoints("Sind").toTable { checkNotNull(codePoint(it.name.replace("KHUDAWADI", "DEVANAGARI"))).asString() }
