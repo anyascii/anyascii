@@ -186,6 +186,7 @@ private fun custom() = Table()
         .then(khudawadi())
         .then(nandinagari())
         .then(gunjalaGondi())
+        .then(brahmi())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -402,3 +403,6 @@ private fun gunjalaGondi() = codePoints("Gong").toTable {
     val cp = codePoint(name.replace("GUNJALA GONDI", "TELUGU")) ?: codePoint(name.replace("GUNJALA GONDI", "DEVANAGARI"))
     checkNotNull(cp).asString()
 }
+
+private fun brahmi() = Table("brahmi")
+        .then((0x11052..0x11065).toTable { it.num })
