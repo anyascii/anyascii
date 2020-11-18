@@ -1,33 +1,32 @@
-# https://www.unicode.org/charts/PDF/U1980.pdf
-# https://www.unicode.org/wg2/docs/n2634.pdf
+# https://unicode.org/charts/PDF/U1980.pdf
 # knab 2013
-# https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet
+#
 # consonants
-ᦀ	'
-ᦁ	'
-ᦂ	k
-ᦃ	x
+ᦀ	
+ᦁ	
+ᦂ	g
+ᦃ	k
 ᦄ	ng
-ᦅ	k
-ᦆ	x
+ᦅ	g
+ᦆ	k
 ᦇ	ng
-ᦈ	ts
+ᦈ	z
 ᦉ	s
 ᦊ	y
-ᦋ	ts
+ᦋ	z
 ᦌ	s
 ᦍ	y
-ᦎ	t
-ᦏ	th
+ᦎ	d
+ᦏ	t
 ᦐ	n
-ᦑ	t
-ᦒ	th
+ᦑ	d
+ᦒ	t
 ᦓ	n
-ᦔ	p
-ᦕ	ph
+ᦔ	b
+ᦕ	p
 ᦖ	m
-ᦗ	p
-ᦘ	ph
+ᦗ	b
+ᦘ	p
 ᦙ	m
 ᦚ	f
 ᦛ	w
@@ -36,43 +35,43 @@
 ᦞ	w
 ᦟ	l
 ᦠ	h
-ᦡ	d
-ᦢ	b
+ᦡ	dd
+ᦢ	bb
 ᦣ	h
-ᦤ	d
-ᦥ	b
-ᦦ	kwa
-ᦧ	xwa
-ᦨ	kwa
-ᦩ	xwa
-ᦪ	swa
-ᦫ	swa
+ᦤ	dd
+ᦥ	bb
+ᦦ	gw
+ᦧ	kw
+ᦨ	gw
+ᦩ	kw
+ᦪ	sw
+ᦫ	sw
 # vowel signs
 ᦰ	'
 ᦱ	aa
 ᦲ	i
 ᦳ	u
-ᦴ	uu
+ᦴ	u
 ᦵ	e
 ᦶ	ae
 ᦷ	o
 ᦸ	oa
 ᦹ	ue
-ᦺ	ay
-ᦻ	aay
-ᦼ	uy
-ᦽ	oy
-ᦾ	oay
-ᦿ	uey
-ᧀ	iy
+ᦺ	ai
+ᦻ	aai
+ᦼ	ui
+ᦽ	oi
+ᦾ	oai
+ᦿ	uei
+ᧀ	ii
 # final consonants
 ᧁ	w
 ᧂ	ng
 ᧃ	n
 ᧄ	m
 ᧅ	k
-ᧆ	d
-ᧇ	b
+ᧆ	t
+ᧇ	p
 # tone marks
 ᧈ	
 ᧉ	

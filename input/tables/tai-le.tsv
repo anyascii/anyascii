@@ -1,34 +1,36 @@
-# https://www.unicode.org/charts/PDF/U1950.pdf
-# unicode consonants
-ᥐ	k
-ᥑ	x
+# https://unicode.org/charts/PDF/U1950.pdf
+# knab 2013
+#
+# consonants
+ᥐ	g
+ᥑ	h
 ᥒ	ng
-ᥓ	ts
+ᥓ	z
 ᥔ	s
 ᥕ	y
-ᥖ	t
-ᥗ	th
+ᥖ	d
+ᥗ	t
 ᥘ	l
-ᥙ	p
-ᥚ	ph
+ᥙ	b
+ᥚ	p
 ᥛ	m
 ᥜ	f
-ᥝ	v
-ᥞ	h
-ᥟ	q
-ᥠ	kh
-ᥡ	tsh
+ᥝ	w
+ᥞ	hh
+ᥟ	'
+ᥠ	k
+ᥡ	c
 ᥢ	n
-# unicode vowels
-ᥣ	a
+# vowels
+ᥣ	aa
 ᥤ	i
-ᥥ	ee
-ᥦ	eh
+ᥥ	e
+ᥦ	ae
 ᥧ	u
-ᥨ	oo
-ᥩ	o
+ᥨ	o
+ᥩ	oa
 ᥪ	ue
-ᥫ	e
+ᥫ	oe
 ᥬ	aue
 ᥭ	ai
 # tones

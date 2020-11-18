@@ -1,7 +1,7 @@
-# https://www.unicode.org/charts/PDF/UAA80.pdf
-# https://www.unicode.org/wg2/docs/n3220.pdf
-# https://www.unicode.org/L2/L2008/08217-tai-don.pdf
+# https://unicode.org/charts/PDF/UAA80.pdf
 # knab 2013
+# https://unicode.org/L2/L2008/08217-tai-don.pdf
+#
 # consonants
 ꪀ	k
 ꪁ	k
@@ -13,10 +13,10 @@
 ꪇ	g
 ꪈ	ng
 ꪉ	ng
-ꪊ	c
-ꪋ	c
-ꪌ	ch
-ꪍ	ch
+ꪊ	ch
+ꪋ	ch
+ꪌ	chh
+ꪍ	chh
 ꪎ	s
 ꪏ	s
 ꪐ	ny
@@ -49,22 +49,22 @@
 ꪫ	v
 ꪬ	h
 ꪭ	h
-ꪮ	'
-ꪯ	'
+ꪮ	
+ꪯ	
 # vowels and finals
 ꪰ	a
 ꪱ	aa
 ꪲ	i
 ꪳ	ue
 ꪴ	u
-ꪵ	e
+ꪵ	ae
 ꪶ	o
 ꪷ	oa
 ꪸ	ia
 ꪹ	uea
 ꪺ	ua
 ꪻ	aue
-ꪼ	ay
+ꪼ	ai
 ꪽ	an
 ꪾ	am
 # tones
@@ -73,8 +73,8 @@
 ꫁	
 ꫂ	
 # word ligature symbols
-ꫛ	kon
-ꫜ	nueng
+ꫛ	Kon
+ꫜ	Nueng
 # repetition mark
 ꫝ	-
 # punctuation

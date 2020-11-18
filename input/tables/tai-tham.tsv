@@ -1,7 +1,8 @@
-# https://www.unicode.org/charts/PDF/U1A20.pdf
-# https://r12a.github.io/scripts/taitham/block
-# https://www.unicode.org/L2/L2019/19365-tai-tham-structure.pdf
+# https://unicode.org/charts/PDF/U1A20.pdf
 # knab 2012
+# https://r12a.github.io/scripts/taitham/block
+# https://unicode.org/L2/L2007/07007r-n3207r-lanna.pdf
+# https://unicode.org/L2/L2019/19365-tai-tham-structure.pdf
 #
 # consonants
 ᨠ	k
@@ -11,11 +12,11 @@
 ᨤ	kh
 ᨥ	kh
 ᨦ	ng
-ᨧ	c
-ᨨ	ch
-ᨩ	c
+ᨧ	ch
+ᨨ	s
+ᨩ	ch
 ᨪ	s
-ᨫ	ch
+ᨫ	s
 ᨬ	ny
 ᨭ	t
 ᨮ	th
@@ -35,19 +36,19 @@
 ᨼ	f
 ᨽ	ph
 ᨾ	m
-ᨿ	y
+ᨿ	ny
 ᩀ	y
-ᩁ	r
-ᩂ	r
+ᩁ	h
+ᩂ	lue
 ᩃ	l
-ᩄ	l
+ᩄ	lue
 ᩅ	w
 ᩆ	s
 ᩇ	s
 ᩈ	s
 ᩉ	h
 ᩊ	l
-ᩋ	'
+ᩋ	
 ᩌ	h
 # independent vowels
 ᩍ	i
@@ -57,8 +58,8 @@
 ᩑ	e
 ᩒ	o
 # consonants
-ᩓ	l
-ᩔ	ss
+ᩓ	lae
+ᩔ	th
 # consonant signs
 ᩕ	r
 ᩖ	l
@@ -89,10 +90,10 @@
 ᩮ	e
 ᩯ	ae
 ᩰ	o
-ᩱ	ay
-ᩲ	ay
+ᩱ	ai
+ᩲ	ai
 ᩳ	oa
-ᩴ	ng
+ᩴ	m
 # tone marks
 ᩵	
 ᩶	
@@ -106,9 +107,9 @@
 # cryptogrammic mark
 ᩿	.
 # logographs
-᪠	+
-᪡	+
-᪢	+
+᪠	@
+᪡	@
+᪢	@
 # punctuation
 ᪣	*
 ᪤	*
