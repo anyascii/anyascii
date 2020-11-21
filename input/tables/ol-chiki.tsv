@@ -1,45 +1,46 @@
-# https://www.unicode.org/charts/PDF/U1C50.pdf
-# https://www.unicode.org/wg2/docs/n2984.pdf
+# https://unicode.org/charts/PDF/U1C50.pdf
 # https://en.wikipedia.org/wiki/Ol_Chiki_script
-# ala-lc 2012
-# letters
+#
+# santali ala-lc 2012
+## vowels
 ᱚ	a
-ᱛ	t
-ᱜ	g
-ᱝ	m
-ᱞ	l
 ᱟ	a
-ᱠ	k
-ᱡ	j
-ᱢ	m
-ᱣ	w
 ᱤ	i
+ᱩ	u
+ᱮ	e
+ᱳ	o
+## consonants
+ᱠ	k
+ᱜ	g
+ᱶ	n
+ᱪ	c
+ᱡ	j
+ᱧ	n
+ᱴ	t
+ᱰ	d
+ᱲ	r
+ᱬ	n
+ᱛ	t
+ᱫ	d
+ᱱ	n
+ᱯ	p
+ᱵ	b
+ᱢ	m
+ᱭ	y
+ᱨ	r
+ᱞ	l
+ᱣ	w
 ᱥ	s
 ᱦ	h
-ᱧ	n
-ᱨ	r
-ᱩ	u
-ᱪ	c
-ᱫ	d
-ᱬ	n
-ᱭ	y
-ᱮ	e
-ᱯ	p
-ᱰ	d
-ᱱ	n
-ᱲ	r
-ᱳ	o
-ᱴ	t
-ᱵ	b
-ᱶ	n
 ᱷ	h
-# modifier letters
+ᱽ	'
+ᱝ	m
 ᱸ	m
+## notes
 ᱹ	
-ᱺ	m
 ᱻ	
 ᱼ	
-ᱽ	'
+ᱺ	m
 # punctuation
 ᱾	,
 ᱿	.
