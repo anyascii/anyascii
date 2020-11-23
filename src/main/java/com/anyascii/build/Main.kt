@@ -187,6 +187,7 @@ private fun custom() = Table()
         .then(nandinagari())
         .then(gunjalaGondi())
         .then(brahmi())
+        .then(Table("pahawh-hmong"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
