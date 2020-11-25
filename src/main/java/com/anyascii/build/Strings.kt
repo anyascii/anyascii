@@ -10,6 +10,8 @@ typealias CodePoint = Int
 
 fun String.isPrintableAscii() = all { it.toInt() in 0x20..0x7e }
 
+fun String.isAscii() = all { it.toInt().isAscii() }
+
 fun CodePoint.isAscii() = this in 0..127
 
 fun CodePoint.asString(): String = Character.toString(this)

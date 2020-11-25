@@ -88,11 +88,16 @@ fun Table.aliasing(codePoints: Iterable<CodePoint>, nameTransform: (String) -> S
 fun Table.retain(codePoints: Iterable<CodePoint>) = apply { keys.retainAll(codePoints) }
 
 fun Table.transliterate() = apply {
-    for ((cp, r) in toMap()) {
-        if (!r.isPrintableAscii()) {
-            this[cp] = checkNotNull(transliterate(r))
+    var f: Boolean
+    do {
+        f = false
+        for (e in iterator()) {
+            if (!e.value.isAscii()) {
+                f = true
+                e.setValue(checkNotNull(transliterate(e.value)))
+            }
         }
-    }
+    } while (f)
 }
 
 fun Table.transliterate(s: String): String? {
