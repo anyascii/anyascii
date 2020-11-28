@@ -74,8 +74,7 @@ private fun custom() = Table()
         .then(Table("latin-common"))
         .then(latin())
         .then(greek())
-        .then(katakana())
-        .then(hiragana())
+        .then(kana())
         .then(Table("lao"))
         .then(Table("runic"))
         .then(oldItalic())
@@ -226,11 +225,9 @@ private fun armenian() = Table("armenian")
 private fun latin() = Table("latin")
         .cased(codePoints("Latn"))
 
-private fun katakana() = Table("katakana")
-        .aliasing(codePoints("Kana").filterName { it.startsWith("KATAKANA LETTER SMALL") }) { it.remove("SMALL ") }
-
-private fun hiragana() = Table("hiragana")
+private fun kana() = Table("kana")
         .aliasing(codePoints("Hira").filterName { it.startsWith("HIRAGANA LETTER SMALL") }) { it.remove("SMALL ") }
+        .aliasing(codePoints("Kana").filterName { it.startsWith("KATAKANA LETTER SMALL") }) { it.remove("SMALL ") }
         .then(codePoints("Hira").filterName { it.startsWith("HENTAIGANA") }.toTable { it.name.substringAfterLast(' ').substringBefore('-').lower() })
 
 private fun deseret() = Table("deseret")
