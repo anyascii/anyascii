@@ -1,6 +1,10 @@
+# https://unicode.org/charts/PDF/U0F00.pdf
+# https://unicode.org/versions/Unicode13.0.0/ch13.pdf
+# https://r12a.github.io/scripts/tibetan
 # https://r12a.github.io/scripts/tibetan/block
 #
-# ala-lc 2015 consonants
+# ala-lc 2015
+## consonants
 ཀ	k
 ཁ	kh
 ག	g
@@ -31,42 +35,41 @@
 ས	s
 ཧ	h
 ཨ	
-# ala-lc 2015 vowels
-ཱ	a
+## vowels
 ི	i
-ཱི	i
 ུ	u
-ཱུ	u
 ེ	e
-ཻ	ai
 ོ	o
+ཱ	a
+ཱི	i
+ཱུ	u
+ཻ	ai
 ཽ	au
-# ala-lc 2015 other letters
-གྷ	gh
+## other letters
 ཊ	t
 ཋ	th
 ཌ	d
-ཌྷ	dh
 ཎ	n
+ཥ	s
+གྷ	gh
 དྷ	dh
 བྷ	bh
 ཛྷ	dzh
-ཥ	s
+ཌྷ	dh
 ཾ	m
-ཿ	h
 ྃ	m
+ཿ	h
 ྅	`
-# ala-lc 2015 other
-ༀ	Om
-ཀྵ	ks
-ཪ	r
+## notes
 ྀ	i
+ཱྀ	i
 ་	-
 ༌	-
+# https://unicode.org/wg2/docs/n2985.pdf
 # https://en.wikipedia.org/wiki/Balti_language
 ཫ	q
 ཬ	r
-# half digits https://www.babelstone.co.uk/Blog/2007/04/numbers-that-dont-add-up-tibetan-half.html
+# https://www.babelstone.co.uk/Blog/2007/04/numbers-that-dont-add-up-tibetan-half.html
 ༪	.5
 ༫	1.5
 ༬	2.5
@@ -77,19 +80,21 @@
 ༱	7.5
 ༲	8.5
 ༳	-.5
-# http://www.thlib.org/reference/transliteration/#!essay=/thl/ewts/tables/
-༄	@
-༅	#
-༆	$
-༇	%
-༈	!
+# http://www.thlib.org/reference/transliteration/#!essay=/thl/ewts/5/
+## B
 །	/
 ༎	//
 ༏	;
 ༑	|
+༈	!
 ༔	:
 ༴	=
-༹	^
+## C
+༄	@
+༅	#
+༆	$
+༇	%
+## D
 ༺	<
 ༻	>
 ༼	(
@@ -103,67 +108,68 @@
 ༟	ox
 ࿎	xo
 ࿏	xxx
+# https://unicode.org/wg2/docs/n3032.pdf
+࿒	:
 #
-#༁	_
-#༂	_
-#༃	_
+ༀ	Om
+༁	@
+༂	@
+༃	@
 ༉	*
-#༊	_
-#༐	_
-#༒	_
-#༓	_
-#༕	_
-#༖	_
-#༗	_
-#༘	_
-#༙	_
-#༵	_
+༊	*
+༐	|
+༒	/
+༓	*
+༕	*
+༖	*
+༗	*
+༘	
+༙	
+༵	
 ༶	^
-#༷	_
-#༸	_
-#༾	_
-#༿	_
+༷	
+༸	*
+༹	
+༾	
+༿	
 ྲྀ	r
 ཷ	r
 ླྀ	l
 ཹ	l
-ཱྀ	i
-#ྂ	_
+ྂ	
 ྄	
-#྆	_
-#྇	_
-#ྈ	_
-#ྉ	_
-#ྊ	_
-#ྋ	_
-#ྌ	_
-#ྍ	_
-#ྎ	_
-#ྏ	_
-#
-#྾	_
+྆	
+྇	
+ྈ	
+ྉ	
+ྊ	
+ྋ	
+ྌ	
+ྍ	
+ྎ	
+ྏ	
+྾	-
 ྿	^
-#࿀	_
-#࿁	_
-#࿂	_
-#࿃	_
-#࿄	_
-#࿅	_
-#࿆	_
-#࿇	_
-#࿈	_
-#࿉	_
-#࿊	_
-#࿋	_
-#࿌	_
-#࿐	_
-#࿑	_
-#࿒	_
-#࿓	_
-#࿔	_
+࿀	*
+࿁	*
+࿂	*
+࿃	*
+࿄	*
+࿅	*
+࿆	
+࿇	*
+࿈	*
+࿉	*
+࿊	*
+࿋	*
+࿌	*
+࿐	*
+࿑	*
+࿓	@
+࿔	#
 ࿕	+
 ࿖	+
 ࿗	+
 ࿘	+
-#࿙	_
-#࿚	_
+࿙	^
+࿚	^

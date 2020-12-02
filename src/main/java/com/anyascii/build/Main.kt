@@ -271,8 +271,7 @@ private fun baybayin() = (0x1700..0x177f).filterDefined().toTable { cp ->
 private fun ideographicDescription() = (0x2ff0..0x2fff).filterDefined().toTable { it.toString(16).takeLast(1) }
 
 private fun tibetan() = Table("tibetan")
-        .aliasing(codePoints("Tibt").filterName { "SUBJOINED LETTER FIXED-FORM" in it }) { it.replace("SUBJOINED LETTER FIXED-FORM", "LETTER") }
-        .aliasing(codePoints("Tibt").filterName { "SUBJOINED LETTER" in it && "FIXED-FORM" !in it }) { it.replace("SUBJOINED LETTER", "LETTER") }
+        .then(codePoints("Tibt").filterName { "SUBJOINED LETTER" in it || "FIXED-FORM" in it }.toTable { CodePoint(it.name.remove(" SUBJOINED").remove(" FIXED-FORM")).asString() })
 
 private fun canadianSyllabics() = Table("canadian-syllabics")
         .then(codePoints("Cans").toTable { it.name.substringAfterLast(' ').lower() })
