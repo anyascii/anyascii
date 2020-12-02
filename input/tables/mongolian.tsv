@@ -1,4 +1,10 @@
+# https://unicode.org/charts/PDF/U1800.pdf
+# https://unicode.org/charts/PDF/U11660.pdf
+# https://unicode.org/reports/tr54
+# https://unicode.org/versions/Unicode13.0.0/ch13.pdf
+#
 # ungegn 1982
+# knab 2015 pinyin
 ᠠ	a
 ᠡ	e
 ᠢ	i
@@ -6,7 +12,9 @@
 ᠤ	u
 ᠥ	o
 ᠦ	u
+ᠧ	e
 ᠨ	n
+ᠩ	ng
 ᠪ	b
 ᠫ	p
 ᠬ	h
@@ -24,18 +32,18 @@
 ᠸ	w
 ᠹ	f
 ᠺ	k
+ᠻ	k
 ᠼ	c
 ᠽ	z
 ᠾ	h
-# knab 2015
-ᠧ	e
-ᠩ	ng
-ᠻ	k
-ᠿ	z
+ᠿ	r
 ᡀ	lh
 ᡁ	zh
 ᡂ	ch
-# https://en.wikipedia.org/wiki/Clear_Script
+# todo
+# kalmyk knab 2012
+# https://xal.wikipedia.org/wiki/Тодо_бичиг
+ᡃ	
 ᡄ	e
 ᡅ	i
 ᡆ	o
@@ -45,27 +53,28 @@
 ᡊ	ng
 ᡋ	b
 ᡌ	p
-ᡍ	x
-ᡎ	q
+ᡍ	h
+ᡎ	gh
 ᡏ	m
 ᡐ	t
 ᡑ	d
 ᡒ	ch
-ᡓ	z
+ᡓ	dzh
 ᡔ	c
-ᡕ	y
-ᡖ	w
-ᡗ	kh
-ᡘ	k
+ᡕ	j
+ᡖ	v
+ᡗ	k
+ᡘ	g
 ᡙ	g
-ᡚ	j
-# https://en.wikipedia.org/wiki/Transliterations_of_Manchu
-# A Comprehensive Manchu-Chinese Dictionary
+ᡚ	dzh
+ᡛ	nj
+ᡜ	dz
+# manchu ala-lc 2012
 ᡝ	e
 ᡞ	i
 ᡟ	y
 ᡠ	u
-ᡡ	uu
+ᡡ	u
 ᡢ	ng
 ᡣ	k
 ᡤ	g
@@ -74,49 +83,37 @@
 ᡧ	sh
 ᡨ	t
 ᡩ	d
-ᡪ	zh
+ᡪ	j
 ᡫ	f
-ᡬ	gg
-ᡭ	hh
-ᡮ	c
-ᡯ	z
-ᡰ	rr
-ᡱ	ch
-ᡲ	zh
+ᡬ	g
+ᡭ	h
+ᡮ	ts
+ᡯ	dz
+ᡰ	zh
+ᡱ	c
+ᡲ	j
 ᡳ	i
 ᡴ	k
 ᡵ	r
 ᡶ	f
-ᡷ	zh
-# punctuation
-᠀	@
-᠁	...
-᠂	,
-᠃	.
-᠄	:
-᠅	*
-᠆	-
-᠇	+
-᠈	,
-᠉	.
-᠊	'
-# format controls
-᠋	
-᠌	
-᠍	
-᠎	
-# todo
-ᡃ	-
-ᡛ	n
-ᡜ	dz
-# https://www.unicode.org/L2/L2017/17007-n4781-mongolian.pdf
+ᡷ	j
+# https://unicode.org/L2/L2017/17007-n4781-mongolian.pdf
 ᡸ	sh
-# ali gali devanagari 
+# ali gali
+# https://unicode.org/L2/L2017/17333-mong-mixed-scheme.pdf
+# https://unicode.org/L2/L2016/16292-mongolian-comments.pdf
+ᢀ	m
+ᢁ	h
+ᢂ	h
+ᢃ	h
+ᢄ	h
+ᢅ	3
+ᢆ	9
 ᢇ	a
 ᢈ	i
 ᢉ	k
-ᢊ	n
-ᢋ	c
+ᢊ	ng
+ᢋ	ts
 ᢌ	t
 ᢍ	th
 ᢎ	d
@@ -128,35 +125,39 @@
 ᢔ	s
 ᢕ	zh
 ᢖ	z
+ᢗ	'
 ᢘ	t
 ᢙ	zh
 ᢚ	gh
-ᢛ	n
-ᢜ	c
-ᢝ	jh
+ᢛ	ng
+ᢜ	ts
+ᢝ	dzh
 ᢞ	t
 ᢟ	dh
 ᢠ	t
 ᢡ	dh
 ᢢ	s
+ᢣ	c
 ᢤ	zh
 ᢥ	z
-ᢨ	bh
-ᢪ	lh
-# ali gali
-ᢀ	m
-ᢁ	h
-#ᢂ	
-#ᢃ	
-#ᢄ	
-ᢅ	`
-ᢆ	```
-ᢗ	ah
-ᢣ	cy
-ᢦ	u
+ᢦ	w
 ᢧ	y
-#ᢩ	
+ᢨ	bh
+ᢩ	
+ᢪ	lh
 # punctuation
+᠁	...
+᠂	,
+᠃	.
+᠄	:
+᠅	*
+᠆	-
+᠇	-
+᠈	,
+᠉	.
+᠊	-
+# birgas
+᠀	@
 𑙠	@
 𑙡	@
 𑙢	@
@@ -170,3 +171,8 @@
 𑙪	@
 𑙫	@
 𑙬	@
+# format controls
+᠋	
+᠌	
+᠍	
+᠎	
