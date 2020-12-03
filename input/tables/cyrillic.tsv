@@ -1,4 +1,4 @@
-# gost 52290 2004
+# gost 52290-2004
 А	A
 Б	B
 В	V
@@ -53,20 +53,91 @@
 Ұ	U
 Ү	U
 Һ	H
-# uzbek bgn/pcgn 2000
-Ҳ	H
-Ў	O`
-# kurdish ala-lc 2012
-Ӧ	U
-Ԛ	Q
-Ԝ	W
 # macedonian bgn/pcgn 2013
 Ѓ	G
-Ќ	K
 Ѕ	Dz
-# azerbaijani ala-lc 2017
+Ќ	K
+# azerbaijani ungegn 2003
 Ҝ	G
-Ҹ	J
+Ҹ	C
+# belarusian ungegn 2012
+Ў	U
+# turkmen ungegn 2003
+Җ	J
+# tajik bgn/pcgn 1994
+Ӣ	I
+Ӯ	U
+Ҳ	H
+Ҷ	J
+# udmurt bgn/pcgn 2011
+Ӝ	Dzh
+Ӟ	J
+Ӥ	I
+Ӧ	O
+Ӵ	Tsh
+# bashkir bgn/pcgn 2007
+Ҙ	Z
+Ҡ	Q
+Ҫ	S
+# moldovan bgn/pcgn 2002
+Ӂ	Gi
+# ossetian bgn/pcgn 2009
+Ӕ	Ae
+# komi knab 1994
+Ԁ	D
+Ԃ	Dj
+Ԅ	Zj
+Ԇ	Dz
+Ԉ	Lj
+Ԋ	Nj
+Ԍ	Sj
+Ԏ	Tj
+# khanty knab 1994
+Ӓ	A
+Ӑ	A
+Ӛ	E
+Ԯ	L
+Ԓ	L
+Ӫ	Y
+Ӱ	U
+Ӄ	Q
+Ӈ	Ng
+Ӽ	X
+# nivkh knab 1994
+Ӻ	Xh
+Ҥ	Ng
+Ӿ	H
+# khakass knab 1995
+Ӌ	Dzh
+# hill mari knab 1994
+Ӹ	Y
+# non-slavic cyrillic ala-lc 2017
+Ӏ	H
+## abkhaz
+Ҕ	Gh
+Ӷ	Gh
+Ҽ	Ch
+Ҿ	Ch
+Ӡ	Dz
+Ҟ	Q
+Ҩ	W
+Ҧ	Ph
+Ԥ	Ph
+Ҭ	Th
+Ҵ	Ts
+## chuvash
+Ӗ	E
+Ԡ	L
+Ԣ	N
+Ӳ	U
+## mordvin
+Ԙ	A
+Ԕ	Lkh
+Ԗ	Rkh
+Ӭ	A
+# kurdish ala-lc 2012
+Ԛ	Q
+Ԝ	W
 # church slavic ala-lc 2011
 Ѥ	Ie
 Ѹ	U
@@ -88,88 +159,16 @@
 Ѻ	O
 Ѵ	Y
 Ꙟ	In
-# komi knab 1994
-Ԁ	D
-Ԃ	Dj
-Ԅ	Zj
-Ԇ	Dz
-Ԉ	Lj
-Ԋ	Nj
-Ԍ	Sj
-Ԏ	Tj
-# chukchi knab 1994
-Ӄ	Q
-Ӈ	Ng
-Ԓ	L
-# bashkir knab 2006
-Ҙ	Z
-Ҡ	Q
-# non-slavic cyrillic ala-lc 2017
-## mordvin
-Ҥ	Ng
-Ӭ	A
-Ԙ	A
-Ԕ	Lkh
-Ԗ	Rkh
-## chuvash
-Ҫ	S
-Ӑ	A
-Ӗ	E
-Ӱ	U
-Ӳ	U
-Ԡ	L
-Ԣ	N
-## abkhaz
-Ҧ	Ph
-Ҩ	W
-Ҭ	Th
-Ҵ	Ts
-Ҷ	Ch
-Ҽ	Ch
-Ҿ	Ch
-Ҕ	Gh
-Ҟ	Q
-Ӡ	Dz
-Ӷ	Gh
-Ԥ	Ph
-## tatar
-Җ	J
-## moldovan
-Ӂ	J
-## khakass
-Ӌ	J
-## udmurt
-Ӝ	J
-Ӟ	Dz
-Ӥ	I
-Ӵ	Ch
-## khanty
-Ӛ	A
-Ӫ	O
-Ӓ	A
-## tajik
-Ӣ	I
-Ӯ	U
-## mari
-Ӹ	Y
-## dargwa
-Ӏ	H
-Ӕ	Ae
-# nivkh knab 1994
-Ӻ	X
-Ӽ	X
-Ӿ	H
-# khanty knab 1994
-Ԯ	L
-# https://en.wikipedia.org/wiki/Kildin_Sámi_language
-Ҋ	J
+# https://en.wikipedia.org/wiki/Kildin_Sami
+# https://doi.org/10.18452/1896
 Ҍ	'
-Ҏ	R
-Ӆ	L
-Ӊ	N
-Ӎ	M
+Ҋ	Jh
+Ӆ	Lh
+Ӎ	Mh
+Ӊ	Nh
+Ҏ	Rh
 # https://unicode.org/wg2/docs/n4199.pdf
-Ԫ	Dzzh
+Ԫ	Dzh
 Ԭ	Dch
 # https://www.unicode.org/wg2/docs/n3194.pdf
 ## aleut
@@ -179,11 +178,11 @@
 Ꚃ	Dzw
 Ꚅ	Zhw
 Ꚇ	Cch
-Ꚉ	Dzz
+Ꚉ	Dz
 Ꚋ	T
 Ꚍ	Tw
 Ꚏ	Tsw
-Ꚑ	Tss
+Ꚑ	Ts
 Ꚓ	Tch
 Ꚕ	Hw
 Ꚗ	Shw
