@@ -1,3 +1,4 @@
+# https://unicode.org/charts/PDF/U2B00.pdf
 ⬀	/
 ⬁	\
 ⬂	\
@@ -212,10 +213,10 @@
 #
 ⮸	^
 ⮹	^
-#
-⮺	ww
-⮻	wb
-⮼	bb
+# https://unicode.org/L2/L2017/17033r2-n4783r2-chess-notation.pdf
+⮺	*
+⮻	*
+⮼	*
 #
 ⮽	x
 ⮾	x
@@ -231,7 +232,7 @@
 ⯇	<
 ⯈	>
 #
-#⯉	_
+⯉	Neptune
 #
 ⯊	^
 ⯋	v
@@ -245,28 +246,29 @@
 ⯑	?
 ⯒	+
 #
-#⯓	_
-#⯔	_
-#⯕	_
-#⯖	_
-#
-#⯗	_
-#⯘	_
-#⯙	_
-#⯚	_
-#⯛	_
-#⯜	_
-#⯝	_
-#⯞	_
-#⯟	_
-#⯠	_
-#⯡	_
-#⯢	_
-#⯣	_
-#⯤	_
-#⯥	_
-#⯦	_
-#⯧	_
+⯓	Pluto
+⯔	Pluto
+⯕	Pluto
+⯖	Pluto
+# https://unicode.org/L2/L2016/16080r-add-astrology.pdf
+⯗	*
+⯘	*
+⯙	*
+⯚	*
+⯛	*
+⯜	*
+⯝	*
+⯞	*
+⯟	*
+# https://unicode.org/L2/L2016/16064-uranian-planets.pdf
+⯠	Cupido
+⯡	Hades
+⯢	Zeus
+⯣	Kronos
+⯤	Apollon
+⯥	Admetos
+⯦	Vulcanus
+⯧	Poseidon
 #
 ⯨	*
 ⯩	*
@@ -277,21 +279,23 @@
 ⯭	^
 ⯮	>
 ⯯	v
-#
-#⯰	_
-#⯱	_
-#⯲	_
-#
-#⯳	_
-#⯴	_
-#⯵	_
-#⯶	_
-#⯷	_
-#⯸	_
-#⯹	_
-#⯺	_
-#⯻	_
-#⯼	_
-#⯽	_
-#⯾	_
-#⯿	_
+# https://unicode.org/L2/L2016/16173-eris-sedna.pdf
+⯰	*
+⯱	*
+⯲	*
+# https://unicode.org/L2/L2017/17020r2-fdbk-extra-aspect-sym.pdf
+⯳	V
+⯴	N
+⯵	Q
+⯶	N2
+⯷	100
+⯸	D3
+# https://unicode.org/L2/L2017/17033r2-n4783r2-chess-notation.pdf
+⯹	*
+⯺	*
+⯻	*
+⯼	*
+⯽	*
+⯾	*
+# https://unicode.org/L2/L2017/17151r-hell-pause-char.pdf
+⯿	#
