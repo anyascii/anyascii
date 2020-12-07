@@ -188,6 +188,7 @@ private fun custom() = Table()
         .then(brahmi())
         .then(Table("pahawh-hmong"))
         .then(Table("vedic"))
+        .then(manichaean())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -404,3 +405,6 @@ private fun gunjalaGondi() = codePoints("Gong").toTable {
 
 private fun brahmi() = Table("brahmi")
         .then((0x11052..0x11065).toTable { it.num })
+
+private fun manichaean() = Table("manichaean")
+        .then((0x10aeb..0x10aef).toTable { it.num })
