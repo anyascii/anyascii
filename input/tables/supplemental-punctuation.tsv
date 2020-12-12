@@ -1,18 +1,21 @@
-⸀	[
-⸁	[
-⸂	[
-⸃	]
-⸄	[
-⸅	]
-⸆	T
-⸇	T
-⸈	s
-⸉	{
-⸊	}
+# https://unicode.org/charts/PDF/U2E00.pdf
+#
+# New Testament editorial symbols
+⸀	+
+⸁	+
+⸂	+
+⸃	+
+⸄	+
+⸅	+
+⸆	+
+⸇	+
+⸈	+
+⸉	+
+⸊	+
 ⸋	*
 ⸌	\
 ⸍	/
-#
+# Ancient Greek textual symbols
 ⸎	#
 ⸏	_
 ⸐	_
@@ -22,34 +25,34 @@
 ⸔	/
 ⸕	/
 ⸖	>
-#
+# Ancient Near-Eastern linguistic symbol
 ⸗	=
-#
+# General punctuation
 ⸘	!?
 ⸙	/
-#
+# Dictionary punctuation
 ⸚	-
 ⸛	~
-#
+# Brackets
 ⸜	\
 ⸝	/
-#
+# Dictionary punctuation
 ⸞	~
 ⸟	~
-#
-⸠	|
-⸡	|
-#
+# Brackets
+⸠	[
+⸡	]
+# Half brackets
 ⸢	[
 ⸣	]
 ⸤	[
 ⸥	]
-#
+# Brackets
 ⸦	(
 ⸧	)
 ⸨	((
 ⸩	))
-#
+# Historic punctuation
 ⸪	:
 ⸫	:
 ⸬	::
@@ -58,41 +61,41 @@
 ⸯ	'
 ⸰	*
 ⸱	-
-#
+# Palaeotype transliteration symbol
 ⸲	,
-#
+# Historic punctuation
 ⸳	-
 ⸴	,
-#
+# Palaeotype transliteration symbols
 ⸵	;
 ⸶	+
 ⸷	+
 ⸸	+
 ⸹	S
-#
+# Dashes
 ⸺	--
 ⸻	---
-#
+# Alternate forms of punctuation
 ⸼	.
 ⸽	:
 ⸾	|
-#
+# Historic punctuation
 ⸿	C
-#
+# Double hyphen
 ⹀	=
-#
+# Reversed punctuation
 ⹁	,
-⹂	,,
-#
+⹂	"
+# Miscellaneous punctuation
 ⹃	-
 ⹄	:
-#
-⹅	,
+# Typicon punctuation
+⹅	.
 ⹆	:
-⹇	'
-⹈	,
-⹉	:
-#
+⹇	.
+⹈	.
+⹉	;
+# Historic punctuation
 ⹊	/
 ⹋	+++
 ⹌	,
@@ -101,4 +104,4 @@
 ⹏	/
 ⹐	+
 ⹑	+
-⹒	T
+⹒	&

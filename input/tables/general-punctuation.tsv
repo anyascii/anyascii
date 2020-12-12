@@ -1,53 +1,56 @@
+# https://unicode.org/charts/PDF/U2000.pdf
+#
+# Format characters
 ​	
 ‌	
 ‍	
 ‎	
 ‏	
-#
+# Dashes
 ‐	-
 ‒	-
 –	-
 —	-
 ―	-
-#
+# General punctuation
 ‖	||
 ‗	_
-#
+# Quotation marks and apostrophe
 ‘	'
 ’	'
-‚	,
+‚	'
 ‛	'
 “	"
 ”	"
-„	,,
+„	"
 ‟	"
-#
+# General punctuation
 †	+
 ‡	++
 •	*
 ‣	*
 ‧	-
-#
+# Separators
  	 
  	 
-#
+# Format characters
 ‪	
 ‫	
 ‬	
 ‭	
 ‮	
-#
+# General punctuation
 ‰	%0
 ‱	%00
 ′	'
 ‵	`
 ‸	^
-#
+# Quotation marks
 ‹	<
 ›	>
-#
+# General punctuation
 ※	*
-#
+# General punctuation
 ‽	!?
 ‾	-
 ‿	_
@@ -56,11 +59,11 @@
 ⁂	***
 ⁃	-
 ⁄	/
-#
+# Brackets
 ⁅	[
 ⁆	]
-#
-⁊	7
+# General punctuation
+⁊	&
 ⁋	P
 ⁌	<
 ⁍	>
@@ -72,29 +75,29 @@
 ⁓	~
 ⁔	_
 ⁕	*
-#
-⁖	.:
-#
-⁘	.:.
-⁙	:.:
+# Archaic punctuation
+⁖	:
+# General punctuation
+⁘	:
+⁙	*
 ⁚	:
-⁛	::
+⁛	:
 ⁜	+
 ⁝	:
 ⁞	:
-#
+# Format character
 ⁠	
-#
+# Invisible operators
 ⁡	
 ⁢	
 ⁣	
 ⁤	
-#
+# Format characters
 ⁦	
 ⁧	
 ⁨	
 ⁩	
-#
+# Deprecated
 ⁪	
 ⁫	
 ⁬	

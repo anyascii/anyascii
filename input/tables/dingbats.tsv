@@ -1,3 +1,6 @@
+# https://unicode.org/charts/PDF/U2700.pdf
+#
+# Miscellaneous
 ✀	<
 ✁	<
 ✂	<
@@ -23,7 +26,7 @@
 ✖	X
 ✗	X
 ✘	X
-#
+# Crosses
 ✙	+
 ✚	+
 ✛	+
@@ -32,7 +35,7 @@
 ✞	+
 ✟	+
 ✠	+
-#
+# Stars and asterisks
 ✡	*
 ✢	*
 ✣	*
@@ -62,12 +65,12 @@
 ✻	*
 ✼	*
 ✽	*
-#
+# Fleurons
 ✾	*
 ✿	*
 ❀	*
 ❁	*
-#
+# Stars, asterisks and snowflakes
 ❂	*
 ❃	*
 ❄	*
@@ -78,9 +81,9 @@
 ❉	*
 ❊	*
 ❋	*
-#
+# Miscellaneous
 ❌	X
-❍	o
+❍	*
 ❎	X
 ❏	#
 ❐	#
@@ -94,22 +97,22 @@
 ❘	|
 ❙	|
 ❚	|
-#
+# Punctuation mark ornaments
 ❛	'
 ❜	'
 ❝	"
 ❞	"
-❟	,
-❠	,,
+❟	'
+❠	"
 ❡	P
 ❢	!
 ❣	!
 ❤	*
 ❥	*
-#
+# Fleurons
 ❦	*
 ❧	*
-#
+# Ornamental brackets
 ❨	(
 ❩	)
 ❪	(
@@ -124,13 +127,13 @@
 ❳	)
 ❴	{
 ❵	}
-#
+# Dingbat arrow
 ➔	>
-#
+# Heavy variants of arithmetic symbols
 ➕	+
 ➖	-
 ➗	/
-#
+# Dingbat arrows
 ➘	\
 ➙	>
 ➚	/
@@ -155,9 +158,9 @@
 ➭	>
 ➮	>
 ➯	>
-#
+# Miscellaneous
 ➰	*
-#
+# Dingbat arrows
 ➱	>
 ➲	>
 ➳	>
@@ -172,5 +175,5 @@
 ➼	>
 ➽	>
 ➾	>
-#
+# Miscellaneous
 ➿	**
