@@ -126,7 +126,7 @@ const s = anyAscii('άνθρωποι');
 
 ### Julia
 
-https://github.com/anyascii/AnyAscii.jl
+https://juliahub.com/ui/Packages/AnyAscii/wYZIV
 
 ```julia
 julia> using AnyAscii
