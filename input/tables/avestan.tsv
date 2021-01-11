@@ -1,5 +1,6 @@
-# https://www.unicode.org/charts/PDF/U10B00.pdf
-# https://en.wikipedia.org/wiki/Avestan_alphabet
+# https://unicode.org/charts/PDF/U10B00.pdf
+# https://unicode.org/wg2/docs/n3197.pdf
+# Hoffmann & Forssman 1996
 #
 # vowels
 𐬀	a
@@ -25,7 +26,7 @@
 𐬓	xv
 𐬔	g
 𐬕	g
-𐬖	g
+𐬖	gh
 𐬗	c
 𐬘	j
 𐬙	t
@@ -36,7 +37,7 @@
 𐬞	p
 𐬟	f
 𐬠	b
-𐬡	w
+𐬡	bh
 𐬢	ng
 𐬣	ng
 𐬤	ngv
@@ -52,10 +53,10 @@
 𐬮	l
 𐬯	s
 𐬰	z
-𐬱	s
-𐬲	z
-𐬳	s
-𐬴	s
+𐬱	sh
+𐬲	zh
+𐬳	sh
+𐬴	sh
 𐬵	h
 # punctuation
 𐬹	.
