@@ -1,4 +1,5 @@
-# revised romanization rule 8 consonants
+# revised romanization
+## consonants
 ㄱ	g
 ㄲ	kk
 ㄴ	n
@@ -18,9 +19,9 @@
 ㅌ	t
 ㅍ	p
 ㅎ	h
-# revised romanization consonant exceptions
+## final consonants
 ᆼ	ng
-# revised romanization vowels
+## vowels
 ㅏ	a
 ㅐ	ae
 ㅑ	ya
@@ -51,20 +52,5 @@
 ㆎ	oy
 ᆡ	oy
 ㆆ	q
-# filler
-ᅟ	
-ᅠ	
-ㅤ	
-㉧	
-# https://en.wikipedia.org/wiki/Hangul#Obsolete_letters 
+# https://en.wikipedia.org/wiki/Hangul#Obsolete_letters
 ㆁ	ng
-ᄼ	th
-ᄽ	sh
-ᄾ	x
-ᄿ	zh
-ᅎ	z
-ᅏ	dz
-ᅐ	j
-ᅑ	dzh
-ᅔ	c
-ᅕ	q

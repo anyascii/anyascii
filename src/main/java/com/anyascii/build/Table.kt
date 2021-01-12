@@ -50,7 +50,7 @@ fun Table.normalize(normalizer2: Normalizer2) = apply {
     for (cp in 128..Character.MAX_CODE_POINT) {
         if (cp in this) continue
         val output = transliterate(normalizer2.normalize(cp.asString()))
-        if (output != null && output.isNotEmpty()) {
+        if (output != null) {
             this[cp] = output
         }
     }
