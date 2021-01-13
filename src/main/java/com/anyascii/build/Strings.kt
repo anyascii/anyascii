@@ -34,6 +34,8 @@ fun CodePoint.upper(): CodePoint = UCharacter.toUpperCase(this)
 
 val CodePoint.numericValue: Int get() = UCharacter.getNumericValue(this).also { check(it >= 0) }
 
+val CodePoint.isInteger: Boolean get() = UCharacter.getNumericValue(this) >= 0
+
 val CodePoint.num: String get() = numericValue.toString()
 
 val CodePoint.float: Double get() = UCharacter.getUnicodeNumericValue(this).also { check(it != UCharacter.NO_NUMERIC_VALUE) }

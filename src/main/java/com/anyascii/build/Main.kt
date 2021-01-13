@@ -189,6 +189,8 @@ private fun custom() = Table()
         .then(Table("pahawh-hmong"))
         .then(Table("vedic"))
         .then(manichaean())
+        .then(ottomanSiyaqNumbers())
+        .then(indicSiyaqNumbers())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -411,3 +413,9 @@ private fun manichaean() = Table("manichaean")
 
 private fun meeteiMayek() = Table("meetei-mayek")
         .then((0xabdb..0xabe2).toTable { CodePoint(it.name.substringBeforeLast(' ')).asString() })
+
+private fun ottomanSiyaqNumbers() = Table("ottoman-siyaq-numbers")
+        .then((0x1ed00..0x1ed4f).filter { it.isInteger }.toTable { it.num })
+
+private fun indicSiyaqNumbers() = Table("indic-siyaq-numbers")
+        .then((0x1ec70..0x1ecbf).filter { it.isInteger }.toTable { it.num })
