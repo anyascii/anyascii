@@ -275,6 +275,7 @@ module.exports = function block(blockNum) {
         case 0x1e0: return require('./data/1e0.js');
         case 0x1e1: return require('./data/1e1.js');
         case 0x1e2: return require('./data/1e2.js');
+        case 0x1e8: return require('./data/1e8.js');
         case 0x1e9: return require('./data/1e9.js');
         case 0x1ec: return require('./data/1ec.js');
         case 0x1ed: return require('./data/1ed.js');

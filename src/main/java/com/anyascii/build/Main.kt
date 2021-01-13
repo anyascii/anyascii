@@ -191,6 +191,7 @@ private fun custom() = Table()
         .then(manichaean())
         .then(ottomanSiyaqNumbers())
         .then(indicSiyaqNumbers())
+        .then(mendeKikakui())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
@@ -419,3 +420,6 @@ private fun ottomanSiyaqNumbers() = Table("ottoman-siyaq-numbers")
 
 private fun indicSiyaqNumbers() = Table("indic-siyaq-numbers")
         .then((0x1ec70..0x1ecbf).filter { it.isInteger }.toTable { it.num })
+
+private fun mendeKikakui() = (0x1e800..0x1e8c4).toTable { it.name.substringAfterLast(' ').lower().replace("ee", "e").replace("oo", "o") }
+        .then((0x1e8d0..0x1e8d6).toTable { "" })
