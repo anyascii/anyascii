@@ -192,6 +192,7 @@ private fun custom() = Table()
         .then(ottomanSiyaqNumbers())
         .then(indicSiyaqNumbers())
         .then(mendeKikakui())
+        .then(Table("wancho"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints("Cyrl"))
