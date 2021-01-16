@@ -201,6 +201,7 @@ private fun custom() = Table()
         .then(Table("indic-siyaq-numbers"))
         .then(mendeKikakui())
         .then(Table("wancho"))
+        .then(Table("ideographic-symbols-and-punctuation"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints(UScript.CYRILLIC))
