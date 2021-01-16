@@ -28,15 +28,13 @@ private fun unihan(key: String) = Table().apply {
             }
             "kTang" -> {
                 output = output.removePrefix("*").split(' ')[0]
-                output = output.removeDiacritics().toLowerCase().filter { it.isLetter() }.capitalize()
+                output = output.toLowerCase().filter { it.isLetter() }.capitalize()
             }
             else -> {
                 output = output.substringAfter(':')
                 output = output.split(' ', ',')[0]
-                output = output.removeDiacritics()
                 if (output.last().isDigit()) output = output.dropLast(1)
                 output = output.toLowerCase().capitalize()
-                output = output.replace('Đ', 'D')
             }
         }
         put(cp, output)

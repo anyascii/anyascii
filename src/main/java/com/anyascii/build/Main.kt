@@ -2,6 +2,9 @@ package com.anyascii.build
 
 import com.anyascii.build.gen.generate
 import com.ibm.icu.lang.UCharacter
+import com.ibm.icu.lang.UCharacter.UnicodeBlock
+import com.ibm.icu.lang.UCharacterCategory
+import com.ibm.icu.lang.UScript
 import java.nio.file.Path
 import java.time.Duration
 import java.time.Instant
@@ -13,14 +16,14 @@ fun main() {
     Locale.setDefault(Locale.ROOT)
 
     val table = Table(ASCII)
-            .then(decimalDigits())
             .then(emojis())
             .then(custom())
             .normalize(NFKC)
             .normalize(NFKD)
             .then(unihan())
             .normalize(NFKC)
-            .cased(codePoints())
+            .cased(ALL_CODE_POINTS)
+            .then(integers())
             .transliterate()
 
     generate(table)
@@ -30,7 +33,14 @@ fun main() {
     println(Duration.between(start, Instant.now()))
 }
 
-private fun decimalDigits() = codePoints("Nd").toTable { it.num }
+private fun integers() = Table().apply {
+    for (cp in ALL_CODE_POINTS) {
+        val n = UCharacter.getNumericValue(cp)
+        if (n >= 0) {
+            this[cp] = n.toString()
+        }
+    }
+}
 
 private fun custom() = Table()
         .then(combiningDiacriticalMarks())
@@ -46,7 +56,7 @@ private fun custom() = Table()
         .then(tags())
         .then(cjkMisc())
         .then(Table("kangxi-radicals"))
-        .then((0x31c0..0x31e3).toTable { it.name.substringAfterLast(' ') }) // cjk strokes
+        .then(UnicodeBlock.CJK_STROKES.toTable { it.name.substringAfterLast(' ') })
         .then(yi())
         .then(vai())
         .then(ethiopic())
@@ -54,11 +64,10 @@ private fun custom() = Table()
         .then(Table("ocr"))
         .then(Table("ol-chiki"))
         .then(cyrillic())
-        .then((0x24eb..0x24ff).toTable { it.num }) // circled numbers
         .then(coptic())
         .then(Table("yijing"))
         .then(Table("box-drawing"))
-        .then((0x2580..0x259f).toTable { "#" }) // block elements
+        .then(UnicodeBlock.BLOCK_ELEMENTS.toTable { "#" })
         .then(Table("control-pictures"))
         .then(Table("bopomofo"))
         .then(hebrew())
@@ -95,7 +104,7 @@ private fun custom() = Table()
         .then(Table("misc-symbols"))
         .then(Table("arrows"))
         .then(Table("misc-technical"))
-        .then(dingbats())
+        .then(Table("dingbats"))
         .then(Table("tifinagh"))
         .then(glagolitic())
         .then(baybayin())
@@ -120,12 +129,11 @@ private fun custom() = Table()
         .then(meeteiMayek())
         .then(Table("buginese"))
         .then(Table("alchemical"))
-        .then(phoenician())
+        .then(Table("phoenician"))
         .then(linearAB())
         .then(Table("chess-symbols"))
         .then(Table("ornamental-dingbats"))
         .then(countingRodNumerals())
-        .then(mayanNumerals())
         .then(shorthandFormatControls())
         .then(Table("miao"))
         .then(Table("makasar"))
@@ -170,13 +178,13 @@ private fun custom() = Table()
         .then(copticEpact())
         .then(Table("old-permic"))
         .then(Table("avestan"))
-        .then(kharoshthi())
+        .then(Table("kharoshthi"))
         .then(Table("multani"))
         .then(Table("mahajani"))
         .then(Table("sharada"))
         .then(Table("balinese"))
         .then(Table("lepcha"))
-        .then(oldPersian())
+        .then(Table("old-persian"))
         .then(meroitic())
         .then(tirhuta())
         .then(modi())
@@ -189,25 +197,25 @@ private fun custom() = Table()
         .then(Table("pahawh-hmong"))
         .then(Table("vedic"))
         .then(manichaean())
-        .then(ottomanSiyaqNumbers())
-        .then(indicSiyaqNumbers())
+        .then(Table("ottoman-siyaq-numbers"))
+        .then(Table("indic-siyaq-numbers"))
         .then(mendeKikakui())
         .then(Table("wancho"))
 
 private fun cyrillic() = Table("cyrillic")
-        .cased(codePoints("Cyrl"))
-        .aliasing((0xa674..0xa67b) + (0xa69e..0xa69f) + (0x2de0..0x2dff) - 0x2df5) { it.replace("COMBINING CYRILLIC", "CYRILLIC SMALL") }
+        .cased(codePoints(UScript.CYRILLIC))
+        .then(codePoints(UScript.CYRILLIC).filterName { "COMBINING CYRILLIC LETTER" in it }.alias { it.replace("COMBINING CYRILLIC", "CYRILLIC SMALL") })
 
 private fun coptic() = Table("coptic")
-        .cased(codePoints("Copt"))
+        .cased(codePoints(UScript.COPTIC))
 
 private fun yi() = Table()
         .then(0xa015, "w")
-        .then((0xa000..0xa48c).toTable { it.name.substringAfterLast(' ').lower() }) // syllables
-        .then((0xa490..0xa4c6).toTable { it.name.substringAfterLast(' ') }) // radicals
+        .then(UnicodeBlock.YI_SYLLABLES.toTable { it.name.substringAfterLast(' ').lower() })
+        .then(UnicodeBlock.YI_RADICALS.toTable { it.name.substringAfterLast(' ') })
 
 private fun vai() = Table("vai")
-        .then((0xa500..0xa62b).toTable { it.name.substringAfterLast(' ').lower() })
+        .then(codePoints(UScript.VAI).filter { it.category == UCharacterCategory.OTHER_LETTER }.toTable { it.name.substringAfterLast(' ').lower() })
 
 private fun dominoes() = (0x1f030..0x1f093).toTable {
     val name = it.name.removePrefix("DOMINO TILE ")
@@ -215,51 +223,46 @@ private fun dominoes() = (0x1f030..0x1f093).toTable {
     return@toTable name.split('-').let { it[1].takeLast(1) + it[2].takeLast(1) }
 }
 
-private fun cypriot() = codePoints("Cprt").toTable { it.name.substringAfterLast(' ').lower() }
+private fun cypriot() = codePoints(UScript.CYPRIOT).toTable { it.name.substringAfterLast(' ').lower() }
 
 private fun braille() = Table("braille")
-        .then(codePoints("Brai").toTable { "{${it.name.substringAfterLast('-')}}" })
+        .then(codePoints(UScript.BRAILLE).toTable { "{${it.name.substringAfterLast('-')}}" })
 
 private fun georgian() = Table("georgian")
-        .aliasing(codePoints("Geor").filterName { "SMALL LETTER" in it }) { it.remove("SMALL ") }
+        .then(codePoints(UScript.GEORGIAN).filterName { "SMALL LETTER" in it }.alias { it.remove("SMALL ") })
         .transliterate()
-        .cased(codePoints("Geor"))
+        .cased(codePoints(UScript.GEORGIAN))
 
 private fun armenian() = Table("armenian")
-        .cased(codePoints("Armn"))
+        .cased(codePoints(UScript.ARMENIAN))
 
 private fun latin() = Table("latin")
-        .cased(codePoints("Latn"))
+        .cased(codePoints(UScript.LATIN))
 
 private fun kana() = Table("kana")
-        .aliasing(codePoints("Hira").filterName { it.startsWith("HIRAGANA LETTER SMALL") }) { it.remove("SMALL ") }
-        .aliasing(codePoints("Kana").filterName { it.startsWith("KATAKANA LETTER SMALL") }) { it.remove("SMALL ") }
-        .then(codePoints("Hira").filterName { it.startsWith("HENTAIGANA") }.toTable { it.name.substringAfterLast(' ').substringBefore('-').lower() })
+        .then(codePoints(UScript.HIRAGANA).filterName { it.startsWith("HIRAGANA LETTER SMALL") }.alias { it.remove("SMALL ") })
+        .then(codePoints(UScript.KATAKANA).filterName { it.startsWith("KATAKANA LETTER SMALL") }.alias { it.remove("SMALL ") })
+        .then(codePoints(UScript.HIRAGANA).filter { it.nameAlias.startsWith("HENTAIGANA") }.toTable { it.nameAlias.substringAfterLast(' ').substringBefore('-').lower() })
 
 private fun deseret() = Table("deseret")
-        .cased(codePoints("Dsrt"))
+        .cased(codePoints(UScript.DESERET))
 
 private fun oldItalic() = Table("old-italic")
-        .then((0x10320..0x10323).toTable { ROMAN_NUMERALS.getValue(it.numericValue) })
+        .then((0x10320..0x10323).toTable { ROMAN_NUMERALS.getValue(it.intValue) })
 
 private fun sinhala() = Table("sinhala")
-        .then((0x111e0..0x111ff).filterDefined().toTable { it.num })
-
-private fun dingbats() = Table("dingbats")
-        .then((0x2776..0x2793).toTable { it.num })
 
 private fun cjkMisc() = Table("cjk-misc")
         .then((0x3021..0x3029).toTable { "${(it - 0x3021 + 1)}" }) // hangzhou numerals
         .then((0x3220..0x3229).toTable { "(${(it - 0x3220 + 1)})" }) // parenthesized numbers
-        .then((0x3248..0x324f).toTable { it.num }) // circled number on black square
         .then((0x3280..0x3289).toTable { "(${(it - 0x3280 + 1)})" }) // circled numbers
         .then((0x32c0..0x32cb).toTable { "${(it - 0x32c0 + 1)}M" }) // telegraph months
         .then((0x3358..0x3370).toTable { "${(it - 0x3358)}H" }) // telegraph hours
         .then((0x33e0..0x33fe).toTable { "${(it - 0x33e0 + 1)}D" }) // telegraph days
 
 private fun glagolitic() = Table("glagolitic")
-        .cased(codePoints("Glag"))
-        .aliasing(codePoints("Glag").filterName { it.startsWith("COMBINING") }) { it.replace("COMBINING GLAGOLITIC LETTER", "GLAGOLITIC SMALL LETTER") }
+        .cased(codePoints(UScript.GLAGOLITIC))
+        .then(codePoints(UScript.GLAGOLITIC).filterName { it.startsWith("COMBINING") }.alias { it.replace("COMBINING GLAGOLITIC LETTER", "GLAGOLITIC SMALL LETTER") })
 
 private fun baybayin() = (0x1700..0x177f).filterDefined().toTable { cp ->
     // tagalog, hanunoo, buhid, tagbanwa
@@ -274,49 +277,33 @@ private fun baybayin() = (0x1700..0x177f).filterDefined().toTable { cp ->
     }
 }
 
-private fun ideographicDescription() = (0x2ff0..0x2fff).filterDefined().toTable { "+" }
+private fun ideographicDescription() = UnicodeBlock.IDEOGRAPHIC_DESCRIPTION_CHARACTERS.toTable { "+" }
 
 private fun tibetan() = Table("tibetan")
-        .then(codePoints("Tibt").filterName { "SUBJOINED LETTER" in it || "FIXED-FORM" in it }.toTable { CodePoint(it.name.remove(" SUBJOINED").remove(" FIXED-FORM")).asString() })
+        .then(codePoints(UScript.TIBETAN).filterName { "SUBJOINED LETTER" in it || "FIXED-FORM" in it }.alias { it.remove(" SUBJOINED").remove(" FIXED-FORM") })
 
 private fun canadianSyllabics() = Table("canadian-syllabics")
-        .then(codePoints("Cans").toTable { it.name.substringAfterLast(' ').lower() })
+        .then(codePoints(UScript.CANADIAN_ABORIGINAL).toTable { it.name.substringAfterLast(' ').lower() })
 
-private fun halfwidthFullwidth() = (0xff00..0xffef).filterDefined().toTable { cp ->
-    var name = cp.name.substringAfter(' ')
+private fun halfwidthFullwidth() = UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS.alias {
+    var name = it.substringAfter(' ')
     if ("VOICED SOUND MARK" in name) name = name.replace("KATAKANA", "KATAKANA-HIRAGANA")
     else if (name.startsWith("FORMS ")) name = name.replace("FORMS", "BOX DRAWINGS")
-    CodePoint(name).asString()
+    name
 }
 
-private fun phoenician() = Table("phoenician")
-        .then((0x10916..0x1091b).toTable { it.num })
-        .then((0x10858..0x1085f).toTable { it.num })
-        .then((0x10879..0x1087f).toTable { it.num })
-        .then((0x108fb..0x108ff).toTable { it.num })
-        .then((0x108a7..0x108af).toTable { it.num })
-        .then((0x10b58..0x10b5f).toTable { it.num })
-        .then((0x10b78..0x10b7f).toTable { it.num })
-        .then((0x10ba9..0x10baf).toTable { it.num })
-        .then((0x10f1d..0x10f25).toTable { it.num })
-        .then((0x10fc5..0x10fcb).toTable { it.num })
-        .then((0x10f51..0x10f54).toTable { it.num })
+private fun countingRodNumerals() = UnicodeBlock.COUNTING_ROD_NUMERALS.toTable { NUMBER_SPELLOUT.parse(it.name.substringAfterLast(' ').lower()).toString() }
 
-private fun countingRodNumerals() = (0x1d360..0x1d378).toTable { NUMBER_SPELLOUT.parse(it.name.substringAfterLast(' ').lower()).toString() }
-
-private fun mayanNumerals() = (0x1d2e0..0x1d2f3).toTable { it.num }
-
-private fun shorthandFormatControls() = (0x1bca0..0x1bcaf).filterDefined().toTable { it.toString(16).takeLast(1) }
+private fun shorthandFormatControls() = UnicodeBlock.SHORTHAND_FORMAT_CONTROLS.toTable { it.toString(16).takeLast(1) }
 
 private fun bamum() = Table("bamum")
-        .then((0xa6e6..0xa6ef).toTable { it.num })
         .then((0xa6a0..0xa6e5).toTable { it.name.substringAfterLast(' ').lower().capitalize() })
 
-private fun cherokee() = codePoints("Cher").filter { UCharacter.isULowercase(it) }.toTable { it.name.substringAfterLast(' ').lower() }
-        .cased(codePoints("Cher"))
+private fun cherokee() = codePoints(UScript.CHEROKEE).filter { it.isLower() }.toTable { it.name.substringAfterLast(' ').lower() }
+        .cased(codePoints(UScript.CHEROKEE))
 
 private fun syriac() = Table("syriac")
-        .aliasing((0x0860..0x086a)) { it.replace("SYRIAC LETTER MALAYALAM", "MALAYALAM LETTER") }
+        .then(UnicodeBlock.SYRIAC_SUPPLEMENT.alias { it.replace("SYRIAC LETTER MALAYALAM", "MALAYALAM LETTER") })
 
 private fun nushu() = Table().apply {
     forEachLine(Path.of("input/NushuSources.txt")) { line ->
@@ -329,98 +316,75 @@ private fun nushu() = Table().apply {
 }
 
 private fun adlam() = Table("adlam")
-        .cased(codePoints("Adlm"))
+        .cased(codePoints(UScript.ADLAM))
 
 private fun combiningDiacriticalMarks() = Table()
-        .then((0x300..0x362).toTable { "" }) // Combining Diacritical Marks
         .then((0x363..0x36f).toTable { it.name.substringAfterLast(' ').lower() })
-        .then((0x1ab0..0x1aff).filterDefined().toTable { "" }) // Combining Diacritical Marks Extended
-        .then((0x1dc0..0x1dff).filterDefined().toTable { "" }) // Combining Diacritical Marks Supplement
-        .then((0x20d0..0x20ff).filterDefined().toTable { "" }) // Combining Diacritical Marks for Symbols
-        .then((0xfe20..0xfe2f).toTable { "" }) // Combining Half Marks
+        .then(UnicodeBlock.COMBINING_DIACRITICAL_MARKS.toTable { "" })
+        .then(UnicodeBlock.COMBINING_DIACRITICAL_MARKS_EXTENDED.toTable { "" })
+        .then(UnicodeBlock.COMBINING_DIACRITICAL_MARKS_SUPPLEMENT.toTable { "" })
+        .then(UnicodeBlock.COMBINING_MARKS_FOR_SYMBOLS.toTable { "" })
+        .then(UnicodeBlock.COMBINING_HALF_MARKS.toTable { "" })
 
 private fun variationSelectors() = Table()
-        .then((0xfe00..0xfe0f).toTable { "" }) // Variation Selectors
-        .then((0xe0100..0xe01ef).toTable { "" }) // Variation Selectors Supplement
+        .then(UnicodeBlock.VARIATION_SELECTORS.toTable { "" })
+        .then(UnicodeBlock.VARIATION_SELECTORS_SUPPLEMENT.toTable { "" })
 
 private fun tags() = Table()
         .then((0xe0020..0xe007e).toTable { (it - 0xe0000).asString() })
-        .then((0xe0000..0xe007f).filterDefined().toTable { "" })
+        .then(UnicodeBlock.TAGS.toTable { "" })
 
 private fun osage() = Table("osage")
-        .cased(codePoints("Osge"))
+        .cased(codePoints(UScript.OSAGE))
 
 private fun medefaidrin() = Table("medefaidrin")
-        .cased(codePoints("Medf"))
-        .then((0x16e80..0x16e96).toTable { it.num })
+        .cased(codePoints(UScript.MEDEFAIDRIN))
 
 private fun khmer() = Table("khmer")
-        .then((0x17f0..0x17f9).toTable { it.num })
 
 private fun marchen() = Table("marchen")
-        .then(codePoints("Marc").toTable { CodePoint(it.name.replace("MARCHEN", "TIBETAN")).let { if (it == -1) "" else it.asString() } })
+        .then(codePoints(UScript.MARCHEN).alias { it.replace("MARCHEN", "TIBETAN") })
 
 private fun warangCiti() = Table("warang-citi")
-        .cased(codePoints("Wara"))
-        .then((0x118ea..0x118f2).toTable { it.num })
+        .cased(codePoints(UScript.WARANG_CITI))
 
-private fun copticEpact() = Table()
-        .then(0x102e0, "k")
-        .then((0x102e1..0x102fb).toTable { it.num })
-
-private fun kharoshthi() = Table("kharoshthi")
-        .then((0x10a40..0x10a47).toTable { it.num })
+private fun copticEpact() = Table().then(0x102e0, "k")
 
 private fun hebrew() = Table("hebrew")
         .then((0x591..0x5af).toTable { "" })
 
-private fun oldPersian() = Table("old-persian")
-        .then((0x103d1..0x103d5).toTable { it.num })
-
 private fun meroitic() = Table("meroitic")
-        .then((0x109c0..0x109f5).filterDefined().toTable { it.num })
-        .then((0x109f6..0x109ff).plus(0x109bc).toTable { it.float.times(12).roundToInt().toString() })
+        .then(UnicodeBlock.MEROITIC_CURSIVE.codePoints().filterName { "TWELFTH" in it }.toTable { it.floatValue.times(12).roundToInt().toString() })
 
-private fun tirhuta() = codePoints("Tirh").toTable {
+private fun tirhuta() = codePoints(UScript.TIRHUTA).toTable {
     val name = it.name.replace("GVANG", "SIGN ANUSVARA")
     val cp = codePoint(name.replace("TIRHUTA", "DEVANAGARI")) ?: codePoint(name.replace("TIRHUTA", "BENGALI"))
     checkNotNull(cp).asString()
 }
 
 private fun modi() = Table("modi")
-        .then(codePoints("Modi").toTable { (codePoint(it.name.replace("MODI", "DEVANAGARI")) ?: it).asString() })
+        .then(codePoints(UScript.MODI).alias { it.replace("MODI", "DEVANAGARI") })
 
-private fun takri() = codePoints("Takr").toTable {
-    val name = it.name.remove("ARCHAIC ").replace("TAKRI", "DEVANAGARI")
-    checkNotNull(codePoint(name)).asString()
-}
+private fun takri() = codePoints(UScript.TAKRI).alias { it.remove("ARCHAIC ").replace("TAKRI", "DEVANAGARI") }
 
-private fun dogra() = codePoints("Dogr").toTable { checkNotNull(codePoint(it.name.replace("DOGRA", "DEVANAGARI"))).asString() }
+private fun dogra() = codePoints(UScript.DOGRA).alias { it.replace("DOGRA", "DEVANAGARI") }
 
-private fun khudawadi() = codePoints("Sind").toTable { checkNotNull(codePoint(it.name.replace("KHUDAWADI", "DEVANAGARI"))).asString() }
+private fun khudawadi() = codePoints(UScript.KHUDAWADI).alias { it.replace("KHUDAWADI", "DEVANAGARI") }
 
-private fun nandinagari() = codePoints("Nand").toTable { checkNotNull(codePoint(it.name.replace("NANDINAGARI", "DEVANAGARI"))).asString() }
+private fun nandinagari() = codePoints(UScript.NANDINAGARI).alias { it.replace("NANDINAGARI", "DEVANAGARI") }
 
-private fun gunjalaGondi() = codePoints("Gong").toTable {
+private fun gunjalaGondi() = codePoints(UScript.GUNJALA_GONDI).toTable {
     val name = it.name.replace("VIRAMA", "SIGN VIRAMA")
     val cp = codePoint(name.replace("GUNJALA GONDI", "TELUGU")) ?: codePoint(name.replace("GUNJALA GONDI", "DEVANAGARI"))
     checkNotNull(cp).asString()
 }
 
 private fun brahmi() = Table("brahmi")
-        .then((0x11052..0x11065).toTable { it.num })
 
 private fun manichaean() = Table("manichaean")
-        .then((0x10aeb..0x10aef).toTable { it.num })
 
 private fun meeteiMayek() = Table("meetei-mayek")
-        .then((0xabdb..0xabe2).toTable { CodePoint(it.name.substringBeforeLast(' ')).asString() })
+        .then(codePoints(UScript.MEITEI_MAYEK).filterName { it.endsWith("LONSUM") }.alias { it.substringBeforeLast(' ') })
 
-private fun ottomanSiyaqNumbers() = Table("ottoman-siyaq-numbers")
-        .then((0x1ed00..0x1ed4f).filter { it.isInteger }.toTable { it.num })
-
-private fun indicSiyaqNumbers() = Table("indic-siyaq-numbers")
-        .then((0x1ec70..0x1ecbf).filter { it.isInteger }.toTable { it.num })
-
-private fun mendeKikakui() = (0x1e800..0x1e8c4).toTable { it.name.substringAfterLast(' ').lower().replace("ee", "e").replace("oo", "o") }
+private fun mendeKikakui() = codePoints(UScript.MENDE).filter { it.category == UCharacterCategory.OTHER_LETTER }.toTable { it.name.substringAfterLast(' ').lower().replace("ee", "e").replace("oo", "o") }
         .then((0x1e8d0..0x1e8d6).toTable { "" })

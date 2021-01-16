@@ -1,11 +1,14 @@
 package com.anyascii.build
 
+import com.ibm.icu.lang.UCharacter.UnicodeBlock
+import com.ibm.icu.lang.UScript
+
 fun hangul() = Table("hangul")
         .combinations()
         .syllables()
 
 private fun Table.combinations() = apply {
-    codePoints("Hang").forEach { cp ->
+    codePoints(UScript.HANGUL).forEach { cp ->
         if (cp in this) return@forEach
         val split = cp.name.split(' ')
         if (split.last() == "FILLER") {
@@ -31,6 +34,6 @@ private fun Table.letter(position: String, name: String): String {
     error("$position $name")
 }
 
-private fun Table.syllables() = then((0xac00..0xd7a3).toTable {
+private fun Table.syllables() = then(UnicodeBlock.HANGUL_SYLLABLES.toTable {
     checkNotNull(transliterate(NFD.normalize(it.asString()))).capitalize()
 })

@@ -1,8 +1,10 @@
 package com.anyascii.build
 
+import com.ibm.icu.lang.UCharacterCategory
+import com.ibm.icu.lang.UScript
+
 fun ethiopic() = Table("ethiopic")
-        .then(codePoints("Ethi").filterName { "SYLLABLE" in it }.toTable { syllableName(it) })
-        .then((0x1369..0x137c).toTable { it.num })
+        .then(codePoints(UScript.ETHIOPIC).filter { it.category == UCharacterCategory.OTHER_LETTER }.toTable { syllableName(it) })
 
 private fun syllableName(cp: CodePoint): String {
     var name = cp.name.lower()

@@ -1,0 +1,1 @@
+module.exports='																																																																																																																																																																																																																																																										1	5	10	50	100	1000'.split('	')

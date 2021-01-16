@@ -1,6 +1,6 @@
 package com.anyascii.build
 
-import com.ibm.icu.lang.UCharacter
+import com.ibm.icu.lang.UCharacter.UnicodeBlock
 import com.ibm.icu.text.Normalizer2
 import java.nio.file.Files
 import java.nio.file.Path
@@ -47,7 +47,7 @@ fun Iterable<CodePoint>.normalize(normalizer2: Normalizer2) = Table().apply {
 }
 
 fun Table.normalize(normalizer2: Normalizer2) = apply {
-    for (cp in 128..Character.MAX_CODE_POINT) {
+    for (cp in ALL_CODE_POINTS) {
         if (cp in this) continue
         val output = transliterate(normalizer2.normalize(cp.asString()))
         if (output != null) {
@@ -57,6 +57,16 @@ fun Table.normalize(normalizer2: Normalizer2) = apply {
 }
 
 inline fun Iterable<CodePoint>.toTable(map: (CodePoint) -> String): Table = associateWithTo(Table(), map)
+
+inline fun Iterable<CodePoint>.alias(nameMap: (String) -> String): Table = associateWithTo(Table()) { cp ->
+    val name2 = nameMap(cp.name)
+    val cp2 = codePoint(name2) ?: cp
+    cp2.asString()
+}
+
+inline fun UnicodeBlock.toTable(map: (CodePoint) -> String): Table = codePoints().toTable(map)
+
+inline fun UnicodeBlock.alias(nameMap: (String) -> String): Table = codePoints().alias(nameMap)
 
 fun Table.lengthStatistics() = IntSummaryStatistics().apply { values.forEach { accept(it.length) } }
 
@@ -72,16 +82,6 @@ fun Table.cased(codePoints: Iterable<CodePoint>) = apply {
         if (l != cp) {
             this[l]?.let { this[cp] = it.capitalize() }
         }
-    }
-}
-
-fun Table.aliasing(codePoints: Iterable<CodePoint>, nameTransform: (String) -> String) = apply {
-    for (cp1 in codePoints) {
-        val name1 = cp1.name
-        val name2 = nameTransform(name1)
-        val cp2 = UCharacter.getCharFromName(name2)
-        check(cp2 != -1) { "$name1 - $name2" }
-        putIfAbsent(cp1, cp2.asString())
     }
 }
 

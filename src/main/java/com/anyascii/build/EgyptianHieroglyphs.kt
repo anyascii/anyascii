@@ -1,6 +1,7 @@
 package com.anyascii.build
 
 import com.ibm.icu.lang.UCharacterCategory
+import com.ibm.icu.lang.UScript
 import java.nio.file.Path
 
 fun egyptianHieroglyphs() = manuelDeCodage()
@@ -20,7 +21,7 @@ private fun manuelDeCodage(): Table = Table().apply {
 
 private val CATALOGUE_ID = "([A-Z]{1,2})(\\d{3})([A-Z]{0,1})".toRegex()
 
-private fun catalogueIds() = codePoints("Egyp")
+private fun catalogueIds() = codePoints(UScript.EGYPTIAN_HIEROGLYPHS)
         .filter { it.category == UCharacterCategory.OTHER_LETTER }
         .toTable { catalogueId(it) }
 

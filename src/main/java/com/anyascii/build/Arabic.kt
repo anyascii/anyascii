@@ -1,8 +1,11 @@
 package com.anyascii.build
 
+import com.ibm.icu.lang.UCharacter.UnicodeBlock
+
 fun arabic() = Table("arabic")
-        .then((0x10e60..0x10e7a).toTable { it.num })
-        .forms(((0xfb50..0xfdff) + (0xfe70..0xfeff) - 0xfdfc).filterDefined())
+        .forms(UnicodeBlock.ARABIC_PRESENTATION_FORMS_A.codePoints())
+        .forms(UnicodeBlock.ARABIC_PRESENTATION_FORMS_B.codePoints())
+        .minus(0xfdfc)
 
 private val PRESENTATION_FORMS = Table(mapOf(
         0x0627 to "a",
