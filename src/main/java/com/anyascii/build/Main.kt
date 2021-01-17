@@ -134,7 +134,7 @@ private fun custom() = Table()
         .then(Table("chess-symbols"))
         .then(Table("ornamental-dingbats"))
         .then(countingRodNumerals())
-        .then(shorthandFormatControls())
+        .then(UnicodeBlock.SHORTHAND_FORMAT_CONTROLS.toTable { "" })
         .then(Table("miao"))
         .then(Table("makasar"))
         .then(Table("pau-cin-hau"))
@@ -294,8 +294,6 @@ private fun halfwidthFullwidth() = UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS.al
 }
 
 private fun countingRodNumerals() = UnicodeBlock.COUNTING_ROD_NUMERALS.toTable { NUMBER_SPELLOUT.parse(it.name.substringAfterLast(' ').lower()).toString() }
-
-private fun shorthandFormatControls() = UnicodeBlock.SHORTHAND_FORMAT_CONTROLS.toTable { it.toString(16).takeLast(1) }
 
 private fun bamum() = Table("bamum")
         .then((0xa6a0..0xa6e5).toTable { it.name.substringAfterLast(' ').lower().capitalize() })
