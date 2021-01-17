@@ -202,6 +202,7 @@ private fun custom() = Table()
         .then(mendeKikakui())
         .then(Table("wancho"))
         .then(Table("ideographic-symbols-and-punctuation"))
+        .then(phaistosDisc())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints(UScript.CYRILLIC))
@@ -387,3 +388,7 @@ private fun meeteiMayek() = Table("meetei-mayek")
 
 private fun mendeKikakui() = codePoints(UScript.MENDE).filter { it.category == UCharacterCategory.OTHER_LETTER }.toTable { it.name.substringAfterLast(' ').lower().replace("ee", "e").replace("oo", "o") }
         .then((0x1e8d0..0x1e8d6).toTable { "" })
+
+private fun phaistosDisc() = Table()
+        .then(0x101fd, ",")
+        .then(UnicodeBlock.PHAISTOS_DISC.toTable { String.format("%02d", it - 0x101d0 + 1) })
