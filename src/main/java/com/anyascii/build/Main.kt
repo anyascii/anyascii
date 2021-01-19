@@ -203,6 +203,7 @@ private fun custom() = Table()
         .then(Table("wancho"))
         .then(Table("ideographic-symbols-and-punctuation"))
         .then(phaistosDisc())
+        .then(Table("old-turkic"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints(UScript.CYRILLIC))
