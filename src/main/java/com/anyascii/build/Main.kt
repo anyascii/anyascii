@@ -205,6 +205,7 @@ private fun custom() = Table()
         .then(phaistosDisc())
         .then(Table("old-turkic"))
         .then(Table("ahom"))
+        .then(Table("zanabazar-square"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints(UScript.CYRILLIC))
