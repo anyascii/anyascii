@@ -99,7 +99,7 @@ s := anyascii.Transliterate("άνθρωποι")
 
 Go 1.10+ compatible
 
-### <a name="java"></a> Java [![jitpack](https://img.shields.io/jitpack/v/github/anyascii/anyascii)](https://jitpack.io/#com.anyascii/anyascii)
+### Java
 
 https://jitpack.io/#com.anyascii/anyascii
 
@@ -110,7 +110,7 @@ String s = AnyAscii.transliterate("άνθρωποι");
 
 Java 6+ compatible
 
-### <a name="javascript"></a> JavaScript [![npm](https://img.shields.io/npm/v/any-ascii)](https://npmjs.com/package/any-ascii)
+### JavaScript
 
 https://npmjs.com/package/any-ascii
 
@@ -138,7 +138,7 @@ Julia 1.0+ compatible
 
 `pkg> add AnyAscii`
 
-### PHP <a name="php"></a> [![packagist](https://img.shields.io/packagist/v/anyascii/anyascii)](https://packagist.org/packages/anyascii/anyascii)
+### PHP
 
 https://packagist.org/packages/anyascii/anyascii
 
@@ -151,7 +151,7 @@ PHP 5.3+ compatible
 
 `composer require anyascii/anyascii`
 
-### <a name="python"></a> Python [![pypi](https://img.shields.io/pypi/v/anyascii)](https://pypi.org/project/anyascii)
+### Python
 
 https://pypi.org/project/anyascii
 
@@ -166,7 +166,7 @@ Python 3.3+ compatible
 
 `pip install anyascii`
 
-### <a name="ruby"></a> Ruby [![gem](https://img.shields.io/gem/v/any_ascii)](https://rubygems.org/gems/any_ascii)
+### Ruby
 
 https://rubygems.org/gems/any_ascii
 
@@ -181,7 +181,7 @@ Ruby 2.0+ compatible
 
 `gem install any_ascii`
 
-### <a name="rust"></a> Rust [![crates.io](https://img.shields.io/crates/v/any_ascii)](https://crates.io/crates/any_ascii)
+### Rust
 
 https://crates.io/crates/any_ascii
 
@@ -194,7 +194,6 @@ let s = any_ascii("άνθρωποι");
 
 Rust 1.36+ compatible
 
-Install:
 ```toml
 # Cargo.toml
 [dependencies]
@@ -211,7 +210,7 @@ $ echo άνθρωποι | anyascii
 anthropoi
 ```
 
-### <a name="shell"></a> Shell
+### Shell
 
 https://raw.githubusercontent.com/anyascii/anyascii/master/sh/anyascii
 
@@ -225,7 +224,7 @@ anthropoi
 
 POSIX-compliant
 
-### <a name="net"></a> .NET [![nuget](https://img.shields.io/nuget/v/AnyAscii)](https://nuget.org/packages/AnyAscii)
+### .NET
 
 https://nuget.org/packages/AnyAscii
 
