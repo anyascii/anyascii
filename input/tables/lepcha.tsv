@@ -1,7 +1,7 @@
-# https://www.unicode.org/charts/PDF/U1C00.pdf
-# https://www.unicode.org/wg2/docs/n2947.pdf
+# https://unicode.org/charts/PDF/U1C00.pdf
+# https://unicode.org/wg2/docs/n2947.pdf
 #
-# consonants
+# Consonants
 ᰀ	k
 ᰁ	kl
 ᰂ	kh
@@ -38,10 +38,10 @@
 ᰡ	sh
 ᰢ	w
 ᰣ	
-# subjoined consonants
+# Subjoined consonants
 ᰤ	y
 ᰥ	r
-# dependent vowels
+# Dependent vowels
 ᰦ	a
 ᰧ	i
 ᰨ	o
@@ -49,7 +49,7 @@
 ᰪ	u
 ᰫ	u
 ᰬ	e
-# consonant signs
+# Consonant signs
 ᰭ	k
 ᰮ	m
 ᰯ	l
@@ -59,16 +59,16 @@
 ᰳ	t
 ᰴ	ng
 ᰵ	ng
-# various signs
+# Various signs
 ᰶ	
 ᰷	'
-# punctuation
+# Punctuation
 ᰻	,
 ᰼	.
 ᰽	.
 ᰾	.
 ᰿	.
-# additional letters
+# Additional letters
 ᱍ	t
 ᱎ	th
 ᱏ	d

@@ -1,0 +1,103 @@
+# https://unicode.org/charts/PDF/U11300.pdf
+#
+# Various signs
+𑌀	m
+𑌁	m
+𑌂	m
+𑌃	h
+# Independent vowels
+𑌅	a
+𑌆	a
+𑌇	i
+𑌈	i
+𑌉	u
+𑌊	u
+𑌋	r
+𑌌	l
+𑌏	e
+𑌐	ai
+𑌓	o
+𑌔	au
+# Consonants
+𑌕	k
+𑌖	kh
+𑌗	g
+𑌘	gh
+𑌙	n
+𑌚	c
+𑌛	ch
+𑌜	j
+𑌝	jh
+𑌞	n
+𑌟	t
+𑌠	th
+𑌡	d
+𑌢	dh
+𑌣	n
+𑌤	t
+𑌥	th
+𑌦	d
+𑌧	dh
+𑌨	n
+𑌪	p
+𑌫	ph
+𑌬	b
+𑌭	bh
+𑌮	m
+𑌯	y
+𑌰	r
+𑌲	l
+𑌳	l
+𑌵	v
+𑌶	d
+𑌷	d
+𑌸	d
+𑌹	h
+# Various signs
+𑌻	'
+𑌼	'
+𑌽	'
+# Dependent vowel signs
+𑌾	a
+𑌿	i
+𑍀	i
+𑍁	u
+𑍂	u
+𑍃	r
+𑍄	r
+𑍇	e
+𑍈	ai
+# Two-part dependent vowel signs
+𑍋	o
+𑍌	au
+# Virama
+𑍍	
+# Sign
+𑍐	Om
+# Dependent vowel sign
+𑍗	u
+# Sign
+# https://unicode.org/wg2/docs/n4136.pdf
+𑍝	`
+# Anusvaras
+𑍞	m
+𑍟	m
+# Independent vowels
+𑍠	r
+𑍡	l
+# Dependent vowel signs
+𑍢	l
+𑍣	l
+# Cantillation marks (svara) for the Samaveda
+𑍦	0
+𑍧	1
+𑍨	2
+𑍩	3
+𑍪	4
+𑍫	5
+𑍬	6
+𑍰	a
+𑍱	k
+𑍲	n
+𑍳	v
+𑍴	p

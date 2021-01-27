@@ -1,6 +1,8 @@
-# https://www.unicode.org/charts/PDF/U1F0A0.pdf
+# https://unicode.org/charts/PDF/U1F0A0.pdf
+#
+# Back of card
 🂠	-
-# spades
+# Spades
 🂡	As
 🂢	2s
 🂣	3s
@@ -15,7 +17,7 @@
 🂬	Ns
 🂭	Qs
 🂮	Ks
-# hearts
+# Hearts
 🂱	Ah
 🂲	2h
 🂳	3h
@@ -30,9 +32,9 @@
 🂼	Nh
 🂽	Qh
 🂾	Kh
-#
-#🂿	playing card red joker
-# diamonds
+# Joker
+🂿	0
+# Diamonds
 🃁	Ad
 🃂	2d
 🃃	3d
@@ -47,9 +49,9 @@
 🃌	Nd
 🃍	Qd
 🃎	Kd
-#
-#🃏	playing card black joker
-# clubs
+# Joker
+🃏	0
+# Clubs
 🃑	Ac
 🃒	2c
 🃓	3c
@@ -64,28 +66,28 @@
 🃜	Nc
 🃝	Qc
 🃞	Kc
-#
-#🃟	playing card white joker
-#
-#🃠	playing card fool
-#🃡	playing card trump-1
-#🃢	playing card trump-2
-#🃣	playing card trump-3
-#🃤	playing card trump-4
-#🃥	playing card trump-5
-#🃦	playing card trump-6
-#🃧	playing card trump-7
-#🃨	playing card trump-8
-#🃩	playing card trump-9
-#🃪	playing card trump-10
-#🃫	playing card trump-11
-#🃬	playing card trump-12
-#🃭	playing card trump-13
-#🃮	playing card trump-14
-#🃯	playing card trump-15
-#🃰	playing card trump-16
-#🃱	playing card trump-17
-#🃲	playing card trump-18
-#🃳	playing card trump-19
-#🃴	playing card trump-20
-#🃵	playing card trump-21
+# Joker
+🃟	0
+# Trumps
+🃠	0
+🃡	1
+🃢	2
+🃣	3
+🃤	4
+🃥	5
+🃦	6
+🃧	7
+🃨	8
+🃩	9
+🃪	10
+🃫	11
+🃬	12
+🃭	13
+🃮	14
+🃯	15
+🃰	16
+🃱	17
+🃲	18
+🃳	19
+🃴	20
+🃵	21

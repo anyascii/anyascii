@@ -9,6 +9,8 @@ import java.util.TreeMap
 
 typealias Table = TreeMap<CodePoint, String>
 
+fun Table(vararg pairs: Pair<CodePoint, String>) = pairs.toMap(Table())
+
 val ASCII: Table = (0..127).toTable { it.asString() }
 
 fun Table.then(other: Table) = apply { putAllIfAbsent(other) }

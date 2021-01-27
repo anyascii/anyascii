@@ -9,7 +9,11 @@ namespace AnyAsciiTests
 		[TestMethod]
 		public void Test()
 		{
-			static void check(string s, string expected) => Assert.AreEqual(expected, s.Transliterate());
+			static void check(string s, string expected) {
+				Assert.AreEqual(s.IsAscii(), s.Equals(expected));
+				Assert.IsTrue(expected.IsAscii());
+				Assert.AreEqual(expected, s.Transliterate());
+			}
 
 			check("", "");
 			check("\u0000\u0001\t\n\u001f ~\u007f", "\u0000\u0001\t\n\u001f ~\u007f");
@@ -41,7 +45,7 @@ namespace AnyAsciiTests
 			check("სამტრედია", "samt'redia");
 			check("אברהם הלוי פרנקל", "'vrhm hlvy frnkl");
 			check("⠠⠎⠁⠽⠀⠭⠀⠁⠛", "+say x ag");
-			check("ময়মনসিংহ", "mymnsimh");
+			check("ময়মনসিংহ", "mymnsimh");
 			check("ထန်တလန်", "thntln");
 			check("પોરબંદર", "porbmdr");
 			check("महासमुंद", "mhasmumd");

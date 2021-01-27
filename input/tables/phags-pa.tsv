@@ -1,4 +1,7 @@
-# https://www.babelstone.co.uk/Phags-pa/Description.html
+# https://unicode.org/charts/PDF/UA840.pdf
+# https://babelstone.co.uk/Phags-pa/Description.html
+#
+# Consonants
 ꡀ	k
 ꡁ	kh
 ꡂ	g
@@ -28,30 +31,42 @@
 ꡚ	sh
 ꡛ	s
 ꡜ	h
+# Letter A
 ꡝ	'
+# Vowels
 ꡞ	i
 ꡟ	u
 ꡠ	e
 ꡡ	o
+# Consonants
 ꡢ	q
 ꡣ	x
 ꡤ	f
 ꡥ	gg
+# Vowel
 ꡦ	ee
+# Subjoined consonants
 ꡧ	w
 ꡨ	y
+# Consonant additions for Sanskrit
 ꡩ	tt
 ꡪ	tth
 ꡫ	dd
 ꡬ	nn
-ꡭ	y'
+# Alternate consonant forms for Chinese
+ꡭ	y''
 ꡮ	sh'
 ꡯ	h'
-ꡰ	f'
+ꡰ	f''
+# Subjoined consonant
 ꡱ	r
+# Consonant addition for Tibetan
 ꡲ	r
+# Candrabindu
 ꡳ	^
+# Head marks for Tibetan
 ꡴	@
 ꡵	@@
+# Punctuation for Tibetan
 ꡶	/
 ꡷	//

@@ -63,7 +63,7 @@ Representative examples for different languages comparing the AnyAscii output to
 |Georgian|სამტრედია|samt'redia|Samtredia|
 |Hebrew|אברהם הלוי פרנקל|'vrhm hlvy frnkl|Abraham Halevi Fraenkel|
 |Unified English Braille (Braille)|⠠⠎⠁⠽⠀⠭⠀⠁⠛|+say x ag|Say it again|
-|Bengali|ময়মনসিংহ|mymnsimh|Mymensingh|
+|Bengali|ময়মনসিংহ|mymnsimh|Mymensingh|
 |Burmese (Myanmar)|ထန်တလန်|thntln|Thantlang|
 |Gujarati|પોરબંદર|porbmdr|Porbandar|
 |Hindi (Devanagari)|महासमुंद|mhasmumd|Mahasamund|

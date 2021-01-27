@@ -36,7 +36,7 @@ public final class AnyAsciiTest {
         check("სამტრედია", "samt'redia");
         check("אברהם הלוי פרנקל", "'vrhm hlvy frnkl");
         check("⠠⠎⠁⠽⠀⠭⠀⠁⠛", "+say x ag");
-        check("ময়মনসিংহ", "mymnsimh");
+        check("ময়মনসিংহ", "mymnsimh");
         check("ထန်တလန်", "thntln");
         check("પોરબંદર", "porbmdr");
         check("महासमुंद", "mhasmumd");
@@ -59,8 +59,8 @@ public final class AnyAsciiTest {
     }
 
     private static void check(String s, String expected) {
-        String actual = AnyAscii.transliterate(s);
-        Assertions.assertTrue(AnyAscii.isAscii(actual));
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(AnyAscii.isAscii(s), s.equals(expected));
+        Assertions.assertTrue(AnyAscii.isAscii(expected));
+        Assertions.assertEquals(expected, AnyAscii.transliterate(s));
     }
 }

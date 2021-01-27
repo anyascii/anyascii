@@ -1,4 +1,7 @@
-# https://www.unicode.org/L2/L2015/15233-makasar.pdf
+# https://unicode.org/charts/PDF/U11EE0.pdf
+# https://unicode.org/L2/L2015/15233-makasar.pdf
+#
+# Consonants
 𑻠	k
 𑻡	g
 𑻢	ng
@@ -17,10 +20,13 @@
 𑻯	w
 𑻰	s
 𑻱	
-𑻲	'
+# Consonant reduplicator
+𑻲	-
+# Vowel signs
 𑻳	i
 𑻴	u
 𑻵	e
 𑻶	o
-𑻷	.
-𑻸	*
+# Punctuation
+𑻷	,
+𑻸	.

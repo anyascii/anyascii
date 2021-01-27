@@ -1,0 +1,300 @@
+# https://unicode.org/charts/PDF/U2300.pdf
+#
+# Miscellaneous technical
+⌀	0
+⌁	~
+⌂	^
+⌃	^
+⌄	v
+⌅	^
+⌆	^
+⌇	~
+# Ceilings and floors
+⌈	[
+⌉	]
+⌊	[
+⌋	]
+# Crops
+⌌	+
+⌍	+
+⌎	+
+⌏	+
+# Miscellaneous technical
+⌐	-
+⌑	*
+⌒	*
+⌓	*
+⌔	*
+⌕	*
+⌖	+
+⌗	#
+⌘	#
+⌙	-
+# User interface symbols
+⌚	@
+⌛	@
+# Quine corners
+⌜	+
+⌝	+
+⌞	+
+⌟	+
+# Integral pieces
+⌠	(
+⌡	)
+# Frown and smile
+⌢	(
+⌣	)
+# Keyboard symbols
+⌤	^
+⌥	*
+⌦	>
+⌧	x
+⌨	#
+# Deprecated angle brackets
+〈	<
+〉	>
+# Keyboard symbol
+⌫	<
+# Chemistry symbol
+⌬	#
+# Drafting symbols
+⌭	*
+⌮	*
+⌯	*
+⌰	*
+⌱	*
+⌲	*
+⌳	*
+⌴	*
+⌵	*
+# APL
+⌶	I
+⌷	#
+⌸	=
+⌹	:
+⌺	*
+⌻	*
+⌼	*
+⌽	*
+⌾	*
+⌿	/
+⍀	\
+⍁	/
+⍂	\
+⍃	<
+⍄	>
+⍅	<
+⍆	>
+⍇	<
+⍈	>
+⍉	0
+⍊	*
+⍋	*
+⍌	v
+⍍	*
+⍎	*
+⍏	^
+⍐	^
+⍑	*
+⍒	*
+⍓	^
+⍔	*
+⍕	*
+⍖	v
+⍗	v
+⍘	'
+⍙	*
+⍚	*
+⍛	*
+⍜	*
+⍝	*
+⍞	'
+⍟	*
+⍠	:
+⍡	*
+⍢	*
+⍣	*
+⍤	*
+⍥	*
+⍦	*
+⍧	*
+⍨	~
+⍩	>
+⍪	,
+⍫	*
+⍬	0
+⍭	|
+⍮	;
+⍯	=
+⍰	?
+⍱	v
+⍲	^
+⍳	i
+⍴	r
+⍵	o
+⍶	a
+⍷	e
+⍸	i
+⍹	o
+⍺	a
+# Graphics for control codes
+⍻	NAK
+# Miscellaneous technical
+⍼	+
+# Graphics for control codes
+⍽	*
+⍾	*
+⍿	|
+# Keyboard symbols from ISO 9995-7
+⎀	*
+⎁	*
+⎂	*
+⎃	*
+⎄	*
+⎅	*
+⎆	*
+⎇	*
+⎈	*
+⎉	*
+⎊	*
+⎋	*
+⎌	*
+# Electrotechnical symbols from IR 181
+⎍	*
+⎎	*
+⎏	*
+⎐	*
+⎑	*
+⎒	*
+⎓	*
+⎔	*
+# APL
+⎕	#
+# Keyboard symbols from ISO 9995-7
+⎖	.
+⎗	<
+⎘	>
+⎙	#
+⎚	#
+# Bracket pieces
+⎛	(
+⎜	(
+⎝	(
+⎞	)
+⎟	)
+⎠	)
+⎡	[
+⎢	[
+⎣	[
+⎤	]
+⎥	]
+⎦	]
+⎧	{
+⎨	{
+⎩	{
+⎪	|
+⎫	}
+⎬	}
+⎭	}
+# Special character extensions
+⎮	|
+⎯	-
+# Bracket pieces
+⎰	{
+⎱	{
+# Summation sign parts
+⎲	S
+⎳	S
+# Horizontal brackets
+⎴	[
+⎵	]
+⎶	][
+# Terminal graphic characters
+⎷	/
+⎸	|
+⎹	|
+# Scan lines for terminal graphics
+⎺	-
+⎻	-
+⎼	-
+⎽	-
+# Dentistry notation symbols
+⎾	+
+⎿	+
+⏀	+
+⏁	+
+⏂	+
+⏃	+
+⏄	+
+⏅	+
+⏆	+
+⏇	+
+⏈	+
+⏉	+
+⏊	+
+⏋	+
+⏌	+
+# Miscellaneous technical
+⏍	'
+# Keyboard and UI symbols
+⏎	<
+⏏	^
+# Special character extension
+⏐	|
+# Metrical symbols
+⏑	-
+⏒	-
+⏓	-
+⏔	-
+⏕	-
+⏖	-
+⏗	-
+⏘	-
+⏙	-
+# Electrotechnical symbols
+⏚	+
+⏛	-
+# Horizontal brackets
+⏜	(
+⏝	)
+⏞	{
+⏟	}
+⏠	[
+⏡	]
+# Miscellaneous technical
+⏢	#
+# Chemistry symbol
+⏣	#
+# Miscellaneous technical
+⏤	-
+⏥	#
+⏦	*
+⏧	*
+⏨	E
+# User interface symbols
+⏩	>>
+⏪	<<
+⏫	^
+⏬	v
+⏭	>>|
+⏮	|<<
+⏯	>||
+⏰	@
+⏱	@
+⏲	@
+⏳	@
+⏴	<
+⏵	>
+⏶	^
+⏷	v
+⏸	||
+⏹	#
+⏺	*
+# Power symbols from ISO 7000:2012
+⏻	*
+⏼	*
+⏽	*
+# Power symbol from IEEE 1621-2004
+⏾	*
+# Miscellaneous symbol
+⏿	<

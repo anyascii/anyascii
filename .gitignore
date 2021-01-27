@@ -2,6 +2,7 @@
 .pytest_cache/
 .tox/
 .vs/
+.vscode/
 __pycache__/
 bin/
 dist/

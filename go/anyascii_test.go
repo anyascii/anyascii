@@ -40,7 +40,7 @@ func TestTransliterate(t *testing.T) {
 	check("სამტრედია", "samt'redia")
 	check("אברהם הלוי פרנקל", "'vrhm hlvy frnkl")
 	check("⠠⠎⠁⠽⠀⠭⠀⠁⠛", "+say x ag")
-	check("ময়মনসিংহ", "mymnsimh")
+	check("ময়মনসিংহ", "mymnsimh")
 	check("ထန်တလန်", "thntln")
 	check("પોરબંદર", "porbmdr")
 	check("महासमुंद", "mhasmumd")

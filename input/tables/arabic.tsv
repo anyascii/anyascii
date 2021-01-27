@@ -291,16 +291,6 @@
 ࣇ	l
 # https://www.unicode.org/L2/L2011/11033r-arabic-short-vowel.pdf
 ࣿ	
-# https://www.unicode.org/L2/L2009/09419r-encode-koranic.pdf
-ࣰ	a
-ࣱ	u
-ࣲ	i
-ࣳ	u
-# https://www.unicode.org/L2/L2006/06358r-n3185r-quranic-diacritics.pdf
-ؗ	
-ؘ	
-ؙ	
-ؚ	
 # http://unicode.org/L2/L2002/02163-n2413-4-urdu.pdf
 ؏	*
 ؃	#
@@ -356,16 +346,77 @@
 ڜ	ch
 # https://unicode.org/L2/L2009/09144-arabic-samvat.pdf
 ؄	sm.
-# https://www.unicode.org/L2/L2003/03159-arabic-3dot.pdf
+# https://unicode.org/L2/L2003/03159-arabic-3dot.pdf
 ؞	.
+# Honorifics
+# https://unicode.org/wg2/docs/n2483.pdf
+ؐ	
+ؑ	
+ؒ	
+ؓ	
+ؔ	
+# Quranic annotation signs
+# https://unicode.org/L2/L2006/06358r-n3185r-quranic-diacritics.pdf
+ؗ	
+ؘ	
+ؙ	
+ؚ	
+# Quranic annotation signs
+ۖ	
+ۗ	
+ۘ	
+ۙ	
+ۚ	
+ۛ	
+ۜ	
+۝	#
+۞	#
+۟	
+۠	
+ۡ	
+ۢ	
+ۣ	
+ۤ	
+ۥ	
+ۦ	
+ۧ	
+ۨ	
+۩	^
+۪	
+۫	
+۬	
+ۭ	
+# Quranic annotation signs
+࣓	
+ࣔ	
+ࣕ	
+ࣖ	
+ࣗ	
+ࣘ	
+ࣙ	
+ࣚ	
+ࣛ	
+ࣜ	
+ࣝ	
+ࣞ	
+ࣟ	
+࣠	
+࣡	
+࣢	#
+# Quranic annotation signs
+# https://unicode.org/L2/L2009/09419r-encode-koranic.pdf
+ࣰ	a
+ࣱ	u
+ࣲ	i
+ࣳ	u
 # Rumi Numeral Symbols
-# https://www.unicode.org/charts/PDF/U10E60.pdf
+# https://unicode.org/charts/PDF/U10E60.pdf
 𐹻	1/2
 𐹼	1/4
 𐹽	1/3
 𐹾	2/3
 # Arabic Presentation Forms-A
-# https://www.unicode.org/charts/PDF/UFB50.pdf
+# https://unicode.org/charts/PDF/UFB50.pdf
 ﮲	.
 ﮳	.
 ﮴	.
@@ -410,28 +461,27 @@
 ٟ	'
 ـ	
 ّ	
+# Punctuation
+؉	%0
+؊	%00
+،	,
+؍	/
+؛	;
+؟	?
+٪	%
+٫	.
+٬	,
+٭	*
+۔	.
+# Radix symbols
+؆	∛
+؇	∜
 # symbols
 ؈	r
 ؁	sn.
 ؅	#
-۝	#
 ࣢	#
 ؀	#
 ؂	^
 ؎	^
-؍	/
-؉	%0
-؊	%00
-٪	%
-؆	∛
-؇	∜
-۔	.
-٫	.
-٬	,
-٭	*
-؟	?
-،	,
-؛	;
 ۽	&
-۩	^
-۞	#

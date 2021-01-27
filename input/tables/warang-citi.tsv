@@ -1,18 +1,19 @@
-# https://www.unicode.org/charts/PDF/U118A0.pdf
-# https://www.unicode.org/wg2/docs/n4259.pdf
+# https://unicode.org/charts/PDF/U118A0.pdf
+# https://unicode.org/wg2/docs/n4259.pdf
+#
 # vowels
 𑣀	m
 𑣁	a
 𑣂	i
 𑣃	u
-𑣄	?
+𑣄	'
 𑣅	y
-𑣆	ii
-𑣇	uu
+𑣆	i
+𑣇	u
 𑣈	e
 𑣉	o
 # consonants
-𑣊	ng
+𑣊	n
 𑣋	g
 𑣌	k
 𑣍	n

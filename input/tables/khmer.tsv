@@ -1,7 +1,8 @@
-# https://www.unicode.org/charts/PDF/U1780.pdf
-# https://www.unicode.org/versions/Unicode13.0.0/ch16.pdf
+# https://unicode.org/charts/PDF/U1780.pdf
+# https://unicode.org/versions/Unicode13.0.0/ch16.pdf
 #
-# ungegn 2013 consonant characters
+# ungegn 2013 provisional 1997
+## I
 ក	k
 ខ	kh
 គ	k
@@ -35,7 +36,7 @@
 ហ	h
 ឡ	l
 អ	'
-# provisional 1997 independent vowels
+## III
 ឥ	e
 ឦ	ei
 ឧ	o
@@ -50,7 +51,7 @@
 ឱ	ao
 ឲ	ao
 ឳ	ov
-# provisional 1997 dependent vowels (a-series)
+## IV
 ា	a
 ិ	e
 ី	ei
@@ -67,36 +68,77 @@
 ៃ	ai
 ោ	ao
 ៅ	au
-ៈ	ak
-# ungegn 2013 shortened syllables and vocalic nuclei with anuswara or visarga
+## V
 ់	a
+័	a
 ំ	am
 ះ	ah
-# ungegn 2013 notes
-ឨ	o
-័	a
+ៈ	ak
+## notes
+### 2
+៊	
+៉	
+### 7
 ៌	r
+### 8
 ៏	
+### 9
 ៍	
-# other
+### 10
+ឨ	o
+# sanskrit
 ឝ	s
 ឞ	s
+# deprecated
 ឣ	'
 ឤ	'a
+# ignored
 ឴	
 ឵	
-៉	
-៊	
+# other
 ៎	!
 ៑	
 ្	
-#៓	_
+៓	
 ។	.
 ៕	#
 ៖	:
 ៗ	-
-៘	etc.
+៘	-Lo-
 ៙	*
 ៚	@
 ៜ	'
 ៝	
+# https://unicode.org/charts/PDF/U19E0.pdf
+᧠	08
+᧡	1.
+᧢	2.
+᧣	3.
+᧤	4.
+᧥	5.
+᧦	6.
+᧧	7.
+᧨	8.
+᧩	9.
+᧪	10.
+᧫	11.
+᧬	12.
+᧭	13.
+᧮	14.
+᧯	15.
+᧰	88
+᧱	.1
+᧲	.2
+᧳	.3
+᧴	.4
+᧵	.5
+᧶	.6
+᧷	.7
+᧸	.8
+᧹	.9
+᧺	.10
+᧻	.11
+᧼	.12
+᧽	.13
+᧾	.14
+᧿	.15

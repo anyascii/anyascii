@@ -1,30 +1,29 @@
-# https://www.unicode.org/charts/PDF/U1B00.pdf
-# https://en.wikipedia.org/wiki/Balinese_script
-# https://www.unicode.org/wg2/docs/n2908.pdf
+# https://unicode.org/charts/PDF/U1B00.pdf
+# https://unicode.org/wg2/docs/n2908.pdf
 # ala-lc 2012
 #
-# various signs
+# Various signs
 ᬀ	m
 ᬁ	ng
 ᬂ	ng
 ᬃ	r
 ᬄ	h
-# independent vowels
+# Independent vowels
 ᬅ	a
 ᬆ	a
 ᬇ	i
 ᬈ	i
 ᬉ	u
 ᬊ	u
-ᬋ	r
-ᬌ	r
-ᬍ	l
-ᬎ	l
+ᬋ	re
+ᬌ	ro
+ᬍ	le
+ᬎ	lo
 ᬏ	e
 ᬐ	ai
 ᬑ	o
 ᬒ	au
-# consonants
+# Consonants
 ᬓ	k
 ᬔ	kh
 ᬕ	g
@@ -58,27 +57,27 @@
 ᬱ	s
 ᬲ	s
 ᬳ	h
-# sign
+# Sign
 ᬴	'
-# dependent vowel signs
+# Dependent vowel signs
 ᬵ	a
 ᬶ	i
 ᬷ	i
 ᬸ	u
 ᬹ	u
-ᬺ	r
-ᬻ	r
-ᬼ	l
-ᬽ	l
+ᬺ	re
+ᬻ	ro
+ᬼ	le
+ᬽ	lo
 ᬾ	e
 ᬿ	ai
 ᭀ	o
 ᭁ	au
-ᭂ	ae
-ᭃ	oe
-# sign
+ᭂ	e
+ᭃ	o
+# Sign
 ᭄	
-# additional consonants
+# Additional consonants
 ᭅ	k'
 ᭆ	kh
 ᭇ	t'
@@ -86,7 +85,7 @@
 ᭉ	w'
 ᭊ	s'
 ᭋ	sy
-# punctuation
+# Punctuation
 ᭚	*
 ᭛	@
 ᭜	.
@@ -94,34 +93,34 @@
 ᭞	,
 ᭟	.
 ᭠	-
-# musical symbols for notes
-#᭡	_
-#᭢	_
-#᭣	_
-#᭤	_
-#᭥	_
-#᭦	_
-#᭧	_
-#᭨	_
-#᭩	_
-#᭪	_
-# diacritical marks for musical symbols
-#᭫	_
-#᭬	_
-#᭭	_
-#᭮	_
-#᭯	_
-#᭰	_
-#᭱	_
-#᭲	_
-#᭳	_
-# musical symbols
-#᭴	_
-#᭵	_
-#᭶	_
-#᭷	_
-#᭸	_
-#᭹	_
-#᭺	_
-#᭻	_
-#᭼	_
+# Musical symbols for notes
+᭡	a
+᭢	e
+᭣	u
+᭤	ng
+᭥	r
+᭦	i
+᭧	e
+᭨	u
+᭩	ai
+᭪	h
+# Diacritical marks for musical symbols
+᭫	
+᭬	
+᭭	
+᭮	
+᭯	
+᭰	
+᭱	
+᭲	
+᭳	
+# Musical symbols
+᭴	^
+᭵	^
+᭶	^
+᭷	^
+᭸	^
+᭹	^
+᭺	^
+᭻	^
+᭼	^

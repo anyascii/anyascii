@@ -1,21 +1,21 @@
+# https://unicode.org/charts/PDF/UA980.pdf
+# https://unicode.org/wg2/docs/n3319.pdf
 # ala-lc 2011
-# https://en.wikipedia.org/wiki/Javanese_script
-# https://www.unicode.org/wg2/docs/n3319.pdf
-# https://www.unicode.org/charts/PDF/UA980.pdf
-# various signs
+#
+# Various signs
 ꦀ	m
 ꦁ	ng
 ꦂ	r
 ꦃ	h
-# letters
+# Letters
 ꦄ	a
 ꦅ	i
 ꦆ	i
 ꦇ	i
 ꦈ	u
-ꦉ	r
-ꦊ	l
-ꦋ	l
+ꦉ	re
+ꦊ	le
+ꦋ	lo
 ꦌ	e
 ꦍ	ai
 ꦎ	o
@@ -28,12 +28,12 @@
 ꦕ	c
 ꦖ	ch
 ꦗ	j
-ꦘ	ny
+ꦘ	jny
 ꦙ	jh
 ꦚ	ny
-ꦛ	th
+ꦛ	t
 ꦜ	th
-ꦝ	dh
+ꦝ	d
 ꦞ	dh
 ꦟ	n
 ꦠ	t
@@ -55,25 +55,25 @@
 ꦰ	s
 ꦱ	s
 ꦲ	h
-# sign
+# Sign
 ꦳	'
-# dependent vowel signs
+# Dependent vowel signs
 ꦴ	a
-ꦵ	a
+ꦵ	o
 ꦶ	i
 ꦷ	i
 ꦸ	u
 ꦹ	u
 ꦺ	e
-ꦻ	e
+ꦻ	ai
 ꦼ	e
-# dependent consonant signs
-ꦽ	r
+# Dependent consonant signs
+ꦽ	re
 ꦾ	y
 ꦿ	r
-# sign
+# Sign
 ꧀	
-# punctuation
+# Punctuation
 ꧁	<
 ꧂	>
 ꧃	@
@@ -87,8 +87,8 @@
 ꧋	||
 ꧌	{
 ꧍	}
-# syllable reduplicator
+# Syllable reduplicator
 ꧏ	-
-# ellipsis marks
+# Ellipsis marks
 ꧞	^
 ꧟	~

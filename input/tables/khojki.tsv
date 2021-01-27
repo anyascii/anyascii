@@ -1,0 +1,72 @@
+# https://unicode.org/charts/PDF/U11200.pdf
+# https://unicode.org/wg2/docs/n3978.pdf
+#
+# Independent vowels
+𑈀	a
+𑈁	a
+𑈂	i
+𑈃	u
+𑈄	e
+𑈅	ai
+𑈆	o
+𑈇	au
+# Consonants
+𑈈	k
+𑈉	kh
+𑈊	g
+𑈋	g
+𑈌	gh
+𑈍	n
+𑈎	c
+𑈏	ch
+𑈐	j
+𑈑	j
+𑈓	n
+𑈔	t
+𑈕	th
+𑈖	d
+𑈗	dh
+𑈘	n
+𑈙	t
+𑈚	th
+𑈛	d
+𑈜	d
+𑈝	dh
+𑈞	n
+𑈟	p
+𑈠	ph
+𑈡	b
+𑈢	b
+𑈣	bh
+𑈤	m
+𑈥	y
+𑈦	r
+𑈧	l
+𑈨	v
+𑈩	s
+𑈪	h
+𑈫	r
+# Dependent vowel signs
+𑈬	a
+𑈭	i
+𑈮	i
+𑈯	u
+𑈰	e
+𑈱	ai
+𑈲	o
+𑈳	au
+# Various signs
+𑈴	m
+𑈵	
+𑈶	'
+𑈷	
+# Punctuation
+𑈸	,
+𑈹	.
+𑈺	 
+𑈻	,
+𑈼	.
+𑈽	.
+# Sign
+# https://unicode.org/wg2/docs/n4575.pdf
+𑈾	

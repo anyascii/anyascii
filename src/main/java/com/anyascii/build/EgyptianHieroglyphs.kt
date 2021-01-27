@@ -30,7 +30,7 @@ private fun catalogueId(cp: CodePoint): String {
     return prefix + num.stripLeading('0') + suffix.lower()
 }
 
-private fun formatControls() = Table(mapOf(
+private fun formatControls() = Table(
         0x13430 to ":",
         0x13431 to "*",
         0x13432 to "",
@@ -40,4 +40,4 @@ private fun formatControls() = Table(mapOf(
         0x13436 to "+",
         0x13437 to "(",
         0x13438 to ")"
-))
+)

@@ -1,9 +1,9 @@
-# https://www.unicode.org/charts/PDF/U1900.pdf
-# https://en.wikipedia.org/wiki/Limbu_script
-# https://www.unicode.org/wg2/docs/n2410.pdf
-# https://www.unicode.org/wg2/docs/n3975.pdf
+# https://unicode.org/charts/PDF/U1900.pdf
+# https://unicode.org/wg2/docs/n2410.pdf
+# https://unicode.org/wg2/docs/n3975.pdf
 # ala-lc 2011
-# consonants
+#
+# Consonants
 ᤀ	
 ᤁ	k
 ᤂ	kh
@@ -35,7 +35,7 @@
 ᤜ	h
 ᤝ	jn
 ᤞ	tr
-# dependent vowel signs
+# Dependent vowel signs
 ᤠ	a
 ᤡ	i
 ᤢ	u
@@ -45,11 +45,11 @@
 ᤦ	au
 ᤧ	e
 ᤨ	o
-# subjoined consonants
+# Subjoined consonants
 ᤩ	y
 ᤪ	r
 ᤫ	v
-# final consonants
+# Final consonants
 ᤰ	k
 ᤱ	n
 ᤲ	n
@@ -59,7 +59,7 @@
 ᤶ	m
 ᤷ	r
 ᤸ	l
-# various signs
+# Various signs
 ᤹	h
 ᤺	'
 ᤻	

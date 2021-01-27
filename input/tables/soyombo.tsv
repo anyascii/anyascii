@@ -1,0 +1,102 @@
+# https://unicode.org/charts/PDF/U11A50.pdf
+# https://unicode.org/wg2/docs/n4655-Soyombo.pdf
+#
+# Vowel letter
+𑩐	
+# Vowel signs
+𑩑	i
+𑩒	u
+𑩓	u
+𑩔	e
+𑩕	o
+𑩖	o
+𑩗	ai
+𑩘	au
+𑩙	r
+𑩚	l
+# Vowel length mark
+𑩛	
+# Consonants
+𑩜	k
+𑩝	kh
+𑩞	g
+𑩟	gh
+𑩠	ng
+𑩡	c
+𑩢	ch
+𑩣	j
+𑩤	jh
+𑩥	ny
+𑩦	t
+𑩧	th
+𑩨	d
+𑩩	dh
+𑩪	n
+𑩫	t
+𑩬	th
+𑩭	d
+𑩮	dh
+𑩯	n
+𑩰	p
+𑩱	ph
+𑩲	b
+𑩳	bh
+𑩴	m
+𑩵	ts
+𑩶	tsh
+𑩷	dz
+𑩸	zh
+𑩹	z
+𑩺	'
+𑩻	y
+𑩼	r
+𑩽	l
+𑩾	v
+𑩿	sh
+𑪀	s
+𑪁	s
+𑪂	h
+𑪃	ks
+# Alternate visarga signs
+# https://unicode.org/L2/L2015/15331-soyombo-jihva-upadh.pdf
+𑪄	h
+𑪅	h
+# Cluster-initial letters
+𑪆	r
+𑪇	l
+𑪈	sh
+𑪉	s
+# Final consonant signs
+𑪊	g
+𑪋	k
+𑪌	ng
+𑪍	d
+𑪎	n
+𑪏	b
+𑪐	m
+𑪑	r
+𑪒	l
+𑪓	sh
+𑪔	s
+𑪕	'
+# Various signs
+𑪖	m
+𑪗	h
+# Gemination mark
+𑪘	
+# Subjoiner
+𑪙	
+# Punctuation
+𑪚	-
+𑪛	,
+𑪜	.
+# Elongation mark
+# https://unicode.org/L2/L2016/16016-soyombo-pluta.pdf
+𑪝	`
+# Head marks
+𑪞	@
+𑪟	@
+𑪠	@
+# Terminal marks
+𑪡	#
+𑪢	#

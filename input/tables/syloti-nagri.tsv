@@ -1,13 +1,14 @@
-# https://www.unicode.org/charts/PDF/UA800.pdf
-# https://www.unicode.org/L2/L2002/02388-syloti-proposal.pdf
-# independent vowels
+# https://unicode.org/charts/PDF/UA800.pdf
+# https://unicode.org/L2/L2002/02388-syloti-proposal.pdf
+#
+# Independent vowels and dvisvara
 ꠀ	a
 ꠁ	i
 ꠂ	i
 ꠃ	u
 ꠄ	e
 ꠅ	o
-# consonants
+# Consonants and consonant signs
 ꠇ	k
 ꠈ	kh
 ꠉ	g
@@ -36,17 +37,17 @@
 ꠠ	r
 ꠡ	s
 ꠢ	h
-# dependent vowels
+# Dependent vowel signs
 ꠣ	a
 ꠤ	i
 ꠥ	u
 ꠦ	e
-ꠧ	oo
-#
+ꠧ	o
+# Poetry marks
 ꠨	1
 ꠩	2
 ꠪	3
 ꠫	4
-# hasanta
+# Hasanta
 ꠆	
 ꠬	

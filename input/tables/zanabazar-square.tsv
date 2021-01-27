@@ -1,6 +1,5 @@
 # https://unicode.org/charts/PDF/U11A00.pdf
 # https://unicode.org/L2/L2015/15337-zanabazar-square.pdf
-# tibetan ala-lc 2015
 #
 # Vowel letter
 𑨀	
@@ -76,15 +75,15 @@
 𑨽	l
 𑨾	v
 # Head marks
-𑨿	࿓
-𑩀	࿔
+𑨿	@
+𑩀	#
 # Punctuation
-𑩁	་
-𑩂	།
-𑩃	༎
-𑩄	༔
+𑩁	-
+𑩂	,
+𑩃	.
+𑩄	:
 # Head marks
-𑩅	༄
-𑩆	༅
+𑩅	@
+𑩆	#
 # Subjoiner
 𑩇	

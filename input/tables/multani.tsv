@@ -1,12 +1,12 @@
-# https://www.unicode.org/charts/PDF/U11280.pdf
-# https://www.unicode.org/wg2/docs/n4159.pdf
+# https://unicode.org/charts/PDF/U11280.pdf
+# https://unicode.org/wg2/docs/n4159.pdf
 #
-# vowels
+# Vowels
 𑊀	a
 𑊁	i
 𑊂	u
 𑊃	e
-# consonants
+# Consonants
 𑊄	k
 𑊅	kh
 𑊆	g
@@ -40,5 +40,5 @@
 𑊦	h
 𑊧	r
 𑊨	rh
-# punctuation
+# Punctuation
 𑊩	.

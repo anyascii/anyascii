@@ -1,6 +1,7 @@
-# https://www.unicode.org/charts/PDF/UA930.pdf
-# https://www.unicode.org/wg2/docs/n3096.pdf
-# https://en.wikipedia.org/wiki/Rejang_script
+# https://unicode.org/charts/PDF/UA930.pdf
+# https://unicode.org/wg2/docs/n3096.pdf
+#
+# Consonants
 ꤰ	k
 ꤱ	g
 ꤲ	ng
@@ -24,7 +25,7 @@
 ꥄ	nd
 ꥅ	nyj
 ꥆ	'
-#
+# Vowel signs
 ꥇ	i
 ꥈ	u
 ꥉ	e
@@ -33,12 +34,12 @@
 ꥌ	au
 ꥍ	eu
 ꥎ	ea
-#
+# Consonant signs
 ꥏ	ng
 ꥐ	n
 ꥑ	r
 ꥒ	h
-#
+# Virama
 ꥓	
-#
+# Punctuation
 ꥟	*

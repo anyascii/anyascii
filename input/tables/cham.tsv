@@ -1,15 +1,15 @@
-# https://www.unicode.org/charts/PDF/UAA00.pdf
-# https://en.wikipedia.org/wiki/Cham_script
-# https://www.unicode.org/wg2/docs/n3120.pdf
-# ala-lc 2015 
-# independent vowels
+# https://unicode.org/charts/PDF/UAA00.pdf
+# https://unicode.org/wg2/docs/n3120.pdf
+# ala-lc 2015
+#
+# Independent vowels
 ꨀ	a
 ꨁ	i
 ꨂ	u
 ꨃ	e
 ꨄ	ai
 ꨅ	o
-# consonants
+## Consonants
 ꨆ	k
 ꨇ	kh
 ꨈ	g
@@ -45,8 +45,8 @@
 ꨦ	x
 ꨧ	s
 ꨨ	h
-# dependent vowel signs
-ꨩ	aa
+# Dependent vowel signs
+ꨩ	a
 ꨪ	i
 ꨫ	i
 ꨬ	ei
@@ -56,12 +56,12 @@
 ꨰ	ai
 ꨱ	au
 ꨲ	u
-# consonant signs
+# Consonant signs
 ꨳ	y
 ꨴ	r
 ꨵ	l
 ꨶ	w
-# final consonants
+# Final consonants
 ꩀ	k
 ꩁ	g
 ꩂ	ng
@@ -76,8 +76,8 @@
 ꩋ	x
 ꩌ	m
 ꩍ	h
-# punctuation
-꩜	@
-꩝	|
-꩞	||
-꩟	|||
+# Punctuation
+꩜	*
+꩝	,
+꩞	;
+꩟	.

@@ -12,7 +12,7 @@ fun cSharp(g: Generator) {
         w.write("{\n")
         w.write("\tpublic static partial class Transliteration\n")
         w.write("\t{\n")
-        w.write("\t\tprivate static readonly Dictionary<int, Lazy<string[]>> blocks = new Dictionary<int, Lazy<string[]>>\n")
+        w.write("\t\tprivate static readonly Dictionary<short, Lazy<string[]>> blocks = new Dictionary<short, Lazy<string[]>>\n")
         w.write("\t\t{\n")
 
         for ((blockNum, block) in g.blocks) {

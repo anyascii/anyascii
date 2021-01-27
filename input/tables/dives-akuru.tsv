@@ -1,16 +1,16 @@
-# https://www.unicode.org/charts/PDF/U11900.pdf
-# https://www.unicode.org/wg2/docs/n4929-18016r-dives-akuru.pdf
+# https://unicode.org/charts/PDF/U11900.pdf
+# https://unicode.org/wg2/docs/n4929-18016r-dives-akuru.pdf
 #
-# independent vowels
+# Independent vowels
 𑤀	a
-𑤁	aa
+𑤁	a
 𑤂	i
-𑤃	ii
+𑤃	i
 𑤄	u
-𑤅	uu
+𑤅	u
 𑤆	e
 𑤉	o
-# consonants
+# Consonants
 𑤌	k
 𑤍	kh
 𑤎	g
@@ -45,28 +45,29 @@
 𑤭	h
 𑤮	l
 𑤯	z
-# dependent vowel signs
-𑤰	aa
+# Dependent vowel signs
+𑤰	a
 𑤱	i
-𑤲	ii
+𑤲	i
 𑤳	u
-𑤴	uu
+𑤴	u
 𑤵	e
 𑤷	ai
 𑤸	o
-# nasalization signs
+# Nasalization signs
 𑤻	m
 𑤼	m
+# Signs
 𑤽	
 𑤾	
 𑤿	n
-# conjunct-specific letters
+# Conjunct-specific letters
 𑥀	y
 𑥁	r
 𑥂	r
-# nukta
-𑥃	
-# punctuation
+# Nukta
+𑥃	'
+# Punctuation
 𑥄	.
 𑥅	-
 𑥆	*

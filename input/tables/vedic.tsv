@@ -1,10 +1,12 @@
 # https://unicode.org/charts/PDF/U1CD0.pdf
+#
+# Tone marks for the Samaveda
 ᳐	
 ᳑	
 ᳒	
-#
+# Breathing mark for the Samaveda
 ᳓	"
-#
+# Signs for Yajurvedic
 ᳔	
 ᳕	
 ᳖	
@@ -15,14 +17,14 @@
 ᳛	
 ᳜	
 ᳝	
-#
+# Tone marks for the Satapathabrahmana
 ᳞	
 ᳟	
-#
+# Tone mark for the Rigveda
 ᳠	
-#
+# Tone mark for the Atharvaveda
 ᳡	
-#
+# Diacritics for visarga
 ᳢	h
 ᳣	h
 ᳤	h
@@ -30,7 +32,7 @@
 ᳦	h
 ᳧	h
 ᳨	h
-#
+# Nasalization signs
 ᳩ	m
 ᳪ	m
 ᳫ	m
@@ -40,17 +42,17 @@
 ᳯ	m
 ᳰ	m
 ᳱ	m
-#
+# Ardhavisarga
 ᳲ	h
 ᳳ	h
-#
+# Sign for Yajurvedic
 ᳴	
-#
+# Signs
 ᳵ	h
 ᳶ	h
 ᳷	
-#
+# Signs for Jaiminiya Sama Veda
 ᳸	
 ᳹	
-#
+# Nasalization sign
 ᳺ	

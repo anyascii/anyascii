@@ -1,8 +1,10 @@
-# https://www.unicode.org/charts/PDF/UA880.pdf
-# https://www.unicode.org/wg2/docs/n2969.pdf
-# various signs
+# https://unicode.org/charts/PDF/UA880.pdf
+# https://unicode.org/wg2/docs/n2969.pdf
+#
+# Various signs
 ꢀ	m
 ꢁ	h
+# Independent vowels
 ꢂ	a
 ꢃ	a
 ꢄ	i
@@ -19,7 +21,7 @@
 ꢏ	o
 ꢐ	o
 ꢑ	au
-# consonants
+# Consonants
 ꢒ	k
 ꢓ	kh
 ꢔ	g
@@ -55,7 +57,7 @@
 ꢲ	h
 ꢳ	l
 ꢴ	h
-# dependent vowel signs
+# Dependent vowel signs
 ꢵ	a
 ꢶ	i
 ꢷ	i
@@ -71,10 +73,10 @@
 ꣁ	o
 ꣂ	o
 ꣃ	au
-# virama
+# Virama
 ꣄	
-# sign
+# Sign
 ꣅ	m
-# punctuation
+# Punctuation
 ꣎	,
 ꣏	.

@@ -1,11 +1,13 @@
-# https://www.unicode.org/charts/PDF/U1B80.pdf
-# https://www.unicode.org/wg2/docs/n3022.pdf
-# https://en.wikipedia.org/wiki/Sundanese_script
-# various signs
+# https://unicode.org/charts/PDF/U1B80.pdf
+# https://unicode.org/charts/PDF/U1CC0.pdf
+# https://unicode.org/wg2/docs/n3022.pdf
+# https://unicode.org/wg2/docs/n3666.pdf
+#
+# Various signs
 ᮀ	ng
 ᮁ	r
 ᮂ	h
-# vowels
+# Vowels
 ᮃ	a
 ᮄ	i
 ᮅ	u
@@ -13,7 +15,7 @@
 ᮇ	o
 ᮈ	e
 ᮉ	eu
-# consonants
+# Consonants
 ᮊ	k
 ᮋ	q
 ᮌ	g
@@ -37,41 +39,40 @@
 ᮞ	s
 ᮟ	x
 ᮠ	h
-# consonant signs
+# Consonant signs
 ᮡ	y
 ᮢ	r
 ᮣ	l
-# vowel signs
+# Vowel signs
 ᮤ	i
 ᮥ	u
 ᮦ	e
 ᮧ	o
 ᮨ	e
 ᮩ	eu
-# viramas
+# Viramas
 ᮪	
 ᮫	
-# consonant signs
+# Consonant signs
 ᮬ	m
 ᮭ	w
-# additional consonants
+# Additional consonants
 ᮮ	kh
 ᮯ	sy
-# sign
+# Sign
 ᮺ	'
-# historic letters
-ᮻ	r
-ᮼ	l
+# Historic letters
+ᮻ	reu
+ᮼ	leu
 ᮽ	bh
 ᮾ	k
 ᮿ	m
-# https://www.unicode.org/charts/PDF/U1CC0.pdf
-# punctuation
+# Punctuation
 ᳀	.
 ᳁	*
 ᳂	;
 ᳃	,
-᳄	L.
-᳅	K.
-᳆	D.
-᳇	B.
+᳄	L
+᳅	K
+᳆	D
+᳇	B
