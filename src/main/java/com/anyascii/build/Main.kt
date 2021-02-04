@@ -224,6 +224,7 @@ private fun custom() = Table()
         .then(Table("grantha"))
         .then(Table("aegean-numbers"))
         .then(Table("nyiakeng-puachue-hmong"))
+        .then(Table("ancient-greek-numbers"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints(UScript.CYRILLIC))
