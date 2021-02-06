@@ -242,15 +242,16 @@
 # Special character extension
 ⏐	|
 # Metrical symbols
+# https://web.archive.org/web/20070204033415/http://www.tlg.uci.edu/final/metricalsymbols.pdf
 ⏑	-
 ⏒	-
 ⏓	-
 ⏔	-
 ⏕	-
 ⏖	-
-⏗	-
-⏘	-
-⏙	-
+⏗	3
+⏘	4
+⏙	5
 # Electrotechnical symbols
 ⏚	+
 ⏛	-

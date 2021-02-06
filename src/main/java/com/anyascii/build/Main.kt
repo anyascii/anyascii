@@ -228,6 +228,7 @@ private fun custom() = Table()
         .then(Table("nyiakeng-puachue-hmong"))
         .then(Table("ancient-greek-numbers"))
         .then(Table("cuneiform-numbers-and-punctuation"))
+        .then(ancientGreekMusicalNotation())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints(UScript.CYRILLIC))
@@ -380,3 +381,6 @@ private val ANATOLIAN_CATALOGUE_ID = "A(\\d{3}[A-Z]?)".toRegex()
 private fun anatolianHieroglyphs() = UnicodeBlock.ANATOLIAN_HIEROGLYPHS.toTable {
     ANATOLIAN_CATALOGUE_ID.findOnly(it.name).groupValues[1].stripLeading('0').lower()
 }
+
+private fun ancientGreekMusicalNotation() = Table("ancient-greek-musical-notation")
+    .then(UnicodeBlock.ANCIENT_GREEK_MUSICAL_NOTATION.toTable { it.name.substringAfterLast('-') })
