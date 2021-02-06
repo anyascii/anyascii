@@ -59,6 +59,8 @@ val CodePoint.block: UnicodeBlock get() = UnicodeBlock.of(this)
 
 fun String.codePointsArray(): IntArray = codePoints().toArray()
 
+val CodePoint.plane get() = this ushr 16
+
 fun UnicodeSet.codePoints(): Iterable<CodePoint> = Iterable {
     iterator {
         for (r in ranges()) {

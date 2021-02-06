@@ -25,6 +25,8 @@ fun main() {
             .then(fallbackEmojis())
             .transliterate()
 
+    printCoverage(table)
+
     generate(table)
 
     table.minus(ASCII.keys).write("table.tsv")

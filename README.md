@@ -20,6 +20,7 @@ Unicode to ASCII transliteration
 [Shell](#shell)
 [.NET](#net)
 * [Background](#background)
+[Stats](#stats)
 [Unidecode](#unidecode)
 [Sources](#sources)
 
@@ -275,6 +276,14 @@ Romanization is most commonly used when representing the names of people and pla
 > In this sense, it is for both foreigners and the local public.
 > The Romanization system must not be a code only for the native English-speaking community here but an important tool for international communication between Korean society, foreign residents in the country and the entire external world.
 > [*](https://web.archive.org/web/20070927204130/http://www.korea.net/korea/kor_loca.asp?code=A020303)
+
+## Stats
+
+Supports Unicode 13.0
+
+Covers 90k of the 143k total Unicode characters, missing 43k very rare CJK characters and 10k other rare characters
+
+Bundled data files total 175-460 KB depending on the implementation
 
 ## Unidecode
 
