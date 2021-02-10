@@ -1,8 +1,7 @@
-# https://www.unicode.org/charts/PDF/U0E00.pdf
-# https://www.unicode.org/versions/Unicode13.0.0/ch16.pdf
-# https://r12a.github.io/scripts/thai/block
+# https://unicode.org/charts/PDF/U0E00.pdf
 #
-# ungegn 2002 consonant characters (initial)
+# ungegn 2002
+## consonant characters (initial)
 ก	k
 ข	kh
 ฃ	kh
@@ -47,11 +46,12 @@
 ฬ	l
 อ	o
 ฮ	h
-# ungegn 2002 vocalic nuclei and special characters
+## vocalic nuclei and special characters
 ะ	a
 ั	a
 า	a
 ำ	am
+ํ	m
 ิ	i
 ี	i
 ึ	ue
@@ -66,19 +66,19 @@
 ฤ	rue
 ฦ	lue
 ๅ	
-# ungegn 2002 notes
+## note 5
 ็	
 ่	
 ้	
 ๊	
 ๋	
 ์	
+# virama
+ฺ	
+๎	
 # other
 ฯ	.
-ฺ	
 ๆ	-
-ํ	m
-๎	
 ๏	*
 ๚	#
 ๛	@
