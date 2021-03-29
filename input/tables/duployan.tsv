@@ -1,0 +1,166 @@
+# https://unicode.org/charts/PDF/U1BC00.pdf
+#
+# Non-joining consonants
+𛰀	h
+𛰁	x
+# Line consonants
+𛰂	p
+𛰃	t
+𛰄	f
+𛰅	k
+𛰆	l
+𛰇	b
+𛰈	d
+𛰉	v
+𛰊	g
+𛰋	r
+𛰌	pn
+𛰍	ds
+𛰎	fn
+𛰏	km
+𛰐	rs
+𛰑	th
+𛰒	dh
+𛰓	dh
+𛰔	kk
+𛰕	j
+𛰖	hl
+𛰗	lh
+𛰘	rh
+# Arc consonants
+𛰙	m
+𛰚	n
+𛰛	j
+𛰜	s
+𛰝	mn
+𛰞	nm
+𛰟	jm
+𛰠	sj
+𛰡	m
+𛰢	ng
+𛰣	zh
+𛰤	j
+𛰥	z
+𛰦	s
+𛰧	ms
+𛰨	ns
+𛰩	js
+𛰪	ss
+𛰫	mns
+𛰬	nms
+𛰭	jms
+𛰮	sjs
+𛰯	ch
+𛰰	jn
+𛰱	jns
+# Quarter-arc consonants written downwards
+𛰲	st
+𛰳	str
+𛰴	sp
+𛰵	spr
+𛰶	ts
+𛰷	trs
+𛰸	w
+𛰹	wh
+𛰺	wr
+# Quarter-arc consonants written upwards
+𛰻	sn
+𛰼	sm
+𛰽	krs
+𛰾	grs
+𛰿	sk
+𛱀	skr
+# Circle vowels
+𛱁	a
+𛱂	ow
+𛱃	oa
+𛱄	o
+𛱅	aou
+# Semi-circle vowels
+𛱆	i
+𛱇	e
+𛱈	ie
+𛱉	i
+𛱊	ui
+𛱋	ee
+𛱌	eh
+𛱍	i
+𛱎	ee
+# Diagonal-line vowels
+𛱏	i
+𛱐	ye
+# Quarter-circle vowels
+𛱑	u
+𛱒	eu
+𛱓	xw
+𛱔	un
+# Other vowels
+𛱕	u
+𛱖	u
+𛱗	uh
+𛱘	u
+𛱙	ooh
+# Dotted-circle vowels
+𛱚	ow
+𛱛	ou
+# Compound vowels
+𛱜	wa
+𛱝	wo
+𛱞	wi
+𛱟	wei
+𛱠	wow
+# Basic nasal vowels
+𛱡	u
+𛱢	o
+𛱣	i
+𛱤	a
+# Additional nasal vowels
+𛱥	an
+𛱦	am
+𛱧	en
+𛱨	an
+𛱩	on
+𛱪	m
+# Attached affixes
+𛱰	'
+𛱱	'
+𛱲	'
+𛱳	'
+𛱴	'
+𛱵	'
+𛱶	'
+𛱷	'
+𛱸	'
+𛱹	'
+𛱺	'
+𛱻	'
+𛱼	'
+# High affixes
+𛲀	'
+𛲁	'
+𛲂	`
+𛲃	`
+𛲄	'
+𛲅	'
+𛲆	'
+𛲇	'
+𛲈	'
+# Low affixes
+𛲐	'
+𛲑	'
+𛲒	`
+𛲓	`
+𛲔	'
+𛲕	'
+𛲖	'
+𛲗	'
+𛲘	'
+𛲙	'
+# Miscellaneous sign
+𛲜	+
+# Sloan R-form selector
+𛲝	r
+# Shorthand double mark
+𛲞	-
+# Chinook punctuation
+𛲟	.
