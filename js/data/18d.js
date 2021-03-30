@@ -1,0 +1,1 @@
+module.exports='ga	ta	ghu	bu	shi	le	kwe	mi	le'.split('	')

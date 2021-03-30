@@ -258,9 +258,9 @@ When converting text between languages there are multiple properties that can be
 
 Supports Unicode 13.0
 
-Covers 90k of the 143k total Unicode characters, missing 43k very rare CJK characters and 10k other rare characters
+Covers 97k of the 143k total Unicode characters, missing 43k very rare CJK characters and 3k other rare characters
 
-Bundled data files total 175-460 KB depending on the implementation
+Bundled data files total 185-460 KB depending on the implementation
 
 ## Unidecode
 
