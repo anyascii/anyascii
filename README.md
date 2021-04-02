@@ -260,7 +260,7 @@ Supports Unicode 13.0
 
 Covers 97k of the 143k total Unicode characters, missing 43k very rare CJK characters and 3k other rare characters
 
-Bundled data files total 185-460 KB depending on the implementation
+Bundled data files total 185-475 KB depending on the implementation
 
 ## Unidecode
 
@@ -273,6 +273,7 @@ AnyAscii is an alternative to (and inspired by) [Unidecode](https://metacpan.org
 [Discord](https://github.com/anyascii/discord-emojis),
 [ISO](https://iso.org/ics/01.140.10/x/p/1/u/1/w/1/d/1),
 [KNAB](https://eki.ee/knab/kblatyl2),
+[NFKD](https://unicode.org/reports/tr15),
 [UNGEGN](https://eki.ee/wgrs),
 [Unihan](https://unicode.org/reports/tr38),
 national standards,
