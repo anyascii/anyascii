@@ -1,6 +1,7 @@
-# https://www.unicode.org/charts/PDF/UA900.pdf
-# https://en.wikipedia.org/wiki/Kayah_Li_alphabet
-# https://www.unicode.org/wg2/docs/n3038.pdf
+# https://unicode.org/charts/PDF/UA900.pdf
+# https://unicode.org/wg2/docs/n3038.pdf
+#
+# Consonants
 ꤊ	k
 ꤋ	kh
 ꤌ	g
@@ -25,21 +26,20 @@
 ꤟ	h
 ꤠ	v
 ꤡ	c
-#
 ꤢ	a
-ꤣ	oe
+ꤣ	o
 ꤤ	i
-ꤥ	oo
-#
-ꤦ	ue
+ꤥ	o
+# Vowels
+ꤦ	u
 ꤧ	e
 ꤨ	u
-ꤩ	ee
+ꤩ	e
 ꤪ	o
-# tone marks
+# Tone marks
 ꤫	
 ꤬	
 ꤭	
-# punctuation
+# Punctuation
 ꤮	'
 ꤯	,
