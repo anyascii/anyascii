@@ -51,7 +51,7 @@ Representative examples for different languages comparing the AnyAscii output to
 |Korean (Han)|華城市|HuaChengShi|Hwaseong-si|
 |Japanese (Hiragana)|さいたま|saitama|Saitama|
 |Japanese (Han)|埼玉県|QiYuXian|Saitama-ken|
-|Amharic (Ethiopic)|ደብረ ዘይት|debre zeyt|Dobre Zeyit|
+|Amharic (Ethiopic)|ደብረ ዘይት|debre zeyt|Debre Zeyit|
 |Tigrinya (Ethiopic)|ደቀምሓረ|dek'emhare|Dekemhare|
 |Arabic|دمنهور|dmnhwr|Damanhur|
 |Armenian|Աբովյան|Abovyan|Abovyan|
