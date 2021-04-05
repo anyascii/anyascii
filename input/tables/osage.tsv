@@ -1,6 +1,5 @@
-# https://www.unicode.org/charts/PDF/U104B0.pdf
-# https://www.unicode.org/wg2/docs/n4619.pdf
-# https://en.wikipedia.org/wiki/Osage_script
+# https://unicode.org/charts/PDF/U104B0.pdf
+# https://unicode.org/wg2/docs/n4619.pdf
 #
 𐓘	a
 𐓙	ai
@@ -28,13 +27,13 @@
 𐓯	sh
 𐓰	t
 𐓱	ht
-𐓲	ts
-𐓳	hts
-𐓴	tsh
-𐓵	th
+𐓲	c
+𐓳	hc
+𐓴	ch
+𐓵	d
 𐓶	u
 𐓷	w
 𐓸	x
-𐓹	gh
+𐓹	g
 𐓺	z
 𐓻	zh
