@@ -49,6 +49,10 @@ class AnyAsciiTest < Test::Unit::TestCase
 
 		check("トヨタ", "toyota")
 		check("ߞߐߣߊߞߙߌ߫", "konakri")
+		check("𐬰𐬀𐬭𐬀𐬚𐬎𐬱𐬙𐬭𐬀", "zarathushtra")
+		check("ⵜⵉⴼⵉⵏⴰⵖ", "tifinagh")
+		check("𐍅𐌿𐌻𐍆𐌹𐌻𐌰", "wulfila")
+		check("ދިވެހި", "dhivehi")
 	end
 
 	def check(s, expected)

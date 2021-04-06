@@ -1,12 +1,13 @@
 package com.anyascii;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public final class ShortMapTest {
 
     @Test public void test() {
-        ShortMap<String> m = new ShortMap<String>();
+        ShortMap<Integer> m = new ShortMap<Integer>();
 
         m = add(m, 2);
         check(m, 2);
@@ -22,15 +23,15 @@ public final class ShortMapTest {
         check(m, 0, 1, 2, 3, 4, 5);
     }
 
-    private static ShortMap<String> add(ShortMap<String> m, int key) {
-        return m.put(m.index((short) key), (short) key, Integer.toString(key));
+    private static ShortMap<Integer> add(ShortMap<Integer> m, int key) {
+        return m.put(m.index((short) key), (short) key, key);
     }
 
-    private static void check(ShortMap<String> m, int... keys) {
+    private static void check(ShortMap<Integer> m, int... keys) {
         int i = 0;
         for (int key : keys) {
-            Assertions.assertEquals(m.index((short) key), i);
-            Assertions.assertEquals(m.get(i), Integer.toString(key));
+            assertEquals(m.index((short) key), i);
+            assertEquals(m.get(i), key);
             i++;
         }
     }

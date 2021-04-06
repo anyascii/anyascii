@@ -1,7 +1,10 @@
 package com.anyascii;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public final class AnyAsciiTest {
 
@@ -56,11 +59,26 @@ public final class AnyAsciiTest {
 
         check("トヨタ", "toyota");
         check("ߞߐߣߊߞߙߌ߫", "konakri");
+        check("𐬰𐬀𐬭𐬀𐬚𐬎𐬱𐬙𐬭𐬀", "zarathushtra");
+        check("ⵜⵉⴼⵉⵏⴰⵖ", "tifinagh");
+        check("𐍅𐌿𐌻𐍆𐌹𐌻𐌰", "wulfila");
+        check("ދިވެހި", "dhivehi");
     }
 
     private static void check(String s, String expected) {
-        Assertions.assertEquals(AnyAscii.isAscii(s), s.equals(expected));
-        Assertions.assertTrue(AnyAscii.isAscii(expected));
-        Assertions.assertEquals(expected, AnyAscii.transliterate(s));
+        assertEquals(AnyAscii.isAscii(s), s.equals(expected));
+        assertTrue(AnyAscii.isAscii(expected));
+        assertEquals(expected, AnyAscii.transliterate(s));
+    }
+
+    @Test public void testNPE() {
+        assertThrows(NullPointerException.class, () -> AnyAscii.isAscii(null));
+        assertThrows(NullPointerException.class, () -> AnyAscii.transliterate(null));
+        assertThrows(NullPointerException.class, () -> AnyAscii.transliterate(0, null));
+        assertThrows(NullPointerException.class, () -> AnyAscii.transliterate(0xff, null));
+        assertThrows(NullPointerException.class, () -> AnyAscii.transliterate(null, null));
+        assertThrows(NullPointerException.class, () -> AnyAscii.transliterate(null, new StringBuilder()));
+        assertThrows(NullPointerException.class, () -> AnyAscii.transliterate("-", null));
+        // assertThrows(NullPointerException.class, () -> AnyAscii.transliterate("", null));
     }
 }
