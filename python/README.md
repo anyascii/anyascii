@@ -1,4 +1,4 @@
-# AnyAscii [![build](https://travis-ci.org/anyascii/anyascii.svg?branch=master)](https://travis-ci.org/anyascii/anyascii) [![pypi](https://img.shields.io/pypi/v/anyascii)](https://pypi.org/project/anyascii)
+# AnyAscii [![build](https://travis-ci.com/anyascii/anyascii.svg?branch=master)](https://travis-ci.com/anyascii/anyascii) [![pypi](https://img.shields.io/pypi/v/anyascii)](https://pypi.org/project/anyascii)
 
 Unicode to ASCII transliteration
 

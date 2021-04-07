@@ -1,4 +1,4 @@
-# AnyAscii [![build](https://travis-ci.org/anyascii/anyascii.svg?branch=master)](https://travis-ci.org/anyascii/anyascii) [![packagist](https://img.shields.io/packagist/v/anyascii/anyascii)](https://packagist.org/packages/anyascii/anyascii)
+# AnyAscii [![build](https://travis-ci.com/anyascii/anyascii.svg?branch=master)](https://travis-ci.com/anyascii/anyascii) [![packagist](https://img.shields.io/packagist/v/anyascii/anyascii)](https://packagist.org/packages/anyascii/anyascii)
 
 Unicode to ASCII transliteration
 
