@@ -6,7 +6,7 @@
 		<Version>0.1.8-dev</Version>
 		<Authors>Hunter WB</Authors>
 		<PackageLicenseExpression>ISC</PackageLicenseExpression>
-		<PackageTags>unicode;ascii;transliteration;utf8;romanization;slug;emoji;unidecode</PackageTags>
+		<PackageTags>unicode;ascii;transliteration;utf8;romanization;slug;emoji;unidecode;normalization</PackageTags>
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>https://github.com/anyascii/anyascii</RepositoryUrl>
 		<PackageProjectUrl>https://anyascii.com</PackageProjectUrl>
