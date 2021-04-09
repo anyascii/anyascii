@@ -1,16 +1,70 @@
-# https://www.unicode.org/charts/PDF/U0700.pdf
-# https://www.unicode.org/charts/PDF/U0860.pdf
-# https://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf
-# https://www.unicode.org/wg2/docs/n2422.pdf
-# https://en.wikipedia.org/wiki/Syriac_alphabet
-# https://r12a.github.io/scripts/syriac/
+# https://unicode.org/charts/PDF/U0700.pdf
+# https://unicode.org/versions/Unicode13.0.0/ch09.pdf
+# https://unicode.org/L2/L1998/98050-syriac-proposal.pdf
+# The World's Writing Systems 1996
+# The Syriac Dot 2019
+# 
 # bgn/pcgn 2011
+## alphabet
+ܐ	'
+ܒ	b
+ܓ	g
+ܕ	d
+ܗ	h
+ܘ	w
+ܙ	z
+ܚ	h
+ܛ	t
+ܝ	y
+ܟ	k
+ܠ	l
+ܡ	m
+ܢ	n
+ܣ	s
+ܤ	s
+ܥ	`
+ܦ	p
+ܨ	s
+ܩ	q
+ܪ	r
+ܫ	sh
+ܬ	t
+## vowels
+ܲ	a
+ܳ	o
+ܴ	u
+ܵ	a
+ܸ	i
+ܹ	e
+ܼ	i
+# ala-lc 2012
+ܰ	a
+ܱ	a
+ܶ	e
+ܷ	e
+ܺ	i
+ܻ	i
+ܽ	u
+ܾ	u
+ܿ	o
+# https://userblogs.fu-berlin.de/saop/files/2017/08/Surayt-Orthography.pdf
+ܔ	j
+ܜ	d
+# https://unicode.org/wg2/docs/n2422.pdf
+## Persian letters
+ܭ	bh
+ܮ	gh
+ܯ	dh
+## Sogdian letters
+ݍ	zh
+ݎ	kh
+ݏ	ph
 # punctuation and signs
 ܀	*
 ܁	.
 ܂	.
-܃	:
-܄	:
+܃	!
+܄	!
 ܅	:
 ܆	:
 ܇	:
@@ -20,72 +74,21 @@
 ܋	/
 ܌	\
 ܍	+
-# format control character
 ܏	.
 # letters
-ܐ	'
 ܑ	'
-ܒ	b
-ܓ	g
-ܔ	g
-ܕ	d
 ܖ	d
-ܗ	h
-ܘ	w
-ܙ	z
-ܚ	h
-ܛ	t
-ܜ	t
-ܝ	y
 ܞ	yh
-ܟ	k
-ܠ	l
-ܡ	m
-ܢ	n
-ܣ	s
-ܤ	s
-ܥ	`
-ܦ	p
 ܧ	p
-ܨ	s
-ܩ	q
-ܪ	r
-ܫ	sh
-ܬ	t
-# persian letters
-ܭ	bh
-ܮ	gh
-ܯ	dh
-# points
-ܰ	a
-ܱ	a
-ܲ	a
-ܳ	a
-ܴ	a
-ܵ	a
-ܶ	e
-ܷ	e
-ܸ	e
-ܹ	e
-ܺ	i
-ܻ	i
-ܼ	i
-ܽ	u
-ܾ	u
-ܿ	o
 # marks
 ݀	
 ݁	
 ݂	h
 ݃	
 ݄	
-݅	
-݆	
+݅	h
+݆	h
 ݇	
 ݈	
 ݉	
 ݊	
-# sogdian letters
-ݍ	zh
-ݎ	kh
-ݏ	f
