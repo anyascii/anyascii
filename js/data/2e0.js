@@ -1,1 +1,0 @@
-module.exports='																																				Lao						Gun								Geng'.split('	')

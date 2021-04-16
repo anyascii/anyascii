@@ -1,1 +1,0 @@
-module.exports='																											Jian																																																																																																																																																																					Ngoi																									Hon			Po					Dyut														Liu'.split('	')

@@ -1,1 +1,0 @@
-module.exports='		Jie			Fu					Liang																																																																																															Soe																								Liang		Gin																																														Xie'.split('	')

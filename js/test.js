@@ -1,9 +1,11 @@
-'use strict';
+import anyAscii from './any-ascii.js';
 
-const assert = require('assert');
-const anyAscii = require('./any-ascii.js');
-
-const check = (s, expected) => assert.equal(anyAscii(s), expected);
+function check(s, expected) {
+	const actual = anyAscii(s);
+	if (actual !== expected) {
+		throw new Error(actual + " !== " + expected);
+	}
+}
 
 check("", "");
 check("\u0000\u0001\t\n\u001f ~\u007f", "\u0000\u0001\t\n\u001f ~\u007f");

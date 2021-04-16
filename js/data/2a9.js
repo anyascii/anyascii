@@ -1,1 +1,0 @@
-module.exports='				Bai																			Liao			Lin																																																																						Reng											Shuang					Ning															Du																																																																	Ying																								Ju'.split('	')

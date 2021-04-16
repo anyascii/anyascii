@@ -1,1 +1,0 @@
-module.exports='																																																				Feng	Liu																																						Bi	Hai	Ai	Yi																																																																			Mang	Hai	Zong	Cao	Dun																													Ning'.split('	')

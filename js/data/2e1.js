@@ -1,1 +1,0 @@
-module.exports='																																																																														Nong																																																																	Lan																																																																					Aa																Ling'.split('	')

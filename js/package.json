@@ -4,14 +4,15 @@
 	"description": "Unicode to ASCII transliteration",
 	"homepage": "https://anyascii.com",
 	"license": "ISC",
-	"author": "Hunter WB (http://hunterwb.com)",
+	"author": "Hunter WB (https://hunterwb.com)",
 	"repository": "anyascii/anyascii",
 	"keywords": ["unicode", "ascii", "transliteration", "utf8", "romanization", "slug", "emoji", "unidecode", "normalization"],
-	"main": "any-ascii.js",
+	"type": "module",
+	"exports": "./any-ascii.js",
+	"engines": {
+		"node": ">=12"
+	},
 	"scripts": {
 		"test": "node ./test.js"
-	},
-	"engines": {
-		"node": ">= 4.0.0"
 	}
 }

@@ -15,8 +15,7 @@ every other character is replaced with printable ASCII characters.
 Unknown characters are removed.
 
 ```javascript
-// Node.js
-const anyAscii = require('any-ascii');
+import anyAscii from 'any-ascii';
 
 const s = anyAscii('άνθρωποι');
 // anthropoi

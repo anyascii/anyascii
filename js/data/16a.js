@@ -1,1 +1,0 @@
-module.exports='																																																																t	ng	y	m	b	d	a	ph	kh	h	i	c	k	l	m	n	p	o	o	r	sh	th	e	w	e	k	l	l	hai	o	tek		0	1	2	3	4	5	6	7	8	9					,	.																																																																																																	n	k	s	f	mb	ny	g	d	kp	j	xw	w	z	gb	nd	c	hw	t	b	v	h	p	l	a	o	o	u	e	e	i								.'.split('	')

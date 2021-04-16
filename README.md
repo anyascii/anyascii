@@ -112,8 +112,7 @@ Java 6+ compatible
 https://npmjs.com/package/any-ascii
 
 ```javascript
-// Node.js
-const anyAscii = require('any-ascii');
+import anyAscii from 'any-ascii';
 
 const s = anyAscii('άνθρωποι');
 // anthropoi

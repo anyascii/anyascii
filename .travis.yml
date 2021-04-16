@@ -12,7 +12,7 @@ jobs:
       script: ./mvnw test
 
     - language: node_js
-      node_js: 4.0
+      node_js: 12
       install: skip
       before_script: cd js
       script: npm test

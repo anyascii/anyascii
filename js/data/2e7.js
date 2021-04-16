@@ -1,1 +1,0 @@
-module.exports='																																																						Dao																																																														Gu	Er		Fen	Chun	Huan	Ge'.split('	')

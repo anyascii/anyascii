@@ -1,1 +1,0 @@
-module.exports='								Mu	Ying																			Bei			Thin															Huan																																																										Zui																				Nan																																																												La'.split('	')

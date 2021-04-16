@@ -1,1 +1,0 @@
-module.exports='																									Cuan																						E																																		Xiao																		Xi														Li																			Shi														Luo																																																											Qing																																																Zan		Wing'.split('	')

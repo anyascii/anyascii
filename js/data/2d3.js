@@ -1,1 +1,0 @@
-module.exports='																																																																																																																																		Zong																										Dao																																																																										Ai																		Wei'.split('	')

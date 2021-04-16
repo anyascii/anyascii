@@ -1,1 +1,0 @@
-module.exports='																																																						Fei																																															Fen																		Bei																							Ji						Li							Ji																			Fei																															She'.split('	')

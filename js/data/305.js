@@ -1,1 +1,0 @@
-module.exports='							Di				Gui																													Tan										Qian				Yu				Duk							Xun				Qu			Jiao								Xie																													Kuai																											Yan																								Nan									Li																													Hui													Huang			Lun			Chou	Xie	Zhai	Yan					Chan	Hui				Jin		Shi				Qian									Shen				Su	Fen'.split('	')
