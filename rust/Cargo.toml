@@ -1,6 +1,6 @@
 [package]
 name = "any_ascii"
-version = "0.2.0"
+version = "0.2.1-dev"
 authors = ["Hunter WB <hunter@hunterwb.com>"]
 edition = "2018"
 homepage = "https://anyascii.com"

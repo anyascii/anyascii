@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<Description>Unicode to ASCII transliteration</Description>
 		<TargetFrameworks>netstandard1.0;netstandard2.0</TargetFrameworks>
-		<Version>0.2.0</Version>
+		<Version>0.2.1-dev</Version>
 		<Authors>Hunter WB</Authors>
 		<PackageLicenseExpression>ISC</PackageLicenseExpression>
 		<PackageTags>unicode;ascii;transliteration;utf8;romanization;slug;emoji;unidecode;normalization</PackageTags>
