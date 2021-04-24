@@ -301,6 +301,7 @@ pub fn block(block_num: u16) -> &'static [u8] {
 		0x1b1 => include_bytes!("data/1b1.bin"),
 		0x1b2 => include_bytes!("data/1b2.bin"),
 		0x1bc => include_bytes!("data/1bc.bin"),
+		0x1d1 => include_bytes!("data/1d1.bin"),
 		0x1d2 => include_bytes!("data/1d2.bin"),
 		0x1d3 => include_bytes!("data/1d3.bin"),
 		0x1d4 => include_bytes!("data/1d4.bin"),

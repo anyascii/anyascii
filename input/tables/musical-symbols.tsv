@@ -1,0 +1,284 @@
+# Miscellaneous Symbols
+# https://unicode.org/charts/PDF/U2600.pdf
+# Musical symbols
+♩	#
+♪	#
+♫	#
+♬	#
+♭	b
+♮	#
+♯	#
+# Musical symbols
+# https://unicode.org/charts/PDF/U1D100.pdf
+# Bars
+𝄀	|
+𝄁	|
+𝄂	|
+𝄃	|
+𝄄	|
+𝄅	|
+# Codas
+𝄆	|:
+𝄇	:|
+𝄈	:
+𝄉	D.S.
+𝄊	D.C.
+𝄋	S
+𝄌	*
+# Figure repetitions
+𝄍	/
+𝄎	%
+𝄏	%%
+# Holds and pauses
+𝄐	^
+𝄑	^
+𝄒	'
+𝄓	//
+# Staff brackets
+𝄔	{
+𝄕	[
+# Staves
+𝄖	#
+𝄗	#
+𝄘	#
+𝄙	#
+𝄚	#
+𝄛	#
+# Tablature
+𝄜	#
+𝄝	#
+# Clefs
+𝄞	G
+𝄟	8G
+𝄠	G8
+𝄡	C
+𝄢	F
+𝄣	8F
+𝄤	F8
+𝄥	N
+𝄦	N
+# Rest
+𝄩	-
+# Accidentals
+𝄪	##
+𝄫	bb
+𝄬	b
+𝄭	b
+𝄮	#
+𝄯	#
+𝄰	#
+𝄱	#
+𝄲	#
+𝄳	b
+# Time signatures
+𝄴	44
+𝄵	22
+# Octaves
+𝄶	8va
+𝄷	8vb
+𝄸	15ma
+𝄹	15mb
+# Rests
+𝄺	-
+𝄻	-
+𝄼	-
+𝄽	-
+𝄾	-
+𝄿	-
+𝅀	-
+𝅁	-
+𝅂	-
+# Noteheads
+𝅃	.
+𝅄	.
+𝅅	.
+𝅆	.
+𝅇	.
+𝅈	.
+𝅉	.
+𝅊	.
+𝅋	.
+𝅌	.
+𝅍	.
+𝅎	.
+𝅏	.
+𝅐	.
+𝅑	.
+𝅒	.
+𝅓	.
+𝅔	.
+𝅕	.
+𝅖	.
+𝅗	.
+𝅘	.
+𝅙	.
+𝅚	.
+𝅛	.
+# Notes
+𝅜	#
+𝅝	#
+𝅗𝅥	#
+𝅘𝅥	#
+𝅘𝅥𝅮	#
+𝅘𝅥𝅯	#
+𝅘𝅥𝅰	#
+𝅘𝅥𝅱	#
+𝅘𝅥𝅲	#
+# Stems
+𝅥	
+𝅦	
+# Tremolos
+𝅧	
+𝅨	
+𝅩	
+𝅪	/
+𝅫	//
+𝅬	///
+# Augmentation dot
+𝅭	
+# Flags
+𝅮	
+𝅯	
+𝅰	
+𝅱	
+𝅲	
+# Beams and slurs
+𝅳	
+𝅴	
+𝅵	
+𝅶	
+𝅷	
+𝅸	
+𝅹	
+𝅺	
+# Articulation
+𝅻	
+𝅼	
+𝅽	
+𝅾	
+𝅿	
+𝆀	
+𝆁	
+𝆂	
+𝆃	~
+𝆄	~
+𝆅	
+𝆆	
+𝆇	
+𝆈	
+𝆉	
+𝆊	
+𝆋	
+𝆌	r
+𝆍	s
+𝆎	z
+# Dynamics
+𝆏	p
+𝆐	m
+𝆑	f
+𝆒	<
+𝆓	>
+# Ornaments
+𝆔	*
+𝆕	*
+𝆖	tr
+𝆗	*
+𝆘	*
+𝆙	*
+𝆚	*
+𝆛	*
+𝆜	*
+𝆝	*
+𝆞	*
+𝆟	*
+𝆠	*
+𝆡	*
+𝆢	*
+𝆣	*
+𝆤	*
+𝆥	*
+# Analytics
+𝆦	HT
+𝆧	NT
+𝆨	T
+𝆩	*
+# Instrumentation
+𝆪	
+𝆫	
+𝆬	
+𝆭	
+# Pedals
+𝆮	Ped.
+𝆯	*
+𝆰	^
+# Miscellaneous symbols
+𝆱	/
+𝆲	\
+𝆳	*
+𝆴	*
+𝆵	*
+# Mensural notes
+𝆶	#
+𝆷	#
+𝆸	#
+𝆹	#
+𝆺	#
+𝆹𝅥	#
+𝆺𝅥	#
+𝆹𝅥𝅮	#
+𝆺𝅥𝅮	#
+𝆹𝅥𝅯	#
+𝆺𝅥𝅯	#
+# Mensural notation
+# Mensural rests
+𝇁	-
+𝇂	-
+𝇃	-
+𝇄	-
+𝇅	-
+𝇆	-
+# Mensural prolations
+𝇇	*
+𝇈	*
+𝇉	*
+𝇊	*
+𝇋	*
+𝇌	*
+𝇍	*
+𝇎	*
+# Miscellaneous symbol
+𝇏	*
+# Gregorian notation
+# Clefs
+𝇐	C
+𝇑	F
+# Accidental
+𝇒	b
+# Notes
+𝇓	#
+𝇔	#
+𝇕	#
+𝇖	#
+𝇗	#
+𝇘	#
+𝇙	#
+𝇚	#
+𝇛	#
+𝇜	#
+𝇝	#
+# Kievan notation
+# Clef
+𝇞	C
+# Ornamentation
+𝇟	&
+# Notes
+𝇠	#
+𝇡	#
+𝇢	#
+𝇣	#
+𝇤	#
+𝇥	#
+𝇦	#
+𝇧	#
+# Accidental
+𝇨	b

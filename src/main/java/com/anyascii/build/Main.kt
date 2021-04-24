@@ -232,6 +232,7 @@ private fun custom() = Table()
         .then(Table("duployan"))
         .then(Table("khitan-small-script"))
         .then(tangut())
+        .then(Table("musical-symbols"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints(UScript.CYRILLIC))
