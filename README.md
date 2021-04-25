@@ -257,7 +257,7 @@ When converting text between languages there are multiple properties that can be
 
 Supports Unicode 13.0
 
-Covers 97k of the 143k total Unicode characters, missing 43k very rare CJK characters and 3k other rare characters
+Covers 98k of the 143k total Unicode characters, missing 43k very rare CJK characters and 2k other rare characters
 
 Bundled data files total 185-475 KB depending on the implementation
 

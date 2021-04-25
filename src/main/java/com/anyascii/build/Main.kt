@@ -233,6 +233,7 @@ private fun custom() = Table()
         .then(Table("khitan-small-script"))
         .then(tangut())
         .then(Table("musical-symbols"))
+        .then(UnicodeBlock.BYZANTINE_MUSICAL_SYMBOLS.toTable { "-" })
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints(UScript.CYRILLIC))
