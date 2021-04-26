@@ -22,7 +22,6 @@ fun main() {
             .normalize(NFKC)
             .cased(ALL_CODE_POINTS)
             .then(integers())
-            .then(fallbackEmojis())
             .transliterate()
 
     printCoverage(table)
