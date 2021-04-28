@@ -1,0 +1,60 @@
+# https://unicode.org/charts/PDF/U3000.pdf
+#
+# CJK symbols and punctuation
+　	 
+、	,
+。	.
+〃	"
+〄	(JIS)
+々	-
+〆	/
+# CJK angle brackets
+〈	<
+〉	>
+《	<<
+》	>>
+# CJK corner brackets
+「	[
+」	]
+『	[
+』	]
+# CJK brackets
+【	[(
+】	)]
+# CJK symbols
+〒	@
+〓	=
+# CJK brackets
+〔	[
+〕	]
+〖	[(
+〗	)]
+〘	[
+〙	]
+〚	[
+〛	]
+# CJK punctuation
+〜	~
+〝	"
+〞	"
+〟	"
+# CJK symbol
+〠	@
+# Combining tone marks
+〪	
+〫	
+〬	
+〭	
+〮	
+〯	
+# Other CJK punctuation
+〰	~
+# Other CJK symbols
+〷	XX
+# Other CJK punctuation
+〻	-
+〼	Masu
+〽	~
+# Special CJK indicators
+〾	~
+〿	#

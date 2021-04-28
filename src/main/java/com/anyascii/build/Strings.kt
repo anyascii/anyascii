@@ -45,9 +45,10 @@ fun CodePoint.isLower(): Boolean = UCharacter.isLowerCase(this)
 
 fun CodePoint.isUpper(): Boolean = UCharacter.isUpperCase(this)
 
-val CodePoint.intValue: Int get() = UCharacter.getNumericValue(this).also { check(it >= 0) }
-
-val CodePoint.floatValue: Double get() = UCharacter.getUnicodeNumericValue(this).also { check(it != UCharacter.NO_NUMERIC_VALUE) }
+val CodePoint.numericValue: Double get() {
+    val n = UCharacter.getUnicodeNumericValue(this)
+    return if (n == UCharacter.NO_NUMERIC_VALUE) Double.NaN else n
+}
 
 val CodePoint.isDefined: Boolean get() = UCharacter.isDefined(this)
 

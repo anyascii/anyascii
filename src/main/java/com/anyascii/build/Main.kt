@@ -1,7 +1,6 @@
 package com.anyascii.build
 
 import com.anyascii.build.gen.generate
-import com.ibm.icu.lang.UCharacter
 import com.ibm.icu.lang.UCharacter.UnicodeBlock
 import com.ibm.icu.lang.UCharacterCategory
 import com.ibm.icu.lang.UScript
@@ -21,7 +20,7 @@ fun main() {
             .then(unihan())
             .normalize(NFKC)
             .cased(ALL_CODE_POINTS)
-            .then(integers())
+            .then(ALL_CODE_POINTS.intValues())
             .transliterate()
 
     printCoverage(table)
@@ -29,15 +28,6 @@ fun main() {
     generate(table)
 
     table.minus(ASCII.keys).write("table.tsv")
-}
-
-private fun integers() = Table().apply {
-    for (cp in ALL_CODE_POINTS) {
-        val n = UCharacter.getNumericValue(cp)
-        if (n >= 0) {
-            this[cp] = n.toString()
-        }
-    }
 }
 
 private fun custom() = Table()
@@ -52,7 +42,6 @@ private fun custom() = Table()
         .then(Table("math-symbols"))
         .then(Table("kanbun"))
         .then(tags())
-        .then(cjkMisc())
         .then(Table("kangxi-radicals"))
         .then(UnicodeBlock.CJK_STROKES.toTable { it.name.substringAfterLast(' ') })
         .then(yi())
@@ -233,6 +222,11 @@ private fun custom() = Table()
         .then(tangut())
         .then(Table("musical-symbols"))
         .then(UnicodeBlock.BYZANTINE_MUSICAL_SYMBOLS.toTable { "-" })
+        .then(cjkSymbolsAndPunctuation())
+        .then(enclosedCjkLettersAndMonths())
+        .then(cjkCompatibility())
+        .then(Table("cjk-compatibility-forms"))
+        .then(enclosedIdeographicSupplement())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints(UScript.CYRILLIC))
@@ -270,16 +264,7 @@ private fun kana() = Table("kana")
         .then(codePoints(UScript.KATAKANA).filterName { it.startsWith("KATAKANA LETTER SMALL") }.alias { it.remove("SMALL ") })
 
 private fun oldItalic() = Table("old-italic")
-        .then((0x10320..0x10323).toTable { ROMAN_NUMERALS.getValue(it.intValue) })
-
-private fun cjkMisc() = Table("cjk-misc")
-        .then((0x3021..0x3029).toTable { "${(it - 0x3021 + 1)}" }) // hangzhou numerals
-        .then((0x3220..0x3229).toTable { "(${(it - 0x3220 + 1)})" }) // parenthesized numbers
-        .then((0x3280..0x3289).toTable { "(${(it - 0x3280 + 1)})" }) // circled numbers
-        .then((0x32c0..0x32cb).toTable { "${(it - 0x32c0 + 1)}M" }) // telegraph months
-        .then((0x3358..0x3370).toTable { "${(it - 0x3358)}H" }) // telegraph hours
-        .then((0x33e0..0x33fe).toTable { "${(it - 0x33e0 + 1)}D" }) // telegraph days
-        .then((0x1f260..0x1f265).toTable { it.name.substringAfterLast(' ').lower().capitalize() }) // Symbols for Chinese folk religion
+        .then((0x10320..0x10323).toTable { ROMAN_NUMERALS.getValue(it.numericValue.toInt()) })
 
 private fun glagolitic() = Table("glagolitic")
         .cased(codePoints(UScript.GLAGOLITIC))
@@ -355,7 +340,7 @@ private fun hebrew() = Table("hebrew")
         .then((0x591..0x5af).toTable { "" })
 
 private fun meroitic() = Table("meroitic")
-        .then(UnicodeBlock.MEROITIC_CURSIVE.codePoints().filterName { "TWELFTH" in it }.toTable { it.floatValue.times(12).roundToInt().toString() })
+        .then(UnicodeBlock.MEROITIC_CURSIVE.codePoints().filterName { "TWELFTH" in it }.toTable { it.numericValue.times(12).roundToInt().toString() })
 
 private fun takri() = codePoints(UScript.TAKRI).alias { it.remove("ARCHAIC ").replace("TAKRI", "DEVANAGARI") }
 
@@ -387,4 +372,19 @@ private fun anatolianHieroglyphs() = UnicodeBlock.ANATOLIAN_HIEROGLYPHS.toTable 
 }
 
 private fun ancientGreekMusicalNotation() = Table("ancient-greek-musical-notation")
-    .then(UnicodeBlock.ANCIENT_GREEK_MUSICAL_NOTATION.toTable { it.name.substringAfterLast('-') })
+        .then(UnicodeBlock.ANCIENT_GREEK_MUSICAL_NOTATION.toTable { it.name.substringAfterLast('-') })
+
+private fun cjkSymbolsAndPunctuation() = Table("cjk-symbols-and-punctuation")
+        .then(UnicodeBlock.CJK_SYMBOLS_AND_PUNCTUATION.codePoints().intValues())
+
+private fun enclosedCjkLettersAndMonths() = Table("enclosed-cjk-letters-and-months")
+        .then((0x3220..0x3229).toTable { "(${(it - 0x3220 + 1)})" }) // parenthesized numbers
+        .then((0x3280..0x3289).toTable { "(${(it - 0x3280 + 1)})" }) // circled numbers
+        .then((0x32c0..0x32cb).toTable { "${(it - 0x32c0 + 1)}M" }) // telegraph months
+
+private fun cjkCompatibility() = Table("cjk-compatibility")
+        .then((0x3358..0x3370).toTable { "${(it - 0x3358)}H" }) // telegraph hours
+        .then((0x33e0..0x33fe).toTable { "${(it - 0x33e0 + 1)}D" }) // telegraph days
+
+private fun enclosedIdeographicSupplement() = Table()
+        .then((0x1f260..0x1f265).toTable { it.name.substringAfterLast(' ').lower().capitalize() }) // Symbols for Chinese folk religion

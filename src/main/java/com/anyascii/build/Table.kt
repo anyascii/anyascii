@@ -119,3 +119,11 @@ fun Table.transliterateAny(s: String): String {
     }
     return sb.toString()
 }
+
+fun Iterable<CodePoint>.intValues() = Table().apply {
+    for (cp in this@intValues) {
+        val n = cp.numericValue
+        if (n.isNaN()) continue
+        this[cp] = n.toInt().toString()
+    }
+}
