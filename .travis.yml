@@ -3,13 +3,14 @@ jobs:
     - language: go
       go: "1.10"
       install: skip
-      script: go test ./go
+      before_script: cd go
+      script: go test
 
     - language: java
       jdk: openjdk11
       install: skip
       before_script: cd java
-      script: ./mvnw test
+      script: mvn test
 
     - language: node_js
       node_js: 12
@@ -26,7 +27,8 @@ jobs:
     - language: ruby
       rvm: 2.0
       install: skip
-      script: ruby ruby/lib/any_ascii_test.rb
+      before_script: cd ruby
+      script: ruby lib/any_ascii_test.rb
 
     - language: rust
       rust: "1.36.0"
@@ -39,18 +41,22 @@ jobs:
       dotnet: "3.1.100"
       solution: csharp/AnyAscii.sln
       install: skip
-      before_script: cd csharp/test
+      before_script: cd csharp
       script: dotnet test
 
     - language: sh
-      script: ./sh/test.sh
+      install: skip
+      before_script: cd sh
+      script: ./test.sh
 
     - language: php
       php: '5.6'
       install: skip
-      script: php php/test.php
+      before_script: cd php
+      script: php test.php
 
     - language: julia
       julia: 1.0
       install: skip
-      script: julia --project=julia -e 'using Pkg; Pkg.test()'
+      before_script: cd julia
+      script: julia --project=. -e 'using Pkg; Pkg.test()'
