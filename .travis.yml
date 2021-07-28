@@ -22,7 +22,7 @@ jobs:
       python: 3.4
       install: skip
       before_script: cd python
-      script: python -m pytest
+      script: python3 -m pytest
 
     - language: ruby
       rvm: 2.0

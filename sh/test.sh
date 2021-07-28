@@ -7,7 +7,7 @@ check() {
 	test "$("$shell" anyascii "$1")" = "$2"
 }
 
-shells='sh bash dash zsh yash posh mksh rbash rzsh ksh93'
+shells='bash dash zsh yash posh mksh ksh93'
 for shell in $shells
 do
 	if command -v $shell
