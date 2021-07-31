@@ -1,101 +1,127 @@
 # ungegn 2013
+# ala-lc 2011
+# https://yivo.org/Yiddish-Alphabet
+#
+# Hebrew
+# https://unicode.org/charts/PDF/U0590.pdf
+# consonants
 א	'
-בּ	b
 ב	v
 ג	g
-גּ	g
 ד	d
-דּ	d
 ה	h
-הּ	hh
 ו	v
-וּ	u
 ז	z
-זּ	zz
 ח	h
 ט	t
-טּ	tt
 י	y
-יּ	yy
 כ	kh
-כּ	k
 ך	kh
-ךּ	k
 ל	l
-לּ	ll
 מ	m
-מּ	mm
 ם	m
 נ	n
-נּ	nn
 ן	n
 ס	s
-סּ	ss
 ע	'
 פ	f
-פּ	p
 ף	f
 צ	ts
-צּ	ts
 ץ	ts
 ק	k
-קּ	kk
 ר	r
-רּ	rr
-שׁ	sh
-שּׁ	sh
-שׂ	s
-שּׂ	ss
+ש	s
 ת	t
-תּ	t
+# shin dots
+ׁ	h
+ׂ	
+# vowels
 ַ	a
-ָ	a
 ֲ	a
-ֳ	o
+ָ	a
 ֶ	e
-ֹ	o
-ֺ	o
-וֹ	o
 ֱ	e
-ִ	i
-ְ	e
 ֵ	e
+ְ	e
+ִ	i
+ֳ	o
+ֹ	o
 ֻ	u
-# ala-lc 2011
-ףּ	p
+# https://unicode.org/wg2/docs/n2755.pdf
+ׇ	o
+# https://unicode.org/L2/L2004/04310-n2840-holam-haser.pdf
+ֺ	o
+# https://en.wikipedia.org/wiki/Dagesh
+# https://en.wikipedia.org/wiki/Mappiq
+ּ	
+# https://en.wikipedia.org/wiki/Rafe
+ֿ	
+# https://en.wikipedia.org/wiki/Meteg
+ֽ	
+# Yiddish digraphs
 װ	v
 ױ	oy
-ײַ	ay
 ײ	ey
-יִ	i
-# https://www.yivo.org/Yiddish-Alphabet
-פֿ	f
-בֿ	v
-אַ	a
-אָ	o
-# ladino ala-lc 2011
-ﭏ	al
-# https://www.unicode.org/wg2/docs/n4807-yod-triangle.pdf
-ׯ	YYY
-# other letters
-ש	s
-שּ	s
-ׇ	o
-אּ	'
-כֿ	kh
-ׂ	
-ׁ	h
-# puncta extraordinaria
+# https://en.wikipedia.org/wiki/Puncta_extraordinaria
+# https://unicode.org/L2/L2004/04089r-n2714-nun-hafukha.pdf
 ׄ	`
 ׅ	`
-# other
-ּ	'
-ֽ	
-־	-
-ֿ	'
-׀	|
-׃	:
+# https://en.wikipedia.org/wiki/Inverted_nun
+# https://unicode.org/L2/L2004/04089r-n2714-nun-hafukha.pdf
 ׆	^
+# https://unicode.org/wg2/docs/n4807-yod-triangle.pdf
+ׯ	YYY
+# https://en.wikipedia.org/wiki/Geresh
 ׳	'
+# https://en.wikipedia.org/wiki/Gershayim
 ״	"
-ﬞ	'
+# https://en.wikipedia.org/wiki/Sof_passuk
+׃	.
+# https://en.wikipedia.org/wiki/Hebrew_punctuation
+־	-
+׀	|
+#
+# Alphabetic Presentation Forms
+# https://unicode.org/charts/PDF/UFB00.pdf
+# dagesh kal
+בּ	b
+גּ	g
+דּ	d
+כּ	k
+ךּ	k
+פּ	p
+ףּ	p
+תּ	t
+# dagesh hazak
+זּ	zz
+טּ	tt
+יּ	yy
+לּ	ll
+מּ	mm
+נּ	nn
+סּ	ss
+צּ	ts
+קּ	kk
+רּ	rr
+שּׁ	sh
+שּׂ	ss
+# mapiq
+הּ	h
+אּ	'
+# rafe
+כֿ	kh
+פֿ	f
+בֿ	v
+# vowels
+וֹ	o
+וּ	u
+יִ	i
+אַ	a
+אָ	o
+ײַ	ay
+# shin
+שׁ	sh
+שׂ	s
+שּ	ss
+# ladino rafe
+ﬞ	
