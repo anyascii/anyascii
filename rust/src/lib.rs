@@ -1,16 +1,15 @@
-//! Unicode to ASCII transliteration.
+//! Unicode to ASCII transliteration
 //!
-//! Converts Unicode text to a reasonable representation using only ASCII.
+//! Converts Unicode characters to their best ASCII representation
+//
+// AnyAscii provides ASCII-only replacement strings for practically all Unicode characters. Text is
+// converted character-by-character without considering the context. The mappings for each script
+// are based on popular existing romanization systems. Symbolic characters are converted based on
+// their meaning or appearance. All ASCII characters in the input are left unchanged, every other
+// character is replaced with printable ASCII characters. Unknown characters and some known
+// characters are replaced with an empty string and removed.
 //!
-//! For most characters in Unicode, AnyAscii provides an ASCII-only replacement string.
-//! Text is converted character-by-character without considering the context.
-//! The mappings for each script are based on popular existing romanization schemes.
-//! Symbolic characters are converted based on their meaning or appearance.
-//! All ASCII characters in the input are left unchanged,
-//! every other character is replaced with printable ASCII characters.
-//! Unknown characters are removed.
-//!
-//! This crate supports `no_std` + `alloc`.
+//! This crate supports `no_std` + `alloc`
 
 #![no_std]
 
@@ -19,7 +18,7 @@ use alloc::string::String;
 
 mod block;
 
-/// Transliterates a Unicode String into ASCII.
+/// Transliterates a Unicode String into ASCII
 ///
 /// ```
 /// # use any_ascii::any_ascii;
@@ -41,7 +40,7 @@ pub fn any_ascii(s: &str) -> String {
     r
 }
 
-/// Transliterates a Unicode char into ASCII.
+/// Transliterates a Unicode char into ASCII
 ///
 /// ```
 /// # use any_ascii::any_ascii_char;

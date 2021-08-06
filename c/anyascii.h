@@ -22,7 +22,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 #include <stdint.h>
 
 /**
- * Gets the ASCII Transliteration of a Unicode code point
+ * Gets the ASCII transliteration of a Unicode code point
  * 
  * @param utf32 A Unicode code point
  * @param ascii A pointer for the result to be written to; not null-terminated

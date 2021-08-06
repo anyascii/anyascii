@@ -9,6 +9,7 @@ Unicode to ASCII transliteration
 * [Description](#description)
 [Examples](#examples)
 * [Implementations](#implementations):
+[C](#c)
 [Go](#go)
 [Java](#java)
 [JavaScript](#javascript)
@@ -26,9 +27,9 @@ Unicode to ASCII transliteration
 
 ## Description
 
-Converts Unicode text to a reasonable representation using only ASCII
+Converts Unicode characters to their best ASCII representation
 
-For most characters in Unicode, AnyAscii provides an ASCII-only replacement string. Text is converted character-by-character without considering the context. The mappings for each script are based on popular existing romanization schemes. Symbolic characters are converted based on their meaning or appearance. All ASCII characters in the input are left unchanged, every other character is replaced with printable ASCII characters. Unknown characters are removed.
+AnyAscii provides ASCII-only replacement strings for practically all Unicode characters. Text is converted character-by-character without considering the context. The mappings for each script are based on popular existing romanization systems. Symbolic characters are converted based on their meaning or appearance. All ASCII characters in the input are left unchanged, every other character is replaced with printable ASCII characters. Unknown characters and some known characters are replaced with an empty string and removed.
 
 ## Examples
 
@@ -82,6 +83,11 @@ Representative examples for different languages comparing the AnyAscii output to
 ## Implementations
 
 AnyAscii is implemented across multiple programming languages with the same behavior and versioning
+
+## C
+
+https://raw.githubusercontent.com/anyascii/anyascii/master/c/anyascii.h
+https://raw.githubusercontent.com/anyascii/anyascii/master/c/anyascii.c
 
 ## Go
 
@@ -255,9 +261,7 @@ When converting text between languages there are multiple properties that can be
 
 ## Stats
 
-Supports Unicode 13.0
-
-Covers 98k of the 143k total Unicode characters, missing 43k very rare CJK characters and 2k other rare characters
+Supports Unicode 13.0 (2020). Covers 98k of the 143k total Unicode characters, missing 43k very rare CJK characters and 2k other rare characters.
 
 Bundled data files total 185-475 KB depending on the implementation
 
@@ -277,5 +281,3 @@ AnyAscii is an alternative to (and inspired by) [Unidecode](https://metacpan.org
 [Unihan](https://unicode.org/reports/tr38),
 national standards,
 and more
-
-> Romanization systems approved for application to geographic names may prove similarly applicable to personal names and to text and have frequently been used for such purposes [*](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/921738/INTRODUCTION.pdf)
