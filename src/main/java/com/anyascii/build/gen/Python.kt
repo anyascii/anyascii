@@ -5,7 +5,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 
 fun python(g: Generator) {
-    val dirPath = Path.of("python/anyascii/_data")
+    val dirPath = Path.of("impl/python/anyascii/_data")
     dirPath.toFile().deleteRecursively()
     Files.createDirectories(dirPath)
 

@@ -5,7 +5,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 
 fun ruby(g: Generator) {
-    val dirPath = Path.of("ruby/lib/data")
+    val dirPath = Path.of("impl/ruby/lib/data")
     dirPath.toFile().deleteRecursively()
     Files.createDirectories(dirPath)
 

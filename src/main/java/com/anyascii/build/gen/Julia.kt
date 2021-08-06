@@ -5,7 +5,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 
 fun julia(g: Generator) {
-    val dir = Path.of("julia/src/data")
+    val dir = Path.of("impl/julia/src/data")
     dir.toFile().deleteRecursively()
     Files.createDirectories(dir)
 

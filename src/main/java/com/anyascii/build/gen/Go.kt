@@ -4,14 +4,14 @@ import java.nio.file.Files
 import java.nio.file.Path
 
 fun go(g: Generator) {
-    Files.newBufferedWriter(Path.of("go/bank.go")).use { w ->
+    Files.newBufferedWriter(Path.of("impl/go/bank.go")).use { w ->
         w.write("package anyascii\n\n")
         w.write("const bank = \"")
         w.write(g.stringsBank.replace("\\", "\\\\").replace("\"", "\\\""))
         w.write("\"\n")
     }
 
-    Files.newBufferedWriter(Path.of("go/block.go")).use { w ->
+    Files.newBufferedWriter(Path.of("impl/go/block.go")).use { w ->
         w.write("package anyascii\n\n")
         w.write("func block(blockNum uint32) string {\n")
         w.write("\tswitch blockNum {\n")

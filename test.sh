@@ -3,6 +3,7 @@
 set -eux
 cd -- "$(dirname -- "${BASH_SOURCE:-$0}")"
 
+cd impl
 (cd js && npm test)
 (cd go && go test)
 (cd ruby && ruby lib/any_ascii_test.rb)

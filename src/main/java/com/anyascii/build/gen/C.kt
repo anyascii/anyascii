@@ -5,7 +5,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 
 fun c(g: Generator) {
-    Files.newBufferedWriter(Path.of("c/anyascii.c")).use { w ->
+    Files.newBufferedWriter(Path.of("impl/c/anyascii.c")).use { w ->
         w.write("/*\n")
         w.write(Files.readString(Path.of("LICENSE")))
         w.write("*/\n\n")

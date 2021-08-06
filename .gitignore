@@ -13,4 +13,4 @@ target/
 *.o
 Cargo.lock
 Manifest.toml
-test
+impl/c/test

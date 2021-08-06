@@ -4,7 +4,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 
 fun php(g: Generator) {
-    val dirPath = Path.of("php/_data")
+    val dirPath = Path.of("impl/php/_data")
     dirPath.toFile().deleteRecursively()
     Files.createDirectories(dirPath)
 

@@ -5,7 +5,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 
 fun shell(g: Generator) {
-    Files.newBufferedWriter(Path.of("sh/anyascii")).use { w ->
+    Files.newBufferedWriter(Path.of("impl/sh/anyascii")).use { w ->
         w.write("#!/bin/sh\n")
         val license = Files.readAllLines(Path.of("LICENSE")).joinToString("") { "# $it\n" }
         w.write("\n$license\n")

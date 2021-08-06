@@ -5,7 +5,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 
 fun cSharp(g: Generator) {
-    Files.newBufferedWriter(Path.of("csharp/src/Transliteration.blocks.cs")).use { w ->
+    Files.newBufferedWriter(Path.of("impl/csharp/src/Transliteration.blocks.cs")).use { w ->
         w.write("using System.Collections.Generic;\n")
         w.write("using System;\n\n")
         w.write("namespace AnyAscii\n")

@@ -86,8 +86,8 @@ AnyAscii is implemented across multiple programming languages with the same beha
 
 ## C
 
-https://raw.githubusercontent.com/anyascii/anyascii/master/c/anyascii.h
-https://raw.githubusercontent.com/anyascii/anyascii/master/c/anyascii.c
+https://raw.githubusercontent.com/anyascii/anyascii/master/impl/c/anyascii.h
+https://raw.githubusercontent.com/anyascii/anyascii/master/impl/c/anyascii.c
 
 ## Go
 
@@ -214,7 +214,7 @@ anthropoi
 
 ## Shell
 
-https://raw.githubusercontent.com/anyascii/anyascii/master/sh/anyascii
+https://raw.githubusercontent.com/anyascii/anyascii/master/impl/sh/anyascii
 
 ```console
 $ anyascii άνθρωποι

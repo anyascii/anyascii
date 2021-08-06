@@ -4,7 +4,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 
 fun js(g: Generator) {
-    Files.newBufferedWriter(Path.of("js/block.js")).use { w ->
+    Files.newBufferedWriter(Path.of("impl/js/block.js")).use { w ->
         w.write("export default function block(blockNum) {\n")
         w.write("switch (blockNum) {\n")
         for ((blockNum, block) in g.blocks) {

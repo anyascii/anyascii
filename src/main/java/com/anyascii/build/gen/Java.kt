@@ -5,7 +5,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 
 fun java(g: Generator) {
-    val resources = Path.of("java/src/main/resources/com/anyascii")
+    val resources = Path.of("impl/java/src/main/resources/com/anyascii")
     resources.toFile().deleteRecursively()
     Files.createDirectories(resources)
 
