@@ -18,7 +18,11 @@ fun go(g: Generator) {
         val bs = g.blockPointers.values.iterator()
         for (block in g.blocks.keys) {
             val s = "%03x".format(block)
-            w.write("\tcase 0x$s:\n\t\treturn ${asString(bs.next())}\n")
+            w.write("\tcase 0x$s:\n\t\treturn \"")
+            for (b in bs.next()) {
+                w.write(BYTE_STRINGS[b.toInt() and 0xff])
+            }
+            w.write("\"\n")
         }
         w.write("\tdefault:\n\t\treturn \"\"\n")
         w.write("\t}\n")
@@ -26,21 +30,11 @@ fun go(g: Generator) {
     }
 }
 
-private fun asString(bs: ByteArray) = '"' + bs.joinToString("") { BYTE_STRINGS[it.toInt() and 0xff] } + '"'
-
 private val BYTE_STRINGS = Array(256) {
     val c = it.toChar()
-    when  {
-        c == '\\' -> "\\\\"
-        c == '"' -> "\\\""
-        it in 0x20..0x7e -> c.toString()
-        c == '\t' -> "\t"
-        c == '\n' -> "\\n"
-        c == '\r' -> "\\r"
-        c == '\b' -> "\\b"
-        it == 0x07 -> "\\a"
-        it == 0x0b -> "\\v"
-        it == 0x0c -> "\\f"
-        else -> "\\x%02x".format(it)
+    if (it !in 0x20..0x7e || c == '\\' || c == '"') {
+        "\\x%02x".format(it)
+    } else {
+        c.toString()
     }
 }
