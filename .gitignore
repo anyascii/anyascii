@@ -10,5 +10,7 @@ obj/
 target/
 *.iml
 *.gem
+*.o
 Cargo.lock
 Manifest.toml
+test

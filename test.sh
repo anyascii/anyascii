@@ -13,3 +13,4 @@ cd -- "$(dirname -- "${BASH_SOURCE:-$0}")"
 (cd php && php test.php)
 (cd julia && julia --project=. -e 'using Pkg; Pkg.test()')
 (cd sh && ./test.sh)
+(cd c && ./test.sh)

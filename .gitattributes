@@ -12,3 +12,4 @@
 /php/_data/* linguist-generated
 /unidecode/src/** linguist-vendored
 /julia/src/data/* linguist-generated
+/c/anyascii.c linguist-generated

@@ -60,3 +60,8 @@ jobs:
       install: skip
       before_script: cd julia
       script: julia --project=. -e 'using Pkg; Pkg.test()'
+
+    - language: c
+      install: skip
+      before_script: cd c
+      script: ./test.sh

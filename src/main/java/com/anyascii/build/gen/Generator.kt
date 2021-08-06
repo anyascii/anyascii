@@ -19,6 +19,7 @@ fun generate(table: Table) {
     shell(g)
     php(g)
     julia(g)
+    c(g)
 }
 
 class Generator(val table: Table) {
