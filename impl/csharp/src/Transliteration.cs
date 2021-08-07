@@ -57,8 +57,9 @@ namespace AnyAscii
 
 		public static string Transliterate(int utf32)
 		{
-			short blockNum = (short)((uint)utf32 >> 8);
-			if (blocks.TryGetValue(blockNum, out Lazy<string[]> blockLazy))
+			uint blockNum = (uint)utf32 >> 8;
+			if (blockNum >= 0xf00) return "";
+			if (blocks.TryGetValue((short)blockNum, out Lazy<string[]> blockLazy))
 			{
 				string[] block = blockLazy.Value;
 				int lo = utf32 & 0xff;

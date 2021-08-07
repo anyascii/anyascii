@@ -56,7 +56,7 @@ pub fn any_ascii(s: &str) -> String {
 /// assert_eq!("#", any_ascii_char('♯'));
 /// ```
 pub fn any_ascii_char(c: char) -> &'static str {
-    let block_num = ((c as u32) >> 8) as u16;
+    let block_num = (c as u32) >> 8;
     let block_bytes = block::block(block_num);
     let block: &'static [[u8; 3]] = unsafe {
         core::slice::from_raw_parts(
@@ -90,10 +90,16 @@ fn test() {
     check("", "");
     check("\x00\x01\t\n\x1f ~\x7f", "\x00\x01\t\n\x1f ~\x7f");
     check("sample", "sample");
-    check("\u{e000}", "");
-    check("\u{fdff}", "");
+
     check("\u{0080}", "");
     check("\u{00ff}", "y");
+    check("\u{e000}", "");
+    check("\u{fdff}", "");
+    check("\u{e0020}", " ");
+    check("\u{e007e}", "~");
+    check("\u{f0000}", "");
+    check("\u{f0001}", "");
+    check("\u{10ffff}", "");
 
     check("René François Lacôte", "Rene Francois Lacote");
     check("Blöße", "Blosse");

@@ -62,7 +62,9 @@ public final class AnyAscii {
     }
 
     public static String transliterate(int codePoint) {
-        short blockNum = (short) (codePoint >>> 8);
+        int blockNumInt = codePoint >>> 8;
+        if (blockNumInt >= 0xf00) return "";
+        short blockNum = (short) blockNumInt;
         ShortMap<String[]> blocks = AnyAscii.blocks;
         int blockIndex = blocks.index(blockNum);
         String[] block;
@@ -77,7 +79,7 @@ public final class AnyAscii {
         return block[lo];
     }
 
-    private static String[] loadBlock(int blockNum) {
+    private static String[] loadBlock(short blockNum) {
         InputStream input = AnyAscii.class.getResourceAsStream(String.format("%03x", blockNum));
         String[] block;
         if (input == null) {

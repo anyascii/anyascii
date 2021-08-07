@@ -12,10 +12,20 @@ public final class AnyAsciiTest {
         check("", "");
         check("\u0000\u0001\t\n\u001f ~\u007f", "\u0000\u0001\t\n\u001f ~\u007f");
         check("sample", "sample");
-        check("\ue000", "");
-        check("\ufdff", "");
-        check("\u0080", "");
-        check("\u00ff", "y");
+
+        check(0x0080, "");
+        check(0x00ff, "y");
+        check(0xe000, "");
+        check(0xfdff, "");
+        check(0x000e0020, " ");
+        check(0x000e007e, "~");
+        check(0x000f0000, "");
+        check(0x000f0001, "");
+        check(0x0010ffff, "");
+        check(0x00110000, "");
+        check(0x7fffffff, "");
+        check(0x80000033, "");
+        check(0xffffffff, "");
 
         check("René François Lacôte", "Rene Francois Lacote");
         check("Blöße", "Blosse");
@@ -69,6 +79,11 @@ public final class AnyAsciiTest {
         assertEquals(AnyAscii.isAscii(s), s.equals(expected));
         assertTrue(AnyAscii.isAscii(expected));
         assertEquals(expected, AnyAscii.transliterate(s));
+    }
+
+    private static void check(int codePoint, String expected) {
+        assertTrue(AnyAscii.isAscii(expected));
+        assertEquals(expected, AnyAscii.transliterate(codePoint));
     }
 
     @Test public void testNPE() {

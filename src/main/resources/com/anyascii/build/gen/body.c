@@ -1,5 +1,5 @@
 uint32_t anyascii(uint32_t utf32, const char **ascii) {
-	uint16_t blocknum = utf32 >> 8;
+	uint32_t blocknum = utf32 >> 8;
 	const char *b = block(blocknum);
 	uint32_t blen = 1 + 3 * ((uint8_t) b[0]);
 	uint32_t lo = 1 + 3 * (utf32 & 0xff);

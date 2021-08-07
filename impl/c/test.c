@@ -23,7 +23,16 @@ char *actual;
 void check(const char *s, const char *expected) {
 	anyascii_string(s, actual);
 	if (strcmp(actual, expected)) {
-		printf("%s %s\n", actual, expected);
+		printf("%s != %s\n", actual, expected);
+		exit(1);
+	}
+}
+
+void checkcp(uint32_t utf32, const char *expected) {
+	const char *r;
+	uint32_t rlen = anyascii(utf32, &r);
+	if (strlen(expected) != rlen || strncmp(r, expected, rlen)) {
+		printf("%x -> %.*s != %s\n", utf32, rlen, r, expected);
 		exit(1);
 	}
 }
@@ -33,6 +42,20 @@ int main() {
 	actual = malloc(256);
 
 	check("sample", "sample");
+
+	checkcp(0x0080, "");
+	checkcp(0x00ff, "y");
+	checkcp(0xe000, "");
+	checkcp(0xfdff, "");
+	checkcp(0x000e0020, " ");
+	checkcp(0x000e007e, "~");
+	checkcp(0x000f0000, "");
+	checkcp(0x000f0001, "");
+	checkcp(0x0010ffff, "");
+	checkcp(0x00110000, "");
+	checkcp(0x7fffffff, "");
+	checkcp(0x80000033, "");
+	checkcp(0xffffffff, "");
 
 	check("René François Lacôte", "Rene Francois Lacote");
 	check("Blöße", "Blosse");

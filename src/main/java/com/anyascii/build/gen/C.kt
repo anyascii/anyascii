@@ -28,7 +28,7 @@ fun c(g: Generator) {
         }
         w.write("static const char bdefault[4] = \"\\000\\000\\000\\200\";\n\n")
 
-        w.write("static const char *block(uint16_t blocknum) {\n")
+        w.write("static const char *block(uint32_t blocknum) {\n")
         w.write("\tswitch (blocknum) {\n")
         for (block in g.blocks.keys) {
             val s = "%03x".format(block)

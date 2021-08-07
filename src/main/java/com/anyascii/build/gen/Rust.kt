@@ -16,7 +16,7 @@ fun rust(g: Generator) {
     }
 
     Files.newBufferedWriter(Path.of("impl/rust/src/block.rs")).use { writer ->
-        writer.write("pub fn block(block_num: u16) -> &'static [u8] {\n")
+        writer.write("pub fn block(block_num: u32) -> &'static [u8] {\n")
         writer.write("\tmatch block_num {\n")
         for (block in g.blocks.keys) {
             val s = "%03x".format(block)
