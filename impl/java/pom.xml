@@ -8,9 +8,13 @@
     <artifactId>anyascii</artifactId>
     <version>0.2.1-SNAPSHOT</version>
 
-    <name>anyascii</name>
+    <name>AnyAscii</name>
     <description>Unicode to ASCII transliteration</description>
-    <url>https://github.com/anyascii/anyascii</url>
+    <url>https://anyascii.com</url>
+
+    <scm>
+        <url>https://github.com/anyascii/anyascii</url>
+    </scm>
 
     <licenses>
         <license>
@@ -19,6 +23,13 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+
+    <developers>
+        <developer>
+            <name>Hunter WB</name>
+            <url>https://hunterwb.com</url>
+        </developer>
+    </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
