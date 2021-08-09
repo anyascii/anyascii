@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Text;
 using AnyAscii;
 
 namespace AnyAsciiTests
@@ -22,10 +23,6 @@ namespace AnyAsciiTests
 			check(0x000f0000, "");
 			check(0x000f0001, "");
 			check(0x0010ffff, "");
-			check(0x00110000, "");
-			check(0x7fffffff, "");
-			check(0x80000033, "");
-			check(0xffffffff, "");
 
 			check("René François Lacôte", "Rene Francois Lacote");
 			check("Blöße", "Blosse");
@@ -85,7 +82,7 @@ namespace AnyAsciiTests
 		static void check(uint utf32, string expected)
 		{
 			Assert.IsTrue(expected.IsAscii());
-			Assert.AreEqual(expected, Transliteration.Transliterate((int)utf32));
+			Assert.AreEqual(expected, Encoding.ASCII.GetString((new Rune(utf32)).Transliterate()));
 		}
 	}
 }

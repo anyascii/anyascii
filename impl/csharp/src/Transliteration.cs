@@ -1,5 +1,6 @@
-using System.Text;
 using System;
+using System.Buffers;
+using System.Text;
 
 namespace AnyAscii
 {
@@ -9,9 +10,45 @@ namespace AnyAscii
 		public static string Transliterate(this string s)
 		{
 			if (s.IsAscii()) return s;
-			StringBuilder sb = new StringBuilder(s.Length);
-			Transliterate(s, sb);
-			return sb.ToString();
+			ArrayBufferWriter<byte> writer = new ArrayBufferWriter<byte>(s.Length);
+			foreach (Rune r in s.EnumerateRunes())
+			{
+				Transliterate(r, writer);
+			}
+			return Encoding.ASCII.GetString(writer.WrittenSpan);
+		}
+
+		public static void Transliterate(this Rune r, IBufferWriter<byte> writer)
+		{
+			if (r.IsAscii)
+			{
+				writer.GetSpan(1)[0] = (byte)r.Value;
+				writer.Advance(1);
+			}
+			else
+			{
+				writer.Write(Transliterate(r));
+			}
+		}
+
+		public static ReadOnlySpan<byte> Transliterate(this Rune r)
+		{
+			int utf32 = r.Value;
+			uint blockNum = (uint)utf32 >> 8;
+			ReadOnlySpan<byte> block = Block(blockNum);
+			int lo = 3 * (utf32 & 0xff);
+			if (block.Length <= lo) return ReadOnlySpan<byte>.Empty;
+			uint l = block[lo + 2];
+			int len = (int)((l & 0x80) != 0 ? l & 0x7f : 3);
+			if (len <= 3)
+			{
+				return block.Slice(lo, len);
+			}
+			else
+			{
+				int i = (block[lo] << 8) | block[lo + 1];
+				return Bank.Slice(i, len);
+			}
 		}
 
 		public static bool IsAscii(this string s)
@@ -25,48 +62,7 @@ namespace AnyAscii
 
 		public static bool IsAscii(this char c)
 		{
-			return IsAscii((int)c);
-		}
-
-		public static bool IsAscii(int utf32)
-		{
-			return (utf32 >> 7) == 0;
-		}
-
-		public static void Transliterate(this string s, StringBuilder dst)
-		{
-			for (int i = 0; i < s.Length; i++)
-			{
-				int utf32 = char.ConvertToUtf32(s, i);
-				if (utf32 > 0xffff) i++;
-				Transliterate(utf32, dst);
-			}
-		}
-
-		public static void Transliterate(int utf32, StringBuilder dst)
-		{
-			if (IsAscii(utf32))
-			{
-				dst.Append((char)utf32);
-			}
-			else
-			{
-				dst.Append(Transliterate(utf32));
-			}
-		}
-
-		public static string Transliterate(int utf32)
-		{
-			uint blockNum = (uint)utf32 >> 8;
-			if (blockNum >= 0xf00) return "";
-			if (blocks.TryGetValue((short)blockNum, out Lazy<string[]> blockLazy))
-			{
-				string[] block = blockLazy.Value;
-				int lo = utf32 & 0xff;
-				if (block.Length <= lo) return "";
-				return block[lo];
-			}
-			return "";
+			return (c >> 7) == 0;
 		}
 	}
 }
