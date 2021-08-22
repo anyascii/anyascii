@@ -4,13 +4,12 @@ set -eux
 cd -- "$(dirname -- "${BASH_SOURCE:-$0}")"
 
 check() {
-	test "$("$shell" anyascii "$1")" = "$2"
+	test "$($shell anyascii "$1")" = "$2"
 }
 
-shells='bash dash zsh yash posh mksh ksh93'
-for shell in $shells
-do
-	if command -v $shell
+checkshell() {
+	shell=$*
+	if command -v $1
 	then
 		check "" ""
 		check "	 ~" "	 ~"
@@ -65,6 +64,13 @@ do
 	else
 		echo "skipping $shell"
 	fi
-done
+}
+
+checkshell dash
+checkshell busybox sh
+checkshell bash
+checkshell bash --posix
+checkshell zsh
+checkshell zsh --emulate sh
 
 echo success
