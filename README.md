@@ -118,7 +118,7 @@ Java 6+ compatible
 https://npmjs.com/package/any-ascii
 
 ```javascript
-import anyAscii from 'any-ascii';
+import {anyAscii} from 'any-ascii';
 
 const s = anyAscii('άνθρωποι');
 // anthropoi

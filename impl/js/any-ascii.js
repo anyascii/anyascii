@@ -29,4 +29,4 @@ function anyAscii(string) {
 	return result;
 }
 
-exports.default = anyAscii;
+exports.anyAscii = anyAscii;

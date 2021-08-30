@@ -5,7 +5,7 @@ import java.nio.file.Path
 
 fun js(g: Generator) {
     Files.newBufferedWriter(Path.of("impl/js/block.js")).use { w ->
-        w.write("export default function block(blockNum) {\n")
+        w.write("function block(blockNum) {\n")
         w.write("switch (blockNum) {\n")
         for ((blockNum, block) in g.blocks) {
             val s = block.noAscii().joinToString("\t").replace("\\", "\\\\").replace("\"", "\\\"")
@@ -14,5 +14,6 @@ fun js(g: Generator) {
         w.write("}\n")
         w.write("return\"\"\n")
         w.write("}\n")
+        w.write("exports.default = block;\n")
     }
 }
