@@ -11,5 +11,6 @@
 	"types": "./any-ascii.d.ts",
 	"scripts": {
 		"test": "node ./test.js"
-	}
+	},
+	"files": ["block.js", "any-ascii.js", "any-ascii.d.ts"]
 }
