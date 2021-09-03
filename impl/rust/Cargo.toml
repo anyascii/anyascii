@@ -9,7 +9,6 @@ description = "Unicode to ASCII transliteration"
 license = "ISC"
 categories = ["text-processing", "internationalization", "no-std", "command-line-utilities"]
 keywords = ["unicode", "ascii", "transliteration", "emoji", "unidecode"]
-readme = "../README.md"
 
 [[bin]]
 name = "anyascii"
