@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
 	s.name = 'any_ascii'
-	s.version = '0.3.0'
+	s.version = '0.3.1-dev'
 	s.summary = 'Unicode to ASCII transliteration'
 	s.description = IO.read('README.md')
 	s.author = 'Hunter WB'
