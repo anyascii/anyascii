@@ -1,23 +1,34 @@
-transliterate() {
-	for cp in $(printf %s "$1" | iconv -f utf8 -t utf32le | od -v -A n -t u)
-	do
-		if test "$cp" -lt 128
-		then
-			printf "\\$(printf %o "$cp")"
-		else
-			eval "block=\$_$((cp >> 8))"
-			printf %s "$(printf %s "$block" | cut -f$(((cp & 255) + 1)))"
-		fi
-	done
-	echo
-}
+IFS=' '
 
-if test $# -ne 0
-then
-	transliterate "$*"
-else
+transliterate_codepoints() {
 	while IFS= read -r line
 	do
-		transliterate "$line"
+		for cp in $line
+		do
+			if test "$cp" -lt 128
+			then
+				printf "\\$(printf %o "$cp")"
+			else
+				eval "block=\$_$((cp >> 8))"
+				printf %s "$(printf %s "$block" | cut -f$(((cp & 255) + 1)))"
+			fi
+		done
 	done
+}
+
+transliterate() {
+	iconv -c -f utf8 -t utf32 | od -v -A n -t u4 | transliterate_codepoints
+}
+
+if test "$#" -ne 0
+then
+	printf '%s\n' "$*" | transliterate
+elif test -t 0
+then
+	while IFS= read -r line
+	do
+		printf '%s\n' "$line" | transliterate
+	done
+else
+	transliterate
 fi

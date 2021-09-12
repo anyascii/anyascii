@@ -68,9 +68,8 @@ checkshell() {
 
 checkshell dash
 checkshell busybox sh
-checkshell bash
 checkshell bash --posix
-checkshell zsh
+checkshell bash
 checkshell zsh --emulate sh
 
 echo success
