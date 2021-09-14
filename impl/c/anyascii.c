@@ -16,6 +16,7 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 */
 
+#include <stddef.h>
 #include <stdint.h>
 #include "anyascii.h"
 
@@ -610,7 +611,7 @@ static const char b313[220] = "H\356\374\204Qu\202\000\000\200Wa\202ZhiMi\202\00
 static const char be00[382] = "~\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200\000\000\200 \000\201!\000\201\042\000\201#\000\201$\000\201%\000\201&\000\201'\000\201(\000\201)\000\201*\000\201+\000\201,\000\201-\000\201.\000\201/\000\2010\000\2011\000\2012\000\2013\000\2014\000\2015\000\2016\000\2017\000\2018\000\2019\000\201:\000\201;\000\201<\000\201=\000\201>\000\201?\000\201@\000\201A\000\201B\000\201C\000\201D\000\201E\000\201F\000\201G\000\201H\000\201I\000\201J\000\201K\000\201L\000\201M\000\201N\000\201O\000\201P\000\201Q\000\201R\000\201S\000\201T\000\201U\000\201V\000\201W\000\201X\000\201Y\000\201Z\000\201[\000\201\134\000\201]\000\201^\000\201_\000\201`\000\201a\000\201b\000\201c\000\201d\000\201e\000\201f\000\201g\000\201h\000\201i\000\201j\000\201k\000\201l\000\201m\000\201n\000\201o\000\201p\000\201q\000\201r\000\201s\000\201t\000\201u\000\201v\000\201w\000\201x\000\201y\000\201z\000\201{\000\201|\000\201}\000\201~\000\201";
 static const char bdefault[4] = "\000\000\000\200";
 
-static const char *block(uint32_t blocknum) {
+static const char *block(uint_least32_t blocknum) {
 	switch (blocknum) {
 		case 0x000: return b000;
 		case 0x001: return b001;
@@ -1203,18 +1204,20 @@ static const char *block(uint32_t blocknum) {
 	}
 }
 
-uint32_t anyascii(uint32_t utf32, const char **ascii) {
-	uint32_t blocknum = utf32 >> 8;
+size_t anyascii(uint_least32_t utf32, const char **ascii) {
+	uint_least32_t blocknum = utf32 >> 8;
 	const char *b = block(blocknum);
-	uint32_t blen = 1 + 3 * ((uint8_t) b[0]);
-	uint32_t lo = 1 + 3 * (utf32 & 0xff);
+	size_t blen = ((size_t) (unsigned char) b[0]) * 3 + 1;
+	size_t lo = (utf32 & 0xff) * 3 + 1;
 	if (lo > blen) return 0;
-	uint8_t l = b[lo + 2];
-	uint8_t len = l & 0x80 ? l & 0x7f : 3;
+	size_t l = (unsigned char) b[lo + 2];
+	size_t len = l & 0x80 ? l & 0x7f : 3;
 	if (len <= 3) {
 		*ascii = b + lo;
 	} else {
-		uint16_t i = (((uint8_t) b[lo]) << 8) | ((uint8_t) b[lo + 1]);
+		size_t i0 = (unsigned char) b[lo];
+		size_t i1 = (unsigned char) b[lo + 1];
+		size_t i = (i0 << 8) | i1;
 		*ascii = bank + i;
 	}
 	return len;

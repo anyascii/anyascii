@@ -9,6 +9,7 @@ fun c(g: Generator) {
         w.write("/*\n")
         w.write(Files.readString(Path.of("LICENSE")))
         w.write("*/\n\n")
+        w.write("#include <stddef.h>\n")
         w.write("#include <stdint.h>\n")
         w.write("#include \"anyascii.h\"\n\n")
         w.write("static const char bank[${g.stringsBank.length}] = \"")
@@ -28,7 +29,7 @@ fun c(g: Generator) {
         }
         w.write("static const char bdefault[4] = \"\\000\\000\\000\\200\";\n\n")
 
-        w.write("static const char *block(uint32_t blocknum) {\n")
+        w.write("static const char *block(uint_least32_t blocknum) {\n")
         w.write("\tswitch (blocknum) {\n")
         for (block in g.blocks.keys) {
             val s = "%03x".format(block)

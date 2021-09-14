@@ -19,6 +19,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 #ifndef ANYASCII_H
 #define ANYASCII_H
 
+#include <stddef.h>
 #include <stdint.h>
 
 /**
@@ -28,6 +29,6 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  * @param ascii A pointer for the result to be written to; not null-terminated
  * @return The number of chars in *ascii
  */
-uint32_t anyascii(uint32_t utf32, const char **ascii);
+size_t anyascii(uint_least32_t utf32, const char **ascii);
 
 #endif
