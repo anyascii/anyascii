@@ -1,28 +1,34 @@
-#include <locale.h>
 #include <stddef.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <uchar.h>
 #include "anyascii.h"
+#include "utf8.h"
 
-void anyascii_string(const char *in, char *out) {
-	uint_least32_t cp;
-	size_t cu;
-	const char *r;
-	while ((cu = mbrtoc32(&cp, in, 4, 0))) {
-		size_t rlen = anyascii(cp, &r);
-		memcpy(out, r, rlen);
-		in += cu;
-		out += rlen;
+static void anyascii_string(const char *in, char *out) {
+	uint32_t utf32;
+	uint32_t state = 0;
+	for (; *in; in++) {
+		utf8_decode(&state, &utf32, (unsigned char) *in);
+		switch (state) {
+		case UTF8_ACCEPT:;
+			const char *r;
+			size_t rlen = anyascii(utf32, &r);
+			memcpy(out, r, rlen);
+			out += rlen;
+			break;
+		case UTF8_REJECT:
+			state = UTF8_ACCEPT;
+			break;
+		}
 	}
 	*out = 0;
 }
 
-char *actual;
+static char *actual;
 
-void check(const char *s, const char *expected) {
+static void check(const char *s, const char *expected) {
 	anyascii_string(s, actual);
 	if (strcmp(actual, expected)) {
 		printf("%s != %s\n", actual, expected);
@@ -30,7 +36,7 @@ void check(const char *s, const char *expected) {
 	}
 }
 
-void checkcp(uint_least32_t utf32, const char *expected) {
+static void checkcp(uint32_t utf32, const char *expected) {
 	const char *r;
 	size_t rlen = anyascii(utf32, &r);
 	if (strlen(expected) != rlen || strncmp(r, expected, rlen)) {
@@ -40,7 +46,6 @@ void checkcp(uint_least32_t utf32, const char *expected) {
 }
 
 int main() {
-	setlocale(LC_ALL, "en_US.utf8");
 	actual = malloc(256);
 
 	check("sample", "sample");

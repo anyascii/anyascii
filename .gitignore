@@ -6,6 +6,7 @@
 __pycache__/
 bin/
 /impl/c/build/
+Testing/
 dist/
 obj/
 target/
