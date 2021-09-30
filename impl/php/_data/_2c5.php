@@ -1,1 +1,1 @@
-<?php return explode('	','		Wai																																													Ou																			Long		Si						Jian																	Ku											Ou						Ling																							Zuan														Xian					Chou		Shi								Lou														Xian');
+<?php return explode('	','		Wai																																													Ou																			Long		Sai						Gaan																	Fu											Au						Ling																							Zyun														Haan					Chou		Shi								Lou														Haam');

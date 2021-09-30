@@ -1,1 +1,1 @@
-<?php return explode('	','		Jie			Fu					Liang																																																																																															Soe																								Liang		Gin																																														Xie');
+<?php return explode('	','		Zit			Fu					Loeng																																																																																															Soe																								Loeng		Gin																																														Kit');

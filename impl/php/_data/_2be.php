@@ -1,1 +1,1 @@
-<?php return explode('	','																																									Kou																																																																					Yu						Wei			Sung					Dong	Shang				Qie	Qie				Hua				Qi		Gong							Men			Wit		Lao																		Yang	Chanh												Nan										Xi');
+<?php return explode('	','																																									Kou																																																																					Jyu						Wai			Sung					Dong	Soeng				Hip	Hip				Waa				Cai		Gung							Mun			Wit		Lou																		Joeng	Chanh												Naan										Xi');

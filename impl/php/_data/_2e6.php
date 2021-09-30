@@ -1,1 +1,1 @@
-<?php return explode('	','																																																																										Yin	Du																																																																																																																																												Tang');
+<?php return explode('	','																																																																										Jan	Duk																																																																																																																																												Tek');

@@ -1,1 +1,1 @@
-<?php return explode('	','																																																																																																Qiu	Lu	Zhi	Zuo	Gua	Riet		Liang	Gua		Zou	Rui	Cui		Sui	Cai');
+<?php return explode('	','																																																																																																Kau	Lou	Dit	Zok	Gwaa	Riet		Loeng	Gwaa		Zau	Jeoi	Ceoi		Seoi	Coi');

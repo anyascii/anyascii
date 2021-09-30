@@ -1,1 +1,1 @@
-<?php return explode('	','																										Pin																																																																			Wei					Chuang					Mi								Guai						Liang									Xian					Can								Xiao											Jue																													Maan			La																					Shan');
+<?php return explode('	','																										Pin																																																																			Wei					Cung					Mei								Guai						Loeng									Haan					Can								Sok											Zyut																													Maan			Laai																					Sim');
