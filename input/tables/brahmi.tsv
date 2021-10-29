@@ -2,6 +2,7 @@
 # https://unicode.org/wg2/docs/n3491.pdf
 # https://unicode.org/L2/L2008/08277-n3490-brahmi.pdf
 # https://unicode.org/wg2/docs/n4166.pdf
+# https://unicode.org/L2/L2019/19402-brahmi-adds.pdf
 #
 # various signs
 𑀀	m
@@ -87,5 +88,15 @@
 𑁋	-
 𑁌	+
 𑁍	*
+# virama
+𑁰	
+# independent vowels
+𑁱	e
+𑁲	o
+# dependent vowel signs
+𑁳	e
+𑁴	o
+# consonant
+𑁵	l
 # number joiner
 𑁿	-
