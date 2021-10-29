@@ -5098,6 +5098,7 @@
 ᜊ	b
 ᜋ	m
 ᜌ	y
+ᜍ	r
 ᜎ	l
 ᜏ	w
 ᜐ	s
@@ -5105,6 +5106,8 @@
 ᜒ	i
 ᜓ	u
 ᜔	
+᜕	
+ᜟ	r
 ᜠ	a
 ᜡ	i
 ᜢ	u
@@ -5899,6 +5902,20 @@
 ᪾	
 ᪿ	
 ᫀ	
+᫁	
+᫂	
+᫃	
+᫄	
+᫅	
+᫆	
+᫇	
+᫈	
+᫉	
+᫊	
+᫋	
+ᫌ	
+ᫍ	
+ᫎ	
 ᬀ	m
 ᬁ	ng
 ᬂ	ng
@@ -6618,6 +6635,7 @@
 ᷷	
 ᷸	
 ᷹	
+᷺	
 ᷻	
 ᷼	
 ᷽	
@@ -41448,6 +41466,9 @@
 ꟈ	d
 Ꟊ	S
 ꟊ	s
+ꟲ	C
+ꟳ	F
+ꟴ	Q
 Ꟶ	H
 ꟶ	h
 ꟷ	I
@@ -56579,6 +56600,56 @@
 𐝥	A805
 𐝦	A806
 𐝧	A807
+𐞁	:
+𐞂	'
+𐞃	ae
+𐞄	B
+𐞅	b
+𐞇	dz
+𐞈	dz
+𐞉	dz
+𐞊	dzh
+𐞋	d
+𐞌	d
+𐞍	d
+𐞎	e
+𐞏	e
+𐞐	fng
+𐞑	u
+𐞒	G
+𐞓	g
+𐞔	G
+𐞕	h
+𐞖	H
+𐞗	h
+𐞘	j
+𐞙	ls
+𐞚	lz
+𐞛	l
+𐞝	l
+𐞞	lzh
+𐞠	y
+𐞢	o
+𐞣	Oe
+𐞤	o
+𐞥	q
+𐞦	r
+𐞨	r
+𐞩	r
+𐞪	R
+𐞫	tc
+𐞬	ts
+𐞭	ts
+𐞮	tsh
+𐞯	t
+𐞰	v
+𐞲	Y
+𐞳	'
+𐞴	`
+𐞵	@
+𐞶	|
+𐞷	||
+𐞸	=
 𐠀	a
 𐠁	e
 𐠂	i
@@ -58825,6 +58896,7 @@
 𑚶	
 𑚷	'
 𑚸	kh
+𑚹	.
 𑛀	0
 𑛁	1
 𑛂	2
@@ -59329,6 +59401,22 @@
 𑪠	@
 𑪡	#
 𑪢	#
+𑪰	hi
+𑪱	hii
+𑪲	ho
+𑪳	hoo
+𑪴	ha
+𑪵	haa
+𑪶	shri
+𑪷	shrii
+𑪸	shro
+𑪹	shroo
+𑪺	shra
+𑪻	shraa
+𑪼	spe
+𑪽	spi
+𑪾	spo
+𑪿	spa
 𑫀	p
 𑫁	k
 𑫂	l
@@ -61588,6 +61676,16 @@
 𖩩	9
 𖩮	,
 𖩯	.
+𖫀	0
+𖫁	1
+𖫂	2
+𖫃	3
+𖫄	4
+𖫅	5
+𖫆	6
+𖫇	7
+𖫈	8
+𖫉	9
 𖫐	n
 𖫑	k
 𖫒	s
@@ -69380,6 +69478,10 @@
 𛄜	wo
 𛄝	n
 𛄞	n
+𛄟	wu
+𛄠	yi
+𛄡	ye
+𛄢	wu
 𛅐	i
 𛅑	e
 𛅒	o
@@ -73820,6 +73922,9 @@
 🛕	:hindu_temple:
 🛖	:hut:
 🛗	:elevator:
+🛝	:playground_slide:
+🛞	:wheel:
+🛟	:ring_buoy:
 🛠	:tools:
 🛡	:shield:
 🛢	:oil:
@@ -74063,6 +74168,7 @@
 🟩	:green_square:
 🟪	:purple_square:
 🟫	:brown_square:
+🟰	:heavy_equals_sign:
 🠀	<
 🠁	^
 🠂	>
@@ -74334,6 +74440,7 @@
 🥶	:cold_face:
 🥷	:ninja:
 🥸	:disguised_face:
+🥹	:face_holding_back_tears:
 🥺	:pleading_face:
 🥻	:sari:
 🥼	:lab_coat:
@@ -74416,6 +74523,7 @@
 🧉	:mate:
 🧊	:ice_cube:
 🧋	:bubble_tea:
+🧌	:troll:
 🧍	:person_standing:
 🧎	:person_kneeling:
 🧏	:deaf_person:
@@ -74573,6 +74681,8 @@
 🩸	:drop_of_blood:
 🩹	:adhesive_bandage:
 🩺	:stethoscope:
+🩻	:x_ray:
+🩼	:crutch:
 🪀	:yo_yo:
 🪁	:kite:
 🪂	:parachute:
@@ -74605,6 +74715,10 @@
 🪦	:headstone:
 🪧	:placard:
 🪨	:rock:
+🪩	:mirror_ball:
+🪪	:identification_card:
+🪫	:low_battery:
+🪬	:hamsa:
 🪰	:fly:
 🪱	:worm:
 🪲	:beetle:
@@ -74612,9 +74726,16 @@
 🪴	:potted_plant:
 🪵	:wood:
 🪶	:feather:
+🪷	:lotus:
+🪸	:coral:
+🪹	:empty_nest:
+🪺	:nest_with_eggs:
 🫀	:anatomical_heart:
 🫁	:lungs:
 🫂	:people_hugging:
+🫃	:pregnant_man:
+🫄	:pregnant_person:
+🫅	:person_with_crown:
 🫐	:blueberries:
 🫑	:bell_pepper:
 🫒	:olive:
@@ -74622,6 +74743,24 @@
 🫔	:tamale:
 🫕	:fondue:
 🫖	:teapot:
+🫗	:pouring_liquid:
+🫘	:beans:
+🫙	:jar:
+🫠	:melting_face:
+🫡	:saluting_face:
+🫢	:face_with_open_eyes_and_hand_over_mouth:
+🫣	:face_with_peeking_eye:
+🫤	:face_with_diagonal_mouth:
+🫥	:dotted_line_face:
+🫦	:biting_lip:
+🫧	:bubbles:
+🫰	:hand_with_index_finger_and_thumb_crossed:
+🫱	:rightwards_hand:
+🫲	:leftwards_hand:
+🫳	:palm_down_hand:
+🫴	:palm_up_hand:
+🫵	:index_pointing_at_the_viewer:
+🫶	:heart_hands:
 🬀	#
 🬁	#
 🬂	#

@@ -22,6 +22,6 @@ private fun Table.forms(codePoints: Iterable<CodePoint>): Table = apply {
         val a = NFKC.normalize(cp.asString()).trim()
         val b = PRESENTATION_FORMS.transliterateAny(a)
         val c = transliterateAny(b)
-        this[cp] = c
+        if (c.isPrintableAscii()) this[cp] = c
     }
 }
