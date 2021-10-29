@@ -259,6 +259,7 @@ private fun latin() = Table("latin")
         .cased(codePoints(UScript.LATIN))
 
 private fun kana() = Table("kana")
+        .then(UnicodeBlock.KANA_EXTENDED_B.toTable { "" })
         .then(codePoints(UScript.HIRAGANA).filter { it.nameAlias.startsWith("HENTAIGANA") }.toTable { it.nameAlias.substringAfterLast(' ').substringBefore('-').lower() })
         .then(codePoints(UScript.HIRAGANA).filterName { it.startsWith("HIRAGANA LETTER") }.alias { it.replace("HIRAGANA", "KATAKANA") })
         .then(codePoints(UScript.KATAKANA).filterName { it.startsWith("KATAKANA LETTER SMALL") }.alias { it.remove("SMALL ") })
