@@ -227,6 +227,7 @@ private fun custom() = Table()
         .then(cjkCompatibility())
         .then(Table("cjk-compatibility-forms"))
         .then(enclosedIdeographicSupplement())
+        .then(Table("old-uyghur"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints(UScript.CYRILLIC))
