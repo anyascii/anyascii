@@ -229,6 +229,7 @@ private fun custom() = Table()
         .then(enclosedIdeographicSupplement())
         .then(Table("old-uyghur"))
         .then(Table("vithkuqi"))
+        .then(Table("toto"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints(UScript.CYRILLIC))
