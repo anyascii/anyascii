@@ -1,0 +1,1 @@
+<?php return explode('	','																																																																																																																																																																																																																																xye	xyu	xyi	xya	xyie	xy	xyo		hwe	hwi	hwie	hwi		mwi	mwie		k\'wi	k\'wie	k\'wi	bwi	bwie	kwi	kwie	kwi	gwi	gwie	gwi	fwi	fwie	pwi	pwie');

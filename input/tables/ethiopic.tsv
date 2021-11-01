@@ -1,23 +1,23 @@
-# amharic bgn/pcgn 1967
-# tigrinya bgn/pcgn 2007
-# http://keyboards.ethiopic.org/specification/
-# https://github.com/unicode-org/icu/blob/master/icu4c/source/data/translit/am_am_FONIPA.txt
-# https://www.unicode.org/wg2/docs/n3572.pdf
-# https://www.unicode.org/wg2/docs/n2814.pdf
-# http://aigaforum.com/books/Tigiray-Language-Reform-Lekkateet11-Edition.pdf
+# https://unicode.org/charts/PDF/U1200.pdf
+## Combining marks
 ፝	
 ፞	
 ፟	
-፠	+
+## Punctuation
+### https://w3.org/International/elreq/#ethiopic_punctuation
 ፡	 
 ።	.
 ፣	,
 ፤	;
-፥	:
-፦	:-
+፥	,
+፦	:
 ፧	?
+### http://keyboards.ethiopic.org/specification/
+፠	+
 ፨	#
-#
+# https://unicode.org/charts/PDF/U1380.pdf
+# Tonal marks
+# https://unicode.org/wg2/docs/n2747.pdf
 ᎐	
 ᎑	
 ᎒	

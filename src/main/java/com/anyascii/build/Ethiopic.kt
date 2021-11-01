@@ -1,106 +1,35 @@
 package com.anyascii.build
 
-import com.ibm.icu.lang.UCharacter
-import com.ibm.icu.lang.UCharacterCategory
-import com.ibm.icu.lang.UScript
+import java.nio.file.Files
+import java.nio.file.Path
 
-fun ethiopic() = Table("ethiopic")
-        .then(codePoints(UScript.ETHIOPIC).filter { it.category == UCharacterCategory.OTHER_LETTER && it.block != UCharacter.UnicodeBlock.ETHIOPIC_EXTENDED_B }.toTable { syllableName(it) })
+fun ethiopic() = Table("ethiopic").then(letters())
 
-private fun syllableName(cp: CodePoint): String {
-    var name = cp.name.lower()
-            .replace("glottal ", "'")
-            .replace("pharyngeal ", "`")
+//bgn/pcgn tigrinya 2007
+//ungegn amharic 1967
+//http://yacob.org/papers/DanielYacob-IUC25.pdf
+//https://unicode.org/wg2/docs/n3572.pdf
+//https://unicode.org/L2/L2021/21037-gurage-adds.pdf
+//http://keyboards.ethiopic.org/specification/
+//https://unicode.org/wg2/docs/n2814.pdf
 
-    for (x in WA_TO_WAA) {
-        if (name.endsWith("syllable ${x}wa")) {
-            name = "${name}a"
-            break
+private fun letters() = Table().apply {
+    Files.newBufferedReader(Path.of("input/ethiopic.csv")).use { r ->
+        val vowels = r.readLine().split(',').map { VOWEL_MAP.getOrDefault(it, it) }
+        while (true) {
+            val line = r.readLine()?.split(',') ?: break
+            val consonant = line[1]
+            for (i in 2 until line.size) {
+                val col = line[i]
+                if (col.isEmpty()) continue
+                this[col.toCodePoint()] = consonant + vowels[i]
+            }
         }
     }
-
-    name = name.substringAfterLast(' ')
-
-    for ((c, r) in CONSONANTS) {
-        if (name.startsWith(c)) {
-            return r + VOWELS.getValue(name.substringAfter(c))
-        }
-    }
-    error(cp.name)
 }
 
-private val WA_TO_WAA = listOf("l", "hh", "m", "sz", "r", "s", "sh", "b", "v", "t", "c", "n", "ny", "'", "z", "zh", "d", "dd", "j", "th", "ch", "ph", "ts", "f", "p")
-
-private val CONSONANTS = mapOf(
-        "h" to "h",
-        "l" to "l",
-        "hh" to "h",
-        "m" to "m",
-        "sz" to "s",
-        "r" to "r",
-        "s" to "s",
-        "sh" to "sh",
-        "q" to "k'",
-        "qh" to "kh'",
-        "b" to "b",
-        "v" to "v",
-        "t" to "t",
-        "c" to "ch",
-        "x" to "h",
-        "n" to "n",
-        "ny" to "ny",
-        "'" to "'",
-        "k" to "k",
-        "kx" to "h",
-        "w" to "w",
-        "`" to "`",
-        "z" to "z",
-        "zh" to "zh",
-        "y" to "y",
-        "d" to "d",
-        "dd" to "d'",
-        "j" to "j",
-        "g" to "g",
-        "gg" to "ng",
-        "th" to "t'",
-        "ch" to "ch'",
-        "ph" to "p'",
-        "ts" to "ts'",
-        "tz" to "ts'",
-        "f" to "f",
-        "p" to "p",
-        "ss" to "sh",
-        "cc" to "ch",
-        "zz" to "zh",
-        "cch" to "ch'",
-        "qy" to "k'y",
-        "ky" to "ky",
-        "xy" to "xy",
-        "gy" to "gy",
-        "tth" to "th",
-        "ddh" to "dh",
-        "dz" to "dz",
-        "cchh" to "ch'",
-        "bb" to "b'"
-).toSortedMap(compareBy({ -it.length }, { it }))
-
-private val VOWELS = mapOf(
-        "a" to "e",
-        "u" to "u",
-        "i" to "i",
-        "aa" to "a",
-        "ee" to "ie",
-        "e" to "",
-        "o" to "o",
-
-        "wa" to "we",
-        // wu
-        "wi" to "wi",
-        "waa" to "wa",
-        "wee" to "wie",
-        "we" to "wi",
-        // wo
-
-        "ya" to "ya",
-        "oa" to "oa"
+private val VOWEL_MAP = mapOf(
+        "ɔ" to "oa",
+        "wĭ" to "wi",
+        "ĭ" to "",
 )
