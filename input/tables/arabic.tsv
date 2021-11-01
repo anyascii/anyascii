@@ -301,6 +301,17 @@
 ࢲ	z
 # http://www.unicode.org/L2/L2019/19002-arabic-derived-ltrs.pdf
 ۑ	ny
+# https://unicode.org/L2/L2019/19339-bosnian-arabic.pdf
+ࢉ	nj
+ࢊ	c
+# http://unicode.org/L2/L2019/19340-javanese-sundanese-arabic.pdf
+ࢋ	th
+ࢌ	th
+ࢍ	g
+# https://unicode.org/L2/L2019/19313-qaf-with-dot-below.pdf
+ࢵ	q
+# https://unicode.org/L2/L2019/19252-balti-graf.pdf
+ࣈ	gr
 # https://en.wikipedia.org/wiki/Urdu_alphabet
 ڐ	d
 ۃ	t
@@ -485,3 +496,9 @@
 ؂	^
 ؎	^
 ۽	&
+# https://unicode.org/L2/L2020/20245-three-arabic-symbols.pdf
+؝	.
+࢐	LE
+࢑	pt
+# https://unicode.org/L2/L2020/20071-arabic-tail.pdf
+ࢎ	.
