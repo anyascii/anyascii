@@ -230,6 +230,7 @@ private fun custom() = Table()
         .then(Table("old-uyghur"))
         .then(Table("vithkuqi"))
         .then(Table("toto"))
+        .then(tangsa())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints(UScript.CYRILLIC))
@@ -392,3 +393,7 @@ private fun cjkCompatibility() = Table("cjk-compatibility")
 
 private fun enclosedIdeographicSupplement() = Table()
         .then((0x1f260..0x1f265).toTable { it.name.substringAfterLast(' ').lower().capitalize() }) // Symbols for Chinese folk religion
+
+private fun tangsa() = codePoints(UScript.TANGSA)
+        .filterName { "LETTER" in it }
+        .toTable { it.name.substringAfterLast(' ').removeSuffix("A").lower() }
