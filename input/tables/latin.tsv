@@ -368,6 +368,8 @@
 Ꞻ	A
 Ꞽ	I
 Ꞿ	U
+# https://unicode.org/L2/L2021/21039-old-polish-o.pdf
+Ꟁ	O
 # https://unicode.org/L2/L2017/17238-n4838-anglicana-w.pdf
 Ꟃ	W
 #
@@ -376,6 +378,15 @@
 Ᶎ	Z
 Ꟈ	D
 Ꟊ	S
+# https://unicode.org/wg2/docs/n5145-ormulum.pdf
+Ꟑ	G
+ꟓ	thth
+ꟕ	ww
+# https://unicode.org/wg2/docs/n5144-middle-scots-s.pdf
+Ꟗ	S
+# https://unicode.org/wg2/docs/n5146-sigmoid-s.pdf
+Ꟙ	S
+#
 Ꟶ	H
 ꟷ	I
 # https://unicode.org/L2/L2009/09028-n3571-upa-additions.pdf
@@ -439,3 +450,44 @@
 ꭦ	dz
 ꭧ	ts
 ꭨ	r
+# https://unicode.org/charts/PDF/U10780.pdf
+𐞀	AA
+# https://unicode.org/charts/PDF/U1DF00.pdf
+## Extended IPA for disordered speech
+𝼀	ʩ
+𝼁	g
+𝼂	G
+𝼃	k
+𝼄	ʟ
+𝼅	ɮ
+𝼆	ʎ
+𝼇	ŋ
+## IPA extensions
+𝼈	ɺ
+𝼉	ƭ
+𝼊	ǃ
+## Clicks
+𝼋	ʃ
+𝼌	𝼋
+𝼍	ʇ
+𝼎	ʖ
+𝼏	ʗ
+𝼐	K
+## Lateral
+𝼑	l
+## Letters with palatal hooks
+𝼒	ʤ
+𝼓	ɬ
+𝼔	ŋ
+𝼕	ɹ
+𝼖	ɾ
+𝼗	ʧ
+𝼘	ʒ
+## Letters with retroflex hooks
+𝼙	ʤ
+𝼚	ɨ
+𝼛	o
+𝼜	ʧ
+𝼝	c
+## IPA extension
+𝼞	s

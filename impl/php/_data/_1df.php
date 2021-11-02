@@ -1,0 +1,1 @@
+<?php return explode('	','fng	g	G	k	L	lzh	y	ng	r	t	!	sh	sh	t	x	c	K	l	dzh	l	ng	r	r	tsh	zh	dzh	i	o	tsh	c	s');
