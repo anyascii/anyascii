@@ -261,9 +261,9 @@ When converting text between languages there are multiple properties that can be
 
 ## Stats
 
-Supports Unicode 14.0 (2021). Covers 98k of the 144k total Unicode characters, missing 43k very rare CJK characters and 3k other rare characters.
+Supports Unicode 14.0 (2021). Covers 99k of the 144k total Unicode characters, missing 43k very rare CJK characters and 2k other rare characters.
 
-Bundled data files total 185-475 KB depending on the implementation
+Bundled data files total 200-500 KB depending on the implementation
 
 ## Unidecode
 
