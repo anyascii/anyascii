@@ -1409,7 +1409,7 @@
 ن	n
 ه	h
 و	w
-ى	y
+ى	a
 ي	y
 ً	
 ٌ	
@@ -1423,7 +1423,7 @@
 ٔ	'
 ٕ	'
 ٖ	i
-ٗ	o
+ٗ	
 ٘	e
 ٙ	e
 ٚ	o
@@ -1431,7 +1431,7 @@
 ٜ	e
 ٝ	o
 ٞ	a
-ٟ	'
+ٟ	u'
 ٠	0
 ١	1
 ٢	2
@@ -1451,8 +1451,8 @@
 ٰ	a
 ٱ	'
 ٲ	a
-ٳ	u
-ٴ	'
+ٳ	u'
+ٴ	e
 ٵ	a
 ٶ	o
 ٷ	u
@@ -1509,14 +1509,14 @@
 ڪ	k
 ګ	g
 ڬ	g
-ڭ	g
+ڭ	ng
 ڮ	kp
 گ	g
 ڰ	gg
 ڱ	n
 ڲ	g
 ڳ	g
-ڴ	n
+ڴ	g
 ڵ	l
 ڶ	l
 ڷ	l
@@ -1531,7 +1531,7 @@
 ۀ	e
 ہ	h
 ۂ	h
-ۃ	t
+ۃ	h
 ۄ	o
 ۅ	o
 ۆ	o
@@ -1540,7 +1540,7 @@
 ۉ	u
 ۊ	u
 ۋ	v
-ی	i
+ی	y
 ۍ	ey
 ێ	e
 ۏ	v
@@ -1575,7 +1575,7 @@
 ۬	
 ۭ	
 ۮ	d
-ۯ	l
+ۯ	r
 ۰	0
 ۱	1
 ۲	2
@@ -1590,7 +1590,7 @@
 ۻ	l
 ۼ	n
 ۽	&
-۾	m
+۾	m.
 ۿ	h
 ܀	*
 ܁	.
@@ -1669,7 +1669,7 @@
 ݍ	zh
 ݎ	kh
 ݏ	ph
-ݐ	y
+ݐ	'y
 ݑ	p
 ݒ	p
 ݓ	c
@@ -1681,15 +1681,15 @@
 ݙ	dd
 ݚ	d
 ݛ	r
-ݜ	sh
+ݜ	s
 ݝ	ng
 ݞ	ng
 ݟ	g
 ݠ	p
 ݡ	v
 ݢ	g
-ݣ	n
-ݤ	ng
+ݣ	g
+ݤ	k
 ݥ	b
 ݦ	mb
 ݧ	n
@@ -1697,8 +1697,8 @@
 ݩ	n
 ݪ	sl
 ݫ	r
-ݬ	zh
-ݭ	sh
+ݬ	z
+ݭ	s
 ݮ	j
 ݯ	c
 ݰ	s
@@ -1930,6 +1930,31 @@
 ࡨ	l
 ࡩ	l
 ࡪ	s
+ࡰ	'
+ࡱ	'
+ࡲ	'
+ࡳ	'
+ࡴ	'
+ࡵ	'
+ࡶ	'
+ࡷ	'
+ࡸ	'
+ࡹ	'
+ࡺ	'
+ࡻ	'
+ࡼ	'
+ࡽ	'
+ࡾ	'
+ࡿ	'
+ࢀ	'
+ࢁ	'
+ࢂ	'
+ࢃ	'
+ࢄ	u
+ࢅ	y
+ࢆ	y
+ࢇ	.
+࢈	.
 ࢉ	nj
 ࢊ	c
 ࢋ	th
@@ -1938,6 +1963,14 @@
 ࢎ	.
 ࢐	LE
 ࢑	pt
+࢘	
+࢙	
+࢚	
+࢛	
+࢜	
+࢝	
+࢞	a
+࢟	a
 ࢠ	b
 ࢡ	b
 ࢢ	c
@@ -1954,7 +1987,7 @@
 ࢭ	
 ࢮ	dz
 ࢯ	ts
-ࢰ	j
+ࢰ	kh
 ࢱ	u
 ࢲ	z
 ࢳ	n
@@ -1962,23 +1995,33 @@
 ࢵ	q
 ࢶ	mb
 ࢷ	mp
-ࢸ	t
+ࢸ	tt
 ࢹ	nr
 ࢺ	ny
 ࢻ	f
 ࢼ	q
 ࢽ	n
-ࢾ	p
-ࢿ	t
-ࣀ	t
+ࢾ	ph
+ࢿ	th
+ࣀ	th
 ࣁ	ch
-ࣂ	k
+ࣂ	kh
 ࣃ	gy
 ࣄ	ky
 ࣅ	n
 ࣆ	n
 ࣇ	l
 ࣈ	gr
+ࣉ	
+࣊	
+࣋	
+࣌	
+࣍	
+࣎	
+࣏	
+࣐	
+࣑	
+࣒	
 ࣓	
 ࣔ	
 ࣕ	
@@ -54284,19 +54327,20 @@
 ﮽	.
 ﮾	.
 ﮿	.
-﯀	.
-﯁	.
-ﯓ	g
-ﯔ	g
-ﯕ	g
-ﯖ	g
+﯀	t
+﯁	t
+﯂	'
+ﯓ	ng
+ﯔ	ng
+ﯕ	ng
+ﯖ	ng
 ﯗ	u
 ﯘ	u
 ﯙ	o
 ﯚ	o
 ﯛ	u
 ﯜ	u
-ﯝ	u'
+ﯝ	ue
 ﯞ	v
 ﯟ	v
 ﯠ	o
@@ -54307,8 +54351,8 @@
 ﯥ	e
 ﯦ	e
 ﯧ	e
-ﯨ	y
-ﯩ	y
+ﯨ	a
+ﯩ	a
 ﯪ	i'a
 ﯫ	i'a
 ﯬ	i'e
@@ -54324,33 +54368,33 @@
 ﯶ	i'e
 ﯷ	i'e
 ﯸ	i'e
-ﯹ	i'y
-ﯺ	i'y
-ﯻ	i'y
-ﯼ	i
-ﯽ	i
-ﯾ	i
-ﯿ	i
+ﯹ	i'a
+ﯺ	i'a
+ﯻ	i'a
+ﯼ	y
+ﯽ	y
+ﯾ	y
+ﯿ	y
 ﰀ	i'j
 ﰁ	i'h
 ﰂ	i'm
-ﰃ	i'y
+ﰃ	i'a
 ﰄ	i'y
 ﰅ	bj
 ﰆ	bh
 ﰇ	bkh
 ﰈ	bm
-ﰉ	by
+ﰉ	ba
 ﰊ	by
 ﰋ	tj
 ﰌ	th
 ﰍ	tkh
 ﰎ	tm
-ﰏ	ty
+ﰏ	ta
 ﰐ	ty
 ﰑ	thj
 ﰒ	thm
-ﰓ	thy
+ﰓ	tha
 ﰔ	thy
 ﰕ	jh
 ﰖ	jm
@@ -54380,11 +54424,11 @@
 ﰮ	fh
 ﰯ	fkh
 ﰰ	fm
-ﰱ	fy
+ﰱ	fa
 ﰲ	fy
 ﰳ	qh
 ﰴ	qm
-ﰵ	qy
+ﰵ	qa
 ﰶ	qy
 ﰷ	ka
 ﰸ	kj
@@ -54392,39 +54436,39 @@
 ﰺ	kkh
 ﰻ	kl
 ﰼ	km
-ﰽ	ky
+ﰽ	ka
 ﰾ	ky
 ﰿ	lj
 ﱀ	lh
 ﱁ	lkh
 ﱂ	lm
-ﱃ	ly
+ﱃ	la
 ﱄ	ly
 ﱅ	mj
 ﱆ	mh
 ﱇ	mkh
 ﱈ	mm
-ﱉ	my
+ﱉ	ma
 ﱊ	my
 ﱋ	nj
 ﱌ	nh
 ﱍ	nkh
 ﱎ	nm
-ﱏ	ny
+ﱏ	na
 ﱐ	ny
 ﱑ	hj
 ﱒ	hm
-ﱓ	hy
+ﱓ	ha
 ﱔ	hy
 ﱕ	yj
 ﱖ	yh
 ﱗ	ykh
 ﱘ	ym
-ﱙ	yy
+ﱙ	ya
 ﱚ	yy
 ﱛ	dha
 ﱜ	ra
-ﱝ	ya
+ﱝ	aa
 ﱞ	un-
 ﱟ	in-
 ﱠ	a-
@@ -54435,37 +54479,37 @@
 ﱥ	i'z
 ﱦ	i'm
 ﱧ	i'n
-ﱨ	i'y
+ﱨ	i'a
 ﱩ	i'y
 ﱪ	br
 ﱫ	bz
 ﱬ	bm
 ﱭ	bn
-ﱮ	by
+ﱮ	ba
 ﱯ	by
 ﱰ	tr
 ﱱ	tz
 ﱲ	tm
 ﱳ	tn
-ﱴ	ty
+ﱴ	ta
 ﱵ	ty
 ﱶ	thr
 ﱷ	thz
 ﱸ	thm
 ﱹ	thn
-ﱺ	thy
+ﱺ	tha
 ﱻ	thy
-ﱼ	fy
+ﱼ	fa
 ﱽ	fy
-ﱾ	qy
+ﱾ	qa
 ﱿ	qy
 ﲀ	ka
 ﲁ	kl
 ﲂ	km
-ﲃ	ky
+ﲃ	ka
 ﲄ	ky
 ﲅ	lm
-ﲆ	ly
+ﲆ	la
 ﲇ	ly
 ﲈ	ma
 ﲉ	mm
@@ -54473,14 +54517,14 @@
 ﲋ	nz
 ﲌ	nm
 ﲍ	nn
-ﲎ	ny
+ﲎ	na
 ﲏ	ny
-ﲐ	ya
+ﲐ	aa
 ﲑ	yr
 ﲒ	yz
 ﲓ	ym
 ﲔ	yn
-ﲕ	yy
+ﲕ	ya
 ﲖ	yy
 ﲗ	i'j
 ﲘ	i'h
@@ -54576,25 +54620,25 @@
 ﳲ	a-
 ﳳ	u-
 ﳴ	i-
-ﳵ	ty
+ﳵ	ta
 ﳶ	ty
-ﳷ	`y
+ﳷ	`a
 ﳸ	`y
-ﳹ	ghy
+ﳹ	gha
 ﳺ	ghy
-ﳻ	sy
+ﳻ	sa
 ﳼ	sy
-ﳽ	shy
+ﳽ	sha
 ﳾ	shy
-ﳿ	hy
+ﳿ	ha
 ﴀ	hy
-ﴁ	jy
+ﴁ	ja
 ﴂ	jy
-ﴃ	khy
+ﴃ	kha
 ﴄ	khy
-ﴅ	sy
+ﴅ	sa
 ﴆ	sy
-ﴇ	dy
+ﴇ	da
 ﴈ	dy
 ﴉ	shj
 ﴊ	shh
@@ -54604,25 +54648,25 @@
 ﴎ	sr
 ﴏ	sr
 ﴐ	dr
-ﴑ	ty
+ﴑ	ta
 ﴒ	ty
-ﴓ	`y
+ﴓ	`a
 ﴔ	`y
-ﴕ	ghy
+ﴕ	gha
 ﴖ	ghy
-ﴗ	sy
+ﴗ	sa
 ﴘ	sy
-ﴙ	shy
+ﴙ	sha
 ﴚ	shy
-ﴛ	hy
+ﴛ	ha
 ﴜ	hy
-ﴝ	jy
+ﴝ	ja
 ﴞ	jy
-ﴟ	khy
+ﴟ	kha
 ﴠ	khy
-ﴡ	sy
+ﴡ	sa
 ﴢ	sy
-ﴣ	dy
+ﴣ	da
 ﴤ	dy
 ﴥ	shj
 ﴦ	shh
@@ -54651,6 +54695,22 @@
 ﴽ	aan
 ﴾	(
 ﴿	)
+﵀	*
+﵁	*
+﵂	*
+﵃	*
+﵄	*
+﵅	*
+﵆	*
+﵇	*
+﵈	*
+﵉	*
+﵊	*
+﵋	*
+﵌	*
+﵍	*
+﵎	*
+﵏	*
 ﵐ	tjm
 ﵑ	thj
 ﵒ	thj
@@ -54662,10 +54722,10 @@
 ﵘ	jmh
 ﵙ	jmh
 ﵚ	hmy
-ﵛ	hmy
+ﵛ	hma
 ﵜ	shj
 ﵝ	sjh
-ﵞ	sjy
+ﵞ	sja
 ﵟ	smh
 ﵠ	smh
 ﵡ	smj
@@ -54681,7 +54741,7 @@
 ﵫ	shmkh
 ﵬ	shmm
 ﵭ	shmm
-ﵮ	dhy
+ﵮ	dha
 ﵯ	dkhm
 ﵰ	dkhm
 ﵱ	tmh
@@ -54691,17 +54751,17 @@
 ﵵ	`jm
 ﵶ	`mm
 ﵷ	`mm
-ﵸ	`my
+ﵸ	`ma
 ﵹ	ghmm
 ﵺ	ghmy
-ﵻ	ghmy
+ﵻ	ghma
 ﵼ	fkhm
 ﵽ	fkhm
 ﵾ	qmh
 ﵿ	qmm
 ﶀ	lhm
 ﶁ	lhy
-ﶂ	lhy
+ﶂ	lha
 ﶃ	ljj
 ﶄ	ljj
 ﶅ	lkhm
@@ -54719,25 +54779,25 @@
 ﶓ	hmj
 ﶔ	hmm
 ﶕ	nhm
-ﶖ	nhy
+ﶖ	nha
 ﶗ	njm
 ﶘ	njm
-ﶙ	njy
+ﶙ	nja
 ﶚ	nmy
-ﶛ	nmy
+ﶛ	nma
 ﶜ	ymm
 ﶝ	ymm
 ﶞ	bkhy
 ﶟ	tjy
-ﶠ	tjy
+ﶠ	tja
 ﶡ	tkhy
-ﶢ	tkhy
+ﶢ	tkha
 ﶣ	tmy
-ﶤ	tmy
+ﶤ	tma
 ﶥ	jmy
-ﶦ	jhy
-ﶧ	jmy
-ﶨ	skhy
+ﶦ	jha
+ﶧ	jma
+ﶨ	skha
 ﶩ	shy
 ﶪ	shhy
 ﶫ	dhy
@@ -54769,20 +54829,23 @@
 ﷅ	smm
 ﷆ	skhy
 ﷇ	njy
-ﷰ	Salla
-ﷱ	Qala
+﷏	*
+ﷰ	sle
+ﷱ	qle
 ﷲ	Allah
-ﷳ	Akbar
+ﷳ	'akbar
 ﷴ	Muhammad
-ﷵ	Salam
-ﷶ	Rasul
-ﷷ	`Alayhi
-ﷸ	Wa-Sallam
-ﷹ	Salla
-ﷺ	Salla Allah `Alayhi Wa-Sallam
-ﷻ	Jalla Jalalahu
+ﷵ	sl`m
+ﷶ	rasul
+ﷷ	`alayhi
+ﷸ	wa-sallam
+ﷹ	salla
+ﷺ	salla Allah `alayhi wa-sallam
+ﷻ	jalla jalalahu
 ﷼	Rial
-﷽	Bismillah Ar-Rahman Ar-Rahim
+﷽	bismillah al-rahman al-rahim
+﷾	*
+﷿	*
 ︀	
 ︁	
 ︂	
@@ -55009,8 +55072,8 @@
 ﻬ	h
 ﻭ	w
 ﻮ	w
-ﻯ	y
-ﻰ	y
+ﻯ	a
+ﻰ	a
 ﻱ	y
 ﻲ	y
 ﻳ	y

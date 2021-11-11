@@ -1,4 +1,5 @@
 # arabic ungegn 2017
+## consonants
 ء	'
 ا	
 ب	b
@@ -26,42 +27,51 @@
 م	m
 ن	n
 ه	h
+ة	h
 و	w
 ي	y
-آ	a
+## vowels
 َ	a
 ِ	i
 ُ	u
 ْ	
+آ	a
+ٓ	a
+## note 3
 ً	
 ٍ	
 ٌ	
-# arabic ala-lc 2012
-گ	g
-ڴ	n
+# persian ungegn 2012
+## consonants
 پ	p
 چ	ch
 ژ	zh
+ک	k
+گ	g
+ی	y
+# arabic bgn/pcgn 1956
+## vowels
+ى	a
+ٱ	'
+## modified/non-standard
 ڤ	v
-ۋ	v
-ڥ	v
-ڢ	f
-ڧ	q
-ة	h
+ڨ	g
+ڴ	g
+## note 2
+ٔ	'
+ٕ	'
 أ	'
 إ	'
 ؤ	u'
 ئ	i'
-ﷹ	Salla
-ﷲ	Allah
-ﷷ	`Alayhi
-ﷸ	Wa-Sallam
-ﷺ	Salla Allah `Alayhi Wa-Sallam
-# arabic bgn/pcgn 1956
-ٱ	'
-ڨ	g
-ڭ	g
+# arabic ala-lc 2012
+## non-arabic consonants
+ۋ	v
+ڥ	v
+ڢ	f
+ڧ	q
 # afghanistan bgn/pcgn 2007
+## consonants
 ټ	t
 ځ	dz
 څ	ts
@@ -69,21 +79,22 @@
 ړ	r
 ږ	zh
 ښ	sh
-ک	k
 ګ	g
 ڼ	n
-ہ	h
-ى	y
+## vowels
 ٙ	e
-ی	i
 ې	e
 ۍ	ey
+ٴ	e
 # urdu bgn/pcgn 2007
+## consonants
 ٹ	t
 ڈ	d
 ڑ	r
 ں	n
+ہ	h
 ھ	h
+## vowels
 ے	e
 ٰ	a
 ۓ	e'
@@ -107,23 +118,31 @@
 ڱ	n
 ڻ	n
 # kurdish bgn/pcgn 2007
+## consonants
+## https://unicode.org/versions/Unicode14.0.0/ch09.pdf
 ڕ	r
 ڔ	r
 ڒ	r
 ڵ	l
 ڶ	l
+ڷ	l
+## vowels
 ێ	e
 ۆ	o
 ۊ	u
 # uighur ala-lc 2015
+ڭ	ng
 ۇ	u
 ۈ	u
 # kashmiri ala-lc 2012
-# https://www.unicode.org/L2/L2010/10169-input-india.pdf
-ۄ	o
+# https://en.wikipedia.org/wiki/Kashmiri_language
+# https://unicode.org/L2/L2010/10169-input-india.pdf
 ٲ	a
-ٳ	u
+ٳ	u'
+ٟ	u'
+ۄ	o
 ؠ	y
+ٗ	
 # kazakh ala-lc 2012
 ٵ	a
 ٶ	o
@@ -131,7 +150,7 @@
 ٸ	i
 ە	e
 # jawi-pegon ala-lc 2012
-# https://www.unicode.org/L2/L2003/03176-gafs.pdf
+# https://unicode.org/L2/L2003/03176-gafs.pdf
 ڎ	dh
 ڟ	th
 ڠ	ng
@@ -139,12 +158,8 @@
 ݢ	g
 ڽ	ny
 ۏ	v
-# https://en.wikipedia.org/wiki/Rasm
-ٮ	b
-ڡ	f
-ٯ	q
 # https://fr.wikipedia.org/wiki/Alphabet_national_tchadien
-# https://www.unicode.org/L2/L2010/10288r-arabic-proposal.pdf
+# https://unicode.org/L2/L2010/10288r-arabic-proposal.pdf
 ٖ	i
 ٘	e
 ٚ	o
@@ -161,7 +176,7 @@
 ࢥ	gb
 ࢤ	vb
 # https://fr.wikipedia.org/wiki/Caractères_coraniques_harmonisés
-# https://www.unicode.org/L2/L2010/10288r-arabic-proposal.pdf
+# https://unicode.org/L2/L2010/10288r-arabic-proposal.pdf
 ࣵ	a
 ࣶ	i
 ࣷ	o
@@ -175,19 +190,35 @@
 ࢢ	c
 ࢣ	t
 ݕ	p
-# https://www.sil.org/resources/archives/32286
-# https://www.unicode.org/L2/L2010/10288r-arabic-proposal.pdf
-ࢡ	b
-ࢨ	y
-ࢩ	ny
-# https://www.unicode.org/L2/L2013/13178-bravanese.pdf
-ࢶ	mb
-ࢷ	mp
-ࢸ	t
-ࢹ	nr
-ࢺ	ny
-# http://www.unicode.org/wg2/docs/n3117.pdf
-# https://en.wikipedia.org/wiki/Burushaski
+# https://unicode.org/wg2/docs/n3180.pdf
+ؖ	i
+ؾ	i
+ؿ	i
+ݾ	s
+ݿ	g
+ػ	g
+ؼ	g
+ؽ	y
+# https://unicode.org/L2/L2001/01427-parkari_additions.pdf
+ۮ	d
+ۯ	r
+ۿ	h
+# https://unicode.org/wg2/docs/n2723.pdf
+## https://en.wikipedia.org/wiki/Ormuri
+ݫ	r
+ݬ	z
+ݭ	s
+## kalami
+ٞ	a
+# https://unicode.org/wg2/docs/n3117.pdf
+## khowar
+ݮ	j
+ݯ	c
+ݰ	s
+ݱ	z
+## torwali
+ݲ	j
+## https://en.wikipedia.org/wiki/Burushaski
 ݳ	a
 ݴ	aa
 ݵ	i
@@ -199,14 +230,58 @@
 ݻ	ee
 ݼ	ch
 ݽ	s
-ݘ	c
-ڞ	ch
-ݣ	n
-# https://www.unicode.org/L2/L2001/01427-parkari_additions.pdf
-ۮ	d
-ۯ	l
-ۿ	h
-# https://www.unicode.org/L2/L2010/10288r-arabic-proposal.pdf
+# https://unicode.org/L2/L2019/19339-bosnian-arabic.pdf
+ࢉ	nj
+ࢊ	c
+# https://unicode.org/L2/L2019/19340-javanese-sundanese-arabic.pdf
+ࢋ	th
+ࢌ	th
+ࢍ	g
+# https://www.sil.org/resources/archives/32286
+# https://unicode.org/L2/L2010/10288r-arabic-proposal.pdf
+ࢡ	b
+ࢨ	y
+ࢩ	ny
+# https://unicode.org/L2/L2011/11209-n4072-arabic.pdf
+# chechen knab 2003
+ࢭ	
+ࢮ	dz
+ࢯ	ts
+ࢱ	u
+ࢰ	kh
+# https://unicode.org/L2/L2012/12181r-zain-with-hat.pdf
+ࢲ	z
+# https://unicode.org/L2/L2019/19313-qaf-with-dot-below.pdf
+ࢵ	q
+# https://unicode.org/L2/L2013/13178-bravanese.pdf
+ࢶ	mb
+ࢷ	mp
+ࢸ	tt
+ࢹ	nr
+ࢺ	ny
+# https://unicode.org/L2/L2014/14207r-warsh-model.pdf
+ࢻ	f
+ࢼ	q
+ࢽ	n
+# https://unicode.org/L2/L2018/18032-hindko.pdf
+# https://en.wikipedia.org/wiki/Hindko
+ࢾ	ph
+ࢿ	th
+ࣀ	th
+ࣁ	ch
+ࣂ	kh
+# https://unicode.org/L2/L2018/18094-arabic-hausa.pdf
+# https://en.wikipedia.org/wiki/Hausa_language
+ࣃ	gy
+ࣄ	ky
+# https://unicode.org/L2/L2019/19118r-jeem-with-3-dots.pdf
+ࣅ	n
+ࣆ	n
+# https://unicode.org/L2/L2019/19111r-punjabi-lam.pdf
+ࣇ	ਲ਼
+# https://unicode.org/L2/L2019/19252-balti-graf.pdf
+ࣈ	gr
+# https://unicode.org/L2/L2010/10288r-arabic-proposal.pdf
 ## guinea
 ࣸ	u
 ࣻ	un
@@ -215,290 +290,109 @@
 ## philippines
 ࣾ	o
 ## rohingya
+### consonants
 ࢪ	r
 ࢫ	w
 ࢬ	y
+### vowels
 ࣤ	o
 ࣦ	e
 ࣥ	ou
 ࣧ	on
 ࣩ	en
 ࣨ	oun
+### tone marks
 ࣪	
 ࣫	
 ࣬	
 ࣭	
 ࣮	
 ࣯	
-# https://www.unicode.org/L2/L2011/11209-n4072-arabic.pdf
-ࢭ	
-ࢮ	dz
-ࢯ	ts
-ࢰ	j
-ࢱ	u
-# http://www.unicode.org/wg2/docs/n3117.pdf
-ݮ	j
-ݯ	c
-ݰ	s
-ݱ	z
-ݲ	j
-# https://www.unicode.org/L2/L2014/14207r-warsh-model.pdf
-ࢻ	f
-ࢼ	q
-ࢽ	n
-# https://www.unicode.org/wg2/docs/n3180.pdf
-ؖ	i
-ػ	g
-ؼ	g
-ؽ	y
-ؾ	i
-ؿ	i
-ݾ	s
-ݿ	g
-# https://www.unicode.org/wg2/docs/n2723.pdf
-ݫ	r
-ݬ	zh
-ݭ	sh
-ٞ	a
-# https://www.unicode.org/wg2/docs/n2598.pdf
-ݐ	y
+# https://unicode.org/L2/L2011/11033r-arabic-short-vowel.pdf
+ࣿ	
+# https://unicode.org/wg2/docs/n2598.pdf
+## 3.1.1
+## https://en.wikipedia.org/wiki/Fula_language
+## https://en.wikipedia.org/wiki/Hausa_language
+ݐ	'y
 ݑ	p
 ݓ	c
 ݔ	ny
 ݗ	ng
+ݘ	c
 ݚ	d
 ݛ	r
 ݞ	ng
 ݟ	g
 ݠ	p
 ݡ	v
+ݤ	k
 ݥ	b
-ݜ	sh
-ݩ	n
-# https://www.unicode.org/L2/L2018/18032-hindko.pdf
-ࢾ	p
-ࢿ	t
-ࣀ	t
-ࣁ	ch
-ࣂ	k
-# https://www.unicode.org/L2/L2018/18094-arabic-hausa.pdf
-ࣃ	gy
-ࣄ	ky
-# http://www.unicode.org/L2/L2019/19118r-jeem-with-3-dots.pdf
-ࣅ	n
-ࣆ	n
-# http://www.unicode.org/L2/L2019/19111r-punjabi-lam.pdf
-ࣇ	l
-# https://www.unicode.org/L2/L2011/11033r-arabic-short-vowel.pdf
-ࣿ	
-# http://unicode.org/L2/L2002/02163-n2413-4-urdu.pdf
-؏	*
-؃	#
-ؕ	
-# http://unicode.org/L2/L2011/11278-arabic-letter-mark.pdf
-؜	
-# https://unicode.org/L2/L2012/12181r-zain-with-hat.pdf
-ࢲ	z
-# http://www.unicode.org/L2/L2019/19002-arabic-derived-ltrs.pdf
-ۑ	ny
-# https://unicode.org/L2/L2019/19339-bosnian-arabic.pdf
-ࢉ	nj
-ࢊ	c
-# http://unicode.org/L2/L2019/19340-javanese-sundanese-arabic.pdf
-ࢋ	th
-ࢌ	th
-ࢍ	g
-# https://unicode.org/L2/L2019/19313-qaf-with-dot-below.pdf
-ࢵ	q
-# https://unicode.org/L2/L2019/19252-balti-graf.pdf
-ࣈ	gr
-# https://en.wikipedia.org/wiki/Urdu_alphabet
-ڐ	d
-ۃ	t
-# https://en.wikipedia.org/wiki/Pashto_alphabet
-ڛ	s
-ۀ	e
-# https://en.wikipedia.org/wiki/Saraiki_alphabet
+## 3.2
+ݣ	g
+## 3.3
+## https://en.wikipedia.org/wiki/Saraiki_alphabet
+## https://en.wikipedia.org/wiki/Shina_language
 ݙ	dd
-ڋ	dd
-ڰ	gg
+ݜ	s
 ݨ	n
+ݩ	n
+# https://unicode.org/wg2/docs/n4474.pdf
 # https://en.wikipedia.org/wiki/Arwi
-ٗ	ஒ
+ࢳ	ங
+ࢴ	க
 ࣣ	எ
-ڣ	ப்
-ࢳ	ங்
-ࢴ	க்
-ڹ	ண்
-# https://en.wikipedia.org/wiki/Arabi_Malayalam
+# https://en.wikipedia.org/wiki/Rasm
+ٮ	b
+ڡ	f
+ٯ	q
+# https://en.wikipedia.org/wiki/Arabi_Malayalam_script
 ڿ	ഞ
 ۺ	ഷ
 ۻ	ള
 ۼ	ങ
-۾	മ
 ڗ	ഡ
-# https://en.wikipedia.org/wiki/Wolofal_alphabet
-ݤ	ng
+ڹ	ണ
+# https://en.wikipedia.org/wiki/Urdu_alphabet
+ڐ	d
+ۃ	h
 # https://en.wikipedia.org/wiki/Kyrgyz_alphabets
 ۅ	o
 ۉ	u
-# https://en.wikipedia.org/wiki/Tifinagh
+# https://fr.wikipedia.org/wiki/ڞ
+# https://en.wiktionary.org/wiki/ڞ
+# https://en.wikipedia.org/wiki/Burushaski
+ڞ	ch
+# https://en.wikipedia.org/wiki/Pashto_alphabet
+ڛ	s
+ۀ	e
+# https://fr.wikipedia.org/wiki/ڋ
+# https://fr.wikipedia.org/wiki/ڰ
+# https://en.wikipedia.org/wiki/Saraiki_alphabet
+ڋ	dd
+ڰ	gg
+# https://fr.wikipedia.org/wiki/ۑ
+# https://unicode.org/L2/L2019/19002-arabic-derived-ltrs.pdf
+# https://unicode.org/L2/L2018/18094-arabic-hausa.pdf
+ۑ	ny
+# https://fr.wikipedia.org/wiki/ڣ
+# https://en.wikipedia.org/wiki/Arwi
+ڣ	ப
+# https://fr.wikipedia.org/wiki/ڲ
+# https://en.wiktionary.org/wiki/ڲ
 ڲ	g
-# https://fr.wikipedia.org/wiki/Brahoui
-# https://sites.google.com/site/brahuilb/
-# http://unicode.org/L2/L2011/11090-kurdish.pdf
-ڷ	l
+# https://fr.wikipedia.org/wiki/ڂ
+# https://en.wiktionary.org/wiki/ڂ
 # http://archives.miloush.net/michkap/archive/2011/12/14/10247653.html
 ڂ	dz
-# https://www.academia.edu/43833773/Caucasian_languages_in_Arabic_script
+# https://fr.wikipedia.org/wiki/ڝ
 ڝ	ts
+# https://fr.wikipedia.org/wiki/ڸ
 ڸ	l
-# https://fr.wikipedia.org/wiki/
+# https://fr.wikipedia.org/wiki/ڜ
+# https://en.wiktionary.org/wiki/ڜ
 ڜ	ch
-# https://unicode.org/L2/L2009/09144-arabic-samvat.pdf
-؄	sm.
-# https://unicode.org/L2/L2003/03159-arabic-3dot.pdf
-؞	.
-# Honorifics
-# https://unicode.org/wg2/docs/n2483.pdf
-ؐ	
-ؑ	
-ؒ	
-ؓ	
-ؔ	
-# Quranic annotation signs
-# https://unicode.org/L2/L2006/06358r-n3185r-quranic-diacritics.pdf
-ؗ	
-ؘ	
-ؙ	
-ؚ	
-# Quranic annotation signs
-ۖ	
-ۗ	
-ۘ	
-ۙ	
-ۚ	
-ۛ	
-ۜ	
-۝	#
-۞	#
-۟	
-۠	
-ۡ	
-ۢ	
-ۣ	
-ۤ	
-ۥ	
-ۦ	
-ۧ	
-ۨ	
-۩	^
-۪	
-۫	
-۬	
-ۭ	
-# Quranic annotation signs
-࣓	
-ࣔ	
-ࣕ	
-ࣖ	
-ࣗ	
-ࣘ	
-ࣙ	
-ࣚ	
-ࣛ	
-ࣜ	
-ࣝ	
-ࣞ	
-ࣟ	
-࣠	
-࣡	
-࣢	#
-# Quranic annotation signs
-# https://unicode.org/L2/L2009/09419r-encode-koranic.pdf
-ࣰ	a
-ࣱ	u
-ࣲ	i
-ࣳ	u
-# Rumi Numeral Symbols
-# https://unicode.org/charts/PDF/U10E60.pdf
-𐹻	1/2
-𐹼	1/4
-𐹽	1/3
-𐹾	2/3
-# Arabic Presentation Forms-A
-# https://unicode.org/charts/PDF/UFB50.pdf
-﮲	.
-﮳	.
-﮴	.
-﮵	.
-﮶	.
-﮷	.
-﮸	.
-﮹	.
-﮺	.
-﮻	.
-﮼	.
-﮽	.
-﮾	.
-﮿	.
-﯀	.
-﯁	.
-﴾	(
-﴿	)
-ﷰ	Salla
-ﷱ	Qala
-ﷳ	Akbar
-ﷴ	Muhammad
-ﷵ	Salam
-ﷶ	Rasul
-ﷻ	Jalla Jalalahu
-﷽	Bismillah Ar-Rahman Ar-Rahim
-# Arabic Presentation Forms-B
-# https://www.unicode.org/charts/PDF/UFE70.pdf
-ﹳ	_
-﻿	
-# Arabic Mathematical Alphabetic Symbols
-# https://www.unicode.org/charts/PDF/U1EE00.pdf
-𞸀	a
-𞺀	a
-𞻰	mh
-𞻱	hd
-# other
-ٴ	'
-ٓ	a
-ٔ	'
-ٕ	'
-ٟ	'
+# tatwheel
 ـ	
+# shadda
 ّ	
-# Punctuation
-؉	%0
-؊	%00
-،	,
-؍	/
-؛	;
-؟	?
-٪	%
-٫	.
-٬	,
-٭	*
-۔	.
-# Radix symbols
-؆	∛
-؇	∜
-# symbols
-؈	r
-؁	sn.
-؅	#
-࣢	#
-؀	#
-؂	^
-؎	^
-۽	&
-# https://unicode.org/L2/L2020/20245-three-arabic-symbols.pdf
-؝	.
-࢐	LE
-࢑	pt
-# https://unicode.org/L2/L2020/20071-arabic-tail.pdf
-ࢎ	.

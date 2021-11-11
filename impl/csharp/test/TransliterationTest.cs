@@ -17,7 +17,7 @@ namespace AnyAsciiTests
 			check(0x0080, "");
 			check(0x00ff, "y");
 			check(0xe000, "");
-			check(0xfdff, "");
+			check(0xffff, "");
 			check(0x000e0020, " ");
 			check(0x000e007e, "~");
 			check(0x000f0000, "");

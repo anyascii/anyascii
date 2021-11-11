@@ -53,7 +53,7 @@ int main() {
 	checkcp(0x0080, "");
 	checkcp(0x00ff, "y");
 	checkcp(0xe000, "");
-	checkcp(0xfdff, "");
+	checkcp(0xffff, "");
 	checkcp(0x000e0020, " ");
 	checkcp(0x000e007e, "~");
 	checkcp(0x000f0000, "");

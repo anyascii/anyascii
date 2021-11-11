@@ -94,7 +94,7 @@ fn test() {
     check("\u{0080}", "");
     check("\u{00ff}", "y");
     check("\u{e000}", "");
-    check("\u{fdff}", "");
+    check("\u{ffff}", "");
     check("\u{e0020}", " ");
     check("\u{e007e}", "~");
     check("\u{f0000}", "");

@@ -11,7 +11,7 @@ using Test
 	check(Char(0x0080), "")
 	check(Char(0x00ff), "y")
 	check(Char(0xe000), "")
-	check(Char(0xfdff), "")
+	check(Char(0xffff), "")
 	check(Char(0x000e0020), " ")
 	check(Char(0x000e007e), "~")
 	check(Char(0x000f0000), "")

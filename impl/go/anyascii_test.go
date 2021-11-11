@@ -17,7 +17,7 @@ func TestTransliterate(t *testing.T) {
 	check("\u0080", "")
 	check("\u00ff", "y")
 	check("\ue000", "")
-	check("\ufdff", "")
+	check("\uffff", "")
 	check("\U000e0020", " ")
 	check("\U000e007e", "~")
 	check("\U000f0000", "")
