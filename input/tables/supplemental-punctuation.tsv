@@ -105,3 +105,21 @@
 ⹐	+
 ⹑	+
 ⹒	&
+## https://unicode.org/wg2/docs/n5147r-medieval-!.pdf
+⹓	!
+⹔	?
+# Brackets
+# https://unicode.org/L2/L2021/21042-phonetic%20punct.pdf
+⹕	[
+⹖	]
+⹗	[
+⹘	]
+# Parentheses top and bottom halves
+# https://unicode.org/L2/L2021/21042-phonetic%20punct.pdf
+⹙	(
+⹚	)
+⹛	(
+⹜	)
+# Oblique hyphen
+# https://unicode.org/wg2/docs/n5152-oblique-hyphen.pdf
+⹝	-
