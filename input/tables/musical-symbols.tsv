@@ -282,3 +282,8 @@
 𝇧	#
 # Accidental
 𝇨	b
+# Iranian notation
+# Accidentals for quarter tones
+# https://unicode.org/L2/L2020/20159-iran-music-symbols.pdf
+𝇩	#
+𝇪	b
