@@ -231,6 +231,7 @@ private fun custom() = Table()
         .then(Table("vithkuqi"))
         .then(Table("toto"))
         .then(tangsa())
+        .then(znamennyMusicalNotation())
 
 private fun cyrillic() = Table("cyrillic")
         .cased(codePoints(UScript.CYRILLIC))
@@ -397,3 +398,5 @@ private fun enclosedIdeographicSupplement() = Table()
 private fun tangsa() = codePoints(UScript.TANGSA)
         .filterName { "LETTER" in it }
         .toTable { it.name.substringAfterLast(' ').removeSuffix("A").lower() }
+
+private fun znamennyMusicalNotation() = UnicodeBlock.ZNAMENNY_MUSICAL_NOTATION.toTable { if (" NEUME " in it.name) "-" else "" }
