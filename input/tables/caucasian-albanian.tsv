@@ -1,5 +1,7 @@
-# https://www.unicode.org/wg2/docs/n4131.pdf
-# https://www.unicode.org/charts/PDF/U10530.pdf
+# https://unicode.org/charts/PDF/U10530.pdf
+# https://unicode.org/wg2/docs/n4131.pdf
+#
+# Letters
 𐔰	a
 𐔱	b
 𐔲	g
@@ -13,7 +15,7 @@
 𐔺	y
 𐔻	z
 𐔼	i
-𐔽	?
+𐔽	`
 𐔾	l
 𐔿	n'
 𐕀	x
@@ -52,5 +54,5 @@
 𐕡	w
 𐕢	p
 𐕣	k
-#
+# Punctuation
 𐕯	*
