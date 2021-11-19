@@ -1,7 +1,7 @@
-# https://www.unicode.org/charts/PDF/U0E80.pdf
-# https://r12a.github.io/scripts/lao/block
+# https://unicode.org/charts/PDF/U0E80.pdf
 #
-# ungegn 2013 consonant characters (initial)
+# bgn/pcgn  1966
+## inital consonants
 ກ	k
 ຂ	kh
 ຄ	kh
@@ -30,7 +30,7 @@
 ຫ	h
 ອ	
 ຮ	h
-# ungegn 2013 vocalic nuclei
+## vowels
 ະ	a
 ັ	a
 າ	a
@@ -48,19 +48,22 @@
 ໄ	ai
 ໃ	ai
 ຳ	am
-# ungegn 2013 notes
+## notes
+### 3
 ່	
 ້	
 ໊	
 ໋	
+### 5
 ໜ	n
 ໝ	m
+### 7
+ຽ	y
 # other
 ຯ	...
-ຽ	i
-ໆ	'
+ໆ	-
 ໌	
-# https://www.unicode.org/wg2/docs/n4861-17106r-lao-for-pali.pdf
+# https://unicode.org/wg2/docs/n4861-17106r-lao-for-pali.pdf
 ຆ	gh
 ຉ	ch
 ຌ	jh
@@ -76,6 +79,6 @@
 ຩ	s
 ຬ	l
 ຺	
-# https://www.unicode.org/wg2/docs/n3893.pdf
+# https://unicode.org/wg2/docs/n3893.pdf
 ໞ	g
-ໟ	n
+ໟ	ຍ
