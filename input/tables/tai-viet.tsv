@@ -2,7 +2,7 @@
 # knab 2013
 # https://unicode.org/L2/L2008/08217-tai-don.pdf
 #
-# consonants
+# Consonants
 ꪀ	k
 ꪁ	k
 ꪂ	kh
@@ -51,7 +51,7 @@
 ꪭ	h
 ꪮ	
 ꪯ	
-# vowels and finals
+# Vowels and finals
 ꪰ	a
 ꪱ	aa
 ꪲ	i
@@ -67,16 +67,16 @@
 ꪼ	ai
 ꪽ	an
 ꪾ	am
-# tones
+# Tones
 ꪿	
 ꫀ	
 ꫁	
 ꫂ	
-# word ligature symbols
+# Word ligature symbols
 ꫛ	Kon
 ꫜ	Nueng
-# repetition mark
+# Repetition mark
 ꫝ	-
-# punctuation
+# Punctuation
 ꫞	<
 ꫟	>

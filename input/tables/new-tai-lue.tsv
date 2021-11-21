@@ -1,7 +1,7 @@
 # https://unicode.org/charts/PDF/U1980.pdf
 # knab 2013
 #
-# consonants
+# Consonants
 ᦀ	
 ᦁ	
 ᦂ	g
@@ -46,7 +46,7 @@
 ᦩ	kw
 ᦪ	sw
 ᦫ	sw
-# vowel signs
+# Vowel signs
 ᦰ	'
 ᦱ	aa
 ᦲ	i
@@ -64,7 +64,7 @@
 ᦾ	oai
 ᦿ	uei
 ᧀ	ii
-# final consonants
+# Final consonants
 ᧁ	w
 ᧂ	ng
 ᧃ	n
@@ -72,11 +72,11 @@
 ᧅ	k
 ᧆ	t
 ᧇ	p
-# tone marks
+# Tone marks
 ᧈ	
 ᧉ	
-# digits
+# Digits
 ᧚	1
-# various signs
+# Various signs
 ᧞	lae
 ᧟	laew
