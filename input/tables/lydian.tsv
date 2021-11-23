@@ -1,7 +1,6 @@
-# https://www.unicode.org/charts/PDF/U10920.pdf
-# https://www.unicode.org/wg2/docs/n3019.pdf
-# melchert 2004
-# https://en.wikipedia.org/wiki/Lydian_alphabet
+# https://unicode.org/charts/PDF/U10920.pdf
+# https://unicode.org/wg2/docs/n3019.pdf
+## Melchert 2004
 𐤠	a
 𐤡	b
 𐤢	g
@@ -16,16 +15,17 @@
 𐤫	n
 𐤬	o
 𐤭	r
-𐤮	S
+𐤮	s
 𐤯	t
 𐤰	u
 𐤱	f
 𐤲	q
 𐤳	s
-𐤴	T
-𐤵	A
-𐤶	E
-𐤷	L
-𐤸	N
+𐤴	t
+𐤵	a
+𐤶	e
+𐤷	l
+𐤸	n
 𐤹	c
+# Punctuation
 𐤿	^
