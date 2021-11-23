@@ -1,56 +1,55 @@
-# http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.588.6678&rep=rep1&type=pdf
-# https://www.unicode.org/L2/L2018/18338r2-lisu-letter-yha.pdf
-# https://en.wikipedia.org/wiki/Fraser_script
-ꓐ	b
-ꓑ	p
-ꓒ	ph
-ꓓ	d
-ꓔ	t
-ꓕ	th
-ꓖ	g
-ꓗ	k
-ꓘ	kh
-ꓙ	j
-ꓚ	c
+# https://unicode.org/charts/PDF/UA4D0.pdf
+# knab 2012
+## Main characters
+ꓐ	bb
+ꓑ	b
+ꓒ	p
+ꓓ	dd
+ꓔ	d
+ꓕ	t
+ꓖ	gg
+ꓗ	g
+ꓘ	k
+ꓙ	rr
+ꓚ	zh
 ꓛ	ch
-ꓜ	z
-ꓝ	tz
-ꓞ	ts
+ꓜ	zz
+ꓝ	z
+ꓞ	c
 ꓟ	m
 ꓠ	n
 ꓡ	l
 ꓢ	s
 ꓣ	r
-ꓤ	zh
+ꓤ	ss
 ꓥ	ng
-ꓦ	v
+ꓦ	h
 ꓧ	h
-ꓨ	q
+ꓨ	h'
 ꓩ	f
 ꓪ	w
-ꓫ	x
+ꓫ	sh
 ꓬ	y
-ꓭ	gh
-#
+ꓭ	e
 ꓮ	a
-ꓯ	ae
-ꓰ	e
-ꓱ	ew
+ꓯ	ai
+ꓰ	ei
+ꓱ	ei
 ꓲ	i
 ꓳ	o
 ꓴ	u
-ꓵ	uh
-ꓶ	eu
-ꓷ	oe
-#
-ꓸ	t
-ꓹ	c
-ꓺ	s
-ꓻ	r
-ꓼ	q
-ꓽ	p
-#
+ꓵ	u
+ꓶ	e
+ꓷ	e
+## Tone marks, etc.
+ꓸ	l
+ꓹ	q
+ꓺ	
+ꓻ	x
+ꓼ	r
+ꓽ	t
 ꓾	,
 ꓿	.
-#
+# https://unicode.org/charts/PDF/U11FB0.pdf
+# https://unicode.org/L2/L2018/18338r2-lisu-letter-yha.pdf
 𑾰	yh
