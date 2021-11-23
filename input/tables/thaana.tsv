@@ -1,7 +1,7 @@
 # https://unicode.org/charts/PDF/U0780.pdf
+#
 # maldivian ungegn 2016
-# https://web.archive.org/web/20031206044338/http://homepage.ntlworld.com/stone-catend/Tha02.pdf
-# consonants
+## Consonants
 ހ	h
 ށ	sh
 ނ	n
@@ -26,7 +26,7 @@
 ޕ	p
 ޖ	j
 ޗ	ch
-# extensions for arabic
+## Consonants with diacritical marks
 ޘ	th'
 ޙ	h'
 ޚ	kh
@@ -41,17 +41,18 @@
 ޣ	gh
 ޤ	q
 ޥ	w
-# vowels
+## Vowels
 ަ	a
 ާ	aa
-ި	i
-ީ	ee
-ު	u
-ޫ	oo
 ެ	e
 ޭ	ey
+ި	i
+ީ	ee
 ޮ	o
 ޯ	oa
+ު	u
+ޫ	oo
+## Diacritical mark
 ް	
-# addu
+# https://en.wikipedia.org/wiki/Ṇaviyani
 ޱ	n
