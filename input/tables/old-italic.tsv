@@ -1,9 +1,7 @@
-# https://www.unicode.org/charts/PDF/U10300.pdf
-# https://en.wiktionary.org/wiki/Appendix:Old_Italic_script
-# https://www.unicode.org/wg2/docs/n4395.pdf
-# https://www.unicode.org/wg2/docs/n4669r-olditalic.pdf
-# https://www.univie.ac.at/raetica/wiki/Category:Character
-# https://en.wikipedia.org/wiki/Old_Italic_scripts
+# https://unicode.org/charts/PDF/U10300.pdf
+#
+# The World's Writing Systems, Daniels 1996
+## Etruscan
 𐌀	a
 𐌁	b
 𐌂	c
@@ -18,7 +16,7 @@
 𐌋	l
 𐌌	m
 𐌍	n
-𐌎	sh
+𐌎	s
 𐌏	o
 𐌐	p
 𐌑	s
@@ -29,17 +27,17 @@
 𐌖	u
 𐌗	x
 𐌘	ph
-𐌙	kh
+𐌙	ch
 𐌚	f
-#
+## Southern Italy
 𐌛	r
 𐌜	c
-#
 𐌝	i
 𐌞	u
-#
-𐌟	*
-#
+## Northern Italy
+𐌮	t'
+𐌯	t'
+# https://unicode.org/wg2/docs/n4395.pdf
+𐌟	s
+# https://unicode.org/wg2/docs/n4669r-olditalic.pdf
 𐌭	j
-𐌮	th
-𐌯	th
