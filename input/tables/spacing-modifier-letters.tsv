@@ -1,74 +1,62 @@
-ʰ	h
-ʱ	h
-ʲ	j
-ʳ	r
-ʴ	r
-ʵ	r
-ʶ	R
-ʷ	w
-ʸ	y
-#
+# https://unicode.org/charts/PDF/U02B0.pdf
+# Miscellaneous phonetic modifiers
 ʹ	'
-ʺ	"
-ʻ	'
+ʺ	''
+ʻ	`
 ʼ	'
-ʽ	'
+ʽ	`
 ʾ	'
 ʿ	`
-ˀ	?
-ˁ	?
+ˀ	'
+ˁ	`
 ˂	<
 ˃	>
 ˄	^
 ˅	v
 ˆ	^
-ˇ	v
+ˇ	^
 ˈ	'
 ˉ	-
 ˊ	'
 ˋ	`
 ˌ	,
 ˍ	_
-ˎ	,
-ˏ	,
+ˎ	`
+ˏ	'
 ː	:
-ˑ	'
-˒	`
-˓	'
-˔	,
-˕	,
+ˑ	-
+˒	'
+˓	`
+˔	+
+˕	+
 ˖	+
 ˗	-
-#
+# Spacing clones of diacritics
 ˘	^
 ˙	.
-˚	'
+˚	.
 ˛	,
 ˜	~
 ˝	"
-#
+# Additions based on 1989 IPA
 ˞	r
 ˟	x
-ˠ	g
-ˡ	l
-ˢ	s
-ˣ	x
-ˤ	?
+# Tone letters
 # https://en.wikipedia.org/wiki/Tone_letter
 ˥	5
 ˦	4
 ˧	3
 ˨	2
 ˩	1
-#
+# Extended Bopomofo tone marks
 ˪	3
 ˫	7
-#
-ˬ	v
+# IPA modifiers
+ˬ	_
 ˭	=
-#
-ˮ	"
-#
+# Other modifier letter
+ˮ	''
+# UPA modifiers
 ˯	v
 ˰	^
 ˱	<
