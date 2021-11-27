@@ -1,12 +1,14 @@
+# https://unicode.org/charts/PDF/U2150.pdf
+#
+# Archaic Roman numerals
 # https://en.wikipedia.org/wiki/Roman_numerals#Apostrophus
 ↀ	(|)
 ↁ	|))
 ↂ	((|))
 Ↄ	C
-ↄ	c
-ↅ	6
 ↆ	L
 ↇ	|)))
 ↈ	(((|)))
+# Turned digits
 ↊	2
 ↋	3

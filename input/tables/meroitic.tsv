@@ -1,9 +1,9 @@
-# https://unicode.org/wg2/docs/n3665.pdf
 # https://escholarship.org/uc/item/3128r3sw
+# https://unicode.org/wg2/docs/n3665.pdf
 #
 # Meroitic Hieroglyphs
-# https://www.unicode.org/charts/PDF/U10980.pdf
-# letters
+# https://unicode.org/charts/PDF/U10980.pdf
+## letters
 𐦀	a
 𐦁	e
 𐦂	i
@@ -34,12 +34,12 @@
 𐦛	te
 𐦜	to
 𐦝	d
-# symbols
+## Symbols
 𐦞	*
 𐦟	+
 # Meroitic Cursive
-# https://www.unicode.org/charts/PDF/U109A0.pdf
-# letters
+# https://unicode.org/charts/PDF/U109A0.pdf
+## letters
 𐦠	a
 𐦡	e
 𐦢	i
@@ -64,8 +64,19 @@
 𐦵	te
 𐦶	to
 𐦷	d
-# fractions
-𐦽	.5
-# logograms
+## Logograms
 𐦾	RMT
 𐦿	IMN
+## fractions
+𐦽	.5
+𐧶	1
+𐧷	2
+𐧸	3
+𐧹	4
+𐧺	5
+𐧻	6
+𐧼	7
+𐧽	8
+𐧾	9
+𐧿	10
+𐦼	11

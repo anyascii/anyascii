@@ -6,7 +6,6 @@ import com.ibm.icu.lang.UCharacterCategory
 import com.ibm.icu.lang.UScript
 import java.nio.file.Path
 import java.util.Locale
-import kotlin.math.roundToInt
 
 fun main() {
     Locale.setDefault(Locale.ROOT)
@@ -73,7 +72,7 @@ private fun custom() = Table()
         .then(kana())
         .then(Table("lao"))
         .then(Table("runic"))
-        .then(oldItalic())
+        .then(Table("old-italic"))
         .then(Table("osmanya"))
         .then(Table("deseret"))
         .then(arabic())
@@ -114,14 +113,14 @@ private fun custom() = Table()
         .then(Table("geometric-shapes-extended"))
         .then(Table("math-operators"))
         .then(canadianSyllabics())
-        .then(meeteiMayek())
+        .then(Table("meetei-mayek"))
         .then(Table("buginese"))
         .then(Table("alchemical-symbols"))
         .then(Table("phoenician"))
         .then(linearAB())
         .then(Table("chess-symbols"))
         .then(Table("ornamental-dingbats"))
-        .then(countingRodNumerals())
+        .then(Table("counting-rod-numerals"))
         .then(UnicodeBlock.SHORTHAND_FORMAT_CONTROLS.toTable { "" })
         .then(Table("miao"))
         .then(Table("makasar"))
@@ -142,7 +141,7 @@ private fun custom() = Table()
         .then(cherokee())
         .then(Table("new-tai-lue"))
         .then(Table("saurashtra"))
-        .then(syriac())
+        .then(Table("syriac"))
         .then(Table("limbu"))
         .then(Table("symbols-for-legacy-computing"))
         .then(Table("mandaic"))
@@ -173,7 +172,7 @@ private fun custom() = Table()
         .then(Table("balinese"))
         .then(Table("lepcha"))
         .then(Table("old-persian"))
-        .then(meroitic())
+        .then(Table("meroitic"))
         .then(Table("tirhuta"))
         .then(Table("modi"))
         .then(takri())
@@ -271,11 +270,7 @@ private fun kana() = Table("kana")
         .then(codePoints(UScript.HIRAGANA).filterName { it.startsWith("HIRAGANA LETTER") }.alias { it.replace("HIRAGANA", "KATAKANA") })
         .then(codePoints(UScript.KATAKANA).filterName { it.startsWith("KATAKANA LETTER SMALL") }.alias { it.remove("SMALL ") })
 
-private fun oldItalic() = Table("old-italic")
-        .then((0x10320..0x10323).toTable { ROMAN_NUMERALS.getValue(it.numericValue.toInt()) })
-
 private fun glagolitic() = Table("glagolitic")
-        .cased(codePoints(UScript.GLAGOLITIC))
         .then(codePoints(UScript.GLAGOLITIC).filterName { it.startsWith("COMBINING") }.alias { it.replace("COMBINING GLAGOLITIC LETTER", "GLAGOLITIC SMALL LETTER") })
 
 private fun baybayin() = (0x1700..0x177f).filterDefined().toTable { cp ->
@@ -306,12 +301,7 @@ private fun halfwidthFullwidth() = UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS.al
     name
 }
 
-private fun countingRodNumerals() = UnicodeBlock.COUNTING_ROD_NUMERALS.toTable { NUMBER_SPELLOUT.parse(it.name.substringAfterLast(' ').lower()).toString() }
-
 private fun cherokee() = codePoints(UScript.CHEROKEE).filter { it.isLower() }.toTable { it.name.substringAfterLast(' ').lower() }
-
-private fun syriac() = Table("syriac")
-        .then(UnicodeBlock.SYRIAC_SUPPLEMENT.alias { it.replace("SYRIAC LETTER MALAYALAM", "MALAYALAM LETTER") })
 
 private fun nushu() = Table().apply {
     forEachLine(Path.of("input/NushuSources.txt")) { line ->
@@ -347,9 +337,6 @@ private fun copticEpact() = Table().then(0x102e0, "k")
 private fun hebrew() = Table("hebrew")
         .then((0x591..0x5af).toTable { "" })
 
-private fun meroitic() = Table("meroitic")
-        .then(UnicodeBlock.MEROITIC_CURSIVE.codePoints().filterName { "TWELFTH" in it }.toTable { it.numericValue.times(12).roundToInt().toString() })
-
 private fun takri() = codePoints(UScript.TAKRI).alias { it.remove("ARCHAIC ").replace("TAKRI", "DEVANAGARI") }
 
 private fun dogra() = codePoints(UScript.DOGRA).alias { it.replace("DOGRA", "DEVANAGARI") }
@@ -357,9 +344,6 @@ private fun dogra() = codePoints(UScript.DOGRA).alias { it.replace("DOGRA", "DEV
 private fun khudawadi() = codePoints(UScript.KHUDAWADI).alias { it.replace("KHUDAWADI", "DEVANAGARI") }
 
 private fun nandinagari() = codePoints(UScript.NANDINAGARI).alias { it.replace("NANDINAGARI", "DEVANAGARI") }
-
-private fun meeteiMayek() = Table("meetei-mayek")
-        .then(codePoints(UScript.MEITEI_MAYEK).filterName { it.endsWith("LONSUM") }.alias { it.substringBeforeLast(' ') })
 
 private fun mendeKikakui() = codePoints(UScript.MENDE).filter { it.category == UCharacterCategory.OTHER_LETTER }.toTable { it.name.substringAfterLast(' ').lower().replace("ee", "e").replace("oo", "o") }
         .then((0x1e8d0..0x1e8d6).toTable { "" })

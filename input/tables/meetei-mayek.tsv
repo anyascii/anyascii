@@ -1,8 +1,8 @@
-# https://unicode.org/charts/PDF/UABC0.pdf
-# https://unicode.org/charts/PDF/UAAE0.pdf
 # https://unicode.org/wg2/docs/n3206.pdf
 #
-# Letters
+# Meetei Mayek
+# https://unicode.org/charts/PDF/UABC0.pdf
+## Letters
 ꯀ	k
 ꯁ	s
 ꯂ	l
@@ -30,7 +30,16 @@
 ꯘ	gh
 ꯙ	dh
 ꯚ	bh
-# Dependent vowel signs
+## Final Consonants
+ꯛ	ꯀ
+ꯜ	ꯂ
+ꯝ	ꯃ
+ꯞ	ꯄ
+ꯟ	ꯅ
+ꯠ	ꯇ
+ꯡ	ꯉ
+ꯢ	ꯏ
+## Dependent vowel signs
 ꯣ	o
 ꯤ	i
 ꯥ	a
@@ -39,14 +48,16 @@
 ꯨ	u
 ꯩ	ei
 ꯪ	m
-# Punctuation
+## Punctuation
 ꯫	.
 ꯬	
 ꯭	
-# Independent vowel signs
+# Meetei Mayek Extensions
+# https://unicode.org/charts/PDF/UAAE0.pdf
+## Independent vowel signs
 ꫠ	e
 ꫡ	o
-# Consonants
+## Consonants
 ꫢ	ch
 ꫣ	n
 ꫤ	t
@@ -56,21 +67,21 @@
 ꫨ	n
 ꫩ	s
 ꫪ	s
-# Dependent vowel signs
+## Dependent vowel signs
 ꫫ	i
 ꫬ	u
 ꫭ	ai
 ꫮ	au
 ꫯ	au
-# Punctuation
+## Punctuation
 ꫰	,
 ꫱	?
-# Sign
+## Sign
 ꫲ	*
-# Repetition marks
+## Repetition marks
 ꫳ	-
 ꫴ	-
-# Sign
+## Sign
 ꫵ	h
-# Virama
+## Virama
 ꫶	
