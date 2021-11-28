@@ -1,4 +1,6 @@
-# https://www.unicode.org/charts/PDF/U1F650.pdf
+# https://unicode.org/charts/PDF/U1F650.pdf
+#
+# Fleurons
 🙐	*
 🙑	*
 🙒	*
@@ -23,32 +25,32 @@
 🙥	*
 🙦	*
 🙧	*
-#
+# Quilt square ornaments
 🙨	#
 🙩	#
 🙪	#
 🙫	#
-#
+# Rocket ornaments
 🙬	-
 🙭	|
 🙮	-
 🙯	|
-#
+# Ampersand and ligature et ornaments
 🙰	&
 🙱	&
 🙲	&
 🙳	&
 🙴	&
 🙵	&
-#
+# Punctuation mark ornaments
 🙶	"
 🙷	"
 🙸	"
-🙹	!?
-🙺	!?
-🙻	!?
+🙹	‽
+🙺	‽
+🙻	‽
 🙼	/
 🙽	\
-#
+# Miscellaneous symbols
 🙾	/
 🙿	\

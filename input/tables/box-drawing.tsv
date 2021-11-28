@@ -1,7 +1,11 @@
+# https://unicode.org/charts/PDF/U2500.pdf
+#
+# Light and heavy solid lines
 ─	-
 ━	-
 │	|
 ┃	|
+# Light and heavy dashed lines
 ┄	-
 ┅	-
 ┆	|
@@ -10,6 +14,7 @@
 ┉	-
 ┊	|
 ┋	|
+# Light and heavy line box components
 ┌	+
 ┍	+
 ┎	+
@@ -74,12 +79,15 @@
 ╉	+
 ╊	+
 ╋	+
+# Light and heavy dashed lines
 ╌	-
 ╍	-
 ╎	|
 ╏	|
+# Double lines
 ═	-
 ║	|
+# Light and double line box components
 ╒	+
 ╓	+
 ╔	+
@@ -107,13 +115,16 @@
 ╪	+
 ╫	+
 ╬	+
+# Character cell arcs
 ╭	+
 ╮	+
 ╯	+
 ╰	+
+# Character cell diagonals
 ╱	/
 ╲	\
 ╳	X
+# Light and heavy half lines
 ╴	-
 ╵	|
 ╶	-
@@ -122,6 +133,7 @@
 ╹	|
 ╺	-
 ╻	|
+# Mixed light and heavy lines
 ╼	-
 ╽	|
 ╾	-

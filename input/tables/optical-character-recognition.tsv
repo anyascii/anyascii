@@ -1,6 +1,7 @@
 # https://unicode.org/charts/PDF/U2440.pdf
 #
 # iso-ir-91
+# https://itscj-ipsj.jp/ir/091.pdf
 ⑀	<
 ⑁	>
 ⑂	]
@@ -9,9 +10,11 @@
 ⑄	*
 ⑅	*
 # iso-ir-98
+# https://itscj-ipsj.jp/ir/098.pdf
 ⑆	:
 ⑇	;
 ⑈	<
 ⑉	=
-#
-⑊	\\
+# iso-ir-95
+# https://itscj-ipsj.jp/ir/095.pdf
+⑊	%

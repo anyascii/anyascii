@@ -1,0 +1,70 @@
+# https://unicode.org/charts/PDF/U27C0.pdf
+#
+# Miscellaneous symbols
+⟀	^
+⟁	^
+⟂	T
+⟃	<
+⟄	>
+# Paired punctuation
+⟅	{
+⟆	}
+# Operator
+# https://unicode.org/L2/L2004/04410-math.pdf
+⟇	v
+# Miscellaneous symbols
+# https://unicode.org/L2/L2004/04410-math.pdf
+⟈	\<
+⟉	>/
+# Vertical line operator
+⟊	|
+# Miscellaneous symbol
+# https://unicode.org/wg2/docs/n3763.pdf
+⟋	/
+# Division operator
+⟌	)
+# Miscellaneous symbol
+# https://unicode.org/wg2/docs/n3763.pdf
+⟍	\
+# Operators
+# https://unicode.org/wg2/docs/n3677.pdf
+⟎	^
+⟏	v
+# Miscellaneous symbol
+⟐	#
+# Operators
+⟑	^
+⟒	w
+⟓	>
+⟔	<
+# Database theory operators
+⟕	*
+⟖	*
+⟗	*
+# Tacks and turnstiles
+⟘	T
+⟙	T
+⟚	#
+⟛	+
+⟜	-
+⟝	-
+⟞	-
+⟟	+
+# Modal logic operators
+⟠	#
+⟡	#
+⟢	#
+⟣	#
+⟤	#
+⟥	#
+# Mathematical brackets
+⟦	[
+⟧	]
+⟨	<
+⟩	>
+⟪	<<
+⟫	>>
+⟬	[
+⟭	]
+⟮	(
+⟯	)

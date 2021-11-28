@@ -1,3 +1,6 @@
+# https://unicode.org/charts/PDF/U2400.pdf
+#
+# Graphic pictures for control codes
 ␀	NUL
 ␁	SOH
 ␂	STX
@@ -12,7 +15,7 @@
 ␋	VT
 ␌	FF
 ␍	CR
-␎	SS
+␎	SO
 ␏	SI
 ␐	DLE
 ␑	DC1
@@ -32,8 +35,12 @@
 ␟	US
 ␠	SP
 ␡	DEL
+# Specific symbols for space
 ␢	b
 ␣	_
+# Graphic picture for control code
 ␤	NL
+# Keyboard symbol
 ␥	/
+# Specific symbol for control code
 ␦	?

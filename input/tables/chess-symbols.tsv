@@ -1,120 +1,123 @@
 # https://en.wikipedia.org/wiki/Forsyth–Edwards_Notation
-# https://www.unicode.org/charts/PDF/U2600.pdf
+# https://unicode.org/charts/PDF/U2600.pdf
+# Chess symbols
 ♔	K
 ♕	Q
 ♖	R
 ♗	B
 ♘	N
 ♙	P
-#
+##
 ♚	k
 ♛	q
 ♜	r
 ♝	b
 ♞	n
 ♟	p
-# https://www.unicode.org/charts/PDF/U1FA00.pdf
+# https://unicode.org/charts/PDF/U1FA00.pdf
+# Neutral chess symbols
 🨀	K
 🨁	Q
 🨂	R
 🨃	B
 🨄	N
 🨅	P
-#
+# Chess symbols rotated 45 degrees
 🨆	N
 🨇	n
 🨈	N
-#
+# Chess symbols rotated 90 degrees
 🨉	K
 🨊	Q
 🨋	R
 🨌	B
 🨍	N
 🨎	P
-#
+##
 🨏	k
 🨐	q
 🨑	r
 🨒	b
 🨓	n
 🨔	p
-#
+##
 🨕	K
 🨖	Q
 🨗	R
 🨘	B
 🨙	N
 🨚	P
-#
+# Chess symbols rotated 135 degrees
 🨛	N
 🨜	n
 🨝	N
-#
+# Chess symbols rotated 180 degrees (turned)
 🨞	K
 🨟	Q
 🨠	R
 🨡	B
 🨢	N
 🨣	P
-#
+##
 🨤	k
 🨥	q
 🨦	r
 🨧	b
 🨨	n
 🨩	p
-#
+##
 🨪	K
 🨫	Q
 🨬	R
 🨭	B
 🨮	N
 🨯	P
-#
+# Chess symbols rotated 225 degrees
 🨰	N
 🨱	n
 🨲	N
-#
+# Chess symbols rotated 270 degrees
 🨳	K
 🨴	Q
 🨵	R
 🨶	B
 🨷	N
 🨸	P
-#
+##
 🨹	k
 🨺	q
 🨻	r
 🨼	b
 🨽	n
 🨾	p
-#
+##
 🨿	K
 🩀	Q
 🩁	R
 🩂	B
 🩃	N
 🩄	P
-#
+# Chess symbols rotated 315 degrees
 🩅	N
 🩆	n
 🩇	N
-#
+# Chess equihoppers
 🩈	E
 🩉	e
 🩊	E
-#
+# Chess equihoppers rotated 90 degrees
 🩋	E
 🩌	e
 🩍	E
-#
+# Hybrid chess symbols
 🩎	NQ
 🩏	NR
 🩐	NB
-#
+##
 🩑	nq
 🩒	nr
 🩓	nb
+# Xiangqi symbols
 # https://en.wikipedia.org/wiki/Xiangqi
 🩠	G
 🩡	A
@@ -123,7 +126,7 @@
 🩤	R
 🩥	C
 🩦	S
-#
+##
 🩧	g
 🩨	a
 🩩	e

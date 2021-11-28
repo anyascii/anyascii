@@ -1,6 +1,7 @@
-# https://unicode.org/wg2/docs/n2338.pdf
-# http://oracc.museum.upenn.edu/doc/help/languages/ugaritic/index.html
 # https://unicode.org/charts/PDF/U10380.pdf
+#
+# Letters
+# https://unicode.org/wg2/docs/n2338.pdf
 𐎀	a
 𐎁	b
 𐎂	g
@@ -31,4 +32,6 @@
 𐎛	i
 𐎜	u
 𐎝	s
+# Punctuation
+# http://oracc.museum.upenn.edu/doc/help/languages/ugaritic/index.html
 𐎟	|

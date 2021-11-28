@@ -1,18 +1,25 @@
-# https://www.unicode.org/wg2/docs/n3138.pdf
-# https://www.unicode.org/wg2/docs/n3218.pdf
-# https://www.unicode.org/wg2/docs/n5038_ascia.pdf
-# https://www.unicode.org/wg2/docs/n4194.pdf
+# https://unicode.org/charts/PDF/U10190.pdf
+#
+# Roman weights and measures
+# https://unicode.org/wg2/docs/n3138.pdf
 𐆐	=
 𐆑	-
 𐆒	S
 𐆓	S
 𐆔	S
 𐆕	))
+# Roman coin symbols
+# https://unicode.org/wg2/docs/n3138.pdf
 𐆖	X
 𐆗	V
 𐆘	IIS
 𐆙	II
 𐆚	|
+# Other Roman epigraphic symbols
+## https://unicode.org/wg2/docs/n3218.pdf
 𐆛	>
+## https://unicode.org/wg2/docs/n5038_ascia.pdf
 𐆜	*
+# Greek symbol
+# https://unicode.org/wg2/docs/n4194.pdf
 𐆠	TR.

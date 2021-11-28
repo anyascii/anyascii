@@ -53,6 +53,7 @@
 ֺ	o
 # https://en.wikipedia.org/wiki/Dagesh
 # https://en.wikipedia.org/wiki/Mappiq
+# https://en.wikipedia.org/wiki/Shuruk
 ּ	
 # https://en.wikipedia.org/wiki/Rafe
 ֿ	
@@ -80,6 +81,12 @@
 # https://en.wikipedia.org/wiki/Hebrew_punctuation
 ־	-
 ׀	|
+#
+# Letterlike Symbols
+# https://unicode.org/charts/PDF/U2100.pdf
+# Hebrew letterlike math symbols
+ℵ	a
+ℶ	b
 #
 # Alphabetic Presentation Forms
 # https://unicode.org/charts/PDF/UFB00.pdf

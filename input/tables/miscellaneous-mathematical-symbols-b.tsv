@@ -1,72 +1,10 @@
-# miscellaneous mathematical symbols a
-# miscellaneous mathematical symbols b
-⟀	^
-⟁	^
-⟂	T
-⟃	<
-⟄	>
+# https://unicode.org/charts/PDF/U2980.pdf
 #
-⟅	{
-⟆	}
-#
-⟇	v
-#
-⟈	\<
-⟉	>/
-#
-⟊	|
-#
-⟋	/
-#
-⟌	)
-#
-⟍	\
-#
-⟎	^
-⟏	v
-#
-⟐	#
-#
-⟑	^
-⟒	w
-⟓	>
-⟔	<
-#
-⟕	*
-⟖	*
-⟗	*
-#
-⟘	T
-⟙	T
-⟚	#
-⟛	+
-⟜	-
-⟝	-
-⟞	-
-⟟	+
-#
-⟠	#
-⟡	#
-⟢	#
-⟣	#
-⟤	#
-⟥	#
-#
-⟦	[
-⟧	]
-⟨	<
-⟩	>
-⟪	<<
-⟫	>>
-⟬	[
-⟭	]
-⟮	(
-⟯	)
-#
+# Miscellaneous mathematical symbols
 ⦀	|||
 ⦁	*
 ⦂	:
-#
+# Brackets
 ⦃	{
 ⦄	}
 ⦅	(
@@ -77,12 +15,12 @@
 ⦊	>
 ⦋	[
 ⦌	]
-#
+# Brackets with ticks
 ⦍	[
 ⦎	]
 ⦏	[
 ⦐	]
-#
+# Brackets
 ⦑	<
 ⦒	>
 ⦓	<
@@ -91,10 +29,10 @@
 ⦖	<
 ⦗	[
 ⦘	]
-#
+# Fences
 ⦙	:
 ⦚	|
-#
+# Angles
 ⦛	>
 ⦜	^
 ⦝	^
@@ -116,13 +54,13 @@
 ⦭	^
 ⦮	^
 ⦯	^
-#
+# Empty sets
 ⦰	0
 ⦱	0
 ⦲	0
 ⦳	0
 ⦴	0
-#
+# Circle symbols
 ⦵	*
 ⦶	*
 ⦷	*
@@ -138,14 +76,14 @@
 ⧁	>
 ⧂	*
 ⧃	*
-#
+# Square symbols
 ⧄	/
 ⧅	\
 ⧆	*
 ⧇	o
 ⧈	#
 ⧉	#
-#
+# Triangle symbols
 ⧊	^
 ⧋	^
 ⧌	^
@@ -153,7 +91,7 @@
 ⧎	#
 ⧏	<
 ⧐	>
-#
+# Bowtie symbols
 ⧑	*
 ⧒	*
 ⧓	*
@@ -161,12 +99,12 @@
 ⧕	*
 ⧖	*
 ⧗	*
-#
+# Fences
 ⧘	{
 ⧙	}
 ⧚	{{
 ⧛	}}
-#
+# Miscellaneous mathematical symbols
 ⧜	*
 ⧝	*
 ⧞	*
@@ -174,12 +112,12 @@
 ⧠	#
 ⧡	<
 ⧢	E
-#
+# Relations
 ⧣	#
 ⧤	#
 ⧥	#
 ⧦	#
-#
+# Miscellaneous mathematical symbols
 ⧧	#
 ⧨	^
 ⧩	^
@@ -187,27 +125,27 @@
 ⧫	#
 ⧬	*
 ⧭	*
-#
+# Error bar symbols
 ⧮	+
 ⧯	+
 ⧰	+
 ⧱	+
 ⧲	+
 ⧳	+
-#
+# Miscellaneous mathematical symbols
 ⧴	:>
 ⧵	\
 ⧶	/
 ⧷	\
-#
+# Large operators
 ⧸	/
 ⧹	\
-#
+# Specialized plus sign operators
 ⧺	++
 ⧻	+++
-#
+# Brackets
 ⧼	<
 ⧽	>
-#
+# Symbols used in game theory
 ⧾	+
 ⧿	-
