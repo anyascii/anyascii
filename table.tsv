@@ -62585,6 +62585,7 @@
 𗁗	me
 𗁘	rer
 𗁙	kyr
+𗁚	kyr
 𗁛	la
 𗁜	vor
 𗁝	gew
@@ -62645,7 +62646,7 @@
 𗂕	me
 𗂖	born
 𗂗	khy
-𗂘	kir
+𗂘	ker
 𗂙	pha
 𗂚	e
 𗂛	by
@@ -62688,7 +62689,7 @@
 𗃀	twan
 𗃁	pha
 𗃂	khy
-𗃃	lir
+𗃃	ler
 𗃄	lwy
 𗃅	vir
 𗃆	ar
@@ -62972,7 +62973,7 @@
 𗇞	khon
 𗇟	khy
 𗇠	bi
-𗇡	ren
+𗇡	len
 𗇢	ka
 𗇣	ko
 𗇤	tswa
@@ -63013,6 +63014,7 @@
 𗈇	la
 𗈈	jan
 𗈉	ni
+𗈊	zhi
 𗈋	tsur
 𗈌	de
 𗈍	tsa
@@ -63182,7 +63184,7 @@
 𗊴	se
 𗊵	chhu
 𗊶	lhu
-𗊷	ren
+𗊷	len
 𗊸	no
 𗊹	lwo
 𗊺	ha
@@ -63276,6 +63278,7 @@
 𗌓	?
 𗌔	thwan
 𗌕	?ar
+𗌖	?ar
 𗌗	gu
 𗌘	nwy
 𗌙	lhu
@@ -63413,7 +63416,7 @@
 𗎝	pha
 𗎞	my
 𗎟	thar
-𗎠	ir
+𗎠	er
 𗎡	ku
 𗎢	then
 𗎣	pon
@@ -63423,13 +63426,13 @@
 𗎧	kha
 𗎨	vu
 𗎩	ka
-𗎫	tsir
+𗎫	tser
 𗎬	jyr
 𗎭	mi
 𗎮	vu
 𗎯	vu
 𗎰	chy
-𗎱	tsir
+𗎱	tser
 𗎲	jwe
 𗎳	kha
 𗎴	ti
@@ -63795,7 +63798,7 @@
 𗔠	su
 𗔡	ly
 𗔢	ti
-𗔣	ren
+𗔣	len
 𗔤	kwi
 𗔥	dzi
 𗔦	mer
@@ -63834,9 +63837,9 @@
 𗕇	lu
 𗕈	nu
 𗕉	shon
-𗕋	lir
+𗕋	ler
 𗕌	zhin
-𗕍	lir
+𗕍	ler
 𗕎	new
 𗕏	chyr
 𗕐	ky
@@ -64065,7 +64068,7 @@
 𗘯	ve
 𗘰	ba
 𗘱	ngwu
-𗘲	ren
+𗘲	len
 𗘳	du
 𗘴	mu
 𗘵	khi
@@ -64232,10 +64235,10 @@
 𗛖	ky
 𗛗	ba
 𗛘	khu
-𗛙	ren
+𗛙	len
 𗛚	dze
 𗛛	ku
-𗛜	ren
+𗛜	len
 𗛝	rer
 𗛞	dy
 𗛟	vi
@@ -64440,7 +64443,7 @@
 𗞩	ni
 𗞪	er
 𗞫	chi
-𗞬	ren
+𗞬	len
 𗞭	vi
 𗞮	di
 𗞯	hu
@@ -64469,7 +64472,7 @@
 𗟇	tsy
 𗟈	my
 𗟉	zhwy
-𗟊	ren
+𗟊	len
 𗟋	vi
 𗟌	thwo
 𗟍	ur
@@ -64505,7 +64508,7 @@
 𗟫	nir
 𗟬	lwe
 𗟭	vo
-𗟮	kir
+𗟮	ker
 𗟯	chho
 𗟰	lhwi
 𗟱	py
@@ -64636,6 +64639,7 @@
 𗡯	ji
 𗡰	la
 𗡱	se
+𗡲	?
 𗡳	le
 𗡴	shwa
 𗡵	de
@@ -64643,9 +64647,9 @@
 𗡷	non
 𗡸	si
 𗡹	korn
-𗡺	be
+𗡺	ber
 𗡻	ly
-𗡼	be
+𗡼	ber
 𗡽	chwen
 𗡾	no
 𗡿	swa
@@ -64800,6 +64804,7 @@
 𗤔	mu
 𗤕	tsan
 𗤖	te
+𗤗	zwi
 𗤘	den
 𗤙	da
 𗤚	mi
@@ -64825,7 +64830,7 @@
 𗤮	nwy
 𗤯	dzi
 𗤰	chhwyr
-𗤱	ren
+𗤱	len
 𗤲	tshon
 𗤳	my
 𗤴	be
@@ -64882,7 +64887,7 @@
 𗥧	khar
 𗥨	jwo
 𗥩	lwu
-𗥪	ren
+𗥪	len
 𗥫	e
 𗥬	e
 𗥭	le
@@ -64971,6 +64976,7 @@
 𗧀	lew
 𗧁	rer
 𗧃	gi
+𗧄	?
 𗧅	ghyr
 𗧆	ta
 𗧇	lwyr
@@ -65064,6 +65070,7 @@
 𗨟	j?
 𗨠	lhy
 𗨡	de
+𗨢	li
 𗨣	gu
 𗨤	dzo
 𗨥	twan
@@ -65162,7 +65169,7 @@
 𗪃	thu
 𗪄	thu
 𗪅	cho
-𗪆	van
+𗪆	swy
 𗪇	bu
 𗪈	my
 𗪉	zwi
@@ -65295,7 +65302,7 @@
 𗬌	zin
 𗬍	gu
 𗬎	shon
-𗬏	ren
+𗬏	len
 𗬐	sy
 𗬑	chy
 𗬒	da
@@ -65337,13 +65344,13 @@
 𗬶	kwa
 𗬷	norn
 𗬸	na
-𗬹	ren
+𗬹	len
 𗬺	rar
 𗬻	kor
 𗬼	yr
 𗬾	lu
 𗬿	nir
-𗭀	ren
+𗭀	len
 𗭁	bur
 𗭂	so
 𗭃	hon
@@ -65391,6 +65398,7 @@
 𗭭	dy
 𗭮	zhon
 𗭯	on
+𗭰	tsha
 𗭱	ga
 𗭲	thu
 𗭳	thu
@@ -65423,6 +65431,7 @@
 𗮎	jyr
 𗮏	ge
 𗮐	thu
+𗮑	thu
 𗮒	my
 𗮓	ly
 𗮔	swew
@@ -66004,7 +66013,7 @@
 𗷞	li
 𗷟	ghan
 𗷠	chwe
-𗷡	kir
+𗷡	ker
 𗷢	chon
 𗷣	jwu
 𗷤	du
@@ -66042,7 +66051,7 @@
 𗸅	chhwin
 𗸆	khon
 𗸇	de
-𗸈	dwu
+𗸈	di
 𗸉	jen
 𗸊	lu
 𗸋	tsewr
@@ -66068,7 +66077,7 @@
 𗸟	ga
 𗸠	hwa
 𗸡	dzen
-𗸢	jwew
+𗸢	twa
 𗸣	ty
 𗸤	tin
 𗸥	tu
@@ -66123,7 +66132,7 @@
 𗹖	lu
 𗹗	go
 𗹘	don
-𗹙	tsir
+𗹙	tser
 𗹚	ner
 𗹛	che
 𗹜	jwy
@@ -66368,6 +66377,7 @@
 𗽋	dzon
 𗽌	en
 𗽍	dwy
+𗽎	dwy
 𗽏	di
 𗽐	dzy
 𗽑	de
@@ -66736,7 +66746,7 @@
 𘂾	ka
 𘂿	vy
 𘃀	zewr
-𘃁	ren
+𘃁	len
 𘃂	vy
 𘃃	zewr
 𘃄	dzwy
@@ -66808,7 +66818,7 @@
 𘄆	pho
 𘄇	mi
 𘄈	o
-𘄉	ren
+𘄉	len
 𘄊	li
 𘄋	ghy
 𘄌	te
@@ -66870,6 +66880,7 @@
 𘅅	du
 𘅆	swe
 𘅇	ti
+𘅈	lhy
 𘅉	te
 𘅊	le
 𘅋	ngwir
@@ -67010,7 +67021,7 @@
 𘇕	dzew
 𘇖	lu
 𘇗	lu
-𘇘	ren
+𘇘	len
 𘇙	van
 𘇚	mi
 𘇛	pen
@@ -67113,7 +67124,7 @@
 𘈼	ma
 𘈽	swen
 𘈾	du
-𘉀	tsir
+𘉀	tser
 𘉁	mi
 𘉂	dzen
 𘉃	dzu
@@ -67134,7 +67145,7 @@
 𘉒	mo
 𘉓	ba
 𘉔	dwa
-𘉕	ren
+𘉕	len
 𘉖	pwyr
 𘉗	on
 𘉘	zyr
@@ -67544,7 +67555,7 @@
 𘏯	shi
 𘏰	vy
 𘏱	sew
-𘏲	tsir
+𘏲	tser
 𘏳	sha
 𘏴	ghor
 𘏵	?a
@@ -67575,7 +67586,7 @@
 𘐏	ti
 𘐐	ma
 𘐑	rer
-𘐒	ir
+𘐒	er
 𘐓	ta
 𘐔	tshwew
 𘐕	chew
@@ -68006,7 +68017,7 @@
 𘗅	tshi
 𘗆	tshu
 𘗇	chhwa
-𘗈	ren
+𘗈	len
 𘗉	ran
 𘗊	ryr
 𘗋	ge
@@ -68218,6 +68229,7 @@
 𘚛	lhi
 𘚜	lhwe
 𘚝	lu
+𘚞	?
 𘚟	lhi
 𘚠	ly
 𘚡	ly
@@ -68260,7 +68272,7 @@
 𘛆	swen
 𘛇	gu
 𘛈	ka
-𘛉	twan
+𘛉	tswy
 𘛊	ka
 𘛋	kha
 𘛌	rewr
@@ -68343,7 +68355,7 @@
 𘜚	ko
 𘜛	ghwe
 𘜜	be
-𘜝	tsir
+𘜝	tser
 𘜞	tse
 𘜟	by
 𘜠	shar
@@ -68352,7 +68364,7 @@
 𘜣	dzyr
 𘜤	ha
 𘜥	kwar
-𘜦	yr
+𘜦	lhwyr
 𘜧	kwu
 𘜨	chhwe
 𘜩	tho

@@ -5,23 +5,33 @@ import java.nio.file.Path
 
 fun tangut() = characters().then(components())
 
-private fun characters(): Table {
-    val lfwToCp = HashMap<Int, CodePoint>()
-    // https://babelstone.co.uk/Tangut
-    forEachLine(Path.of("input/tangut-lfw-unicode.csv")) { line ->
-        val split = line.split(',')
-        lfwToCp[split[0].toInt()] = split[1].toInt(16)
+private fun characters() = Table().apply {
+    val sources = HashMap<CodePoint, String>()
+    forEachLine(Path.of("input/TangutSources.txt")) { line ->
+        if (line.startsWith('#') || line.isEmpty()) return@forEachLine
+        val split = line.split('\t')
+        if (split[1] == "kTGT_MergedSrc") {
+            val cp = split[0].substring(2).toInt(16)
+            sources[cp] = split[2]
+        }
     }
 
-    val chars = Table()
-    // http://amritas.com/150207.htm#02012357
-    forEachLine(Path.of("input/tangutdb-1-0.csv")) { line ->
-        val split = line.split(',')
-        val lfw = split[0].removePrefix("L").stripLeading('0').toIntOrNull() ?: return@forEachLine
-        chars[lfwToCp.getValue(lfw)] = split[1]
+    forEachLine(Path.of("input/tangutdb-1-3-1.csv")) { line ->
+        if (line.startsWith("LFW")) return@forEachLine
+        val row = line.split(',')
+        val id = row[0]
+        val num = id.filter { it.isDigit() }
+        val regex = if (id.endsWith('a')) {
+            "L1997-$num".toRegex()
+        } else {
+            "L2008-.*$num.*".toRegex()
+        }
+        for ((cp, src) in sources) {
+            if (regex.matches(src)) {
+                putIfAbsent(cp, row[1])
+            }
+        }
     }
-
-    return chars
 }
 
 private fun components() = UnicodeBlock.TANGUT_COMPONENTS.toTable { it.name.substringAfterLast('-').stripLeading('0') }
