@@ -110,6 +110,9 @@ int main() {
 	check("ⵜⵉⴼⵉⵏⴰⵖ", "tifinagh");
 	check("𐍅𐌿𐌻𐍆𐌹𐌻𐌰", "wulfila");
 	check("ދިވެހި", "dhivehi");
+	check("ᨅᨔ ᨕᨘᨁᨗ", "bs ugi");
+	check("ϯⲙⲓⲛϩⲱⲣ", "timinhor");
+	check("𐐜 𐐢𐐮𐐻𐑊 𐐝𐐻𐐪𐑉", "Dh Litl Star");
 	
 	return 0;
 }
