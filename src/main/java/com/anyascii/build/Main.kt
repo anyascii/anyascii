@@ -163,7 +163,6 @@ private fun custom() = Table()
         .then(Table("shavian"))
         .then(Table("warang-citi"))
         .then(Table("dives-akuru"))
-        .then(copticEpact())
         .then(Table("old-permic"))
         .then(Table("avestan"))
         .then(Table("kharoshthi"))
@@ -332,8 +331,6 @@ private fun tags() = Table()
 
 private fun marchen() = Table("marchen")
         .then(codePoints(UScript.MARCHEN).alias { it.replace("MARCHEN", "TIBETAN") })
-
-private fun copticEpact() = Table().then(0x102e0, "k")
 
 private fun hebrew() = Table("hebrew")
         .then((0x591..0x5af).toTable { "" })
