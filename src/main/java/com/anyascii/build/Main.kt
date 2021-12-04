@@ -243,9 +243,6 @@ private fun yi() = Table()
         .then(UnicodeBlock.YI_SYLLABLES.toTable { it.name.substringAfterLast(' ').lower() })
         .then(UnicodeBlock.YI_RADICALS.toTable { it.name.substringAfterLast(' ') })
 
-private fun vai() = Table("vai")
-        .then(codePoints(UScript.VAI).filter { it.category == UCharacterCategory.OTHER_LETTER }.toTable { it.name.substringAfterLast(' ').lower() })
-
 private fun dominoes() = (0x1f030..0x1f093).toTable {
     val name = it.name.removePrefix("DOMINO TILE ")
     if ("BACK" in name) return@toTable "-"

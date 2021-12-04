@@ -1,4 +1,31 @@
-ꘌ	=
+# https://unicode.org/charts/PDF/UA500.pdf
+# https://unicode.org/wg2/docs/n2948.pdf
+#
+# Syllable finals
+ꘋ	ng
+ꘌ	h
+# Punctuation
 ꘍	,
 ꘎	.
 ꘏	?
+# Historic syllables
+ꘐ	ꕘ
+ꘑ	ꕪ
+ꘒ	ꖇ
+# Logograms
+ꘓ	Feng
+ꘔ	Keng
+ꘕ	Ting
+ꘖ	Nii
+ꘗ	Bang
+ꘘ	Faa
+ꘙ	Taa
+ꘚ	Dang
+ꘛ	Dong
+ꘜ	Kung
+ꘝ	Tong
+ꘞ	Doo
+ꘟ	Jong
+# Historic syllables
+ꘪ	ꕮ
+ꘫ	ꗑ
