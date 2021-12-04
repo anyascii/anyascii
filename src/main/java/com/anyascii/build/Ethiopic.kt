@@ -15,11 +15,11 @@ fun ethiopic() = Table("ethiopic").then(letters())
 
 private fun letters() = Table().apply {
     Files.newBufferedReader(Path.of("input/ethiopic.csv")).use { r ->
-        val vowels = r.readLine().split(',').map { VOWEL_MAP.getOrDefault(it, it) }
+        val vowels = r.readLine().split(',')
         while (true) {
             val line = r.readLine()?.split(',') ?: break
-            val consonant = line[1]
-            for (i in 2 until line.size) {
+            val consonant = line[0]
+            for (i in 1 until line.size) {
                 val col = line[i]
                 if (col.isEmpty()) continue
                 this[col.toCodePoint()] = consonant + vowels[i]
@@ -27,9 +27,3 @@ private fun letters() = Table().apply {
         }
     }
 }
-
-private val VOWEL_MAP = mapOf(
-        "ɔ" to "oa",
-        "wĭ" to "wi",
-        "ĭ" to "",
-)
