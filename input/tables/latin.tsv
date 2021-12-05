@@ -1,198 +1,276 @@
+# C1 Controls and Latin-1 Supplement 
 # https://unicode.org/charts/PDF/U0080.pdf
-Æ	Ae
-Ð	D
-Ø	O
-Þ	Th
+## Latin-1 punctuation and symbols
+ 	 
+¡	!
+¦	|
+§	S
+¨	"
+©	(C)
+«	<<
+¬	!
+­	
+®	(R)
+¯	-
+°	deg
+±	+-
+´	'
+µ	u
+¶	P
+·	-
+¸	,
+»	>>
+## Punctuation
+¿	?
+## Mathematical operator
+×	*
+## Letters
 ß	ss
+æ	ae
+ð	d
+## Mathematical operator
+÷	/
+## Letters
+ø	o
+þ	th
+# Latin Extended-A
 # https://unicode.org/charts/PDF/U0100.pdf
-Đ	D
-Ħ	H
+## European Latin
+đ	d
+ħ	h
 ı	i
 ĸ	q
-Ŀ	L
-Ł	L
-Ŋ	Ng
-Œ	Oe
-Ŧ	T
+ŀ	l
+ł	l
+ŋ	ng
+## European Latin
+œ	oe
+ŧ	t
+# Latin Extended-B
 # https://unicode.org/charts/PDF/U0180.pdf
-Ɓ	B
-Ƃ	B
-Ƅ	6
-Ɔ	O
-Ƈ	C
-Ɖ	D
-Ɗ	D
-Ƌ	D
+## Non-European and historic Latin
+ƀ	b
+ƃ	b
+ƅ	6
+ƈ	c
+ƌ	d
 ƍ	z
-Ǝ	E
-Ə	e
-Ɛ	E
-Ƒ	F
-Ɠ	G
-Ɣ	G
-Ɩ	I
-Ɨ	I
-Ƙ	K
+ƒ	f
+ƕ	hw
+ƙ	k
+ƚ	l
 ƛ	l
-Ɯ	W
-Ɲ	N
-Ɵ	O
-Ƣ	Gh
-Ƥ	P
-Ʀ	R
-Ƨ	2
-Ʃ	Sh
-ƪ	sh
+ƞ	n
+ƣ	gh
+ƥ	p
+ƨ	2
+ƪ	ʃ
 ƫ	t
-Ƭ	T
-Ʈ	T
-Ʊ	U
-Ʋ	V
-Ƴ	Y
-Ƶ	Z
-Ʒ	Zh
-Ƹ	`
-ƺ	zh
+ƭ	t
+ƴ	y
+ƶ	z
+ƹ	ʕ
+ƺ	ʒ
 ƻ	dz
-Ƽ	5
+ƽ	5
 ƾ	ts
-ǀ	|
-ǁ	||
-ǂ	=
-ǃ	!
-Ǥ	G
-Ƕ	Hw
-Ƿ	W
-Ȝ	Y
-Ƞ	N
+ƿ	w
+## African letters for clicks
+## https://en.wikipedia.org/wiki/Click_letter
+## https://en.wikipedia.org/wiki/Click_consonant
+ǀ	c
+ǁ	x
+ǂ	qc
+ǃ	q
+## Phonetic and historic letters
+ǝ	e
+ǥ	g
+## Miscellaneous additions
+ȝ	y
 ȡ	d
-Ȣ	Ou
-Ȥ	Z
+ȣ	ou
+ȥ	z
+## Additions for Sinology
 ȴ	l
 ȵ	n
 ȶ	t
+## Miscellaneous addition
 ȷ	j
+## Additions for Africanist linguistics
 ȸ	db
 ȹ	qp
-Ⱥ	A
-Ȼ	C
-Ƚ	L
-Ⱦ	T
-Ɂ	'
-Ƀ	B
-Ʉ	U
-Ʌ	V
-Ɇ	E
-Ɉ	J
-Ɋ	Q
-Ɍ	R
-Ɏ	Y
+## Additions for Sencoten
+ȼ	c
+## Additions for Africanist linguistics
+ȿ	s
+ɀ	z
+## Miscellaneous additions
+ɂ	ʔ
+ɇ	e
+ɉ	j
+ɋ	q
+ɍ	r
+ɏ	y
+# IPA Extensions
 # https://unicode.org/charts/PDF/U0250.pdf
+## IPA extensions
+ɐ	a
+ɑ	a
+ɒ	a
+ɓ	b
+ɔ	o
 ɕ	c
+ɖ	d
+ɗ	d
 ɘ	e
+ə	e
 ɚ	er
+ɛ	e
+ɜ	e
 ɝ	er
-ɞ	e
+ɞ	o
 ɟ	j
-ɢ	G
+ɠ	g
+ɡ	g
+ɢ	g
+ɣ	g
 ɤ	u
+ɥ	y
+ɦ	h
 ɧ	h
-ɪ	I
+ɨ	i
+ɩ	i
+ɪ	i
+ɫ	l
+ɬ	l
 ɭ	l
-ɮ	lzh
-ɰ	m
+ɮ	lʒ
+ɯ	w
+ɰ	w
+ɱ	m
+ɲ	n
 ɳ	n
-ɴ	N
-ɶ	Oe
-ɷ	o
+ɴ	n
+ɵ	o
+ɶ	œ
+ɷ	ʊ
 ɸ	f
 ɹ	r
 ɺ	r
 ɻ	r
 ɼ	r
+ɽ	r
 ɾ	r
-ɿ	r
-ʀ	R
-ʁ	R
-ʄ	j
-ʅ	r
-ʆ	sh
+ɿ	i
+ʀ	r
+ʁ	r
+ʂ	s
+ʃ	sh
+ʄ	ɟ
+ʅ	ɿ
+ʆ	ʃ
+ʇ	t
+ʈ	t
+ʉ	u
+ʊ	u
+ʋ	v
+ʌ	a
 ʍ	w
 ʎ	y
-ʏ	Y
+ʏ	y
 ʐ	z
 ʑ	z
-ʓ	zh
+ʒ	zh
+ʓ	ʒ
 ʔ	'
 ʕ	`
-ʖ	x
-ʗ	c
-ʘ	@
-ʙ	B
-ʚ	e
-ʛ	G
-ʜ	H
-ʟ	L
+ʖ	ǁ
+ʗ	ǃ
+ʘ	pc
+ʙ	b
+ʚ	œ
+ʛ	ɠ
+ʜ	h
+ʝ	j
+ʞ	k
+ʟ	l
 ʠ	q
-ʡ	'
-ʢ	`
+ʡ	ʔ
+ʢ	ʕ
 ʣ	dz
-ʤ	dzh
-ʥ	dz
+ʤ	dʒ
+ʥ	dʑ
 ʦ	ts
-ʧ	tsh
-ʨ	tc
-ʩ	fng
+ʧ	tʃ
+ʨ	tɕ
+## IPA characters for disordered speech
+ʩ	fŋ
 ʪ	ls
 ʫ	lz
 ʬ	ww
 ʭ	]]
-ʮ	h
-ʯ	h
+## Additions for Sinology
+## https://unicode.org/L2/L2001/01272-n2366.pdf
+ʮ	y
+ʯ	ʮ
+# Phonetic Extensions
 # https://unicode.org/charts/PDF/U1D00.pdf
-ᴀ	A
-ᴁ	Ae
+## Latin letters
+ᴀ	a
+ᴁ	æ
 ᴂ	ae
-ᴃ	B
-ᴄ	C
-ᴅ	D
-ᴆ	D
-ᴇ	E
+ᴃ	b
+ᴄ	c
+ᴅ	d
+ᴆ	ð
+ᴇ	e
 ᴈ	e
 ᴉ	i
-ᴊ	J
-ᴋ	K
-ᴌ	L
-ᴍ	M
-ᴎ	N
-ᴏ	O
-ᴐ	O
+ᴊ	j
+ᴋ	k
+ᴌ	ł
+ᴍ	m
+ᴎ	n
+ᴏ	o
+ᴐ	ɔ
 ᴑ	o
 ᴒ	o
 ᴓ	o
 ᴔ	oe
-ᴕ	Ou
+ᴕ	ȣ
 ᴖ	o
 ᴗ	o
-ᴘ	P
-ᴙ	R
-ᴚ	R
-ᴛ	T
-ᴜ	U
+ᴘ	p
+ᴙ	r
+ᴚ	r
+ᴛ	t
+ᴜ	u
 ᴝ	u
 ᴞ	u
-ᴟ	m
-ᴠ	V
-ᴡ	W
-ᴢ	Z
-ᴣ	Zh
+ᴟ	w
+ᴠ	v
+ᴡ	w
+ᴢ	z
+ᴣ	ʒ
 ᴤ	`
 ᴥ	`
+## Greek letters
+ᴦ	γ
+ᴧ	λ
+ᴨ	π
+ᴩ	ρ
+ᴪ	ψ
+## Cyrillic letter
+## https://unicode.org/L2/L2002/02141-n2419-uralic-phonetic.pdf
+ᴫ	л
+## Latin superscript modifier letters
 ᴯ	B
 ᴻ	N
-ᵎ	i
+ᵎ	ᴉ
+## Latin letter
 ᵫ	ue
-# https://unicode.org/wg2/docs/n2632.pdf
+## Latin letters with middle tilde
+## https://unicode.org/wg2/docs/n2632.pdf
 ᵬ	b
 ᵭ	d
 ᵮ	f
@@ -200,18 +278,23 @@
 ᵰ	n
 ᵱ	p
 ᵲ	r
-ᵳ	r
+ᵳ	ɾ
 ᵴ	s
 ᵵ	t
 ᵶ	z
-#
+## Caucasian linguistics
 ᵷ	g
+## Other phonetic symbols
+ᵹ	g
 ᵺ	th
-ᵻ	I
-ᵼ	i
-ᵾ	U
-ᵿ	u
+ᵻ	ɨ
+ᵼ	ɩ
+ᵽ	p
+ᵾ	ʉ
+ᵿ	ʊ
+# Phonetic Extensions Supplement
 # https://unicode.org/charts/PDF/U1D80.pdf
+## Latin letters with palatal hook
 ᶀ	b
 ᶁ	d
 ᶂ	f
@@ -223,182 +306,208 @@
 ᶈ	p
 ᶉ	r
 ᶊ	s
-ᶋ	sh
+ᶋ	ʃ
 ᶌ	v
 ᶍ	x
+ᶎ	z
+## Latin letters with retroflex hook
 ᶏ	a
-ᶐ	a
+ᶐ	ɑ
 ᶑ	d
 ᶒ	e
-ᶓ	e
-ᶔ	e
-ᶕ	e
+ᶓ	ɛ
+ᶔ	ɜ
+ᶕ	ə
 ᶖ	i
-ᶗ	o
-ᶘ	sh
+ᶗ	ɔ
+ᶘ	ʃ
 ᶙ	u
-ᶚ	zh
+ᶚ	ʒ
+# Latin Extended Additional
 # https://unicode.org/charts/PDF/U1E00.pdf
-# https://unicode.org/wg2/docs/n3027.pdf
+## Medievalist additions
+## https://unicode.org/wg2/docs/n3027.pdf
 ẜ	s.
 ẝ	s.
-#
-ẞ	Ss
+## Medievalist addition
 ẟ	d
-# https://unicode.org/wg2/docs/n3027.pdf
-Ỻ	Ll
-Ỽ	V
-Ỿ	Y
+## Medievalist additions
+## https://unicode.org/wg2/docs/n3027.pdf
+ỻ	ll
+ỽ	v
+ỿ	y
+# Latin Extended-C
 # https://unicode.org/charts/PDF/U2C60.pdf
-Ⱡ	L
-Ɫ	L
-Ᵽ	P
-Ɽ	R
-Ⱨ	H
-Ⱪ	K
-Ⱬ	Z
-Ɑ	A
-Ɱ	M
-Ɐ	A
-Ɒ	A
+## Orthographic Latin additions
+ⱡ	l
+ⱥ	a
+ⱦ	t
+## Additions for Uyghur
+## https://unicode.org/wg2/docs/n2931.pdf
+ⱨ	h
+ⱪ	k
+ⱬ	z
+## Miscellaneous additions
 ⱱ	v
-Ⱳ	W
+ⱳ	w
 ⱴ	v
-Ⱶ	H
+## Claudian letters
+ⱶ	h
+## Additions for UPA
 ⱷ	o
 ⱸ	e
 ⱹ	r
 ⱺ	o
-ⱻ	E
-Ȿ	S
-Ɀ	Z
+ⱻ	ǝ
+# Latin Extended-D
 # https://unicode.org/charts/PDF/UA720.pdf
-Ꜣ	'
-Ꜥ	`
-# https://unicode.org/L2/L2006/06121-n3082-tresillo.pdf
-Ꜧ	H
-Ꜩ	Tz
-Ꜫ	3
-Ꜭ	4
-Ꜯ	4,
-# https://unicode.org/wg2/docs/n3027.pdf
-ꜰ	F
-ꜱ	S
-Ꜳ	Aa
-Ꜵ	Ao
-Ꜷ	Au
-Ꜹ	Av
-Ꜻ	Av
-Ꜽ	Ay
-Ꜿ	C.
-Ꝁ	K.
-Ꝃ	K.
-Ꝅ	K.
-Ꝇ	L
-Ꝉ	L.
-Ꝋ	O.
-Ꝍ	O
-Ꝏ	Oo
-Ꝑ	P.
-Ꝓ	P.
-Ꝕ	P.
-Ꝗ	Q.
-Ꝙ	Q.
-Ꝛ	R
-Ꝝ	R.
-Ꝟ	V.
-Ꝡ	Vy
-Ꝣ	Z
-Ꝥ	Th.
-Ꝧ	Th.
-Ꝩ	V
-Ꝫ	&
-Ꝭ	S.
-Ꝯ	'
+## Additions for UPA
+꜠	-
+꜡	_
+## Egyptological additions
+ꜣ	'
+ꜥ	`
+## Mayanist additions
+## https://unicode.org/L2/L2006/06121-n3082-tresillo.pdf
+ꜧ	h
+ꜩ	tz
+ꜫ	3
+ꜭ	4
+ꜯ	4,
+## Medievalist additions
+## https://unicode.org/wg2/docs/n3027.pdf
+ꜰ	f
+ꜱ	s
+ꜳ	aa
+ꜵ	ao
+ꜷ	au
+ꜹ	av
+ꜻ	av
+ꜽ	ay
+ꜿ	c.
+ꝁ	k.
+ꝃ	k.
+ꝅ	k.
+ꝇ	l
+ꝉ	l.
+ꝋ	o.
+ꝍ	o
+ꝏ	oo
+ꝑ	p.
+ꝓ	p.
+ꝕ	p.
+ꝗ	q.
+ꝙ	q.
+ꝛ	r
+ꝝ	r.
+ꝟ	v.
+ꝡ	vy
+ꝣ	z
+ꝥ	þ.
+ꝧ	þ.
+ꝩ	v
+ꝫ	&
+ꝭ	s.
+ꝯ	'
 ꝱ	d.
 ꝲ	l.
 ꝳ	m.
 ꝴ	n.
 ꝵ	r.
-ꝶ	R.
+ꝶ	r.
 ꝷ	t.
 ꝸ	s.
-# https://unicode.org/L2/L2006/06266-n3122-insular.pdf
-Ꝺ	D
-Ꝼ	F
-Ᵹ	G
-Ꝿ	Ng
-Ꞁ	Ll
-Ꞃ	R
-Ꞅ	S
-Ꞇ	T
-#
-Ꞌ	'
-Ɥ	H
-ꞎ	l
+## Insular and Celticist letters
+## https://unicode.org/L2/L2006/06266-n3122-insular.pdf
+ꝺ	d
+ꝼ	f
+ꝿ	ng
+ꞁ	ll
+ꞃ	r
+ꞅ	s
+ꞇ	t
+## Modifier letters
+ꞈ	^
+꞉	:
+꞊	=
+## Orthographic letters for glottals
+ꞌ	'
+## Phonetic symbol
+ꞎ	ɬ
+## Transliteration letter
 ꞏ	-
-Ꞑ	N
-Ꞓ	C
+## Additional letters
+ꞑ	n
+ꞓ	c
+## Additions for Lithuanian dialectology
+ꞔ	c
 ꞕ	h
-Ꞗ	B
-Ꞙ	F
-Ꞛ	Ae
-Ꞝ	Oe
-Ꞟ	Ue
-Ꞡ	G
-Ꞣ	K
-Ꞥ	N
-Ꞧ	R
-Ꞩ	S
-Ɦ	H
-Ɜ	E
-Ɡ	G
-Ɬ	L
-Ɪ	I
-ꞯ	Q
-Ʞ	K
-Ʇ	T
-Ʝ	J
-Ꭓ	X
-Ꞵ	B
-Ꞷ	O
-# https://unicode.org/L2/L2014/14201-latin-add.pdf
-Ꞹ	U
-# https://unicode.org/L2/L2017/17076r2-n4792r2-egyptological-yod.pdf
-Ꞻ	A
-Ꞽ	I
-Ꞿ	U
-# https://unicode.org/L2/L2021/21039-old-polish-o.pdf
-Ꟁ	O
-# https://unicode.org/L2/L2017/17238-n4838-anglicana-w.pdf
-Ꟃ	W
-#
-Ꞔ	C
-Ʂ	S
-Ᶎ	Z
-Ꟈ	D
-Ꟊ	S
+## Letters for Middle Vietnamese
+ꞗ	b
+## Archaic letters for Ewe
+ꞙ	f
+## Archaic letters for Volapük
+ꞛ	ae
+ꞝ	oe
+ꞟ	ue
+## Letters for pre-1921 Latvian orthography
+ꞡ	g
+ꞣ	k
+ꞥ	n
+ꞧ	r
+ꞩ	s
+## Letter for Japanese phonemic transcription
+ꞯ	q
+## Letters for African languages
+## https://unicode.org/wg2/docs/n4297.pdf
+ꞵ	b
+ꞷ	o
+## Letters for Mazahua (México)
+## https://unicode.org/L2/L2014/14201-latin-add.pdf
+ꞹ	u
+## Letters for Ugaritic and Egyptological transliteration
+## https://unicode.org/L2/L2017/17076r2-n4792r2-egyptological-yod.pdf
+ꞻ	a
+ꞽ	i
+ꞿ	u
+## Additional medieval letters
+### https://unicode.org/L2/L2021/21039-old-polish-o.pdf
+ꟁ	o
+### https://unicode.org/L2/L2017/17238-n4838-anglicana-w.pdf
+ꟃ	w
+## Additional letters for Gaulish
+## https://unicode.org/wg2/docs/n5044-tau-gallicum.pdf
+ꟈ	d
+ꟊ	s
+## Letters used in the Middle English Ormulum
 # https://unicode.org/wg2/docs/n5145-ormulum.pdf
-Ꟑ	G
-ꟓ	thth
-ꟕ	ww
-# https://unicode.org/wg2/docs/n5144-middle-scots-s.pdf
-Ꟗ	S
-# https://unicode.org/wg2/docs/n5146-sigmoid-s.pdf
-Ꟙ	S
-#
-Ꟶ	H
+ꟑ	g
+ꟓ	þþ
+ꟕ	ƿƿ
+## Letters used in medieval palaeography
+### https://unicode.org/wg2/docs/n5144-middle-scots-s.pdf
+ꟗ	s
+### https://unicode.org/wg2/docs/n5146-sigmoid-s.pdf
+ꟙ	s
+## Ancient Gaulish and Celtic epigraphic letters
+### https://unicode.org/wg2/docs/n5039_reversed_half_h.pdf
+ꟶ	h
+###
 ꟷ	I
-# https://unicode.org/L2/L2009/09028-n3571-upa-additions.pdf
-ꟺ	W
-# https://unicode.org/L2/L2006/06269-add-roman.pdf
+## Addition for UPA
+## https://unicode.org/L2/L2009/09028-n3571-upa-additions.pdf
+ꟺ	ɯ
+## Ancient Roman epigraphic letters
+## https://unicode.org/L2/L2006/06269-add-roman.pdf
 ꟻ	F
 ꟼ	P
 ꟽ	M
 ꟾ	I
 ꟿ	M'
+# Latin Extended-E
 # https://unicode.org/charts/PDF/UAB30.pdf
-ꬰ	a
+## Letters for German dialectology
+ꬰ	ɑ
 ꬱ	ae
 ꬲ	e
 ꬳ	e
@@ -410,69 +519,83 @@
 ꬹ	l
 ꬺ	m
 ꬻ	n
-ꬼ	ng
+ꬼ	ŋ
 ꬽ	o
-ꬾ	o
-ꬿ	o
+ꬾ	ꬽ
+ꬿ	ɔ
 ꭀ	oe
 ꭁ	oe
 ꭂ	oe
 ꭃ	oo
 ꭄ	oo
 ꭅ	r
-ꭆ	R
+ꭆ	r
 ꭇ	r
 ꭈ	rr
 ꭉ	r
 ꭊ	rr
 ꭋ	r
 ꭌ	r
-ꭍ	sh
+ꭍ	ʃ
 ꭎ	u
 ꭏ	u
 ꭐ	ui
 ꭑ	ui
 ꭒ	u
-ꭔ	x
-ꭕ	x
+ꭓ	x
+ꭔ	ꭓ
+ꭕ	ꭓ
 ꭖ	x
 ꭗ	x
 ꭘ	x
 ꭙ	x
 ꭚ	y
-# https://unicode.org/L2/L2012/12044-yakut.pdf
+## Modifier letters for German dialectology
+꭛	*
+## Historic letters for Sakha (Yakut)
+## https://unicode.org/L2/L2012/12044-yakut.pdf
 ꭠ	ia
 ꭡ	ie
 ꭢ	oe
 ꭣ	uo
-#
+## Letters for Americanist orthographies
 ꭤ	a
-ꭦ	dz
-ꭧ	ts
-ꭨ	r
+ꭥ	ω
+## Letters for Sinological transcription
+ꭦ	ʣ
+ꭧ	ʦ
+## Letters for Scots dialectology
+## http://unicode.org/L2/L2019/19075r-n5036-scots-phonetics.pdf
+ꭨ	ɹ
+꭪	<
+꭫	>
+# Latin Extended-F
 # https://unicode.org/charts/PDF/U10780.pdf
-𐞀	AA
+## Modifier letter for VoQS
+𐞀	ꜳ
+# Latin Extended-G
 # https://unicode.org/charts/PDF/U1DF00.pdf
 ## Extended IPA for disordered speech
 𝼀	ʩ
 𝼁	g
-𝼂	G
+𝼂	g
 𝼃	k
-𝼄	ʟ
+𝼄	ɬ
 𝼅	ɮ
 𝼆	ʎ
-𝼇	ŋ
+𝼇	ng
 ## IPA extensions
 𝼈	ɺ
 𝼉	ƭ
 𝼊	ǃ
 ## Clicks
-𝼋	ʃ
+## https://unicode.org/L2/L2020/20115r-click-letters.pdf
+𝼋	ǂ
 𝼌	𝼋
 𝼍	ʇ
 𝼎	ʖ
 𝼏	ʗ
-𝼐	K
+𝼐	ʞ
 ## Lateral
 𝼑	l
 ## Letters with palatal hooks
