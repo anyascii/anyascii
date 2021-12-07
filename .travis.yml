@@ -65,3 +65,9 @@ jobs:
       install: skip
       before_script: cd impl/c
       script: ./test.sh
+
+    - language: elixir
+      elixir: '1.12.2'
+      install: skip
+      before_script: cd impl/elixir; mix deps.get
+      script: mix test

@@ -1,0 +1,3 @@
+%{
+  "zstream": {:hex, :zstream, "0.6.1", "19b45bee186a8cbbd9be5589cc8b3f1ed606da603ee47a830d39b467654899c2", [:mix], [], "hexpm", "653ba0c656898df917b68d01317dcbbfe401293a04e37ba90e0e690fbf9ddab6"},
+}

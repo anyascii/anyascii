@@ -89,6 +89,18 @@ AnyAscii is implemented across multiple programming languages with the same beha
 https://raw.githubusercontent.com/anyascii/anyascii/master/impl/c/anyascii.h
 https://raw.githubusercontent.com/anyascii/anyascii/master/impl/c/anyascii.c
 
+## Elixir
+
+[Available in Hex](https://hex.pm/docs/publish), the package can be installed
+by adding `anyascii` to your list of dependencies in `mix.exs`:
+```elixir
+def deps do
+  [
+    {:anyascii, "~> 0.3.1"}
+  ]
+end
+```
+
 ## Go
 
 https://pkg.go.dev/github.com/anyascii/go
