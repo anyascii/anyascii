@@ -1,3 +1,5 @@
+# https://unicode.org/charts/PDF/U0A00.pdf
+#
 # iso 15919
 ਁ	m
 ਂ	m
@@ -60,13 +62,18 @@
 ੜ	r
 ਫ਼	ph
 ੰ	m
-# other
+# Various signs
 ਼	'
+# Virama
 ੍	
+# Sign
 ੑ	
+# Signs
 ੱ	'
+# Vowel bases
 ੲ	
 ੳ	
+# Signs
 ੴ	*
 ੵ	y
 ੶	.

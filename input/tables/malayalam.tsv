@@ -1,3 +1,5 @@
+# https://unicode.org/charts/PDF/U0D00.pdf
+#
 # iso 15919
 ം	m
 ഃ	h
@@ -71,38 +73,50 @@
 ൡ	l
 ൢ	l
 ൣ	l
-# chillu
+# Various signs
+ഀ	m
+ഁ	m
+ഄ	m
+# Variant shape viramas
+഻	
+഼	
+# Virama
+്	
+# Dot reph
+ൎ	r
+# Measurement symbol
+൏	p
+# Additional historic chillu letters
 ൔ	m
 ൕ	y
 ൖ	l
+# Dependent vowel sign
+ൗ	u
+# Minor fractions
+# https://unicode.org/wg2/docs/n4429.pdf
+൘	2
+൙	4
+൚	12
+൛	16
+൜	32
+൝	48
+൞	64
+# Additional historic vowel
+ൟ	i
+# Fractions
+# https://unicode.org/wg2/docs/n4429.pdf
+൳	80
+൴	160
+൵	240
+൶	20
+൷	40
+൸	60
+# Date mark
+൹	d
+# Chillu letters
 ൺ	n
 ൻ	n
 ർ	r
 ൽ	l
 ൾ	l
 ൿ	k
-# other
-ഀ	m
-ഁ	m
-ഄ	m
-഻	
-഼	
-്	
-ൎ	r
-൏	p
-ൗ	u
-൘	1/160
-൙	1/40
-൚	3/8
-൛	1/20
-൜	1/10
-൝	3/20
-൞	1/5
-ൟ	i
-൳	1/4
-൴	1/2
-൵	3/4
-൶	1/16
-൷	1/8
-൸	3/16
-൹	d

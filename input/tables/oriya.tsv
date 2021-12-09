@@ -1,3 +1,5 @@
+# https://unicode.org/charts/PDF/U0B00.pdf
+#
 # iso 15919
 ଁ	m
 ଂ	m
@@ -68,18 +70,22 @@
 ୢ	l
 ୣ	l
 ୱ	w
-# https://www.unicode.org/wg2/docs/n5023-19005-odia-overline.pdf
-୕	
-# other
+# Various signs
 ଼	'
+# Virama
 ୍	
+# Various signs
+# https://unicode.org/wg2/docs/n5023-19005-odia-overline.pdf
+୕	
 ୖ	i
 ୗ	u
+# Sign
 ୰	^
-# fractions
-୲	1/4
-୳	1/2
-୴	3/4
-୵	1/16
-୶	1/8
-୷	3/16
+# Fraction signs
+# https://unicode.org/wg2/docs/n3471.pdf
+୲	꠰
+୳	꠱
+୴	꠲
+୵	꠳
+୶	꠴
+୷	꠵

@@ -1,47 +1,32 @@
+# https://unicode.org/charts/PDF/U20A0.pdf
 # the economist style guide 11th edition
-# world bank editorial style guide 2016
+# world bank editorial style guide 2020
 # iso 4217
-¢	c
-£	L
-¤	$
-¥	Y
-֏	Dram
-؋	Af
-߾	$
-߿	$
-৲	Rs
-৳	Rs
-৻	g
-૱	Rs
-௹	Rs
-฿	Bt
-៛	CR
 ₠	CE
 ₡	C
 ₢	Cr
-₣	Fr
+₣	F
 ₤	L
-₥	mil
+₥	m
 ₦	N
 ₧	Pts
-₨	Rs
-₩	Won
+₩	W
 ₪	NIS
-₫	D
+₫	d
 €	EUR
 ₭	K
-₮	Tg
+₮	T
 ₯	Dr
 ₰	Pf
 ₱	P
 ₲	G
-₳	ARA
+₳	A
 ₴	HRN
-₵	GHC
+₵	C
 ₶	lt
 ₷	Sm
 ₸	T
-₹	Rs
+₹	₨
 ₺	TL
 ₻	M
 ₼	Manat
@@ -49,11 +34,3 @@
 ₾	Lari
 ₿	BTC
 ⃀	Som
-꠸	Rs
-﷼	Rial
-#𑿝	
-#𑿞	
-#𑿟	
-#𑿠	
-𞋿	Rs
-𞲰	Rs

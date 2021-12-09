@@ -1,12 +1,20 @@
 # https://unicode.org/charts/PDF/U1EC70.pdf
 # https://unicode.org/L2/L2015/15121r2-indic-siyaq.pdf
+#
+# Lakhs
 𞲞	1L
 𞲟	2L
 𞲠	L
+# Crores
 𞲡	cr
 𞲢	2cr
+# Placeholder
 𞲬	-
+# Fractions
 𞲭	1/4
 𞲮	1/2
 𞲯	3/4
-𞲴	L
+# Currency symbol
+𞲰	₨
+# Alternate forms
+𞲴	𞲠

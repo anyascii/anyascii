@@ -1,3 +1,5 @@
+# https://unicode.org/charts/PDF/U0980.pdf
+#
 # iso 15919
 ঁ	m
 ং	m
@@ -67,20 +69,32 @@
 ৣ	l
 ৰ	r
 ৱ	v
-# other
+# Various signs
 ঀ	*
+# Various signs
 ়	'
+# Virama
 ্	
+# Additional consonant
 ৎ	t
+# Sign
 ৗ	u
-৴	1/16
-৵	1/8
-৶	3/16
-৷	1/4
-৸	3/4
-৹	/16
+# Currency symbols
+৲	₨
+৳	₨
+# Historic symbols for fractional values
+৴	꠳
+৵	꠴
+৶	꠵
+৷	꠰
+৸	꠲
+৹	/
+# Sign
 ৺	^
+# Historic currency sign
+# https://unicode.org/wg2/docs/n3311.pdf
 ৻	g
+# Signs
 ৼ	m
 ৽	.
 ৾	'

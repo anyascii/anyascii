@@ -1,3 +1,5 @@
+# https://unicode.org/charts/PDF/U0530.pdf
+#
 # bgn/pcgn 1981
 ա	a
 բ	b
@@ -39,10 +41,10 @@
 և	ev
 # ala-lc 2011
 ւ	w
-# https://www.unicode.org/L2/L2017/17032-armenian-add.pdf
+# https://unicode.org/L2/L2017/17032-armenian-add.pdf
 ՠ	a
 ֈ	h
-# symbols
+# Modifier letters
 ՙ	`
 ՚	'
 ՛	*
@@ -50,7 +52,11 @@
 ՝	,
 ՞	?
 ՟	.
+# Punctuation
 ։	.
 ֊	-
+# Religious symbols
 ֍	*
 ֎	*
+# Currency symbol
+֏	Dram

@@ -1,5 +1,5 @@
 # https://unicode.org/charts/PDF/U1780.pdf
-# https://unicode.org/versions/Unicode13.0.0/ch16.pdf
+# https://unicode.org/versions/Unicode14.0.0/ch16.pdf
 #
 # ungegn 2013 provisional 1997
 ## I
@@ -86,20 +86,22 @@
 ៍	
 ### 10
 ឨ	o
-# sanskrit
+# Consonants
 ឝ	s
 ឞ	s
-# deprecated
-ឣ	'
-ឤ	'a
-# ignored
+# Deprecated independent vowels for transliteration
+ឣ	អ
+ឤ	អា
+# Inherent vowels
 ឴	
 ឵	
-# other
+# Various signs
 ៎	!
 ៑	
 ្	
+# Lunar date sign
 ៓	
+# Various signs
 ។	.
 ៕	#
 ៖	:
@@ -107,9 +109,14 @@
 ៘	-Lo-
 ៙	*
 ៚	@
+# Currency symbol
+៛	CR
+# Various signs
 ៜ	'
 ៝	
+# Khmer Symbols
 # https://unicode.org/charts/PDF/U19E0.pdf
+# Lunar date symbols
 ᧠	08
 ᧡	1.
 ᧢	2.

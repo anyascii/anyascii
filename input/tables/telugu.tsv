@@ -1,3 +1,5 @@
+# https://unicode.org/charts/PDF/U0C00.pdf
+#
 # iso 15919
 ఀ	m
 ఁ	n
@@ -73,21 +75,28 @@
 ౡ	l
 ౢ	l
 ౣ	l
-# other
+# Various signs
 ఄ	m
+# Sign
 ఼	'
+# Virama
 ్	
+# Various signs
 ౕ	'
 ౖ	i
+# Historic phonetic variants
 ౚ	r
-౷	*
-౸	0
-౹	1
-౺	2
-౻	3
-౼	1
-౽	2
-౾	3
-౿	t
+# Consonant
 # https://unicode.org/L2/L2020/20084r-telugu-nakaara-pollu.pdf
 ౝ	n
+# Sign
+౷	*
+# Telugu fractions and weights
+౸	0
+౹	꠰
+౺	꠱
+౻	꠲
+౼	꠳
+౽	꠴
+౾	꠵
+౿	t

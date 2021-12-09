@@ -1,3 +1,5 @@
+# https://unicode.org/charts/PDF/U0C80.pdf
+#
 # iso 15919
 ಂ	m
 ಃ	h
@@ -71,13 +73,17 @@
 ೣ	l
 ೱ	h
 ೲ	h
-# other
+# Various signs
 ಀ	m
 ಁ	m
 ಄	*
+# Various signs
 ಼	'
+# Virama
 ್	
+# Various signs
 ೕ	'
 ೖ	i
+# Additional consonants
 # https://unicode.org/L2/L2020/20228r-kannada-nakaara-pollu.pdf
 ೝ	n

@@ -1,3 +1,5 @@
+# https://unicode.org/charts/PDF/U0A80.pdf
+#
 # iso 15919
 ઁ	m
 ં	m
@@ -66,14 +68,22 @@
 ૌ	au
 ૠ	r
 ૡ	l
-# other
+# Various signs
 ઼	'
+# Virama
 ્	
+# Various signs
 ૐ	Om
+# Additional vowels for Sanskrit
 ૢ	l
 ૣ	l
+# Abbreviation sign
 ૰	.
+# Currency symbol
+૱	₨
+# Additional consonant
 ૹ	zh
+# Transliteration signs
 ૺ	
 ૻ	
 ૼ	

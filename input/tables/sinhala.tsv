@@ -1,3 +1,5 @@
+# https://unicode.org/charts/PDF/U0D80.pdf
+#
 # iso 15919
 ං	m
 ඃ	h
@@ -75,9 +77,13 @@
 ෞ	au
 ෲ	r
 ෳ	l
-# other
+# Various signs
 ඁ	m
+# Consonants
 ඥ	jn
+# Sign
 ්	
+# Dependent vowel sign
 ෟ	u
+# Punctuation
 ෴	~
