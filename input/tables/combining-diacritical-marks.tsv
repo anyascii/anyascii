@@ -1,0 +1,345 @@
+# Combining Diacritical Marks
+# https://unicode.org/charts/PDF/U0300.pdf
+## Ordinary diacritics
+̀	
+́	
+̂	
+̃	
+̄	
+̅	
+̆	
+̇	
+̈	
+̉	
+̊	
+̋	
+̌	
+̍	
+̎	
+̏	
+̐	
+̑	
+̒	
+̓	
+̔	
+̕	
+̖	
+̗	
+̘	
+̙	
+̚	
+̛	
+̜	
+̝	
+̞	
+̟	
+̠	
+̡	
+̢	
+̣	
+̤	
+̥	
+̦	
+̧	
+̨	
+̩	
+̪	
+̫	
+̬	
+̭	
+̮	
+̯	
+̰	
+̱	
+̲	
+̳	
+## Overstruck diacritics
+̴	
+̵	
+̶	
+̷	
+̸	
+## Miscellaneous additions
+̹	
+̺	
+̻	
+̼	
+̽	
+̾	
+̿	
+## Vietnamese tone marks
+̀	
+́	
+## Additions for Greek
+͂	
+̓	
+̈́	
+ͅ	
+## Additions for IPA
+͆	
+͇	
+͈	
+͉	
+͊	
+## IPA diacritics for disordered speech
+͋	
+͌	
+͍	
+͎	
+## Grapheme joiner
+͏	
+## Additions for the Uralic Phonetic Alphabet
+͐	
+͑	
+͒	
+͓	
+͔	
+͕	
+͖	
+͗	
+## Miscellaneous additions
+### https://unicode.org/wg2/docs/n2713.pdf
+͘	
+### https://unicode.org/wg2/docs/n2612-4.pdf
+͙	
+### https://unicode.org/wg2/docs/n2630.pdf
+͚	
+### https://unicode.org/wg2/docs/n2597.pdf
+͛	
+## Double diacritics
+### https://unicode.org/wg2/docs/n2594.pdf
+͜	
+###
+͝	
+͞	
+͟	
+͠	
+͡	
+͢	
+## Medieval superscript letter diacritics
+ͣ	a
+ͤ	e
+ͥ	i
+ͦ	o
+ͧ	u
+ͨ	c
+ͩ	d
+ͪ	h
+ͫ	m
+ͬ	r
+ͭ	t
+ͮ	v
+ͯ	x
+# Combining Diacritical Marks Extended
+# https://unicode.org/charts/PDF/U1AB0.pdf
+## Used in German dialectology
+᪰	
+᪱	
+᪲	
+᪳	
+᪴	
+᪵	
+᪶	
+᪷	
+᪸	
+᪹	
+᪺	
+## Marks surrounding other diacritics or letters
+᪻	
+᪼	
+᪽	
+᪾	
+## Used in Scots dialectology
+## https://unicode.org/wg2/docs/n5036r-scots-phonetics.pdf
+ᪿ	w
+ᫀ	ʍ
+## Marks next to or surrounding other diacritics
+### https://unicode.org/charts/PDF/U1AB0.pdf
+᫁	
+᫂	
+᫃	
+᫄	
+### https://unicode.org/L2/L2021/21042-phonetic%20punct.pdf
+᫅	
+## Phonetic sign
+## https://unicode.org/L2/L2020/20182-harrington-diacritic.pdf
+᫆	
+## Used in extended IPA
+## https://unicode.org/L2/L2021/21042-phonetic%20punct.pdf
+᫇	
+᫈	
+᫉	
+᫊	
+## Used in Middle English Ormulum
+## https://unicode.org/wg2/docs/n5145-ormulum.pdf
+᫋	
+ᫌ	ᵹ
+ᫍ	ꞃ
+ᫎ	ꞇ
+# Combining Diacritical Marks Supplement
+# https://unicode.org/charts/PDF/U1DC0.pdf
+## Used for Ancient Greek
+## https://unicode.org/L2/L2002/02273r-tlg-greek.pdf
+᷀	
+᷁	
+## Miscellaneous marks
+### https://unicode.org/wg2/docs/n2740.pdf
+᷂	
+### https://unicode.org/wg2/docs/n2763r.pdf
+᷃	
+## Contour tone marks
+## https://unicode.org/L2/L2004/04246r-LtnPhonOrth.pdf
+᷄	
+᷅	
+᷆	
+᷇	
+᷈	
+᷉	
+## Miscellaneous mark
+## https://unicode.org/L2/L2004/04246r-LtnPhonOrth.pdf
+᷊	r
+## Contour tone marks
+## https://unicode.org/charts/PDF/U1DC0.pdf
+᷋	
+᷌	
+## Double diacritic
+᷍	
+## Medievalist additions
+## https://unicode.org/wg2/docs/n3027.pdf
+᷎	
+᷏	
+᷐	
+᷑	
+᷒	
+## Medieval superscript letter diacritics
+## https://unicode.org/wg2/docs/n3027.pdf
+ᷓ	a
+ᷔ	æ
+ᷕ	ꜵ
+ᷖ	ꜹ
+ᷗ	ç
+ᷘ	ꝺ
+ᷙ	ð
+ᷚ	g
+ᷛ	ɢ
+ᷜ	k
+ᷝ	l
+ᷞ	ʟ
+ᷟ	ᴍ
+ᷠ	n
+ᷡ	ɴ
+ᷢ	ʀ
+ᷣ	ꝛ
+ᷤ	s
+ᷥ	ſ
+ᷦ	z
+## Superscript letter diacritics for German dialectology
+ᷧ	ɑ
+ᷨ	b
+ᷩ	ꞵ
+ᷪ	ə
+ᷫ	f
+ᷬ	ꬸ
+ᷭ	o
+ᷮ	p
+ᷯ	ʃ
+ᷰ	u
+ᷱ	w
+ᷲ	ä
+ᷳ	ö
+ᷴ	ü
+## Diacritic for American lexicography
+## https://unicode.org/wg2/docs/n4279.pdf
+᷵	
+## Typicon marks
+## https://unicode.org/L2/L2015/15173r2-add-typicon.pdf
+᷶	
+᷷	
+## Miscellaneous marks
+### https://unicode.org/L2/L2015/15173r2-add-typicon.pdf
+᷸	
+᷹	
+### https://unicode.org/L2/L2020/20019-syriac-dot-below-left.pdf
+᷺	
+###
+᷻	
+## Double diacritic mark for UPA
+## https://unicode.org/wg2/docs/n3571.pdf
+᷼	
+## Miscellaneous mark
+## https://unicode.org/wg2/docs/n3447.pdf
+᷽	
+## Additional marks for UPA
+## https://unicode.org/wg2/docs/n2958.pdf
+᷾	
+᷿	
+# Combining Diacritical Marks for Symbols
+# https://unicode.org/charts/PDF/U20D0.pdf
+## Combining diacritical marks for symbols
+⃐	
+⃑	
+⃒	
+⃓	
+⃔	
+⃕	
+⃖	
+⃗	
+⃘	
+⃙	
+⃚	
+⃛	
+⃜	
+## Enclosing diacritics
+⃝	
+⃞	
+⃟	
+⃠	
+## Additional diacritical mark for symbols
+⃡	
+## Additional enclosing diacritics
+### http://std.dkuug.dk/jtc1/sc2/wg2/docs/n1668r.pdf
+⃢	
+⃣	
+### https://unicode.org/wg2/docs/n1941.pdf
+⃤	
+## Additional diacritical marks for symbols
+⃥	
+⃦	
+⃧	
+⃨	
+⃩	
+⃪	
+### https://unicode.org/wg2/docs/n2590.pdf
+⃫	
+### https://unicode.org/L2/L2004/04410-math.pdf
+⃬	
+⃭	
+⃮	
+⃯	
+### https://unicode.org/wg2/docs/n3198.pdf
+⃰	
+# Combining Half Marks
+# https://unicode.org/charts/PDF/UFE20.pdf
+## Combining half marks
+︠	
+︡	
+︢	
+︣	
+## Continuous macrons for Coptic
+︤	
+︥	
+︦	
+## Combining half marks below
+### https://unicode.org/wg2/docs/n4078.pdf
+︧	
+︨	
+︩	
+︪	
+### https://unicode.org/wg2/docs/n4131.pdf
+︫	
+︬	
+︭	
+## Combining half marks
+## https://unicode.org/wg2/docs/n4475.pdf
+︮	
+︯	

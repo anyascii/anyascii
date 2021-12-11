@@ -30,7 +30,7 @@ fun main() {
 }
 
 private fun custom() = Table()
-        .then(combiningDiacriticalMarks())
+        .then(Table("combining-diacritical-marks"))
         .then(variationSelectors())
         .then(halfwidthFullwidth())
         .then(Table("spacing-modifier-letters"))
@@ -308,14 +308,6 @@ private fun nushu() = Table().apply {
         this[cp] = split[2].takeWhile { it.isLetter() }
     }
 }
-
-private fun combiningDiacriticalMarks() = Table()
-        .then((0x363..0x36f).toTable { it.name.substringAfterLast(' ').lower() })
-        .then(UnicodeBlock.COMBINING_DIACRITICAL_MARKS.toTable { "" })
-        .then(UnicodeBlock.COMBINING_DIACRITICAL_MARKS_EXTENDED.toTable { "" })
-        .then(UnicodeBlock.COMBINING_DIACRITICAL_MARKS_SUPPLEMENT.toTable { "" })
-        .then(UnicodeBlock.COMBINING_MARKS_FOR_SYMBOLS.toTable { "" })
-        .then(UnicodeBlock.COMBINING_HALF_MARKS.toTable { "" })
 
 private fun variationSelectors() = Table()
         .then(UnicodeBlock.VARIATION_SELECTORS.toTable { "" })
