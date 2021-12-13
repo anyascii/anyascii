@@ -76,7 +76,7 @@ Representative examples for different languages comparing the AnyAscii output to
 
 |Symbols|Input|Output|
 |---|---|---|
-|Emojis|😎 👑 🍎|`:sunglasses: :crown: :apple:`|
+|Emojis|👑 🌴|`:crown: :palm_tree:`|
 |Misc.|☆ ♯ ♰ ⚄ ⛌|* # + 5 X|
 |Letterlike|№ ℳ ⅋ ⅍|No M & A/S|
 

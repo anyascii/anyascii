@@ -100,7 +100,7 @@ int main() {
 	check("கன்னியாகுமரி", "knniyakumri");
 	check("శ్రీకాకుళం", "srikakulm");
 	check("สงขลา", "sngkhla");
-	check("😎 👑 🍎", ":sunglasses: :crown: :apple:");
+	check("👑 🌴", ":crown: :palm_tree:");
 	check("☆ ♯ ♰ ⚄ ⛌", "* # + 5 X");
 	check("№ ℳ ⅋ ⅍", "No M & A/S");
 
@@ -113,6 +113,9 @@ int main() {
 	check("ᨅᨔ ᨕᨘᨁᨗ", "bs ugi");
 	check("ϯⲙⲓⲛϩⲱⲣ", "timinhor");
 	check("𐐜 𐐢𐐮𐐻𐑊 𐐝𐐻𐐪𐑉", "Dh Litl Star");
+	check("ꁌꐭꑤ", "pujjytxiep");
+	check("ⰳⰾⰰⰳⱁⰾⰹⱌⰰ", "glagolica");
+	check("ᏎᏉᏯ", "SeQuoYa");
 	
 	return 0;
 }
