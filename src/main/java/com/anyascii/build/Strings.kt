@@ -11,8 +11,6 @@ typealias Script = Int
 
 typealias CharacterCategory = Byte
 
-typealias Property = Int
-
 fun String.isPrintableAscii() = all { it.toInt().isPrintableAscii() }
 
 fun String.isAscii() = all { it.toInt().isAscii() }
@@ -87,5 +85,3 @@ inline fun Iterable<CodePoint>.filterName(predicate: (String) -> Boolean) = filt
 fun String.stripLeading(c: Char) = dropWhile { it == c }
 
 fun String.remove(s: String) = replace(s, "")
-
-fun CodePoint.hasBinaryProperty(property: Property) = UCharacter.hasBinaryProperty(this, property)
