@@ -1,7 +1,5 @@
 # https://unicode.org/charts/PDF/U11580.pdf
 # https://unicode.org/wg2/docs/n4294.pdf
-# https://unicode.org/wg2/docs/n4336.pdf
-# https://unicode.org/wg2/docs/n4468.pdf
 #
 # Independent vowels
 𑖀	a
@@ -75,8 +73,8 @@
 # Punctuation
 𑗂	,
 𑗃	.
-𑗄	,
-𑗅	,
+𑗄	-
+𑗅	-
 # Repetition marks
 𑗆	-
 𑗇	-
@@ -84,6 +82,7 @@
 # Terminal mark
 𑗉	#
 # Section marks
+# https://unicode.org/wg2/docs/n4336.pdf
 𑗊	*
 𑗋	*
 𑗌	*
@@ -99,10 +98,12 @@
 𑗖	*
 𑗗	*
 # Alternate letters
-𑗘	i
-𑗙	i
-𑗚	i
-𑗛	u
+# https://unicode.org/wg2/docs/n4407.pdf
+𑗘	𑖂
+𑗙	𑖂
+𑗚	𑖃
+𑗛	𑖄
 # Alternate vowel signs
-𑗜	u
-𑗝	u
+# https://unicode.org/wg2/docs/n4407.pdf
+𑗜	𑖲
+𑗝	𑖳

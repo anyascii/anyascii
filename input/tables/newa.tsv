@@ -1,8 +1,5 @@
 # https://unicode.org/charts/PDF/U11400.pdf
 # https://unicode.org/wg2/docs/n4184.pdf
-# https://unicode.org/wg2/docs/n4816-newa-sandhi.pdf
-# https://unicode.org/wg2/docs/n4865-17093-newa-vedic-anusvara.pdf
-# https://unicode.org/wg2/docs/n4932-17369r-newa-jihvamuliya-upadhmaniya.pdf
 #
 # Independent vowels
 𑐀	a
@@ -95,7 +92,10 @@
 # Various signs
 𑑛	-
 𑑝	^
+## https://unicode.org/wg2/docs/n4816-newa-sandhi.pdf
 𑑞	'
+## https://unicode.org/wg2/docs/n4865-17093-newa-vedic-anusvara.pdf
 𑑟	m
+## https://unicode.org/wg2/docs/n4932-17369r-newa-jihvamuliya-upadhmaniya.pdf
 𑑠	h
 𑑡	h

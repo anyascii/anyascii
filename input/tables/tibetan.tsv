@@ -1,29 +1,104 @@
 # https://unicode.org/charts/PDF/U0F00.pdf
-# https://unicode.org/versions/Unicode13.0.0/ch13.pdf
+# https://unicode.org/versions/Unicode14.0.0/ch13.pdf
+# ala-lc 2015
 # https://r12a.github.io/scripts/tibetan
 # https://r12a.github.io/scripts/tibetan/block
+# http://thlib.org/reference/transliteration/#!essay=/thl/ewts/5/
 #
-# ala-lc 2015
-## consonants
+# Syllable
+ༀ	Om
+# Head marks
+༁	@
+༂	@
+༃	@
+༄	@
+༅	#
+༆	$
+༇	%
+# Marks and signs
+༈	!
+༉	*
+༊	*
+་	-
+།	,
+༎	.
+༏	;
+༐	|
+༑	|
+༒	/
+༓	*
+༔	:
+# Astrological signs
+༕	*
+༖	*
+༗	*
+༘	
+༙	
+## https://unicode.org/wg2/docs/n3011.pdf
+༚	o
+༛	oo
+༜	ooo
+༝	x
+༞	xx
+༟	ox
+# Digits minus half
+# https://babelstone.co.uk/Blog/2007/04/numbers-that-dont-add-up-tibetan-half.html
+# https://unicode.org/versions/Unicode14.0.0/ch13.pdf
+༪	1-
+༫	2-
+༬	3-
+༭	4-
+༮	5-
+༯	6-
+༰	7-
+༱	8-
+༲	9-
+༳	0-
+# Marks and signs
+༴	=
+༵	
+༶	^
+༷	
+༸	*
+༹	
+# Paired punctuation
+# http://thlib.org/reference/transliteration/#!essay=/thl/ewts/5/
+༺	<
+༻	>
+༼	(
+༽	)
+# Astrological signs
+༾	
+༿	
+# Consonants
 ཀ	k
 ཁ	kh
 ག	g
+གྷ	gh
 ང	ng
 ཅ	c
 ཆ	ch
 ཇ	j
 ཉ	ny
+ཊ	t
+ཋ	th
+ཌ	d
+ཌྷ	dh
+ཎ	n
 ཏ	t
 ཐ	th
 ད	d
+དྷ	dh
 ན	n
 པ	p
 ཕ	ph
 བ	b
+བྷ	bh
 མ	m
 ཙ	ts
 ཚ	tsh
 ཛ	dz
+ཛྷ	dzh
 ཝ	w
 ཞ	zh
 ཟ	z
@@ -32,128 +107,108 @@
 ར	r
 ལ	l
 ཤ	sh
+ཥ	s
 ས	s
 ཧ	h
 ཨ	
-## vowels
-ི	i
-ུ	u
-ེ	e
-ོ	o
-ཱ	a
-ཱི	i
-ཱུ	u
-ཻ	ai
-ཽ	au
-## other letters
-ཊ	t
-ཋ	th
-ཌ	d
-ཎ	n
-ཥ	s
-གྷ	gh
-དྷ	dh
-བྷ	bh
-ཛྷ	dzh
-ཌྷ	dh
-ཾ	m
-ྃ	m
-ཿ	h
-྅	`
-## notes
-ྀ	i
-ཱྀ	i
-་	-
-༌	-
+ཪ	ར
+# Extensions for Balti
 # https://unicode.org/wg2/docs/n2985.pdf
 # https://en.wikipedia.org/wiki/Balti_language
 ཫ	q
 ཬ	r
-# https://www.babelstone.co.uk/Blog/2007/04/numbers-that-dont-add-up-tibetan-half.html
-༪	.5
-༫	1.5
-༬	2.5
-༭	3.5
-༮	4.5
-༯	5.5
-༰	6.5
-༱	7.5
-༲	8.5
-༳	-.5
-# http://www.thlib.org/reference/transliteration/#!essay=/thl/ewts/5/
-## B
-།	/
-༎	//
-༏	;
-༑	|
-༈	!
-༔	:
-༴	=
-## C
-༄	@
-༅	#
-༆	$
-༇	%
-## D
-༺	<
-༻	>
-༼	(
-༽	)
-# xo
-༚	o
-༛	oo
-༜	ooo
-༝	x
-༞	xx
-༟	ox
-࿎	xo
-࿏	xxx
-# https://unicode.org/wg2/docs/n3032.pdf
-࿒	:
-#
-ༀ	Om
-༁	@
-༂	@
-༃	@
-༉	*
-༊	*
-༐	|
-༒	/
-༓	*
-༕	*
-༖	*
-༗	*
-༘	
-༙	
-༵	
-༶	^
-༷	
-༸	*
-༹	
-༾	
-༿	
+# Dependent vowel signs
+ཱ	
+ི	i
+ཱི	i
+ུ	u
+ཱུ	u
 ྲྀ	r
 ཷ	r
 ླྀ	l
 ཹ	l
-ྂ	
+ེ	e
+ཻ	ai
+ོ	o
+ཽ	au
+# Vocalic modification
+ཾ	m
+ཿ	h
+# Dependent vowel signs
+ྀ	i
+ཱྀ	i
+# Marks and signs
+ྂ	m
+ྃ	m
 ྄	
+྅	`
 ྆	
 ྇	
-ྈ	
-ྉ	
+# Transliteration head letters
+ྈ	ᢂ
+ྉ	ᢄ
 ྊ	
 ྋ	
-ྌ	
-ྍ	
-ྎ	
-ྏ	
-྾	-
-྿	^
+## https://unicode.org/wg2/docs/n3568.pdf
+ྌ	ᢃ
+# Transliteration subjoined signs
+ྍ	ྈ
+ྎ	ྉ
+ྏ	ྌ
+# Subjoined consonants
+ྐ	ཀ
+ྑ	ཁ
+ྒ	ག
+ྒྷ	གྷ
+ྔ	ང
+ྕ	ཅ
+ྖ	ཆ
+ྗ	ཇ
+ྙ	ཉ
+ྚ	ཊ
+ྛ	ཋ
+ྜ	ཌ
+ྜྷ	ཌྷ
+ྞ	ཎ
+ྟ	ཏ
+ྠ	ཐ
+ྡ	ད
+ྡྷ	དྷ
+ྣ	ན
+ྤ	པ
+ྥ	ཕ
+ྦ	བ
+ྦྷ	བྷ
+ྨ	མ
+ྩ	ཙ
+ྪ	ཚ
+ྫ	ཛ
+ྫྷ	ཛྷ
+ྭ	ཝ
+ྮ	ཞ
+ྯ	ཟ
+ྰ	འ
+ྱ	ཡ
+ྲ	ར
+ླ	ལ
+ྴ	ཤ
+ྵ	ཥ
+ྶ	ས
+ྷ	ཧ
+ྸ	ཨ
+# Fixed-form subjoined consonants
+ྺ	ཝ
+ྻ	ཡ
+ྼ	ར
+# Signs
+྾	*
+྿	*
+# Cantillation signs
 ࿀	*
 ࿁	*
 ࿂	*
 ࿃	*
+# Symbols
 ࿄	*
 ࿅	*
 ࿆	
@@ -163,13 +218,27 @@
 ࿊	*
 ࿋	*
 ࿌	*
+# Astrological signs
+# https://unicode.org/wg2/docs/n3011.pdf
+࿎	xo
+࿏	xxx
+# Marks
+## https://unicode.org/wg2/docs/n2694.pdf
 ࿐	*
 ࿑	*
-࿓	@
-࿔	#
+## https://unicode.org/wg2/docs/n3032.pdf
+࿒	:
+# Head marks
+# https://unicode.org/wg2/docs/n3033.pdf
+࿓	༄
+࿔	༅
+# Religious symbols
+# https://unicode.org/wg2/docs/n3268.pdf
 ࿕	+
 ࿖	+
 ࿗	+
 ࿘	+
-࿙	^
-࿚	^
+# Annotation marks
+# https://unicode.org/wg2/docs/n3569.pdf
+࿙	~
+࿚	~

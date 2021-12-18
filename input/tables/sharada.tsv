@@ -1,20 +1,11 @@
-# https://www.unicode.org/charts/PDF/U11180.pdf
-# https://www.unicode.org/wg2/docs/n3595.pdf
-# https://www.unicode.org/wg2/docs/n4158.pdf
-# https://www.unicode.org/wg2/docs/n4265.pdf
-# https://www.unicode.org/wg2/docs/n4329.pdf
-# https://www.unicode.org/wg2/docs/n4330.pdf
-# https://www.unicode.org/wg2/docs/n4331.pdf
-# https://www.unicode.org/wg2/docs/n4337.pdf
-# https://www.unicode.org/wg2/docs/n4338.pdf
-# https://www.unicode.org/wg2/docs/n4930-17428-sharada-inv-candrabindu.pdf
-# https://www.unicode.org/wg2/docs/n4931-17214r-prish-sharada.pdf
+# https://unicode.org/charts/PDF/U11180.pdf
+# https://unicode.org/wg2/docs/n3595.pdf
 #
-# various signs
+# Various signs
 𑆀	m
 𑆁	m
 𑆂	h
-# independent vowels
+# Independent vowels
 𑆃	a
 𑆄	a
 𑆅	i
@@ -29,7 +20,7 @@
 𑆎	ai
 𑆏	o
 𑆐	au
-# consonants
+# Consonants
 𑆑	k
 𑆒	kh
 𑆓	g
@@ -64,7 +55,7 @@
 𑆰	s
 𑆱	s
 𑆲	h
-# dependent vowels
+# Dependent vowels
 𑆳	a
 𑆴	i
 𑆵	i
@@ -78,35 +69,44 @@
 𑆽	ai
 𑆾	o
 𑆿	au
-# virama
+# Virama
 𑇀	
-# various signs
+# Various signs
 𑇁	'
 𑇂	h
 𑇃	h
 𑇄	Om
-# punctuation
+# Punctuation
 𑇅	,
 𑇆	.
 𑇇	.
 𑇈	 
-# sign
+# Sign
+# https://unicode.org/wg2/docs/n4330.pdf
 𑇉	
-# signs for kashmiri
+# Signs for kashmiri
+# https://unicode.org/wg2/docs/n4265.pdf
 𑇊	'
 𑇋	
 𑇌	
-# punctuation
+# Punctuation
 𑇍	*
-# historic vowel sign
+# Historic vowel sign
+# https://unicode.org/wg2/docs/n4931-17214r-prish-sharada.pdf
 𑇎	e
-# sign
+# Sign
+# https://unicode.org/wg2/docs/n4930-17428-sharada-inv-candrabindu.pdf
 𑇏	m
-# punctuation
+# Punctuation
+## https://unicode.org/wg2/docs/n4158.pdf
 𑇚	1
+## https://unicode.org/wg2/docs/n4331.pdf
 𑇛	*
+## https://unicode.org/wg2/docs/n4337.pdf
 𑇜	-
+## https://unicode.org/wg2/docs/n4329.pdf
 𑇝	-
-# section marks
+# Section marks
+# https://unicode.org/wg2/docs/n4338.pdf
 𑇞	~
 𑇟	^

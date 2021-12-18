@@ -1,7 +1,5 @@
 # https://unicode.org/charts/PDF/U11100.pdf
 # https://unicode.org/wg2/docs/n3645.pdf
-# https://unicode.org/wg2/docs/n4802-chakma-add.pdf
-# https://unicode.org/wg2/docs/n5055-19143-chakma-letter-vaa.pdf
 #
 # Various signs
 𑄀	m
@@ -67,9 +65,12 @@
 𑅂	.
 𑅃	?
 # Consonants
+# https://unicode.org/wg2/docs/n4802-chakma-add.pdf
 𑅄	lh
 # Dependent vowel signs
+# https://unicode.org/wg2/docs/n4802-chakma-add.pdf
 𑅅	a
 𑅆	ei
 # Consonant
+# https://unicode.org/wg2/docs/n5055-19143-chakma-letter-vaa.pdf
 𑅇	v

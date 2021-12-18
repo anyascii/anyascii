@@ -1,16 +1,12 @@
 # https://unicode.org/charts/PDF/U11000.pdf
-# https://unicode.org/wg2/docs/n3491.pdf
-# https://unicode.org/L2/L2008/08277-n3490-brahmi.pdf
-# https://unicode.org/wg2/docs/n4166.pdf
-# https://unicode.org/L2/L2019/19402-brahmi-adds.pdf
 #
-# various signs
+# Various signs
 𑀀	m
 𑀁	m
 𑀂	h
 𑀃	h
 𑀄	h
-# independent vowels
+# Independent vowels
 𑀅	a
 𑀆	a
 𑀇	i
@@ -25,7 +21,7 @@
 𑀐	ai
 𑀑	o
 𑀒	au
-# consonants
+# Consonants
 𑀓	k
 𑀔	kh
 𑀕	g
@@ -63,7 +59,7 @@
 𑀵	l
 𑀶	r
 𑀷	n
-# dependent vowel signs
+# Dependent vowel signs
 𑀸	a
 𑀹	a
 𑀺	i
@@ -78,9 +74,9 @@
 𑁃	ai
 𑁄	o
 𑁅	au
-# virama
+# Virama
 𑁆	
-# punctuation
+# Punctuation
 𑁇	,
 𑁈	.
 𑁉	.
@@ -88,15 +84,16 @@
 𑁋	-
 𑁌	+
 𑁍	*
-# virama
+# Virama
 𑁰	
-# independent vowels
+# Independent vowels
 𑁱	e
 𑁲	o
-# dependent vowel signs
+# Dependent vowel signs
 𑁳	e
 𑁴	o
-# consonant
+# Consonant
 𑁵	l
-# number joiner
-𑁿	-
+# Number joiner
+# https://unicode.org/wg2/docs/n4166.pdf
+𑁿	*
