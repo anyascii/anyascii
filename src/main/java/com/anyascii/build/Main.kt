@@ -93,7 +93,7 @@ private fun custom() = Table()
         .then(Table("dingbats"))
         .then(Table("tifinagh"))
         .then(glagolitic())
-        .then(baybayin())
+        .then(Table("philippine"))
         .then(Table("khmer"))
         .then(Table("ogham"))
         .then(Table("thaana"))
@@ -268,19 +268,6 @@ private fun kana() = Table("kana")
 
 private fun glagolitic() = Table("glagolitic")
         .then(codePoints(UScript.GLAGOLITIC).filterName { it.startsWith("COMBINING") }.alias { it.replace("COMBINING GLAGOLITIC LETTER", "GLAGOLITIC SMALL LETTER") })
-
-private fun baybayin() = (0x1700..0x177f).filterDefined().toTable { cp ->
-    // tagalog, hanunoo, buhid, tagbanwa
-    val name = cp.name.lower()
-    val last = name.substringAfterLast(' ')
-    when {
-        "virama" in name || "pamudpod" in name -> ""
-        "single punctuation" in name -> ","
-        "double punctuation" in name -> "."
-        last.length == 1 -> last
-        else -> last.dropLast(1)
-    }
-}
 
 private fun ideographicDescription() = UnicodeBlock.IDEOGRAPHIC_DESCRIPTION_CHARACTERS.toTable { "+" }
 

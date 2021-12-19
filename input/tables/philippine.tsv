@@ -1,0 +1,112 @@
+# https://unicode.org/wg2/docs/n1933.pdf
+# https://unicode.org/versions/Unicode14.0.0/ch17.pdf
+#
+# Tagalog
+# https://unicode.org/charts/PDF/U1700.pdf
+## Independent vowels
+ᜀ	a
+ᜁ	i
+ᜂ	u
+## Consonants
+ᜃ	k
+ᜄ	g
+ᜅ	ng
+ᜆ	t
+ᜇ	d
+ᜈ	n
+ᜉ	p
+ᜊ	b
+ᜋ	m
+ᜌ	y
+ᜍ	r
+ᜎ	l
+ᜏ	w
+ᜐ	s
+ᜑ	h
+## Dependent vowel signs
+ᜒ	i
+ᜓ	u
+## Viramas
+᜔	
+᜕	
+## Archaic letter
+## https://unicode.org/L2/L2019/19258r-baybayin-ra.pdf
+ᜟ	r
+# Hanunoo
+# https://unicode.org/charts/PDF/U1720.pdf
+## Independent vowels
+ᜠ	a
+ᜡ	i
+ᜢ	u
+## Consonants
+ᜣ	k
+ᜤ	g
+ᜥ	ng
+ᜦ	t
+ᜧ	d
+ᜨ	n
+ᜩ	p
+ᜪ	b
+ᜫ	m
+ᜬ	y
+ᜭ	r
+ᜮ	l
+ᜯ	w
+ᜰ	s
+ᜱ	h
+## Dependent vowel signs
+ᜲ	i
+ᜳ	u
+## Virama
+᜴	
+## Generic punctuation for Philippine scripts
+᜵	,
+᜶	.
+# Buhid
+# https://unicode.org/charts/PDF/U1740.pdf
+## Independent vowels
+ᝀ	a
+ᝁ	i
+ᝂ	u
+## Consonants
+ᝃ	k
+ᝄ	g
+ᝅ	ng
+ᝆ	t
+ᝇ	d
+ᝈ	n
+ᝉ	p
+ᝊ	b
+ᝋ	m
+ᝌ	y
+ᝍ	r
+ᝎ	l
+ᝏ	w
+ᝐ	s
+ᝑ	h
+## Dependent vowel signs
+ᝒ	i
+ᝓ	u
+# Tagbanwa
+# https://unicode.org/charts/PDF/U1760.pdf
+## Independent vowels
+ᝠ	a
+ᝡ	i
+ᝢ	u
+## Consonants
+ᝣ	k
+ᝤ	g
+ᝥ	ng
+ᝦ	t
+ᝧ	d
+ᝨ	n
+ᝩ	p
+ᝪ	b
+ᝫ	m
+ᝬ	y
+ᝮ	l
+ᝯ	w
+ᝰ	s
+## Dependent vowel signs
+ᝲ	i
+ᝳ	u
