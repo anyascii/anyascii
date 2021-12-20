@@ -267,7 +267,7 @@ Bundled data files total 200-500 KB depending on the implementation
 
 ## Unidecode
 
-AnyAscii is an alternative to (and inspired by) [Unidecode](https://metacpan.org/pod/Text::Unidecode) and its many [ports](https://github.com/search?q=unidecode). Unidecode was created in 2001 and only supports the [basic mulitlingual plane](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane). AnyAscii gives better results, supports more than twice as many characters, and often has a smaller file size. For a complete comparison between AnyAscii and Unidecode see `table.tsv` and `unidecode/table.tsv`.
+AnyAscii is an alternative to (and inspired by) [Unidecode](https://metacpan.org/pod/Text::Unidecode) and its many [ports](https://github.com/search?q=unidecode). Unidecode was created in 2001 and only supports the [basic mulitlingual plane](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane). AnyAscii gives better results, supports more than twice as many characters, and often has a smaller file size. To compare the mappings see `table.tsv` and `unidecode/unidecode.tsv`.
 
 ## Sources
 

@@ -3,7 +3,7 @@ use warnings;
 
 use Text::Unidecode;
 
-open(my $f, '>:raw', 'table.tsv') or die;
+open(my $f, '>:raw', 'unidecode.tsv') or die;
 binmode($f, ":utf8");
 for (my $cp = hex('0xa0'); $cp <= hex('0xffff'); $cp++) {
 	my $input = chr($cp);
