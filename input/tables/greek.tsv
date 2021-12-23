@@ -1,3 +1,5 @@
+# https://unicode.org/charts/PDF/U0370.pdf
+#
 # elot 743 2001
 ## 3.1.1 transliteration
 α	a
@@ -29,37 +31,52 @@
 ## 3.2.4 archaic
 ϝ	w
 ϳ	j
-# other
-ϙ	q
-ϟ	q
+# Archaic letters
+# https://unicode.org/wg2/docs/n2946.pdf
 ͱ	h
 ͳ	s
+# Numeral signs
 ͵	,
+# Archaic letters
+# https://unicode.org/wg2/docs/n2946.pdf
 ͷ	w
-ͺ	i
+# Iota subscript
+ͺ	ι
+# Lowercase of editorial symbols
+# https://unicode.org/L2/L2002/02273r-tlg-greek.pdf
+ͻ	ϲ
+ͼ	ϲ.
+ͽ	ͻ.
+# Spacing accent marks
 ΄	'
 ΅	"'
-Ϗ	&
-ϛ	st
+# Variant letterforms
+ϐ	𝜷
+ϑ	𝜽
+ϒ	𝜰
+ϓ	ϒ
+ϔ	ϒ
+ϕ	𝝋
+ϖ	𝝕
+ϗ	&
+# Archaic letters
+ϙ	q
+ϛ	στ
+ϟ	q
 ϡ	s
-϶	e
+# Variant letterforms
+ϰ	𝜿
+ϱ	𝝆
+# Variant letterforms and symbols
+ϴ	𝜭
+ϵ	𝜺
+϶	ϵ
+# Additional archaic letters for Bactrian
+# https://unicode.org/wg2/docs/n2411.pdf
 ϸ	sh
+# Archaic letters
+# https://unicode.org/wg2/docs/n2522.pdf
 ϻ	s
-ϼ	r.
-ͻ	s
-ͼ	s.
-ͽ	s.
-᾽	'
-᾿	'
-῀	~
-῁	"~
-῍	'`
-῎	''
-῏	'~
-῝	h`
-῞	h'
-῟	h~
-῭	"`
-΅	"'
-´	'
-῾	h
+# Symbol
+# https://unicode.org/wg2/docs/n2612-5.pdf
+ϼ	ρ.
