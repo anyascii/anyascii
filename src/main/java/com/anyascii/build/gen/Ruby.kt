@@ -1,17 +1,17 @@
 package com.anyascii.build.gen
 
 import com.anyascii.build.deflate
-import java.nio.file.Files
 import java.nio.file.Path
+import kotlin.io.path.createDirectories
+import kotlin.io.path.writeBytes
 
 fun ruby(g: Generator) {
     val dirPath = Path.of("impl/ruby/lib/data")
     dirPath.toFile().deleteRecursively()
-    Files.createDirectories(dirPath)
+    dirPath.createDirectories()
 
     for ((blockNum, block) in g.blocks) {
-        Files.newOutputStream(dirPath.resolve("%03x".format(blockNum))).use { o ->
-            o.write(deflate(block.noAscii().joinToString("\t").encodeToByteArray()))
-        }
+        val s = block.noAscii().joinToString("\t")
+        dirPath.resolve("%03x".format(blockNum)).writeBytes(deflate(s))
     }
 }

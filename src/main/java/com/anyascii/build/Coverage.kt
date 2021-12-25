@@ -8,7 +8,7 @@ fun printCoverage(table: Table) {
     val blocks = LinkedHashMap<UnicodeBlock, Coverage>()
     val scripts = LinkedHashMap<String, Coverage>()
     val planes = LinkedHashMap<Int, Coverage>()
-    for (cp in ALL_CODE_POINTS) {
+    for (cp in ALL) {
         val present = cp in table
         total.cover(present)
         blocks.cover(cp.block, present)

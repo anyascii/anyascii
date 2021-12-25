@@ -1,10 +1,10 @@
 package com.anyascii.build.gen
 
-import java.nio.file.Files
 import java.nio.file.Path
+import kotlin.io.path.bufferedWriter
 
 fun js(g: Generator) {
-    Files.newBufferedWriter(Path.of("impl/js/block.js")).use { w ->
+    Path.of("impl/js/block.js").bufferedWriter().use { w ->
         w.write("export default function block(blockNum) {\n")
         w.write("switch (blockNum) {\n")
         for ((blockNum, block) in g.blocks) {

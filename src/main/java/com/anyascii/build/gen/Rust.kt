@@ -1,21 +1,23 @@
 package com.anyascii.build.gen
 
-import java.nio.file.Files
 import java.nio.file.Path
+import kotlin.io.path.bufferedWriter
+import kotlin.io.path.createDirectories
+import kotlin.io.path.writeBytes
+import kotlin.io.path.writeText
 
 fun rust(g: Generator) {
     val dataDir = Path.of("impl/rust/src/data")
     dataDir.toFile().deleteRecursively()
-    Files.createDirectories(dataDir)
+    dataDir.createDirectories()
 
-    Files.writeString(Path.of("impl/rust/src/bank.txt"), g.stringsBank)
+    Path.of("impl/rust/src/bank.txt").writeText(g.stringsBank)
 
     for ((blockNum, bytes) in g.blockPointers) {
-        val f = dataDir.resolve("%03x.bin".format(blockNum))
-        Files.write(f, bytes)
+        dataDir.resolve("%03x.bin".format(blockNum)).writeBytes(bytes)
     }
 
-    Files.newBufferedWriter(Path.of("impl/rust/src/block.rs")).use { writer ->
+    Path.of("impl/rust/src/block.rs").bufferedWriter().use { writer ->
         writer.write("pub fn block(block_num: u32) -> &'static [u8] {\n")
         writer.write("\tmatch block_num {\n")
         for (block in g.blocks.keys) {

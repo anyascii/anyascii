@@ -1,6 +1,6 @@
 package com.anyascii.build
 
-import com.ibm.icu.lang.UCharacter.UnicodeBlock
+import com.ibm.icu.lang.UCharacter.UnicodeBlock.*
 
 fun arabic() = Table("arabic")
         .then(Table("arabic-symbols"))
@@ -15,14 +15,11 @@ private val PRESENTATION_FORM_CHARS = Table(mapOf(
         0x0652 to "."
 ))
 
-private fun presentationForms() = Table().apply {
-    val cps = UnicodeBlock.ARABIC_PRESENTATION_FORMS_A.codePoints() +
-            UnicodeBlock.ARABIC_PRESENTATION_FORMS_B.codePoints() +
-            UnicodeBlock.ARABIC_MATHEMATICAL_ALPHABETIC_SYMBOLS.codePoints() -
-            0xfdfc
+private val PRESENTATION_FORM_BLOCKS =
+        block(ARABIC_PRESENTATION_FORMS_A) +
+        block(ARABIC_PRESENTATION_FORMS_B) +
+        block(ARABIC_MATHEMATICAL_ALPHABETIC_SYMBOLS)
 
-    for (cp in cps) {
-        val s = NFKC.normalize(cp.asString()).removePrefix(" ")
-        this[cp] = PRESENTATION_FORM_CHARS.transliterateAny(s)
-    }
+private fun presentationForms() = PRESENTATION_FORM_BLOCKS.toTable {
+    PRESENTATION_FORM_CHARS.transliterateAny(NFKC.normalize(it).removePrefix(" "))
 }

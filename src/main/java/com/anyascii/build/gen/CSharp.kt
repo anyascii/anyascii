@@ -1,16 +1,16 @@
 package com.anyascii.build.gen
 
-import java.nio.file.Files
 import java.nio.file.Path
+import kotlin.io.path.bufferedWriter
 
 fun cSharp(g: Generator) {
-    Files.newBufferedWriter(Path.of("impl/csharp/src/Transliteration.data.cs")).use { w ->
+    Path.of("impl/csharp/src/Transliteration.data.cs").bufferedWriter().use { w ->
         w.write("namespace AnyAscii\n")
         w.write("{\n")
         w.write("\tpublic static partial class Transliteration\n")
         w.write("\t{\n\n")
         w.write("\t\tprivate static System.ReadOnlySpan<byte> Bank => new byte[]{")
-        w.write(g.stringsBank.asSequence().joinToString(",") { it.toInt().toString() })
+        w.write(g.stringsBank.asSequence().joinToString(",") { it.code.toString() })
         w.write("};\n\n")
         w.write("\t\tprivate static System.ReadOnlySpan<byte> Block(uint blockNum)\n")
         w.write("\t\t{\n")

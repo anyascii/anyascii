@@ -2,6 +2,7 @@ package com.anyascii.build
 
 import com.ibm.icu.lang.UScript
 import java.nio.file.Path
+import kotlin.io.path.forEachLine
 
 fun unihan() = Table()
         .then(unihan("kMandarin"))
@@ -16,39 +17,32 @@ fun unihan() = Table()
         .variants()
 
 private fun unihan(key: String) = Table().apply {
-    forEachLine(Path.of("input/Unihan_Readings.txt")) { line ->
+    Path.of("input/Unihan_Readings.txt").forEachLine { line ->
         if (line.isEmpty() || line.startsWith('#')) return@forEachLine
         val split = line.split('\t', limit = 3)
         if (split[1] != key) return@forEachLine
-        val cp = split[0].drop(2).toInt(16)
-        var output = split[2]
-        when (key) {
-            "kHangul" -> {
-                output = output.substringBefore(':')
-            }
-            "kTang" -> {
-                output = output.removePrefix("*").split(' ')[0]
-                output = output.toLowerCase().filter { it.isLetter() }.capitalize()
-            }
-            else -> {
-                output = output.substringAfter(':')
-                output = output.split(' ', ',')[0]
-                if (output.last().isDigit()) output = output.dropLast(1)
-                output = output.toLowerCase().capitalize()
-            }
+        val cp = parseUCodePoint(split[0])
+        val s = split[2]
+        val r = when (key) {
+            "kCantonese" -> s.substringBefore(' ').filter(ASCII_LETTERS).title()
+            "kHangul" -> s.substringBefore(':')
+            "kHanyuPinyin" -> s.substringAfter(':').substringBefore(',').substringBefore(' ').title()
+            "kJapaneseKun", "kJapaneseOn", "kMandarin", "kVietnamese" -> s.substringBefore(' ').title()
+            "kTang" -> s.substringBefore(' ').removePrefix("*").title()
+            else -> error(key)
         }
-        put(cp, output)
+        put(cp, r)
     }
 }
 
 private fun Table.variants() = apply {
-    forEachLine(Path.of("input/Unihan_Variants.txt")) { line ->
+    Path.of("input/Unihan_Variants.txt").forEachLine { line ->
         if (line.isEmpty() || line.startsWith('#')) return@forEachLine
         val split = line.split('\t')
         if (split.size != 3) return@forEachLine
-        val cp1 = split[0].drop(2).toInt(16)
+        val cp1 = parseUCodePoint(split[0])
         for (s in split[2].split(' ')) {
-            val cp2 = s.substringBefore('<').drop(2).toInt(16)
+            val cp2 = parseUCodePoint(s.substringBefore('<'))
             if (cp1 in this) putIfAbsent(cp2, getValue(cp1))
             if (cp2 in this) putIfAbsent(cp1, getValue(cp2))
         }
@@ -56,11 +50,11 @@ private fun Table.variants() = apply {
 }
 
 private fun ccCedict() = Table().apply {
-    forEachLine(Path.of("input/cedict_ts.u8")) { line ->
+    Path.of("input/cedict_ts.u8").forEachLine { line ->
         if (line.startsWith('#')) return@forEachLine
         val split = line.split(' ', limit = 3)
-        val pronunciation = split[2].drop(1).takeWhile { it != ']' }
-        val syllables = pronunciation.split(' ').map { it.filter { it.isLetter() }.capitalize() }
+        val pronunciation = split[2].removePrefix("[").substringBefore(']')
+        val syllables = pronunciation.split(' ').map { it.filter(ASCII_LETTERS).title() }
 
         fun add(cps: IntArray) {
             if (cps.size == syllables.size) {

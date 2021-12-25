@@ -1,8 +1,7 @@
 package com.anyascii.build.gen
 
+import com.anyascii.build.ASCII
 import com.anyascii.build.Table
-import com.anyascii.build.isAscii
-import com.anyascii.build.lengthStatistics
 import java.io.ByteArrayOutputStream
 import java.io.DataOutputStream
 import java.util.TreeMap
@@ -72,7 +71,7 @@ class Generator(val table: Table) {
     }
 
     private fun blockPointers(): Map<Int, ByteArray> {
-        check(table.lengthStatistics().max <= 0x7f)
+        check(table.values.maxOf { it.length } <= 0x7f)
         check((stringsBank.length shr 16) == 0)
         val m = TreeMap<Int, ByteArray>()
         for ((blockNum, block) in blocks) {
@@ -85,19 +84,19 @@ class Generator(val table: Table) {
                         d.writeByte(0x80)
                     }
                     1 -> {
-                        d.writeByte(s[0].toInt())
+                        d.writeByte(s[0].code)
                         d.writeByte(0)
                         d.writeByte(0x81)
                     }
                     2 -> {
-                        d.writeByte(s[0].toInt())
-                        d.writeByte(s[1].toInt())
+                        d.writeByte(s[0].code)
+                        d.writeByte(s[1].code)
                         d.writeByte(0x82)
                     }
                     3 -> {
-                        d.writeByte(s[0].toInt())
-                        d.writeByte(s[1].toInt())
-                        d.writeByte(s[2].toInt())
+                        d.writeByte(s[0].code)
+                        d.writeByte(s[1].code)
+                        d.writeByte(s[2].code)
                     }
                     else -> {
                         d.writeShort(stringsBank.indexOf(s))
@@ -114,7 +113,7 @@ class Generator(val table: Table) {
 fun Table.noAscii(): List<String> {
     val l = ArrayList<String>(size)
     for ((cp, s) in this) {
-        l.add(if (cp.isAscii()) "" else s)
+        l.add(if (cp in ASCII) "" else s)
     }
     return l
 }

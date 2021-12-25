@@ -1,13 +1,14 @@
 package com.anyascii.build.gen
 
-import java.lang.invoke.MethodHandles
-import java.nio.file.Files
+import com.anyascii.build.javaClass
 import java.nio.file.Path
+import kotlin.io.path.bufferedWriter
+import kotlin.io.path.readText
 
 fun c(g: Generator) {
-    Files.newBufferedWriter(Path.of("impl/c/anyascii.c")).use { w ->
+    Path.of("impl/c/anyascii.c").bufferedWriter().use { w ->
         w.write("/*\n")
-        w.write(Files.readString(Path.of("LICENSE")))
+        w.write(Path.of("LICENSE").readText())
         w.write("*/\n\n")
         w.write("#include <stddef.h>\n")
         w.write("#include <stdint.h>\n")
@@ -39,7 +40,7 @@ fun c(g: Generator) {
         w.write("\t}\n")
         w.write("}\n\n")
 
-        w.write(MethodHandles.lookup().lookupClass().getResource("body.c").readText())
+        w.write(javaClass.getResource("body.c")!!.readText())
     }
 }
 

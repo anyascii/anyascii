@@ -1,14 +1,14 @@
 package com.anyascii.build
 
-import com.ibm.icu.lang.UCharacter.UnicodeBlock
-import com.ibm.icu.lang.UScript
+import com.ibm.icu.lang.UCharacter.UnicodeBlock.*
+import com.ibm.icu.lang.UScript.*
 
 fun hangul() = Table("hangul")
         .combinations()
         .syllables()
 
 private fun Table.combinations() = apply {
-    codePoints(UScript.HANGUL).forEach { cp ->
+    script(HANGUL).forEach { cp ->
         if (cp in this) return@forEach
         val split = cp.name.split(' ')
         if (split.last() == "FILLER") {
@@ -25,8 +25,8 @@ private fun Table.combinations() = apply {
 }
 
 private fun Table.letter(position: String, name: String): String {
-    get(CodePoint("HANGUL $position $name"))?.let { return it }
-    get(CodePoint("HANGUL LETTER $name"))?.let { return it }
+    codePointFromName("HANGUL $position $name")?.let { get(it)?.let { return it } }
+    codePointFromName("HANGUL LETTER $name")?.let { get(it)?.let { return it } }
     if (name.startsWith("KAPYEOUN")) return letter(position, name.removePrefix("KAPYEOUN")) + 'h'
     if (name.startsWith("SSANG")) return letter(position, name.removePrefix("SSANG")).repeat(2)
     if (name.startsWith("CHITUEUM")) return letter(position, name.removePrefix("CHITUEUM"))
@@ -34,6 +34,6 @@ private fun Table.letter(position: String, name: String): String {
     error("$position $name")
 }
 
-private fun Table.syllables() = then(UnicodeBlock.HANGUL_SYLLABLES.toTable {
-    checkNotNull(transliterate(NFD.normalize(it.asString()))).capitalize()
+private fun Table.syllables() = then(block(HANGUL_SYLLABLES).toTable {
+    checkNotNull(transliterate(NFD.normalize(it))).title()
 })

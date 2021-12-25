@@ -1,13 +1,14 @@
 package com.anyascii.build.gen
 
-import java.lang.invoke.MethodHandles
-import java.nio.file.Files
+import com.anyascii.build.javaClass
 import java.nio.file.Path
+import kotlin.io.path.bufferedWriter
+import kotlin.io.path.readLines
 
 fun shell(g: Generator) {
-    Files.newBufferedWriter(Path.of("impl/sh/anyascii")).use { w ->
+    Path.of("impl/sh/anyascii").bufferedWriter().use { w ->
         w.write("#!/bin/sh\n")
-        val license = Files.readAllLines(Path.of("LICENSE")).joinToString("") { "# $it\n" }
+        val license = Path.of("LICENSE").readLines().joinToString("") { "# $it\n" }
         w.write("\n$license\n")
         for ((blockNum, block) in g.blocks) {
             w.write("_$blockNum='")
@@ -15,6 +16,6 @@ fun shell(g: Generator) {
             w.write("'\n")
         }
         w.write("\n")
-        w.write(MethodHandles.lookup().lookupClass().getResource("body.sh").readText())
+        w.write(javaClass.getResource("body.sh")!!.readText())
     }
 }

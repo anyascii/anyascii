@@ -1,7 +1,7 @@
 package com.anyascii.build
 
-import java.nio.file.Files
 import java.nio.file.Path
+import kotlin.io.path.bufferedReader
 
 fun ethiopic() = Table("ethiopic").then(letters())
 
@@ -14,7 +14,7 @@ fun ethiopic() = Table("ethiopic").then(letters())
 //https://unicode.org/wg2/docs/n2814.pdf
 
 private fun letters() = Table().apply {
-    Files.newBufferedReader(Path.of("input/ethiopic.csv")).use { r ->
+    Path.of("input/ethiopic.csv").bufferedReader().use { r ->
         val vowels = r.readLine().split(',')
         while (true) {
             val line = r.readLine()?.split(',') ?: break
@@ -22,7 +22,7 @@ private fun letters() = Table().apply {
             for (i in 1 until line.size) {
                 val col = line[i]
                 if (col.isEmpty()) continue
-                this[col.toCodePoint()] = consonant + vowels[i]
+                this[CodePoint(col)] = consonant + vowels[i]
             }
         }
     }
