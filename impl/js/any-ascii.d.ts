@@ -1,4 +1,7 @@
 /**
  * Transliterates a Unicode string into ASCII.
+ * 
+ * @param {string} string
+ * @return {string}
  */
-export default function anyAscii(string: string): string;
+export function anyAscii(string: string): string;

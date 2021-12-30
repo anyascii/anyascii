@@ -1,4 +1,4 @@
-import anyAscii from './any-ascii.js';
+const {anyAscii} = require('./any-ascii.js');
 
 function check(s, expected) {
 	const actual = anyAscii(s);

@@ -1,4 +1,4 @@
-import block from './block.js';
+const block =  require('./block.js');
 
 const blocks = {};
 
@@ -8,7 +8,7 @@ const blocks = {};
  * @param {string} string
  * @return {string}
  */
-export default function anyAscii(string) {
+function anyAscii(string) {
 	let result = '';
 	for (const c of string) {
 		const codePoint = c.codePointAt(0);
@@ -28,3 +28,5 @@ export default function anyAscii(string) {
 	}
 	return result;
 }
+
+exports.anyAscii = anyAscii;
