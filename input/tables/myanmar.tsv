@@ -1,5 +1,10 @@
 # burmese ala-lc 2011
-# consonants
+# shan ala-lc 2012
+# mon knab 2004
+#
+# Myanmar
+# https://unicode.org/charts/PDF/U1000.pdf
+## Consonants
 က	k
 ခ	kh
 ဂ	g
@@ -9,8 +14,8 @@
 ဆ	ch
 ဇ	j
 ဈ	jh
-ည	nn
 ဉ	n
+ည	nn
 ဋ	t
 ဌ	th
 ဍ	d
@@ -33,16 +38,21 @@
 သ	s
 ဟ	h
 ဠ	l
+## Independent vowels
+## https://unicode.org/wg2/docs/n3044.pdf
+## https://unicode.org/wg2/docs/n3143.pdf
 အ	'
-# independent vowels
+ဢ	'
 ဣ	i
 ဤ	i
 ဥ	u
 ဦ	u
 ဧ	e
+ဨ	e
 ဩ	o
 ဪ	o
-# dependent vowels
+## Dependent vowel signs
+## https://unicode.org/wg2/docs/n3044.pdf
 ါ	a
 ာ	a
 ိ	i
@@ -51,85 +61,33 @@
 ူ	u
 ေ	e
 ဲ	ai
-# medials
-ျ	y
-ွ	v
-ြ	r
-ှ	h
-# conjunct consonants
-ဿ	ss
-# final symbols
+ဳ	i
+ဴ	ao
+ဵ	e
+## Various signs
 ံ	m
-# punctuation
+့	
+း	
+## Virama and killer
+## http://unicode.org/wg2/docs/n3043.pdf
+္	
+်	
+## Dependent consonant signs
+ျ	y
+ြ	r
+ွ	v
+ှ	h
+## Consonant
+ဿ	ss
+## Punctuation
 ၊	,
 ။	.
-# abbreviations
-၏	e*
+## Various signs
 ၌	n*
 ၍	r*
 ၎	l*
-#
-# shan ala-lc 2012
-# consonants
-ၵ	k
-ၶ	kh
-ၷ	g
-ၸ	c
-ၹ	z
-ၺ	n
-ၻ	d
-ၼ	n
-ၽ	ph
-ၿ	b
-ႁ	h
-ဢ	'
-ႀ	x
-ၾ	f
-# vowels
-ႃ	a
-ဵ	e
-ႄ	e
-ႅ	e
-ႆ	ai
-# medials
-ႂ	v
-# abbreviations
-႟	u*
-႞	n*
-#
-# karen knab 2012
-# consonants
-ၡ	sh
-ၮ	n
-ၥ	th
-ၦ	pw
-ၯ	yw
-ၰ	khw
-# vowels
-ၢ	oe
-ၧ	oe
-ၨ	u
-#
-# mon knab 2004
-# consonants
-ၚ	n
-ၛ	jh
-ၜ	b
-ၝ	b
-# irregular subscript consonants
-ၞ	n
-ၟ	m
-ၠ	l
-# independent vowels
-ဨ	e
-# abbreviated vowels
-ဳ	i
-ဴ	ao
-#
-# virama
-္	
-်	
-# pali, sanskrit
+၏	e*
+## Pali and Sanskrit extensions
 ၐ	s
 ၑ	s
 ၒ	r
@@ -140,16 +98,69 @@
 ၗ	r
 ၘ	l
 ၙ	l
-# tones
-့	
-း	
+## Extensions for Mon
+## https://unicode.org/wg2/docs/n3044.pdf
+ၚ	n
+ၛ	jh
+ၜ	b
+ၝ	b
+ၞ	n
+ၟ	m
+ၠ	l
+## Extensions for S'gaw Karen
+## https://unicode.org/wg2/docs/n3044.pdf
+## karen knab 2012
+ၡ	sh
+ၢ	o
 ၣ	
 ၤ	
+## Extensions for Western Pwo Karen
+## https://unicode.org/wg2/docs/n3142.pdf
+## karen knab 2012
+ၥ	s
+ၦ	pw
+ၧ	o
+ၨ	u
 ၩ	
 ၪ	
 ၫ	
 ၬ	
 ၭ	
+## Extensions for Eastern Pwo Karen
+## https://unicode.org/wg2/docs/n3142.pdf
+## karen knab 2012
+ၮ	n
+ၯ	yw
+ၰ	ghw
+## Extension for Geba Karen
+## https://unicode.org/wg2/docs/n3142.pdf
+ၱ	i
+## Extensions for Kayah
+## https://unicode.org/wg2/docs/n3038.pdf
+## https://unicode.org/wg2/docs/n3142.pdf
+ၲ	o
+ၳ	u
+ၴ	e
+## Extensions for Shan
+## https://unicode.org/wg2/docs/n3143.pdf
+ၵ	k
+ၶ	kh
+ၷ	g
+ၸ	c
+ၹ	z
+ၺ	n
+ၻ	d
+ၼ	n
+ၽ	ph
+ၾ	f
+ၿ	b
+ႀ	x
+ႁ	h
+ႂ	v
+ႃ	a
+ႄ	e
+ႅ	e
+ႆ	ai
 ႇ	
 ႈ	
 ႉ	
@@ -157,62 +168,38 @@
 ႋ	
 ႌ	
 ႍ	
+## Extensions for Rumai Palaung
+## https://unicode.org/wg2/docs/n3143.pdf
+ႎ	f
 ႏ	
+## Extensions for Khamti Shan
+## https://unicode.org/wg2/docs/n3492.pdf
 ႚ	
 ႛ	
-ꩼ	
-ꩽ	
-ꩻ	
-# geba karen
-ၱ	i
-# kayah
-ၲ	oe
-ၳ	u
-ၴ	ee
-# rumai palaung
-ႎ	f
-# khamti shan
-ꩠ	g
-ꩡ	c
-ꩢ	ch
-ꩣ	j
-ꩤ	jh
-ꩥ	n
-ꩦ	t
-ꩧ	th
-ꩨ	d
-ꩩ	dh
-ꩪ	dh
-ꩫ	n
-ꩬ	s
-ꩭ	h
-ꩮ	h
-ꩯ	f
-ꩰ	-
-ꩱ	x
-ꩲ	z
-ꩳ	r
-ꩴ	oay
-ꩵ	'n
-ꩶ	hm
-# aiton, phake
+## Extensions for Aiton and Phake
+## https://unicode.org/wg2/docs/n3492.pdf
 ႜ	a
 ႝ	ai
-# aiton
-꩷	!
-꩸	1
-꩹	2
-ꩺ	r
-# shan pali
-# http://unicode.org/wg2/docs/n3906.pdf
+## Shan symbols
+## https://unicode.org/wg2/docs/n3277.pdf
+## https://unicode.org/wg2/docs/n3492.pdf
+႞	1
+႟	!
+# Myanmar Extended-B
+# https://unicode.org/charts/PDF/UA9E0.pdf
+## Additions for Shan Pali
+## http://unicode.org/wg2/docs/n3906.pdf
 ꧠ	gh
 ꧡ	ch
 ꧢ	jh
 ꧣ	n
 ꧤ	bh
 ꧥ	
+## Reduplication mark
+## http://unicode.org/wg2/docs/n3906.pdf
 ꧦ	-
-# tai laing
+## Tai Laing consonants
+## https://unicode.org/wg2/docs/n3976.pdf
 ꧧ	n
 ꧨ	f
 ꧩ	g
@@ -227,6 +214,50 @@
 ꧼ	dh
 ꧽ	b
 ꧾ	bh
-# shwe palaung
+# Myanmar Extended-A
+# https://unicode.org/charts/PDF/UAA60.pdf
+## Khamti Shan consonants
+## https://unicode.org/wg2/docs/n3492.pdf
+## https://unicode.org/L2/L2020/20162-notes-khamti.pdf
+ꩠ	g
+ꩡ	c
+ꩢ	ch
+ꩣ	j
+ꩤ	jh
+ꩥ	n
+ꩦ	t
+ꩧ	th
+ꩨ	d
+ꩩ	dh
+ꩪ	dh
+ꩫ	n
+ꩬ	s
+ꩭ	h
+ꩮ	l
+ꩯ	f
+ꩰ	-
+ꩱ	x
+ꩲ	z
+ꩳ	r
+## Khamti Shan logograms
+## https://unicode.org/wg2/docs/n3492.pdf
+ꩴ	oay
+ꩵ	'n
+ꩶ	hm
+## Aiton symbols and letters
+## https://unicode.org/wg2/docs/n3492.pdf
+꩷	!
+꩸	1
+꩹	2
+ꩺ	r
+## Pa'o Karen tone mark
+## https://unicode.org/wg2/docs/n3594.pdf
+ꩻ	
+## Tai Laing tone marks
+## https://unicode.org/wg2/docs/n3976.pdf
+ꩼ	
+ꩽ	
+## Shwe Palaung letters
+## https://unicode.org/wg2/docs/n3976.pdf
 ꩾ	ch
 ꩿ	sh

@@ -1,20 +1,21 @@
 # https://unicode.org/charts/PDF/UA900.pdf
+# knab 2012
 # https://unicode.org/wg2/docs/n3038.pdf
 #
 # Consonants
 ꤊ	k
-ꤋ	kh
+ꤋ	hk
 ꤌ	g
 ꤍ	ng
 ꤎ	s
-ꤏ	sh
+ꤏ	hs
 ꤐ	z
 ꤑ	ny
 ꤒ	t
 ꤓ	ht
 ꤔ	n
 ꤕ	p
-ꤖ	ph
+ꤖ	hp
 ꤗ	m
 ꤘ	d
 ꤙ	b
@@ -25,17 +26,17 @@
 ꤞ	th
 ꤟ	h
 ꤠ	v
-ꤡ	c
+ꤡ	j
 ꤢ	a
-ꤣ	o
+ꤣ	oe
 ꤤ	i
 ꤥ	o
 # Vowels
-ꤦ	u
-ꤧ	e
+ꤦ	ue
+ꤧ	ae
 ꤨ	u
 ꤩ	e
-ꤪ	o
+ꤪ	aw
 # Tone marks
 ꤫	
 ꤬	
