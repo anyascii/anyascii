@@ -71,8 +71,12 @@ class Generator(val table: Table) {
     }
 
     private fun blockPointers(): Map<Int, ByteArray> {
-        check(table.values.maxOf { it.length } <= 0x7f)
-        check((stringsBank.length shr 16) == 0)
+        val longest = table.values.maxOf { it.length }
+        check(longest <= 0x7f)
+        println("$longest/${0x7f}")
+        check(stringsBank.length <= 0xffff)
+        println("${stringsBank.length}/${0xffff}")
+
         val m = TreeMap<Int, ByteArray>()
         for ((blockNum, block) in blocks) {
             val out = ByteArrayOutputStream()
