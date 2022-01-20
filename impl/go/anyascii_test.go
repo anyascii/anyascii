@@ -75,5 +75,7 @@ func TestTransliterate(t *testing.T) {
 	check("𐐜 𐐢𐐮𐐻𐑊 𐐝𐐻𐐪𐑉", "Dh Litl Star")
 	check("ꁌꐭꑤ", "pujjytxiep")
 	check("ⰳⰾⰰⰳⱁⰾⰹⱌⰰ", "glagolica")
-	check("ᏎᏉᏯ", "SeQuoYa");
+	check("ᏎᏉᏯ", "SeQuoYa")
+	check("ㄓㄨㄤ ㄅㄥ ㄒㄧㄠ", "zhuang beng xiao")
+	check("ꚩꚫꛑꚩꚳ ꚳ꛰ꛀꚧꚩꛂ", "ipareim m'shuoiya")
 }

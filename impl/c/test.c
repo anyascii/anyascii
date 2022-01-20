@@ -116,6 +116,8 @@ int main() {
 	check("ꁌꐭꑤ", "pujjytxiep");
 	check("ⰳⰾⰰⰳⱁⰾⰹⱌⰰ", "glagolica");
 	check("ᏎᏉᏯ", "SeQuoYa");
+	check("ㄓㄨㄤ ㄅㄥ ㄒㄧㄠ", "zhuang beng xiao");
+	check("ꚩꚫꛑꚩꚳ ꚳ꛰ꛀꚧꚩꛂ", "ipareim m'shuoiya");
 	
 	return 0;
 }
