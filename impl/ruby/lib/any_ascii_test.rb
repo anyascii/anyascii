@@ -61,6 +61,7 @@ class AnyAsciiTest < Test::Unit::TestCase
 		check("ᏎᏉᏯ", "SeQuoYa")
 		check("ㄓㄨㄤ ㄅㄥ ㄒㄧㄠ", "zhuang beng xiao")
 		check("ꚩꚫꛑꚩꚳ ꚳ꛰ꛀꚧꚩꛂ", "ipareim m'shuoiya")
+		check("ᓀᐦᐃᔭᐍᐏᐣ", "nehiyawewin")
 	end
 
 	def check(s, expected)

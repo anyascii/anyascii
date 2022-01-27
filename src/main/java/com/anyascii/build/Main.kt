@@ -47,8 +47,8 @@ private fun custom() = Table()
         .then(Table("kangxi-radicals"))
         .then(block(CJK_STROKES).toTable { it.name.substringAfterLast(' ') })
         .then(yi())
-        .then(vai())
-        .then(ethiopic())
+        .then(Table("vai").then(readSyllableTable("vai")))
+        .then(Table("ethiopic").then(readSyllableTable("ethiopic")))
         .then(dominoes())
         .then(Table("optical-character-recognition"))
         .then(Table("ol-chiki"))
@@ -273,9 +273,6 @@ private fun glagolitic() = Table("glagolitic")
 
 private fun ideographicDescription() = block(IDEOGRAPHIC_DESCRIPTION_CHARACTERS).toTable { "+" }
 
-private fun canadianSyllabics() = Table("canadian-syllabics")
-        .then(script(UScript.CANADIAN_ABORIGINAL).toTable { it.name.substringAfterLast(' ').lower() })
-
 private fun halfwidthFullwidth() = block(HALFWIDTH_AND_FULLWIDTH_FORMS).alias {
     var name = it.substringAfter(' ')
     if ("VOICED SOUND MARK" in name) name = name.replace("KATAKANA", "KATAKANA-HIRAGANA")
@@ -356,3 +353,9 @@ private fun tangsa() = block(TANGSA).and(category(OTHER_LETTER))
 private fun znamennyMusicalNotation() = block(ZNAMENNY_MUSICAL_NOTATION).toTable { if (" NEUME " in it.name) "-" else "" }
 
 private fun cyproMinoan() = block(CYPRO_MINOAN).toTable { it.name.substringAfterLast(' ').removePrefix("CM").stripLeading('0').lower() }
+
+fun canadianSyllabics() = Table("unified-canadian-aboriginal-syllabics")
+        .then(readSyllableTable("ucas"))
+        .then(readSyllableTable("ucas-carrier"))
+        .then(readSyllableTable("ucas-blackfoot"))
+        .then(readSyllableTable("ucas-inuktitut"))

@@ -81,6 +81,7 @@ public final class AnyAsciiTest {
         check("ᏎᏉᏯ", "SeQuoYa");
         check("ㄓㄨㄤ ㄅㄥ ㄒㄧㄠ", "zhuang beng xiao");
         check("ꚩꚫꛑꚩꚳ ꚳ꛰ꛀꚧꚩꛂ", "ipareim m'shuoiya");
+        check("ᓀᐦᐃᔭᐍᐏᐣ", "nehiyawewin");
     }
 
     private static void check(String s, String expected) {
