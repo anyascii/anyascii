@@ -19,7 +19,7 @@ val CodePoint.name: String get() = UCharacter.getName(this)
 
 val CodePoint.nameAlias: String get() = UCharacter.getNameAlias(this) ?: name
 
-fun codePointFromName(name: String): CodePoint? = UCharacter.getCharFromName(name).takeUnless { it == -1 }
+fun codePointFromName(name: String): CodePoint? = UCharacter.getCharFromExtendedName(name).takeUnless { it == -1 }
 
 fun String.title(): String = UCharacter.toTitleCase(ULocale.ROOT, this, null, CaseMapImpl.TITLECASE_WHOLE_STRING or UCharacter.TITLECASE_NO_BREAK_ADJUSTMENT)
 

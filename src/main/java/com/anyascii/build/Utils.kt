@@ -1,6 +1,7 @@
 package com.anyascii.build
 
 import com.ibm.icu.text.Normalizer2
+import com.ibm.icu.text.Normalizer2.*
 import java.io.ByteArrayOutputStream
 import java.lang.invoke.MethodHandles
 import java.util.zip.Deflater
@@ -14,13 +15,13 @@ fun <K, M: MutableMap<K, *>> M.retain(keys: Set<K>) = apply { this.keys.retainAl
 
 fun <K, M: MutableMap<K, *>> M.remove(keys: Set<K>) = apply { this.keys.removeAll(keys) }
 
-val NFKC: Normalizer2 = Normalizer2.getNFKCInstance()
+fun nfkc(codePoint: CodePoint) = getNFKCInstance().normalize(codePoint)
 
-val NFKD: Normalizer2 = Normalizer2.getNFKDInstance()
+fun nfkd(codePoint: CodePoint) = getNFKDInstance().normalize(codePoint)
 
-val NFC: Normalizer2 = Normalizer2.getNFCInstance()
+fun nfd(codePoint: CodePoint) = getNFDInstance().normalize(codePoint)
 
-val NFD: Normalizer2 = Normalizer2.getNFDInstance()
+fun dm(codePoint: CodePoint) = getNFKDInstance().getRawDecomposition(codePoint) ?: String(codePoint)
 
 fun Normalizer2.normalize(codePoint: CodePoint): String = normalize(String(codePoint))
 

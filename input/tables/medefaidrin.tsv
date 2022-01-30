@@ -1,5 +1,7 @@
-# https://www.unicode.org/charts/PDF/U16E40.pdf
-# https://www.unicode.org/L2/L2016/16101r-medefaidrin.pdf
+# https://unicode.org/charts/PDF/U16E40.pdf
+# https://unicode.org/L2/L2016/16101r-medefaidrin.pdf
+#
+# Lowercase letters
 𖹠	m
 𖹡	s
 𖹢	v
@@ -32,9 +34,9 @@
 𖹽	o
 𖹾	ai
 𖹿	y
-# punctuation
+# Punctuation
 𖺗	,
 𖺘	.
-# symbols
+# Symbols
 𖺙	Aiva
 𖺚	!

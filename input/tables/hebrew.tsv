@@ -4,7 +4,82 @@
 #
 # Hebrew
 # https://unicode.org/charts/PDF/U0590.pdf
-# consonants
+## Cantillation marks
+֑	
+֒	
+֓	
+֔	
+֕	
+֖	
+֗	
+֘	
+֙	
+֚	
+֛	
+֜	
+֝	
+֞	
+֟	
+֠	
+֡	
+֢	
+֣	
+֤	
+֥	
+֦	
+֧	
+֨	
+֩	
+֪	
+֫	
+֬	
+֭	
+֮	
+֯	
+## Points and punctuation
+ְ	e
+ֱ	e
+ֲ	a
+ֳ	o
+ִ	i
+ֵ	e
+ֶ	e
+ָ	a
+ַ	a
+ֹ	o
+### https://unicode.org/L2/L2004/04310-n2840-holam-haser.pdf
+ֺ	o
+###
+ֻ	u
+### https://en.wikipedia.org/wiki/Dagesh
+### https://en.wikipedia.org/wiki/Mappiq
+### https://en.wikipedia.org/wiki/Shuruk
+ּ	
+### https://en.wikipedia.org/wiki/Meteg
+ֽ	
+### https://en.wikipedia.org/wiki/Hebrew_punctuation
+־	-
+### https://en.wikipedia.org/wiki/Rafe
+ֿ	
+### https://en.wikipedia.org/wiki/Hebrew_punctuation
+׀	|
+### shin dots
+ׁ	h
+ׂ	
+### https://en.wikipedia.org/wiki/Sof_passuk
+׃	.
+## Puncta extraordinaria
+## https://unicode.org/L2/L2004/04089r-n2714-nun-hafukha.pdf
+## https://en.wikipedia.org/wiki/Puncta_extraordinaria
+ׄ	`
+ׅ	`
+## Points and punctuation
+### https://unicode.org/L2/L2004/04089r-n2714-nun-hafukha.pdf
+### https://en.wikipedia.org/wiki/Inverted_nun
+׆	^
+### https://unicode.org/wg2/docs/n2755.pdf
+ׇ	o
+## Based on ISO 8859-8
 א	'
 ב	v
 ג	g
@@ -15,91 +90,57 @@
 ח	h
 ט	t
 י	y
+ך	כ
 כ	kh
-ך	kh
 ל	l
+ם	מ
 מ	m
-ם	m
+ן	נ
 נ	n
-ן	n
 ס	s
 ע	'
+ף	פ
 פ	f
-ף	f
+ץ	צ
 צ	ts
-ץ	ts
 ק	k
 ר	r
 ש	s
 ת	t
-# shin dots
-ׁ	h
-ׂ	
-# vowels
-ַ	a
-ֲ	a
-ָ	a
-ֶ	e
-ֱ	e
-ֵ	e
-ְ	e
-ִ	i
-ֳ	o
-ֹ	o
-ֻ	u
-# https://unicode.org/wg2/docs/n2755.pdf
-ׇ	o
-# https://unicode.org/L2/L2004/04310-n2840-holam-haser.pdf
-ֺ	o
-# https://en.wikipedia.org/wiki/Dagesh
-# https://en.wikipedia.org/wiki/Mappiq
-# https://en.wikipedia.org/wiki/Shuruk
-ּ	
-# https://en.wikipedia.org/wiki/Rafe
-ֿ	
-# https://en.wikipedia.org/wiki/Meteg
-ֽ	
-# Yiddish digraphs
+## Sign
+## https://unicode.org/wg2/docs/n4807-yod-triangle.pdf
+ׯ	YYY
+## Yiddish digraphs
 װ	v
 ױ	oy
 ײ	ey
-# https://en.wikipedia.org/wiki/Puncta_extraordinaria
-# https://unicode.org/L2/L2004/04089r-n2714-nun-hafukha.pdf
-ׄ	`
-ׅ	`
-# https://en.wikipedia.org/wiki/Inverted_nun
-# https://unicode.org/L2/L2004/04089r-n2714-nun-hafukha.pdf
-׆	^
-# https://unicode.org/wg2/docs/n4807-yod-triangle.pdf
-ׯ	YYY
-# https://en.wikipedia.org/wiki/Geresh
+## Additional punctuation
+### https://en.wikipedia.org/wiki/Geresh
 ׳	'
-# https://en.wikipedia.org/wiki/Gershayim
+### https://en.wikipedia.org/wiki/Gershayim
 ״	"
-# https://en.wikipedia.org/wiki/Sof_passuk
-׃	.
-# https://en.wikipedia.org/wiki/Hebrew_punctuation
-־	-
-׀	|
-#
 # Letterlike Symbols
 # https://unicode.org/charts/PDF/U2100.pdf
-# Hebrew letterlike math symbols
+## Hebrew letterlike math symbols
 ℵ	a
 ℶ	b
-#
+ℷ	g
+ℸ	d
 # Alphabetic Presentation Forms
 # https://unicode.org/charts/PDF/UFB00.pdf
-# dagesh kal
+## Hebrew presentation forms
+### dagesh kal
 בּ	b
 גּ	g
 דּ	d
+ךּ	כּ
 כּ	k
-ךּ	k
+ףּ	פּ
 פּ	p
-ףּ	p
 תּ	t
-# dagesh hazak
+### dagesh hazak
+שּׁ	sh
+שּׂ	ss
 זּ	zz
 טּ	tt
 יּ	yy
@@ -110,25 +151,23 @@
 צּ	ts
 קּ	kk
 רּ	rr
-שּׁ	sh
-שּׂ	ss
-# mapiq
-הּ	h
+### mapiq
 אּ	'
-# rafe
+הּ	h
+### rafe
+בֿ	v
 כֿ	kh
 פֿ	f
-בֿ	v
-# vowels
-וֹ	o
-וּ	u
+### vowels
 יִ	i
+ײַ	ay
 אַ	a
 אָ	o
-ײַ	ay
-# shin
+וּ	u
+וֹ	o
+### shin
 שׁ	sh
 שׂ	s
 שּ	ss
-# ladino rafe
-ﬞ	
+### rafe
+ﬞ	ֿ

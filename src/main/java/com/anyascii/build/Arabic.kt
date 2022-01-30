@@ -21,5 +21,5 @@ private val PRESENTATION_FORM_BLOCKS =
         block(ARABIC_MATHEMATICAL_ALPHABETIC_SYMBOLS)
 
 private fun presentationForms() = PRESENTATION_FORM_BLOCKS.toTable {
-    PRESENTATION_FORM_CHARS.transliterateAny(NFKC.normalize(it).removePrefix(" "))
+    PRESENTATION_FORM_CHARS.transliterateAny(dm(it).removePrefix(" "))
 }

@@ -1,6 +1,41 @@
 # https://unicode.org/charts/PDF/U3200.pdf
 #
+# Parenthesized ideographs
+㈠	(1)
+㈡	(2)
+㈢	(3)
+㈣	(4)
+㈤	(5)
+㈥	(6)
+㈦	(7)
+㈧	(8)
+㈨	(9)
+㈩	(10)
 # Symbol
 ㉿	(K)
+# Circled ideographs
+㊀	(1)
+㊁	(2)
+㊂	(3)
+㊃	(4)
+㊄	(5)
+㊅	(6)
+㊆	(7)
+㊇	(8)
+㊈	(9)
+㊉	(10)
+# Telegraph symbols for months
+㋀	1M
+㋁	2M
+㋂	3M
+㋃	4M
+㋄	5M
+㋅	6M
+㋆	7M
+㋇	8M
+㋈	9M
+㋉	10M
+㋊	11M
+㋋	12M
 # Japanese era name
 ㋿	Reiwa

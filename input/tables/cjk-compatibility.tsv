@@ -1,5 +1,31 @@
 # https://unicode.org/charts/PDF/U3300.pdf
 #
+# Telegraph symbols for hours
+㍘	0H
+㍙	1H
+㍚	2H
+㍛	3H
+㍜	4H
+㍝	5H
+㍞	6H
+㍟	7H
+㍠	8H
+㍡	9H
+㍢	10H
+㍣	11H
+㍤	12H
+㍥	13H
+㍦	14H
+㍧	15H
+㍨	16H
+㍩	17H
+㍪	18H
+㍫	19H
+㍬	20H
+㍭	21H
+㍮	22H
+㍯	23H
+㍰	24H
 # Japanese era names
 ㍻	Heisei
 ㍼	Showa
@@ -7,14 +33,48 @@
 ㍾	Meiji
 # Japanese corporation
 ㍿	Inc.
-#
+# Squared Latin abbreviations
 ㎂	µA
 ㎌	µF
 ㎍	µg
+# Abbreviations involving liter symbols
 ㎕	µℓ
+# Squared Latin abbreviations
 ㎛	µm
 ㎲	µs
 ㎶	µV
 ㎼	µW
 ㏀	kΩ
 ㏁	MΩ
+# Telegraph symbols for days
+㏠	1D
+㏡	2D
+㏢	3D
+㏣	4D
+㏤	5D
+㏥	6D
+㏦	7D
+㏧	8D
+㏨	9D
+㏩	10D
+㏪	11D
+㏫	12D
+㏬	13D
+㏭	14D
+㏮	15D
+㏯	16D
+㏰	17D
+㏱	18D
+㏲	19D
+㏳	20D
+㏴	21D
+㏵	22D
+㏶	23D
+㏷	24D
+㏸	25D
+㏹	26D
+㏺	27D
+㏻	28D
+㏼	29D
+㏽	30D
+㏾	31D

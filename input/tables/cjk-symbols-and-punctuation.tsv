@@ -8,6 +8,7 @@
 〄	(JIS)
 々	-
 〆	/
+〇	0
 # CJK angle brackets
 〈	<
 〉	>
@@ -40,6 +41,16 @@
 〟	"
 # CJK symbol
 〠	@
+# Suzhou numerals
+〡	1
+〢	2
+〣	3
+〤	4
+〥	5
+〦	6
+〧	7
+〨	8
+〩	9
 # Combining tone marks
 〪	
 〫	
@@ -50,7 +61,12 @@
 # Other CJK punctuation
 〰	~
 # Other CJK symbols
+〶	〒
 〷	XX
+# Additional Suzhou numerals
+〸	10
+〹	20
+〺	30
 # Other CJK punctuation
 〻	-
 〼	Masu

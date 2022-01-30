@@ -13,6 +13,6 @@ private val GREEK_MATH_LETTERS = range(0x1d6a8..0x1d7cb) - category(MATH_SYMBOL)
 
 private fun greekMath() = Table("greek-math")
         .cased(block(GREEK))
-        .then(GREEK_MATH_LETTERS.normalize(NFKC))
+        .then(GREEK_MATH_LETTERS.normalize(::nfkc))
         .transliterate()
         .retain(GREEK_MATH_LETTERS)
