@@ -264,9 +264,6 @@ private fun nushu() = Table().apply {
     }
 }
 
-private fun mendeKikakui() = block(MENDE_KIKAKUI).and(category(OTHER_LETTER)).toTable { it.name.substringAfterLast(' ').lower().replace("ee", "e").replace("oo", "o") }
-        .then((0x1e8d0..0x1e8d6).toTable { "" })
-
 private fun phaistosDisc() = Table()
         .then(0x101fd, ",")
         .then(block(PHAISTOS_DISC).toTable { String.format("%02d", it - 0x101d0 + 1) })
