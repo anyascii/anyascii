@@ -1,10 +1,30 @@
-# https://unicode.org/charts/PDF/U1800.pdf
-# https://unicode.org/charts/PDF/U11660.pdf
 # https://unicode.org/reports/tr54
-# https://unicode.org/versions/Unicode13.0.0/ch13.pdf
+# https://unicode.org/versions/Unicode14.0.0/ch13.pdf
+# The World's Writing Systems, 1996
 #
-# ungegn 1982
-# knab 2015 pinyin
+# Mongolian
+# https://unicode.org/charts/PDF/U1800.pdf
+# Punctuation
+᠀	@
+᠁	...
+᠂	,
+᠃	.
+᠄	:
+᠅	*
+᠆	-
+᠇	-
+᠈	,
+᠉	.
+᠊	-
+# Format controls
+᠋	
+᠌	
+᠍	
+᠎	
+᠏	
+# Basic letters
+# mongolian ungegn 1982
+# https://unicode.org/wg2/docs/n5104-19130-mwg3-8-mong-spec-r.pdf
 ᠠ	a
 ᠡ	e
 ᠢ	i
@@ -40,9 +60,9 @@
 ᡀ	lh
 ᡁ	zh
 ᡂ	ch
-# todo
+# Todo letters
+# kalmyk ala-lc 2012
 # kalmyk knab 2012
-# https://xal.wikipedia.org/wiki/Тодо_бичиг
 ᡃ	
 ᡄ	e
 ᡅ	i
@@ -54,21 +74,22 @@
 ᡋ	b
 ᡌ	p
 ᡍ	h
-ᡎ	gh
+ᡎ	g
 ᡏ	m
 ᡐ	t
 ᡑ	d
-ᡒ	ch
-ᡓ	dzh
+ᡒ	q
+ᡓ	j
 ᡔ	c
-ᡕ	j
+ᡕ	y
 ᡖ	v
 ᡗ	k
 ᡘ	g
-ᡙ	g
-ᡚ	dzh
-ᡛ	nj
-ᡜ	dz
+ᡙ	h
+ᡚ	j
+ᡛ	ny
+ᡜ	z
+# Sibe letters
 # manchu ala-lc 2012
 ᡝ	e
 ᡞ	i
@@ -80,27 +101,29 @@
 ᡤ	g
 ᡥ	h
 ᡦ	p
-ᡧ	sh
+ᡧ	x
 ᡨ	t
 ᡩ	d
 ᡪ	j
 ᡫ	f
 ᡬ	g
 ᡭ	h
-ᡮ	ts
-ᡯ	dz
-ᡰ	zh
-ᡱ	c
-ᡲ	j
+ᡮ	c
+ᡯ	z
+ᡰ	r
+ᡱ	ch
+ᡲ	zh
+# Manchu letters
 ᡳ	i
 ᡴ	k
 ᡵ	r
 ᡶ	f
-ᡷ	j
-# https://unicode.org/L2/L2017/17007-n4781-mongolian.pdf
-ᡸ	sh
-# ali gali
-# https://unicode.org/L2/L2017/17333-mong-mixed-scheme.pdf
+ᡷ	zh
+# Buryat letter
+# https://unicode.org/wg2/docs/n4781-BuryatMongolian.pdf
+ᡸ	x
+# Extensions for Sanskrit and Tibetan
+# https://unicode.org/wg2/docs/n4883-17333-mong-mixed-scheme.pdf
 # https://unicode.org/L2/L2016/16292-mongolian-comments.pdf
 ᢀ	m
 ᢁ	h
@@ -145,19 +168,9 @@
 ᢨ	bh
 ᢩ	
 ᢪ	lh
-# punctuation
-᠁	...
-᠂	,
-᠃	.
-᠄	:
-᠅	*
-᠆	-
-᠇	-
-᠈	,
-᠉	.
-᠊	-
-# birgas
-᠀	@
+# Mongolian Supplement
+# https://unicode.org/charts/PDF/U11660.pdf
+# Punctuation
 𑙠	@
 𑙡	@
 𑙢	@
@@ -171,9 +184,3 @@
 𑙪	@
 𑙫	@
 𑙬	@
-# format controls
-᠋	
-᠌	
-᠍	
-᠎	
-᠏	
