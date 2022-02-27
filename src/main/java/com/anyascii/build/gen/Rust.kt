@@ -14,18 +14,19 @@ fun rust(g: Generator) {
     Path.of("impl/rust/src/bank.txt").writeText(g.stringsBank)
 
     for ((blockNum, bytes) in g.blockPointers) {
-        dataDir.resolve("%03x.bin".format(blockNum)).writeBytes(bytes)
+        dataDir.resolve("%03x".format(blockNum)).writeBytes(bytes)
     }
 
     Path.of("impl/rust/src/block.rs").bufferedWriter().use { writer ->
-        writer.write("pub fn block(block_num: u32) -> &'static [u8] {\n")
-        writer.write("\tmatch block_num {\n")
+        writer.write("pub fn block(block_num: u32) -> &'static [[u8; 3]] {\n")
+        writer.write("\tlet b: &'static [u8] = match block_num {\n")
         for (block in g.blocks.keys) {
             val s = "%03x".format(block)
-            writer.write("\t\t0x$s => include_bytes!(\"data/$s.bin\"),\n")
+            writer.write("\t\t0x$s => include_bytes!(\"data/$s\"),\n")
         }
         writer.write("\t\t_ => &[]\n")
-        writer.write("\t}\n")
+        writer.write("\t};\n")
+        writer.write("\tunsafe { core::slice::from_raw_parts(b.as_ptr().cast(), b.len() / 3) }\n")
         writer.write("}\n")
     }
 }

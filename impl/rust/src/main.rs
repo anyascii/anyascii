@@ -3,7 +3,7 @@ use std::io::{BufRead, Write};
 
 fn main() {
     let args = std::env::args();
-    if args.len() == 1 {
+    if args.len() <= 1 {
         transliterate_io();
     } else {
         transliterate_args(args.skip(1).collect());

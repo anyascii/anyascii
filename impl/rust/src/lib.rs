@@ -1,13 +1,15 @@
 //! Unicode to ASCII transliteration
 //!
 //! Converts Unicode characters to their best ASCII representation
-//
-// AnyAscii provides ASCII-only replacement strings for practically all Unicode characters. Text is
-// converted character-by-character without considering the context. The mappings for each script
-// are based on popular existing romanization systems. Symbolic characters are converted based on
-// their meaning or appearance. All ASCII characters in the input are left unchanged, every other
-// character is replaced with printable ASCII characters. Unknown characters and some known
-// characters are replaced with an empty string and removed.
+//!
+//! AnyAscii provides ASCII-only replacement strings for practically all Unicode
+//! characters. Text is converted character-by-character without considering the
+//! context. The mappings for each script are based on popular existing
+//! romanization systems. Symbolic characters are converted based on their
+//! meaning or appearance. All ASCII characters in the input are left unchanged,
+//! every other character is replaced with printable ASCII characters. Unknown
+//! characters and some known characters are replaced with an empty string and
+//! removed.
 //!
 //! This crate supports `no_std` + `alloc`
 
@@ -57,13 +59,7 @@ pub fn any_ascii(s: &str) -> String {
 /// ```
 pub fn any_ascii_char(c: char) -> &'static str {
     let block_num = (c as u32) >> 8;
-    let block_bytes = block::block(block_num);
-    let block: &'static [[u8; 3]] = unsafe {
-        core::slice::from_raw_parts(
-            block_bytes.as_ptr() as *const [u8; 3],
-            block_bytes.len() / 3
-        )
-    };
+    let block = block::block(block_num);
     let lo = (c as u8) as usize;
     if let Some(ptr) = block.get(lo) {
         let l = ptr[2];
@@ -72,7 +68,7 @@ pub fn any_ascii_char(c: char) -> &'static str {
             let ascii_bytes = &ptr[..len];
             unsafe { core::str::from_utf8_unchecked(ascii_bytes) }
         } else {
-            let i = ((u16::from(ptr[0]) << 8) | u16::from(ptr[1])) as usize;
+            let i = u16::from_be_bytes([ptr[0], ptr[1]]) as usize;
             let bank = include_str!("bank.txt");
             unsafe { bank.get_unchecked(i..i + len) }
         }
