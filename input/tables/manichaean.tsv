@@ -1,6 +1,7 @@
 # https://unicode.org/charts/PDF/U10AC0.pdf
-# https://unicode.org/wg2/docs/n3644.pdf
+# https://unicode.org/wg2/docs/n4029.pdf
 #
+# Letters
 𐫀	'
 𐫁	b
 𐫂	bh
@@ -9,6 +10,7 @@
 𐫅	d
 𐫆	h
 𐫇	w
+𐫈	w
 𐫉	z
 𐫊	zh
 𐫋	j
@@ -17,7 +19,7 @@
 𐫎	t
 𐫏	y
 𐫐	k
-𐫑	x
+𐫑	k
 𐫒	kh
 𐫓	l
 𐫔	dh
@@ -37,16 +39,14 @@
 𐫢	sh
 𐫣	sh
 𐫤	t
-#
-𐫈	&
-#
+# Combining marks
 𐫥	
 𐫦	
-#
+# Punctuation
 𐫰	+
 𐫱	#
-𐫲	**
-𐫳	*
+𐫲	;
+𐫳	,
 𐫴	.
 𐫵	:
-𐫶	,
+𐫶	*
