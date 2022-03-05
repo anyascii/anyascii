@@ -194,7 +194,7 @@ let s = any_ascii("άνθρωποι");
 // anthropoi
 ```
 
-Rust 1.36+ compatible
+Rust 1.42+ compatible
 
 ```toml
 # Cargo.toml

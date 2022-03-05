@@ -31,7 +31,7 @@ jobs:
       script: ruby lib/any_ascii_test.rb
 
     - language: rust
-      rust: "1.36.0"
+      rust: "1.42.0"
       install: skip
       before_script: cd impl/rust
       script: cargo test
