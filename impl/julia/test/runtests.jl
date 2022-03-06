@@ -73,4 +73,5 @@ using Test
 	check("ㄓㄨㄤ ㄅㄥ ㄒㄧㄠ", "zhuang beng xiao")
 	check("ꚩꚫꛑꚩꚳ ꚳ꛰ꛀꚧꚩꛂ", "ipareim m'shuoiya")
 	check("ᓀᐦᐃᔭᐍᐏᐣ", "nehiyawewin")
+	check("ᠤᠯᠠᠭᠠᠨᠴᠠᠪ", "ulaganqab")
 end
