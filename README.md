@@ -240,22 +240,25 @@ string s = "άνθρωποι".Transliterate();
 
 ## Background
 
-> Unicode is the foundation for text in all modern software: it’s how all mobile phones, desktops, and other computers represent the text of every language [*](https://unicode.org/reports/tr51/#Encoding)
+> Unicode is the universal character encoding. This encoding standard provides the basis for processing, storage and interchange of text data in any language in all modern software and information technology protocols. [Unicode's scope] covers all the characters for all the writing systems of the world, modern and ancient. It also includes technical symbols, punctuations, and many other characters used in writing text. [*](https://unicode.org/faq/basic_q.html)
 
-[Unicode](https://en.wikipedia.org/wiki/Unicode) is the universal character set, a global standard to support all the world's languages. It contains 140,000+ characters used by 150+ scripts along with various symbols. Typically encoded into bytes using [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
+[Unicode](https://en.wikipedia.org/wiki/Unicode) provides a unique numeric value for each character and uses [UTF-8](https://en.wikipedia.org/wiki/UTF-8) to encode sequences of characters into bytes. UTF-8 uses a variable number of bytes for each character and is backwards compatible with ASCII. UTF-16 and UTF-32 are also specified but not common. There is a name and various [properties](https://unicode.org/reports/tr44/#Properties) for each character along with algorithms for casing, collation, equivalence, line breaking, segmentation, text direction, and more.
 
-[ASCII](https://en.wikipedia.org/wiki/ASCII) is the most compatible character set, established in 1967. It is a subset of Unicode and UTF-8 consisting of 128 characters. The [printable](https://en.wikipedia.org/wiki/ASCII#Printable_characters) characters are English letters, digits, and punctuation, with the remaining being [control characters](https://en.wikipedia.org/wiki/ASCII#Control_characters). The characters found on a standard US keyboard are from ASCII.
+[ASCII](https://en.wikipedia.org/wiki/ASCII) is the lowest common denominator character encoding, established in 1967 and using 7 bits for 128 characters. The [printable](https://en.wikipedia.org/wiki/ASCII#Printable_characters) characters are English letters, digits, and punctuation, with the remaining being [control characters](https://en.wikipedia.org/wiki/ASCII#Control_characters). The characters found on a standard US keyboard are from ASCII. Most legacy 8-bit encodings were backwards compatible with ASCII.
 
-> ... expressed only in the original non-control ASCII range so as to be as widely compatible with as many existing tools, languages, and serialization formats as possible and avoid display issues in text editors and source control [*](https://spec.graphql.org/June2018/#sec-Source-Text)
+> ... expressed only in the original non-control ASCII range so as to be as widely compatible with as many existing tools, languages, and serialization formats as possible and avoid display issues in text editors and source control [*](https://spec.graphql.org/October2021/#sec-Language.Source-Text)
 
-A language is written using characters from a [script](https://en.wikipedia.org/wiki/Writing_system). A script can be [alphabetic](https://en.wikipedia.org/wiki/Alphabet), [logographic](https://en.wikipedia.org/wiki/Logogram), or [syllabic](https://en.wikipedia.org/wiki/Syllabary). Some languages use multiple scripts and some scripts are used by multiple languages. The [Latin script](https://en.wikipedia.org/wiki/Latin_script) is used in English and many other languages.
+A language is written using characters from a [script](https://en.wikipedia.org/wiki/Writing_system). Some languages use multiple scripts and some scripts are used by multiple languages. English uses the [Latin script](https://en.wikipedia.org/wiki/Latin_script) which is based on the alphabet the Romans used for writing Latin. [Other languages](https://en.wikipedia.org/wiki/List_of_Latin-script_alphabets) using the Latin script may require additional letters and diacritics.
+
+> The Unicode Standard encodes scripts rather than languages. When writing systems for more than one language share sets of graphical symbols that have historically related derivations, the union of all of those graphical symbols ... is identified as a single script. [*](https://unicode.org/standard/supported.html)
 
 When converting text between languages there are multiple properties that can be preserved:
-- Meaning: [Translation](https://en.wikipedia.org/wiki/Translation)
-- Sound: [Transcription](https://en.wikipedia.org/wiki/Orthographic_transcription)
-- Spelling: [Transliteration](https://en.wikipedia.org/wiki/Transliteration)
 
-[Romanization](https://en.wikipedia.org/wiki/Romanization) is the conversion into the Latin script using transliteration and transcription. Romanization is most commonly used when representing the names of people and places.
+|Original|[Transliteration](https://en.wikipedia.org/wiki/Transliteration) (Spelling)|[Transcription](https://en.wikipedia.org/wiki/Orthographic_transcription) (Sound)|[Translation](https://en.wikipedia.org/wiki/Translation) (Meaning)|
+|---|---|---|---|
+|ευαγγέλιο|euaggelio|evangelio|gospel|
+
+[Romanization](https://en.wikipedia.org/wiki/Romanization) is the conversion into the Latin script using transliteration and transcription, it is most commonly used when representing the names of people and places. Some nations have an official romanization standard for their language. Several organizations publish romanization standards for multiple languages.
 
 > Geographical names are Romanized to help foreigners find the place they intend to go to and help them remember cities, villages and mountains they visited and climbed. But it is Koreans who make up the Roman transcription of their proper names to print on their business cards and draw up maps for international tourists. Sometimes, they write the lyrics of a Korean song in Roman letters to help foreigners join in a singing session or write part of a public address (in Korean) in Roman letters for a visiting foreign VIP. In this sense, it is for both foreigners and the local public. The Romanization system must not be a code only for the native English-speaking community here but an important tool for international communication between Korean society, foreign residents in the country and the entire external world. [*](https://web.archive.org/web/20070927204130/http://www.korea.net/korea/kor_loca.asp?code=A020303)
 
@@ -267,7 +270,7 @@ Bundled data files total 200-500 KB depending on the implementation
 
 ## Unidecode
 
-AnyAscii is an alternative to (and inspired by) [Unidecode](https://metacpan.org/pod/Text::Unidecode) and its many [ports](https://github.com/search?q=unidecode). Unidecode was created in 2001 and only supports the [basic mulitlingual plane](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane). AnyAscii gives better results, supports more than twice as many characters, and often has a smaller file size. To compare the mappings see `table.tsv` and `unidecode/unidecode.tsv`.
+AnyAscii is an alternative to (and inspired by) [Unidecode](https://metacpan.org/pod/Text::Unidecode) and its many [ports](https://github.com/search?q=unidecode). Unidecode only supports a subset of the [basic mulitlingual plane](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane). AnyAscii gives better results, supports more than twice as many characters, and often has a smaller file size. To compare the mappings see `table.tsv` and `unidecode/unidecode.tsv`.
 
 ## Sources
 
