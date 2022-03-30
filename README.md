@@ -108,7 +108,7 @@ https://jitpack.io/#com.anyascii/anyascii
 
 ```java
 String s = AnyAscii.transliterate("άνθρωποι");
-// anthropoi
+assert s.equals("anthropoi");
 ```
 
 Java 6+ compatible

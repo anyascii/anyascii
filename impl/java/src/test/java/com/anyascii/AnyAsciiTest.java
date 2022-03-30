@@ -98,12 +98,15 @@ public final class AnyAsciiTest {
 
     @Test public void testNPE() {
         assertThrows(NullPointerException.class, () -> AnyAscii.isAscii(null));
+
         assertThrows(NullPointerException.class, () -> AnyAscii.transliterate(null));
+
         assertThrows(NullPointerException.class, () -> AnyAscii.transliterate(0, null));
         assertThrows(NullPointerException.class, () -> AnyAscii.transliterate(0xff, null));
+
         assertThrows(NullPointerException.class, () -> AnyAscii.transliterate(null, null));
         assertThrows(NullPointerException.class, () -> AnyAscii.transliterate(null, new StringBuilder()));
         assertThrows(NullPointerException.class, () -> AnyAscii.transliterate("-", null));
-        // assertThrows(NullPointerException.class, () -> AnyAscii.transliterate("", null));
+        assertThrows(NullPointerException.class, () -> AnyAscii.transliterate("", null));
     }
 }
