@@ -1,7 +1,7 @@
 name = "AnyAscii"
 uuid = "a6021bc5-2e08-4bec-afaa-bd1873282c9a"
 authors = ["hunterwb <hunter@hunterwb.com>"]
-version = "0.3.1-dev"
+version = "0.3.1"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
