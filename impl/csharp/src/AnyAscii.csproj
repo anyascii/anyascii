@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<Description>Unicode to ASCII transliteration</Description>
 		<TargetFrameworks>netcoreapp3.0;net5.0</TargetFrameworks>
-		<Version>0.3.1</Version>
+		<Version>0.3.2-dev</Version>
 		<Authors>Hunter WB</Authors>
 		<PackageLicenseExpression>ISC</PackageLicenseExpression>
 		<PackageTags>unicode;ascii;transliteration;utf8;romanization;slug;emoji;unidecode;normalization</PackageTags>
