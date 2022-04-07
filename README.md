@@ -104,7 +104,7 @@ Go 1.10+ compatible
 
 ## Java
 
-https://jitpack.io/#com.anyascii/anyascii
+https://search.maven.org/artifact/com.anyascii/anyascii
 
 ```java
 String s = AnyAscii.transliterate("άνθρωποι");
@@ -112,6 +112,14 @@ assert s.equals("anthropoi");
 ```
 
 Java 6+ compatible
+
+```xml
+<dependency>
+	<groupId>com.anyascii</groupId>
+	<artifactId>anyascii</artifactId>
+	<version>LATEST</version>
+</dependency>
+```
 
 ## JavaScript
 
