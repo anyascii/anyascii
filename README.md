@@ -238,6 +238,8 @@ string s = "άνθρωποι".Transliterate();
 // anthropoi
 ```
 
+.NET Core 3.0+ and .NET 5.0+ compatible
+
 ## Background
 
 > Unicode is the universal character encoding. This encoding standard provides the basis for processing, storage and interchange of text data in any language in all modern software and information technology protocols. [Unicode's scope] covers all the characters for all the writing systems of the world, modern and ancient. It also includes technical symbols, punctuations, and many other characters used in writing text. [*](https://unicode.org/faq/basic_q.html)

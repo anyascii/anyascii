@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<Description>Unicode to ASCII transliteration</Description>
-		<TargetFrameworks>netcoreapp3.0;net5.0</TargetFrameworks>
+		<TargetFramework>netcoreapp3.0</TargetFramework>
 		<Version>0.3.2-dev</Version>
 		<Authors>Hunter WB</Authors>
 		<PackageLicenseExpression>ISC</PackageLicenseExpression>
