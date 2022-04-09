@@ -3,6 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>netcoreapp3.0</TargetFramework>
 		<RollForward>Major</RollForward>
+		<LangVersion>8.0</LangVersion>
 		<IsPackable>false</IsPackable>
 	</PropertyGroup>
 

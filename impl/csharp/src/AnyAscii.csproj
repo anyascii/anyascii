@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
+		<AssemblyName>AnyAscii</AssemblyName>
 		<Description>Unicode to ASCII transliteration</Description>
 		<TargetFramework>netcoreapp3.0</TargetFramework>
 		<Version>0.3.2-dev</Version>
@@ -8,8 +9,11 @@
 		<PackageLicenseExpression>ISC</PackageLicenseExpression>
 		<PackageTags>unicode;ascii;transliteration;utf8;romanization;slug;emoji;unidecode;normalization</PackageTags>
 		<RepositoryType>git</RepositoryType>
-		<RepositoryUrl>https://github.com/anyascii/anyascii</RepositoryUrl>
+		<RepositoryUrl>https://github.com/anyascii/anyascii.git</RepositoryUrl>
+		<RepositoryBranch>master</RepositoryBranch>
 		<PackageProjectUrl>https://anyascii.com</PackageProjectUrl>
+		<PackageIconUrl>https://anyascii.com/favicon.png</PackageIconUrl>
+		<LangVersion>8.0</LangVersion>
 	</PropertyGroup>
 
 </Project>
