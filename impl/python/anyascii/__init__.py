@@ -14,6 +14,8 @@ _blocks = {}
 
 
 def anyascii(string):
+    # type: (str) -> str
+    """Transliterate a string into ASCII."""
     result = []
     for char in string:
         codepoint = ord(char)
