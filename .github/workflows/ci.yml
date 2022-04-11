@@ -1,0 +1,25 @@
+on: [workflow_dispatch]
+
+jobs:
+  java:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+        run: cd impl/java
+        run: mvn package --errors --show-version --batch-mode
+  elixir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '22.x'
+          elixir-version: '1.12.x'
+        run: cd impl/elixir
+        run: mix deps.get
+        run: mix test
+        run: mix docs
