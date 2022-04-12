@@ -16,6 +16,11 @@ _blocks = {}
 def anyascii(string):
     # type: (str) -> str
     """Transliterate a string into ASCII."""
+    try:
+        if string.isascii():
+            return string
+    except AttributeError:
+        pass
     result = []
     for char in string:
         codepoint = ord(char)
