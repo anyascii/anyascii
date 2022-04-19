@@ -15,3 +15,4 @@ cd impl
 (cd julia && julia --project=. -e 'using Pkg; Pkg.test()')
 (cd sh && ./test.sh)
 (cd c && ./test.sh)
+(cd elixir && mix test)

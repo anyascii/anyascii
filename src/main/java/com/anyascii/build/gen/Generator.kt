@@ -20,6 +20,7 @@ fun generate(table: Table) {
     php(g)
     julia(g)
     c(g)
+    elixir(g)
 }
 
 class Generator(val table: Table) {

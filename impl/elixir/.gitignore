@@ -1,0 +1,7 @@
+/_build/
+/.elixir_ls/
+/deps/
+/doc/
+mix.lock
+*.ez
+*.tar
