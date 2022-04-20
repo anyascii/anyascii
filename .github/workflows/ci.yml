@@ -1,4 +1,4 @@
-on: [workflow_dispatch]
+on: [push, pull_request]
 
 jobs:
   java:
@@ -13,6 +13,117 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
       - run: mvn package --errors --show-version --batch-mode
+  go:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./impl/go
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '1.10'
+      - run: go test
+  js:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./impl/js
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '12'
+      - run: npm test
+      - run: npm publish --dry-run
+  python:
+    runs-on: ubuntu-18.04
+    defaults:
+      run:
+        working-directory: ./impl/python
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.3'
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install --upgrade pytest
+      - run: python -m pytest
+  ruby:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./impl/ruby
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.0'
+      - run: ruby lib/any_ascii_test.rb
+      - run: gem build any_ascii.gemspec
+  rust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: '1.42.0'
+          override: true
+      - uses: actions-rs/cargo@v1
+        with:
+          command: test
+          args: --manifest-path impl/rust/Cargo.toml
+  csharp:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./impl/csharp
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: '3.0.x'
+      - run: dotnet test
+      - run: dotnet pack
+  sh:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./impl/sh
+    steps:
+      - uses: actions/checkout@v3
+      - run: ./test.sh
+  php:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./impl/php
+    steps:
+      - uses: actions/checkout@v3
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '5.3'
+      - run: php test.php
+  julia:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./impl/julia
+    steps:
+      - uses: actions/checkout@v3
+      - uses: julia-actions/setup-julia@v1
+        with:
+          version: '1.0'
+      - run: julia --project=. -e 'using Pkg; Pkg.test()'
+  c:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./impl/c
+    steps:
+      - uses: actions/checkout@v3
+      - run: ./test.sh
   elixir:
     runs-on: ubuntu-latest
     defaults:
