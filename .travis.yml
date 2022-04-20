@@ -69,6 +69,6 @@ jobs:
     - language: elixir
       elixir: '1.12.3'
       otp_release: '22.3'
-      install: skip
-      before_script: cd impl/elixir
+      before_install: cd impl/elixir
+      install: mix local.hex --force && mix deps.get
       script: mix test
