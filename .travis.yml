@@ -68,7 +68,7 @@ jobs:
 
     - language: elixir
       elixir: '1.12.3'
-      otp_release: '22'
+      otp_release: '22.3'
       install: skip
       before_script: cd impl/elixir
       script: mix test
