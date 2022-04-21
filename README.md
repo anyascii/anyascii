@@ -1,4 +1,4 @@
-# AnyAscii [![build](https://app.travis-ci.com/anyascii/anyascii.svg?branch=master)](https://app.travis-ci.com/anyascii/anyascii)
+# AnyAscii
 
 Unicode to ASCII transliteration
 
