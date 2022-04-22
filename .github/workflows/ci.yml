@@ -84,8 +84,10 @@ jobs:
       - uses: actions/setup-dotnet@v2
         with:
           dotnet-version: '3.0.x'
-      - run: dotnet test
-      - run: dotnet pack
+      - run: dotnet restore
+      - run: dotnet build --no-restore
+      - run: dotnet test --no-build
+      - run: dotnet pack --no-build
   sh:
     runs-on: ubuntu-latest
     defaults:
@@ -138,3 +140,4 @@ jobs:
       - run: mix deps.get
       - run: mix test
       - run: mix docs
+      - run: mix hex.build
