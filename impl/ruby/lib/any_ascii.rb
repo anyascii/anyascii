@@ -1,40 +1,47 @@
+# frozen_string_literal: true
+
 require 'zlib'
 
+# Unicode to ASCII transliteration
 module AnyAscii
+  def self.transliterate(string)
+    return string if string.ascii_only?
 
-	BLOCKS = Hash.new do |blocks, block_num|
-		file_name = File.join(__dir__, 'data', '%03x' % block_num)
-		if File.file?(file_name)
-			b = IO.binread(file_name)
-			zi = Zlib::Inflate.new(-Zlib::MAX_WBITS)
-			s = zi.inflate(b)
-			zi.close
-			block = s.split("\t")
-		else
-			block = []
-		end
-		blocks[block_num] = block
-	end
+    result = String.new('')
+    string.each_codepoint do |cp|
+      if cp <= 127
+        result << cp
+      else
+        block_num = cp >> 8
+        lo = cp & 0xff
+        block = BLOCKS[block_num]
+        result << block[lo] if lo < block.length
+      end
+    end
+    result
+  end
 
-	private_constant :BLOCKS
+  BLOCKS = Hash.new do |blocks, block_num|
+    blocks[block_num] = read_block(block_num)
+  end
+  private_constant :BLOCKS
 
-	def self.transliterate(string)
-		if string.ascii_only?
-			return string
-		end
-		result = ''
-		string.each_codepoint do |cp|
-			if cp <= 127
-				result << cp
-			else
-				block_num = cp >> 8
-				lo = cp & 0xff
-				block = BLOCKS[block_num]
-				if block.length > lo
-					result << block[lo]
-				end
-			end
-		end
-		return result
-	end
+  def self.read_block(block_num)
+    file_name = File.join(__dir__, 'data', format('%03x', block_num))
+    return [] unless File.file?(file_name)
+
+    unzip(File.binread(file_name))
+      .force_encoding(Encoding::UTF_8)
+      .split("\t")
+  end
+  private_class_method :read_block
+
+  def self.unzip(string)
+    zstream = Zlib::Inflate.new(-Zlib::MAX_WBITS)
+    buf = zstream.inflate(string)
+    zstream.finish
+    zstream.close
+    buf
+  end
+  private_class_method :unzip
 end
