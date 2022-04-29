@@ -10,6 +10,7 @@ Unicode to ASCII transliteration
 [Examples](#examples)
 * [Implementations](#implementations):
 [C](#c)
+[Elixir](#elixir)
 [Go](#go)
 [Java](#java)
 [JavaScript](#javascript)
@@ -88,6 +89,15 @@ AnyAscii is implemented across multiple programming languages with the same beha
 
 https://raw.githubusercontent.com/anyascii/anyascii/master/impl/c/anyascii.h
 https://raw.githubusercontent.com/anyascii/anyascii/master/impl/c/anyascii.c
+
+## Elixir
+
+https://hex.pm/packages/any_ascii
+
+```elixir
+iex> AnyAscii.transliterate("άνθρωποι") |> IO.iodata_to_binary()
+"anthropoi"
+```
 
 ## Go
 
