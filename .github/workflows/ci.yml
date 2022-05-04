@@ -18,22 +18,30 @@ jobs:
     defaults:
       run:
         working-directory: ./impl/go
+    strategy:
+      fail-fast: false
+      matrix:
+        go: [ '1.10', '1.18' ]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v3
         with:
-          go-version: '1.10'
+          go-version: ${{ matrix.go }}
       - run: go test
   js:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./impl/js
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [ '12', '18' ]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '12'
+          node-version: ${{ matrix.node }}
       - run: npm test
       - run: npm publish --dry-run
   python:
@@ -41,53 +49,85 @@ jobs:
     defaults:
       run:
         working-directory: ./impl/python
+    strategy:
+      fail-fast: false
+      matrix:
+        python: [ '3.3', '3.10' ]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
         with:
-          python-version: '3.3'
-      - run: python -m pip install --upgrade pip
-      - run: python -m pip install --upgrade pytest
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install pytest
       - run: python -m pytest
   ruby:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./impl/ruby
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby: [ '2.0', '3.1' ]
     steps:
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.0'
+          ruby-version: ${{ matrix.ruby }}
       - run: ruby lib/any_ascii_test.rb
       - run: gem build any_ascii.gemspec
-  rust:
+  rust-dev:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./impl/rust
+    strategy:
+      matrix:
+        rust: [ '1.60' ]
+    env:
+      CARGO_TERM_COLOR: always
     steps:
       - uses: actions/checkout@v3
-      - uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          toolchain: '1.42.0'
-          override: true
-      - uses: actions-rs/cargo@v1
-        with:
-          command: test
-          args: --manifest-path impl/rust/Cargo.toml
+      - run: rustup toolchain install ${{ matrix.rust }} --no-self-update --profile minimal --component clippy rustfmt
+      - run: rustup default ${{ matrix.rust }}
+      - run: cargo build --verbose
+      - run: cargo test --verbose
+      - run: cargo clippy
+      - run: cargo fmt --verbose --check
+  rust:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./impl/rust
+    strategy:
+      matrix:
+        rust: [ '1.42' ]
+    env:
+      CARGO_TERM_COLOR: always
+    steps:
+      - uses: actions/checkout@v3
+      - run: rustup toolchain install ${{ matrix.rust }} --no-self-update --profile minimal
+      - run: rustup default ${{ matrix.rust }}
+      - run: cargo build --verbose
+      - run: cargo test --verbose
   csharp:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./impl/csharp
+    strategy:
+      fail-fast: false
+      matrix:
+        dotnet: [ '3.0.x', '6.0.x' ]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: '3.0.x'
+          dotnet-version: ${{ matrix.dotnet }}
       - run: dotnet restore
-      - run: dotnet build --no-restore
-      - run: dotnet test --no-build
-      - run: dotnet pack --no-build
+      - run: dotnet build --no-restore --nologo
+      - run: dotnet test --no-build --nologo
+      - run: dotnet pack --no-build --nologo
   sh:
     runs-on: ubuntu-latest
     defaults:
@@ -101,22 +141,30 @@ jobs:
     defaults:
       run:
         working-directory: ./impl/php
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [ '5.3', '8.1' ]
     steps:
       - uses: actions/checkout@v3
       - uses: shivammathur/setup-php@v2
         with:
-          php-version: '5.3'
+          php-version: ${{ matrix.php }}
       - run: php test.php
   julia:
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./impl/julia
+    strategy:
+      fail-fast: false
+      matrix:
+        julia: [ '1.0', '1.7' ]
     steps:
       - uses: actions/checkout@v3
       - uses: julia-actions/setup-julia@v1
         with:
-          version: '1.0'
+          version: ${{ matrix.julia }}
       - run: julia --project=. -e 'using Pkg; Pkg.test()'
   c:
     runs-on: ubuntu-latest
@@ -126,6 +174,22 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: ./test.sh
+  elixir-dev:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./impl/elixir
+    steps:
+      - uses: actions/checkout@v3
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '22'
+          elixir-version: '1.13'
+      - run: mix deps.get
+      - run: mix test
+      - run: mix docs
+      - run: mix hex.build
+      - run: mix format --check-formatted
   elixir:
     runs-on: ubuntu-latest
     defaults:
@@ -135,9 +199,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '22.x'
-          elixir-version: '1.12.x'
-      - run: mix deps.get
+          otp-version: '21.3'
+          elixir-version: '1.7'
       - run: mix test
-      - run: mix docs
-      - run: mix hex.build
