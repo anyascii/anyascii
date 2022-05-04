@@ -14,6 +14,8 @@ defmodule AnyAscii do
   removed.
   """
 
+  import Bitwise
+
   @doc """
   Transliterates chardata into ASCII.
 
@@ -48,8 +50,8 @@ defmodule AnyAscii do
     do: transliterate(String.to_charlist(s))
 
   defp transliterate_char(c) do
-    block_num = Bitwise.bsr(c, 8)
-    lo = Bitwise.band(c, 0xFF)
+    block_num = c >>> 8
+    lo = c &&& 0xFF
     block = get_block(block_num)
     if lo < tuple_size(block), do: elem(block, lo), else: []
   end
