@@ -45,8 +45,13 @@ fn transliterate_args(args: Vec<String>) {
 }
 
 const HELP_MESSAGE: &str = concat!(
-    "anyascii ", env!("CARGO_PKG_VERSION"), '\n',
-    env!("CARGO_PKG_AUTHORS"), '\n',
-    env!("CARGO_PKG_DESCRIPTION"), '\n',
-    env!("CARGO_PKG_HOMEPAGE"), '\n',
+    "anyascii ",
+    env!("CARGO_PKG_VERSION"),
+    '\n',
+    env!("CARGO_PKG_AUTHORS"),
+    '\n',
+    env!("CARGO_PKG_DESCRIPTION"),
+    '\n',
+    env!("CARGO_PKG_HOMEPAGE"),
+    '\n',
 );

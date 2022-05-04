@@ -63,7 +63,11 @@ pub fn any_ascii_char(c: char) -> &'static str {
     let lo = (c as u8) as usize;
     if let Some(ptr) = block.get(lo) {
         let l = ptr[2];
-        let len = if (l & 0x80) == 0 { 3 } else { (l & 0x7f) as usize };
+        let len = if (l & 0x80) == 0 {
+            3
+        } else {
+            (l & 0x7f) as usize
+        };
         if len <= 3 {
             let ascii_bytes = &ptr[..len];
             unsafe { core::str::from_utf8_unchecked(ascii_bytes) }

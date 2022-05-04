@@ -19,14 +19,14 @@ fun rust(g: Generator) {
 
     Path.of("impl/rust/src/block.rs").bufferedWriter().use { writer ->
         writer.write("pub fn block(block_num: u32) -> &'static [[u8; 3]] {\n")
-        writer.write("\tlet b: &'static [u8] = match block_num {\n")
+        writer.write("    let b: &'static [u8] = match block_num {\n")
         for (block in g.blocks.keys) {
             val s = "%03x".format(block)
-            writer.write("\t\t0x$s => include_bytes!(\"data/$s\"),\n")
+            writer.write("        0x$s => include_bytes!(\"data/$s\"),\n")
         }
-        writer.write("\t\t_ => &[]\n")
-        writer.write("\t};\n")
-        writer.write("\tunsafe { core::slice::from_raw_parts(b.as_ptr().cast(), b.len() / 3) }\n")
+        writer.write("        _ => &[],\n")
+        writer.write("    };\n")
+        writer.write("    unsafe { core::slice::from_raw_parts(b.as_ptr().cast(), b.len() / 3) }\n")
         writer.write("}\n")
     }
 }
