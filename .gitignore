@@ -15,4 +15,5 @@ target/
 *.o
 Cargo.lock
 Manifest.toml
+.flattened-pom.xml
 impl/c/test

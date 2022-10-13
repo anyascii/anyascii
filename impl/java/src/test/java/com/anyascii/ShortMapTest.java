@@ -1,8 +1,7 @@
 package com.anyascii;
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Assert;
+import org.junit.Test;
 
 public final class ShortMapTest {
 
@@ -30,8 +29,8 @@ public final class ShortMapTest {
     private static void check(ShortMap<Integer> m, int... keys) {
         int i = 0;
         for (int key : keys) {
-            assertEquals(m.index((short) key), i);
-            assertEquals(m.get(i), key);
+            Assert.assertEquals(m.index((short) key), i);
+            Assert.assertEquals(m.get(i).intValue(), key);
             i++;
         }
     }

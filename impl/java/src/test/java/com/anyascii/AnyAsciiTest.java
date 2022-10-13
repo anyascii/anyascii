@@ -1,10 +1,7 @@
 package com.anyascii;
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.Assert;
+import org.junit.Test;
 
 public final class AnyAsciiTest {
 
@@ -86,27 +83,53 @@ public final class AnyAsciiTest {
     }
 
     private static void check(String s, String expected) {
-        assertEquals(AnyAscii.isAscii(s), s.equals(expected));
-        assertTrue(AnyAscii.isAscii(expected));
-        assertEquals(expected, AnyAscii.transliterate(s));
+        Assert.assertEquals(AnyAscii.isAscii(s), s.equals(expected));
+        Assert.assertTrue(AnyAscii.isAscii(expected));
+        Assert.assertEquals(expected, AnyAscii.transliterate(s));
     }
 
     private static void check(int codePoint, String expected) {
-        assertTrue(AnyAscii.isAscii(expected));
-        assertEquals(expected, AnyAscii.transliterate(codePoint));
+        Assert.assertTrue(AnyAscii.isAscii(expected));
+        Assert.assertEquals(expected, AnyAscii.transliterate(codePoint));
     }
 
-    @Test public void testNPE() {
-        assertThrows(NullPointerException.class, () -> AnyAscii.isAscii(null));
+    @Test(expected = NullPointerException.class)
+    public void testIsAsciiNpe() {
+        AnyAscii.isAscii(null);
+    }
 
-        assertThrows(NullPointerException.class, () -> AnyAscii.transliterate(null));
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe1() {
+        AnyAscii.transliterate(null);
+    }
 
-        assertThrows(NullPointerException.class, () -> AnyAscii.transliterate(0, null));
-        assertThrows(NullPointerException.class, () -> AnyAscii.transliterate(0xff, null));
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe2() {
+        AnyAscii.transliterate(0, null);
+    }
 
-        assertThrows(NullPointerException.class, () -> AnyAscii.transliterate(null, null));
-        assertThrows(NullPointerException.class, () -> AnyAscii.transliterate(null, new StringBuilder()));
-        assertThrows(NullPointerException.class, () -> AnyAscii.transliterate("-", null));
-        assertThrows(NullPointerException.class, () -> AnyAscii.transliterate("", null));
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe3() {
+        AnyAscii.transliterate(0xff, null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe4() {
+        AnyAscii.transliterate(null, null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe5() {
+        AnyAscii.transliterate(null, new StringBuilder());
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe6() {
+        AnyAscii.transliterate("-", null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe7() {
+        AnyAscii.transliterate("", null);
     }
 }
