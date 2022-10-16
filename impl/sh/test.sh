@@ -71,6 +71,7 @@ checkshell() {
 		check "ꚩꚫꛑꚩꚳ ꚳ꛰ꛀꚧꚩꛂ" "ipareim m'shuoiya"
 		check "ᓀᐦᐃᔭᐍᐏᐣ" "nehiyawewin"
 		check "ᠤᠯᠠᠭᠠᠨᠴᠠᠪ" "ulaganqab"
+		check "𐑨𐑯𐑛𐑮𐑩𐑒𐑤𐑰𐑟 𐑯 𐑞 𐑤𐑲𐑩𐑯" "andr'kliiz n dh lai'n"
 	else
 		echo "skipping $shell"
 	fi
