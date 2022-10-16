@@ -1,7 +1,12 @@
-# https://www.unicode.org/charts/PDF/U10450.pdf
-# https://en.wikipedia.org/wiki/Shavian_alphabet
+# https://unicode.org/charts/PDF/U10450.pdf
+# https://shavian.info/alphabet
+# https://shavian.info/accents
+# https://englishspeechservices.com/blog/british-vowels
+# https://englishspeechservices.com/blog/ssb
+# https://en.wikipedia.org/wiki/English_phonology
 #
-# tall
+# consonants
+## tall
 𐑐	p
 𐑑	t
 𐑒	k
@@ -12,43 +17,56 @@
 𐑗	ch
 𐑘	y
 𐑙	ng
+## deep
 𐑚	b
 𐑛	d
 𐑜	g
 𐑝	v
-𐑞	th
+𐑞	dh
 𐑟	z
 𐑠	zh
 𐑡	j
 𐑢	w
 𐑣	h
-# short
+## short
 𐑤	l
+𐑮	r
 𐑥	m
+𐑯	n
+# vowels
+## short
 𐑦	i
 𐑧	e
 𐑨	a
-𐑩	a
 𐑪	o
 𐑫	u
-𐑬	au
-𐑭	a
-𐑮	r
-𐑯	n
-𐑰	i
-𐑱	ei
-𐑲	ai
 𐑳	u
-𐑴	ou
-𐑵	u
+𐑩	'
+## long
+𐑰	ii
+𐑱	ei
+𐑭	aa
+𐑲	ai
+𐑬	au
+𐑷	oo
 𐑶	oi
-𐑷	o
-# ligatures
-𐑸	𐑭𐑮
-𐑹	𐑷𐑮
+𐑴	ou
+𐑵	uu
+## r
+𐑽	ir
 𐑺	er
-𐑻	er
-𐑼	𐑩𐑮
-𐑽	𐑦𐑩𐑮
+𐑸	ar
+𐑹	or
+𐑻	ur
+𐑼	'r
+# ligatures
 𐑾	𐑦𐑩
 𐑿	𐑘𐑵
+# vowel short -r long -i -u
+# i 𐑦 𐑽 𐑰 𐑰 -
+# e 𐑧 𐑺 - 𐑱 -
+# a 𐑨 𐑸 𐑭 𐑲 𐑬
+# o 𐑪 𐑹 𐑷 𐑶 𐑴
+# u 𐑫 - 𐑵 - 𐑵
+# ʌ 𐑳 𐑻 - - -
+# ə 𐑩 𐑼 - - -
