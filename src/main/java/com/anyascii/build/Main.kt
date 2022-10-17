@@ -227,7 +227,7 @@ private fun custom() = Table()
         .then(Table("nyiakeng-puachue-hmong"))
         .then(Table("ancient-greek-numbers"))
         .then(Table("cuneiform-numbers-and-punctuation"))
-        .then(ancientGreekMusicalNotation())
+        .then(Table("ancient-greek-musical-notation"))
         .then(Table("duployan"))
         .then(Table("khitan-small-script"))
         .then(tangut())
@@ -284,9 +284,6 @@ private val ANATOLIAN_CATALOGUE_ID = "A(\\d{3}[A-Z]?)".toRegex()
 private fun anatolianHieroglyphs() = block(ANATOLIAN_HIEROGLYPHS).toTable {
     ANATOLIAN_CATALOGUE_ID.findOnly(it.name).groupValues[1].stripLeading('0').lower()
 }
-
-private fun ancientGreekMusicalNotation() = Table("ancient-greek-musical-notation")
-        .then(block(ANCIENT_GREEK_MUSICAL_NOTATION).toTable { it.name.substringAfterLast('-') })
 
 private fun cyproMinoan() = block(CYPRO_MINOAN).toTable { it.name.substringAfterLast(' ').removePrefix("CM").stripLeading('0').lower() }
 
