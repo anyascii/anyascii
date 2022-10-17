@@ -200,7 +200,7 @@ private fun custom() = Table()
         .then(mendeKikakui())
         .then(Table("wancho"))
         .then(Table("ideographic-symbols-and-punctuation"))
-        .then(phaistosDisc())
+        .then(Table("phaistos-disc"))
         .then(Table("old-turkic"))
         .then(Table("ahom"))
         .then(Table("zanabazar-square"))
@@ -274,10 +274,6 @@ private fun nushu() = Table().apply {
         this[cp] = split[2].filter(ASCII_LETTERS)
     }
 }
-
-private fun phaistosDisc() = Table()
-        .then(0x101fd, ",")
-        .then(block(PHAISTOS_DISC).toTable { String.format("%02d", it - 0x101d0 + 1) })
 
 private val ANATOLIAN_CATALOGUE_ID = "A(\\d{3}[A-Z]?)".toRegex()
 
