@@ -13036,7 +13036,7 @@
 㞫	Ju
 㞬	Qin
 㞭	Dai
-㞮	Ngai
+㞮	Shutsu
 㞯	Jie
 㞰	Xu
 㞱	Cong
@@ -15587,6 +15587,7 @@
 䆹	Chong
 䆺	Pan
 䆻	Qiao
+䆼	Ke
 䆽	Qu
 䆾	Lan
 䆿	Yi
@@ -18624,6 +18625,7 @@
 䶳	Yue
 䶴	Ceoi
 䶵	Chi
+䶶	De
 䶸	Mo
 䶹	Zo
 ䷀	Qian
@@ -39602,15 +39604,19 @@
 龭	Ji
 龮	Jik
 龯	Mou
+龰	Zi
 龲	Fu
+龵	Sau
+龻	Lyun
 鿁	Hung
 鿃	Shan
+鿄	Loeng
 鿇	Zang
 鿈	Ce
 鿉	Wu
 鿊	Zi
 鿋	Hei
-鿌	Liang
+鿌	Loeng
 鿍	Gang
 鿎	Ta
 鿏	Mai
@@ -39620,6 +39626,19 @@
 鿫	Ao
 鿬	Tian
 鿭	Ni
+鿰	Hon
+鿱	Baa
+鿲	Lou
+鿳	To
+鿴	Dung
+鿵	Zi
+鿶	Loeng
+鿷	Jam
+鿸	To
+鿹	Mat
+鿺	Mak
+鿻	Bou
+鿼	Gaa
 ꀀ	it
 ꀁ	ix
 ꀂ	i
@@ -53809,7 +53828,7 @@
 壟	Nong
 弄	Nong
 籠	Nong
-聾	Nong
+聾	Lung
 牢	Noe
 磊	Noe
 賂	Noe
@@ -76207,12 +76226,16 @@
 𠄌	Jue
 𠄍	Jie
 𠄏	Diao
+𠄐	Le
 𠄑	Jue
 𠄒	Chui
 𠄖	Ling
 𠄘	Sing
 𠄚	Ting
 𠄜	Tho
+𠄞	Er
+𠄟	Er
+𠄠	Er
 𠄡	5
 𠄣	Gen
 𠄦	Gop
@@ -76590,6 +76613,7 @@
 𠔂	Biao
 𠔃	Xi
 𠔉	Juan
+𠔊	Bing
 𠔋	Ji
 𠔍	Xi
 𠔎	Qin
@@ -79458,7 +79482,9 @@
 𡴭	Ya
 𡴯	E
 𡴱	Hu
+𡴲	Ngai
 𡵀	Mang
+𡵁	Ngai
 𡵆	Zi
 𡵉	Wu
 𡵌	Cha
@@ -80144,6 +80170,7 @@
 𢌔	Ling
 𢌕	Luan
 𢌚	Chan
+𢌛	Yan
 𢌜	Ting
 𢌡	Gwing
 𢌥	Cing
@@ -80667,7 +80694,7 @@
 𢟴	Tui
 𢟵	Bi
 𢟹	Nhuoc
-𢟼	Meng
+𢟼	Mung
 𢟾	Hui
 𢟿	Huan
 𢠃	Geng
@@ -83002,7 +83029,7 @@
 𣯱	Pei
 𣯴	Bi
 𣯵	Di
-𣯶	San
+𣯶	Saam
 𣯸	Qu
 𣯹	Qiao
 𣯻	Fen
@@ -83428,7 +83455,7 @@
 𤀙	O
 𤀚	Luon
 𤀛	Lay
-𤀜	Tanh
+𤀜	Seoi
 𤀝	Yu
 𤀞	Chua
 𤀣	Huan
@@ -84789,6 +84816,7 @@
 𤱅	Na
 𤱆	Na
 𤱇	Tong
+𤱈	Mu
 𤱋	Ran
 𤱌	Zu
 𤱍	Pi
@@ -90032,7 +90060,7 @@
 𧜐	Tre
 𧜔	Xie
 𧜖	Chan
-𧜗	Mo
+𧜗	Maa
 𧜘	Vien
 𧜙	Xong
 𧜚	Zhi
@@ -90587,6 +90615,7 @@
 𧰇	Yu
 𧰈	Wu
 𧰊	Tian
+𧰎	Lou
 𧰒	Guo
 𧰗	Nanh
 𧰘	Tan
@@ -90611,7 +90640,7 @@
 𧰷	Mu
 𧰹	Na
 𧰻	Ling
-𧰼	Zeong
+𧰼	Zoeng
 𧰿	Ai
 𧱀	Xian
 𧱄	Kan
@@ -92897,6 +92926,7 @@
 𨹻	Tian
 𨺀	Peng
 𨺅	Fu
+𨺓	Long
 𨺖	Tuo
 𨺗	Dau
 𨺘	Xian
@@ -92951,7 +92981,7 @@
 𨻲	Xia
 𨻳	Yan
 𨻵	Cui
-𨻶	Geki
+𨻶	Gwik
 𨻷	Kang
 𨻺	Qing
 𨻻	Lou
@@ -94115,7 +94145,7 @@
 𩟁	Yuan
 𩟂	Guo
 𩟃	Ling
-𩟄	Qi
+𩟄	Ci
 𩟅	Lian
 𩟇	Ao
 𩟈	Dang
@@ -96097,6 +96127,7 @@
 𪛊	Yin
 𪛎	Pi
 𪛒	Lian
+𪛞	Wing
 𪜎	Qiao
 𪞝	Duo
 𪟎	Jian
@@ -96279,6 +96310,7 @@
 𫆏	Zim
 𫆝	Be
 𫇘	Laai
+𫇦	Jing
 𫇪	Gang
 𫇭	Wei
 𫇴	Co
@@ -96369,7 +96401,7 @@
 𫏐	Zaam
 𫏑	Luo
 𫏕	Jaang
-𫏨	Xian
+𫏨	Sin
 𫐄	Yue
 𫐅	Sim
 𫐆	Kuai
@@ -96491,7 +96523,7 @@
 𫗧	Su
 𫗨	Lang
 𫗩	Lo
-𫗪	Wei
+𫗪	Wai
 𫗫	Wu
 𫗬	Nyun
 𫗭	Wai
@@ -96608,7 +96640,7 @@
 𫜕	Ku
 𫜙	Ying
 𫜟	Cu
-𫜨	Ba
+𫜨	Baa
 𫜩	Ngit
 𫜪	Ngaau
 𫜬	Zaak
@@ -96618,12 +96650,13 @@
 𫜰	Ngaa
 𫜲	Lung
 𫜳	Nan
+𫜵	Lam
 𫜶	Dan
 𫜷	Shou
 𫜸	Hua
+𫜹	Ke
 𫝈	Hun
 𫝋	Shu
-𫝜	Ran
 𫝦	Bui
 𫝧	Syu
 𫝨	Fai
@@ -96767,10 +96800,10 @@
 𫫃	E
 𫫄	Ngaap
 𫫇	E
-𫫈	Bop
+𫫈	Bap
 𫫦	Daam
 𫫨	Ban
-𫫲	Zoen
+𫫲	Zeon
 𫫵	Lu
 𫫾	Pan
 𫫿	Ling
@@ -96782,13 +96815,15 @@
 𫬖	Zoeng
 𫬘	Baa
 𫬙	Gun
-𫬛	Zoen
+𫬛	Zeon
 𫬟	Die
 𫬤	Ne
 𫬥	So
 𫬨	Ang
 𫬳	Hoi
+𫬷	Ke
 𫭀	Gaam
+𫭂	Tian
 𫭞	Zyun
 𫭟	Ou
 𫭢	Lun
@@ -96803,6 +96838,7 @@
 𫮜	Yin
 𫮬	Jiang
 𫯒	Nong
+𫯛	Tian
 𫯥	Kut
 𫯶	Wan
 𫰂	Do
@@ -96908,6 +96944,7 @@
 𬂂	Lo
 𬂅	Daan
 𬂉	Sing
+𬂛	Shi
 𬂠	Mou
 𬂩	Jia
 𬂮	Saat
@@ -96949,6 +96986,7 @@
 𬉋	Wai
 𬉠	Laan
 𬉡	Jeoi
+𬉧	Hon
 𬉼	Ou
 𬊂	Caau
 𬊈	Xun
@@ -97153,7 +97191,7 @@
 𬣚	Kou
 𬣛	Zi
 𬣜	Hou
-𬣝	Jun
+𬣝	Kwan
 𬣞	Zhu
 𬣟	Tau
 𬣠	Gam
@@ -97186,7 +97224,7 @@
 𬣿	Lou
 𬤀	Haak
 𬤁	Tou
-𬤂	Shan
+𬤂	Tam
 𬤄	Cam
 𬤅	Ji
 𬤆	Gwan
@@ -97296,7 +97334,7 @@
 𬬨	Hua
 𬬩	Yi
 𬬪	Kau
-𬬫	Pi
+𬬫	Pai
 𬬬	Wai
 𬬭	Lun
 𬬮	Chang
@@ -97342,7 +97380,7 @@
 𬭝	Saam
 𬭞	Da
 𬭟	Cou
-𬭠	Cha
+𬭠	Caa
 𬭡	Ziu
 𬭢	Gwai
 𬭣	Sin
@@ -97390,14 +97428,14 @@
 𬮱	Yin
 𬮲	Jiu
 𬮳	Baan
-𬮴	An
+𬮴	Am
 𬮵	Xian
 𬮹	Deng
 𬮺	Maa
 𬮻	Wu
 𬮿	Gai
 𬯀	Ji
-𬯅	Xia
+𬯅	Haap
 𬯎	Tui
 𬰃	Mu
 𬰡	Luo
@@ -97508,6 +97546,7 @@
 𬴐	Fun
 𬴨	Nao
 𬴩	Nong
+𬵨	Mat
 𬶀	Git
 𬶁	Jan
 𬶂	Tou
@@ -97653,13 +97692,14 @@
 𭈜	Bei
 𭈟	Thin
 𭈮	Huan
+𭉝	Syu
 𭉨	Zui
 𭉼	Nan
 𭊸	La
 𭎂	Zung
 𭎜	Dou
 𭏦	Oi
-𭏸	Wei
+𭏸	Wai
 𭕆	Suo
 𭗡	Ke
 𭘓	Fu
@@ -97751,7 +97791,7 @@
 𮨵	Lau
 𮩛	Bat
 𮩜	Hoi
-𮩝	Ai
+𮩝	Aai
 𮩞	Ji
 𮪡	Mong
 𮪢	Haai
@@ -97766,7 +97806,7 @@
 𮬟	Huo
 𮬠	Luk
 𮬡	Hua
-𮬢	Weng
+𮬢	Jung
 𮬣	Haam
 𮬤	Zam
 𮭡	Gaai
@@ -97799,7 +97839,7 @@
 㒹	Din
 內	Nei
 再	Zai
-冗	Yung
+冗	Jung
 冤	Yuan
 仌	Bing
 冬	Dong
@@ -98255,6 +98295,9 @@
 鼖	Fen
 鼻	Bi
 𪘀	Pian
+𰀡	Haan
+𰀢	Gaam
+𰁜	Lyun
 𰁧	Sung
 𰁸	Dong
 𰁾	Fu
@@ -98266,6 +98309,7 @@
 𰂦	Leoi
 𰂭	Ci
 𰃆	Zaan
+𰃮	Hok
 𰃷	Cong
 𰃻	Bi
 𰃿	Duk
@@ -98304,7 +98348,7 @@
 𰉥	Gaap
 𰉩	Kok
 𰉪	Jip
-𰉱	Jian
+𰉱	Gaan
 𰉽	Hok
 𰊂	Dit
 𰊅	Zhan
@@ -98326,7 +98370,7 @@
 𰌉	Yun
 𰌙	Laan
 𰌦	Aa
-𰌷	Wei
+𰌷	Wai
 𰎌	Sung
 𰎎	Lung
 𰎏	Dung
@@ -98370,7 +98414,7 @@
 𰓆	Wu
 𰓔	Sim
 𰓗	Ep
-𰓙	Ye
+𰓙	Jip
 𰓜	Zit
 𰓟	Za
 𰓧	Syun
@@ -98629,6 +98673,7 @@
 𰯂	Lom
 𰯋	Nai
 𰯎	Mun
+𰯲	Gaam
 𰰆	Tan
 𰰋	Soeng
 𰰌	Zhou
@@ -98706,7 +98751,7 @@
 𰴗	Li
 𰴘	Gaan
 𰴙	Gwan
-𰴚	Lou
+𰴚	Leoi
 𰴛	Dou
 𰴜	Ceoi
 𰴝	Lo
@@ -98784,7 +98829,7 @@
 𰶨	Mi
 𰶬	Lau
 𰷞	Tik
-𰷠	Yi
+𰷠	Ji
 𰷡	Wun
 𰷢	Ci
 𰷤	Seoi
@@ -98886,7 +98931,7 @@
 𰽛	Ciu
 𰽜	Au
 𰽝	Lik
-𰽞	E
+𰽞	Aak
 𰽠	Zi
 𰽡	Jat
 𰽢	Jin
@@ -99011,7 +99056,7 @@
 𱁽	Laan
 𱁾	Laan
 𱂃	Sa
-𱂄	Mei
+𱂄	Mui
 𱂅	Bei
 𱂆	Gaap
 𱂇	Hyun
@@ -99373,7 +99418,7 @@
 𱌘	Zi
 𱌙	Zi
 𱌫	Jin
-𱌬	Ze
+𱌬	Zaak
 𱌭	Zau
 𱌮	Ceot
 𱌯	Ci
@@ -99396,6 +99441,20 @@
 𱍆	Jiao
 𱍇	Tung
 𱍈	Bit
+𱒨	Ji
+𱒲	Go
+𱓬	Ceoi
+𱕌	Lo
+𱕮	Paan
+𱙷	Me
+𱟭	Mit
+𱟽	Wo
+𱠸	Jyun
+𱣚	Lung
+𱥜	Naa
+𱽨	Bang
+𲀃	Bang
+𲁔	Lai
 󠀁	
 󠀠	 
 󠀡	!
