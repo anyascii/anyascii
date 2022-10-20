@@ -244,6 +244,7 @@ private fun custom() = Table()
         .then(Table("tangsa"))
         .then(Table("znamenny-musical-notation"))
         .then(cyproMinoan())
+        .then(Table("nag-mundari"))
 
 private fun cyrillic() = Table("cyrillic")
         .cased(script(UScript.CYRILLIC))
