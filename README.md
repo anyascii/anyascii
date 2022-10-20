@@ -284,7 +284,7 @@ When converting text between languages there are multiple properties that can be
 
 ## Stats
 
-Supports Unicode 14.0 (2021). Covers 99k of the 144k total Unicode characters, missing 43k very rare CJK characters and 2k other rare characters.
+Supports Unicode 15.0 (2022). Covers 100k of the 149k total Unicode characters, missing 47k very rare CJK characters and 2k other rare characters.
 
 Bundled data files total 200-500 KB depending on the implementation
 
