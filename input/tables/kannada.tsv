@@ -87,3 +87,6 @@
 # Additional consonants
 # https://unicode.org/L2/L2020/20228r-kannada-nakaara-pollu.pdf
 ೝ	n
+# Signs used in Sanskrit
+# https://unicode.org/L2/L2021/21114-kannada-sign-anusvara.pdf
+ೳ	m
