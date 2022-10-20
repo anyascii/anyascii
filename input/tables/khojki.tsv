@@ -70,3 +70,12 @@
 # Sign
 # https://unicode.org/wg2/docs/n4575.pdf
 𑈾	
+# Consonant
+# https://unicode.org/L2/L2021/21103-khojki-letter-qa.pdf
+𑈿	q
+# Independent vowel
+# https://unicode.org/L2/L2021/21104-khojki-letter-short-i.pdf
+𑉀	i
+# Dependent vowel sign
+# https://unicode.org/L2/L2021/21110-khojki-vowel-sign-vocalic-r.pdf
+𑉁	r
