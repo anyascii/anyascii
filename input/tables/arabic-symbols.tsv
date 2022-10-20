@@ -268,6 +268,13 @@
 𐹼	1/4
 𐹽	1/3
 𐹾	2/3
+# Arabic Extended-C
+# https://unicode.org/charts/PDF/U10EC0.pdf
+## Quranic marks used in Turkey
+## https://unicode.org/L2/L2021/21133-quranic-marks.pdf
+𐻽	
+𐻾	
+𐻿	
 # Arabic Mathematical Alphabetic Symbols
 # https://unicode.org/charts/PDF/U1EE00.pdf
 ## Stretching operators
