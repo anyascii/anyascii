@@ -6,7 +6,7 @@ import kotlin.io.path.forEachLine
 
 fun egyptianHieroglyphs() = manuelDeCodage()
         .then(catalogueIds())
-        .then(formatControls())
+        .then(Table("egyptian-hieroglyph-format-controls"))
 
 private fun manuelDeCodage() = Table().apply {
     Path.of("input/Unicode-MdC-Mapping-v1.utf8.txt").forEachLine { line ->
@@ -27,15 +27,3 @@ private fun catalogueId(cp: CodePoint): String {
     val (prefix, num, suffix) = CATALOGUE_ID.findOnly(cp.name).destructured
     return prefix + num.stripLeading('0') + suffix.lower()
 }
-
-private fun formatControls() = Table(mapOf(
-        0x13430 to ":",
-        0x13431 to "*",
-        0x13432 to "",
-        0x13433 to "",
-        0x13434 to "",
-        0x13435 to "",
-        0x13436 to "+",
-        0x13437 to "(",
-        0x13438 to ")"
-))

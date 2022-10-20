@@ -1,0 +1,50 @@
+# https://unicode.org/charts/PDF/U13430.pdf
+# https://unicode.org/L2/L2021/21248-egyptian-controls.pdf
+# 
+# Joiners
+𓐰	:
+𓐱	*
+# Sign insertion controls
+𓐲	
+𓐳	
+𓐴	
+𓐵	
+# Sign stacking control
+𓐶	+
+# Segment scoping delimiters
+𓐷	(
+𓐸	)
+# Sign insertion controls
+𓐹	
+𓐺	
+𓐻	
+# Enclosure controls
+𓐼	
+𓐽	
+𓐾	
+𓐿	
+# Mirror control
+𓑀	
+# Blank and lost signs
+𓑁	
+𓑂	
+𓑃	
+𓑄	
+𓑅	
+𓑆	
+# Damage modifiers
+𓑇	
+𓑈	
+𓑉	
+𓑊	
+𓑋	
+𓑌	
+𓑍	
+𓑎	
+𓑏	
+𓑐	
+𓑑	
+𓑒	
+𓑓	
+𓑔	
+𓑕	
