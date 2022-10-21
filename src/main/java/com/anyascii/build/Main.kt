@@ -70,7 +70,7 @@ private fun custom() = Table()
         .then(Table("number-forms"))
         .then(Table("latin").cased(script(UScript.LATIN)))
         .then(greek())
-        .then(kana())
+        .then(Table("kana"))
         .then(Table("lao"))
         .then(Table("runic"))
         .then(Table("old-italic"))
@@ -259,12 +259,6 @@ private fun dominoes() = (0x1f030..0x1f093).toTable {
 private fun georgian() = Table("georgian")
         .then(script(UScript.GEORGIAN).filter { "SMALL LETTER" in it.name }.alias { it.remove("SMALL ") })
         .transliterate()
-
-private fun kana() = Table("kana")
-        .then(block(KANA_EXTENDED_B).toTable { "" })
-        .then(script(UScript.HIRAGANA).filter { it.nameAlias.startsWith("HENTAIGANA") }.toTable { it.nameAlias.substringAfterLast(' ').substringBefore('-').lower() })
-        .then(script(UScript.HIRAGANA).filter { it.name.startsWith("HIRAGANA LETTER") }.alias { it.replace("HIRAGANA", "KATAKANA") })
-        .then(script(UScript.KATAKANA).filter { it.name.startsWith("KATAKANA LETTER SMALL") }.alias { it.remove("SMALL ") })
 
 private fun nushu() = Table().apply {
     Path.of("input/NushuSources.txt").forEachLine { line ->
