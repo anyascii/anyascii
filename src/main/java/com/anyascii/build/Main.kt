@@ -64,7 +64,7 @@ private fun custom() = Table()
         .then(Table("gothic"))
         .then(Table("lydian"))
         .then(Table("lycian"))
-        .then(georgian())
+        .then(Table("georgian").transliterate())
         .then(Table("armenian"))
         .then(Table("thai"))
         .then(Table("number-forms"))
@@ -256,10 +256,6 @@ private fun dominoes() = (0x1f030..0x1f093).toTable {
     if ("BACK" in name) return@toTable "-"
     return@toTable name.split('-').let { it[1].takeLast(1) + it[2].takeLast(1) }
 }
-
-private fun georgian() = Table("georgian")
-        .then(script(UScript.GEORGIAN).filter { "SMALL LETTER" in it.name }.alias { it.remove("SMALL ") })
-        .transliterate()
 
 private fun nushu() = Table().apply {
     Path.of("input/NushuSources.txt").forEachLine { line ->
