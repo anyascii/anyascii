@@ -250,6 +250,7 @@ pub fn block(block_num: u32) -> &'static [[u8; 3]] {
         0x118 => include_bytes!("data/118"),
         0x119 => include_bytes!("data/119"),
         0x11a => include_bytes!("data/11a"),
+        0x11b => include_bytes!("data/11b"),
         0x11c => include_bytes!("data/11c"),
         0x11d => include_bytes!("data/11d"),
         0x11e => include_bytes!("data/11e"),
