@@ -250,5 +250,55 @@
 ҅	
 # https://en.wikipedia.org/wiki/Smooth_breathing
 ҆	
-# https://www.unicode.org/charts/PDF/U2DE0.pdf
-ⷵ	st
+# Cyrillic Extended-A
+# https://unicode.org/charts/PDF/U2DE0.pdf
+## Old Church Slavonic combining letters
+ⷠ	б
+ⷡ	в
+ⷢ	г
+ⷣ	д
+ⷤ	ж
+ⷥ	з
+ⷦ	к
+ⷧ	л
+ⷨ	м
+ⷩ	н
+ⷪ	о
+ⷫ	п
+ⷬ	р
+ⷭ	с
+ⷮ	т
+ⷯ	х
+ⷰ	ц
+ⷱ	ч
+ⷲ	ш
+ⷳ	щ
+ⷴ	ѳ
+ⷵ	ст
+ⷶ	а
+ⷷ	е
+ⷸ	ꙉ
+ⷹ	ꙋ
+ⷺ	ѣ
+ⷻ	ю
+ⷼ	ꙗ
+ⷽ	ѧ
+ⷾ	ѫ
+ⷿ	ѭ
+# Cyrillic Extended-B
+# https://unicode.org/charts/PDF/UA640.pdf
+## Combining marks for Old Cyrillic
+ꙴ	є
+ꙵ	и
+ꙶ	ї
+ꙷ	у
+ꙸ	ъ
+ꙹ	ы
+ꙺ	ь
+ꙻ	ѡ
+ꚞ	ф
+ꚟ	ѥ
+# Cyrillic Extended-D
+# https://unicode.org/charts/PDF/U1E030.pdf
+## Diacritical mark
+𞂏	і
