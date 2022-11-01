@@ -9,6 +9,10 @@
 	"keywords": ["unicode", "ascii", "transliteration", "utf8", "romanization", "slug", "emoji", "unidecode", "normalization"],
 	"type": "commonjs",
 	"main": "./any-ascii.js",
+	"exports": {
+		"import": "./any-ascii.mjs",
+		"require": "./any-ascii.js"
+	},
 	"types": "./any-ascii.d.ts",
 	"engines": {
 		"node": ">=12.20"
