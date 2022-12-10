@@ -1,10 +1,20 @@
+# Ethiopic
 # https://unicode.org/charts/PDF/U1200.pdf
+## Syllables
+## bgn/pcgn 1967 exceptions
+ሀ	ha
+ሐ	ha
+ኀ	ha
+አ	'a
+ዐ	`a
 ## Combining marks
 ፝	
 ፞	
 ፟	
 ## Punctuation
-### https://w3.org/International/elreq/#ethiopic_punctuation
+## https://w3.org/International/elreq/#ethiopic_punctuation
+## http://keyboards.ethiopic.org/specification/
+፠	+
 ፡	 
 ።	.
 ፣	,
@@ -12,12 +22,11 @@
 ፥	,
 ፦	:
 ፧	?
-### http://keyboards.ethiopic.org/specification/
-፠	+
 ፨	#
+# Ethiopic Supplement
 # https://unicode.org/charts/PDF/U1380.pdf
-# Tonal marks
-# https://unicode.org/wg2/docs/n2747.pdf
+## Tonal marks
+## https://unicode.org/wg2/docs/n2747.pdf
 ᎐	
 ᎑	
 ᎒	
