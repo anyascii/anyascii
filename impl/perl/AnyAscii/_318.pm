@@ -1,0 +1,1 @@
+package AnyAscii::_318; sub block { [split('	','																																																								Jyun																																																																																																																																																																		Lung')] } 1;

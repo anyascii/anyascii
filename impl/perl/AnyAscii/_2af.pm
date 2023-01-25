@@ -1,0 +1,1 @@
+package AnyAscii::_2af; sub block { [split('	','											Bat																																																																																		Boi													Zoeng			Jian	Lou						She			Ji																													Xu														Xian				Lou																		Pan																		Ya																																	Paau')] } 1;

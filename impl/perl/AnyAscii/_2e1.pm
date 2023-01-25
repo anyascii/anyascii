@@ -1,0 +1,1 @@
+package AnyAscii::_2e1; sub block { [split('	','																																																																														Nong																																																																	Laan																																																																					Aa																Ling')] } 1;

@@ -1,0 +1,1 @@
+package AnyAscii::_2e4; sub block { [split('	','																										Faan														Jing')] } 1;

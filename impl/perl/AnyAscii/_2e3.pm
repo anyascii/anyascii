@@ -1,0 +1,1 @@
+package AnyAscii::_2e3; sub block { [split('	','											Cha																																																																																																																																																																																																																																															Du')] } 1;

@@ -1,0 +1,1 @@
+package AnyAscii::_319; sub block { [split('	','																																																																																												Naa')] } 1;

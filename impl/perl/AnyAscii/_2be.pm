@@ -1,0 +1,1 @@
+package AnyAscii::_2be; sub block { [split('	','																																									Kou																																																																					Jyu						Wai			Sung					Dong	Soeng				Hip	Hip				Waa				Cai		Gung							Mun			Wit		Lou																		Joeng	Chanh												Naan										Xi')] } 1;
