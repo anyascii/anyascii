@@ -17,12 +17,12 @@ sub transliterate {
     my $len = scalar @$rUtf8;
 
     while ($i < $len) {
-		my $cp = $self->_utf8NextCodepoint($rUtf8, \$i);
+        my $cp = $self->_utf8NextCodepoint($rUtf8, \$i);
 
         if ($cp < 0x80) {
-			$result .= chr $cp;
-			next;
-		}
+            $result .= chr $cp;
+            next;
+        }
 
         my $blockNum = $cp >> 8;
         my $block    = $blocks->[$blockNum] // [];
@@ -33,24 +33,24 @@ sub transliterate {
             eval 'require ' . $pkg;
 
             unless ($@) {
-			    $blocks->[$blockNum] = $block = $pkg->block();
+                $blocks->[$blockNum] = $block = $pkg->block();
             }
-		}
+        }
 
-		my $lo = $cp & 0xff;
+        my $lo = $cp & 0xff;
 
-		if (defined $block->[$lo]) {
-			$result .= $block->[$lo];
-		}
-	}
+        if (defined $block->[$lo]) {
+            $result .= $block->[$lo];
+        }
+    }
 
-	return $result;
+    return $result;
 }
 
 sub _utf8NextCodepoint {
     my ($self, $rs, $ri) = @_;
 
-	my $b1 = ord $rs->[$$ri++];
+    my $b1 = ord $rs->[$$ri++];
 
     return $b1 if $b1 < 0x80;
 
