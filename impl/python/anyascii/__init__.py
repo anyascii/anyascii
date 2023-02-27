@@ -4,9 +4,15 @@ from sys import intern
 from zlib import decompress, MAX_WBITS
 
 try:
-    from importlib.resources import read_binary
+    from importlib.resources import files
+
+    def read_binary(package, resource):
+        return files(package).joinpath(resource).read_bytes()
 except ImportError:
-    from pkgutil import get_data as read_binary
+    try:
+        from importlib.resources import read_binary
+    except ImportError:
+        from pkgutil import get_data as read_binary
 
 __version__ = '0.3.2.dev0'
 
