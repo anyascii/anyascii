@@ -46,17 +46,17 @@ jobs:
       - run: npm test
       - run: npm publish --dry-run
   python:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     defaults:
       run:
         working-directory: ./impl/python
     strategy:
       fail-fast: false
       matrix:
-        python: [ '3.3', '3.10' ]
+        python: [ '3.5', '3.8', '3.11' ]
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
+      - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python }}
       - run: python -m pip install pytest
