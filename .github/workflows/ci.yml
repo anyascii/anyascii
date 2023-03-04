@@ -22,7 +22,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        go: [ '1.10', '1.18' ]
+        go: [ '1.10', '1.20' ]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v3
@@ -69,7 +69,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby: [ '2.0', '3.1' ]
+        ruby: [ '2.0', '3.2' ]
     steps:
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
@@ -84,7 +84,7 @@ jobs:
         working-directory: ./impl/rust
     strategy:
       matrix:
-        rust: [ '1.60' ]
+        rust: [ '1.67' ]
     env:
       CARGO_TERM_COLOR: always
     steps:
@@ -119,10 +119,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        dotnet: [ '3.0.x', '6.0.x' ]
+        dotnet: [ '3.0.x', '7.0.x' ]
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-dotnet@v2
+      - uses: actions/setup-dotnet@v3
         with:
           dotnet-version: ${{ matrix.dotnet }}
       - run: dotnet restore
@@ -145,7 +145,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: [ '5.3', '8.1' ]
+        php: [ '5.3', '8.2' ]
     steps:
       - uses: actions/checkout@v3
       - uses: shivammathur/setup-php@v2
@@ -160,7 +160,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        julia: [ '1.0', '1.7' ]
+        julia: [ '1.0', '1.8' ]
     steps:
       - uses: actions/checkout@v3
       - uses: julia-actions/setup-julia@v1
