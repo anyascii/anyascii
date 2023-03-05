@@ -114,7 +114,7 @@ Go 1.10+ compatible
 
 ## Java
 
-https://search.maven.org/artifact/com.anyascii/anyascii
+https://mvnrepository.com/artifact/com.anyascii/anyascii
 
 ```java
 String s = AnyAscii.transliterate("άνθρωποι");
@@ -125,9 +125,9 @@ Java 6+ compatible
 
 ```xml
 <dependency>
-	<groupId>com.anyascii</groupId>
-	<artifactId>anyascii</artifactId>
-	<version>LATEST</version>
+    <groupId>com.anyascii</groupId>
+    <artifactId>anyascii</artifactId>
+    <version>LATEST</version>
 </dependency>
 ```
 
