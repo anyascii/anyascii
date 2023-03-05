@@ -1,18 +1,30 @@
 [build-system]
-requires=['flit_core >=2,<4']
-build-backend='flit_core.buildapi'
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
 
-[tool.flit.metadata]
-module='anyascii'
-home-page='https://github.com/anyascii/anyascii'
-author='Hunter WB'
-author-email='hunter@hunterwb.com'
-description-file='README.md'
-keywords='unicode,ascii,transliteration,utf8,romanization,slug,emoji,unidecode,normalization'
-requires-python='>=3.3'
-classifiers=[
-	'License :: OSI Approved :: ISC License (ISCL)',
-	'Programming Language :: Python :: 3 :: Only',
-	'Topic :: Text Processing :: General',
-	'Topic :: Text Processing :: Linguistic',
+[project]
+name = "anyascii"
+authors = [{name = "Hunter WB", email = "hunter@hunterwb.com"}]
+readme = "README.md"
+keywords = [
+	"unicode",
+	"ascii",
+	"transliteration",
+	"utf8",
+	"romanization",
+	"slug",
+	"emoji",
+	"unidecode",
+	"normalization",
 ]
+requires-python = ">=3.3"
+classifiers = [
+	"License :: OSI Approved :: ISC License (ISCL)",
+	"Programming Language :: Python :: 3 :: Only",
+	"Topic :: Text Processing :: General",
+	"Topic :: Text Processing :: Linguistic",
+]
+dynamic = ["version", "description"]
+
+[project.urls]
+homepage = "https://github.com/anyascii/anyascii"
