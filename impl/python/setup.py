@@ -3,19 +3,18 @@
 
 from distutils.core import setup
 
-packages = \
-['anyascii', 'anyascii._data']
+packages = ["anyascii", "anyascii._data"]
 
-package_data = \
-{'': ['*']}
+package_data = {"": ["*"]}
 
-setup(name='anyascii',
-      version='0.3.2.dev0',
-      description='Unicode to ASCII transliteration',
-      author='Hunter WB',
-      author_email='hunter@hunterwb.com',
-      url='https://github.com/anyascii/anyascii',
-      packages=packages,
-      package_data=package_data,
-      python_requires='>=3.3',
-     )
+setup(
+    name="anyascii",
+    version="0.3.2.dev0",
+    description="Unicode to ASCII transliteration",
+    author="Hunter WB",
+    author_email="hunter@hunterwb.com",
+    url="https://github.com/anyascii/anyascii",
+    packages=packages,
+    package_data=package_data,
+    python_requires=">=3.3",
+)

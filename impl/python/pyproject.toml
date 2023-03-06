@@ -28,3 +28,6 @@ dynamic = ["version", "description"]
 
 [project.urls]
 homepage = "https://github.com/anyascii/anyascii"
+
+[tool.ruff]
+select = ["F", "E", "I"]
