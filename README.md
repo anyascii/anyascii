@@ -214,11 +214,7 @@ let s = any_ascii("άνθρωποι");
 
 Rust 1.42+ compatible
 
-```toml
-# Cargo.toml
-[dependencies]
-any_ascii = "*"
-```
+`cargo add any_ascii`
 
 Install executable: `cargo install any_ascii`
 
