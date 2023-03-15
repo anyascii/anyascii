@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'any_ascii'
-  s.version = '0.3.2.dev'
+  s.version = '0.3.2'
   s.summary = 'Unicode to ASCII transliteration'
   s.description = File.read('README.md')
   s.author = 'Hunter WB'

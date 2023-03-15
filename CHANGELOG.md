@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.3.2-dev
+## 0.3.2 - 2023-03-15
 
 - Data additions and improvements
 - Python - Add type comments

@@ -9,7 +9,7 @@ package_data = {"": ["*"]}
 
 setup(
     name="anyascii",
-    version="0.3.2.dev0",
+    version="0.3.2",
     description="Unicode to ASCII transliteration",
     author="Hunter WB",
     author_email="hunter@hunterwb.com",
