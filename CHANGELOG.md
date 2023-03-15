@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.3.3-dev
+## 0.3.3 - 2025-06-28
 
 - Data additions and improvements
 - Python - Add PEP 561 `py.typed` file

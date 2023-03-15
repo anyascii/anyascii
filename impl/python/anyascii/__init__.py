@@ -15,7 +15,7 @@ except ImportError:
     except ImportError:
         from pkgutil import get_data as read_binary
 
-__version__ = "0.3.3.dev0"
+__version__ = "0.3.3"
 
 _blocks = {}
 
