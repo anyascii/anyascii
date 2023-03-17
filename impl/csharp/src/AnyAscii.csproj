@@ -4,7 +4,7 @@
 		<AssemblyName>AnyAscii</AssemblyName>
 		<Description>Unicode to ASCII transliteration</Description>
 		<TargetFramework>netcoreapp3.0</TargetFramework>
-		<Version>0.3.2</Version>
+		<Version>0.3.3-dev</Version>
 		<Authors>Hunter WB</Authors>
 		<PackageLicenseExpression>ISC</PackageLicenseExpression>
 		<PackageTags>unicode;ascii;transliteration;utf8;romanization;slug;emoji;unidecode;normalization</PackageTags>

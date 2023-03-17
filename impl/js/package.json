@@ -1,6 +1,6 @@
 {
 	"name": "any-ascii",
-	"version": "0.3.2",
+	"version": "0.3.3-dev",
 	"description": "Unicode to ASCII transliteration",
 	"homepage": "https://anyascii.com",
 	"license": "ISC",
