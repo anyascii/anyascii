@@ -1,7 +1,5 @@
-# arrows
-# supplemental arrows a
-# supplemental arrows b
-# supplemental arrows c
+# Arrows
+# https://unicode.org/charts/PDF/U2190.pdf
 ←	<
 ↑	^
 →	>
@@ -123,7 +121,8 @@
 ⇽	<
 ⇾	>
 ⇿	-
-#
+# Supplemental Arrows-A
+# https://unicode.org/charts/PDF/U27F0.pdf
 ⟰	^
 ⟱	v
 ⟲	<
@@ -140,8 +139,9 @@
 ⟼	>
 ⟽	<
 ⟾	>
-⟿	~
-#
+⟿	>
+# Supplemental Arrows-B
+# https://unicode.org/charts/PDF/U2900.pdf
 ⤀	>
 ⤁	>
 ⤂	<
@@ -265,11 +265,11 @@
 #
 ⥰	>
 #
-⥱	=
-⥲	~
+⥱	>
+⥲	>
 ⥳	<
 ⥴	>
-⥵	~
+⥵	>
 ⥶	<
 ⥷	<
 ⥸	>
@@ -277,11 +277,12 @@
 ⥺	<
 ⥻	<
 #
-⥼	>
-⥽	<
-⥾	v
-⥿	^
-#
+⥼	<
+⥽	>
+⥾	^
+⥿	v
+# Supplemental Arrows-C
+# https://unicode.org/charts/PDF/U1F800.pdf
 🠀	<
 🠁	^
 🠂	>
