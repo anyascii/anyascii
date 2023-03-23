@@ -1,3 +1,7 @@
+# https://unicode.org/charts/PDF/UA700.pdf
+#
+# Corner tone marks for Chinese
+# https://unicode.org/wg2/docs/n2713.pdf
 # https://en.wikipedia.org/wiki/Four_tones_(Middle_Chinese)
 ꜀	1
 ꜁	2
@@ -7,6 +11,8 @@
 ꜅	6
 ꜆	7
 ꜇	8
+# tone letters
+# https://unicode.org/wg2/docs/n2713.pdf
 # https://en.wikipedia.org/wiki/Tone_letter
 ꜈	5
 ꜉	4
@@ -18,20 +24,24 @@
 ꜏	3
 ꜐	2
 ꜑	1
-# https://en.wikipedia.org/wiki/Tone_letter
 ꜒	5
 ꜓	4
 ꜔	3
 ꜕	2
 ꜖	1
-#
-ꜗ	1
-ꜘ	2
-ꜙ	3
-ꜚ	4
-# https://www.unicode.org/wg2/docs/n2945.pdf
+# Chinantec tone marks
+# https://unicode.org/wg2/docs/n2883.pdf
+# https://en.wikipedia.org/wiki/Chinantec_of_Ozumacín
+ꜗ	'
+ꜘ	'
+ꜙ	-
+ꜚ	˜
+# Africanist tone letters
+# https://unicode.org/wg2/docs/n2945.pdf
+# https://en.wikipedia.org/wiki/Upstep
+# https://en.wikipedia.org/wiki/Downstep
 ꜛ	^
-ꜜ	v
+ꜜ	!
 ꜝ	!
 ꜞ	^
 ꜟ	^
