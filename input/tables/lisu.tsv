@@ -1,6 +1,8 @@
+# https://hunterwb.com/lisu
+#
+# Lisu
 # https://unicode.org/charts/PDF/UA4D0.pdf
-# knab 2012
-## Main characters
+# Consonants
 ꓐ	bb
 ꓑ	b
 ꓒ	p
@@ -25,12 +27,13 @@
 ꓥ	ng
 ꓦ	h
 ꓧ	h
-ꓨ	h'
+ꓨ	h
 ꓩ	f
 ꓪ	w
 ꓫ	sh
 ꓬ	y
 ꓭ	e
+# Vowels
 ꓮ	a
 ꓯ	ai
 ꓰ	ei
@@ -41,15 +44,17 @@
 ꓵ	u
 ꓶ	e
 ꓷ	e
-## Tone marks, etc.
+# Tones
 ꓸ	l
 ꓹ	q
 ꓺ	
 ꓻ	x
 ꓼ	r
 ꓽ	t
+# Punctuation
 ꓾	,
 ꓿	.
+# Lisu Supplement
 # https://unicode.org/charts/PDF/U11FB0.pdf
-# https://unicode.org/L2/L2018/18338r2-lisu-letter-yha.pdf
+# Letter
 𑾰	yh
