@@ -1,9 +1,9 @@
-# https://www.unicode.org/charts/PDF/U1680.pdf
-# https://en.wikipedia.org/wiki/Ogham
+# https://unicode.org/charts/PDF/U1680.pdf
+# McManus, Damian. "Section 26: Ogham." The World's Writing Systems, Edited by Peter T. Daniels and William Bright, 1996, pp. 340-345.
 #
-# space
+# Space
  	 
-# traditional letters
+# Traditional letters
 ᚁ	b
 ᚂ	l
 ᚃ	f
@@ -24,13 +24,13 @@
 ᚒ	u
 ᚓ	e
 ᚔ	i
-# forfeda supplementary letters
+# Forfeda (supplementary letters)
 ᚕ	ea
 ᚖ	oi
 ᚗ	ui
 ᚘ	ia
 ᚙ	ae
 ᚚ	p
-# punctuation
+# Punctuation
 ᚛	>
 ᚜	<

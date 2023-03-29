@@ -1,5 +1,8 @@
 # https://unicode.org/charts/PDF/UE0000.pdf
+#
+# Tag identifiers
 󠀁	
+# Tag components
 󠀠	 
 󠀡	!
 󠀢	"
@@ -95,4 +98,5 @@
 󠁼	|
 󠁽	}
 󠁾	~
+# Stateful tag terminator
 󠁿	

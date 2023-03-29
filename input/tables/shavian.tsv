@@ -1,9 +1,5 @@
 # https://unicode.org/charts/PDF/U10450.pdf
-# https://shavian.info/alphabet
-# https://shavian.info/accents
-# https://englishspeechservices.com/blog/british-vowels
-# https://englishspeechservices.com/blog/ssb
-# https://en.wikipedia.org/wiki/English_phonology
+# https://hunterwb.com/shavian
 #
 # consonants
 ## tall
@@ -62,11 +58,3 @@
 # ligatures
 𐑾	𐑦𐑩
 𐑿	𐑘𐑵
-# vowel short -r long -i -u
-# i 𐑦 𐑽 𐑰 𐑰 -
-# e 𐑧 𐑺 - 𐑱 -
-# a 𐑨 𐑸 𐑭 𐑲 𐑬
-# o 𐑪 𐑹 𐑷 𐑶 𐑴
-# u 𐑫 - 𐑵 - 𐑵
-# ʌ 𐑳 𐑻 - - -
-# ə 𐑩 𐑼 - - -

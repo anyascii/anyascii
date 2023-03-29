@@ -56,8 +56,10 @@
 ˬ	_
 ˭	=
 # Other modifier letter
+# https://unicode.org/wg2/docs/n1817.htm
 ˮ	''
 # UPA modifiers
+# https://unicode.org/wg2/docs/n2419.pdf
 ˯	v
 ˰	^
 ˱	<

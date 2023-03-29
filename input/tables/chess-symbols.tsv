@@ -1,4 +1,6 @@
 # https://en.wikipedia.org/wiki/Forsyth–Edwards_Notation
+#
+# Miscellaneous Symbols
 # https://unicode.org/charts/PDF/U2600.pdf
 # Chess symbols
 ♔	K
@@ -14,6 +16,7 @@
 ♝	b
 ♞	n
 ♟	p
+# Chess Symbols
 # https://unicode.org/charts/PDF/U1FA00.pdf
 # Neutral chess symbols
 🨀	K

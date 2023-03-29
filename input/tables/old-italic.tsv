@@ -1,7 +1,7 @@
 # https://unicode.org/charts/PDF/U10300.pdf
+# Bonfante, Larissa. "Section 23: The Scripts of Italy." The World's Writing Systems, Edited by Peter T. Daniels and William Bright, 1996, pp. 297-311.
 #
-# The World's Writing Systems, Daniels 1996
-## Etruscan
+# Letters
 𐌀	a
 𐌁	b
 𐌂	c
@@ -29,20 +29,22 @@
 𐌘	ph
 𐌙	ch
 𐌚	f
-## Southern Italy
+# Umbrian letters
 𐌛	r
 𐌜	c
+# Oscan letters
 𐌝	i
 𐌞	u
-## Northern Italy
-𐌮	t'
-𐌯	t'
+# South Picene letter
 # https://unicode.org/wg2/docs/n4395.pdf
 𐌟	s
-# https://unicode.org/wg2/docs/n4669r-olditalic.pdf
-𐌭	j
 # Numerals
 𐌠	I
 𐌡	V
 𐌢	X
 𐌣	L
+# North Italic letters
+# https://unicode.org/wg2/docs/n4669r-olditalic.pdf
+𐌭	j
+𐌮	t'
+𐌯	t'
