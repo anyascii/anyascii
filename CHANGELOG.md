@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.3-dev
+
+- Data additions and improvements
+- Python - Add PEP 561 `py.typed` file
+
 ## 0.3.2 - 2023-03-15
 
 - Data additions and improvements
