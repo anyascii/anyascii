@@ -29,13 +29,9 @@ private fun Table.variants() = apply {
 }
 
 private fun Table.letter(position: String, name: String): String {
-    if (name == "FILLER") return ""
     val cp = checkNotNull(codePointFromName("HANGUL $position $name"))
     this[cp]?.let { return it }
-    if (name.startsWith("KAPYEOUN")) return letter(position, name.removePrefix("KAPYEOUN")) + 'h'
     if (name.startsWith("SSANG")) return letter(position, name.removePrefix("SSANG")).repeat(2)
-    if (name.startsWith("CHITUEUM")) return letter(position, name.removePrefix("CHITUEUM"))
-    if (name.startsWith("CEONGCHIEUM")) return letter(position, name.removePrefix("CEONGCHIEUM"))
     error("$position $name")
 }
 

@@ -1,4 +1,6 @@
-# revised romanization
+# https://hunterwb.com/hangul
+#
+# Revised Romanization, special provision 8
 ## consonants
 ᄀ	g
 ᄁ	kk
@@ -43,12 +45,32 @@
 ᅳ	eu
 ᅴ	ui
 ᅵ	i
-# A History of the Korean Language, 2011
+# filler
+ᅟ	
+ᅠ	
+# old consonants
 ᅀ	z
 ᅌ	ng
 ᅙ	q
+# light consonants
+ᄛ	r
+ᄝ	w
+ᄫ	v
+ᄬ	ff
+ᅗ	f
+# incisor consonants
+## left
+ᄼ	ᄉ
+ᄽ	ᄊ
+ᅎ	ᄌ
+ᅏ	ᄍ
+ᅔ	ᄎ
+## right
+ᄾ	ᄉ
+ᄿ	ᄊ
+ᅐ	ᄌ
+ᅑ	ᄍ
+ᅕ	ᄎ
+# old vowels
 ᆞ	o
 ᆢ	yo
-# https://ko.wikipedia.org/wiki/들온말_적는_법
-ᄫ	v
-ᅗ	f
