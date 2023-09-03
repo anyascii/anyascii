@@ -1,0 +1,1 @@
+package AnyAscii::_2d5; sub block { [split('	','																																																																						Suo																																																																																																																																																											Ke')] } 1;

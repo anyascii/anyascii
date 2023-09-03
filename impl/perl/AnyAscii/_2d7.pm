@@ -1,0 +1,1 @@
+package AnyAscii::_2d7; sub block { [split('	','																																																																											Ling																																Khan																									Oi')] } 1;

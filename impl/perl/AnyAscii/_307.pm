@@ -1,0 +1,1 @@
+package AnyAscii::_307; sub block { [split('	','																Laam												Can	Joeng					Ho						Zin	Eun										Jing																		Jing						Yin		Fai										Gaan							Siu	Sin					Hin																										Chui									Jik		Dung				Zit																							Gin														Bik					Zao				Fan																													Jim')] } 1;

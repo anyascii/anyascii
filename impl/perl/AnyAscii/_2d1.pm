@@ -1,0 +1,1 @@
+package AnyAscii::_2d1; sub block { [split('	','																											Zin																																																																																																																																																																					Ngoi																									Hon			Put					Dyut														Lau')] } 1;

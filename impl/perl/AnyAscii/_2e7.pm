@@ -1,0 +1,1 @@
+package AnyAscii::_2e7; sub block { [split('	','																																																						Dou																																																														Gu	Ji		Fan	Ceon	Waan	Got')] } 1;

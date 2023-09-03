@@ -1,0 +1,1 @@
+package AnyAscii::_320; sub block { [split('	','			Bang																																																																																	Lai')] } 1;

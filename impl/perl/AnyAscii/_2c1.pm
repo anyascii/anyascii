@@ -1,0 +1,1 @@
+package AnyAscii::_2c1; sub block { [split('	','																					Jib									Chua											Jan																																																									Xia			Gwaa						Pan																																																Nao											Gik								Kau																Mou					Jian	Bin			Dip														Wan			Tyun	Bei																							Men									Guo')] } 1;

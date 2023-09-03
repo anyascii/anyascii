@@ -1,0 +1,1 @@
+package AnyAscii::_2d0; sub block { [split('	','																						Li')] } 1;

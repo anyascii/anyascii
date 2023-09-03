@@ -1,0 +1,1 @@
+package AnyAscii::_2ea; sub block { [split('	','																																																				Fung	Lau																																						Bat	Hoi	Aai	Ji																																																																			Mong	Haai	Zung	Cou	Deon																													Ning')] } 1;

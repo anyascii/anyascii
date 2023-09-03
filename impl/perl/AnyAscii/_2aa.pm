@@ -1,0 +1,1 @@
+package AnyAscii::_2aa; sub block { [split('	','							Teoi			Song													Jue																Leon		Ya							Qu						She	Ngaam		Tuo														Lou							Jing										Yan			Nie																													Fan																									Qiao												Yong	Coeng																						Yi																								Lung																					Li																						Cau	Ji		Cim')] } 1;

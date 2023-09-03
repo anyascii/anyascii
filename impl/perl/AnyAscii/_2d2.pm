@@ -1,0 +1,1 @@
+package AnyAscii::_2d2; sub block { [split('	','								Mu	Ying																			Bei			Thin															Huan																																															Syu											Zui																				Nan																																																												La')] } 1;

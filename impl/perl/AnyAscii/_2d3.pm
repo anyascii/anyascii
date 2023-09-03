@@ -1,0 +1,1 @@
+package AnyAscii::_2d3; sub block { [split('	','																																																																																																																																		Zung																										Dou																																																																										Oi																		Wai')] } 1;

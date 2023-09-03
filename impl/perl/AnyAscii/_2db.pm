@@ -1,0 +1,1 @@
+package AnyAscii::_2db; sub block { [split('	','																																																																								Aa')] } 1;

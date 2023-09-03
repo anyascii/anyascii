@@ -1,0 +1,1 @@
+package AnyAscii::_2bd; sub block { [split('	','																																																												Be																																																					Cat				Joeng	Wai	Li	Keng															Die			Lan											Wing																													Keng																			Kun			Xu	Hin			Lan												Sanh																				Loi		Jam									Xin		Lau					Jing')] } 1;

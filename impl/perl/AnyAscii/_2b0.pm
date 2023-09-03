@@ -1,0 +1,1 @@
+package AnyAscii::_2b0; sub block { [split('	','												Shi							Min																					Jian				Chu		Dang																				Baa																													Zyun		Li																	Mou	Wai				Soeng												Man			Gwok		Fei														Ai			Su																																						Sa																								Jiu					Kou')] } 1;
