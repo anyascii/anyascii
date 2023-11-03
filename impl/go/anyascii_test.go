@@ -4,6 +4,7 @@ import "testing"
 
 func TestTransliterate(t *testing.T) {
 	check := func(s string, expected string) {
+		t.Helper()
 		actual := Transliterate(s)
 		if actual != expected {
 			t.Errorf("Expected <%s> got <%s>", expected, actual)

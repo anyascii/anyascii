@@ -1,0 +1,28 @@
+on:
+  push:
+    paths:
+    - 'impl/ruby/**'
+    - '.github/workflows/ruby.yml'
+  pull_request:
+    paths:
+    - 'impl/ruby/**'
+    - '.github/workflows/ruby.yml'
+
+defaults:
+  run:
+    working-directory: ./impl/ruby
+
+jobs:
+  ruby:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby: [ '2.0', 'ruby' ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+      - run: ruby lib/any_ascii_test.rb
+      - run: gem build any_ascii.gemspec

@@ -1,0 +1,37 @@
+on:
+  push:
+    paths:
+    - 'impl/elixir/**'
+    - '.github/workflows/elixir.yml'
+  pull_request:
+    paths:
+    - 'impl/elixir/**'
+    - '.github/workflows/elixir.yml'
+
+defaults:
+  run:
+    working-directory: ./impl/elixir
+
+jobs:
+  elixir-dev:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '22'
+          elixir-version: '1.13'
+      - run: mix deps.get
+      - run: mix test
+      - run: mix docs
+      - run: mix hex.build
+      - run: mix format --check-formatted
+  elixir:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: '21.3'
+          elixir-version: '1.7'
+      - run: mix test

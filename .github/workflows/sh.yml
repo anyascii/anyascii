@@ -1,0 +1,21 @@
+on:
+  push:
+    paths:
+    - 'impl/sh/**'
+    - '.github/workflows/sh.yml'
+  pull_request:
+    paths:
+    - 'impl/sh/**'
+    - '.github/workflows/sh.yml'
+
+defaults:
+  run:
+    working-directory: ./impl/sh
+
+jobs:
+  sh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install zsh
+      - run: ./test.sh

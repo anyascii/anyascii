@@ -1,0 +1,27 @@
+on:
+  push:
+    paths:
+    - 'impl/php/**'
+    - '.github/workflows/php.yml'
+  pull_request:
+    paths:
+    - 'impl/php/**'
+    - '.github/workflows/php.yml'
+
+defaults:
+  run:
+    working-directory: ./impl/php
+
+jobs:
+  php:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [ '5.3', 'latest' ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+      - run: php test.php

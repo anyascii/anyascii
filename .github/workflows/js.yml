@@ -1,0 +1,38 @@
+on:
+  push:
+    paths:
+    - 'impl/js/**'
+    - '.github/workflows/js.yml'
+  pull_request:
+    paths:
+    - 'impl/js/**'
+    - '.github/workflows/js.yml'
+
+defaults:
+  run:
+    working-directory: ./impl/js
+
+jobs:
+  js-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+      - run: npm test
+      - run: npm publish --dry-run
+      - run: npm pkg fix && git diff --exit-code
+  js:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [ '12' ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm test
+      - run: npm publish --dry-run

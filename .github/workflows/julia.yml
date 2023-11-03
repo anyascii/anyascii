@@ -1,0 +1,27 @@
+on:
+  push:
+    paths:
+    - 'impl/julia/**'
+    - '.github/workflows/julia.yml'
+  pull_request:
+    paths:
+    - 'impl/julia/**'
+    - '.github/workflows/julia.yml'
+
+defaults:
+  run:
+    working-directory: ./impl/julia
+
+jobs:
+  julia:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        julia: [ '1.0', '1' ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: julia-actions/setup-julia@v1
+        with:
+          version: ${{ matrix.julia }}
+      - run: julia --project=. -e 'using Pkg; Pkg.test()'

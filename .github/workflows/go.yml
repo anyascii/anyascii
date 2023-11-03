@@ -1,0 +1,39 @@
+on:
+  push:
+    paths:
+    - 'impl/go/**'
+    - '.github/workflows/go.yml'
+  pull_request:
+    paths:
+    - 'impl/go/**'
+    - '.github/workflows/go.yml'
+
+defaults:
+  run:
+    working-directory: ./impl/go
+
+jobs:
+  go-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v4
+        with:
+          go-version: stable
+      - run: go build ./...
+      - run: go test -v -vet=off ./...
+      - run: go vet ./...
+      - run: gofmt -s -w . && git diff --exit-code
+  go:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        go: [ '1.10' ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v4
+        with:
+          go-version: ${{ matrix.go }}
+      - run: go build ./...
+      - run: go test -v -vet=off ./...

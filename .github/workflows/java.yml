@@ -1,0 +1,39 @@
+on:
+  push:
+    paths:
+    - 'impl/java/**'
+    - '.github/workflows/java.yml'
+  pull_request:
+    paths:
+    - 'impl/java/**'
+    - '.github/workflows/java.yml'
+
+defaults:
+  run:
+    working-directory: ./impl/java
+
+jobs:
+  java-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+      - run: mvn --version
+      - run: mvn package --errors --batch-mode -P release
+  java:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        java: [ '8', '17', '21' ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v3
+        with:
+          java-version: ${{ matrix.java }}
+          distribution: 'temurin'
+      - run: mvn --version
+      - run: mvn package --errors --batch-mode

@@ -1,0 +1,40 @@
+on:
+  push:
+    paths:
+    - 'impl/python/**'
+    - '.github/workflows/python.yml'
+  pull_request:
+    paths:
+    - 'impl/python/**'
+    - '.github/workflows/python.yml'
+
+defaults:
+  run:
+    working-directory: ./impl/python
+
+jobs:
+  python-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - run: pip install pytest ruff flit
+      - run: python -m pytest
+      - run: ruff check --diff .
+      - run: ruff format --diff .
+      - run: flit --debug build
+  python:
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python: [ '3.5', '3.8' ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install pytest
+      - run: python -m pytest

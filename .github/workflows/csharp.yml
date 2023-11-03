@@ -1,0 +1,30 @@
+on:
+  push:
+    paths:
+    - 'impl/csharp/**'
+    - '.github/workflows/csharp.yml'
+  pull_request:
+    paths:
+    - 'impl/csharp/**'
+    - '.github/workflows/csharp.yml'
+
+defaults:
+  run:
+    working-directory: ./impl/csharp
+
+jobs:
+  csharp:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        dotnet: [ '3.0', '7.0' ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet }}
+      - run: dotnet restore
+      - run: dotnet build --no-restore --nologo
+      - run: dotnet test --no-build --nologo
+      - run: dotnet pack --no-build --nologo

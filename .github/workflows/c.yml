@@ -1,0 +1,20 @@
+on:
+  push:
+    paths:
+    - 'impl/c/**'
+    - '.github/workflows/c.yml'
+  pull_request:
+    paths:
+    - 'impl/c/**'
+    - '.github/workflows/c.yml'
+
+defaults:
+  run:
+    working-directory: ./impl/c
+
+jobs:
+  c:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./test.sh

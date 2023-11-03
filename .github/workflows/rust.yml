@@ -1,0 +1,40 @@
+on:
+  push:
+    paths:
+    - 'impl/rust/**'
+    - '.github/workflows/rust.yml'
+  pull_request:
+    paths:
+    - 'impl/rust/**'
+    - '.github/workflows/rust.yml'
+
+defaults:
+  run:
+    working-directory: ./impl/rust
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  rust-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cargo --version --verbose
+      - run: cargo build --verbose
+      - run: cargo test --verbose
+      - run: cargo clippy
+      - run: cargo fmt --verbose --check
+  rust:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        rust: [ '1.42' ]
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustup toolchain install ${{ matrix.rust }} --no-self-update --profile minimal
+      - run: rustup default ${{ matrix.rust }}
+      - run: cargo --version --verbose
+      - run: cargo build --verbose
+      - run: cargo test --verbose
