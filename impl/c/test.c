@@ -121,6 +121,9 @@ int main() {
 	check("ᓀᐦᐃᔭᐍᐏᐣ", "nehiyawewin");
 	check("ᠤᠯᠠᠭᠠᠨᠴᠠᠪ", "ulaganqab");
 	check("𐑨𐑯𐑛𐑮𐑩𐑒𐑤𐑰𐑟 𐑯 𐑞 𐑤𐑲𐑩𐑯", "andr'kliiz n dh lai'n");
+
+	check("🐂 🦉 🦆 🦓 ☕ 🍿 ✈ 🎷 🎤 🌡 🦹", ":ox: :owl: :duck: :zebra: :coffee: :popcorn: :airplane: :saxophone: :microphone: :thermometer: :supervillain:");
+	check("에 가 힣 널 뢌 땚 꺵", "E Ga Hih Neol Lwass Ttaelp Kkyaeng");
 	
 	return 0;
 }
