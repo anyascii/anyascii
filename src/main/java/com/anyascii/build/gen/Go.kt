@@ -4,15 +4,16 @@ import java.nio.file.Path
 import kotlin.io.path.bufferedWriter
 
 fun go(g: Generator) {
-    Path.of("impl/go/bank.go").bufferedWriter().use { w ->
+    Path.of("impl/go/data.go").bufferedWriter().use { w ->
         w.write("package anyascii\n\n")
-        w.write("const bank = \"")
-        w.write(g.stringsBank.replace("\\", "\\\\").replace("\"", "\\\""))
+        w.write("const bank1 = \"")
+        w.write(g.bank1.replace("\\", "\\\\").replace("\"", "\\\""))
         w.write("\"\n")
-    }
+        w.write("const bank2 = \"")
+        w.write(g.bank2.replace("\\", "\\\\").replace("\"", "\\\""))
+        w.write("\"\n")
+        w.write("const bank2Length = $BANK2_LENGTH\n\n")
 
-    Path.of("impl/go/block.go").bufferedWriter().use { w ->
-        w.write("package anyascii\n\n")
         w.write("func block(blockNum uint32) string {\n")
         w.write("\tswitch blockNum {\n")
         val bs = g.blockPointers.values.iterator()

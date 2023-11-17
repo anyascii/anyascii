@@ -23,11 +23,22 @@ fun generate(table: Table) {
     elixir(g)
 }
 
+const val BANK2_LENGTH = 8
+
 class Generator(val table: Table) {
 
-    val blocks = blocks()
+    val bank1 = superstring(table.values.filter { it.length in 4 until BANK2_LENGTH })
 
-    val stringsBank = superstring(table.values.filter { it.length > 3 })
+    val bank2 = superstring(table.values.filter { it.length >= BANK2_LENGTH })
+
+    init {
+        check(bank1.length <= 0xffff && bank2.length <= 0xffff)
+        println("bank1: ${bank1.length} ${bank1.take(20)}...${bank1.takeLast(20)}")
+        println("bank2: ${bank2.length} ${bank2.take(20)}...${bank2.takeLast(20)}")
+        check(table.values.maxOf { it.length } <= 0x7f)
+    }
+
+    val blocks = blocks()
 
     val blockPointers = blockPointers()
 
@@ -50,12 +61,6 @@ class Generator(val table: Table) {
     }
 
     private fun blockPointers(): Map<Int, ByteArray> {
-        val longest = table.values.maxOf { it.length }
-        check(longest <= 0x7f)
-        println("$longest/${0x7f}")
-        check(stringsBank.length <= 0xffff)
-        println("${stringsBank.length}/${0xffff}")
-
         val m = TreeMap<Int, ByteArray>()
         for ((blockNum, block) in blocks) {
             val out = ByteArrayOutputStream()
@@ -82,7 +87,8 @@ class Generator(val table: Table) {
                         d.writeByte(s[2].code)
                     }
                     else -> {
-                        val i = stringsBank.indexOf(s)
+                        val bank = if (s.length < BANK2_LENGTH) { bank1 } else { bank2 }
+                        val i = bank.indexOf(s)
                         check(i != -1)
                         d.writeShort(i)
                         d.writeByte(0x80 or s.length)

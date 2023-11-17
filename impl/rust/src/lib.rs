@@ -18,7 +18,7 @@
 extern crate alloc;
 use alloc::string::String;
 
-mod block;
+mod data;
 
 /// Transliterates a Unicode String into ASCII
 ///
@@ -59,7 +59,7 @@ pub fn any_ascii(s: &str) -> String {
 /// ```
 pub fn any_ascii_char(c: char) -> &'static str {
     let block_num = (c as u32) >> 8;
-    let block = block::block(block_num);
+    let block = data::block(block_num);
     let lo = (c as u8) as usize;
     if let Some(ptr) = block.get(lo) {
         let l = ptr[2];
@@ -73,7 +73,11 @@ pub fn any_ascii_char(c: char) -> &'static str {
             unsafe { core::str::from_utf8_unchecked(ascii_bytes) }
         } else {
             let i = u16::from_be_bytes([ptr[0], ptr[1]]) as usize;
-            let bank = include_str!("bank.txt");
+            let bank = if len < data::BANK2_LENGTH {
+                data::BANK1
+            } else {
+                data::BANK2
+            };
             unsafe { bank.get_unchecked(i..i + len) }
         }
     } else {

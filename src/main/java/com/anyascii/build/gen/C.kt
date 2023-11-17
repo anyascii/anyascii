@@ -13,13 +13,18 @@ fun c(g: Generator) {
         w.write("#include <stddef.h>\n")
         w.write("#include <stdint.h>\n")
         w.write("#include \"anyascii.h\"\n\n")
-        w.write("static const char bank[${g.stringsBank.length}] = \"")
-        w.write(g.stringsBank.replace("\\", "\\\\").replace("\"", "\\\""))
-        w.write("\";\n\n")
+
+        w.write("static const char BANK1[${g.bank1.length}] = \"")
+        w.write(g.bank1.replace("\\", "\\\\").replace("\"", "\\\""))
+        w.write("\";\n")
+        w.write("static const char BANK2[${g.bank2.length}] = \"")
+        w.write(g.bank2.replace("\\", "\\\\").replace("\"", "\\\""))
+        w.write("\";\n")
+        w.write("static const size_t BANK2_LENGTH = ${BANK2_LENGTH};\n\n")
 
         val bs = g.blockPointers.values.iterator()
         for (block in g.blocks.keys) {
-            val s = "b%03x".format(block)
+            val s = "B%03X".format(block)
             val bp = bs.next()
             w.write("static const char $s[${bp.size + 1}] = \"")
             w.write(BYTE_STRINGS[(bp.size / 3) - 1])
@@ -28,15 +33,14 @@ fun c(g: Generator) {
             }
             w.write("\";\n")
         }
-        w.write("static const char bdefault[4] = \"\\000\\000\\000\\200\";\n\n")
+        w.write("static const char BDEFAULT[4] = \"\\000\\000\\000\\200\";\n\n")
 
         w.write("static const char *block(uint_least32_t blocknum) {\n")
         w.write("\tswitch (blocknum) {\n")
         for (block in g.blocks.keys) {
-            val s = "%03x".format(block)
-            w.write("\t\tcase 0x$s: return b$s;\n")
+            w.write("\t\tcase 0x%03x: return B%03X;\n".format(block, block))
         }
-        w.write("\t\tdefault: return bdefault;\n")
+        w.write("\t\tdefault: return BDEFAULT;\n")
         w.write("\t}\n")
         w.write("}\n\n")
 

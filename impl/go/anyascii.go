@@ -33,6 +33,12 @@ func TransliterateRune(r rune) string {
 		return block[lo : lo+len]
 	} else {
 		i := (int(block[lo]) << 8) | int(block[lo+1])
+		var bank string
+		if len < bank2Length {
+			bank = bank1
+		} else {
+			bank = bank2
+		}
 		return bank[i : i+len]
 	}
 }

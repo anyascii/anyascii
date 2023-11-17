@@ -47,7 +47,8 @@ namespace AnyAscii
 			else
 			{
 				int i = (block[lo] << 8) | block[lo + 1];
-				return Bank.Slice(i, len);
+				ReadOnlySpan<byte> bank = len < Bank2Length ? Bank1 : Bank2;
+				return bank.Slice(i, len);
 			}
 		}
 
