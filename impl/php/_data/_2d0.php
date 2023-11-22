@@ -1,1 +1,1 @@
-<?php return explode('	','																						Li');
+<?php return explode('	','Hin									Shuku													Li	In	Da	Da	Ju		Da	Ga		Cho	Men	Cho		To	Nami	To			Ko								San	San																			Geki		Itsu	Yo	Yo	Yo							Ken				Kan	Yo											Zen	Sai	Ryo	Sho						Ko	Ko	Ko		Hei		Ko				Ho				Mei			Kan	Fu	Shi					Sha				Ken									Yo			Shuku		Shun									Shitsu															Bon	Ga			Ko															En						Setsu	Gai	Gai						Katsu													Toji	Katsu							Sho				Sei			Sho					Sei			Wan	Shu	Tatsu');

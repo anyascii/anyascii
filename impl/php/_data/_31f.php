@@ -1,1 +1,1 @@
-<?php return explode('	','																																																																																																								Bang');
+<?php return explode('	','																																																																												Bodai																												Bang');

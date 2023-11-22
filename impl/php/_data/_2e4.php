@@ -1,1 +1,1 @@
-<?php return explode('	','																										Faan														Jing');
+<?php return explode('	','			Mo																Sho							Faan											Nazuna	Aona		Jing						Ko											Jo		So	Zo														Kei																Do	Ro	Kun	Shi			Heki																						Sho																										Niraki				Tsuta			Kaku		Shiki	Ieararagi	Gei													Sanakazura			Zetsu														Sen						Warabi									Kaku			Warabi											So	Ko	Gyaku	Ko	Ken		Ko		Yu		Kyo	Kyo		Ko		Gu	Ko										Ki	Ki				So							Chu	Se');

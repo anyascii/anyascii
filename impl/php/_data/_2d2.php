@@ -1,1 +1,1 @@
-<?php return explode('	','								Mu	Ying																			Bei			Thin															Huan																																															Syu											Zui																				Nan																																																												La');
+<?php return explode('	','						Ai		Mu	Ying																			Bei	Kei		Thin													So		Huan											Go			Tan											Taku	Sha																Ku	Dore				Syu			Shiyu								Zui	To												Sen							Nan			Sa													Kyo																																												La														Kei																		Jaku			Do');

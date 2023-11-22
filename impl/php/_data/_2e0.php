@@ -1,1 +1,1 @@
-<?php return explode('	','																																				Lou						Gun								Geng');
+<?php return explode('	','	Shin																																Rei			Lou						Gun								Geng				Ken		Ken																				Ko																							Rei					Sei						Tatari	Ku				Ka	Yuki																						Fuku					Kyo					Hyu						Sho		Nyo		To				Ne					Sei								Toshi											Hatsu							Sho			Ta										Sho								Ju					Kei							Kei	So													Kuwa											Kan');

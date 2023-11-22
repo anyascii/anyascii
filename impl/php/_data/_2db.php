@@ -1,1 +1,1 @@
-<?php return explode('	','																																																																								Aa');
+<?php return explode('	','																Kai	Han	Reki										Shishinokushi												Kajinoki							Kun				Ken							Sugomori									Shijikuhe					Aa		I	Ketsu			Kan	Ueru				Sa	Kyo	Kan																				Shu																				En	Shi		Shi	En				Ran			Botsu									Son					Hi													Kan								Dan		Tan			Kaku	In		Ki		Ki	Kei				Ten	Keki	Keki											Mai																																									Bo				Uke');

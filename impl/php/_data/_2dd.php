@@ -1,1 +1,1 @@
-<?php return explode('	','										Mou');
+<?php return explode('	','										Mou							En					Ka			Ten	O																	Sho								Ran				Seki			Kyoku			Hi	Mu	Bu					Ken			Sho	Ken																				Kun				Sho	Sen																			Netsu								Sho						Yo								Ho								Raku					Sho										So									Sho														Reki																																Shu											Ken													Fu										Ton');
