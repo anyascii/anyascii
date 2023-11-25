@@ -18,13 +18,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        dotnet: [ '3.0', '7.0' ]
+        dotnet: [ '3.0', '8' ]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v3
         with:
           dotnet-version: ${{ matrix.dotnet }}
+      - run: dotnet --info
       - run: dotnet restore
-      - run: dotnet build --no-restore --nologo
-      - run: dotnet test --no-build --nologo
-      - run: dotnet pack --no-build --nologo
+      - run: dotnet build --configuration Release --no-restore --nologo
+      - run: dotnet test --configuration Release --no-build --nologo
+      - run: dotnet pack --configuration Release --no-build --nologo
