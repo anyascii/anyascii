@@ -9,7 +9,6 @@ private fun letters() = Table().apply {
     Path.of("input/bamum.csv").forEachLine { line ->
         val split = line.split(',')
         val cp = CodePoint(split[0])
-        if (cp.plane > 0) return@forEachLine
         this[cp] = CHARS.transliterateAny(split[1])
     }
 }
