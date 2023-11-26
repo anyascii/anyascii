@@ -1,25 +1,34 @@
 package com.anyascii.build
 
 import java.nio.file.Path
+import java.util.TreeMap
 import kotlin.io.path.forEachLine
 
 fun unihan() = Table()
-        .then(unihan("kMandarin"))
-        .then(unihan("kCantonese"))
-        .then(unihan("kHangul"))
-        .then(unihan("kJapanese"))
-        .then(unihan("kXHC1983"))
-        .then(unihan("kHanyuPinyin"))
-        .then(unihan("kVietnamese"))
-        .then(unihan("kJapaneseOn"))
-        .then(unihan("kJapaneseKun"))
-        .then(unihan("kTang"))
+        .add("kMandarin")
+        .add("kCantonese")
+        .add("kHangul")
+        .add("kJapanese")
+        .add("kXHC1983")
+        .add("kHanyuPinyin")
+        .add("kVietnamese")
+        .add("kJapaneseOn")
+        .add("kJapaneseKun")
         .variants()
+
+private fun Table.add(key: String) = apply {
+    val s1 = size
+    val u = unihan(key)
+    then(u)
+    val s2 = size
+    println("$key: ${s2 - s1}/${u.size}")
+}
 
 private fun unihan(key: String) = Table().apply {
     Path.of("input/Unihan_Readings.txt").forEachLine { line ->
         if (line.isEmpty() || line.startsWith('#')) return@forEachLine
-        val split = line.split('\t', limit = 3)
+        val split = line.split('\t')
+        check(split.size == 3)
         if (split[1] != key) return@forEachLine
         val cp = parseUCodePoint(split[0])
         val s = split[2]
@@ -40,15 +49,26 @@ private fun unihan(key: String) = Table().apply {
 }
 
 private fun Table.variants() = apply {
+    val keys = TreeMap<String, Int>().withDefault { 0 }
     Path.of("input/Unihan_Variants.txt").forEachLine { line ->
         if (line.isEmpty() || line.startsWith('#')) return@forEachLine
         val split = line.split('\t')
-        if (split.size != 3) return@forEachLine
+        check(split.size == 3)
+        val key = split[1]
+        keys[key] = keys.getValue(key)
         val cp1 = parseUCodePoint(split[0])
         for (s in split[2].split(' ')) {
             val cp2 = parseUCodePoint(s.substringBefore('<'))
-            if (cp1 in this) putIfAbsent(cp2, getValue(cp1))
-            if (cp2 in this) putIfAbsent(cp1, getValue(cp2))
+            val v1 = this[cp1]
+            val v2 = this[cp2]
+            if (v1 != null && v2 == null) {
+                this[cp2] = v1
+                keys[key] = keys.getValue(key) + 1
+            } else if (v1 == null && v2 != null) {
+                this[cp1] = v2
+                keys[key] = keys.getValue(key) + 1
+            }
         }
     }
+    println(keys)
 }
