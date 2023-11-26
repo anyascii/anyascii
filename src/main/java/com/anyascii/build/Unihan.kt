@@ -1,6 +1,5 @@
 package com.anyascii.build
 
-import com.ibm.icu.lang.UScript
 import java.nio.file.Path
 import kotlin.io.path.forEachLine
 
@@ -14,7 +13,6 @@ fun unihan() = Table()
         .then(unihan("kVietnamese"))
         .then(unihan("kJapaneseOn"))
         .then(unihan("kJapaneseKun"))
-        .then(ccCedict())
         .then(unihan("kTang"))
         .variants()
 
@@ -52,34 +50,5 @@ private fun Table.variants() = apply {
             if (cp1 in this) putIfAbsent(cp2, getValue(cp1))
             if (cp2 in this) putIfAbsent(cp1, getValue(cp2))
         }
-    }
-}
-
-private fun ccCedict() = Table().apply {
-    Path.of("input/cedict_ts.u8").forEachLine { line ->
-        if (line.startsWith('#')) return@forEachLine
-        val split = line.split(' ', limit = 3)
-        val pronunciation = split[2].removePrefix("[").substringBefore(']')
-        val syllables = pronunciation.split(' ').map { it.filter(ASCII_LETTERS).title() }
-
-        fun add(cps: IntArray) {
-            if (cps.size == syllables.size) {
-                for (i in cps.indices) {
-                    val cp = cps[i]
-                    val syllable = syllables[i]
-                    if (cp.script == UScript.HAN && syllable != "Xx") {
-                        putIfAbsent(cp, syllable)
-                    }
-                }
-            } else if (cps.size == 1) {
-                val cp = cps.single()
-                if (cp.script == UScript.HAN) {
-                    putIfAbsent(cp, syllables.joinToString(""))
-                }
-            }
-        }
-
-        add(split[0].codePointsArray())
-        add(split[1].codePointsArray())
     }
 }
