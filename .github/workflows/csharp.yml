@@ -22,7 +22,7 @@ jobs:
         dotnet: [ '3.0', '8' ]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v3
+      - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: ${{ matrix.dotnet }}
       - run: dotnet --info
