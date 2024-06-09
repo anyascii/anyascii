@@ -28,6 +28,8 @@ jobs:
       - run: flit --debug build
   python:
     runs-on: ubuntu-20.04
+    env:
+      PIP_TRUSTED_HOST: "pypi.python.org pypi.org files.pythonhosted.org"
     strategy:
       fail-fast: false
       matrix:
