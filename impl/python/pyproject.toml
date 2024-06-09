@@ -31,5 +31,5 @@ Homepage = "https://github.com/anyascii/anyascii"
 Demo = "https://anyascii.com"
 Changelog = "https://github.com/anyascii/anyascii/blob/master/CHANGELOG.md"
 
-[tool.ruff]
+[tool.ruff.lint]
 select = ["F", "E", "I"]
