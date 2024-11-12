@@ -1,1 +1,1 @@
-<?php return explode('	','																																																																																																																0	1	2	3	4	5	6	7	8	9');
+<?php return explode('	','																																																																n	m	\'	a	k	kh	g	gh	n	c	ch	j	jh	n	t	th	d	dh	t	th	d	dh	n	p	ph	b	bh	m	y	r	l	v	s	s	h	a	i	u	u	e	ai	o	au			.	,	.	0	1	2	3	4	5	6	7	8	9');
