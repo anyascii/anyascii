@@ -1,1 +1,1 @@
-<?php return explode('	','																																																																																																																							Me');
+<?php return explode('	','						Hai			Lian																										Lengq										Nang	Fen				Tuo																						Hei	Nyingz		Lo											Gux						Ndi											Xu														Lan		Me	Nag							Gyax		Iq			Hongj																									Zha									Mao		Soem							Mo		A																Dang					Niao							Lun					Hong	Long	Le			Ngamz																Hao	Hong				Shi													Ye				Duan');

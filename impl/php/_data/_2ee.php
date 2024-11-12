@@ -1,0 +1,1 @@
+<?php return explode('	','Lin			Pik	Seot		Hing		Gwan	Gung	Cim		Sik			Cyun	Fong				Shun	Fuk		Hin			Jan	Hoi	Hoi	Jing	Qi	Soeng	Jin		Hoi	Zan	Ao	Kit	Fu								Kit									Wan		Gu			Biu	Fei			Pan		Fei			Mo	Ji			Ao		Zau	Wan											Ling	Ang	Hok			Yan	Daap');

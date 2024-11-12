@@ -1,1 +1,1 @@
-<?php return explode('	','			Bang																																																																																	Lai');
+<?php return explode('	','			Bang	Xu											Gyaeq																Hang						Cang				Denz	Fong					Xie		Vinj												Vuengz		Ngau										Zhen										Biang	Lai						Gox									Mang															Yax			Duenq																	Xia													Zao	Zhuo																																Bengz		Gai					Ying																														Benz				Ruenz	Sat		Ndij												Gvaeg	Saet						Bin');

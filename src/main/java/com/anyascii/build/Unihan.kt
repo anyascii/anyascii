@@ -14,6 +14,7 @@ fun unihan() = Table()
         .add("kVietnamese")
         .add("kJapaneseOn")
         .add("kJapaneseKun")
+        .add("kZhuang")
         .variants()
 
 private fun Table.add(key: String) = apply {
@@ -42,6 +43,7 @@ private fun unihan(key: String) = Table().apply {
             "kXHC1983", "kTGHZ2013" -> s.substringAfter(':').substringBefore(' ').title()
             "kSMSZD2003Readings" -> s.substringBefore('粵').substringBefore(',').title()
             "kJapanese" -> romanizeKanaWord(s.substringBefore(' '))
+            "kZhuang" -> s.removeSuffix("*").title()
             else -> error(key)
         }
         put(cp, r)
