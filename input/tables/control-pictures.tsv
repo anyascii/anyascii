@@ -44,3 +44,8 @@
 ␥	/
 # Specific symbol for control code
 ␦	?
+# Legacy computer symbols for delete
+# https://unicode.org/L2/L2021/21235r-terminals-supplement.pdf
+␧	#
+␨	#
+␩	#

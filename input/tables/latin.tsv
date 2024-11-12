@@ -483,6 +483,9 @@
 ## https://unicode.org/wg2/docs/n5044-tau-gallicum.pdf
 ꟈ	d
 ꟊ	s
+## Letters for Luiseño
+## https://unicode.org/L2/L2022/22113r-two-latin-chars.pdf
+ꟍ	s
 ## Letters used in the Middle English Ormulum
 # https://unicode.org/wg2/docs/n5145-ormulum.pdf
 ꟑ	g
@@ -493,6 +496,9 @@
 ꟗ	s
 ### https://unicode.org/wg2/docs/n5146-sigmoid-s.pdf
 ꟙ	s
+## Letters used in Wakashan and Salishan languages
+## https://unicode.org/L2/L2023/23191-three-latin-additions.pdf
+ꟛ	l
 ## Ancient Gaulish and Celtic epigraphic letters
 ### https://unicode.org/wg2/docs/n5039_reversed_half_h.pdf
 ꟶ	h

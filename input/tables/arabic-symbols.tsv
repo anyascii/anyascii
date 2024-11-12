@@ -270,6 +270,9 @@
 𐹾	2/3
 # Arabic Extended-C
 # https://unicode.org/charts/PDF/U10EC0.pdf
+## Quranic mark used in Libya
+## https://unicode.org/L2/L2022/22047-combining-alef-overlay.pdf
+𐻼	ٰ
 ## Quranic marks used in Turkey
 ## https://unicode.org/L2/L2021/21133-quranic-marks.pdf
 𐻽	

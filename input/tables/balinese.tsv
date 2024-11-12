@@ -3,6 +3,7 @@
 # ala-lc 2012
 # https://unicode.org/L2/L2019/19259-balinese-archaic-jnya.pdf
 # https://unicode.org/L2/L2019/19318-balinese-punct.pdf
+# https://unicode.org/L2/L2022/22059-balinese-punct.pdf
 #
 # Various signs
 ᬀ	m
@@ -89,6 +90,9 @@
 ᭋ	sy
 ᭌ	jny
 # Punctuation
+᭎	᭞
+᭏	᭟
+# Punctuation
 ᭚	*
 ᭛	@
 ᭜	.
@@ -130,3 +134,4 @@
 # Punctuation
 ᭽	**
 ᭾	@@
+᭿	~

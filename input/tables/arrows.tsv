@@ -444,6 +444,23 @@
 #
 🢬	-
 🢭	-
-#
+## Arrows for legacy computing
+### https://unicode.org/wg2/docs/n5028-19025-terminals-prop.pdf
 🢰	\
 🢱	/
+### https://unicode.org/L2/L2021/21234-terminals-smalltalk.pdf
+🢲	>
+### https://unicode.org/L2/L2021/21235r-terminals-supplement.pdf
+🢳	v
+🢴	<
+🢵	^
+🢶	>
+🢷	v
+🢸	\
+🢹	/
+🢺	\
+🢻	/
+## Arrows for Egyptology
+## https://unicode.org/wg2/docs/n5239-hieroglyphic-arrows.pdf
+🣀	<
+🣁	>
