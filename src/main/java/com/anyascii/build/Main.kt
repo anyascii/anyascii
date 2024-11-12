@@ -248,6 +248,7 @@ private fun custom() = Table()
         .then(Table("kawi"))
         .then(Table("ol-onal"))
         .then(Table("sunuwar"))
+        .then(Table("garay"))
 
 private fun dominoes() = (0x1f030..0x1f093).toTable {
     val name = it.name.removePrefix("DOMINO TILE ")
