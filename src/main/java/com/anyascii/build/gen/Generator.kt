@@ -23,7 +23,7 @@ fun generate(table: Table) {
     elixir(g)
 }
 
-const val BANK2_LENGTH = 8
+const val BANK2_LENGTH = 7
 
 class Generator(val table: Table) {
 
@@ -32,9 +32,9 @@ class Generator(val table: Table) {
     val bank2 = superstring(table.values.filter { it.length >= BANK2_LENGTH })
 
     init {
-        check(bank1.length <= 0xffff && bank2.length <= 0xffff)
         println("bank1: ${bank1.length} ${bank1.take(20)}...${bank1.takeLast(20)}")
         println("bank2: ${bank2.length} ${bank2.take(20)}...${bank2.takeLast(20)}")
+        check(bank1.length <= 0xffff && bank2.length <= 0xffff)
         check(table.values.maxOf { it.length } <= 0x7f)
     }
 
