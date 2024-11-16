@@ -1,8 +1,8 @@
-# TangutSources-15.0.0.txt
-# Date: 2022-05-03, 18:55:00 GMT [MS, KW]
-# © 2022 Unicode®, Inc.
+# TangutSources-16.0.0.txt
+# Date: 2024-01-17, 19:15:00 GMT [MS, KW]
+# © 2024 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
-# For terms of use, see https://www.unicode.org/terms_of_use.html
+# For terms of use and license, see https://www.unicode.org/terms_of_use.html
 #
 # Unicode Character Database
 # For documentation, see https://www.unicode.org/reports/tr44/
@@ -11,6 +11,8 @@
 # Unicode Character Database.
 #
 #	Data values match those for ISO/IEC 10646:2020
+#	with exception of U+17105 where the Radical Stroke Index value has been updated from 11.10 to 11.9
+#	and U+180DF where the Radical Stroke Index value has been updated from 303.9 to 303.10
 #	Original Date: 2019-07-29
 #
 #	Format information:
@@ -50,7 +52,7 @@
 # UTN42 = Andrew West and Viacheslav Zaytsev, Tangut Character Additions and Glyph Corrections,
 #         Unicode Technical Note #42. 2019-12-21.
 #
-#	For more information, see Section 18.10, Tangut, of the
+#	For more information, see Section 18.11, Tangut, of the
 #	core specification.
 #
 U+17000	kTGT_MergedSrc	L2008-0008
@@ -576,7 +578,7 @@ U+17103	kRSTUnicode	11.9
 U+17104	kTGT_MergedSrc	L2008-0064
 U+17104	kRSTUnicode	11.10
 U+17105	kTGT_MergedSrc	L2008-6004
-U+17105	kRSTUnicode	11.10
+U+17105	kRSTUnicode	11.9
 U+17106	kTGT_MergedSrc	L2008-6003
 U+17106	kRSTUnicode	11.10
 U+17107	kTGT_MergedSrc	L2006-6027
@@ -8692,7 +8694,7 @@ U+180DD	kRSTUnicode	303.9
 U+180DE	kTGT_MergedSrc	L2008-5285
 U+180DE	kRSTUnicode	303.9
 U+180DF	kTGT_MergedSrc	L2008-5467
-U+180DF	kRSTUnicode	303.9
+U+180DF	kRSTUnicode	303.10
 U+180E0	kTGT_MergedSrc	L2008-5149
 U+180E0	kRSTUnicode	303.10
 U+180E1	kTGT_MergedSrc	L2008-5113
