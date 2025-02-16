@@ -27,13 +27,13 @@ jobs:
       - run: ruff format --diff .
       - run: flit --debug build
   python:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     env:
       PIP_TRUSTED_HOST: "pypi.python.org pypi.org files.pythonhosted.org"
     strategy:
       fail-fast: false
       matrix:
-        python: [ '3.5', '3.8' ]
+        python: [ '3.7', '3.9', '3.11' ]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
