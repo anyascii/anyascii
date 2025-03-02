@@ -1,20 +1,23 @@
 # https://unicode.org/charts/PDF/U2440.pdf
+# ISO 2033:1983
+# RFC 1345
+# ECMA-19
+# ANSI X3.17
 #
 # iso-ir-91
-# https://itscj-ipsj.jp/ir/091.pdf
 ⑀	<
 ⑁	>
 ⑂	]
-#
-⑃	*
+# RFC 1345 ?
+⑃	|
+# ?
 ⑄	*
+# unique asterisk ?
 ⑅	*
 # iso-ir-98
-# https://itscj-ipsj.jp/ir/098.pdf
 ⑆	:
 ⑇	;
 ⑈	<
 ⑉	=
 # iso-ir-95
-# https://itscj-ipsj.jp/ir/095.pdf
 ⑊	%
