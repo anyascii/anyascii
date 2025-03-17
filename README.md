@@ -280,7 +280,7 @@ When converting text between languages there are multiple properties that can be
 
 ## Stats
 
-Supports Unicode 16.0 (2024). Covers 123k of the 155k total Unicode characters, missing 30k very rare CJK characters and 2k other rare characters.
+Supports Unicode 16.0 (2024). Covers 124k of the 155k total Unicode characters, missing 30k very rare CJK characters and 1k cuneiform.
 
 Bundled data files total 200-500 KB depending on the implementation
 
