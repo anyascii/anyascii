@@ -14,13 +14,12 @@ fun c(g: Generator) {
         w.write("#include <stdint.h>\n")
         w.write("#include \"anyascii.h\"\n\n")
 
+        w.write("static const char BANK0[${g.bank0.length}] = \"")
+        w.write(g.bank0.replace("\\", "\\\\").replace("\"", "\\\""))
+        w.write("\";\n")
         w.write("static const char BANK1[${g.bank1.length}] = \"")
         w.write(g.bank1.replace("\\", "\\\\").replace("\"", "\\\""))
-        w.write("\";\n")
-        w.write("static const char BANK2[${g.bank2.length}] = \"")
-        w.write(g.bank2.replace("\\", "\\\\").replace("\"", "\\\""))
-        w.write("\";\n")
-        w.write("static const size_t BANK2_LENGTH = ${BANK2_LENGTH};\n\n")
+        w.write("\";\n\n")
 
         val bs = g.blockPointers.values.iterator()
         for (block in g.blocks.keys) {

@@ -46,8 +46,9 @@ namespace AnyAscii
 			}
 			else
 			{
+				uint plane = blockNum >> 8;
+				ReadOnlySpan<byte> bank = plane == 1 ? Bank1 : Bank0;
 				int i = (block[lo] << 8) | block[lo + 1];
-				ReadOnlySpan<byte> bank = len < Bank2Length ? Bank1 : Bank2;
 				return bank.Slice(i, len);
 			}
 		}

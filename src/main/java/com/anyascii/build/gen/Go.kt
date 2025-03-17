@@ -6,13 +6,12 @@ import kotlin.io.path.bufferedWriter
 fun go(g: Generator) {
     Path.of("impl/go/data.go").bufferedWriter().use { w ->
         w.write("package anyascii\n\n")
+        w.write("const bank0 = \"")
+        w.write(g.bank0.replace("\\", "\\\\").replace("\"", "\\\""))
+        w.write("\"\n")
         w.write("const bank1 = \"")
         w.write(g.bank1.replace("\\", "\\\\").replace("\"", "\\\""))
-        w.write("\"\n")
-        w.write("const bank2 = \"")
-        w.write(g.bank2.replace("\\", "\\\\").replace("\"", "\\\""))
-        w.write("\"\n")
-        w.write("const bank2Length = $BANK2_LENGTH\n\n")
+        w.write("\"\n\n")
 
         w.write("func block(blockNum uint32) string {\n")
         w.write("\tswitch blockNum {\n")

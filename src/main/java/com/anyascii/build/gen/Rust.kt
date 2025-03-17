@@ -11,17 +11,16 @@ fun rust(g: Generator) {
     dataDir.toFile().deleteRecursively()
     dataDir.createDirectories()
 
+    Path.of("impl/rust/src/bank0.txt").writeText(g.bank0)
     Path.of("impl/rust/src/bank1.txt").writeText(g.bank1)
-    Path.of("impl/rust/src/bank2.txt").writeText(g.bank2)
 
     for ((blockNum, bytes) in g.blockPointers) {
         dataDir.resolve("%03x".format(blockNum)).writeBytes(bytes)
     }
 
     Path.of("impl/rust/src/data.rs").bufferedWriter().use { writer ->
-        writer.write("pub const BANK1: &str = include_str!(\"bank1.txt\");\n")
-        writer.write("pub const BANK2: &str = include_str!(\"bank2.txt\");\n")
-        writer.write("pub const BANK2_LENGTH: usize = $BANK2_LENGTH;\n\n")
+        writer.write("pub const BANK0: &str = include_str!(\"bank0.txt\");\n")
+        writer.write("pub const BANK1: &str = include_str!(\"bank1.txt\");\n\n")
 
         writer.write("pub fn block(block_num: u32) -> &'static [[u8; 3]] {\n")
         writer.write("    let b: &'static [u8] = match block_num {\n")

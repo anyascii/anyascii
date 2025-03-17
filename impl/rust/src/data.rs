@@ -1,6 +1,5 @@
+pub const BANK0: &str = include_str!("bank0.txt");
 pub const BANK1: &str = include_str!("bank1.txt");
-pub const BANK2: &str = include_str!("bank2.txt");
-pub const BANK2_LENGTH: usize = 7;
 
 pub fn block(block_num: u32) -> &'static [[u8; 3]] {
     let b: &'static [u8] = match block_num {

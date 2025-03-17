@@ -9,10 +9,11 @@ size_t anyascii(uint_least32_t utf32, const char **ascii) {
 	if (len <= 3) {
 		*ascii = b + lo;
 	} else {
+	    uint_least32_t plane = blocknum >> 8;
+		const char *bank = plane == 1 ? BANK1 : BANK0;
 		size_t i0 = (unsigned char) b[lo];
 		size_t i1 = (unsigned char) b[lo + 1];
 		size_t i = (i0 << 8) | i1;
-		const char *bank = len < BANK2_LENGTH ? BANK1 : BANK2;
 		*ascii = bank + i;
 	}
 	return len;

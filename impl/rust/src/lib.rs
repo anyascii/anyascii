@@ -72,12 +72,9 @@ pub fn any_ascii_char(c: char) -> &'static str {
             let ascii_bytes = &ptr[..len];
             unsafe { core::str::from_utf8_unchecked(ascii_bytes) }
         } else {
+            let plane = block_num >> 8;
+            let bank = if plane == 1 { data::BANK1 } else { data::BANK0 };
             let i = u16::from_be_bytes([ptr[0], ptr[1]]) as usize;
-            let bank = if len < data::BANK2_LENGTH {
-                data::BANK1
-            } else {
-                data::BANK2
-            };
             unsafe { bank.get_unchecked(i..i + len) }
         }
     } else {

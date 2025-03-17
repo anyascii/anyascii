@@ -1,7 +1,7 @@
 package com.anyascii.build
 
 fun superstring(strings: Collection<String>): String {
-    val ss = removeSubstrings(strings).sortedBy { it.length }.toCollection(LinkedHashSet())
+    val ss = removeSubstrings(strings).sortedByDescending { it.length }.toCollection(LinkedHashSet())
     var result = ""
     while (ss.isNotEmpty()) {
         val m = ss.maxByOrNull { overlap(result, it) }!!
