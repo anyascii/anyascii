@@ -20,8 +20,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: '24.3'
-          elixir-version: '1.13'
+          otp-version: '28.0'
+          elixir-version: '1.18'
       - run: mix deps.get
       - run: mix test
       - run: mix docs

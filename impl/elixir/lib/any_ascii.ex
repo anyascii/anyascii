@@ -24,7 +24,7 @@ defmodule AnyAscii do
       iex> AnyAscii.transliterate("άνθρωποι") |> IO.iodata_to_binary()
       "anthropoi"
 
-      iex> AnyAscii.transliterate('Борис') |> IO.iodata_to_binary()
+      iex> AnyAscii.transliterate(~c"Борис") |> IO.iodata_to_binary()
       "Boris"
 
       iex> AnyAscii.transliterate([?深]) |> IO.iodata_to_binary()

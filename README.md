@@ -99,6 +99,8 @@ iex> AnyAscii.transliterate("άνθρωποι") |> IO.iodata_to_binary()
 "anthropoi"
 ```
 
+Elixir 1.7+ and Erlang/OTP 21.3+ compatible
+
 ## Go
 
 https://pkg.go.dev/github.com/anyascii/go

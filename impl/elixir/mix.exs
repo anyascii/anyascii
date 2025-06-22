@@ -12,7 +12,7 @@ defmodule AnyAscii.MixProject do
       version: "0.3.3-dev",
       elixir: "~> 1.7",
       deps: [
-        {:ex_doc, "~> 0.27.0", only: :dev, runtime: false}
+        {:ex_doc, "~> 0.34", only: :dev, runtime: false}
       ],
       description: "Unicode to ASCII transliteration",
       package: [
