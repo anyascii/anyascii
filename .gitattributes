@@ -1,11 +1,10 @@
-/impl/java/src/main/resources/** linguist-generated
+/impl/java/src/main/resources/com/anyascii/* linguist-generated
 /impl/python/anyascii/_data/* linguist-generated
 /impl/js/block.js linguist-generated
 /impl/rust/src/data/* linguist-generated
-/impl/rust/src/block.rs linguist-generated
-/impl/rust/src/bank.txt linguist-generated
-/impl/go/block.go linguist-generated
-/impl/go/bank.go linguist-generated
+/impl/rust/src/data.rs linguist-generated
+/impl/rust/src/bank* linguist-generated
+/impl/go/data.go linguist-generated
 /impl/ruby/lib/data/* linguist-generated
 /impl/csharp/src/Transliteration.data.cs linguist-generated
 /impl/sh/anyascii linguist-generated
