@@ -10,8 +10,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <version.kotlin>2.0.0</version.kotlin>
-        <version.java>11</version.java>
+        <version.kotlin>2.2.0</version.kotlin>
+        <maven.compiler.release>11</maven.compiler.release>
     </properties>
 
     <dependencies>
@@ -23,12 +23,12 @@
         <dependency>
             <groupId>com.ibm.icu</groupId>
             <artifactId>icu4j</artifactId>
-            <version>76.1</version>
+            <version>77.1</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.14.1</version>
+            <version>2.19.1</version>
         </dependency>
     </dependencies>
     <build>
@@ -40,20 +40,19 @@
                 <executions>
                     <execution>
                         <id>compile</id>
-                        <phase>process-sources</phase>
                         <goals>
                             <goal>compile</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <jvmTarget>${version.java}</jvmTarget>
+                    <jvmTarget>${maven.compiler.release}</jvmTarget>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.5.1</version>
                 <executions>
                     <execution>
                         <id>exec</id>
