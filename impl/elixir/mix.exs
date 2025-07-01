@@ -9,7 +9,7 @@ defmodule AnyAscii.MixProject do
     [
       app: :any_ascii,
       name: @name,
-      version: "0.3.3",
+      version: "0.4.0-dev",
       elixir: "~> 1.7",
       deps: [
         {:ex_doc, "~> 0.34", only: :dev, runtime: false}
