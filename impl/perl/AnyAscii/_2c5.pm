@@ -1,0 +1,1 @@
+package AnyAscii::_2c5; sub block { [split('	','		Wai																																													Ou																			Long		Sai						Gaan																	Fu											Au						Ling																							Zyun														Haan					Chou		Shi								Lou														Haam')] } 1;

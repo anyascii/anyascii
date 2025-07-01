@@ -1,0 +1,1 @@
+package AnyAscii::_2de; sub block { [split('	','																																																																																												Lo																																																																																																																								Lai')] } 1;

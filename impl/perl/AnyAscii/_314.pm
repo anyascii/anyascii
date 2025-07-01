@@ -1,0 +1,1 @@
+package AnyAscii::_314; sub block { [split('	','																																																																																																																																																																								Ji										Go																																																										Ceoi')] } 1;

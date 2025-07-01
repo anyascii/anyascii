@@ -1,0 +1,1 @@
+package AnyAscii::_317; sub block { [split('	','																																																																																																																																																																																																																																													Mit																Wo')] } 1;

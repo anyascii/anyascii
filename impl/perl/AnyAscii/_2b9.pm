@@ -1,0 +1,1 @@
+package AnyAscii::_2b9; sub block { [split('	','																																																								Mou					Gan																Yan																																						Li		Li		Dyut			Ye		Ya					Suo				Siu				Lou			Zyut																			Cim										Loeng										Dyut																																																											Buk	Sit																Duk')] } 1;

@@ -1,0 +1,1 @@
+package AnyAscii::_2e0; sub block { [split('	','																																				Lou						Gun								Geng')] } 1;

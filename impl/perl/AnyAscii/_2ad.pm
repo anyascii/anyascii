@@ -1,0 +1,1 @@
+package AnyAscii::_2ad; sub block { [split('	','																									Cyun																						Ngap																																		Hiu																		Hei														Lai																			Si														Luo																																																											Qing																																																Zaan		Wing')] } 1;

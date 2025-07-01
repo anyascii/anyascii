@@ -1,0 +1,1 @@
+package AnyAscii::_2da; sub block { [split('	','																																																																																										Ngai	Haan																					Fat																						Zaa																																																										Gwai																									Dik')] } 1;
