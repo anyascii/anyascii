@@ -1,1 +1,0 @@
-<?php return explode('	','a	k	kh	g	gh	n	c	ch	j	jh	h	t	th	d	dh	w	t	th	d	dh	n	p	ph	b	bh	m	y	r	l	s	a	i	i	u	u	e	e	ai	o	o	au		y	w	h	m	r		0	1	2	3	4	5	6	7	8	9');

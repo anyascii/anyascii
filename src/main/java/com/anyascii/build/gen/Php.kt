@@ -9,9 +9,9 @@ fun php(g: Generator) {
     dirPath.toFile().deleteRecursively()
     dirPath.createDirectories()
 
-    for ((blockNum, block) in g.blocks) {
+    for ((blockNum, block) in g.blocks12) {
         val b = block.noAscii().joinToString("\t").replace("\\", "\\\\").replace("'", "\\'")
         val s = "<?php return explode('\t','$b');"
-        dirPath.resolve("_%03x.php".format(blockNum)).writeText(s)
+        dirPath.resolve("_%02x.php".format(blockNum)).writeText(s)
     }
 }

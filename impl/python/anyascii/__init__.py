@@ -34,13 +34,13 @@ def anyascii(string):
         if codepoint <= 0x7F:
             result.append(char)
             continue
-        blocknum = codepoint >> 8
-        lo = codepoint & 0xFF
+        blocknum = codepoint >> 12
+        lo = codepoint & 0xFFF
         try:
             block = _blocks[blocknum]
         except KeyError:
             try:
-                b = read_binary("anyascii._data", "%03x" % blocknum)
+                b = read_binary("anyascii._data", "%02x" % blocknum)
                 s = decompress(b, -MAX_WBITS).decode("ascii")
                 block = tuple(map(intern, s.split("\t")))
             except FileNotFoundError:

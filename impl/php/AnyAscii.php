@@ -14,15 +14,15 @@ class AnyAscii {
 				$result .= chr($cp);
 				continue;
 			}
-			$blockNum = $cp >> 8;
+			$blockNum = $cp >> 12;
 			if (!isset(self::$blocks[$blockNum])) {
-				$fileName = sprintf('%s/_data/_%03x.php', __DIR__, $blockNum);
+				$fileName = sprintf('%s/_data/_%02x.php', __DIR__, $blockNum);
 				$block = file_exists($fileName) ? require $fileName : array();
 				self::$blocks[$blockNum] = $block;
 			} else {
 				$block = self::$blocks[$blockNum];
 			}
-			$lo = ($cp & 0xff);
+			$lo = ($cp & 0xfff);
 			if (isset($block[$lo])) {
 				$result .= $block[$lo];
 			}

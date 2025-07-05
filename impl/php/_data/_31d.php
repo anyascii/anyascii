@@ -1,1 +1,0 @@
-<?php return explode('	','		La					Cheng									Chang				Fa				Jiang						Hou						Gyu	Sok			En																						Gua		Nyeuq	Shen																																																																																																Gan																		Ranz								Tuo				Ndonj				Bauz																																												Coiz					Naeuz	Giuq										Ciengj');

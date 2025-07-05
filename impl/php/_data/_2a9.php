@@ -1,1 +1,0 @@
-<?php return explode('	','				Bai																			Liao			Leon																																										Tei																												Reng			Ara								Soeng			Shutome		Ning		Kannagi											Omina		Duk											Namameku					Kisaki				Min																			Yome		Yamome						Uba												Kase						Jing																								Geoi							Nei');
