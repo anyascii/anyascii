@@ -1,6 +1,5 @@
 """Unicode to ASCII transliteration"""
 
-from sys import intern
 from zlib import MAX_WBITS, decompress
 
 try:
@@ -42,10 +41,19 @@ def anyascii(string):
             try:
                 b = read_binary("anyascii._data", "%02x" % blocknum)
                 s = decompress(b, -MAX_WBITS).decode("ascii")
-                block = tuple(map(intern, s.split("\t")))
+                block = tuple(_dedup(s.split("\t")))
             except FileNotFoundError:
                 block = ()
             _blocks[blocknum] = block
         if len(block) > lo:
             result.append(block[lo])
     return "".join(result)
+
+
+def _dedup(elems):
+    cache = {}
+    for i, e in enumerate(elems):
+        c = cache.setdefault(e, e)
+        if e is not c:
+            elems[i] = c
+    return elems
