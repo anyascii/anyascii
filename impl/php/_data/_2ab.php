@@ -1,1 +1,0 @@
-<?php return explode('	','			Ken		Akogareru																					Pin																																					Suzuroni										Arawasu																				Wei					Cung					Mei								Guai		Sagasu				Loeng		Taguri			Ratsu		Tsumuru		Haan					Can				Ra				Sok											Zyut																												Sho	Maan			Laai	Sa											Nyaengq				Eto					Sim														Teki');

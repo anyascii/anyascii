@@ -1,1 +1,0 @@
-<?php return explode('	','Mi		Bungz																					Kuai	Vangx		Lao									Ndaij					Qian	Boj																									Rou																	Mbaeu																				Henz		Baih														Daengq														Dam																																	Xi	Fiz		Song		Xun			Ha		Xi			Pin		Rong														Rau							Xi				Luengz		Ciz			Van						Xiu				So		Mid																	Ri');

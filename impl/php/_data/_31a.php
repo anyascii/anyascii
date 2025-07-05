@@ -1,1 +1,0 @@
-<?php return explode('	','																									Zha																															Kuo										Ying							Wu																																																		Gvaengz		E																																								Roengz		Gyoq							Aeuq			Coq														Xun		Cauq			Hwngq													Byaeu	Fwn																								Douh														Lang');

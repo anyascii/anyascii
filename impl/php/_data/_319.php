@@ -1,1 +1,0 @@
-<?php return explode('	','																	Gui						Ge															Luan							Peng			Daet										Beng		Daem								Dingz												Meng				Cangq								Naa	Mwnh	Byoem	Yue			Cien	Ruo													Ya		Byoux					Na												Daej		Dumx			Gui								Inq													Congh																																				Meiq																									Lian																				Myaiz						Mai');
