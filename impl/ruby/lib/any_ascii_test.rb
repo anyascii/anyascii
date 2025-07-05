@@ -79,6 +79,10 @@ class AnyAsciiTest < Test::Unit::TestCase
 
     check("🐂 🦉 🦆 🦓 ☕ 🍿 ✈ 🎷 🎤 🌡 🦹", ":ox: :owl: :duck: :zebra: :coffee: :popcorn: :airplane: :saxophone: :microphone: :thermometer: :supervillain:")
     check("에 가 힣 널 뢌 땚 꺵", "E Ga Hih Neol Lwass Ttaelp Kkyaeng")
+
+    check("一以已亦易意依亿億衣", "YiYiYiYiYiYiYiYiYiYi")
+    check("事是时時使十式市室士", "ShiShiShiShiShiShiShiShiShiShi")
+    check("件间間见見建减減键鍵", "JianJianJianJianJianJianJianJianJianJian")
   end
 
   def check(s, expected)
