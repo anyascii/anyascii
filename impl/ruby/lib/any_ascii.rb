@@ -9,7 +9,7 @@ module AnyAscii
 
     result = String.new('')
     string.each_codepoint do |cp|
-      if cp <= 127
+      if cp <= 0x7f
         result << cp
       else
         block_num = cp >> 12
@@ -30,18 +30,18 @@ module AnyAscii
     file_name = File.join(__dir__, 'data', format('%02x', block_num))
     return [] unless File.file?(file_name)
 
-    unzip(File.binread(file_name))
-      .force_encoding(Encoding::UTF_8)
+    inflate_raw(File.binread(file_name))
+      .force_encoding(Encoding::US_ASCII)
       .split("\t")
   end
   private_class_method :read_block
 
-  def self.unzip(string)
+  def self.inflate_raw(string)
     zstream = Zlib::Inflate.new(-Zlib::MAX_WBITS)
     buf = zstream.inflate(string)
     zstream.finish
     zstream.close
     buf
   end
-  private_class_method :unzip
+  private_class_method :inflate_raw
 end
