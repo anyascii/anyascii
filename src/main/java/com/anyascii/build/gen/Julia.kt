@@ -9,8 +9,8 @@ fun julia(g: Generator) {
     dir.toFile().deleteRecursively()
     dir.createDirectories()
 
-    for ((blockNum, block) in g.blocks) {
-        dir.resolve("%03x".format(blockNum)).outputStream().use { o ->
+    for ((blockNum, block) in g.blocks12) {
+        dir.resolve("%02x".format(blockNum)).outputStream().use { o ->
             for (s in block.values) {
                 o.write(s.toByteArray())
                 o.write(0xff)

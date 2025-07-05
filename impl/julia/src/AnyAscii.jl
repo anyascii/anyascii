@@ -18,12 +18,12 @@ end
 
 function anyascii(char::AbstractChar)::String
 	cp = codepoint(char)
-	blocknum = cp >> 8
+	blocknum = cp >> 12
 	block = get!(blocks, blocknum) do
-		file = joinpath(@__DIR__, "data", string(blocknum, base=16, pad=3))
+		file = joinpath(@__DIR__, "data", string(blocknum, base=16, pad=2))
 		isfile(file) ? splitblock(read(file)) : String[]
 	end
-	lo = (cp & 0xff) + 1
+	lo = (cp & 0xfff) + 1
 	lo <= lastindex(block) ? block[lo] : ""
 end
 

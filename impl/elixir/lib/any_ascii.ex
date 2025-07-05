@@ -50,8 +50,8 @@ defmodule AnyAscii do
     do: transliterate(String.to_charlist(s))
 
   defp transliterate_char(c) do
-    block_num = c >>> 8
-    lo = c &&& 0xFF
+    block_num = c >>> 12
+    lo = c &&& 0xFFF
     block = get_block(block_num)
     if lo < tuple_size(block), do: elem(block, lo), else: []
   end
@@ -71,7 +71,12 @@ defmodule AnyAscii do
   end
 
   defp read_block(block_num) do
-    path = Path.join([Application.app_dir(:any_ascii), "priv", Integer.to_string(block_num)])
+    file_name =
+      block_num
+      |> Integer.to_string(16)
+      |> String.pad_leading(2, "0")
+
+    path = Path.join([Application.app_dir(:any_ascii), "priv", file_name])
 
     if File.exists?(path) do
       path

@@ -10,8 +10,8 @@ fun elixir(g: Generator) {
     dirPath.toFile().deleteRecursively()
     dirPath.createDirectories()
 
-    for ((blockNum, block) in g.blocks) {
+    for ((blockNum, block) in g.blocks12) {
         val s = block.noAscii().joinToString("\t")
-        dirPath.resolve(blockNum.toString()).writeBytes(deflate(s))
+        dirPath.resolve("%02X".format(blockNum)).writeBytes(deflate(s))
     }
 }

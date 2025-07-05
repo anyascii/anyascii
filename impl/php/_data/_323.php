@@ -1,1 +1,0 @@
-<?php return explode('	','									Ju				Fa				Gangj													Qian			Qiang												Six			Mao		Ndoek																					Yi		Yuan						Xian	Mi							Huan								Laej								Ceiz						Zhun	Fang	Jian	Mi			You						Bao					Zhui	Ye						Chi	Tong		Meng	Mo');

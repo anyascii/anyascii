@@ -36,18 +36,23 @@ class Generator(val table: Table) {
         println("banks: ${bank0.length + bank1.length}")
         check(bank0.length <= 0xffff && bank1.length <= 0xffff)
         check(table.values.all { it.length <= 0x7f })
+        check(table.lastKey() <= 0xfffff)
     }
 
-    val blocks = blocks()
+    val blocks = blocks(8)
+
+    val blocks12 = blocks(12)
 
     val blockPointers = blockPointers()
 
-    private fun blocks(): Map<Int, Table> {
+    private fun blocks(bits: Int): Map<Int, Table> {
         val m = TreeMap<Int, Table>()
-        for (blockNum in 0..0xfff) {
+        val blockMax = 0x10ffff shr bits
+        val loMax = (1 shl bits) - 1
+        for (blockNum in 0..blockMax) {
             val block = Table()
-            for (lo in 0..0xff) {
-                val cp = (blockNum shl 8) or lo
+            for (lo in 0..loMax) {
+                val cp = (blockNum shl bits) or lo
                 block[cp] = table[cp] ?: ""
             }
             while (block.isNotEmpty() && block.lastEntry().value.isEmpty()) {

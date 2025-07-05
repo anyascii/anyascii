@@ -12,8 +12,8 @@ module AnyAscii
       if cp <= 127
         result << cp
       else
-        block_num = cp >> 8
-        lo = cp & 0xff
+        block_num = cp >> 12
+        lo = cp & 0xfff
         block = BLOCKS[block_num]
         result << block[lo] if lo < block.length
       end
@@ -27,7 +27,7 @@ module AnyAscii
   private_constant :BLOCKS
 
   def self.read_block(block_num)
-    file_name = File.join(__dir__, 'data', format('%03x', block_num))
+    file_name = File.join(__dir__, 'data', format('%02x', block_num))
     return [] unless File.file?(file_name)
 
     unzip(File.binread(file_name))
