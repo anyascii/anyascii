@@ -35,7 +35,7 @@ class Generator(val table: Table) {
         println("bank1: ${bank1.length} ${bank1.take(20)}...${bank1.takeLast(20)}")
         println("banks: ${bank0.length + bank1.length}")
         check(bank0.length <= 0xffff && bank1.length <= 0xffff)
-        check(table.values.all { it.length <= 0x7f })
+        check(table.values.all { it.length <= 0x3f })
         check(table.lastKey() <= 0xfffff)
     }
 
