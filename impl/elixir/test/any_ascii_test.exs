@@ -87,6 +87,20 @@ defmodule AnyAsciiTest do
     check("件间間见見建减減键鍵", "JianJianJianJianJianJianJianJianJianJian")
   end
 
+  test "ArgumentError" do
+    check_error({})
+    check_error(1.0)
+    check_error(0)
+    check_error(150)
+    check_error([:ok])
+    check_error([-1])
+    check_error([1, [0x110000]])
+    check_error(["", 0xFFFFFF, []])
+    check_error(<<200>>)
+    check_error(<<100, 255>>)
+    check_error(<<50, 0x80, 50>>)
+  end
+
   defp transliterate_to_string(s), do: IO.iodata_to_binary(AnyAscii.transliterate(s))
 
   defp check(s, expected) when is_binary(s) do
@@ -95,4 +109,8 @@ defmodule AnyAsciiTest do
   end
 
   defp check(c, expected) when is_integer(c), do: check(<<c::utf8>>, expected)
+
+  defp check_error(d) do
+    assert_raise ArgumentError, fn -> AnyAscii.transliterate(d) end
+  end
 end
