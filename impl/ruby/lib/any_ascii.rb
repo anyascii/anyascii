@@ -30,9 +30,9 @@ module AnyAscii
     file_name = File.join(__dir__, 'data', format('%02x', block_num))
     return [] unless File.file?(file_name)
 
-    inflate_raw(File.binread(file_name))
-      .force_encoding(Encoding::US_ASCII)
-      .split("\t")
+    b = File.binread(file_name)
+    s = inflate_raw(b).force_encoding(Encoding::US_ASCII)
+    dedup(s.split("\t").dup)
   end
   private_class_method :read_block
 
@@ -44,4 +44,18 @@ module AnyAscii
     buf
   end
   private_class_method :inflate_raw
+
+  def self.dedup(elems)
+    cache = {}
+    elems.each_with_index do |e, i|
+      c = cache.fetch(e) do
+        cache[e] = e
+      end
+      unless e.equal?(c)
+        elems[i] = c
+      end
+    end
+    elems
+  end
+  private_class_method :dedup
 end
