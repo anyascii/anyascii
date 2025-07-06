@@ -34,6 +34,15 @@ defmodule AnyAscii do
   @spec transliterate(IO.chardata()) :: IO.chardata()
   def transliterate(chardata)
 
+  def transliterate(<<c, rest::binary>>) when c <= 0x7F,
+    do: [c | transliterate(rest)]
+
+  def transliterate(<<c::utf8, rest::binary>>),
+    do: [transliterate_char(c) | transliterate(rest)]
+
+  def transliterate(<<>>),
+    do: []
+
   def transliterate([c | t]) when c in 0..0x7F,
     do: [c | transliterate(t)]
 
@@ -46,8 +55,8 @@ defmodule AnyAscii do
   def transliterate([]),
     do: []
 
-  def transliterate(<<s::binary>>),
-    do: transliterate(String.to_charlist(s))
+  def transliterate(other),
+    do: raise(ArgumentError, "expected IO.chardata(), got: #{inspect(other)}")
 
   defp transliterate_char(c) do
     block_num = c >>> 12
