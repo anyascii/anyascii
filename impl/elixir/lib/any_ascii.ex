@@ -92,18 +92,31 @@ defmodule AnyAscii do
       |> File.read!()
       |> :zlib.unzip()
       |> String.split("\t")
-      |> Enum.map(&minimize_string/1)
+      |> dedup()
       |> List.to_tuple()
     else
       {}
     end
   end
 
-  defp minimize_string(s) do
-    case s do
-      "" -> []
-      <<c>> -> c
-      _ -> s
-    end
+  defp dedup(elems) do
+    {elems2, _cache} =
+      Enum.map_reduce(elems, %{}, fn e, cache ->
+        case e do
+          "" ->
+            {[], cache}
+
+          <<n>> ->
+            {n, cache}
+
+          _ ->
+            Map.get_and_update(cache, e, fn
+              nil -> {e, e}
+              c -> {c, c}
+            end)
+        end
+      end)
+
+    elems2
   end
 end
