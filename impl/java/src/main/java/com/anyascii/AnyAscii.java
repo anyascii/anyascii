@@ -4,7 +4,9 @@ import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Unicode to ASCII transliteration
@@ -152,26 +154,34 @@ public final class AnyAscii {
         return block;
     }
 
-    @SuppressWarnings("deprecation")
     private static String[] split(InputStream input) throws IOException {
-        String[] block = new String[256];
-        int blockLen = 0;
-        byte[] buf = new byte[8];
-        int bufLen = 0;
+        Map<String, String> cache = new HashMap<String, String>(256);
+        ArrayList<String> block = new ArrayList<String>(256);
+        StringBuilder buf = new StringBuilder(0x3f);
+
         int b;
         while ((b = input.read()) != -1) {
             if (b == 0xff) {
-                block[blockLen++] = bufLen == 0 ? "" : new String(buf, 0, 0, bufLen).intern();
-                bufLen = 0;
-            } else {
-                if (bufLen == buf.length) {
-                    buf = Arrays.copyOf(buf, buf.length * 2);
+                String s;
+                if (buf.length() == 0) {
+                    s = "";
+                } else {
+                    s = buf.toString();
+                    buf.setLength(0);
                 }
-                buf[bufLen++] = (byte) b;
+
+                String c = cache.get(s);
+                if (c == null) {
+                    cache.put(s, s);
+                } else {
+                    s = c;
+                }
+                block.add(s);
+            } else {
+                buf.append((char) b);
             }
         }
-        if (blockLen < 256) block = Arrays.copyOf(block, blockLen);
-        return block;
+        return block.toArray(new String[0]);
     }
 
     private static InputStream buffer(InputStream input) throws IOException {
