@@ -169,7 +169,7 @@ $s = AnyAscii::transliterate('άνθρωποι');
 // anthropoi
 ```
 
-PHP 5.3+ compatible
+PHP 8.0+ compatible, requires extension `mbstring`
 
 `composer require anyascii/anyascii`
 

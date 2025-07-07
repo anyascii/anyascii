@@ -9,10 +9,22 @@ class AnyAscii {
 		$i = 0;
 		$len = strlen($utf8);
 		while ($i < $len) {
-			$cp = self::utf8NextCodepoint($utf8, $i);
-			if ($cp < 0x80) {
-				$result .= chr($cp);
+			$byte = $utf8[$i];
+			if (ord($byte) < 0x80) {
+				$i += 1;
+				$result .= $byte;
 				continue;
+			}
+			$cp = mb_ord(substr($utf8, $i, 4), 'UTF-8');
+			if ($cp === false) {
+				throw new InvalidArgumentException('Invalid UTF-8 sequence at byte ' . $i);
+			}
+			if ($cp < 0x800) {
+				$i += 2;
+			} elseif ($cp < 0x10000) {
+				$i += 3;
+			} else {
+				$i += 4;
 			}
 			$blockNum = $cp >> 12;
 			if (!isset(self::$blocks[$blockNum])) {
@@ -28,16 +40,5 @@ class AnyAscii {
 			}
 		}
 		return $result;
-	}
-
-	private static function utf8NextCodepoint($s, &$i) {
-		$b1 = ord($s[$i++]);
-		if ($b1 < 0x80) return $b1;
-		$b2 = ord($s[$i++]);
-		if ($b1 < 0xe0) return (($b1 & 0x1f) << 6) | ($b2 & 0x3f);
-		$b3 = ord($s[$i++]);
-		if ($b1 < 0xf0) return (($b1 & 0xf) << 12) | (($b2 & 0x3f) << 6) | ($b3 & 0x3f);
-		$b4 = ord($s[$i++]);
-		return (($b1 & 0x7) << 18) | (($b2 & 0x3f) << 12) | (($b3 & 0x3f) << 6) | ($b4 & 0x3f);
 	}
 }
