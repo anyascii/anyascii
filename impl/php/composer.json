@@ -1,19 +1,19 @@
 {
-	"name": "anyascii/anyascii",
-	"description": "Unicode to ASCII transliteration",
-	"keywords": ["unicode", "ascii", "transliteration", "utf8", "romanization", "slug", "emoji", "unidecode", "normalization"],
-	"homepage": "https://anyascii.com",
-	"license": "ISC",
-	"authors": [{
-		"name": "Hunter WB",
-		"homepage": "https://hunterwb.com"
-	}],
-	"require": {
-		"php": ">=8.0.0",
-		"ext-mbstring": "*",
-		"ext-zlib": "*"
-	},
-	"autoload": {
-		"psr-0": { "AnyAscii": "" }
-	}
+    "name": "anyascii/anyascii",
+    "description": "Unicode to ASCII transliteration",
+    "keywords": ["unicode", "ascii", "transliteration", "utf8", "romanization", "slug", "emoji", "unidecode", "normalization"],
+    "homepage": "https://anyascii.com",
+    "license": "ISC",
+    "authors": [{
+        "name": "Hunter WB",
+        "homepage": "https://hunterwb.com"
+    }],
+    "require": {
+        "php": ">=8.0.0",
+        "ext-mbstring": "*",
+        "ext-zlib": "*"
+    },
+    "autoload": {
+        "psr-0": { "AnyAscii": "" }
+    }
 }
