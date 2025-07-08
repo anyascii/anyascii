@@ -28,8 +28,7 @@ class AnyAscii {
 			}
 			$blockNum = $cp >> 12;
 			if (!isset(self::$blocks[$blockNum])) {
-				$fileName = sprintf('%s/_data/_%02x.php', __DIR__, $blockNum);
-				$block = file_exists($fileName) ? require $fileName : array();
+				$block = self::readBlock($blockNum);
 				self::$blocks[$blockNum] = $block;
 			} else {
 				$block = self::$blocks[$blockNum];
@@ -40,5 +39,22 @@ class AnyAscii {
 			}
 		}
 		return $result;
+	}
+
+	private static function readBlock($blockNum) {
+		$fileName = sprintf('%s/_data/%02x', __DIR__, $blockNum);
+		if (!file_exists($fileName)) {
+			return [];
+		}
+		$b = file_get_contents($fileName);
+		if ($b === false) {
+			throw new RuntimeException();
+		}
+		$s = gzinflate($b);
+		if ($s === false) {
+			throw new RuntimeException();
+		}
+		$block = explode("\t", $s);
+		return $block;
 	}
 }

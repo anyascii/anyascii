@@ -25,5 +25,5 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          extensions: mbstring
+          extensions: mbstring, zlib
       - run: php test.php
