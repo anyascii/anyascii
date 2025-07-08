@@ -80,6 +80,19 @@ final class AnyAscii
             throw new RuntimeException();
         }
         $block = explode("\t", $s);
+        self::dedup($block);
         return $block;
+    }
+
+    private static function dedup(array &$elems): void
+    {
+        $cache = [];
+        foreach ($elems as $i => $e) {
+            if (array_key_exists($e, $cache)) {
+                $elems[$i] = $cache[$e];
+            } else {
+                $cache[$e] = $e;
+            }
+        }
     }
 }
