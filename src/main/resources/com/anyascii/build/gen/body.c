@@ -3,9 +3,10 @@ size_t anyascii(uint_least32_t utf32, const char **ascii) {
 	const char *b = block(blocknum);
 	size_t blen = ((size_t) (unsigned char) b[0]) * 3 + 1;
 	size_t lo = (utf32 & 0xff) * 3 + 1;
+	size_t l, len;
 	if (lo > blen) return 0;
-	size_t l = (unsigned char) b[lo + 2];
-	size_t len = l & 0x80 ? l & 0x7f : 3;
+	l = (unsigned char) b[lo + 2];
+	len = l & 0x80 ? l & 0x7f : 3;
 	if (len <= 3) {
 		*ascii = b + lo;
 	} else {
