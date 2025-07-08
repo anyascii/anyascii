@@ -10,7 +10,8 @@
 	}],
 	"require": {
 		"php": ">=8.0.0",
-		"ext-mbstring": "*"
+		"ext-mbstring": "*",
+		"ext-zlib": "*"
 	},
 	"autoload": {
 		"psr-0": { "AnyAscii": "" }
