@@ -1,14 +1,30 @@
 <?php
 
+declare(strict_types=1);
+
 require __DIR__ . '/AnyAscii.php';
 
-function check($s, $expected) {
-	if (AnyAscii::transliterate($s) != $expected) throw new Exception();
+function check(string $input, string $expected): void
+{
+    $output = AnyAscii::transliterate($input);
+    if ($output !== $expected) {
+        throw new Exception("input <$input>, output <$output>, expected <$expected>");
+    }
 }
 
 check("", "");
 check("\x00\x01\t\n\x1f ~\x7f", "\x00\x01\t\n\x1f ~\x7f");
 check("sample", "sample");
+
+check("\u{0080}", "");
+check("\u{00ff}", "y");
+check("\u{e000}", "");
+check("\u{ffff}", "");
+check("\u{e0020}", " ");
+check("\u{e007e}", "~");
+check("\u{f0000}", "");
+check("\u{f0001}", "");
+check("\u{10ffff}", "");
 
 check("René François Lacôte", "Rene Francois Lacote");
 check("Blöße", "Blosse");

@@ -26,4 +26,6 @@ jobs:
         with:
           php-version: ${{ matrix.php }}
           extensions: mbstring, zlib
+          tools: composer
       - run: php test.php
+      - run: composer validate --strict
