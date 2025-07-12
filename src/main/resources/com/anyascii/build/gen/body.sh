@@ -22,7 +22,12 @@ transliterate() {
 
 if test "$#" -ne 0
 then
-	printf '%s\n' "$*" | transliterate
+	args=$*
+	printf '%s\n' "$args" | transliterate
+	if test "$args" = '--version'
+	then
+		printf '%s\n' '0.4.0-dev' >&2
+	fi
 elif test -t 0
 then
 	while IFS= read -r line
