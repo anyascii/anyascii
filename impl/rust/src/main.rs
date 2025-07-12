@@ -38,7 +38,7 @@ fn transliterate_args(args: Vec<String>) {
 
     if args.len() == 1 {
         match args[0].as_str() {
-            "--help" | "--version" => eprint!("{}", HELP_MESSAGE),
+            "--help" | "--version" => eprint!("{HELP_MESSAGE}"),
             _ => (),
         }
     }
