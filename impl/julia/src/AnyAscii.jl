@@ -31,12 +31,17 @@ function anyascii(char::AbstractChar)::String
 end
 
 function splitblock(bytes::Vector{UInt8})::Vector{String}
+	cache = Dict{String, String}()
+	sizehint!(cache, 4096)
 	block = String[]
+	sizehint!(block, 4096)
 	d = 1
 	while true
 		i = d
 		d = findnext(b -> b == 0xff, bytes, d)
-		push!(block, String(bytes[i:d - 1]))
+		s = String(bytes[i:d - 1])
+		c = get!(cache, s, s)
+		push!(block, c)
 		if d == lastindex(bytes)
 			break
 		end
