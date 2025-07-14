@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.0-dev
+
+- Data additions and improvements
+- Python, Ruby, Elixir, PHP, Julia - Reduce file size by increasing block size from 256 to 4096
+- Python, Ruby, Elixir, PHP, Julia, Java, JavaScript - Improve memory usage by better reusing duplicate strings
+- Elixir - Improve performance with binary pattern matching
+- PHP - Increase requirements from PHP 5.3 to PHP 8.0 with extension `mbstring` for proper Unicode support and extension `zlib` for data file decompression
+- C - Use C90 standard instead of C99
+- sh - Add `--version`
+
 ## 0.3.3 - 2025-06-28
 
 - Data additions and improvements
