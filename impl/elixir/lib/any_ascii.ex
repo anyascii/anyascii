@@ -16,6 +16,15 @@ defmodule AnyAscii do
 
   import Bitwise
 
+  @blocks_path_pattern :code.priv_dir(:any_ascii) |> Path.join("*")
+  blocks_paths = Path.wildcard(@blocks_path_pattern)
+
+  @blocks_hash blocks_paths
+               |> Enum.map(&File.read!/1)
+               |> :erlang.md5()
+
+  for path <- blocks_paths, do: @external_resource(path)
+
   @doc """
   Transliterates chardata into ASCII.
 
@@ -56,40 +65,35 @@ defmodule AnyAscii do
     if lo < tuple_size(block), do: elem(block, lo), else: []
   end
 
-  defp get_block(block_num) do
-    key = {__MODULE__, block_num}
+  for path <- blocks_paths do
+    block_num = Path.basename(path) |> String.to_integer()
 
-    case :persistent_term.get(key, nil) do
-      nil ->
-        b = read_block(block_num)
-        :persistent_term.put(key, b)
-        b
-
-      b ->
-        b
-    end
-  end
-
-  defp read_block(block_num) do
-    path = Path.join([Application.app_dir(:any_ascii), "priv", Integer.to_string(block_num)])
-
-    if File.exists?(path) do
+    block_content =
       path
       |> File.read!()
       |> :zlib.unzip()
       |> String.split("\t")
-      |> Enum.map(&minimize_string/1)
+      |> Enum.map(fn
+        "" -> []
+        <<c>> -> c
+        s -> s
+      end)
       |> List.to_tuple()
-    else
-      {}
-    end
+
+    defp get_block(unquote(block_num)), do: unquote(Macro.escape(block_content))
   end
 
-  defp minimize_string(s) do
-    case s do
-      "" -> []
-      <<c>> -> c
-      _ -> s
-    end
+  defp get_block(_), do: {}
+
+  @doc false
+  @spec __mix_recompile__?() :: boolean()
+  def __mix_recompile__? do
+    actual_blocks_hash =
+      @blocks_path_pattern
+      |> Path.wildcard()
+      |> Enum.map(&File.read!/1)
+      |> :erlang.md5()
+
+    actual_blocks_hash != @blocks_hash
   end
 end
