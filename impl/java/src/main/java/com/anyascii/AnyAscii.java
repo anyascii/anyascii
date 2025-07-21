@@ -5,6 +5,8 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Unicode to ASCII transliteration
@@ -22,6 +24,8 @@ import java.util.Arrays;
  */
 public final class AnyAscii {
 
+    private static final Set<Integer> DEFAULT_ALLOWED_CODE_POINTS = new HashSet<Integer>();
+
     private static volatile ShortMap<String[]> blocks = new ShortMap<String[]>();
 
     private AnyAscii() {}
@@ -36,7 +40,7 @@ public final class AnyAscii {
     public static String transliterate(String s) {
         if (isAscii(s)) return s;
         StringBuilder sb = new StringBuilder(s.length());
-        transliterate(s, sb);
+        transliterate(s, sb, DEFAULT_ALLOWED_CODE_POINTS);
         return sb.toString();
     }
 
@@ -85,11 +89,23 @@ public final class AnyAscii {
      * @throws NullPointerException if {@code s == null} or {@code dst == null}
      */
     public static void transliterate(CharSequence s, StringBuilder dst) {
-        if (dst == null) throw new NullPointerException();
+        transliterate(s, dst, DEFAULT_ALLOWED_CODE_POINTS);
+    }
+
+    /**
+     * Transliterates a string into ASCII.
+     *
+     * @param s a string
+     * @param dst the destination buffer
+     * @param allowedCodePoints array of unicode code points which do not need to be transliterated
+     * @throws NullPointerException if {@code s == null} or {@code dst == null} or {@code allowedCodePoints == null}
+     */
+    public static void transliterate(CharSequence s, StringBuilder dst, Set<Integer> allowedCodePoints) {
+        if (dst == null || allowedCodePoints == null) throw new NullPointerException();
         int length = s.length();
         for (int i = 0; i < length;) {
             int cp = Character.codePointAt(s, i);
-            transliterate(cp, dst);
+            transliterate(cp, dst, allowedCodePoints);
             i += Character.charCount(cp);
         }
     }
@@ -102,7 +118,20 @@ public final class AnyAscii {
      * @throws NullPointerException if {@code dst == null}
      */
     public static void transliterate(int codePoint, StringBuilder dst) {
-        if (isAscii(codePoint)) {
+        transliterate(codePoint, dst, DEFAULT_ALLOWED_CODE_POINTS);
+    }
+
+    /**
+     * Transliterates a character into ASCII.
+     *
+     * @param codePoint a character
+     * @param dst the destination buffer
+     * @param allowedCodePoints array of unicode code points which do not need to be transliterated
+     * @throws NullPointerException if {@code dst == null} or {@code allowedCodePoints == null}
+     */
+    public static void transliterate(int codePoint, StringBuilder dst, Set<Integer> allowedCodePoints) {
+        if (allowedCodePoints == null) throw new NullPointerException();
+        if (isAscii(codePoint) || allowedCodePoints.contains(codePoint)) {
             dst.append((char) codePoint);
         } else {
             dst.append(transliterate(codePoint));
