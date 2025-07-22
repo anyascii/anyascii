@@ -1,105 +1,118 @@
 # https://unicode.org/charts/PDF/U1B00.pdf
+# https://unicode.org/versions/Unicode16.0.0/core-spec/chapter-17/#G26759
 # https://unicode.org/wg2/docs/n2908.pdf
-# ala-lc 2012
-# https://unicode.org/L2/L2019/19259-balinese-archaic-jnya.pdf
-# https://unicode.org/L2/L2019/19318-balinese-punct.pdf
-# https://unicode.org/L2/L2022/22059-balinese-punct.pdf
+# https://unicode.org/notes/tn51/tn51-2.html
 #
-# Various signs
+# ala-lc 2025
+## Balinese consonants
+ᬳ	h
+ᬦ	n
+ᬘ	c
+ᬭ	r
+ᬓ	k
+ᬤ	d
+ᬢ	t
+ᬲ	s
+ᬯ	w
+ᬮ	l
+ᬫ	m
+ᬕ	g
+ᬩ	b
+ᬗ	ng
+ᬧ	p
+ᬚ	j
+ᬬ	y
+ᬜ	ny
+## Terminal consonants
 ᬀ	m
-ᬁ	ng
+ᬁ	m
 ᬂ	ng
 ᬃ	r
 ᬄ	h
-# Independent vowels
+## Indic consonants
+ᬡ	n
+ᬙ	ch
+ᬔ	kh
+ᬥ	dh
+ᬟ	d
+ᬠ	dh
+ᬣ	th
+ᬝ	t
+ᬞ	th
+ᬰ	s
+ᬱ	s
+ᬖ	gh
+ᬪ	bh
+ᬨ	ph
+ᬛ	jh
+## Vowels - Full form
 ᬅ	a
 ᬆ	a
 ᬇ	i
 ᬈ	i
 ᬉ	u
 ᬊ	u
-ᬋ	re
-ᬌ	ro
-ᬍ	le
-ᬎ	lo
+ᬋ	r
+ᬌ	r
+ᬍ	l
+ᬎ	l
 ᬏ	e
 ᬐ	ai
 ᬑ	o
 ᬒ	au
-# Consonants
-ᬓ	k
-ᬔ	kh
-ᬕ	g
-ᬖ	gh
-ᬗ	ng
-ᬘ	c
-ᬙ	ch
-ᬚ	j
-ᬛ	jh
-ᬜ	ny
-ᬝ	t
-ᬞ	th
-ᬟ	d
-ᬠ	dh
-ᬡ	n
-ᬢ	t
-ᬣ	th
-ᬤ	d
-ᬥ	dh
-ᬦ	n
-ᬧ	p
-ᬨ	ph
-ᬩ	b
-ᬪ	bh
-ᬫ	m
-ᬬ	y
-ᬭ	r
-ᬮ	l
-ᬯ	w
-ᬰ	s
-ᬱ	s
-ᬲ	s
-ᬳ	h
-# Sign
-᬴	'
-# Dependent vowel signs
+## Vowels - Combining form
 ᬵ	a
 ᬶ	i
 ᬷ	i
 ᬸ	u
 ᬹ	u
-ᬺ	re
-ᬻ	ro
-ᬼ	le
-ᬽ	lo
+ᬺ	r
+ᬻ	r
+ᬼ	l
+ᬽ	l
 ᬾ	e
 ᬿ	ai
 ᭀ	o
 ᭁ	au
 ᭂ	e
-ᭃ	o
-# Sign
-᭄	
-# Additional consonants
-ᭅ	q
-ᭆ	x
-ᭇ	ts
-ᭈ	f
-ᭉ	v
-ᭊ	z
-ᭋ	sy
-ᭌ	jny
-# Punctuation
-᭎	᭞
-᭏	᭟
-# Punctuation
-᭚	*
-᭛	@
-᭜	.
-᭝	:
+ᭃ	e
+## Punctuation
+## https://unicode.org/L2/L2019/19318-balinese-punct.pdf
+## https://unicode.org/L2/L2022/22059-balinese-punct.pdf
 ᭞	,
 ᭟	.
 ᭠	-
+᭝	:
+᭜	
+᭿	|~
+᭚	||~
+᭽	|||~
+᭛	//~
+᭾	///~
+᭎	;
+᭏	;;
+## Notes
+## https://unicode.org/L2/L2019/19259-balinese-archaic-jnya.pdf
+ᭌ	jny
+# rerekan, nukta
+᬴	'
+# vowel suppressant, virama
+᭄	
+# sasak
+## k'
+ᭅ	q
+## k+h
+ᭆ	kh
+## t'
+ᭇ	ts
+## p'
+ᭈ	f
+## w'
+ᭉ	v
+## s'
+ᭊ	z
+## s+y
+ᭋ	sy
 # Musical symbols for notes
 ᭡	ᬵ
 ᭢	ᬾ
@@ -131,7 +144,3 @@
 ᭺	^
 ᭻	^
 ᭼	^
-# Punctuation
-᭽	**
-᭾	@@
-᭿	~
