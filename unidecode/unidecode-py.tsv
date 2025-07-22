@@ -167,8 +167,8 @@
 Ň	N
 ň	n
 ŉ	'n
-Ŋ	ng
-ŋ	NG
+Ŋ	NG
+ŋ	ng
 Ō	O
 ō	o
 Ŏ	O
@@ -4966,8 +4966,10 @@
 ℀	 a/c 
 ℁	 a/s 
 ℂ	C
+℃	degC
 ℅	 c/o 
 ℆	 c/u 
+℉	degF
 ℊ	g
 ℋ	H
 ℌ	H
@@ -4985,9 +4987,11 @@
 ℛ	R
 ℜ	R
 ℝ	R
+℟	R/
 ℠	(sm)
 ℡	TEL
 ™	(tm)
+℣	V/
 ℤ	Z
 Ω	ohm
 ℨ	Z
@@ -5576,6 +5580,26 @@
 ◵	#
 ◶	#
 ◷	#
+♔	white king
+♕	white queen
+♖	white rook
+♗	white bishop
+♘	white knight
+♙	white pawn
+♚	black king
+♛	black queen
+♜	black rook
+♝	black bishop
+♞	black knight
+♟	black pawn
+♠	spades
+♡	hearts
+♢	diamonds
+♣	clubs
+♤	spades
+♥	hearts
+♦	diamonds
+♧	clubs
 ♯	#
 ✱	*
 ❘	|
@@ -41132,7 +41156,7 @@
 𝛒	rho
 𝛓	sigma
 𝛔	sigma
-𝛕	tai
+𝛕	tau
 𝛖	upsilon
 𝛗	phi
 𝛘	chi
