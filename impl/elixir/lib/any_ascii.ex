@@ -55,6 +55,9 @@ defmodule AnyAscii do
   def transliterate([]),
     do: []
 
+  def transliterate(other),
+    do: raise(ArgumentError, "expected IO.chardata(), got: #{inspect(other)}")
+
   defp transliterate_char(c) do
     block_num = c >>> 12
     lo = c &&& 0xFFF
