@@ -7,7 +7,7 @@ Unicode to ASCII transliteration
 ##### Table of Contents
 
 * [Description](#description)
-[Examples](#examples)
+* [Examples](#examples)
 * [Implementations](#implementations):
 [C](#c)
 [Elixir](#elixir)
@@ -21,10 +21,7 @@ Unicode to ASCII transliteration
 [Rust](#rust)
 [Shell](#shell)
 [.NET](#net)
-* [Background](#background)
-[Stats](#stats)
-[Unidecode](#unidecode)
-[Sources](#sources)
+* [Details](#details)
 
 ## Description
 
@@ -144,11 +141,13 @@ const s = anyAscii('άνθρωποι');
 // anthropoi
 ```
 
+Uses ES modules
+
 `npm install any-ascii`
 
 ## Julia
 
-https://juliahub.com/ui/Packages/AnyAscii/wYZIV
+https://juliahub.com/ui/Packages/General/AnyAscii
 
 ```julia
 julia> using AnyAscii
@@ -256,49 +255,48 @@ string s = "άνθρωποι".Transliterate();
 
 .NET Core 3.0+ and .NET 5.0+ compatible
 
-## Background
+## Details
 
-> Unicode is the universal character encoding. This encoding standard provides the basis for processing, storage and interchange of text data in any language in all modern software and information technology protocols. [Unicode's scope] covers all the characters for all the writing systems of the world, modern and ancient. It also includes technical symbols, punctuations, and many other characters used in writing text. [*](https://unicode.org/faq/basic_q.html)
+> Unicode is the universal character encoding. This encoding standard provides the basis for processing, storage and interchange of text data in any language in all modern software and information technology protocols ... Unicode covers all the characters for all the writing systems of the world, modern and ancient. It also includes technical symbols, punctuations, and many other characters used in writing text. [*](https://unicode.org/faq/basic_q.html)
 
-[Unicode](https://en.wikipedia.org/wiki/Unicode) provides a unique numeric value for each character and uses [UTF-8](https://en.wikipedia.org/wiki/UTF-8) to encode sequences of characters into bytes. UTF-8 uses a variable number of bytes for each character and is backwards compatible with ASCII. UTF-16 and UTF-32 are also specified but not common. There is a name and various [properties](https://unicode.org/reports/tr44/#Properties) for each character along with algorithms for casing, collation, equivalence, line breaking, segmentation, text direction, and more.
+**Unicode** provides a unique numeric value for each character and uses UTF-8 to encode sequences of characters into bytes. UTF-8 uses a variable number of bytes for each character and is backwards compatible with ASCII. Unicode has a name and various properties for each character along with algorithms for casing, collation, equivalence, line breaking, segmentation, text direction, and more.
 
-[ASCII](https://en.wikipedia.org/wiki/ASCII) is the lowest common denominator character encoding, established in 1967 and using 7 bits for 128 characters. The [printable](https://en.wikipedia.org/wiki/ASCII#Printable_characters) characters are English letters, digits, and punctuation, with the remaining being [control characters](https://en.wikipedia.org/wiki/ASCII#Control_characters). The characters found on a standard US keyboard are from ASCII. Most legacy 8-bit encodings were backwards compatible with ASCII.
+**ASCII** is the lowest common denominator character encoding, established in 1967 and using 7 bits for 128 characters. The printable characters are space, English letters, digits, symbols, and punctuation. The other 33 characters are control characters including null, tab, newline, and delete. The characters found on a standard US keyboard are from ASCII. Most legacy 8-bit encodings were backwards compatible with ASCII.
 
-> ... expressed only in the original non-control ASCII range so as to be as widely compatible with as many existing tools, languages, and serialization formats as possible and avoid display issues in text editors and source control [*](https://spec.graphql.org/October2021/#sec-Language.Source-Text)
+> [use] the original non-control ASCII range so as to be as widely compatible with as many existing tools, languages, and serialization formats as possible and avoid display issues in text editors and source control. [*](https://spec.graphql.org/October2021/#sec-Language.Source-Text)
 
-A language is written using characters from a [script](https://en.wikipedia.org/wiki/Writing_system). Some languages use multiple scripts and some scripts are used by multiple languages. English uses the [Latin script](https://en.wikipedia.org/wiki/Latin_script) which is based on the alphabet the Romans used for writing Latin. [Other languages](https://en.wikipedia.org/wiki/List_of_Latin-script_alphabets) using the Latin script may require additional letters and diacritics.
-
-> The Unicode Standard encodes scripts rather than languages. When writing systems for more than one language share sets of graphical symbols that have historically related derivations, the union of all of those graphical symbols ... is identified as a single script. [*](https://unicode.org/standard/supported.html)
+A **language** is written using characters from a **script**. Some languages use multiple scripts and some scripts are used by multiple languages. English uses the Latin script which is based on the Roman alphabet. Other languages using the Latin script require additional letters and diacritics. Unicode encodes characters based on their script and not their language, causing characters to be shared across multiple languages.
 
 When converting text between languages there are multiple properties that can be preserved:
 
-|Original|[Transliteration](https://en.wikipedia.org/wiki/Transliteration) (Spelling)|[Transcription](https://en.wikipedia.org/wiki/Orthographic_transcription) (Sound)|[Translation](https://en.wikipedia.org/wiki/Translation) (Meaning)|
+|Original|Transliteration (Spelling)|Transcription (Sound)|Translation (Meaning)|
 |---|---|---|---|
 |ευαγγέλιο|euaggelio|evangelio|gospel|
 
-[Romanization](https://en.wikipedia.org/wiki/Romanization) is the conversion into the Latin script using transliteration and transcription, it is most commonly used when representing the names of people and places. Some nations have an official romanization standard for their language. Several organizations publish romanization standards for multiple languages.
+**Romanization** is the conversion into the Latin script using **transliteration** and transcription, it is most commonly used when representing the names of people and places. Some nations have an official romanization standard for their language and several organizations publish romanization standards for multiple languages.
+
+AnyAscii follows romanization standards from [ALA-LC](https://loc.gov/catdir/cpso/roman), [BGN/PCGN](https://gov.uk/government/publications/romanization-systems), [ISO](https://iso.org/ics/01.140.10/x/p/1/u/1/w/1/d/1), [KNAB](https://eki.ee/knab/kblatyl2), [UNGEGN](https://eki.ee/wgrs), and other national or scholarly standards. The values and the sources used are documented mostly at `input/tables/` with some at `input/` and `src/main/java/`. AnyAscii transliterates a script based on its majority language. Romanization systems are preferred which use standard capitalization rules and do not represent letters with numbers or symbols. Letters are converted based on their phonetic values and not their visual appearance while symbols are converted based on their meaning or appearance. Unicode [confusables](https://unicode.org/reports/tr39) data is designed to address visual confusability.
+
+Unicode can represent certain characters in two ways: either as a single precomposed character or as a base character followed by combining characters. These representations are to be considered equivalent in behavior and appearance and text can be converted between different [**normalization**](https://unicode.org/reports/tr15) forms to handle this. The default form is NFC which composes combining characters whenever possible, while NFD decomposes them all. The compatibility normalization forms NFKC and NFKD further convert variant characters to their regular versions.
+
+When a character is compatibility equivalent to an all-ASCII string, AnyAscii always uses that as the transliteration. The normalization form of the input to AnyAscii sometimes changes the output, with NFC giving the best results. A simple alternative to AnyAscii that only covers variant and accented ASCII characters would be to convert to NFKD and then remove all non-ASCII characters. A way to remove diacritics and combining characters would be to convert to NFD, remove Nonspacing Mark characters, then convert to NFC.
+
+ASCII characters in the input to AnyAscii will remain unchanged and other characters will be replaced by printable ASCII. Invalid or unknown characters are transliterated to an empty string and removed. Unassigned/reserved characters, noncharacters, surrogates, and private-use characters. In programming languages which use UTF-16, surrogate pairs are decoded to the underlying character.
+
+AnyAscii is implemented across multiple programming languages with the same behavior and versioning. None of the implementations have any dependencies. Updates to AnyAscii may add support for additional characters or change the values for existing characters.
+
+The model of AnyAscii is a mapping from single characters to ASCII strings. Simple convenience methods are also provided which take a string as input and apply the transformation to each character. Some implementations have just one function for both purposes because the programming language represents characters as 1-length strings. For custom behavior such as alternate mappings or skipping certain characters it is required to use AnyAscii at the per-character level for greater control.
+
+Unicode unifies **Chinese** Hanzi, **Japanese** Kanji, and **Korean** Hanja into a single Han script and refers to them as **CJK** characters. A CJK character may be used by multiple languages with differing pronunciations. Varieties of Chinese such as Mandarin and Cantonese also use different pronunciations for the same characters. Additionally, each language or variety uses different romanization systems. The Unicode [Unihan Database](https://unicode.org/reports/tr38) consolidates comprehensive information on CJK characters.
+
+AnyAscii uses Unihan data for transliteration. Extremely rare characters lack pronunciation data in Unihan and other sources. When a character is shared across languages, AnyAscii defaults to the Chinese Mandarin pinyin. AnyAscii transliterates Japanese Kanji very poorly because each Kanji has multiple pronunciations depending on the context. AnyAscii capitalizes the first letter for each CJK or Korean Hangul character.
+
+AnyAscii is an improved alternative to [**Unidecode**](https://metacpan.org/pod/Text::Unidecode). The original Unidecode was written in Perl and last updated in 2016 but it has many [ports](https://github.com/search?q=unidecode) in different programming languages, the most popular is in [Python](https://github.com/avian2/unidecode) and has received minor updates. AnyAscii supports 3x more characters; Unidecode only supports a subset of the basic mulitlingual plane while AnyAscii supports all of Unicode. AnyAscii is better optimized for file size and memory usage. AnyAscii documents the sources used while Unidecode is less systematic. Many of Unidecode's values are based on the Unicode character names which are often misleading and Unidecode's data contains some typos and other mistakes. To compare the mappings see `table.tsv` and `unidecode/unidecode.tsv` and `unidecode/unidecode-py.tsv`.
+
+**Emojis** are converted to shortcode format, like `:palm_tree:`. This format is used by Discord, GitHub, Slack, and others but the emoji names vary between platforms. AnyAscii uses the [Discord](https://github.com/anyascii/discord-emojis) name if available, otherwise it uses the Unicode character name. Emoji names may contain lowercase letters, numbers, and underscores.
+
+AnyAscii supports Unicode 17.0 (2025). It covers 124k of the 159k total Unicode characters, it is missing 34k very rare CJK characters and 1k cuneiform. The bundled data files total 200-550 KB depending on the implementation.
+
+**ISC License** Copyright (c) 2020-2025, Hunter WB
 
 > Geographical names are Romanized to help foreigners find the place they intend to go to and help them remember cities, villages and mountains they visited and climbed. But it is Koreans who make up the Roman transcription of their proper names to print on their business cards and draw up maps for international tourists. Sometimes, they write the lyrics of a Korean song in Roman letters to help foreigners join in a singing session or write part of a public address (in Korean) in Roman letters for a visiting foreign VIP. In this sense, it is for both foreigners and the local public. The Romanization system must not be a code only for the native English-speaking community here but an important tool for international communication between Korean society, foreign residents in the country and the entire external world. [*](https://web.archive.org/web/20070927204130/http://www.korea.net/korea/kor_loca.asp?code=A020303)
-
-## Stats
-
-Supports Unicode 16.0 (2024). Covers 124k of the 155k total Unicode characters, missing 30k very rare CJK characters and 1k cuneiform.
-
-Bundled data files total 200-500 KB depending on the implementation
-
-## Unidecode
-
-AnyAscii is an alternative to (and inspired by) [Unidecode](https://metacpan.org/pod/Text::Unidecode) and its many [ports](https://github.com/search?q=unidecode). Unidecode only supports a subset of the [basic mulitlingual plane](https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane). AnyAscii gives better results, supports more than twice as many characters, and often has a smaller file size. To compare the mappings see `table.tsv` and `unidecode/unidecode.tsv`.
-
-## Sources
-
-[ALA-LC](https://loc.gov/catdir/cpso/roman),
-[BGN/PCGN](https://gov.uk/government/publications/romanization-systems),
-[Discord](https://github.com/anyascii/discord-emojis),
-[ISO](https://iso.org/ics/01.140.10/x/p/1/u/1/w/1/d/1),
-[KNAB](https://eki.ee/knab/kblatyl2),
-[NFKD](https://unicode.org/reports/tr15),
-[UNGEGN](https://eki.ee/wgrs),
-[Unihan](https://unicode.org/reports/tr38),
-national standards,
-and more

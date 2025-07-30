@@ -15,6 +15,8 @@ const s = anyAscii('άνθρωποι');
 // anthropoi
 ```
 
+Uses ES modules
+
 `npm install any-ascii`
 
 [**FULL README**](https://github.com/anyascii/anyascii)
