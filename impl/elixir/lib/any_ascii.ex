@@ -85,7 +85,7 @@ defmodule AnyAscii do
       |> Integer.to_string(16)
       |> String.pad_leading(2, "0")
 
-    path = Path.join([Application.app_dir(:any_ascii), "priv", file_name])
+    path = Path.join(:code.priv_dir(:any_ascii), file_name)
 
     if File.exists?(path) do
       path
