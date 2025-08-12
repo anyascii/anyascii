@@ -4,8 +4,8 @@ set -eux
 cd -- "$(dirname -- "${BASH_SOURCE:-$0}")"
 
 mkdir -p build
-cd build
 
-cmake -D CMAKE_TOOLCHAIN_FILE=toolchain.cmake ..
-make
-ctest --output-on-failure
+cmake -S . -B build --toolchain toolchain.cmake -Wdev --fresh
+cmake --build build -v
+
+ctest --test-dir build --output-on-failure

@@ -1,1 +1,1 @@
-set(CMAKE_C_FLAGS "-std=c99 -Wall -Wextra -Wpedantic -Wno-overlength-strings -Wshadow -Wconversion")
+add_compile_options(-Wall -Wextra -Wpedantic -Wno-overlength-strings -Wshadow -Wconversion -Warith-conversion)
