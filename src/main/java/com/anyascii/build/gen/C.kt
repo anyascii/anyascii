@@ -25,16 +25,16 @@ fun c(g: Generator) {
         for (block in g.blocks.keys) {
             val s = "B%03X".format(block)
             val bp = bs.next()
-            w.write("static const char $s[${bp.size + 1}] = \"")
+            w.write("static const unsigned char $s[${bp.size + 1}] = \"")
             w.write(BYTE_STRINGS[(bp.size / 3) - 1])
             for (b in bp) {
                 w.write(BYTE_STRINGS[b.toInt() and 0xff])
             }
             w.write("\";\n")
         }
-        w.write("static const char BDEFAULT[4] = \"\\000\\000\\000\\200\";\n\n")
+        w.write("static const unsigned char BDEFAULT[4] = \"\\000\\000\\000\\200\";\n\n")
 
-        w.write("static const char *block(uint_least32_t blocknum) {\n")
+        w.write("static const unsigned char *block(uint_least32_t blocknum) {\n")
         w.write("\tswitch (blocknum) {\n")
         for (block in g.blocks.keys) {
             w.write("\t\tcase 0x%03x: return B%03X;\n".format(block, block))
