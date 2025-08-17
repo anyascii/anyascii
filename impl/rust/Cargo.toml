@@ -10,6 +10,9 @@ license = "ISC"
 categories = ["text-processing", "internationalization", "no-std", "command-line-utilities"]
 keywords = ["unicode", "ascii", "transliteration", "emoji", "unidecode"]
 
+[package.metadata]
+msrv = "1.42"
+
 [[bin]]
 name = "anyascii"
 path = "src/main.rs"
