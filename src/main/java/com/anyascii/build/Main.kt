@@ -265,7 +265,7 @@ private fun nushu() = Table().apply {
     Path.of("input/NushuSources.txt").forEachLine { line ->
         if (line.isEmpty() || line.startsWith('#')) return@forEachLine
         val split = line.split('\t', limit = 3)
-        if (split[1] != "kReading") return@forEachLine
+        if (split[1] != "kNSHU_Reading") return@forEachLine
         val cp = parseUCodePoint(split[0])
         this[cp] = split[2].filter(ASCII_LETTERS)
     }
