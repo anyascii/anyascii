@@ -1,0 +1,1 @@
+package AnyAscii::_18d; sub block { [split('	','ga	ta	ghu	bu	shi	le	kwe	mi	le')] } 1;

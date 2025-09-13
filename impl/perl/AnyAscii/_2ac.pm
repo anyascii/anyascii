@@ -1,0 +1,1 @@
+package AnyAscii::_2ac; sub block { [split('	','																																																						Fai																																															Fan																		Bui																							Zai						Lai							Gai																			Fai																															Sip																You')] } 1;

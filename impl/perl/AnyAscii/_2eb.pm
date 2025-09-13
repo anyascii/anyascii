@@ -1,0 +1,1 @@
+package AnyAscii::_2eb; sub block { [split('	','																											Jyu	Ngai	Gwai	Caan	Huo	Luk	Hua	Jung	Haam	Zam																																																													Gaai	Jiu		Mie	Gong	Chen		Aan		Soeng						Gang																							Mau																																																																																		Kaa')] } 1;

@@ -1,0 +1,1 @@
+package AnyAscii::_11b; sub block { [split('	','#	#	5	6	8	9	5	9	9	0')] } 1;

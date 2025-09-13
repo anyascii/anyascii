@@ -1,0 +1,1 @@
+package AnyAscii::_2ca; sub block { [split('	','	Mou	Qi		Ong	Nian	Gung	Hoi	Waan	Tin		Zang	Pi	Got	You	Xu	Hui	Song	Guang	Caau	Bei																																																										Huo																																															Xun	Loi															Mau																										Jyu	Zaan	Nong																	Guang')] } 1;

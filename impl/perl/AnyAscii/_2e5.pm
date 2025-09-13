@@ -1,0 +1,1 @@
+package AnyAscii::_2e5; sub block { [split('	','		Zit			Fu					Loeng																																																																																															Soe																								Loeng		Gin																																														Kit')] } 1;

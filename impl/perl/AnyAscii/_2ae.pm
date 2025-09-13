@@ -1,0 +1,1 @@
+package AnyAscii::_2ae; sub block { [split('	','																					Hei																				Wai																							Yi																																																			Zuk						Ta																																										Dao							Lung			Kiu										Cong		Nu		Nung		Ngan																			Cong																								Duk										Kwan								Gwai')] } 1;

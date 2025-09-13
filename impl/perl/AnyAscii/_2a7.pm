@@ -1,0 +1,1 @@
+package AnyAscii::_2a7; sub block { [split('	','														Qiao																																																																																																																																															Duo																																																	Jian															Ji')] } 1;

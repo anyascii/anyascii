@@ -1,0 +1,1 @@
+package AnyAscii::_2cf; sub block { [split('	','																																																																																																																																																						Jing')] } 1;
