@@ -120,6 +120,13 @@
 🩑	nq
 🩒	nr
 🩓	nb
+# Shatranj chess symbols
+# https://unicode.org/L2/L2024/24020-shatranj-symbols.pdf
+🩔	Q
+🩕	B
+##
+🩖	q
+🩗	b
 # Xiangqi symbols
 # https://en.wikipedia.org/wiki/Xiangqi
 🩠	G

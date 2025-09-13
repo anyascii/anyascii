@@ -172,6 +172,9 @@
 ⮔	*
 #
 ⮕	>
+# Symbol used in chess notation
+# https://unicode.org/L2/L2024/24018-one-chess-symbol.pdf
+⮖	*
 #
 ⮗	A
 #
@@ -290,6 +293,7 @@
 ⯶	N2
 ⯷	100
 ⯸	D3
+# Symbols used in chess notation
 # https://unicode.org/L2/L2017/17033r2-n4783r2-chess-notation.pdf
 ⯹	*
 ⯺	*
