@@ -1,14 +1,28 @@
 # https://unicode.org/charts/PDF/U16FE0.pdf
 #
+# Tangut mark
 # https://unicode.org/wg2/docs/n4522.pdf
 𖿠	-
+# Nushu mark
 # https://unicode.org/wg2/docs/n3635.pdf
 𖿡	-
+# Marks used in ancient Chinese texts
 # https://unicode.org/wg2/docs/n4847-TwoMarksAncientChinese.pdf
 𖿢	,
 𖿣	-
+# Small Khitan format character
 # https://unicode.org/wg2/docs/n5002-KhitanSmallScriptAdHoc.pdf
 𖿤	
+# Combining diacritics for CJK ideographs
 # https://unicode.org/wg2/docs/n4915-17373r-viet-alt-reading-marks.pdf
 𖿰	
 𖿱	
+# Characters used for rhotacization
+# https://unicode.org/L2/L2023/23284-small-er-proposal.pdf
+𖿲	r
+𖿳	r
+# Characters used for Cantonese music
+# https://unicode.org/L2/L2024/24071r3-ext-sz-num.pdf
+𖿴	2
+𖿵	3
+𖿶	4
