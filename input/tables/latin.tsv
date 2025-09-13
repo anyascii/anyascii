@@ -486,8 +486,11 @@
 ## Letters for Luiseño
 ## https://unicode.org/L2/L2022/22113r-two-latin-chars.pdf
 ꟍ	s
+## Cased voiced pharyngeal letters
+## https://unicode.org/L2/L2023/23219-latin-pharyngeal-voiced-fricatives.pdf
+꟏	ʕ
 ## Letters used in the Middle English Ormulum
-# https://unicode.org/wg2/docs/n5145-ormulum.pdf
+## https://unicode.org/wg2/docs/n5145-ormulum.pdf
 ꟑ	g
 ꟓ	þþ
 ꟕ	ƿƿ
