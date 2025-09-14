@@ -347,6 +347,12 @@
 𐻂	dh
 𐻃	th
 𐻄	g
+# https://unicode.org/L2/L2024/24046-arabic-noon-ring.pdf
+# https://en.wikipedia.org/wiki/Shahmukhi
+# https://en.wikipedia.org/wiki/Gurmukhi
+࢏	ਣ
+# https://unicode.org/L2/L2024/24055-arabic-swahili.pdf
+𐻇	ny
 # https://en.wikipedia.org/wiki/Rasm
 ٮ	b
 ڡ	f

@@ -195,6 +195,24 @@
 ﯀	t
 ﯁	t
 ﯂	'
+## Honorific word ligatures
+## https://unicode.org/L2/L2024/24077-twenty-five-honorifics.pdf
+﯃	*
+﯄	*
+﯅	*
+﯆	*
+﯇	*
+﯈	*
+﯉	*
+﯊	*
+﯋	*
+﯌	*
+﯍	*
+﯎	*
+﯏	*
+﯐	*
+﯑	*
+﯒	*
 ## Punctuation
 ﴾	(
 ﴿	)
@@ -215,7 +233,21 @@
 ﵍	*
 ﵎	*
 ﵏	*
-## Honorific word ligature
+## Honorific word ligatures
+## https://unicode.org/L2/L2024/24002-eight-honorifics.pdf
+## https://unicode.org/L2/L2024/24077-twenty-five-honorifics.pdf
+﶐	*
+﶑	*
+## Honorific word ligatures
+### https://unicode.org/L2/L2024/24002-eight-honorifics.pdf
+﷈	*
+﷉	*
+﷊	*
+﷋	*
+﷌	*
+﷍	*
+﷎	*
+###
 ﷏	*
 ## Word ligatures
 ### صلے
@@ -250,6 +282,8 @@
 ### جَلَّ جَلَالَهُ
 ﷻ	jalla jalalahu
 ## Currency symbol
+## https://unicode.org/wg2/docs/n2373.pdf
+## رِيَال
 ﷼	Riyal
 ## Honorific word ligatures
 ﷽	bismillah al-rahman al-rahim
@@ -270,6 +304,31 @@
 𐹾	2/3
 # Arabic Extended-C
 # https://unicode.org/charts/PDF/U10EC0.pdf
+## Quranic letter used in Indonesia
+## https://unicode.org/L2/L2022/22281r-two-quranic-arabic-chars.pdf
+𐻅	
+## Quranic letter used in Warsh orthography
+## https://unicode.org/L2/L2023/23121-arabic-thin-noon.pdf
+𐻆	n
+## Biblical punctuation mark
+## https://unicode.org/L2/L2023/23103r-arabic-biblical-end-verse.pdf
+𐻐	*
+## Honorific word ligatures
+## https://unicode.org/L2/L2024/24077-twenty-five-honorifics.pdf
+𐻑	*
+𐻒	*
+𐻓	*
+𐻔	*
+𐻕	*
+𐻖	*
+𐻗	*
+𐻘	*
+## Tanween mark used in Old Sindhi
+## https://unicode.org/L2/L2023/23248-arabic-dbl-vert-bar-below.pdf
+𐻺	
+## Quranic mark used in Indonesia
+## https://unicode.org/L2/L2022/22281r-two-quranic-arabic-chars.pdf
+𐻻	
 ## Quranic mark used in Libya
 ## https://unicode.org/L2/L2022/22047-combining-alef-overlay.pdf
 𐻼	ٰ
