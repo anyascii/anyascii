@@ -12,9 +12,10 @@ fun emojis() = Table()
 
 private fun discordEmojis() = ObjectMapper()
         .readTree(File("input/discord-emojis.json"))
-        .flatten()
+        .get("emojis")
         .filter { it["surrogates"].asText().codePointsArray().dropLastWhile { it == 0xfe0f }.size == 1 }
         .associateTo(Table()) { it["surrogates"].asText().codePointAt(0) to it["names"].first().asText().let { ":$it:" } }
+        .remove(property(EMOJI_COMPONENT))
 
 private fun fallbackEmojis() = EMOJIS.toTable { ':' + it.name.lower().replace(' ', '_').replace('-', '_') + ':' }
 
