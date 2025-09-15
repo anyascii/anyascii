@@ -260,6 +260,9 @@
 🯭	#
 🯮	#
 🯯	#
+## Terminal graphic character
+## https://unicode.org/L2/L2023/23252-legacy-disunification.pdf
+🯺	*
 # Symbols for Legacy Computing Supplement
 # https://unicode.org/charts/PDF/U1CC00.pdf
 ## Game sprites
@@ -493,6 +496,11 @@
 𜳓	#
 𜳔	#
 𜳕	#
+## Terminal graphic characters
+## https://unicode.org/L2/L2023/23252-legacy-disunification.pdf
+𜳺	*
+𜳻	*
+𜳼	*
 ## Block mosaic terminal graphic characters
 𜴀	#
 𜴁	#
@@ -940,3 +948,11 @@
 𜺱	#
 𜺲	#
 𜺳	^
+## Terminal graphic characters
+## https://unicode.org/L2/L2023/23252-legacy-disunification.pdf
+𜺺	*
+𜺻	*
+𜺼	*
+𜺽	*
+𜺾	*
+𜺿	*
