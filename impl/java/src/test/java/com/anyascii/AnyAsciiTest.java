@@ -3,6 +3,9 @@ package com.anyascii;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public final class AnyAsciiTest {
 
     @Test public void test() {
@@ -97,6 +100,16 @@ public final class AnyAsciiTest {
         Assert.assertEquals(expected, AnyAscii.transliterate(codePoint));
     }
 
+    @Test
+    public void testAllowlist() {
+        Set<Integer> allowlist = new HashSet<>();
+        allowlist.add(Character.codePointAt("£", 0));
+        allowlist.add(Character.codePointAt("₱", 0));
+        StringBuilder dst = new StringBuilder();
+        AnyAscii.transliterate("€£₱₺", dst, allowlist);
+        Assert.assertEquals(dst.toString(), "EUR£₱TL");
+    }
+
     @Test(expected = NullPointerException.class)
     public void testIsAsciiNpe() {
         AnyAscii.isAscii(null);
@@ -119,21 +132,71 @@ public final class AnyAsciiTest {
 
     @Test(expected = NullPointerException.class)
     public void testTransliterateNpe4() {
-        AnyAscii.transliterate(null, null);
+        AnyAscii.transliterate(0, null, null);
     }
 
     @Test(expected = NullPointerException.class)
     public void testTransliterateNpe5() {
-        AnyAscii.transliterate(null, new StringBuilder());
+        AnyAscii.transliterate(0, new StringBuilder(), null);
     }
 
     @Test(expected = NullPointerException.class)
     public void testTransliterateNpe6() {
-        AnyAscii.transliterate("-", null);
+        AnyAscii.transliterate(0, null, new HashSet<Integer>());
     }
 
     @Test(expected = NullPointerException.class)
     public void testTransliterateNpe7() {
+        AnyAscii.transliterate(null, null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe8() {
+        AnyAscii.transliterate(null, new StringBuilder());
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe9() {
+        AnyAscii.transliterate("-", null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe10() {
         AnyAscii.transliterate("", null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe11() {
+        AnyAscii.transliterate(null, null, null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe12() {
+        AnyAscii.transliterate("", null, null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe13() {
+        AnyAscii.transliterate("", new StringBuilder(), null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe14() {
+        AnyAscii.transliterate("", null, new HashSet<Integer>());
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe15() {
+        AnyAscii.transliterate(null, new StringBuilder(), null);
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe16() {
+        AnyAscii.transliterate(null, new StringBuilder(), new HashSet<Integer>());
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void testTransliterateNpe17() {
+        AnyAscii.transliterate(null, null, new HashSet<Integer>());
     }
 }
