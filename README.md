@@ -297,6 +297,6 @@ AnyAscii is an improved alternative to [**Unidecode**](https://metacpan.org/pod/
 
 AnyAscii supports Unicode 17.0 (2025). It covers 124k of the 159k total Unicode characters, it is missing 34k very rare CJK characters and 1k cuneiform. The bundled data files total 200-550 KB depending on the implementation.
 
-**ISC License** Copyright (c) 2020-2025, Hunter WB
+**ISC License** Copyright (c) 2020-2026, Hunter WB
 
 > Geographical names are Romanized to help foreigners find the place they intend to go to and help them remember cities, villages and mountains they visited and climbed. But it is Koreans who make up the Roman transcription of their proper names to print on their business cards and draw up maps for international tourists. Sometimes, they write the lyrics of a Korean song in Roman letters to help foreigners join in a singing session or write part of a public address (in Korean) in Roman letters for a visiting foreign VIP. In this sense, it is for both foreigners and the local public. The Romanization system must not be a code only for the native English-speaking community here but an important tool for international communication between Korean society, foreign residents in the country and the entire external world. [*](https://web.archive.org/web/20070927204130/http://www.korea.net/korea/kor_loca.asp?code=A020303)
