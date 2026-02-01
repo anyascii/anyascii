@@ -176,6 +176,45 @@
 ᫌ	ᵹ
 ᫍ	ꞃ
 ᫎ	ꞇ
+## Compound tone diacritics
+### https://unicode.org/L2/L2024/24105-double-caron.pdf
+᫏	
+### https://unicode.org/L2/L2023/23188-cpd-tone-diacritics.pdf
+᫐	
+᫑	
+᫒	
+᫓	
+᫔	
+᫕	
+### https://unicode.org/L2/L2023/23208-compound.tone.diacritics2.pdf
+᫖	
+᫗	
+᫘	
+## J.P. Harrington diacritics
+## https://unicode.org/L2/L2023/23206r-harrington-diacritics.pdf
+᫙	
+᫚	
+᫛	
+᫜	
+᫝	
+## IPA positional variants
+## https://unicode.org/L2/L2024/24080-ipa-diacritics-above.pdf
+᫠	
+᫡	
+᫢	
+᫣	
+᫤	
+᫥	
+## Historical IPA
+## https://unicode.org/L2/L2024/24080-ipa-diacritics-above.pdf
+᫦	
+᫧	
+## Extended IPA positional variants
+## https://unicode.org/L2/L2024/24080-ipa-diacritics-above.pdf
+᫨	
+᫩	
+᫪	
+᫫	
 # Combining Diacritical Marks Supplement
 # https://unicode.org/charts/PDF/U1DC0.pdf
 ## Used for Ancient Greek
