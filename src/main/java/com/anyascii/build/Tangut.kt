@@ -42,4 +42,5 @@ private fun characters() = Table().apply {
 
 private fun charactersFallback() = (block(TANGUT) + block(TANGUT_SUPPLEMENT)).toTable { "?" }
 
-private fun components() = block(TANGUT_COMPONENTS).toTable { it.name.substringAfterLast('-').stripLeading('0') }
+private fun components() = (block(TANGUT_COMPONENTS) + block(TANGUT_COMPONENTS_SUPPLEMENT))
+    .toTable { it.name.substringAfterLast('-').stripLeading('0') }
