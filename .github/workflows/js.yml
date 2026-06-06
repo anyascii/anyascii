@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 'lts/*'
       - run: npm test
-      - run: npm publish --dry-run
+      - run: npm publish --dry-run --tag dev
       - run: npm pkg fix && git diff --exit-code
   js:
     runs-on: ubuntu-latest
@@ -36,4 +36,4 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: npm test
-      - run: npm publish --dry-run
+      - run: npm publish --dry-run --tag dev
