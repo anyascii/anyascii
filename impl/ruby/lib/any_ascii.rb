@@ -7,7 +7,7 @@ module AnyAscii
   def self.transliterate(string)
     return string if string.ascii_only?
 
-    result = String.new('')
+    result = String.new
     string.each_codepoint do |cp|
       if cp <= 127
         result << cp
@@ -18,7 +18,7 @@ module AnyAscii
         result << block[lo] if lo < block.length
       end
     end
-    result
+    result.force_encoding(Encoding::UTF_8)
   end
 
   BLOCKS = Hash.new do |blocks, block_num|
