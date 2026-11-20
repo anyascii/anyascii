@@ -6,6 +6,9 @@
 __pycache__/
 bin/
 /impl/c/build/
+/impl/python/build/
+/impl/python/dist-native/
+/impl/python/*.egg-info/
 Testing/
 dist/
 obj/
@@ -14,6 +17,7 @@ target/
 *.gem
 *.o
 Cargo.lock
+!/impl/python/native/Cargo.lock
 Manifest.toml
 .flattened-pom.xml
 impl/c/test

@@ -16,7 +16,10 @@
 #![no_std]
 
 extern crate alloc;
+#[cfg(feature = "fallible")]
+use alloc::collections::TryReserveError;
 use alloc::string::String;
+use core::convert::Infallible;
 
 mod data;
 
@@ -31,15 +34,46 @@ mod data;
 /// assert_eq!("toyota", any_ascii("トヨタ"));
 /// ```
 pub fn any_ascii(s: &str) -> String {
-    let mut r = String::with_capacity(s.len() / 2);
+    let output = String::with_capacity(s.len() / 2);
+    transliterate(s, output, |_, _| Ok::<_, Infallible>(())).unwrap()
+}
+
+/// Transliterates a Unicode string into ASCII with fallible allocation.
+///
+/// Available with the `fallible` feature on Rust 1.57 or newer.
+///
+/// # Errors
+///
+/// Returns an error if the output cannot be allocated.
+#[cfg(feature = "fallible")]
+pub fn try_any_ascii(s: &str) -> Result<String, TryReserveError> {
+    let mut output = String::new();
+    // Unmapped input can still fit if this estimate is too large to allocate.
+    let _ = output.try_reserve(s.len() / 2);
+    transliterate(s, output, |output, additional| {
+        if output.capacity() - output.len() < additional {
+            output.try_reserve(additional)?;
+        }
+        Ok(())
+    })
+}
+
+fn transliterate<E>(
+    s: &str,
+    mut output: String,
+    mut reserve: impl FnMut(&mut String, usize) -> Result<(), E>,
+) -> Result<String, E> {
     for c in s.chars() {
         if c.is_ascii() {
-            r.push(c);
+            reserve(&mut output, 1)?;
+            output.push(c);
         } else {
-            r.push_str(any_ascii_char(c));
+            let replacement = any_ascii_char(c);
+            reserve(&mut output, replacement.len())?;
+            output.push_str(replacement);
         }
     }
-    r
+    Ok(output)
 }
 
 /// Transliterates a Unicode char into ASCII
