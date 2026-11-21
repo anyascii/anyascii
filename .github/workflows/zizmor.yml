@@ -11,11 +11,6 @@ on:
     - '.github/workflows/release.yml'
     - '.github/workflows/zizmor.yml'
   pull_request:
-    paths:
-    - '.github/dependabot.yml'
-    - '.github/workflows/python.yml'
-    - '.github/workflows/release.yml'
-    - '.github/workflows/zizmor.yml'
 
 permissions: {}
 
