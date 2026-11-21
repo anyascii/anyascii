@@ -6,12 +6,14 @@ from distutils.core import setup
 from anyascii import __version__
 
 setup(
-    name="anyascii",
+    name="anyascii-rs",
     version=__version__,
     description="Unicode to ASCII transliteration",
     author="Hunter WB",
     author_email="hunter@hunterwb.com",
-    url="https://github.com/anyascii/anyascii",
+    maintainer="PLPeeters",
+    maintainer_email="PLPeeters@users.noreply.github.com",
+    url="https://github.com/PLPeeters/anyascii",
     python_requires=">=3.3",
     packages=["anyascii", "anyascii._data"],
     package_data={"anyascii": ["py.typed"], "anyascii._data": ["*"]},

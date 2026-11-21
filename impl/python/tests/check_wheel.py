@@ -12,7 +12,7 @@ from textwrap import dedent
 def check_wheel(backend):
     from anyascii import __version__, _transliterate_text, anyascii
 
-    package = distribution("anyascii")
+    package = distribution("anyascii-rs")
     assert package.version == __version__
     wheel = package.read_text("WHEEL").splitlines()
     if backend == "native":

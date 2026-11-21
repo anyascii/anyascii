@@ -17,7 +17,12 @@ assert s == "anthropoi"
 
 Python 3.3+ compatible
 
-`pip install anyascii`
+`pip install anyascii-rs`
+
+This is a Rust-backed fork of [AnyAscii](https://github.com/anyascii/anyascii)
+published as `anyascii-rs`. It installs the same `anyascii` import package, so
+it replaces the original `anyascii` distribution; do not install both in one
+environment.
 
 On supported platforms, pip selects a Rust-backed wheel for standard CPython
 3.10 and later. The universal Python wheel supports Python 3.3 and later,
@@ -42,4 +47,4 @@ When bumping the Python version, update `pyproject.toml` and
 `cargo update --workspace --manifest-path native/Cargo.toml` from `impl/python`
 to refresh the native wheel's lockfile.
 
-[**FULL README**](https://github.com/anyascii/anyascii)
+[**FULL README**](https://github.com/PLPeeters/anyascii)

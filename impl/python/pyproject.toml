@@ -4,10 +4,11 @@ build-backend = "build_backend"
 backend-path = ["."]
 
 [project]
-name = "anyascii"
+name = "anyascii-rs"
 version = "0.4.0.dev0"
-description = "Unicode to ASCII transliteration"
+description = "Rust-backed Unicode to ASCII transliteration (up to 25.9x as fast as anyascii 0.3.3 in benchmarks)"
 authors = [{name = "Hunter WB", email = "hunter@hunterwb.com"}]
+maintainers = [{name = "PLPeeters", email = "PLPeeters@users.noreply.github.com"}]
 readme = "README.md"
 license = {file = "LICENSE"}
 keywords = [
@@ -30,9 +31,12 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/anyascii/anyascii"
+Homepage = "https://github.com/PLPeeters/anyascii"
 Demo = "https://anyascii.com"
-Changelog = "https://github.com/anyascii/anyascii/blob/master/CHANGELOG.md"
+Changelog = "https://github.com/PLPeeters/anyascii/blob/master/CHANGELOG.md"
+
+[tool.flit.module]
+name = "anyascii"
 
 [tool.flit.sdist]
 include = ["build_backend.py", "setup.py", "tests/"]

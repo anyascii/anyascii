@@ -1,0 +1,39 @@
+name: zizmor
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - '**'
+    paths:
+    - '.github/dependabot.yml'
+    - '.github/workflows/python.yml'
+    - '.github/workflows/release.yml'
+    - '.github/workflows/zizmor.yml'
+  pull_request:
+    paths:
+    - '.github/dependabot.yml'
+    - '.github/workflows/python.yml'
+    - '.github/workflows/release.yml'
+    - '.github/workflows/zizmor.yml'
+
+permissions: {}
+
+jobs:
+  zizmor:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - run: python3 -m venv "$RUNNER_TEMP/zizmor" && "$RUNNER_TEMP/zizmor/bin/pip" install zizmor==1.32.0
+      - run: >-
+          "$RUNNER_TEMP/zizmor/bin/zizmor"
+          .github/dependabot.yml
+          .github/workflows/python.yml
+          .github/workflows/release.yml
+          .github/workflows/zizmor.yml
+        env:
+          ZIZMOR_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

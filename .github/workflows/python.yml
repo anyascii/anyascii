@@ -1,6 +1,9 @@
 on:
+  workflow_call:
   workflow_dispatch:
   push:
+    branches:
+    - '**'
     paths:
     - 'impl/python/**'
     - 'impl/rust/**'
@@ -15,6 +18,8 @@ on:
     - '.github/workflows/python.yml'
     - '.github/scripts/build_and_test_universal_wheel.sh'
 
+permissions: {}
+
 defaults:
   run:
     working-directory: ./impl/python
@@ -24,22 +29,36 @@ env:
 
 jobs:
   python-dev:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: '3.x'
-      - run: pip install pytest ruff build maturin==${{ env.MATURIN_VERSION }}
+      - run: pip install -r requirements-ci.txt "maturin==$MATURIN_VERSION"
       - run: python -m pytest
       - run: ruff check --diff .
       - run: ruff format --diff .
       - run: bash "$GITHUB_WORKSPACE/.github/scripts/build_and_test_universal_wheel.sh"
-      - uses: actions/upload-artifact@v4
+        env:
+          PIP_CONSTRAINT: ${{ github.workspace }}/impl/python/requirements-ci.txt
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: python-universal
           path: impl/python/dist/*
+          if-no-files-found: error
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: python-sdist
+          path: impl/python/dist/*.tar.gz
+          if-no-files-found: error
   python:
+    permissions:
+      contents: read
     runs-on: ubuntu-22.04
     env:
       PIP_TRUSTED_HOST: "pypi.python.org pypi.org files.pythonhosted.org"
@@ -48,28 +67,35 @@ jobs:
       matrix:
         python: [ '3.7', '3.9', '3.11' ]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: ${{ matrix.python }}
       - run: pip install pytest
       - run: python -m pytest
   python-native:
+    name: python-native (${{ matrix.os }})
+    permissions:
+      contents: read
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         include:
           - os: ubuntu-latest
-            container: quay.io/pypa/manylinux_2_28_x86_64:latest
+            container: quay.io/pypa/manylinux_2_28_x86_64@sha256:55a36963bc0504cdf004011001c1072306402f0b8b83be5a5eba7068f93eec53
           - os: ubuntu-24.04-arm
-            container: quay.io/pypa/manylinux_2_28_aarch64:latest
+            container: quay.io/pypa/manylinux_2_28_aarch64@sha256:126d9eea9d6b1717f3e17b2b3ac51da04ef159a5f935dac36fe92d621dc8f246
           - os: macos-15-intel
           - os: macos-15
           - os: windows-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: '3.10'
       - uses: PyO3/maturin-action@e83996d129638aa358a18fbd1dfb82f0b0fb5d3b # v1.51.0
@@ -77,25 +103,26 @@ jobs:
           MACOSX_DEPLOYMENT_TARGET: '11.0'
         with:
           maturin-version: v${{ env.MATURIN_VERSION }}
-          rust-toolchain: stable
+          rust-toolchain: '1.100.0'
           working-directory: impl/python
           container: ${{ matrix.container }}
           manylinux: '2_28'
           args: >-
             --release --locked --out dist-native
             --interpreter ${{ runner.os == 'Linux' && '/opt/python/cp310-cp310/bin/python' || 'python' }}
-      - run: python -m pip install abi3audit pytest
+      - run: python -m pip install -r requirements-ci.txt
       - run: abi3audit --strict --report dist-native/*.whl
         shell: bash
-      - run: python -m pip install --no-index --find-links dist-native anyascii
+      - run: python -m pip install --no-index --find-links dist-native anyascii-rs
       - run: python -I tests/check_wheel.py native ../../table.tsv
       - run: python -I -m pytest -q tests/test_anyascii.py
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: '3.15'
-      - run: python -m pip install --no-index --find-links dist-native anyascii
+      - run: python -m pip install --no-index --find-links dist-native anyascii-rs
       - run: python -I tests/check_wheel.py native ../../table.tsv
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: python-native-${{ matrix.os }}
           path: impl/python/dist-native/*.whl
+          if-no-files-found: error

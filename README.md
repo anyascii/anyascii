@@ -175,7 +175,7 @@ PHP 5.3+ compatible
 
 ## Python
 
-https://pypi.org/project/anyascii
+https://pypi.org/project/anyascii-rs
 
 ```python
 from anyascii import anyascii
@@ -186,7 +186,7 @@ assert s == 'anthropoi'
 
 Python 3.3+ compatible
 
-`pip install anyascii`
+`pip install anyascii-rs` (Rust-backed fork, installs the same `anyascii` module)
 
 ## Ruby
 

@@ -1,0 +1,192 @@
+# Publishes anyascii-rs to TestPyPI and then PyPI when a v* tag is pushed.
+#
+# Build jobs (called from python.yml) have read-only permissions and no OIDC
+# access. Jobs that can publish or attest only download the build artifacts;
+# they never check out or run repository code.
+name: release
+
+on:
+  push:
+    tags:
+    - 'v*'
+
+permissions: {}
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  verify-version:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Require the tagged commit to be on the default branch
+        run: git merge-base --is-ancestor "$GITHUB_SHA" origin/master
+      - name: Require the tag to match the package version
+        id: version
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          python3 -I - <<'PY'
+          import os
+          import re
+          import tomllib
+
+          with open("impl/python/pyproject.toml", "rb") as f:
+              version = tomllib.load(f)["project"]["version"]
+          with open("impl/python/anyascii/__init__.py") as f:
+              module_version = re.search(r'^__version__ = "(.+)"$', f.read(), re.M).group(1)
+          tag = os.environ["TAG"]
+          assert re.fullmatch(
+              r"[0-9]+(\.[0-9]+)*((a|b|rc)[0-9]+)?(\.post[0-9]+)?(\.dev[0-9]+)?", version
+          ), version
+          assert version == module_version, (version, module_version)
+          assert tag == "v" + version, (tag, version)
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write("version=" + version + "\n")
+          PY
+
+  checks:
+    needs: verify-version
+    permissions:
+      contents: read
+    uses: $/.github/workflows/python.yml
+
+  collect:
+    needs: [verify-version, checks]
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          pattern: python-native-*
+          path: dist
+          merge-multiple: true
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: python-sdist
+          path: dist
+      - name: Require exactly the expected distributions for the tagged version
+        env:
+          VERSION: ${{ needs.verify-version.outputs.version }}
+        run: |
+          set -euo pipefail
+          cd dist
+          ls -l
+          shopt -s nullglob
+          wheels=(*.whl)
+          sdists=(*.tar.gz)
+          # One native wheel per python-native matrix entry, plus the sdist.
+          [ "${#wheels[@]}" -eq 5 ]
+          [ "${#sdists[@]}" -eq 1 ]
+          [ "$(ls | wc -l)" -eq 6 ]
+          for wheel in "${wheels[@]}"; do
+            case $wheel in
+              anyascii_rs-"$VERSION"-cp310-abi3-*) ;;
+              *) echo "Unexpected wheel: $wheel"; exit 1 ;;
+            esac
+          done
+          [ "${sdists[0]}" = "anyascii_rs-$VERSION.tar.gz" ]
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: release-dists
+          path: dist/*
+          if-no-files-found: error
+
+  attest:
+    needs: collect
+    runs-on: ubuntu-latest
+    permissions:
+      attestations: write # Store the build provenance attestations.
+      contents: read
+      id-token: write # Sign the attestations with the workflow's OIDC identity.
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: release-dists
+          path: dist
+      - uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
+        with:
+          subject-path: dist/*
+
+  publish-testpypi:
+    needs: [verify-version, collect, attest]
+    runs-on: ubuntu-latest
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/project/anyascii-rs/${{ needs.verify-version.outputs.version }}/
+    permissions:
+      id-token: write # PyPI trusted publishing.
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: release-dists
+          path: dist
+      - uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # v1.14.3
+        with:
+          repository-url: https://test.pypi.org/legacy/
+
+  smoke-test-testpypi:
+    needs: [verify-version, publish-testpypi]
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: release-dists
+          path: dist
+      - name: Install from TestPyPI and compare with the built wheel
+        env:
+          VERSION: ${{ needs.verify-version.outputs.version }}
+          PIP_DISABLE_PIP_VERSION_CHECK: '1'
+        run: |
+          set -euo pipefail
+          python3 -m venv venv
+          # TestPyPI can take a while to serve a new upload.
+          for attempt in 1 2 3 4 5 6 7 8 9 10 11 12; do
+            if venv/bin/python -m pip download --no-deps --only-binary :all: \
+                --index-url https://test.pypi.org/simple/ \
+                --dest downloaded "anyascii-rs==$VERSION"; then
+              break
+            fi
+            [ "$attempt" -lt 12 ] || exit 1
+            sleep 15
+          done
+          for wheel in downloaded/*.whl; do
+            [ "$(sha256sum < "$wheel")" = "$(sha256sum < "dist/$(basename "$wheel")")" ]
+          done
+          venv/bin/python -m pip install --no-index --no-deps downloaded/*.whl
+          venv/bin/python -I - <<'PY'
+          import os
+          from importlib.metadata import version
+
+          import anyascii
+
+          assert version("anyascii-rs") == os.environ["VERSION"]
+          assert anyascii.__version__ == os.environ["VERSION"]
+          assert anyascii.anyascii("άνθρωποι 👑") == "anthropoi :crown:"
+          assert anyascii._transliterate_text.__module__ == "anyascii._transliterate"
+          PY
+
+  publish-pypi:
+    needs: [verify-version, collect, attest, smoke-test-testpypi]
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/project/anyascii-rs/${{ needs.verify-version.outputs.version }}/
+    permissions:
+      id-token: write # PyPI trusted publishing.
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: release-dists
+          path: dist
+      - uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # v1.14.3
