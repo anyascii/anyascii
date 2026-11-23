@@ -2,10 +2,6 @@ name: Rust CI
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-    - 'impl/rust/**'
-    - '.github/workflows/rust.yml'
   pull_request:
     paths:
     - 'impl/rust/**'

@@ -3,15 +3,6 @@ name: Python CI
 on:
   workflow_call:
   workflow_dispatch:
-  push:
-    branches:
-    - '**'
-    paths:
-    - 'impl/python/**'
-    - 'impl/rust/**'
-    - 'table.tsv'
-    - '.github/workflows/python.yml'
-    - '.github/scripts/build_and_test_universal_wheel.sh'
   pull_request:
 
 permissions: {}

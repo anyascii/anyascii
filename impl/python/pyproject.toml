@@ -5,7 +5,7 @@ backend-path = ["."]
 
 [project]
 name = "anyascii-rs"
-version = "0.4.0.dev0"
+version = "0.3.4"
 description = "Rust-backed Unicode to ASCII transliteration (up to 25.9x as fast as anyascii 0.3.3 in benchmarks)"
 authors = [{name = "Hunter WB", email = "hunter@hunterwb.com"}]
 maintainers = [{name = "PLPeeters", email = "PLPeeters@users.noreply.github.com"}]
