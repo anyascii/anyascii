@@ -14,7 +14,7 @@ setup(
     maintainer="PLPeeters",
     maintainer_email="PLPeeters@users.noreply.github.com",
     url="https://github.com/PLPeeters/anyascii",
-    python_requires=">=3.3",
+    python_requires=">=3.10",
     packages=["anyascii", "anyascii._data"],
     package_data={"anyascii": ["py.typed"], "anyascii._data": ["*"]},
 )

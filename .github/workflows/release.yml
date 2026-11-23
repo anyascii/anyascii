@@ -84,13 +84,20 @@ jobs:
           shopt -s nullglob
           wheels=(*.whl)
           sdists=(*.tar.gz)
-          # One native wheel per python-native matrix entry, plus the sdist.
-          [ "${#wheels[@]}" -eq 5 ]
+          # Per python-native matrix entry: one abi3 wheel and one wheel for each
+          # free-threaded interpreter. Plus the sdist.
+          [ "${#wheels[@]}" -eq 15 ]
           [ "${#sdists[@]}" -eq 1 ]
-          [ "$(ls | wc -l)" -eq 6 ]
+          [ "$(ls | wc -l)" -eq 16 ]
+          for tag in cp310-abi3 cp314-cp314t cp315-cp315t; do
+            matches=(anyascii_rs-"$VERSION"-"$tag"-*.whl)
+            [ "${#matches[@]}" -eq 5 ]
+          done
           for wheel in "${wheels[@]}"; do
             case $wheel in
               anyascii_rs-"$VERSION"-cp310-abi3-*) ;;
+              anyascii_rs-"$VERSION"-cp314-cp314t-*) ;;
+              anyascii_rs-"$VERSION"-cp315-cp315t-*) ;;
               *) echo "Unexpected wheel: $wheel"; exit 1 ;;
             esac
           done

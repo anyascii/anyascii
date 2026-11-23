@@ -22,7 +22,7 @@ keywords = [
 	"unidecode",
 	"normalization",
 ]
-requires-python = ">=3.3"
+requires-python = ">=3.10"
 classifiers = [
 	"License :: OSI Approved :: ISC License (ISCL)",
 	"Programming Language :: Python :: 3 :: Only",

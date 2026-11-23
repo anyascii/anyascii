@@ -3,6 +3,7 @@
 import argparse
 import subprocess
 import sys
+import sysconfig
 from importlib.machinery import ExtensionFileLoader
 from importlib.metadata import distribution
 from pathlib import Path
@@ -16,7 +17,14 @@ def check_wheel(backend):
     assert package.version == __version__
     wheel = package.read_text("WHEEL").splitlines()
     if backend == "native":
-        assert any(tag.startswith("Tag: cp310-abi3-") for tag in wheel), wheel
+        if sysconfig.get_config_var("Py_GIL_DISABLED"):
+            # Free-threaded interpreters use version-specific wheels.
+            version = "%d%d" % sys.version_info[:2]
+            prefix = "Tag: cp%s-cp%st-" % (version, version)
+            assert not sys._is_gil_enabled()
+        else:
+            prefix = "Tag: cp310-abi3-"
+        assert any(tag.startswith(prefix) for tag in wheel), wheel
         module = sys.modules[_transliterate_text.__module__]
         assert isinstance(module.__loader__, ExtensionFileLoader)
     else:

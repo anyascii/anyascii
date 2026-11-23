@@ -13,6 +13,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 any_ascii = { path = "../../rust", features = ["fallible"] }
+# Free-threaded interpreters ignore the abi3 feature and get version-specific builds.
 pyo3 = { version = "0.30.1", features = ["abi3-py310"] }
 
 [profile.release]

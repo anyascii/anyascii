@@ -29,7 +29,7 @@ fn transliterate<'py>(string: &Bound<'py, PyAny>) -> PyResult<Bound<'py, PyAny>>
     PyString::from_bytes(py, output.as_bytes()).map(Bound::into_any)
 }
 
-#[pymodule]
+#[pymodule(gil_used = false)]
 fn _transliterate(module: &Bound<'_, PyModule>) -> PyResult<()> {
     // CPython creates the main interpreter first and assigns it ID 0. Some
     // subinterpreters can load this extension, but PyO3 cannot safely use them.

@@ -61,7 +61,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python: [ '3.7', '3.9', '3.11' ]
+        python: [ '3.10', '3.11', '3.12', '3.13', '3.14', '3.15' ]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -91,7 +91,44 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+      # Free-threaded interpreters cannot use the abi3 wheel, so each gets a
+      # version-specific wheel.
+      - id: py314t
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.14'
+          freethreaded: true
+      - uses: PyO3/maturin-action@e83996d129638aa358a18fbd1dfb82f0b0fb5d3b # v1.51.0
+        env:
+          MACOSX_DEPLOYMENT_TARGET: '11.0'
+        with:
+          maturin-version: v${{ env.MATURIN_VERSION }}
+          rust-toolchain: '1.100.0'
+          working-directory: impl/python
+          container: ${{ matrix.container }}
+          manylinux: '2_28'
+          args: >-
+            --release --locked --out dist-native
+            --interpreter ${{ runner.os == 'Linux' && '/opt/python/cp314-cp314t/bin/python' || steps.py314t.outputs.python-path }}
+      - id: py315t
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.15'
+          freethreaded: true
+      - uses: PyO3/maturin-action@e83996d129638aa358a18fbd1dfb82f0b0fb5d3b # v1.51.0
+        env:
+          MACOSX_DEPLOYMENT_TARGET: '11.0'
+        with:
+          maturin-version: v${{ env.MATURIN_VERSION }}
+          rust-toolchain: '1.100.0'
+          working-directory: impl/python
+          container: ${{ matrix.container }}
+          manylinux: '2_28'
+          args: >-
+            --release --locked --out dist-native
+            --interpreter ${{ runner.os == 'Linux' && '/opt/python/cp315-cp315t/bin/python' || steps.py315t.outputs.python-path }}
+      - id: py310
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: '3.10'
       - uses: PyO3/maturin-action@e83996d129638aa358a18fbd1dfb82f0b0fb5d3b # v1.51.0
@@ -105,9 +142,9 @@ jobs:
           manylinux: '2_28'
           args: >-
             --release --locked --out dist-native
-            --interpreter ${{ runner.os == 'Linux' && '/opt/python/cp310-cp310/bin/python' || 'python' }}
+            --interpreter ${{ runner.os == 'Linux' && '/opt/python/cp310-cp310/bin/python' || steps.py310.outputs.python-path }}
       - run: python -m pip install -r requirements-ci.txt
-      - run: abi3audit --strict --report dist-native/*.whl
+      - run: abi3audit --strict --report dist-native/*-abi3-*.whl
         shell: bash
       - run: python -m pip install --no-index --find-links dist-native anyascii-rs
       - run: python -I tests/check_wheel.py native ../../table.tsv
@@ -117,6 +154,24 @@ jobs:
           python-version: '3.15'
       - run: python -m pip install --no-index --find-links dist-native anyascii-rs
       - run: python -I tests/check_wheel.py native ../../table.tsv
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.14'
+          freethreaded: true
+      - run: python -m pip install -c requirements-ci.txt pytest
+      - run: python -m pip install --no-index --find-links dist-native anyascii-rs
+      - run: python -I tests/check_wheel.py native ../../table.tsv
+      - run: python -I -m pytest -q tests/test_anyascii.py
+      - run: python -I -c "import sys, anyascii; assert not sys._is_gil_enabled()"
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.15'
+          freethreaded: true
+      - run: python -m pip install -c requirements-ci.txt pytest
+      - run: python -m pip install --no-index --find-links dist-native anyascii-rs
+      - run: python -I tests/check_wheel.py native ../../table.tsv
+      - run: python -I -m pytest -q tests/test_anyascii.py
+      - run: python -I -c "import sys, anyascii; assert not sys._is_gil_enabled()"
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: python-native-${{ matrix.os }}
