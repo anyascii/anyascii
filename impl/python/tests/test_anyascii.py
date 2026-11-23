@@ -83,3 +83,24 @@ def test():
         ":ox: :owl: :duck: :zebra: :coffee: :popcorn: :airplane: :saxophone: :microphone: :thermometer: :supervillain:",
     )
     check("에 가 힣 널 뢌 땚 꺵", "E Ga Hih Neol Lwass Ttaelp Kkyaeng")
+
+
+def test_surrogate_code_points():
+    check("\ud800", "")
+    check("\udfff", "")
+    check("\ud83d\udc51\0👑\ud800é\udfff", "\0:crown:e")
+
+
+def test_nul_in_non_ascii_string():
+    assert anyascii(string="é\0👑") == "e\0:crown:"
+
+
+def test_str_subclass_iteration():
+    class CustomString(str):
+        def __iter__(self):
+            return iter("👑")
+
+    check(CustomString("é"), ":crown:")
+    if hasattr(str, "isascii"):
+        ascii_text = CustomString("ascii")
+        assert anyascii(ascii_text) is ascii_text
