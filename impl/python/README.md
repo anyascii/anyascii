@@ -25,9 +25,11 @@ it replaces the original `anyascii` distribution; do not install both in one
 environment.
 
 On supported platforms, pip selects a Rust-backed wheel for standard CPython
-3.10 and later. The universal Python wheel supports Python 3.10 and later,
-including environments without a compatible native wheel. Subinterpreters
-use the pure Python implementation bundled in the wheel.
+3.10 and later and for free-threaded CPython 3.14 and 3.15. The native module
+declares that it does not need the GIL, so importing it keeps the GIL disabled
+on free-threaded builds. The universal Python wheel supports Python 3.10 and
+later, including environments without a compatible native wheel.
+Subinterpreters use the pure Python implementation bundled in the wheel.
 
 ## Benchmark
 
@@ -56,9 +58,11 @@ We did the test with Python 3.13 on Apple Silicon. Each value is the best result
 Run `python -m build` from `impl/python` to build the universal wheel and source
 archive. From `impl/python` in a full checkout, run
 `maturin build --release --locked --interpreter python` with Rust 1.85 or later,
-maturin 1.16, and standard CPython 3.10 or later. The Python workflow builds
-and tests native wheels for Linux (glibc) and macOS on x86-64 and ARM64, and
-Windows on x86-64.
+maturin 1.16, and standard CPython 3.10 or later. With a free-threaded
+interpreter, the same command builds a version-specific wheel, such as
+`cp314-cp314t`, instead of the abi3 wheel. The Python workflow builds and tests
+abi3 wheels and free-threaded wheels for CPython 3.14 and 3.15 on Linux (glibc)
+and macOS on x86-64 and ARM64, and Windows on x86-64.
 
 After an in-place native build with `maturin develop`, use `python -m build`
 to build the universal wheel from the source archive. The archive excludes
